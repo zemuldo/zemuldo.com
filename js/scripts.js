@@ -226,7 +226,7 @@
             markers:[
             {
             address: "Galana Road, Nairobi",  /* You can change your address from here */
-            html: "<b>Address</b>: <br> Kilimani Area-Lavingtone, Nairobi, Kenya.",   /* You can change display address text from here */
+            html: "<b>Address</b>: <br> Kasarani, Nairobi, Kenya.",   /* You can change display address text from here */
             popup: true
             }
             ]
