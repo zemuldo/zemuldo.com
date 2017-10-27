@@ -218,18 +218,32 @@
 		  
          
          /* Google Map */
-		 
+        var iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
+        var icons = {
+            parking: {
+                name: 'Parking',
+                icon: iconBase + 'parking_lot_maps.png'
+            },
+            library: {
+                name: 'Library',
+                icon: iconBase + 'library_maps.png'
+            },
+            info: {
+                name: 'Info',
+                icon: iconBase + 'info-i_maps.png'
+            }
+        };
          $('#my-address').gMap({
             zoom: 5,
             scrollwheel: true,
             maptype: 'ROADMAP',
             markers:[
-            {
-            address: "Galana Road, Nairobi",  /* You can change your address from here */
-            html: "<b>Address</b>: <br> Kasarani, Nairobi, Kenya.",   /* You can change display address text from here */
-            popup: true
-            }
-            ]
+                    {
+                        address: "Kenyatta Avenue, Nairobi",  /* You can change your address from here */
+                        html: "<b>24136-00100</b>: <br> GPO, Nairobi, Kenya.",   /* You can change display address text from here */
+                        popup: true
+                    }
+                ]
             });
               
 		   
