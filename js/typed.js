@@ -86,14 +86,14 @@
             this.el.attr("id");
             this.el.empty(), "undefined" != typeof this.cursor && this.cursor.remove(), this.strPos = 0, this.arrayPos = 0, this.curLoop = 0, this.options.resetCallback()
         }
-    }, t.fn.typed = function(e) {
+    }, ((t || {}).fn || {}).typed = function(e) {
         return this.each(function() {
             var i = t(this),
                 r = i.data("typed"),
                 o = "object" == typeof e && e;
             r && r.reset(), i.data("typed", r = new s(this, o)), "string" == typeof e && r[e]()
         })
-    }, t.fn.typed.defaults = {
+    }, (((t || {}).fn || {}).typed || {}).defaults = {
         strings: ["These are the default values...", "You know what you should do?", "Use your own!", "Have a great day!"],
         stringsElement: null,
         typeSpeed: 60,
