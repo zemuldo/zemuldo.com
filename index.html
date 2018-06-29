@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <!-- Meta Tag -->
     <meta charset="UTF-8">
@@ -31,868 +32,1140 @@
     <![endif]-->
     <script type="text/javascript" src="js/typed.js"></script>
 </head>
-<body>
-<!-- Pre-loader Start -->
-<div id="preloader">
-    <div class="loader"></div>
-</div>
-<!-- Pre-loader End -->
-<!--Matrix Canvas Background-->
-<canvas id="c"></canvas>
 
-<!-- Home & Menu Section Start -->
-<header id="home" class="home-section">
-    <div class="header-top-area translucent-9">
-        <div class="container translucent-9 ">
-            <div class="row">
-                <div class="col-sm-3">
-                    <div class="logo">
-                        <a class="navbar-brand" rel="home" href="#" title="HOME">
-                            <img class="logod"
-                                 src="images/logo/logo.jpg">
-                        </a>
-                    </div>
-                </div>
-                <div class="col-sm-9">
-                    <div class="navigation-menu">
-                        <div class="navbar">
-                            <div class="navbar-header">
-                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                                    <span class="sr-only">Toggle navigation</span>
-                                    <span class="icon-bar"></span>
-                                    <span class="icon-bar"></span>
-                                    <span class="icon-bar"></span>
-                                </button>
-                            </div>
-                            <div class="navbar-collapse collapse">
-                                <ul class="nav navbar-nav navbar-right">
-                                    <li class="active">
-                                        <a class="smoth-scroll" href="#home">
-                                            <span class="home-green on-hover-yellow"><span class="fa fa-home color-white fontsize-22 on-hover-yellow"></span> Home</span>
-                                            <div class="ripple-wrapper"></div>
-                                        </a>
-                                    </li>
-                                    <li><a class="smoth-scroll on-hover-yellow" href="#about"><span class="pre-myname on-hover-yellow"><span class="fa fa-smile-o color-white fontsize-22 on-hover-yellow"></span> About Me</span></a>
-                                    </li>
-                                    <li><a class="smoth-scroll" href="#projects"><span class="hi-this on-hover-yellow"><span class="fa fa-desktop color-white fontsize-22 on-hover-yellow"></span> Projects</span></a>
-                                    </li>
-                                    <li><a class="smoth-scroll" href="#testimonials"><span class="testimonials-purple on-hover-yellow"><span class="fa fa-vcard color-white fontsize-22 on-hover-yellow"></span> Testimonials</span></a>
-                                    <li class="dropdown">
-                                        <a href="#services" class="smoth-scroll color-green "><span class="color-green on-hover-yellow"><span class="fa fa-home color-white fontsize-22 on-hover-yellow"></span> Services</span></a>
-                                        <span class="dropdown-content  border-radius-5 no-bottom-side-borders">
-                                    <br>
-                                    <a href="#general" class="smoth-scroll home-green color-green "><span class="color-4 on-hover-yellow text-capitalize">General</span> <span class="color-3 on-hover-yellow ">IT</span></a>
-                                    <br><br>
-                                    <a href="#systemadmin" class="smoth-scroll home-green color-blue"><span class="color-5 text-capitalize on-hover-yellow">Sys</span><span class="color-red on-hover-yellow text-capitalize">Admin</span></a>
-                                    <br><br>
-                                    <a href="#programming" class="smoth-scroll home-green color-blue X"><span class="color-5 on-hover-yellow text-capitalize">Progr</span><span class="color-6 on-hover-yellow text-lowercase">amming</span></a>
-                                    <br><br>
-                                    <a href="#database" class="smoth-scroll home-green color-orange"><span class="color-light-blue text-capitalize on-hover-yellow">Databases</span></a>
-                                    <br><br>
-                                    <a href="#frameworks" class="smoth-scroll home-green color-orange"><span class="color-white text-capitalize on-hover-yellow">Frame</span><span class="text-capitalize on-hover-yellow color-green">Works</span></a>
-                                    <br>
-                                    <span></span>
-                                    </span>
-                                    </li>
-                                    <li><a class="smoth-scroll" href="#contact"><span class="hi-home on-hover-yellow"><span class="fa fa-phone color-white fontsize-22 on-hover-yellow"></span> Contact</span></a>
-                                    </li>
-                                </ul>
-                            </div>
+<body>
+    <!-- Pre-loader Start -->
+    <div id="preloader">
+        <div class="loader"></div>
+    </div>
+    <!-- Pre-loader End -->
+    <!--Matrix Canvas Background-->
+    <canvas id="c"></canvas>
+
+    <!-- Home & Menu Section Start -->
+    <header id="home" class="home-section">
+        <div class="header-top-area translucent-9">
+            <div class="container translucent-9 ">
+                <div class="row">
+                    <div class="col-sm-3">
+                        <div class="logo">
+                            <a class="navbar-brand" rel="home" href="#" title="HOME">
+                                <img class="logod" src="images/logo/trivial.png">
+                            </a>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="home-section-background" data-stellar-background-ratio="0.6">
-        <div class="display-table">
-            <div class="display-table-cell">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12 text-center">
-                            <p><br><br><b> <span class="hi-home">Hi!</span><span class="pre-myname"> Thanks for Visiting </span><span class="hi-this">This is </span><span class="myName">Danstan Otieno Onyango</span></b></p>
-                            <!--Bash-->
-                            <div class="head-wrap">
-                                <div class="text-editor-wrap">
-                                    <div class="title-bar"><span class="title hi-home">danstan@grimInc:~   100x<span class="terminal-height">17</span></span></div>
-                                    <div class="text-body hi-this">
-                                        <span class="hi-this addlink">[danstan<span class="hi-home">@</span>grimInc]$</span> <span class="typed" id="typed"></span>
-                                    </div>
+                    <div class="col-sm-9">
+                        <div class="navigation-menu">
+                            <div class="navbar">
+                                <div class="navbar-header">
+                                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                        <span class="sr-only">Toggle navigation</span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                    </button>
+                                </div>
+                                <div class="navbar-collapse collapse">
+                                    <ul class="nav navbar-nav navbar-right">
+                                        <li class="active">
+                                            <a class="smoth-scroll" href="#home">
+                                                <span class="home-green on-hover-yellow">
+                                                    <span class="fa fa-home color-white fontsize-22 on-hover-yellow"></span> Home</span>
+                                                <div class="ripple-wrapper"></div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="smoth-scroll on-hover-yellow" href="#about">
+                                                <span class="pre-myname on-hover-yellow">
+                                                    <span class="fa fa-smile-o color-white fontsize-22 on-hover-yellow"></span> About Me</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="smoth-scroll" href="#projects">
+                                                <span class="hi-this on-hover-yellow">
+                                                    <span class="fa fa-desktop color-white fontsize-22 on-hover-yellow"></span> Projects</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="smoth-scroll" href="#testimonials">
+                                                <span class="testimonials-purple on-hover-yellow">
+                                                    <span class="fa fa-vcard color-white fontsize-22 on-hover-yellow"></span> Testimonials</span>
+                                            </a>
+                                            <li class="dropdown">
+                                                <a href="#services" class="smoth-scroll color-green ">
+                                                    <span class="color-green on-hover-yellow">
+                                                        <span class="fa fa-home color-white fontsize-22 on-hover-yellow"></span> Services</span>
+                                                </a>
+                                                <span class="dropdown-content  border-radius-5 no-bottom-side-borders">
+                                                    <br>
+                                                    <a href="#general" class="smoth-scroll home-green color-green ">
+                                                        <span class="color-4 on-hover-yellow text-capitalize">General</span>
+                                                        <span class="color-3 on-hover-yellow ">IT</span>
+                                                    </a>
+                                                    <br>
+                                                    <br>
+                                                    <a href="#systemadmin" class="smoth-scroll home-green color-blue">
+                                                        <span class="color-5 text-capitalize on-hover-yellow">Sys</span>
+                                                        <span class="color-red on-hover-yellow text-capitalize">Admin</span>
+                                                    </a>
+                                                    <br>
+                                                    <br>
+                                                    <a href="#programming" class="smoth-scroll home-green color-blue X">
+                                                        <span class="color-5 on-hover-yellow text-capitalize">Progr</span>
+                                                        <span class="color-6 on-hover-yellow text-lowercase">amming</span>
+                                                    </a>
+                                                    <br>
+                                                    <br>
+                                                    <a href="#database" class="smoth-scroll home-green color-orange">
+                                                        <span class="color-light-blue text-capitalize on-hover-yellow">Databases</span>
+                                                    </a>
+                                                    <br>
+                                                    <br>
+                                                    <a href="#frameworks" class="smoth-scroll home-green color-orange">
+                                                        <span class="color-white text-capitalize on-hover-yellow">Frame</span>
+                                                        <span class="text-capitalize on-hover-yellow color-green">Works</span>
+                                                    </a>
+                                                    <br>
+                                                    <span></span>
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <a class="smoth-scroll" href="#contact">
+                                                    <span class="hi-home on-hover-yellow">
+                                                        <span class="fa fa-phone color-white fontsize-22 on-hover-yellow"></span> Contact</span>
+                                                </a>
+                                            </li>
+                                    </ul>
                                 </div>
                             </div>
-                            <!--End of Bash-->
-                            <a class="button button-style button-style-icon fa fa-long-arrow-right smoth-scroll" href="#portfolio">View My Portfolio</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    </div>
-    </div>
-</header>
-<!-- Home & Menu Section End-->
-
-<!-- About Start -->
-<section id="about" class="about-section section-space-padding">
-    <div class="row">
-        <div class="col-md-6 col-sm-12 col-xs-12 about-me-div-img">
-
-        </div>
-        <div class="col-md-6 col-sm-12 col-xs-12 about-me-div">
-            <div class=" about-section-space-padding section-title section-text">
-                <h2><span class="pre-myname">About Me.</span></h2>
-                <p>I am a software Developer and System Administrator.
-                    Below is a description of my areas of Expertise.
-                </p>
-                <p>Having graduated with a Bachelors Degree in Electrical and
-                    Communication Engineering, I have a great background understanding of
-                    Computing-ICT Architectures, Protocols and Standards.
-                </p>
-                <p>I am fluent in dozen of popular languages like
-                    <a href="https://en.wikipedia.org/wiki/C_(programming_language)" target="_blank" title="C Language">
-                        <span class="hi-home">C Language</span>
-                    </a>,
-                    <a href="https://www.w3schools.com/js/" target="_blank" title="JavaScript">
-                        <span class="hi-home">JavaScript</span>
-                    </a>,
-                    <a href="https://www.tutorialspoint.com/java/" target="_blank" title="Java">
-                        <span class="hi-home">Java Enterprise Edition</span>
-                    </a>,
-                    <a href="https://www.w3schools.com/php/" target="_blank" title="PHP">
-                        <span class="hi-home">PHP</span>
-                    </a>
-                    and
-                    <a href="https://www.python.org/" target="_blank" title="Python">
-                        <span class="hi-home">Python</span>
-                    </a>.
-                    <a href="#programming" class="smoth-scroll" title="Services">
-                        <span class="home-green"> More Details...</span>
-                    </a>
-                </p>
-                <p>I am experienced in C applications for Point of Sale Systems, Java base Web applications with <span class="pre-myname">Spring</span> and <span class="pre-myname">Hibernate</span> Frameworks, <span class="pre-myname">NodeJs</span> and <span class="pre-myname">AngularJs</span> Applications ,Mean-Stack, </p>
-                <p>SQL Database Design and Administration including Oracle 12c. I also have immediate level experience with NoSQL Database mainly <span class="pre-myname">MongoDB</span>.<a href="#database" class="smoth-scroll" title="Services">
-                    <span class="home-green"> More Details...</span>
-                </a>
-                </p>
-                <p>I am an enthusiast of Linux having used the operating system at client and server level for more than three years. </p>
-                <p>My knowledge of Linux and Computer Network Standards and Protocols is the core of my experience with VMware ESXI and Citrix XenServer Virtualization Environments. I have built scalable virtual environments for my clients. This means I have professional experience in DataCenter Management
-                    <a href="#systemadmin" class="smoth-scroll" title="Services">
-                        <span class="home-green"> More Details...</span>
-                    </a>
-                    <br><a href="https://github.com/rovahrowa" target="_blank" class="github"><span class="hi-home">Vew My GitHub Profile to see More</span></i></a>
-                </p>
-                <p> <a href="#socialsites" class="smoth-scroll">Social Media Profiles</a></p>
-            </div>
-        </div>
-        <div class="col-md-6 col-sm-12 col-xs-12 about-me-div-img ">
-
-        </div>
-    </div>
-</section>
-<!-- About End -->
-
-<!-- Portfolio Start -->
-<section id="portfolio" class="portfolio section-space-padding portfolio-background">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="section-title">
-                    <h2><span class="hi-this">Projects</span></h2>
-                    <p>Here are Some of My Projects</p>
+        <div class="home-section-background" data-stellar-background-ratio="0.6">
+            <div class="display-table">
+                <div class="display-table-cell">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12 text-center">
+                                <p>
+                                    <br>
+                                    <br>
+                                    <b>
+                                        <span class="hi-home">Hi!</span>
+                                        <span class="pre-myname"> Thanks for Visiting </span>
+                                        <span class="hi-this">This is </span>
+                                        <span class="myName">Danstan Otieno Onyango</span>
+                                    </b>
+                                </p>
+                                <!--Bash-->
+                                <div class="head-wrap">
+                                    <div class="text-editor-wrap">
+                                        <div class="title-bar">
+                                            <span class="title hi-home">danstan@grimInc:~ 100x
+                                                <span class="terminal-height">17</span>
+                                            </span>
+                                        </div>
+                                        <div class="text-body hi-this">
+                                            <span class="hi-this addlink">[danstan
+                                                <span class="hi-home">@</span>grimInc]$</span>
+                                            <span class="typed" id="typed"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--End of Bash-->
+                                <a class="button button-style button-style-icon fa fa-long-arrow-right smoth-scroll" href="#portfolio">View My Portfolio</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+        </div>
+        </div>
+    </header>
+    <!-- Home & Menu Section End-->
+
+    <!-- About Start -->
+    <section id="about" class="about-section section-space-padding">
         <div class="row">
-            <ul class="portfolio">
-                <li class="filter" data-filter="all">all</li>
-                <li class="filter" data-filter=".agency-banking">Agency Banking</li>
-                <li class="filter" data-filter=".mobile-apps">Mobile Apps</li>
-                <li class="filter" data-filter=".websites">Websites</li>
-                <li class="filter" data-filter=".web-apps">Web Applications</li>
-                <li class="filter" data-filter=".network-designs">Network Designs</li>
+            <div class="col-md-6 col-sm-12 col-xs-12 about-me-div-img">
+
+            </div>
+            <div class="col-md-6 col-sm-12 col-xs-12 about-me-div">
+                <div class=" about-section-space-padding section-title section-text">
+                    <h2>
+                        <span class="pre-myname">About Me.</span>
+                    </h2>
+                    <p>I am a software Developer and System Administrator. Below is a description of my areas of Expertise.
+                    </p>
+                    <p>Having graduated with a Bachelors Degree in Electrical and Communication Engineering, I have a great
+                        background understanding of Computing-ICT Architectures, Protocols and Standards.
+                    </p>
+                    <p>I am fluent in dozen of popular languages like
+                        <a href="https://en.wikipedia.org/wiki/C_(programming_language)" target="_blank" title="C Language">
+                            <span class="hi-home">C Language</span>
+                        </a>,
+                        <a href="https://www.w3schools.com/js/" target="_blank" title="JavaScript">
+                            <span class="hi-home">JavaScript</span>
+                        </a>,
+                        <a href="https://www.tutorialspoint.com/java/" target="_blank" title="Java">
+                            <span class="hi-home">Java Enterprise Edition</span>
+                        </a>,
+                        <a href="https://www.w3schools.com/php/" target="_blank" title="PHP">
+                            <span class="hi-home">PHP</span>
+                        </a>
+                        and
+                        <a href="https://www.python.org/" target="_blank" title="Python">
+                            <span class="hi-home">Python</span>
+                        </a>.
+                        <a href="#programming" class="smoth-scroll" title="Services">
+                            <span class="home-green"> More Details...</span>
+                        </a>
+                    </p>
+                    <p>I am experienced in C applications for Point of Sale Systems, Java base Web applications with
+                        <span class="pre-myname">Spring</span> and
+                        <span class="pre-myname">Hibernate</span> Frameworks,
+                        <span class="pre-myname">NodeJs</span> and
+                        <span class="pre-myname">AngularJs</span> Applications ,Mean-Stack, </p>
+                    <p>SQL Database Design and Administration including Oracle 12c. I also have immediate level experience with
+                        NoSQL Database mainly
+                        <span class="pre-myname">MongoDB</span>.
+                        <a href="#database" class="smoth-scroll" title="Services">
+                            <span class="home-green"> More Details...</span>
+                        </a>
+                    </p>
+                    <p>I am an enthusiast of Linux having used the operating system at client and server level for more than
+                        three years. </p>
+                    <p>My knowledge of Linux and Computer Network Standards and Protocols is the core of my experience with
+                        VMware ESXI and Citrix XenServer Virtualization Environments. I have built scalable virtual environments
+                        for my clients. This means I have professional experience in DataCenter Management
+                        <a href="#systemadmin" class="smoth-scroll" title="Services">
+                            <span class="home-green"> More Details...</span>
+                        </a>
+                        <br>
+                        <a href="https://github.com/rovahrowa" target="_blank" class="github">
+                            <span class="hi-home">Vew My GitHub Profile to see More</span>
+                            </i>
+                        </a>
+                    </p>
+                    <p>
+                        <a href="#socialsites" class="smoth-scroll">Social Media Profiles</a>
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-12 col-xs-12 about-me-div-img ">
+
+            </div>
+        </div>
+    </section>
+    <!-- About End -->
+
+    <!-- Portfolio Start -->
+    <section id="portfolio" class="portfolio section-space-padding portfolio-background">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="section-title">
+                        <h2>
+                            <span class="hi-this">Projects</span>
+                        </h2>
+                        <p>Here are Some of My Projects</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <ul class="portfolio">
+                    <li class="filter" data-filter="all">all</li>
+                    <li class="filter" data-filter=".agency-banking">Agency Banking</li>
+                    <li class="filter" data-filter=".mobile-apps">Mobile Apps</li>
+                    <li class="filter" data-filter=".websites">Websites</li>
+                    <li class="filter" data-filter=".web-apps">Web Applications</li>
+                    <li class="filter" data-filter=".network-designs">Network Designs</li>
+                </ul>
+            </div>
+            <div class="portfolio-inner">
+                <div class="row">
+                    <div class="col-md-4 col-sm-6 col-xs-12 mix agency-banking">
+                        <div class="item">
+                            <a href="images/portfolio/po-sv3.jpg" class="portfolio-popup" title="Castles Point of Sale.<br> You can view the code on github here">
+                                <img src="images/portfolio/po-sv3.jpg" alt="">
+                            </a>
+                        </div>
+                        <p class="margin-left-10">
+                            An application written in C running on a Castles Vega 3000 point of sale (POS). The application performs a full agent banking
+                            service using NFC and Chip Card read
+                            <br>
+                            <a href="https://github.com/rovahrowa/FamDemoV.1.0.0" target="_blank">See the Code on GitHub</a>
+                        </p>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-xs-12 mix web-apps">
+                        <div class="item">
+                            <a href="images/portfolio/2.jpg" class="portfolio-popup" title="Project Title">
+                                <img src="images/portfolio/2.jpg" alt="">
+                            </a>
+                        </div>
+                        <p class="margin-left-10">
+                            An application written in C running on a Castles Vega 3000 point of sale (POS). The application performs a full agent banking
+                            service using NFC and Chip Card read
+                            <br>
+                            <a href="https://github.com/rovahrowa/FamDemoV.1.0.0" target="_blank">See the Code on GitHub</a>
+                        </p>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-xs-12 mix mobile-apps">
+                        <div class="item">
+                            <a href="images/portfolio/2.jpg" class="portfolio-popup" title="Project Title">
+                                <img src="images/portfolio/2.jpg" alt="">
+                            </a>
+                        </div>
+                        <p class="margin-left-10">
+                            An application written in C running on a Castles Vega 3000 point of sale (POS). The application performs a full agent banking
+                            service using NFC and Chip Card read
+                            <br>
+                            <a href="https://github.com/rovahrowa/FamDemoV.1.0.0" target="_blank">See the Code on GitHub</a>
+                        </p>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-xs-12 mix network-designs">
+                        <div class="item">
+                            <a href="images/portfolio/2.jpg" class="portfolio-popup" title="Project Title">
+                                <img src="images/portfolio/2.jpg" alt="">
+                            </a>
+                        </div>
+                        <p class="margin-left-10">
+                            An application written in C running on a Castles Vega 3000 point of sale (POS). The application performs a full agent banking
+                            service using NFC and Chip Card read
+                            <br>
+                            <a href="https://github.com/rovahrowa/FamDemoV.1.0.0" target="_blank">See the Code on GitHub</a>
+                        </p>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-xs-12 mix agency-banking">
+                        <div class="item">
+                            <a href="images/portfolio/po-sv3.jpg" class="portfolio-popup" title="Castles Point of Sale.<br> You can view the code on github here">
+                                <img src="images/portfolio/po-sv3.jpg" alt="">
+                            </a>
+                        </div>
+                        <p class="margin-left-10">
+                            An application written in C running on a Castles Vega 3000 point of sale (POS). The application performs a full agent banking
+                            service using NFC and Chip Card read
+                            <br>
+                            <a href="https://github.com/rovahrowa/FamDemoV.1.0.0" target="_blank">See the Code on GitHub</a>
+                        </p>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-xs-12 mix mobile-apps">
+                        <div class="item">
+                            <a href="images/portfolio/2.jpg" class="portfolio-popup" title="Project Title">
+                                <img src="images/portfolio/2.jpg" alt="">
+                            </a>
+                        </div>
+                        <p class="margin-left-10">
+                            An application written in C running on a Castles Vega 3000 point of sale (POS). The application performs a full agent banking
+                            service using NFC and Chip Card read
+                            <br>
+                            <a href="https://github.com/rovahrowa/FamDemoV.1.0.0" target="_blank">See the Code on GitHub</a>
+                        </p>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-xs-12 mix network-designs">
+                        <div class="item">
+                            <a href="images/portfolio/2.jpg" class="portfolio-popup" title="Project Title">
+                                <img src="images/portfolio/2.jpg" alt="">
+                            </a>
+                        </div>
+                        <p class="margin-left-10">
+                            An application written in C running on a Castles Vega 3000 point of sale (POS). The application performs a full agent banking
+                            service using NFC and Chip Card read
+                            <br>
+                            <a href="https://github.com/rovahrowa/FamDemoV.1.0.0" target="_blank">See the Code on GitHub</a>
+                        </p>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-xs-12 mix web-apps">
+                        <div class="item">
+                            <a href="images/portfolio/2.jpg" class="portfolio-popup" title="Project Title">
+                                <img src="images/portfolio/2.jpg" alt="">
+                            </a>
+                        </div>
+                        <p class="margin-left-10">
+                            An application written in C running on a Castles Vega 3000 point of sale (POS). The application performs a full agent banking
+                            service using NFC and Chip Card read
+                            <br>
+                            <a href="https://github.com/rovahrowa/FamDemoV.1.0.0" target="_blank">See the Code on GitHub</a>
+                        </p>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-xs-12 mix websites">
+                        <div class="item">
+                            <a href="images/portfolio/2.jpg" class="portfolio-popup" title="Project Title">
+                                <img src="images/portfolio/2.jpg" alt="">
+                            </a>
+                        </div>
+                        <p class="margin-left-10">
+                            An application written in C running on a Castles Vega 3000 point of sale (POS). The application performs a full agent banking
+                            service using NFC and Chip Card read
+                            <br>
+                            <a href="https://github.com/rovahrowa/FamDemoV.1.0.0" target="_blank">See the Code on GitHub</a>
+                        </p>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-xs-12 mix websites">
+                        <div class="item">
+                            <a href="images/portfolio/2.jpg" class="portfolio-popup" title="Project Title">
+                                <img src="images/portfolio/2.jpg" alt="">
+                            </a>
+                        </div>
+                        <p class="margin-left-10">
+                            An application written in C running on a Castles Vega 3000 point of sale (POS). The application performs a full agent banking
+                            service using NFC and Chip Card read
+                            <br>
+                            <a href="https://github.com/rovahrowa/FamDemoV.1.0.0" target="_blank">See the Code on GitHub</a>
+                        </p>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-xs-12 mix websites">
+                        <div class="item">
+                            <a href="images/portfolio/2.jpg" class="portfolio-popup" title="Project Title">
+                                <img src="images/portfolio/2.jpg" alt="">
+                            </a>
+                        </div>
+                        <p class="margin-left-10">
+                            An application written in C running on a Castles Vega 3000 point of sale (POS). The application performs a full agent banking
+                            service using NFC and Chip Card read
+                            <br>
+                            <a href="https://github.com/rovahrowa/FamDemoV.1.0.0" target="_blank">See the Code on GitHub</a>
+                        </p>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-xs-12 mix websites">
+                        <div class="item">
+                            <a href="images/portfolio/2.jpg" class="portfolio-popup" title="Project Title">
+                                <img src="images/portfolio/2.jpg" alt="">
+                            </a>
+                        </div>
+                        <p class="margin-left-10">
+                            An application written in C running on a Castles Vega 3000 point of sale (POS). The application performs a full agent banking
+                            service using NFC and Chip Card read
+                            <br>
+                            <a href="https://github.com/rovahrowa/FamDemoV.1.0.0" target="_blank">See the Code on GitHub</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center margin-top-50 ">
+            <a class="button button-style button-style-dark button-style-icon fa fa-long-arrow-right smoth-scroll " href="#contact">
+                <span class="color-green on-hover-yellow">Let's Discuss</span>
+            </a>
+        </div>
+    </section>
+    <!-- Portfolio End -->
+
+    <!-- Testimonial Start -->
+    <section id="testimonials" class="testimonial-section section-space-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="section-title">
+                        <h2>
+                            <span class="testimonials-purple">Testimonials.</span>
+                        </h2>
+                        <p>Here is a List of the Projects </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="testimonial-carousel-list margin-top-20">
+                    <div class="testimonial-word text-center">
+                        <img src="images/testimonial/java.jpg" class="img-responsive" alt="">
+                        <h2>Fredrick Oluoch-Colleague</h2>
+                        <p>We worked with Fred at
+                            <a href="https://impalapay.com" target="_blank">Impalapay Limited</a> as Software Developers.
+                            <br> I also doubled as a Systems Administrator Managing DataCenters and other Cloud Infrastructure
+                            plus the Companys Network: VPNs, LAN and WAN.
+                        </p>
+                        <p>Here is a List of the Projects </p>
+                    </div>
+                    <div class="testimonial-word text-center">
+                        <img src="images/testimonial/mike.jpg" class="img-responsive" alt="">
+                        <h2>Fredrick Oluoch-Colleague</h2>
+                        <p>We worked with Fred at
+                            <a href="https://impalapay.com" target="_blank">Impalapay Limited</a> as Software Developers.
+                            <br> I also doubled as a Systems Administrator Managing DataCenters and other Cloud Infrastructure
+                            plus the Companys Network: VPNs, LAN and WAN.
+                        </p>
+                        <p>Here is a List of the Projects </p>
+                    </div>
+                    <div class="testimonial-word text-center">
+                        <img src="images/testimonial/3.png" class="img-responsive" alt="">
+                        <h2>Fredrick Oluoch-Colleague</h2>
+                        <p>We worked with Fred at
+                            <a href="https://impalapay.com" target="_blank">Impalapay Limited</a> as Software Developers.
+                            <br> I also doubled as a Systems Administrator Managing DataCenters and other Cloud Infrastructure
+                            plus the Companys Network: VPNs, LAN and WAN.
+                        </p>
+                        <p>Here is a List of the Projects </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Testimonial End -->
+
+    <!-- statistics -->
+    <section class="statistics-section section-space-padding bg-cover text-center" data-stellar-background-ratio="0.3">
+        <div class="container">
+            <div class="row">
+                <div class="statistics-center">
+                    <!-- This code will work at max-width: 767px -->
+                    <div class="col-md-3 col-sm-6">
+                        <div class="statistics">
+                            <div class="statistics-icon">
+                                <i class="fa fa-check-square-o color-1"></i>
+                            </div>
+                            <div class="statistics-content">
+                                <h5>
+                                    <span data-count="22" class="statistics-count">22</span>
+                                </h5>
+                                <span>Projects Done</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="statistics">
+                            <div class="statistics-icon">
+                                <i class="fa fa-smile-o color-3"></i>
+                            </div>
+                            <div class="statistics-content">
+                                <h5>
+                                    <span data-count="10" class="statistics-count">10</span>
+                                </h5>
+                                <span>Happy Clients</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="statistics">
+                            <div class="statistics-icon">
+                                <i class="fa fa-hourglass-start color-5"></i>
+                            </div>
+                            <div class="statistics-content">
+                                <h5>
+                                    <span data-count="12" class="statistics-count">12</span>
+                                </h5>
+                                <span>Hours of Work</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="statistics">
+                            <div class="statistics-icon">
+                                <i class="fa fa-coffee color-4"></i>
+                            </div>
+                            <div class="statistics-content">
+                                <h5>
+                                    <span data-count="20" class="statistics-count">20</span>
+                                </h5>
+                                <span>Cup of Coffee</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- statistics end -->
+
+    <!-- Services Start -->
+    <section id="services" class="services-section section-space-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="section-title">
+                        <h2>
+                            <span class="home-green">Services I offer</span>
+                        </h2>
+                        <p>I offer both Software related and System related services.</p>
+                    </div>
+                </div>
+            </div>
+            <span id="general" class="pre-myname">
+                <br>
+                <h3 class="center-align color-4">General IT
+                    <span class="color-3">Services</span>
+                </h3>
+            </span>
+            <div class="row">
+                <div class="col-md-4 col-sm-6">
+                    <div class="services-detail">
+                        <i class="fa fa-support color-4"></i>
+                        <h3>Project Management</h3>
+                        <hr>
+                        <p>Good background of Software Engineering. I have managed a number op projects through all stages of
+                            development and implementation. Team Work is my key here.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="services-detail">
+                        <i class="fa fa-support color-4"></i>
+                        <h3>IT Support</h3>
+                        <hr>
+                        <p>Being a Software Developer and also System Admin, I have the ability to support IT products and services
+                            meeting client expectations and concerns. Manintaining IT infrastructure is the basic for excellent
+                            IT SUpport</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="services-detail">
+                        <i class="fa fa-code color-3"></i>
+                        <h3>Cleaning Code</h3>
+                        <hr>
+                        <p>Code optimization and Documentation are key in improving performance. I am a believer of clean code.
+                            Saves time and Resources especially during upgrades and Maintenance. I offer code CleanUp, Optimization
+                            and Documentation</p>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+            <br>
+            <span id="systemadmin" class="pre-myname">
+                <br>
+                <h3 class="center-align">
+                    <span class="color-5">System</span>
+                    <span class="color-red">Adminis</span>
+                    <span>tration</span>
+                </h3>
+            </span>
+            <div class="row">
+                <div class="col-md-4 col-sm-5">
+                    <div class="services-detail">
+                        <i class="fa fa-user-secret color-red"></i>
+                        <h3>Network and Security</h3>
+                        <hr>
+                        <p>Virtual LANs, VPNs, Firewalls: pfSense, Endian, ClearOS, UFW, SUSE-Firewall. Linux Routing, Cisco
+                            LANs and WANs</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="services-detail">
+                        <i class="fa fa-server color-white"></i>
+                        <h3>Server Configuration</h3>
+                        <hr>
+                        <p>Mail Servers, FTP Servers, Databse Servers, Web Servers, Proxy Serves, VPN Servers, DNS Servers.
+                            Linux Prefessional ei RedHat, SUSE, Debian. Windows Server 2012</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="services-detail">
+                        <i class="fa fa-cloud color-5"></i>
+                        <h3>DataCenter Manager</h3>
+                        <hr>
+                        <p>Implementation of ESXI or XenServer Box locally and Remotely. VM installation, Migration, Interconnection,
+                            Security, Resource Sharing etc. Remote management and optimization</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-5">
+                    <div class="services-detail">
+                        <i class="fa fa-linux color-5"></i>
+                        <h3>Virtualization</h3>
+                        <hr>
+                        <p>VMWare ESXI, Citrix XenServer, VirtualBox, VMWare Workstation. Implementation of Virtual Environments
+                            and Cloud Infrastructure Management</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-5">
+                    <div class="services-detail">
+                        <i class="fa fa-user-secret color-red"></i>
+                        <h3>VPNs and SSL</h3>
+                        <hr>
+                        <p>Virtual Private Networks (VPNs) technologies mainly IPSEC. Unix implemetation(Site-Site), Cisco IPSEC
+                            Implementation</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-5">
+                    <div class="services-detail">
+                        <i class="fa fa-cloud color-blue"></i>
+                        <h3>LANs and WANs</h3>
+                        <hr>
+                        <p>Ethernet, OSI Model, OSPF, EIGRP, VLANs, STP, PPPOE, PPPOA, IPsec are among the protocols i can work
+                            with. Implementation of scalable subnets and IP Plans, Virtual LANs, Virtual Private Newtorks.</p>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+            <br>
+            <span id="programming" class="pre-myname">
+                <br>
+                <h3 class="center-align">
+                    <span class="color-5">Programming</span>
+                    <span class="color-5">-</span>
+                    <span class="color-6">Coding</span>
+                </h3>
+            </span>
+            <div class="row">
+                <div class="col-md-4 col-sm-6">
+                    <div class="services-detail">
+                        <i class="fa fa-android color-1"></i>
+                        <h3>Mobile App Design</h3>
+                        <hr>
+                        <p>Cross platform mobile application development using HTML5 CSS and JavaScript. </p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="services-detail">
+                        <i class="fa fa-html5 color-5"></i>
+                        <h3>HTML5 and CSS Web</h3>
+                        <hr>
+                        <p>Design of Websites, HTML web pages, HTML for markup, CSS for Styling and JavaScript for Dynamics</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="services-detail">
+                        <i class="fa fa-code color-5"></i>
+                        <h3>Java EE Web</h3>
+                        <hr>
+                        <p>Java Web Applications using SOAP and REST API standards.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="services-detail">
+                        <i class="fa fa-code color-2"></i>
+                        <h3>Python Scripting</h3>
+                        <hr>
+                        <p>Rolling is a clean and beautiful template with every must features. You can use it for many purpose
+                            in website.</p>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+            <br>
+            <span id="database" class="pre-myname">
+                <br>
+                <h3 class="center-align color-light-blue">DataBases SQL-NoSQL</h3>
+            </span>
+            <div class="row">
+                <div class="col-md-4 col-sm-5">
+                    <div class="services-detail">
+                        <i class="fa fa-database color-light-blue"></i>
+                        <h3>SQL-Oracle Dtabase</h3>
+                        <hr>
+                        <p>I am an immediate level Oracle 12c Administrator. Able to do optimization, upgrade, configuration,
+                            security and Tuning</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="services-detail">
+                        <i class="fa fa-database color-light-blue"></i>
+                        <h3>NoSQL-MongoDB</h3>
+                        <hr>
+                        <p>Being a complete fun of NodeJs ServerSide programming, I find it great working with MongoDB. The
+                            combination provides highly scalable applications and systems that are easy to manage, resource
+                            saving. So NoSql is at home. </p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="services-detail">
+                        <i class="fa fa-database color-light-blue"></i>
+                        <h3>PgSQL and MySQL</h3>
+                        <hr>
+                        <p>Most of the projects in Java and PHP I have handled worked with either Oracle, MySql or PostgreSql
+                            databases. I have used Hibernate in most cases to manage database connections and sessions</p>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+            <br>
+            <span id="frameworks" class="pre-myname">
+                <br>
+                <h3 class="center-align color-light-blue">
+                    <span class="color-white">Frame</span>
+                    <span class="color-green">works</span>
+                </h3>
+            </span>
+            <div class="row">
+                <div class="col-md-4 col-sm-5">
+                    <div class="services-detail">
+                        <i class="fa fa-code color-red"></i>
+                        <h3>Spring MVC</h3>
+                        <hr>
+                        <p>I am an immediate level Oracle 12c Administrator. Able to do optimization, upgrade, configuration,
+                            security and Tuning</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="services-detail">
+                        <i class="fa fa-code color-purple"></i>
+                        <h3>Hbernate</h3>
+                        <hr>
+                        <p>Being a complete fun of NodeJs ServerSide programming, I find it great working with MongoDB. The
+                            combination provides highly scalable applications and systems that are easy to manage, resource
+                            saving. So NoSql is at home. </p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="services-detail">
+                        <i class="fa fa-code color-pink"></i>
+                        <h3>NodeJs</h3>
+                        <hr>
+                        <p>Most of the projects in Java and PHP I have handled worked with either Oracle, MySql or PostgreSql
+                            databases. I have used Hibernate in most cases to manage database connections and sessions</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="services-detail">
+                        <i class="fa fa-code color-3"></i>
+                        <h3>AngularJS</h3>
+                        <hr>
+                        <p>Most of the projects in Java and PHP I have handled worked with either Oracle, MySql or PostgreSql
+                            databases. I have used Hibernate in most cases to manage database connections and sessions</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="services-detail">
+                        <i class="fa fa-code color-yellow"></i>
+                        <h3>JQuery</h3>
+                        <hr>
+                        <p>Most of the projects in Java and PHP I have handled worked with either Oracle, MySql or PostgreSql
+                            databases. I have used Hibernate in most cases to manage database connections and sessions</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="services-detail">
+                        <i class="fa fa-code color-orange"></i>
+                        <h3>Django</h3>
+                        <hr>
+                        <p>Most of the projects in Java and PHP I have handled worked with either Oracle, MySql or PostgreSql
+                            databases. I have used Hibernate in most cases to manage database connections and sessions</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Services End -->
+
+    <!-- Call to Action Start -->
+    <section class="call-to-action section-space-padding text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2>Are You Looking For Professional Software Developer or System Administrator?</h2>
+                    <div class="text-center margin-top-20">
+                        <a class="button button-style button-style-dark button-style-icon fa fa-long-arrow-right smoth-scroll" href="#contact">Contact Me</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Call to Action End -->
+
+    <!-- Contact Start -->
+    <section id="contact" class="contact-us section-space-padding portfolio-background">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="section-title">
+                        <h2>
+                            <span class="hi-home">Contact Me.</span>
+                        </h2>
+                        <p>Below are my E-mail and Phone contacts. I am fully available and will respond to your call or e-mail
+                            immediately.
+                            <br> Thank You for taking your time to check my Site
+                            <span class=" fa fa-smile-o color-yellow "></span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center margin-top-10 margin-bottom-50">
+                <div class="row">
+                    <div class="col-md-4 col-sm-4">
+                        <div class="contact-us-detail">
+                            <i class="fa fa-mobile color-6"></i>
+                            <p>
+                                <a href="tel:+254732764915">Cell: (+254) 732 764 915</a>
+                            </p>
+                            <p>
+                                <a href="tel:+254728554638">Tele: (+254) 728 554 638</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-4">
+                        <div class="contact-us-detail">
+                            <i class="fa fa-mail-reply color-5"></i>
+                            <p>
+                                <a href="mailto:otis.eng.555@gmail.com">otis.eng.555@gmail.com</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-4">
+                        <div class="contact-us-detail">
+                            <i class="fa fa-clock-o color-3"></i>
+                            <p>Available Full Time.
+                                <br> 8:00am-5:00pm
+                                <br>Monday-Saturday</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <a id="leavemessage" class="center-align">
+                        <p>Don't Mind Leaveing a Message?</p>
+                    </a>
+                    <div class="row">
+                        <form method="post" action="https://.api.zemuldo.com">
+                            <div class="col-sm-6">
+                                <div class="form-group form-inputt">
+                                    <input type="text" id="name" class="form-control" placeholder="Your Name">
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <input type="email" id="email" class="form-control" placeholder="Your Email">
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <input type="text" id="website" class="form-control" placeholder="Your Website">
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <input type="text" id="address" class="form-control" placeholder="Where are You From?">
+                                </div>
+                            </div>
+                            <div class="col-sm-12 form-inputt">
+                                <select id="subject" class="form-group form-control form-inputt">
+                                    <option value="" selected disabled>
+                                        <span class="color-white">Subject</span>
+                                    </option>
+                                    <option>Cloud Service and Management</option>
+                                    <option>Web Application Development</option>
+                                    <option>Website Design & Development</option>
+                                    <option>Network Security Implementation</option>
+                                    <option>Network Design Maintenance</option>
+                                    <option>Mobile Application Development</option>
+                                    <option>I Want to General Talk</option>
+                                    <option>Other</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-12">
+                                <div class="textarea-message form-group">
+                                    <textarea id="message" class="textarea-message form-control" placeholder="Your Message" rows="5"></textarea>
+                                </div>
+                            </div>
+                            <div class="text-center ">
+                                <button type="submit" class="button button-style button-style-dark button-style-icon fa fa-long-arrow-right text-center ">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-md-6" id="location">
+                    <p class="center-align">My Current Location</p>
+                    <div id="my-address" class="map space-set">
+                        <p> Location will display when you have an Internet Connection</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Social Media Profiles -->
+        <div class="margin-top-80">
+            <span id="socialsites" class="smoth-scroll">
+                <h2>Find me on Social Sites</h2>
+            </span>
+            <ul class="social-icon">
+                <li>
+                    <a href="https://github.com/zemuldo" target="_blank" class="github">
+                        <i class="fa fa-github"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/zemuldo" target="_blank" class="linkedin">
+                        <i class="fa fa-linkedin color-blue"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.behance.net/rovahrowa" target="_blank" class="behance">
+                        <i class="fa fa-behance color-6"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://web.facebook.com/zemuldo" target="_blank" class="facebook">
+                        <i class="fa fa-facebook color-blue"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://twitter.com/zemuldo" target="_blank" class="twitter">
+                        <i class="fa fa-twitter color-6"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://plus.google.com/107167624370676968496" target="_blank" class="google-plus">
+                        <i class="fa fa-google-plus color-red"></i>
+                    </a>
+                </li>
             </ul>
         </div>
-        <div class="portfolio-inner">
+    </section>
+    <!-- Contact End -->
+
+    <!-- Footer Start -->
+    <footer class="footer-section">
+        <div class="container">
             <div class="row">
-                <div class="col-md-4 col-sm-6 col-xs-12 mix agency-banking">
-                    <div class="item">
-                        <a href="images/portfolio/po-sv3.jpg" class="portfolio-popup" title="Castles Point of Sale.<br> You can view the code on github here">
-                            <img src="images/portfolio/po-sv3.jpg" alt="">
-                        </a>
-                    </div>
-                    <p class="margin-left-10">
-                        An application written in C running on a Castles Vega 3000 point of sale (POS). The application performs a full agent banking service using NFC and Chip Card read
-                        <br><a href="https://github.com/rovahrowa/FamDemoV.1.0.0" target="_blank">See the Code on GitHub</a>
+                <div class="col-md-4 text-left">
+                    <p>
+                        <span>
+                            <a href="#about" class="smoth-scroll">
+                                <span class="home-green">About Me</span>
+                            </a>
+                        </span> |
+                        <span>
+                            <a href="#projects" title="Projects" class="smoth-scroll">
+                                <span class="pre-myname on-hover-yellow">Projects</span>
+                            </a>
+                        </span>
                     </p>
-                </div>
-                <div class="col-md-4 col-sm-6 col-xs-12 mix web-apps">
-                    <div class="item">
-                        <a href="images/portfolio/2.jpg" class="portfolio-popup" title="Project Title">
-                            <img src="images/portfolio/2.jpg" alt="">
-                        </a>
-                    </div>
-                    <p class="margin-left-10">
-                        An application written in C running on a Castles Vega 3000 point of sale (POS). The application performs a full agent banking service using NFC and Chip Card read
-                        <br><a href="https://github.com/rovahrowa/FamDemoV.1.0.0" target="_blank">See the Code on GitHub</a>
-                    </p>
-                </div>
-                <div class="col-md-4 col-sm-6 col-xs-12 mix mobile-apps">
-                    <div class="item">
-                        <a href="images/portfolio/2.jpg" class="portfolio-popup" title="Project Title">
-                            <img src="images/portfolio/2.jpg" alt="">
-                        </a>
-                    </div>
-                    <p class="margin-left-10">
-                        An application written in C running on a Castles Vega 3000 point of sale (POS). The application performs a full agent banking service using NFC and Chip Card read
-                        <br><a href="https://github.com/rovahrowa/FamDemoV.1.0.0" target="_blank">See the Code on GitHub</a>
-                    </p>
-                </div>
-                <div class="col-md-4 col-sm-6 col-xs-12 mix network-designs">
-                    <div class="item">
-                        <a href="images/portfolio/2.jpg" class="portfolio-popup" title="Project Title">
-                            <img src="images/portfolio/2.jpg" alt="">
-                        </a>
-                    </div>
-                    <p class="margin-left-10">
-                        An application written in C running on a Castles Vega 3000 point of sale (POS). The application performs a full agent banking service using NFC and Chip Card read
-                        <br><a href="https://github.com/rovahrowa/FamDemoV.1.0.0" target="_blank">See the Code on GitHub</a>
-                    </p>
-                </div>
-                <div class="col-md-4 col-sm-6 col-xs-12 mix agency-banking">
-                    <div class="item">
-                        <a href="images/portfolio/po-sv3.jpg" class="portfolio-popup" title="Castles Point of Sale.<br> You can view the code on github here">
-                            <img src="images/portfolio/po-sv3.jpg" alt="">
-                        </a>
-                    </div>
-                    <p class="margin-left-10">
-                        An application written in C running on a Castles Vega 3000 point of sale (POS). The application performs a full agent banking service using NFC and Chip Card read
-                        <br><a href="https://github.com/rovahrowa/FamDemoV.1.0.0" target="_blank">See the Code on GitHub</a>
-                    </p>
-                </div>
-                <div class="col-md-4 col-sm-6 col-xs-12 mix mobile-apps">
-                    <div class="item">
-                        <a href="images/portfolio/2.jpg" class="portfolio-popup" title="Project Title">
-                            <img src="images/portfolio/2.jpg" alt="">
-                        </a>
-                    </div>
-                    <p class="margin-left-10">
-                        An application written in C running on a Castles Vega 3000 point of sale (POS). The application performs a full agent banking service using NFC and Chip Card read
-                        <br><a href="https://github.com/rovahrowa/FamDemoV.1.0.0" target="_blank">See the Code on GitHub</a>
-                    </p>
-                </div>
-                <div class="col-md-4 col-sm-6 col-xs-12 mix network-designs">
-                    <div class="item">
-                        <a href="images/portfolio/2.jpg" class="portfolio-popup" title="Project Title">
-                            <img src="images/portfolio/2.jpg" alt="">
-                        </a>
-                    </div>
-                    <p class="margin-left-10">
-                        An application written in C running on a Castles Vega 3000 point of sale (POS). The application performs a full agent banking service using NFC and Chip Card read
-                        <br><a href="https://github.com/rovahrowa/FamDemoV.1.0.0" target="_blank">See the Code on GitHub</a>
-                    </p>
-                </div>
-                <div class="col-md-4 col-sm-6 col-xs-12 mix web-apps">
-                    <div class="item">
-                        <a href="images/portfolio/2.jpg" class="portfolio-popup" title="Project Title">
-                            <img src="images/portfolio/2.jpg" alt="">
-                        </a>
-                    </div>
-                    <p class="margin-left-10">
-                        An application written in C running on a Castles Vega 3000 point of sale (POS). The application performs a full agent banking service using NFC and Chip Card read
-                        <br><a href="https://github.com/rovahrowa/FamDemoV.1.0.0" target="_blank">See the Code on GitHub</a>
-                    </p>
-                </div>
-                <div class="col-md-4 col-sm-6 col-xs-12 mix websites">
-                    <div class="item">
-                        <a href="images/portfolio/2.jpg" class="portfolio-popup" title="Project Title">
-                            <img src="images/portfolio/2.jpg" alt="">
-                        </a>
-                    </div>
-                    <p class="margin-left-10">
-                        An application written in C running on a Castles Vega 3000 point of sale (POS). The application performs a full agent banking service using NFC and Chip Card read
-                        <br><a href="https://github.com/rovahrowa/FamDemoV.1.0.0" target="_blank">See the Code on GitHub</a>
-                    </p>
-                </div>
-                <div class="col-md-4 col-sm-6 col-xs-12 mix websites">
-                    <div class="item">
-                        <a href="images/portfolio/2.jpg" class="portfolio-popup" title="Project Title">
-                            <img src="images/portfolio/2.jpg" alt="">
-                        </a>
-                    </div>
-                    <p class="margin-left-10">
-                        An application written in C running on a Castles Vega 3000 point of sale (POS). The application performs a full agent banking service using NFC and Chip Card read
-                        <br><a href="https://github.com/rovahrowa/FamDemoV.1.0.0" target="_blank">See the Code on GitHub</a>
-                    </p>
-                </div>
-                <div class="col-md-4 col-sm-6 col-xs-12 mix websites">
-                    <div class="item">
-                        <a href="images/portfolio/2.jpg" class="portfolio-popup" title="Project Title">
-                            <img src="images/portfolio/2.jpg" alt="">
-                        </a>
-                    </div>
-                    <p class="margin-left-10">
-                        An application written in C running on a Castles Vega 3000 point of sale (POS). The application performs a full agent banking service using NFC and Chip Card read
-                        <br><a href="https://github.com/rovahrowa/FamDemoV.1.0.0" target="_blank">See the Code on GitHub</a>
-                    </p>
-                </div>
-                <div class="col-md-4 col-sm-6 col-xs-12 mix websites">
-                    <div class="item">
-                        <a href="images/portfolio/2.jpg" class="portfolio-popup" title="Project Title">
-                            <img src="images/portfolio/2.jpg" alt="">
-                        </a>
-                    </div>
-                    <p class="margin-left-10">
-                        An application written in C running on a Castles Vega 3000 point of sale (POS). The application performs a full agent banking service using NFC and Chip Card read
-                        <br><a href="https://github.com/rovahrowa/FamDemoV.1.0.0" target="_blank">See the Code on GitHub</a>
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="text-center margin-top-50 ">
-        <a class="button button-style button-style-dark button-style-icon fa fa-long-arrow-right smoth-scroll " href="#contact"><span class="color-green on-hover-yellow">Let's Discuss</span></a>
-    </div>
-</section>
-<!-- Portfolio End -->
-
-<!-- Testimonial Start -->
-<section id="testimonials" class="testimonial-section section-space-padding">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="section-title">
-                    <h2><span class="testimonials-purple">Testimonials.</span></h2>
-                    <p>Here is a List of the Projects </p>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="testimonial-carousel-list margin-top-20">
-                <div class="testimonial-word text-center">
-                    <img src="images/testimonial/java.jpg" class="img-responsive" alt="">
-                    <h2>Fredrick Oluoch-Colleague</h2>
-                    <p>We worked with Fred at <a href="https://impalapay.com" target="_blank">Impalapay Limited</a> as Software Developers.
-                        <br> I also doubled as a Systems Administrator Managing DataCenters and other Cloud Infrastructure plus the Companys Network: VPNs, LAN and WAN.
-                    </p>
-                    <p>Here is a List of the Projects </p>
-                </div>
-                <div class="testimonial-word text-center">
-                    <img src="images/testimonial/mike.jpg" class="img-responsive" alt="">
-                    <h2>Fredrick Oluoch-Colleague</h2>
-                    <p>We worked with Fred at <a href="https://impalapay.com" target="_blank">Impalapay Limited</a> as Software Developers.
-                        <br> I also doubled as a Systems Administrator Managing DataCenters and other Cloud Infrastructure plus the Companys Network: VPNs, LAN and WAN.
-                    </p>
-                    <p>Here is a List of the Projects </p>
-                </div>
-                <div class="testimonial-word text-center">
-                    <img src="images/testimonial/3.png" class="img-responsive" alt="">
-                    <h2>Fredrick Oluoch-Colleague</h2>
-                    <p>We worked with Fred at <a href="https://impalapay.com" target="_blank">Impalapay Limited</a> as Software Developers.
-                        <br> I also doubled as a Systems Administrator Managing DataCenters and other Cloud Infrastructure plus the Companys Network: VPNs, LAN and WAN.
-                    </p>
-                    <p>Here is a List of the Projects </p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- Testimonial End -->
-
-<!-- statistics -->
-<section class="statistics-section section-space-padding bg-cover text-center" data-stellar-background-ratio="0.3">
-    <div class="container">
-        <div class="row">
-            <div class="statistics-center">
-                <!-- This code will work at max-width: 767px -->
-                <div class="col-md-3 col-sm-6">
-                    <div class="statistics">
-                        <div class="statistics-icon"><i class="fa fa-check-square-o color-1"></i>
-                        </div>
-                        <div class="statistics-content">
-                            <h5><span data-count="22" class="statistics-count">22</span></h5>
-                            <span>Projects Done</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="statistics">
-                        <div class="statistics-icon"><i class="fa fa-smile-o color-3"></i>
-                        </div>
-                        <div class="statistics-content">
-                            <h5> <span data-count="10" class="statistics-count">10</span></h5>
-                            <span>Happy Clients</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="statistics">
-                        <div class="statistics-icon"><i class="fa fa-hourglass-start color-5"></i>
-                        </div>
-                        <div class="statistics-content">
-                            <h5><span data-count="12" class="statistics-count">12</span></h5>
-                            <span>Hours of Work</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="statistics">
-                        <div class="statistics-icon"><i class="fa fa-coffee color-4"></i>
-                        </div>
-                        <div class="statistics-content">
-                            <h5><span data-count="20" class="statistics-count">20</span></h5>
-                            <span>Cup of Coffee</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- statistics end -->
-
-<!-- Services Start -->
-<section id="services" class="services-section section-space-padding">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="section-title">
-                    <h2><span class="home-green">Services I offer</span></h2>
-                    <p>I offer both Software related and System related services.</p>
-                </div>
-            </div>
-        </div>
-        <span id="general" class="pre-myname">
-            <br>
-               <h3 class="center-align color-4">General IT <span class="color-3">Services</span></h3>
-            </span>
-        <div class="row">
-            <div class="col-md-4 col-sm-6">
-                <div class="services-detail">
-                    <i class="fa fa-support color-4"></i>
-                    <h3>Project Management</h3>
-                    <hr>
-                    <p>Good background of Software Engineering. I have managed a number op projects through all stages of development and implementation. Team Work is my key here.</p>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <div class="services-detail">
-                    <i class="fa fa-support color-4"></i>
-                    <h3>IT Support</h3>
-                    <hr>
-                    <p>Being a Software Developer and also System Admin, I have the ability to support IT products and services meeting client expectations and concerns. Manintaining IT infrastructure is the basic for excellent IT SUpport</p>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <div class="services-detail">
-                    <i class="fa fa-code color-3"></i>
-                    <h3>Cleaning Code</h3>
-                    <hr>
-                    <p>Code optimization and Documentation are key in improving performance. I am a believer of clean code. Saves time and Resources especially during upgrades and Maintenance. I offer code CleanUp, Optimization and Documentation</p>
-                </div>
-            </div>
-        </div>
-        <br><br><br>
-        <span id="systemadmin" class="pre-myname">
-            <br>
-               <h3 class="center-align"><span class="color-5">System</span> <span class="color-red">Adminis</span><span>tration</span></h3>
-            </span>
-        <div class="row">
-            <div class="col-md-4 col-sm-5">
-                <div class="services-detail">
-                    <i class="fa fa-user-secret color-red"></i>
-                    <h3>Network and Security</h3>
-                    <hr>
-                    <p>Virtual LANs, VPNs, Firewalls: pfSense, Endian, ClearOS, UFW, SUSE-Firewall. Linux Routing, Cisco LANs and WANs</p>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <div class="services-detail">
-                    <i class="fa fa-server color-white"></i>
-                    <h3>Server Configuration</h3>
-                    <hr>
-                    <p>Mail Servers, FTP Servers, Databse Servers, Web Servers, Proxy Serves, VPN Servers, DNS Servers. Linux Prefessional ei RedHat, SUSE, Debian. Windows Server 2012</p>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <div class="services-detail">
-                    <i class="fa fa-cloud color-5"></i>
-                    <h3>DataCenter Manager</h3>
-                    <hr>
-                    <p>Implementation of ESXI or XenServer Box locally and Remotely. VM installation, Migration, Interconnection, Security, Resource Sharing etc. Remote management and optimization</p>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-5">
-                <div class="services-detail">
-                    <i class="fa fa-linux color-5"></i>
-                    <h3>Virtualization</h3>
-                    <hr>
-                    <p>VMWare ESXI, Citrix XenServer, VirtualBox, VMWare Workstation. Implementation of Virtual Environments and Cloud Infrastructure Management</p>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-5">
-                <div class="services-detail">
-                    <i class="fa fa-user-secret color-red"></i>
-                    <h3>VPNs and SSL</h3>
-                    <hr>
-                    <p>Virtual Private Networks (VPNs) technologies mainly IPSEC. Unix implemetation(Site-Site), Cisco IPSEC Implementation</p>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-5">
-                <div class="services-detail">
-                    <i class="fa fa-cloud color-blue"></i>
-                    <h3>LANs and WANs</h3>
-                    <hr>
-                    <p>Ethernet, OSI Model, OSPF, EIGRP, VLANs, STP, PPPOE, PPPOA, IPsec are among the protocols i can work with. Implementation of scalable subnets and IP Plans, Virtual LANs, Virtual Private Newtorks.</p>
-                </div>
-            </div>
-        </div>
-        <br><br><br>
-        <span id="programming" class="pre-myname">
-            <br>
-               <h3 class="center-align"><span class="color-5">Programming</span><span class="color-5">-</span><span class="color-6">Coding</span></h3>
-            </span>
-        <div class="row">
-            <div class="col-md-4 col-sm-6">
-                <div class="services-detail">
-                    <i class="fa fa-android color-1"></i>
-                    <h3>Mobile App Design</h3>
-                    <hr>
-                    <p>Cross platform mobile application development using HTML5 CSS and JavaScript. </p>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <div class="services-detail">
-                    <i class="fa fa-html5 color-5"></i>
-                    <h3>HTML5 and CSS Web</h3>
-                    <hr>
-                    <p>Design of Websites, HTML web pages, HTML for markup, CSS for Styling and JavaScript for Dynamics</p>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <div class="services-detail">
-                    <i class="fa fa-code color-5"></i>
-                    <h3>Java EE Web</h3>
-                    <hr>
-                    <p>Java Web Applications using SOAP and REST API standards.</p>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <div class="services-detail">
-                    <i class="fa fa-code color-2"></i>
-                    <h3>Python Scripting</h3>
-                    <hr>
-                    <p>Rolling is a clean and beautiful template with every must features. You can use it for many purpose in website.</p>
-                </div>
-            </div>
-        </div>
-        <br><br><br>
-        <span id="database" class="pre-myname">
-            <br>
-               <h3 class="center-align color-light-blue">DataBases SQL-NoSQL</h3>
-            </span>
-        <div class="row">
-            <div class="col-md-4 col-sm-5">
-                <div class="services-detail">
-                    <i class="fa fa-database color-light-blue"></i>
-                    <h3>SQL-Oracle Dtabase</h3>
-                    <hr>
-                    <p>I am an immediate level Oracle 12c Administrator. Able to do optimization, upgrade, configuration, security and Tuning</p>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <div class="services-detail">
-                    <i class="fa fa-database color-light-blue"></i>
-                    <h3>NoSQL-MongoDB</h3>
-                    <hr>
-                    <p>Being a complete fun of NodeJs ServerSide programming, I find it great working with MongoDB. The combination provides highly scalable applications and systems that are easy to manage, resource saving. So NoSql is at home. </p>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <div class="services-detail">
-                    <i class="fa fa-database color-light-blue"></i>
-                    <h3>PgSQL and MySQL</h3>
-                    <hr>
-                    <p>Most of the projects in Java and PHP I have handled worked with either Oracle, MySql or PostgreSql databases. I have used Hibernate in most cases to manage database connections and sessions</p>
-                </div>
-            </div>
-        </div>
-        <br><br><br>
-        <span id="frameworks" class="pre-myname">
-            <br>
-               <h3 class="center-align color-light-blue"><span class="color-white">Frame</span><span class="color-green">works</span></h3>
-            </span>
-        <div class="row">
-            <div class="col-md-4 col-sm-5">
-                <div class="services-detail">
-                    <i class="fa fa-code color-red"></i>
-                    <h3>Spring MVC</h3>
-                    <hr>
-                    <p>I am an immediate level Oracle 12c Administrator. Able to do optimization, upgrade, configuration, security and Tuning</p>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <div class="services-detail">
-                    <i class="fa fa-code color-purple"></i>
-                    <h3>Hbernate</h3>
-                    <hr>
-                    <p>Being a complete fun of NodeJs ServerSide programming, I find it great working with MongoDB. The combination provides highly scalable applications and systems that are easy to manage, resource saving. So NoSql is at home. </p>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <div class="services-detail">
-                    <i class="fa fa-code color-pink"></i>
-                    <h3>NodeJs</h3>
-                    <hr>
-                    <p>Most of the projects in Java and PHP I have handled worked with either Oracle, MySql or PostgreSql databases. I have used Hibernate in most cases to manage database connections and sessions</p>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <div class="services-detail">
-                    <i class="fa fa-code color-3"></i>
-                    <h3>AngularJS</h3>
-                    <hr>
-                    <p>Most of the projects in Java and PHP I have handled worked with either Oracle, MySql or PostgreSql databases. I have used Hibernate in most cases to manage database connections and sessions</p>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <div class="services-detail">
-                    <i class="fa fa-code color-yellow"></i>
-                    <h3>JQuery</h3>
-                    <hr>
-                    <p>Most of the projects in Java and PHP I have handled worked with either Oracle, MySql or PostgreSql databases. I have used Hibernate in most cases to manage database connections and sessions</p>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <div class="services-detail">
-                    <i class="fa fa-code color-orange"></i>
-                    <h3>Django</h3>
-                    <hr>
-                    <p>Most of the projects in Java and PHP I have handled worked with either Oracle, MySql or PostgreSql databases. I have used Hibernate in most cases to manage database connections and sessions</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- Services End -->
-
-<!-- Call to Action Start -->
-<section class="call-to-action section-space-padding text-center">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <h2>Are You Looking For Professional Software Developer or System Administrator?</h2>
-                <div class="text-center margin-top-20">
-                    <a class="button button-style button-style-dark button-style-icon fa fa-long-arrow-right smoth-scroll" href="#contact">Contact Me</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- Call to Action End -->
-
-<!-- Contact Start -->
-<section id="contact" class="contact-us section-space-padding portfolio-background">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="section-title">
-                    <h2><span class="hi-home">Contact Me.</span></h2>
-                    <p>Below are my E-mail and Phone contacts. I am fully available and will respond to your call or e-mail immediately. <br> Thank You for taking your time to check my Site <span class=" fa fa-smile-o color-yellow "></span></p>
-                </div>
-            </div>
-        </div>
-        <div class="text-center margin-top-10 margin-bottom-50">
-            <div class="row">
-                <div class="col-md-4 col-sm-4">
-                    <div class="contact-us-detail">
-                        <i class="fa fa-mobile color-6"></i>
-                        <p><a href="tel:+254732764915">Cell: (+254) 732 764 915</a></p>
-                        <p><a href="tel:+254728554638">Tele: (+254) 728 554 638</a></p>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-4">
-                    <div class="contact-us-detail">
-                        <i class="fa fa-mail-reply color-5"></i>
-                        <p><a href="mailto:otis.eng.555@gmail.com">otis.eng.555@gmail.com</a></p>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-4">
-                    <div class="contact-us-detail">
-                        <i class="fa fa-clock-o color-3"></i>
-                        <p>Available Full Time. <br> 8:00am-5:00pm <br>Monday-Saturday</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6">
-                <a id="leavemessage" class="center-align">
-                    <p>Don't Mind Leaveing a Message?</p>
-                </a>
-                <div class="row">
-                    <form method="post" action="https://.api.zemuldo.com">
-                        <div class="col-sm-6">
-                            <div class="form-group form-inputt">
-                                <input type="text" id="name" class="form-control" placeholder="Your Name">
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="form-group">
-                                <input type="email" id="email" class="form-control" placeholder="Your Email">
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="form-group">
-                                <input type="text" id="website" class="form-control" placeholder="Your Website">
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="form-group">
-                                <input type="text" id="address" class="form-control" placeholder="Where are You From?">
-                            </div>
-                        </div>
-                        <div class="col-sm-12 form-inputt" >
-                            <select id="subject" class="form-group form-control form-inputt">
-                                <option value="" selected disabled><span class="color-white">Subject</span></option>
-                                <option>Cloud Service and Management</option>
-                                <option>Web Application Development</option>
-                                <option>Website Design & Development</option>
-                                <option>Network Security Implementation</option>
-                                <option>Network Design Maintenance</option>
-                                <option>Mobile Application Development</option>
-                                <option>I Want to General Talk</option>
-                                <option>Other</option>
-                            </select>
-                        </div>
-                        <div class="col-sm-12">
-                            <div class="textarea-message form-group">
-                                <textarea id="message" class="textarea-message form-control" placeholder="Your Message" rows="5"></textarea>
-                            </div>
-                        </div>
-                        <div class="text-center ">
-                            <button type="submit" class="button button-style button-style-dark button-style-icon fa fa-long-arrow-right text-center ">Submit</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-            <div class="col-md-6" id="location">
-                <p class="center-align">My Current Location</p>
-                <div id="my-address" class="map space-set">
-                    <p> Location will display when you have an Internet Connection</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Social Media Profiles -->
-    <div class="margin-top-80">
-            <span id="socialsites"  class="smoth-scroll">
-               <h2>Find me on Social Sites</h2>
-            </span>
-        <ul class="social-icon">
-            <li><a href="https://github.com/zemuldo" target="_blank" class="github"><i class="fa fa-github"></i></a></li>
-            <li><a href="https://www.linkedin.com/in/zemuldo" target="_blank" class="linkedin"><i class="fa fa-linkedin color-blue"></i></a></li>
-            <li><a href="https://www.behance.net/rovahrowa" target="_blank" class="behance"><i class="fa fa-behance color-6"></i></a></li>
-            <li><a href="https://web.facebook.com/zemuldo" target="_blank" class="facebook"><i class="fa fa-facebook color-blue"></i></a></li>
-            <li><a href="https://twitter.com/zemuldo" target="_blank" class="twitter"><i class="fa fa-twitter color-6"></i></a></li>
-            <li><a href="https://plus.google.com/107167624370676968496" target="_blank" class="google-plus"><i class="fa fa-google-plus color-red"></i></a></li>
-        </ul>
-    </div>
-</section>
-<!-- Contact End -->
-
-<!-- Footer Start -->
-<footer class="footer-section">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4 text-left">
-                <p><span><a href="#about" class="smoth-scroll"><span class="home-green">About Me</span></a></span> | <span><a href="#projects" title="Projects" class="smoth-scroll"><span class="pre-myname on-hover-yellow">Projects</span></a></span></p>
-                <a href="#location" class="smoth-scroll"><span class="fontsize-12 on-hover-yellow">My location</span></a><br>
-                <a href="#socialsites" class="smoth-scroll"><span class="fontsize-12 on-hover-yellow">Social media profiles</span></a><br>
-                <span class="fontsize-12">Other links</span>
-                <a href="https://griminc.co.ke" target="_blank"><span class="fontsize-12 on-hover-yellow">GrimInc, </span></a>
-                <a href="https://mapit.co.ke" target="_blank"><span class="fontsize-12 on-hover-yellow">Map-IT-Limited, </span></a>
-                <br><br><br><br><span class="color-green fontsize-16">Quote </span><br><span class="fontsize-12"> Every complex System no matter
-                  how Complex is a combination of many smaller and simpler Systems and Units that operate together Synchronously </span><br>
-                <br>
-                <a href="#systemadmin" class="smoth-scroll "><p class="center-align "><span class="color-orange on-hover-yellow">System Administrator Fields</span></p></a>
-                <img src="images/sysdmn/linux-logo.png" class="footer-img" title="Linux">
-                <img src="images/sysdmn/centos_logo.png" class="footer-img" title="CentOS">
-                <img src="images/sysdmn/img_datacenter.png" class="footer-img" title="DataCenters">
-                <img src="images/sysdmn/databases.png" class="footer-img" title="RDBMs">
-                <img src="images/sysdmn/1280px-RedHat.svg.png" class="footer-img" title="RedHat">
-                <img src="images/sysdmn/cisco.png" class="footer-img" title="Cisco">
-                <img src="images/sysdmn/network_database.png" class="footer-img" title="Network Databases">
-                <img src="images/sysdmn/mongodb-logo-1.png" class="footer-img" title="NoSQL-MongoDB">
-                <img src="images/modern/devopsagile_2.png" class="footer-img" title="DevOps">
-                <img src="images/modern/Big-data-analytics-11.png" class="footer-img" title="BigData">
-                <img src="images/modern/blockchain.png" class="footer-img" title="BlockChanin">
-            </div>
-            <div class="col-md-4 ">
-                <p>
-                    <span class="fontsize-12 text-align-right"><span class="color-green">The bearing of a child</span>> takes nine months, no matter how many women are assigned. Many software tasks have this characteristic because of the sequential nature of debugging. <br>-- Fred Brooks</span>
+                    <a href="#location" class="smoth-scroll">
+                        <span class="fontsize-12 on-hover-yellow">My location</span>
+                    </a>
                     <br>
-                    <span class="fontsize-12 text-align-right"><span class="color-green">Any fool</span> can write code that a computer can understand. Good programmers write code that humans can understand.<br>--Martin Fowler</span>
-                </p>
-                <br>
-                <a href="#programming" class="smoth-scroll "><p class="center-align "><span class="color-orange on-hover-yellow">Leading Technologies</span></p></a>
-                <img src="images/modern/big-data.png" class="footer-img" title="BigData">
-                <img src="images/modern/Big-data-analytics-11.png" class="footer-img" title="BigData">
-                <img src="images/modern/blockchain.png" class="footer-img" title="BlockChanin">
-                <img src="images/modern/devopsagile_2.png" class="footer-img" title="DevOps">
-                <img src="images/modern/blockchain1.png" class="footer-img" title="BlockChanin">
-                <img src="images/modern/Devops_02a.png" class="footer-img" title="DevOps">
-                <img src="images/modern/docker.png" class="footer-img" title="Docker Container">
-                <img src="images/modern/machine-learning.png" class="footer-img" title="MachineLearning">
-                <img src="images/modern/DevOps-Advantages.png" class="footer-img" title="DevOps">
-                <img src="images/modern/big-data-318x211.png" class="footer-img" title="BigData">
-                <img src="images/modern/Big-data-3.png" class="footer-img" title="BigData">
-                <img src="images/modern/NN.png" class="footer-img" title="MachineLearning">
-            </div>
-            <div class="col-md-4 uipasta-credit text-right">
-                <p class="right-align margin-left-10" >
-                    <span class="home-green ">Design By </span><a href="https://github.com/rovahrowa" target="_blank" title="RovahRowa"><span class="hi-home">Danstan O. Onyango</span></a>
-                    <span class="fontsize-12"><br>For Website Development, Web Applications, Mobile Apps Design, Network Design,
-                     <br>System Security<br><a href="#contact" class="smoth-scroll">Reach me</a></span>
-                    <br><br><span class="color-green fontsize-16">Quote </span><span class="fontsize-12"> Big is many Smalls Put Together.</span><br><span>Put the togetherand you have the best</span><br><span>Become part of the Big Picture</span>
-                </p>
-                <br>
-                <a href="#frameworks" class="smoth-scroll "><p class="center-align "><span class="color-orange on-hover-yellow">FrameWorks and Languages</span></p></a>
-                <img src="images/sfw/c_logo-min.png" class="footer-img" title="C Language">
-                <img src="images/sfw/pyth.png" class="footer-img" title="Python">
-                <img src="images/sfw/java-logod.png" class="footer-img" title="JavaEE">
-                <img src="images/sfw/js.PNG" class="footer-img" title="JavaScript">
-                <img src="images/sfw/nodejs-logo.png" class="footer-img" title="NodeJS">
-                <img src="images/sfw/Spring-Framework-Logo.png" class="footer-img" title="Spring MVC">
-                <img src="images/sfw/react-logo-colored.png" class="footer-img" title="ReactJS">
-                <img src="images/sfw/django-logo.png" class="footer-img" title="Python DJango">
-                <img src="images/sfw/ng2.png" class="footer-img" title="AngularJS">
-            </div>
+                    <a href="#socialsites" class="smoth-scroll">
+                        <span class="fontsize-12 on-hover-yellow">Social media profiles</span>
+                    </a>
+                    <br>
+                    <span class="fontsize-12">Other links</span>
+                    <a href="https://griminc.co.ke" target="_blank">
+                        <span class="fontsize-12 on-hover-yellow">GrimInc, </span>
+                    </a>
+                    <a href="https://mapit.co.ke" target="_blank">
+                        <span class="fontsize-12 on-hover-yellow">Map-IT-Limited, </span>
+                    </a>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <span class="color-green fontsize-16">Quote </span>
+                    <br>
+                    <span class="fontsize-12"> Every complex System no matter how Complex is a combination of many smaller and simpler Systems and Units
+                        that operate together Synchronously </span>
+                    <br>
+                    <br>
+                    <a href="#systemadmin" class="smoth-scroll ">
+                        <p class="center-align ">
+                            <span class="color-orange on-hover-yellow">System Administrator Fields</span>
+                        </p>
+                    </a>
+                    <img src="images/sysdmn/linux-logo.png" class="footer-img" title="Linux">
+                    <img src="images/sysdmn/centos_logo.png" class="footer-img" title="CentOS">
+                    <img src="images/sysdmn/img_datacenter.png" class="footer-img" title="DataCenters">
+                    <img src="images/sysdmn/databases.png" class="footer-img" title="RDBMs">
+                    <img src="images/sysdmn/1280px-RedHat.svg.png" class="footer-img" title="RedHat">
+                    <img src="images/sysdmn/cisco.png" class="footer-img" title="Cisco">
+                    <img src="images/sysdmn/network_database.png" class="footer-img" title="Network Databases">
+                    <img src="images/sysdmn/mongodb-logo-1.png" class="footer-img" title="NoSQL-MongoDB">
+                    <img src="images/modern/devopsagile_2.png" class="footer-img" title="DevOps">
+                    <img src="images/modern/Big-data-analytics-11.png" class="footer-img" title="BigData">
+                    <img src="images/modern/blockchain.png" class="footer-img" title="BlockChanin">
+                </div>
+                <div class="col-md-4 ">
+                    <p>
+                        <span class="fontsize-12 text-align-right">
+                            <span class="color-green">The bearing of a child</span>> takes nine months, no matter how many women are assigned. Many
+                            software tasks have this characteristic because of the sequential nature of debugging.
+                            <br>-- Fred Brooks</span>
+                        <br>
+                        <span class="fontsize-12 text-align-right">
+                            <span class="color-green">Any fool</span> can write code that a computer can understand. Good programmers write code that
+                            humans can understand.
+                            <br>--Martin Fowler</span>
+                    </p>
+                    <br>
+                    <a href="#programming" class="smoth-scroll ">
+                        <p class="center-align ">
+                            <span class="color-orange on-hover-yellow">Leading Technologies</span>
+                        </p>
+                    </a>
+                    <img src="images/modern/big-data.png" class="footer-img" title="BigData">
+                    <img src="images/modern/Big-data-analytics-11.png" class="footer-img" title="BigData">
+                    <img src="images/modern/blockchain.png" class="footer-img" title="BlockChanin">
+                    <img src="images/modern/devopsagile_2.png" class="footer-img" title="DevOps">
+                    <img src="images/modern/blockchain1.png" class="footer-img" title="BlockChanin">
+                    <img src="images/modern/Devops_02a.png" class="footer-img" title="DevOps">
+                    <img src="images/modern/docker.png" class="footer-img" title="Docker Container">
+                    <img src="images/modern/machine-learning.png" class="footer-img" title="MachineLearning">
+                    <img src="images/modern/DevOps-Advantages.png" class="footer-img" title="DevOps">
+                    <img src="images/modern/big-data-318x211.png" class="footer-img" title="BigData">
+                    <img src="images/modern/Big-data-3.png" class="footer-img" title="BigData">
+                    <img src="images/modern/NN.png" class="footer-img" title="MachineLearning">
+                </div>
+                <div class="col-md-4 uipasta-credit text-right">
+                    <p class="right-align margin-left-10">
+                        <span class="home-green ">Design By </span>
+                        <a href="https://github.com/rovahrowa" target="_blank" title="RovahRowa">
+                            <span class="hi-home">Danstan O. Onyango</span>
+                        </a>
+                        <span class="fontsize-12">
+                            <br>For Website Development, Web Applications, Mobile Apps Design, Network Design,
+                            <br>System Security
+                            <br>
+                            <a href="#contact" class="smoth-scroll">Reach me</a>
+                        </span>
+                        <br>
+                        <br>
+                        <span class="color-green fontsize-16">Quote </span>
+                        <span class="fontsize-12"> Big is many Smalls Put Together.</span>
+                        <br>
+                        <span>Put the togetherand you have the best</span>
+                        <br>
+                        <span>Become part of the Big Picture</span>
+                    </p>
+                    <br>
+                    <a href="#frameworks" class="smoth-scroll ">
+                        <p class="center-align ">
+                            <span class="color-orange on-hover-yellow">FrameWorks and Languages</span>
+                        </p>
+                    </a>
+                    <img src="images/sfw/c_logo-min.png" class="footer-img" title="C Language">
+                    <img src="images/sfw/pyth.png" class="footer-img" title="Python">
+                    <img src="images/sfw/java-logod.png" class="footer-img" title="JavaEE">
+                    <img src="images/sfw/js.PNG" class="footer-img" title="JavaScript">
+                    <img src="images/sfw/nodejs-logo.png" class="footer-img" title="NodeJS">
+                    <img src="images/sfw/Spring-Framework-Logo.png" class="footer-img" title="Spring MVC">
+                    <img src="images/sfw/react-logo-colored.png" class="footer-img" title="ReactJS">
+                    <img src="images/sfw/django-logo.png" class="footer-img" title="Python DJango">
+                    <img src="images/sfw/ng2.png" class="footer-img" title="AngularJS">
+                </div>
 
 
             </div>
-        <div class="row">
-            <div class=" text-center margin-top-50">
-                <p><span class="hi-home">&copy</span> <span class="hi-this">Copyright 2017</span> <span class="testimonials-purple">Danstan O. Onyango.</span></p>
+            <div class="row">
+                <div class=" text-center margin-top-50">
+                    <p>
+                        <span class="hi-home">&copy</span>
+                        <span class="hi-this">Copyright 2017</span>
+                        <span class="testimonials-purple">Danstan O. Onyango.</span>
+                    </p>
 
+                </div>
             </div>
+
         </div>
 
-    </div>
+    </footer>
+    <!-- Footer End -->
 
-</footer>
-<!-- Footer End -->
+    <!-- Back to Top Start -->
+    <span>
+        <a href="#" class="scroll-to-top">
+            <i class="fa fa-arrow-up" title="Back To Top"></i>
+        </a>
+    </span>
+    <!-- Back to Top End -->
 
-<!-- Back to Top Start -->
-<span><a href="#" class="scroll-to-top"><i class="fa fa-arrow-up" title="Back To Top"></i></a></span>
-<!-- Back to Top End -->
-
-<!-- All Javascript Plugins  -->
-<script type="text/javascript" src="js/jquery.min.js"></script>
-<script type="text/javascript" src="js/plugin.js"></script>
-<script type="text/javascript" src="https://maps.google.com/maps/api/js?key=AIzaSyC0HAKwKinpoFKNGUwRBgkrKhF-sIqFUNA"></script>
-<!-- Main Javascript File  -->
-<script type="text/javascript" src="js/scripts.js"></script>
-<script type="text/javascript" src="js/typed.js"></script>
+    <!-- All Javascript Plugins  -->
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/plugin.js"></script>
+    <script type="text/javascript" src="https://maps.google.com/maps/api/js?key=AIzaSyC0HAKwKinpoFKNGUwRBgkrKhF-sIqFUNA"></script>
+    <!-- Main Javascript File  -->
+    <script type="text/javascript" src="js/scripts.js"></script>
+    <script type="text/javascript" src="js/typed.js"></script>
 </body>
+
 </html>

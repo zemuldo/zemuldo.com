@@ -427,7 +427,11 @@ body.loaded #preloader{
     -webkit-transition: all 0.3s ease-out;
     transition: all 0.3s ease-out;
 }
-.logod{border-radius: 50%;}
+.logod{
+    width: 100%;
+    height: auto;
+    max-width: 200px;
+}
 
 .logo a {
     display: block;
