@@ -862,7 +862,6 @@ ul.portfolio li.active {
 
 .services-section .services-detail {
   border-radius: 4px;
-  border-bottom-right-radius: 20%;
   background-color: black;
   box-shadow: 0px 1px 2px 0px rgba(90, 91, 95, 0.15);
   transition: all 0.3s ease-in-out;
@@ -882,6 +881,10 @@ ul.portfolio li.active {
   font-size: 42px;
 }
 
+.services-detail{
+    width:360px;
+    height: 590px;
+}
 
 
 /* Call to Action */
