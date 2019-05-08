@@ -110,7 +110,7 @@
 
         $(window).load(function(){
         $('.typed').typed({
-            strings: ['Now you are here, ^700 Let us hack this, ^700 <br/> I am a talented Software Developer. ^1000 I Design Web and POS Applications. ^700 I am also a Systems Administrator. ^800 I design, Implement and Maintain Network Infrastructure. ^1000 I am also a professional Linux User. ^500 Graduate in Telecommunications Engineering.  <br> I Live in Nairobi. ^1000 <br> My Expertise are in: <br> 1. ^1000  NodeJS <br> 2. ^1000  ReactJS <br> 3. ^1000  MongoDB, RethinkDB <br> 4. ^1000  Payment Systems <br> 5. ^1000  Point of Sale Applications S <br> 6. ^1000  Python <br> ^1000 I have aspiration in  <br> ^1000 ML, ^1000 -AI and ^1000 -IoT ^1000  <br> You wanna find  out More? or Contact me? ^1000 ^1000 ? ^1000 Check My Profile Down There &#x1f447 <br> Dont forget to Leave a message '],
+            strings: ['Now you are here, ^700 Let us hack this, ^700 <br/> I am a talented Software Developer. ^1000 I have been building scalable web applications for web 2.0. ^700 I design, Implement and backends. ^1000 I am also a professional Linux User. ^500 Graduate in Telecommunications Engineering.  <br> I Live in Nairobi. ^1000 <br> My Stack::::: <br> 1. ^1000  Elixir ~ Phoenix Framework, Metaprogramming <br> 2. ^1000  NodeJS ~ ExpressJS <br> 3. ^1000  ReactJS <br> 4. ^1000  MongoDB, RethinkDB <br> 5. ^1000  Python <br> 4. ^1000 Docker and Kubernetes <br> ^1000 I have aspiration in  <br> ^1000 ML, ^1000 -AI and ^1000 -IoT ^1000  <br> You wanna find  out More? or Contact me? ^1000 ^1000 ? ^1000 Check My Profile Down There &#x1f447 <br> Dont forget to Leave a message '],
 
           });
          });
