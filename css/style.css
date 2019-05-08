@@ -549,6 +549,9 @@ body.loaded #preloader{
     font-size: larger;
 }
 .hi-home{color: red;}
+.hi-purple{color: purple;}
+.hi-yellow{color: yellow;}
+.hi-gray{color: gray;}
 .pre-myname{color: orange;}
 .hi-this{color: blue;}
 .home-green{color: green;}
