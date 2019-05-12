@@ -494,7 +494,6 @@ body.loaded #preloader{
 
 .navigation-background .navigation-menu .navbar-nav li a {
     color: #fff;
-    padding: 20px 15px;
     -webkit-transition: .3s;
     transition: .3s;
 }
