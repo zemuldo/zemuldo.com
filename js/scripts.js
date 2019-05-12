@@ -36,16 +36,16 @@
 
     jQuery(document).ready(function () {
 
-        
-       /* Preloader */
-		
-        $(window).on('load', function() {
-          $('body').addClass('loaded');
+
+        /* Preloader */
+
+        $(window).on('load', function () {
+            $('body').addClass('loaded');
         });
-		
-		
-		
-       /* Smooth Scroll */
+
+
+
+        /* Smooth Scroll */
 
         $('a.smoth-scroll').on('click', function (e) {
             var anchor = $(this);
@@ -54,12 +54,12 @@
             }, 1000);
             e.preventDefault();
         });
-		
 
 
-       
-       /* Scroll Naviagation Background Change with Sticky Navigation */
-		 
+
+
+        /* Scroll Naviagation Background Change with Sticky Navigation */
+
         $(window).on('scroll', function () {
             if ($(window).scrollTop() > 100) {
                 $('.header-top-area').addClass('navigation-background');
@@ -67,12 +67,12 @@
                 $('.header-top-area').removeClass('navigation-background');
             }
         });
-		
-		
-		
-		
-       /* Mobile Navigation Hide or Collapse on Click */
-		
+
+
+
+
+        /* Mobile Navigation Hide or Collapse on Click */
+
         $(document).on('click', '.navbar-collapse.in', function (e) {
             if ($(e.target).is('a') && $(e.target).attr('class') != 'dropdown-toggle') {
                 $(this).collapse('hide');
@@ -81,40 +81,40 @@
         $('body').scrollspy({
             target: '.navbar-collapse',
             offset: 195
-        
-		 });
-		 
-		
-		
-		
-        /* Scroll To Top */
-		
-        $(window).scroll(function(){
-        if ($(this).scrollTop() >= 500) {
-            $('.scroll-to-top').fadeIn();
-         } else {
-            $('.scroll-to-top').fadeOut();
-         }
-	   });
-	
-	
-	    $('.scroll-to-top').click(function(){
-		  $('html, body').animate({scrollTop : 0},800);
-		  return false;
-	    });
-		
-		
 
-		
+        });
+
+
+
+
+        /* Scroll To Top */
+
+        $(window).scroll(function () {
+            if ($(this).scrollTop() >= 500) {
+                $('.scroll-to-top').fadeIn();
+            } else {
+                $('.scroll-to-top').fadeOut();
+            }
+        });
+
+
+        $('.scroll-to-top').click(function () {
+            $('html, body').animate({ scrollTop: 0 }, 800);
+            return false;
+        });
+
+
+
+
         /* Typed.js */
 
-        $(window).load(function(){
-        $('.typed').typed({
-            strings: ['Now you are here, ^700 Let us hack this, ^700 <br/> I am a talented Software Developer. ^1000 I have been building scalable web applications for web 2.0. ^700 I design, Implement and backends. ^1000 I am also a professional Linux User. ^500 Graduate in Telecommunications Engineering.  <br> I Live in Nairobi. ^1000 <br> My Stack::::: <br> 1. ^1000  Elixir ~ Phoenix Framework, Metaprogramming <br> 2. ^1000  NodeJS ~ ExpressJS <br> 3. ^1000  ReactJS <br> 4. ^1000  MongoDB, RethinkDB <br> 5. ^1000  Python <br> 4. ^1000 Docker and Kubernetes <br> ^1000 I have aspiration in  <br> ^1000 ML, ^1000 -AI and ^1000 -IoT ^1000  <br> You wanna find  out More? or Contact me? ^1000 ^1000 ? ^1000 Check My Profile Down There &#x1f447 <br> Dont forget to Leave a message '],
+        $(window).load(function () {
+            $('.typed').typed({
+                strings: ['Now you are here, ^700 Let us hack this, ^700 <br/> I am a talented Software Developer. ^1000 I have been building scalable web applications for web 2.0. ^700 I design, Implement and backends. ^1000 I am also a professional Linux User. ^500 Graduate in Telecommunications Engineering.  <br> I Live in Nairobi. ^1000 <br> My Stack::::: <br> 1. ^1000  Elixir ~ Phoenix Framework, Metaprogramming <br> 2. ^1000  NodeJS ~ ExpressJS <br> 3. ^1000  ReactJS <br> 4. ^1000  MongoDB, RethinkDB <br> 5. ^1000  Python <br> 4. ^1000 Docker and Kubernetes <br> ^1000 I have aspiration in  <br> ^1000 ML, ^1000 -AI and ^1000 -IoT ^1000  <br> You wanna find  out More? or Contact me? ^1000 ^1000 ? ^1000 Check My Profile Down There &#x1f447 <br> Dont forget to Leave a message '],
 
-          });
-         });
-		 
+            });
+        });
+
         /* Parallax Background */
 
         $(window).stellar({
@@ -125,47 +125,48 @@
             verticalOffset: 0,
         });
 
-        
-		
-		
+
+
+
         /* Portfolio Filtering */
 
         $('.portfolio-inner').mixItUp();
 
 
-       
+
         /* Magnific Popup */
 
         $('.portfolio-popup').magnificPopup({
             type: 'image',
-			
+
             gallery: { enabled: true },
-			zoom: { enabled: true,
-			        duration: 500
-					
-          },
-		  
-         image:{
-               markup: '<div class="mfp-figure portfolio-pop-up">'+
-               '<div class="mfp-close"></div>'+
-               '<div class="mfp-img"></div>'+
-               '<div class="mfp-bottom-bar portfolio_title">'+
-               '<div class="mfp-title"></div>'+
-               '<div class="mfp-counter"></div>'+
-               '</div>'+
-               '</div>',
+            zoom: {
+                enabled: true,
+                duration: 500
 
-               titleSrc:function(item){
-                return item.el.attr('title');
-              }
+            },
+
+            image: {
+                markup: '<div class="mfp-figure portfolio-pop-up">' +
+                    '<div class="mfp-close"></div>' +
+                    '<div class="mfp-img"></div>' +
+                    '<div class="mfp-bottom-bar portfolio_title">' +
+                    '<div class="mfp-title"></div>' +
+                    '<div class="mfp-counter"></div>' +
+                    '</div>' +
+                    '</div>',
+
+                titleSrc: function (item) {
+                    return item.el.attr('title');
+                }
             }
-		  
-		  
-          });
 
-       
-	   
-		 
+
+        });
+
+
+
+
         /* Testimonial Carousel/Slider */
 
         $('.testimonial-carousel-list').owlCarousel({
@@ -181,29 +182,29 @@
             itemsMobile: [479, 1],
             autoHeight: true,
             pagination: false,
-            transitionStyle : 'backSlide'
+            transitionStyle: 'backSlide'
         });
-		
-		
-		
-		
+
+
+
+
         /* Statistics Counter */
-		
-        $('.statistics').appear(function() {
-           var counter = $(this).find('.statistics-count');
-           var toCount = counter.data('count');
-      
-           $(counter).countTo({
-           from: 0,
-           to: toCount,
-           speed: 5000,
-           refreshInterval: 50
-           })
-           });
-		   
-		  
-         
-         /* Google Map */
+
+        $('.statistics').appear(function () {
+            var counter = $(this).find('.statistics-count');
+            var toCount = counter.data('count');
+
+            $(counter).countTo({
+                from: 0,
+                to: toCount,
+                speed: 5000,
+                refreshInterval: 50
+            })
+        });
+
+
+
+        /* Google Map */
         var iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
         var icons = {
             parking: {
@@ -219,23 +220,23 @@
                 icon: iconBase + 'info-i_maps.png'
             }
         };
-         $('#my-address').gMap({
+        $('#my-address').gMap({
             zoom: 5,
             scrollwheel: true,
             maptype: 'ROADMAP',
-            markers:[
-                    {
-                        address: 'Kenyatta Avenue, Nairobi',  /* You can change your address from here */
-                        html: '<b>24136-00100</b>: <br> GPO, Nairobi, Kenya.',   /* You can change display address text from here */
-                        popup: true
-                    }
-                ]
-            });
-              
-		   
-            });
+            markers: [
+                {
+                    address: 'Kenyatta Avenue, Nairobi',  /* You can change your address from here */
+                    html: '<b>24136-00100</b>: <br> GPO, Nairobi, Kenya.',   /* You can change display address text from here */
+                    popup: true
+                }
+            ]
+        });
 
-   })(jQuery);
+
+    });
+
+})(jQuery);
 
 //Matrix Background canvas
 // geting canvas by id c
@@ -252,17 +253,16 @@ var matrix = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ123456789@#$%^&*()*&^%';
 matrix = matrix.split('');
 
 var font_size = 10;
-var columns = c.width/font_size; //number of columns for the rain
+var columns = c.width / font_size; //number of columns for the rain
 //an array of drops - one per column
 var drops = [];
 //x below is the x coordinate
 //1 = y co-ordinate of the drop(same for every drop initially)
-for(var x = 0; x < columns; x++)
+for (var x = 0; x < columns; x++)
     drops[x] = 1;
 
 //drawing the characters
-function draw()
-{
+function draw() {
     //Black BG for the canvas
     //translucent BG to show trail
     ctx.fillStyle = 'rgba(0, 0, 0, 0.04)';
@@ -271,16 +271,15 @@ function draw()
     ctx.fillStyle = '#0F0'; //green text
     ctx.font = font_size + 'px arial';
     //looping over drops
-    for(var i = 0; i < drops.length; i++)
-    {
+    for (var i = 0; i < drops.length; i++) {
         //a random chinese character to print
-        var text = matrix[Math.floor(Math.random()*matrix.length)];
+        var text = matrix[Math.floor(Math.random() * matrix.length)];
         //x = i*font_size, y = value of drops[i]*font_size
-        ctx.fillText(text, i*font_size, drops[i]*font_size);
+        ctx.fillText(text, i * font_size, drops[i] * font_size);
 
         //sending the drop back to the top randomly after it has crossed the screen
         //adding a randomness to the reset to make the drops scattered on the Y axis
-        if(drops[i]*font_size > c.height && Math.random() > 0.975)
+        if (drops[i] * font_size > c.height && Math.random() > 0.975)
             drops[i] = 0;
 
         //incrementing Y coordinate
@@ -289,4 +288,37 @@ function draw()
 }
 
 setInterval(draw, 35);
+var feedbackSent = false
+$(document).ready(function () {
+    // Listen to click event on the submit button
+    $('#send-message').click(function (e) {
+
+        e.preventDefault();
+        if (feedbackSent) return alert("feedback sent")
+
+        var name = $("#name").val();
+        var email = $("#name").val();
+        var address = $("#address").val();
+        var subject = $("#subject").val();
+        var message = $("#message").val();
+        var website = $("#website").val()
+
+        if (!name || !email || !address || !message) return alert("Please fill form")
+
+        var text = JSON.stringify({ name, email, address, subject, message, website })
+        var url = "https://hooks.slack.com/services/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"
+        feedbackSent = true;
+        $.ajax({
+            data: 'payload=' + JSON.stringify({
+                "text": text
+            }),
+            dataType: 'json',
+            processData: false,
+            type: 'POST',
+            url: url
+        })
+    });
+
+
+});
 
