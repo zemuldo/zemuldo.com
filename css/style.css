@@ -430,7 +430,9 @@ body.loaded #preloader{
 .logod{
     width: 100%;
     height: auto;
-    max-width: 200px;
+    max-width: 100px;
+    border-radius: 50%;
+    margin-top: -30px;
 }
 
 .logo a {
@@ -447,7 +449,6 @@ body.loaded #preloader{
     text-transform: uppercase;
     font-size: 12px;
     letter-spacing: 1px;
-    padding: 30px 15px;
     -webkit-transition: .3s;
     transition: .3s;
     font-weight: 600;
@@ -1129,11 +1130,9 @@ ul.portfolio li.active {
 
 @media only screen and (min-width: 767px) and (max-width: 991px) {
     .navigation-menu .navbar-nav li a {
-        padding: 30px 11px;
         font-size: 12px;
     }
     .navigation-background .navigation-menu .navbar-nav li a {
-        padding: 30px 11px;
         font-size: 12px;
     }
 	.navigation-background .logo {
@@ -1142,7 +1141,15 @@ ul.portfolio li.active {
 }
 
 
+
 @media only screen and (max-width: 991px) {
+    #about{
+        margin-top: 100px;
+    }
+    .home-section-background{
+        margin-top: 50px;
+        margin-bottom: -100px;
+    }
     .about-section img {
         position: inherit;
      }
