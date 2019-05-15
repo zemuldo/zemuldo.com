@@ -44,7 +44,7 @@ body {
     line-height: 24px;
     letter-spacing: 1px;
     height: 100%;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'courier-new', 'Poppins', sans-serif !important;
 }
 
 
@@ -113,7 +113,7 @@ fieldset {
 }
 
 .section-space-padding {
-    padding: 100px 0px;
+    padding-top: 100px;
 }
 
 .about-section-space-padding {
@@ -420,6 +420,13 @@ body.loaded #preloader{
     z-index: 9999;
     -webkit-transition: all 0.4s ease-out;
     transition: all 0.4s ease-out;
+    background-color: black !important;
+    opacity: .9 !important;
+}
+
+.header-top-area-black{
+    background-color: black !important;
+    opacity: 1 !important;
 }
 
 .logo {
@@ -1142,9 +1149,6 @@ ul.portfolio li.active {
 
 
 @media only screen and (max-width: 991px) {
-    #about{
-        margin-top: 100px;
-    }
     .home-section-background{
         margin-top: 50px;
         margin-bottom: -100px;
@@ -1208,7 +1212,7 @@ ul.portfolio li.active {
         background: rgba(0, 0, 0, .9);
     }
     .home-section-background {
-        padding-top: 120px;
+        padding-top: 10px;
     }
     .home-section-background h2 {
         font-size: 22px;
