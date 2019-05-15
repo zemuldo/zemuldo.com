@@ -288,13 +288,11 @@ function draw() {
 }
 
 setInterval(draw, 35);
-var feedbackSent = false
 $(document).ready(function () {
     // Listen to click event on the submit button
     $('#send-message').click(function (e) {
 
         e.preventDefault();
-        if (feedbackSent) return alert("feedback sent")
 
         var name = $("#name").val();
         var email = $("#name").val();
@@ -307,16 +305,19 @@ $(document).ready(function () {
 
         var text = JSON.stringify({ name, email, address, subject, message, website })
         var url = "https://hooks.slack.com/services/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"
-        feedbackSent = true;
         $.ajax({
             data: 'payload=' + JSON.stringify({
                 "text": text
             }),
-            dataType: 'json',
+            dataType: 'text',
             processData: false,
             type: 'POST',
             url: url
-        })
+        }).done(function()  {
+            $( "#leavemessage-container").replaceWith( "<div class=\"col-md-6\"><h4 class=\"center-align\">Thanks for your message</h4></div>" );
+        }).fail(function(e)  {
+            alert("Sorry. Server unavailable. ");
+        });
     });
 
 
