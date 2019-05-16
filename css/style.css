@@ -784,7 +784,7 @@ ul.portfolio li.active {
 }
 
 .owl-navi:hover {
-	color: yellow; !important;
+	color: yellow !important;
     border: double;
 }
 
