@@ -108,9 +108,23 @@
 
         /* Typed.js */
 
+        function whiten (string) {
+            return '<span style="color: white;">' + string +  '</span>'
+        }
+
         $(window).load(function () {
+
+            var waitAndBreak = '^700 <br/>';
+            var start = '<span class="margin-left--10 color-blue font-size-14 !important">➜:~</span>';
+            var myStack = start + whiten('Skill Set and Stack?') + waitAndBreak + ['Nodejs', 'ReactJS', 'Elixir', 'Docker', 'Python for Data', 'Kubernets', 'Google Cloud Platform' ,'and Amazon WebServices Cloud.'].join(',^500 ');
+            var experience = 'I have 3 years of professional experience developing software using NodeJS and ReactJS' +  '^500 and a year working with Elixir.' + '^500 Docker and Kubernetes have been a part of my work with Node and Elixir.'
+            var yearsOfExperience = waitAndBreak + start + whiten('Years of Experience?') + waitAndBreak + experience;
+            var funGames = ['During my free time I always either doing all or one of ' + 'playing Chess', 'or am cooking', 'or listening to music and dancing.'].join('^500, ')
+            var currentStatus = waitAndBreak + start + whiten('My Fun time?') + waitAndBreak + funGames;
+            var coolStuff = ['I do mentorship and also write content on medium.', 'I also am good with TCP/IP and Computer Networks.'].join('^500, ')
+            var someOtherCoolStuffICanDo = waitAndBreak + start + whiten('Any cool stuff I can do?') + waitAndBreak + coolStuff;
             $('.typed').typed({
-                strings: ['Now you are here, ^700 Let us hack this, ^700 <br/> I am a talented Software Developer. ^1000 I have been building scalable web applications for web 2.0. ^700 I design, Implement and backends. ^1000 I am also a professional Linux User. ^500 Graduate in Telecommunications Engineering.  <br> I Live in Nairobi. ^1000 <br> My Stack::::: <br> 1. ^1000  Elixir ~ Phoenix Framework, Metaprogramming <br> 2. ^1000  NodeJS ~ ExpressJS <br> 3. ^1000  ReactJS <br> 4. ^1000  MongoDB, RethinkDB <br> 5. ^1000  Python <br> 4. ^1000 Docker and Kubernetes <br> ^1000 I have aspiration in  <br> ^1000 ML, ^1000 -AI and ^1000 -IoT ^1000  <br> You wanna find  out More? or Contact me? ^1000 ^1000 ? ^1000 Check My Profile Down There &#x1f447 <br> Dont forget to Leave a message '],
+                strings: [myStack + yearsOfExperience + currentStatus + someOtherCoolStuffICanDo],
 
             });
         });

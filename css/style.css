@@ -63,6 +63,10 @@ body {
     color: #ffffff;
 }
 
+a{
+    cursor: pointer !important;
+}
+
 h1,
 h2,
 h3,
@@ -371,7 +375,11 @@ body.loaded #preloader{
 
     font-size: 1.0em;
 }
-
+.home{
+   background: black;
+   min-height: 100%;
+   opacity: .8;
+}
 .home-section-background h2 {
     color: #f8f8f8;
     font-size: 50px;
@@ -1149,10 +1157,6 @@ ul.portfolio li.active {
 
 
 @media only screen and (max-width: 991px) {
-    .home-section-background{
-        margin-top: 50px;
-        margin-bottom: -100px;
-    }
     .about-section img {
         position: inherit;
      }
@@ -1210,9 +1214,6 @@ ul.portfolio li.active {
     }
     .navigation-background .navbar-collapse {
         background: rgba(0, 0, 0, .9);
-    }
-    .home-section-background {
-        padding-top: 10px;
     }
     .home-section-background h2 {
         font-size: 22px;
@@ -1460,7 +1461,15 @@ ul.portfolio li.active {
 	margin-bottom: 200px !important;
 }
 
-
+/*
+Margin Left 
+*/
+.margin-left--10{
+    margin-left: -10px
+}
+.margin-left--15{
+    margin-left: -15px
+}
 
 /* Padding */
 
@@ -1613,6 +1622,9 @@ ul.portfolio li.active {
 .color-6 {
 	color: #08a6f3;
 }
+.color-7 {
+	color: #595d63;
+}
 
 .color-blue{color: blue;}
 .color-red{color: red;}
@@ -1650,18 +1662,10 @@ ul.portfolio li.active {
 	background-color: #08a6f3;
 }
 
-
-
-/* UiPasta Credit */
-
-.uipasta-credit {
+/*Font sizes*/
+.font-size-40{
+    font-size: 18px;
 }
-
-.uipasta-credit a {
-    color: #24b662;
-    font-weight: 600;
-}
-
-.uipasta-credit a:hover {
-    color: #ffffff;
+.font-size-14{
+    font-size: 14px;
 }
