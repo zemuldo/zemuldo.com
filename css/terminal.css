@@ -1,0 +1,46 @@
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:400,500);
+
+.text-editor-wrap {
+    margin: auto;
+    display: block;
+    max-width: 700px;
+    min-height: 200px;
+    border-radius: 10px;
+    clear: both;
+    overflow: hidden;
+    -webkit-transition: all .5s ease-out;
+    -moz-transition: all .5s ease-out;
+    -ms-transition: all .5s ease-out;
+    -o-transition: all .5s ease-out;
+    transition: all .5s ease-out
+}
+
+.text-body {
+    height: auto;
+    background-color: rgba(0, 0, 0, .85);
+    padding: 10px;
+    color: #f0f0f0;
+    text-shadow: #000 0 1px 0;
+    font-family: Consolas, "Courier New", Courier;
+    font-size: 1em;
+    line-height: 1.4em;
+    font-weight: 500;
+    text-align: left;
+    overflow: hidden;
+    -webkit-transition: all .5s ease-out;
+    -moz-transition: all .5s ease-out;
+    -ms-transition: all .5s ease-out;
+    -o-transition: all .5s ease-out;
+    transition: all .5s ease-out
+}
+
+.typed {
+    color: green
+}
+
+hr {
+    margin: 20px 0;
+    border: 0;
+    border-bottom: #fff 1px solid;
+    border-top: #f0f0f0 1px solid
+}
