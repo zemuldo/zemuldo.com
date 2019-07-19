@@ -8,7 +8,7 @@ function typeOnTerminal () {
 
     var waitAndBreak = '^700 <br/>';
     var start = '<span class="margin-left--10 color-blue font-size-14 !important">➜:~</span>';
-    var myStack = start + whiten('Skill Set and Stack?') + waitAndBreak + ['Nodejs', 'ReactJS', 'Elixir', 'Docker', 'Python for Data', 'K8s', 'GCP' ,'and AWs.'].join(',^500 ');
+    var myStack = start + whiten('Skill Set and Stack?') + waitAndBreak + ['Nodejs', 'ReactJS', 'Elixir', 'Docker', 'Python for Data', 'K8s', 'GCP' ,'and AWS.'].join(',^500 ');
     var experience = '3 years';
     var yearsOfExperience = waitAndBreak + start + whiten('Years of Experience?') + waitAndBreak + experience;
     var funGames = ['Chess,' + ' Music and ' +  'Dancing'].join('^500, ');
@@ -72,5 +72,5 @@ function draw() {
     }
 }
 
-setInterval(draw, 35);
+setInterval(draw, 100);
 
