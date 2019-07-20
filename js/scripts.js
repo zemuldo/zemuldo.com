@@ -88,3 +88,12 @@ function draw() {
 
 setInterval(draw, 100);
 
+var images = ['trivial.png', 'black.jpg', 'impala.jpg'];
+
+function switchMe(){
+    document.getElementById('me-pic').src= '/images/logo/' + images[Math.floor(Math.random() * images.length)]
+}
+
+setInterval(() => {
+    switchMe()
+}, 7000);
