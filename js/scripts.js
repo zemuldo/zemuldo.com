@@ -94,6 +94,6 @@ function switchMe(){
     document.getElementById('me-pic').src= '/images/logo/' + images[Math.floor(Math.random() * images.length)]
 }
 
-setInterval(() => {
-    switchMe()
-}, 7000);
+setInterval( function()  {
+    switchMe();
+}, 5000);
