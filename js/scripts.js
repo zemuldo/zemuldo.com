@@ -4,13 +4,27 @@ function whiten (string) {
     return '<span style="color: white;">' + string +  '</span>'
 }
 
+function getYearsBetween (sdt) { 
+    var date_difference = new Date(new Date() - sdt);
+    var years = date_difference.toISOString().slice(0, 4) - 1970;
+    var months = function (months) {
+        if(months == 0) return '';
+        if(months > 11){
+            years +=1;
+            return '';
+        }
+        return ' and ' + months + ' Months';
+    };
+    return years + ' Years' + months(date_difference.getMonth()+1);
+}
+
 function typeOnTerminal () {
 
     var waitAndBreak = '^700 <br/>';
     var start = '<span class="margin-left--10 color-blue font-size-14 !important">➜:~</span>';
-    var myStack = start + whiten('Skill Set and Stack?') + waitAndBreak + ['Nodejs', 'ReactJS', 'Elixir', 'Docker', 'Python for Data', 'K8s', 'GCP' ,'and AWS.'].join(',^500 ');
-    var experience = '3 years';
-    var yearsOfExperience = waitAndBreak + start + whiten('Years of Experience?') + waitAndBreak + experience;
+    var myStack = start + whiten('Skill Set?') + waitAndBreak + ['Nodejs', 'ReactJS', 'Elixir', 'Docker', 'Python for Data', 'Kubernetes', 'GCP', 'Heroku' ,'AWS.'].join(',^500 ');
+    var experience = getYearsBetween(new Date("February 1 2016 00:00"));
+    var yearsOfExperience = waitAndBreak + start + whiten('Experience?') + waitAndBreak + experience;
     var funGames = ['Chess,' + ' Music and ' +  'Dancing'].join('^500, ');
     var currentStatus = waitAndBreak + start + whiten('My Fun time?') + waitAndBreak + funGames;
     var coolStuff = ['I do mentorship and also write content on medium.'];

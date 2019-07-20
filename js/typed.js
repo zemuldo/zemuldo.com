@@ -1,5 +1,6 @@
 
-/* Typed.js */ ! function(t) {
+/* Typed.js */
+!function(t) {
     'use strict';
     var s = function(s, e) {
         this.el = t(s), this.options = t.extend({}, t.fn.typed.defaults, e), this.isInput = this.el.is('input'), this.attr = this.options.attr, this.showCursor = this.isInput ? !1 : this.options.showCursor, this.elContent = this.attr ? this.el.attr(this.attr) : this.el.text(), this.contentType = this.options.contentType, this.typeSpeed = this.options.typeSpeed, this.startDelay = this.options.startDelay, this.backSpeed = this.options.backSpeed, this.backDelay = this.options.backDelay, this.stringsElement = this.options.stringsElement, this.strings = this.options.strings, this.strPos = 0, this.arrayPos = 0, this.stopNum = 0, this.loop = this.options.loop, this.loopCount = this.options.loopCount, this.curLoop = 0, this.stop = !1, this.cursorChar = this.options.cursorChar, this.shuffle = this.options.shuffle, this.sequence = [], this.build()
@@ -94,7 +95,7 @@
             r && r.reset(), i.data('typed', r = new s(this, o)), 'string' == typeof e && r[e]()
         })
     }, (((t || {}).fn || {}).typed || {}).defaults = {
-        strings: ['These are the default values...', 'You know what you should do?', 'Use your own!', 'Have a great day!'],
+        strings: ['Danstan Onyango aka Zemuldo, Software Engineer'],
         stringsElement: null,
         typeSpeed: 60,
         startDelay: 0,
@@ -113,9 +114,3 @@
         resetCallback: function() {}
     }
 }(window.jQuery);
-
-
-
-/**
- * Created by danstan on 4/16/2017.
- */
