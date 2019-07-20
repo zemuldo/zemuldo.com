@@ -26,7 +26,7 @@ body {
 }
 
 .container {
-    margin: 50px auto;
+    margin: 30px auto;
     padding: 5px;
     max-width: 650px
 }
@@ -48,6 +48,10 @@ body {
     max-width: 350px
 }
 
+.font-c-cn-m{
+    font-family: 'Courier New', Courier, monospace
+}
+
 h1 {
     font-weight: 400;
     margin: 0
@@ -65,7 +69,7 @@ a:hover {
     position: relative;
     width: 300px;
     height: 300px;
-    margin: 0 0 10px 0;
+    margin: 10px;
     border-radius: 50%;
     overflow: hidden
 }
@@ -229,4 +233,46 @@ ul {
 }
 .color-orange{
     color: #f56f42;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,300|Raleway+Dots|Lato:300|Inconsolata|Montserrat);
+hr {
+  font-size: 20px;
+  position: relative;
+  border: 0;
+  height: 1.5em;
+}
+@media only screen and (max-width: 600px) {
+    hr:before {
+        content: '';
+        background: rgba(255,0,0,1);
+        position: absolute;
+        left: 0;
+        top: 50%;
+        width: 100%;
+        height: 1px;
+    }
+
+}
+@media only screen and (min-width: 600px) {
+    hr:before {
+        content: '';
+        background: linear-gradient(to right, rgba(255,0,0,1), rgba(255,0,0,0));;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        width: 100%;
+        height: 1px;
+    }
+
+}
+hr:after {
+  content: attr(data-content);
+  position: relative;
+  display: inline-block;
+  color: black;
+  padding: 0 0.5em;
+  line-height: 1.5em;
+  color: #24bba0;
+  background-color: black;
 }
