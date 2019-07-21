@@ -97,12 +97,12 @@ var imageBorders = ['border-color-coral', 'border-color-green', 'border-color-bl
 function switchMe() {
     document.getElementById('me-pic').src = '/images/logo/' + images[Math.floor(Math.random() * images.length)];
     var e = document.getElementById('me-pic-wrapper');
-    var newClassName = imageBorders[Math.floor(Math.random() * imageBorders.length)]
+    var newClassName = imageBorders[Math.floor(Math.random() * imageBorders.length)];
     var list = e.className.split(' ').filter(function(className){
         return !className.match('border-color');
     });
-    list.push(newClassName)
-    e.className = list.join(' ')
+    list.push(newClassName);
+    e.className = list.join(' ');
 }
 
 setInterval(function () {
