@@ -92,9 +92,17 @@ function draw() {
 setInterval(draw, 100);
 
 var images = ['trivial.png', 'black.jpg', 'impala.jpg'];
+var imageBorders = ['border-color-coral', 'border-color-green', 'border-color-blue']
 
 function switchMe() {
-    document.getElementById('me-pic').src = '/images/logo/' + images[Math.floor(Math.random() * images.length)]
+    document.getElementById('me-pic').src = '/images/logo/' + images[Math.floor(Math.random() * images.length)];
+    var e = document.getElementById('me-pic-wrapper');
+    var newClassName = imageBorders[Math.floor(Math.random() * imageBorders.length)]
+    var list = e.className.split(' ').filter(function(className){
+        return !className.match('border-color');
+    });
+    list.push(newClassName)
+    e.className = list.join(' ')
 }
 
 setInterval(function () {

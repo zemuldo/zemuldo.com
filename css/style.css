@@ -235,6 +235,18 @@ ul {
     color: #f56f42;
 }
 
+.border-color-coral{
+    border-style: solid;
+    border-color: coral;
+}
+.border-color-green{
+    border-style: solid;
+    border-color: green;
+}
+.border-color-blue{
+    border-style: solid;
+    border-color: blue;
+}
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,300|Raleway+Dots|Lato:300|Inconsolata|Montserrat);
 hr {
   font-size: 20px;
