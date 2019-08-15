@@ -1,43 +1,3 @@
-/* Typed.js */
-
-function whiten(string) {
-    return '<span style="color: white;">' + string + '</span>'
-}
-
-function getYearsBetween(sdt) {
-    var date_difference = new Date(new Date() - sdt);
-    var years = date_difference.toISOString().slice(0, 4) - 1970;
-    var months = function (months) {
-        if (months == 0) return '';
-        if (months > 11) {
-            years += 1;
-            return '';
-        }
-        if (months == 1) {
-            return ' and ' + months + ' Month';
-        }
-        return ' and ' + months + ' Months';
-    };
-    return years + ' Years' + months(date_difference.getMonth() + 1);
-}
-
-function typeOnTerminal() {
-
-    var waitAndBreak = '^700 <br/>';
-    var start = '<span class="margin-left--10 color-blue font-size-14 !important">➜:~</span>';
-    var myStack = start + whiten('Skill Set?') + waitAndBreak + ['Nodejs', 'ReactJS', 'Elixir', 'Docker', 'Python for Data', 'Kubernetes', 'GCP', 'Heroku', 'AWS.'].join(',^500 ');
-    var experience = getYearsBetween(new Date("February 1 2016 00:00"));
-    var yearsOfExperience = waitAndBreak + start + whiten('Experience?') + waitAndBreak + experience;
-    var funGames = ['Chess,' + ' Music and ' + 'Dancing'].join('^500, ');
-    var currentStatus = waitAndBreak + start + whiten('My Fun time?') + waitAndBreak + funGames;
-    var coolStuff = ['I do mentorship and also write content on medium.'];
-    var someOtherCoolStuffICanDo = waitAndBreak + start + whiten('Any cool stuff I can do?') + waitAndBreak + coolStuff;
-    $('.typed').typed({
-        strings: [myStack + yearsOfExperience + currentStatus],
-
-    });
-}
-
 /*
     Matrix Background canvas
 */
@@ -95,7 +55,7 @@ var images = ['trivial.png', 'black.jpg', 'impala.jpg'];
 var imageBorders = ['border-color-coral', 'border-color-green', 'border-color-blue']
 
 function switchMe() {
-    document.getElementById('me-pic').src = '/images/logo/' + images[Math.floor(Math.random() * images.length)];
+    document.getElementById('me-pic').src = '/static/images/logo/' + images[Math.floor(Math.random() * images.length)];
     var e = document.getElementById('me-pic-wrapper');
     var newClassName = imageBorders[Math.floor(Math.random() * imageBorders.length)];
     var list = e.className.split(' ').filter(function(className){
