@@ -9,41 +9,30 @@ class MyDocument extends Document {
       <html lang="en">
         <Head>
           <meta charSet="utf-8" />
-          {/* Global site tag (gtag.js) - Google Analytics */}
-        {/* Meta Tag */}
-        <meta charSet="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-        {/* SEO */}
-        <meta name="description" content="Danstan Onyango, Software Engineer in Nairobi, Kenya." />
-        <meta name="author" content="Danstan O. Onyango" />
-        <meta name="url" content="https://zemuldo.com" />
-        <meta name="copyright" content="Zemuldo" />
-        <meta name="robots" content="index,follow" />
-        {/* Favicon */}
-        <link rel="shortcut icon" href="images/favicon/fav.png" />
-        <link rel="apple-touch-icon" sizes="144x144" type="image/x-icon" href="/static/images/favicon/apple-touch-icon.png" />
-        {/* All CSS Plugins */}
-        <link rel="stylesheet" type="text/css" href="/static/css/plugin.css" />
-        {/* Main CSS Stylesheet */}
-        <link rel="stylesheet" type="text/css" href="/static/css/style.css" />
-        {/* Emoji CSS Stylesheet */}
-        <link rel="stylesheet" type="text/css" href="/static/css/terminal.css" />
-        {/* Matrix Canvas Stylesheet */}
-        <link rel="stylesheet" type="text/css" href="/static/css/matrix.css" />
-        {/* Google Web Fonts  */}
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400,300,500,600,700" />
-        {/* HTML5 shiv and Respond.js support IE8 or Older for HTML5 elements and media queries */}
-        {/*[if lt IE 9]><![endif]*/}
-        <meta name="description" content="Danstan Otieno Onyango is a talented Software Developer. Consult Danstan for your next project. Creative and Clean work for the growth and efficiency of your business.  " />
-        <meta name="twitter:card" content="https://zemuldo.com/images/favicon/fav.png" />
-        <meta name="twitter:site" content="@zemuldo" />
-        <meta name="twitter:title" content="Danstan Onyango - Software Engineering, ML, AI & IOT enthusiast" />
-        <meta name="twitter:description" content="The official site for Zemyldo,  Danstan Otieno Onyango, a Self-Taught Software Engineer." />
-        <meta name="twitter:creator" content="@zemuldo" />
-        <meta name="twitter:image" content="https://zemuldo.com/images/favicon/fav.png" />
-        <meta name="twitter:domain" content="https://zemuldo.com" />
-        <meta name="keywords" content="zemuldo, danstan, software developer, software engineer, linux, nodejs, developer, software, zemuldo.com, developer, programming, coder, nodejs, elixir " />
+          <meta charSet="UTF-8" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+          <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+          <meta name="description" content="Danstan Onyango, Software Engineer in Nairobi, Kenya." />
+          <meta name="author" content="Danstan O. Onyango" />
+          <meta name="url" content="https://zemuldo.com" />
+          <meta name="copyright" content="Zemuldo" />
+          <meta name="robots" content="index,follow" />
+          <link rel="shortcut icon" href="images/favicon/fav.png" />
+          <link rel="apple-touch-icon" sizes="144x144" type="image/x-icon" href="/static/images/favicon/apple-touch-icon.png" />
+          <link rel="stylesheet" type="text/css" href="/static/css/plugin.css" />
+          <link rel="stylesheet" type="text/css" href="/static/css/style.css" />
+          <link rel="stylesheet" type="text/css" href="/static/css/terminal.css" />
+          <link rel="stylesheet" type="text/css" href="/static/css/matrix.css" />
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400,300,500,600,700" />
+          <meta name="description" content="Danstan Otieno Onyango is a talented Software Developer. Consult Danstan for your next project. Creative and Clean work for the growth and efficiency of your business.  " />
+          <meta name="twitter:card" content="https://zemuldo.com/images/favicon/fav.png" />
+          <meta name="twitter:site" content="@zemuldo" />
+          <meta name="twitter:title" content="Danstan Onyango - Software Engineering, ML, AI & IOT enthusiast" />
+          <meta name="twitter:description" content="The official site for Zemyldo,  Danstan Otieno Onyango, a Self-Taught Software Engineer." />
+          <meta name="twitter:creator" content="@zemuldo" />
+          <meta name="twitter:image" content="https://zemuldo.com/images/favicon/fav.png" />
+          <meta name="twitter:domain" content="https://zemuldo.com" />
+          <meta name="keywords" content="zemuldo, danstan, software developer, software engineer, linux, nodejs, developer, software, zemuldo.com, developer, programming, coder, nodejs, elixir " />
           <link
             rel="stylesheet"
             href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"

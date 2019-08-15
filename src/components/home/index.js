@@ -2,11 +2,44 @@ import React from "react";
 import Typed from "react-typed";
 import Link from "../../Link";
 import {type_message} from '../../tools/typed'
+import Head from 'next/head';
+import SocialSites from './social_sites'
 
 export default class Home extends React.Component {
   render() {
     return (
       <div className="home">
+        <Head>
+          <meta charSet="utf-8" />
+          <meta charSet="UTF-8" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+          <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+          <meta name="description" content="Danstan Onyango, Software Engineer in Nairobi, Kenya." />
+          <meta name="author" content="Danstan O. Onyango" />
+          <meta name="url" content="https://zemuldo.com" />
+          <meta name="copyright" content="Zemuldo" />
+          <meta name="robots" content="index,follow" />
+          <link rel="shortcut icon" href="images/favicon/fav.png" />
+          <link rel="apple-touch-icon" sizes="144x144" type="image/x-icon" href="/static/images/favicon/apple-touch-icon.png" />
+          <link rel="stylesheet" type="text/css" href="/static/css/plugin.css" />
+          <link rel="stylesheet" type="text/css" href="/static/css/style.css" />
+          <link rel="stylesheet" type="text/css" href="/static/css/terminal.css" />
+          <link rel="stylesheet" type="text/css" href="/static/css/matrix.css" />
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400,300,500,600,700" />
+          <meta name="description" content="Danstan Otieno Onyango is a talented Software Developer. Consult Danstan for your next project. Creative and Clean work for the growth and efficiency of your business.  " />
+          <meta name="twitter:card" content="https://zemuldo.com/images/favicon/fav.png" />
+          <meta name="twitter:site" content="@zemuldo" />
+          <meta name="twitter:title" content="Danstan Onyango - Software Engineering, ML, AI & IOT enthusiast" />
+          <meta name="twitter:description" content="The official site for Zemyldo,  Danstan Otieno Onyango, a Self-Taught Software Engineer." />
+          <meta name="twitter:creator" content="@zemuldo" />
+          <meta name="twitter:image" content="https://zemuldo.com/images/favicon/fav.png" />
+          <meta name="twitter:domain" content="https://zemuldo.com" />
+          <meta name="keywords" content="zemuldo, danstan, software developer, software engineer, linux, nodejs, developer, software, zemuldo.com, developer, programming, coder, nodejs, elixir " />
+          <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+          />
+        </Head>
         <section id="home">
           <div
             className="home-section-background"
@@ -61,101 +94,7 @@ export default class Home extends React.Component {
                   </div>
                 </div>
                 {/* Social Media Profiles */}
-                <div>
-                  <ul className="social-icon">
-                    <h3>Find me on</h3>
-                    <li>
-                      <a
-                        href="https://github.com/zemuldo"
-                        target="_blank"
-                        className="github"
-                      >
-                        <i className="fa fa-github" />
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="https://gitlab.com/zemuldo"
-                        target="_blank"
-                        className="github"
-                      >
-                        <i className="fa fa-gitlab color-orange" />
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="https://stackoverflow.com/users/story/6856820"
-                        target="_blank"
-                        className="stackoverflow"
-                      >
-                        <i className="fa fa-stack-overflow" />
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="https://medium.com/@zemuldo"
-                        target="_blank"
-                        className="medium"
-                      >
-                        <i className="fa fa-medium color-green" />
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="https://stackshare.io/zemuldo"
-                        target="_blank"
-                        className="medium"
-                      >
-                        <i className="fa fa-medium color-green" />
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="https://twitter.com/zemuldo"
-                        target="_blank"
-                        className="twitter"
-                      >
-                        <i className="fa fa-twitter color-6" />
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="https://www.linkedin.com/in/zemuldo"
-                        target="_blank"
-                        className="linkedin"
-                      >
-                        <i className="fa fa-linkedin color-6" />
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="https://app.pluralsight.com/profile/zemuldo"
-                        target="_blank"
-                        className="facebook"
-                      >
-                        <i className="fa fa-arrow-circle-right color-1" />
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="https://web.facebook.com/zemuldo"
-                        target="_blank"
-                        className="facebook"
-                      >
-                        <i className="fa fa-facebook color-blue" />
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="mailto:danstan@zemuldo.com"
-                        target="_blank"
-                        className="facebook"
-                      >
-                        <i className="fa fa-envelope-o color-gmail" />
-                      </a>
-                    </li>
-                  </ul>
-                </div>
+                <SocialSites/>
               </div>
             </div>
           </div>
