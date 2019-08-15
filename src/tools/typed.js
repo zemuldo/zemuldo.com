@@ -26,10 +26,7 @@ export function type_message() {
       whiteText("Experience?") +
       waitAndBreak +
       greenText([experience]);
-    const funGames = greenText(["Chess," + " Music and " + "Dancing"]).join(
-      "^500, "
-    );
-    const currentStatus =
-      waitAndBreak + start + whiteText("My Fun time?") + waitAndBreak + funGames;
-    return [myStack + yearsOfExperience + currentStatus];
+    const funGames = greenText(["Chess", "Music", "Dancing."]).join(",^500 ");
+    const fullFunTime = waitAndBreak + start + whiteText("My Fun time?") + waitAndBreak + funGames;
+    return [myStack + yearsOfExperience + fullFunTime];
   }
