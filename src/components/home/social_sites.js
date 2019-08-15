@@ -44,7 +44,7 @@ const socials = [
   {
     href: "https://web.facebook.com/zemuldo",
     className: "facebook",
-    icon_className: "fa fa-arrow-circle-right color-1"
+    icon_className: "fa fa-facebook color-blue"
   },
   {
     href: "mailto:danstan@zemuldo.com",

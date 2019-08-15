@@ -40,7 +40,7 @@ export default class Home extends React.Component {
             href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
           />
         </Head>
-        <section id="home">
+        <section  id="home">
           <div
             className="home-section-background"
             data-stellar-background-ratio="0.6"
