@@ -1,7 +1,7 @@
 import React from "react";
 import Typed from "react-typed";
-import Link from "../src/Link";
-import {type_message} from '../src/tools/typed'
+import Link from "../../Link";
+import {type_message} from '../../tools/typed'
 
 export default class Home extends React.Component {
   render() {
@@ -27,7 +27,7 @@ export default class Home extends React.Component {
                         </h4>
                         <h3 className="color-orange">Nairobi, Kenya</h3>
                         <br />
-                        <Link href="/about" color="secondary">
+                        <Link href="/blog" color="secondary">
                           Blog
                         </Link>
                       </div>
