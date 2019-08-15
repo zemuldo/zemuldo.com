@@ -56,7 +56,6 @@ class MyDocument extends Document {
           <script type="text/javascript" src="/static/js/jquery.min.js"/>
           <script type="text/javascript" src="/static/js/plugin.js"/>
           <script type="text/javascript" src="/static/js/scripts.js"/>
-          <script type="text/javascript" src="/static/js/typed.js"/>
         </body>
       </html>
     );
