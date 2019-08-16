@@ -3,37 +3,24 @@ import { makeStyles } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
-import SearchIcon from '@material-ui/icons/Search';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
-import Card from '@material-ui/core/Card';
-import CardActionArea from '@material-ui/core/CardActionArea';
-import CardContent from '@material-ui/core/CardContent';
-import CardMedia from '@material-ui/core/CardMedia';
-import Hidden from '@material-ui/core/Hidden';
 import Link from '@material-ui/core/Link';
-import Button from '@material-ui/core/Button';
 import Divider from '@material-ui/core/Divider';
 import Container from '@material-ui/core/Container';
 import Markdown from '../../src/components/blog/markdown';
 import post1 from '../../src/components/blog/template.md';
+import Footer from '../../src/footer';
+import Menu from '../../src/components/blog/menu';
+import Highlight from 'react-highlight'
+import marked from 'marked';
 
-function Copyright() {
-  return (
-    <Typography variant="body2" color="textSecondary" align="center">
-      {'Copyright © '}
-      <Link color="inherit" href="https://material-ui.com/">
-        Your Website
-      </Link>{' '}
-      {new Date().getFullYear()}
-      {'. Built with '}
-      <Link color="inherit" href="https://material-ui.com/">
-        Material-UI.
-      </Link>
-    </Typography>
-  );
-}
+marked.setOptions({
+  gfm: true,
+  tables: true,
+  breaks: true
+});
 
 const useStyles = makeStyles(theme => ({
   toolbar: {
@@ -111,21 +98,6 @@ const sections = [
   'Elixir'
 ];
 
-const featuredPosts = [
-  {
-    title: 'Featured post',
-    date: 'Nov 12',
-    description:
-      'This is a wider card with supporting text below as a natural lead-in to additional content.',
-  },
-  {
-    title: 'Post title',
-    date: 'Nov 11',
-    description:
-      'This is a wider card with supporting text below as a natural lead-in to additional content.',
-  },
-];
-
 const posts = [post1];
 
 const archives = [
@@ -151,25 +123,8 @@ export default function Blog() {
   return (
     <React.Fragment>
       <CssBaseline />
-      <Container maxWidth="lg" style={{backgroundColor: "white"}}>
-        <Toolbar className={classes.toolbar}>
-          <Typography
-            component="h2"
-            variant="h5"
-            color="inherit"
-            align="center"
-            noWrap
-            className={classes.toolbarTitle}
-          >
-            
-          </Typography>
-          <IconButton>
-            <SearchIcon />
-          </IconButton>
-          <Button variant="outlined" size="small">
-            Join me
-          </Button>
-        </Toolbar>
+      <Container maxWidth="lg" style={{backgroundColor: "transparent", color: "white"}}>
+        <Menu/>
         <main>
           {/* End sub featured posts */}
           <Grid container spacing={5} className={classes.mainGrid}>
@@ -182,8 +137,22 @@ export default function Blog() {
               {posts.map(post => (
                 <Markdown className={classes.markdown} key={post.substring(0, 40)}>
                   {post}
+                  
                 </Markdown>
               ))}
+              <div style={{backgroundColor: "green"}}>
+              <Highlight language="javascript">
+      {`
+        defmodule MathTest do
+        use ExUnit.Case, async: true
+      
+        test "can add two numbers" do
+          assert 1 + 1 == 2
+        end
+      end
+      `}
+    </Highlight>
+              </div>
             </Grid>
             {/* End main content */}
             {/* Sidebar */}
@@ -198,7 +167,7 @@ export default function Blog() {
                 </Typography>
               </Paper>
               <Typography variant="h6" gutterBottom className={classes.sidebarSection}>
-                Archives
+                More
               </Typography>
               {archives.map(archive => (
                 <Link display="block" variant="body1" href="#" key={archive}>
@@ -218,19 +187,7 @@ export default function Blog() {
           </Grid>
         </main>
       </Container>
-      {/* Footer */}
-      <footer className={classes.footer}>
-        <Container maxWidth="lg">
-          <Typography variant="h6" align="center" gutterBottom>
-            Footer
-          </Typography>
-          <Typography variant="subtitle1" align="center" color="textSecondary" component="p">
-            Something here to give the footer a purpose!
-          </Typography>
-          <Copyright />
-        </Container>
-      </footer>
-      {/* End footer */}
+      <Footer/>
     </React.Fragment>
   );
 }

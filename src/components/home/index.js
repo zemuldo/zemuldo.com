@@ -11,51 +11,49 @@ export default class Home extends React.Component {
         <Head>
           <title>I'm Danstan ~ Zemuldo</title>
         </Head>
-        <section>
-          <div
-            className="home-section-background"
-            data-stellar-background-ratio="0.6"
-          >
-            <div className="display-table">
-              <div className="display-table-cell">
-                <div className="container">
-                  <div className="row">
-                    <div className="header-section">
-                      <div className="header-frame">
-                        <h1 className="color-6">Danstan Onyango</h1>
-                        <h3>Software Engineer</h3>
-                        <hr />
-                        <h4 className="font-c-cn-m">
-                          Currently being awesome at SafeBoda and formely at
-                          HackerBay Inc.
-                        </h4>
-                        <h3 className="color-orange">Nairobi, Kenya</h3>
-                        <br />
-                        <Link href="/blog" color="secondary">
-                          <h3 className="color-6">Blog</h3>
-                        </Link>
-                      </div>
-                      <div
-                        id="me-pic-wrapper"
-                        className="img-frame border-color-green"
-                      >
-                        <img
-                          id="me-pic"
-                          src="/static/images/logo/black.jpg"
-                          alt=""
-                        />
-                      </div>
+        <div
+          className="home-section-background"
+          data-stellar-background-ratio="0.6"
+        >
+          <div className="display-table">
+            <div className="display-table-cell">
+              <div className="container">
+                <div className="row">
+                  <div className="header-section">
+                    <div className="header-frame">
+                      <h1 className="color-6">Danstan Onyango</h1>
+                      <h3>Software Engineer</h3>
+                      <hr />
+                      <h4 className="font-c-cn-m">
+                        Currently being awesome at SafeBoda and formely at
+                        HackerBay Inc.
+                      </h4>
+                      <h3 className="color-orange">Nairobi, Kenya</h3>
+                      <br />
+                      <Link href="/blog" color="secondary">
+                        <h3 className="color-6">Blog</h3>
+                      </Link>
                     </div>
-                    <div className="col-md-12 text-center">
-                      <Terminal />
+                    <div
+                      id="me-pic-wrapper"
+                      className="img-frame border-color-green"
+                    >
+                      <img
+                        id="me-pic"
+                        src="/static/images/logo/black.jpg"
+                        alt=""
+                      />
                     </div>
                   </div>
+                  <div className="col-md-12 text-center">
+                    <Terminal />
+                  </div>
                 </div>
-                <SocialSites />
               </div>
+              <SocialSites />
             </div>
           </div>
-        </section>
+        </div>
       </React.Fragment>
     );
   }

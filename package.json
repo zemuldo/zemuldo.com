@@ -9,11 +9,13 @@
     "clsx": "latest",
     "isomorphic-unfetch": "^3.0.0",
     "markdown-to-jsx": "^6.10.3",
+    "marked": "^0.7.0",
     "next": "latest",
     "prop-types": "latest",
     "raw-loader": "^3.1.0",
     "react": "latest",
     "react-dom": "latest",
+    "react-highlight": "^0.12.0",
     "react-markdown": "^4.1.0",
     "react-typed": "^1.2.0"
   },
@@ -21,6 +23,12 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "prod": "NODE_ENV=production next start"
+    "prod": "NODE_ENV=production next start",
+    "analyze": "BUNDLE_ANALYZE=both next build",
+    "analyze:server": "BUNDLE_ANALYZE=server next build",
+    "analyze:browser": "BUNDLE_ANALYZE=browser next build"
+  },
+  "devDependencies": {
+    "@zeit/next-bundle-analyzer": "^0.1.2"
   }
 }

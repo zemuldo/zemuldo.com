@@ -11,6 +11,10 @@ class MyDocument extends Document {
       <html lang="en">
         <Head>
           <HeadElements />
+          <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/styles/atom-one-dark.min.css"
+            rel="stylesheet"
+          />
         </Head>
         <body>
           <Main />

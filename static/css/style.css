@@ -287,3 +287,6 @@ hr:after {
   color: #24bba0;
   background-color: black;
 }
+.eph:hover{
+    box-shadow: 0 8px 15px 0 rgba(90, 91, 95, .33);
+}

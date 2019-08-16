@@ -19,22 +19,10 @@ import Container from "@material-ui/core/Container";
 import Markdown from "../src/components/blog/markdown";
 import post1 from "../src/components/blog/template.md";
 import fetch from "isomorphic-unfetch";
-
-function Copyright() {
-  return (
-    <Typography variant="body2" color="textSecondary" align="center">
-      {"Copyright © "}
-      <Link color="inherit" href="https://material-ui.com/">
-        Your Website
-      </Link>{" "}
-      {new Date().getFullYear()}
-      {". Built with "}
-      <Link color="inherit" href="https://material-ui.com/">
-        Material-UI.
-      </Link>
-    </Typography>
-  );
-}
+import Head from "next/head";
+import Footer from '../src/footer'
+import Blogs from "../src/components/blog";
+import Menu from "../src/components/blog/menu";
 
 const useStyles = makeStyles(theme => ({
   toolbar: {
@@ -100,15 +88,8 @@ const useStyles = makeStyles(theme => ({
   },
   sidebarSection: {
     marginTop: theme.spacing(3)
-  },
-  footer: {
-    backgroundColor: theme.palette.background.paper,
-    marginTop: theme.spacing(8),
-    padding: theme.spacing(6, 0)
   }
 }));
-
-const sections = ["JavaScript", "Elixir"];
 
 const featuredPosts = [
   {
@@ -127,64 +108,17 @@ const featuredPosts = [
   }
 ];
 
-const posts = [post1];
-
-const archives = [
-  "March 2020",
-  "February 2020",
-  "January 2020",
-  "December 2019",
-  "November 2019",
-  "October 2019",
-  "September 2019",
-  "August 2019",
-  "July 2019",
-  "June 2019",
-  "May 2019",
-  "April 2019"
-];
-
 const social = ["GitHub", "Twitter", "Facebook"];
 
 export default function Blog() {
   const classes = useStyles();
 
   return (
-    <div>
-      <section id="home">
-        <div
-          className="home-section-background"
-          data-stellar-background-ratio="0.6"
-        >
+    
           <React.Fragment>
             <CssBaseline />
-            <Container maxWidth="lg">
-              <Toolbar className={classes.toolbar}>
-                <Typography
-                  component="h2"
-                  variant="h5"
-                  color="inherit"
-                  align="center"
-                  noWrap
-                  className={classes.toolbarTitle}
-                />
-                <IconButton>
-                  <SearchIcon style={{ color: "white" }} />
-                </IconButton>
-                <Button
-                  style={{ color: "white" }}
-                  variant="outlined"
-                  size="small"
-                >
-                  Join Me
-                </Button>
-                <Link
-                  href="/"
-                  style={{ color: "white", marginLeft: "10px" }}
-                >
-                HOME
-                </Link>
-              </Toolbar>
+            <Container style={{color: "white"}} maxWidth="lg">
+              <Menu/>
               <main>
                 {/* Main featured post */}
                 <Paper className={classes.mainFeaturedPost}>
@@ -197,9 +131,9 @@ export default function Blog() {
                     />
                   }
                   <div className={classes.overlay} />
-                  <Grid container>
+                  <Grid className="eph" container>
                     <Grid item md={6}>
-                      <div className={classes.mainFeaturedPostContent}>
+                      <div  className={classes.mainFeaturedPostContent}>
                         <Typography
                           component="h1"
                           variant="h3"
@@ -217,72 +151,21 @@ export default function Blog() {
                           new readers quickly and efficiently about what&apos;s
                           most interesting in this post&apos;s contents.
                         </Typography>
-                        <Link href="/blog/hello-web">Continue reading...</Link>
+                        <Link style={{color: "#08a6f3"}} href="/blog/hello-web">Read Now</Link>
+                        <Link style={{color: "#08a6f3", marginLeft: "10px"}} href="/blog/hello-web">Save for later</Link>
                       </div>
                     </Grid>
                   </Grid>
                 </Paper>
                 {/* End main featured post */}
                 {/* Sub featured posts */}
-                <Grid container spacing={4} className={classes.cardGrid}>
-                  {featuredPosts.map(post => (
-                    <Grid item key={post.title} xs={12} md={6}>
-                      <CardActionArea component="a" href={`/blog/${post.id}`}>
-                        <Card className={classes.card}>
-                          <div className={classes.cardDetails}>
-                            <CardContent>
-                              <Typography component="h2" variant="h5">
-                                {post.title}
-                              </Typography>
-                              <Typography
-                                variant="subtitle1"
-                                color="textSecondary"
-                              >
-                                {post.date}
-                              </Typography>
-                              <Typography variant="subtitle1" paragraph>
-                                {post.description}
-                              </Typography>
-                            </CardContent>
-                          </div>
-                          <Hidden xsDown>
-                            <CardMedia
-                              className={classes.cardMedia}
-                              image="https://source.unsplash.com/random"
-                              title="Image title"
-                            />
-                          </Hidden>
-                        </Card>
-                      </CardActionArea>
-                    </Grid>
-                  ))}
-                </Grid>
+                <Blogs/>
                 {/* End sub featured posts */}
                 {/* End sidebar */}
               </main>
             </Container>
-            {/* Footer */}
-            <footer className={classes.footer}>
-              <Container maxWidth="lg">
-                <Typography variant="h6" align="center" gutterBottom>
-                  Footer
-                </Typography>
-                <Typography
-                  variant="subtitle1"
-                  align="center"
-                  color="textSecondary"
-                  component="p"
-                >
-                  Something here to give the footer a purpose!
-                </Typography>
-                <Copyright />
-              </Container>
-            </footer>
-            {/* End footer */}
+            <Footer/>
           </React.Fragment>
-        </div>
-      </section>
-    </div>
   );
 }
 
