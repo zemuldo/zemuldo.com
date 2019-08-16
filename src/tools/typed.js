@@ -3,7 +3,7 @@ import { whiteText, greenText, getYearsBetween } from "../../helpers/utils";
 export function type_message() {
     const waitAndBreak = "^700 <br/>";
     const start =
-      '<span class="margin-left--10 color-blue font-size-14 !important">➜:~</span>';
+      '<span style="color: #08a6f3;" class="margin-left--10 font-size-14 !important">➜:~</span>';
     const myStack =
       start +
       whiteText("Skill Set?") +

@@ -1,6 +1,6 @@
 html, body {
-    background-color: #000;
-    opacity: .9;
+    background-color: #000 !important;
+    opacity: 1;
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
@@ -108,7 +108,6 @@ img {
 }
 
 a:hover {
-    color: #ff0;
     text-decoration: none
 }
 
@@ -153,11 +152,6 @@ ul {
     vertical-align: middle
 }
 
-.home {
-    background: #000;
-    height: 100vh;
-    opacity: .8
-}
 
 .hi-this {
     color: #00f
@@ -253,7 +247,6 @@ ul {
     border-style: solid;
     border-color: #08a6f3;
 }
-@import url(https://fonts.googleapis.com/css?family=Raleway:400,300|Raleway+Dots|Lato:300|Inconsolata|Montserrat);
 hr {
   font-size: 20px;
   position: relative;

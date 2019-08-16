@@ -1,23 +1,20 @@
-import React from 'react';
-import Document, { Head, Main, NextScript } from 'next/document';
-import { ServerStyleSheets } from '@material-ui/styles';
-import HeadElements from '../src/components/document/head_elements'
-import theme from '../src/theme';
+import React from "react";
+import Document, { Head, Main, NextScript } from "next/document";
+import { ServerStyleSheets } from "@material-ui/styles";
+import HeadElements from "../src/components/document/head_elements";
+import theme from "../src/theme";
+
 
 class MyDocument extends Document {
   render() {
     return (
       <html lang="en">
         <Head>
-          <HeadElements/>
+          <HeadElements />
         </Head>
         <body>
-          <canvas id="c" className="matrix"></canvas>
           <Main />
           <NextScript />
-          <script type="text/javascript" src="/static/js/jquery.min.js"/>
-          <script type="text/javascript" src="/static/js/plugin.js"/>
-          <script type="text/javascript" src="/static/js/scripts.js"/>
         </body>
       </html>
     );
@@ -53,7 +50,7 @@ MyDocument.getInitialProps = async ctx => {
 
   ctx.renderPage = () =>
     originalRenderPage({
-      enhanceApp: App => props => sheets.collect(<App {...props} />),
+      enhanceApp: App => props => sheets.collect(<App {...props} />)
     });
 
   const initialProps = await Document.getInitialProps(ctx);
@@ -65,8 +62,8 @@ MyDocument.getInitialProps = async ctx => {
       <React.Fragment key="styles">
         {initialProps.styles}
         {sheets.getStyleElement()}
-      </React.Fragment>,
-    ],
+      </React.Fragment>
+    ]
   };
 };
 

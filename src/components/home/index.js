@@ -1,18 +1,17 @@
 import React from "react";
-import Typed from "react-typed";
 import Link from "../../Link";
-import {type_message} from '../../tools/typed'
-import Head from 'next/head';
-import SocialSites from './social_sites'
+import Head from "next/head";
+import SocialSites from "./social_sites";
+import Terminal from "./terminal_me";
 
 export default class Home extends React.Component {
   render() {
     return (
-      <div className="home">
+      <React.Fragment>
         <Head>
           <title>I'm Danstan ~ Zemuldo</title>
         </Head>
-        <section  id="home">
+        <section>
           <div
             className="home-section-background"
             data-stellar-background-ratio="0.6"
@@ -32,6 +31,9 @@ export default class Home extends React.Component {
                         </h4>
                         <h3 className="color-orange">Nairobi, Kenya</h3>
                         <br />
+                        <Link href="/blog" color="secondary">
+                          <h3 className="color-6">Blog</h3>
+                        </Link>
                       </div>
                       <div
                         id="me-pic-wrapper"
@@ -45,30 +47,16 @@ export default class Home extends React.Component {
                       </div>
                     </div>
                     <div className="col-md-12 text-center">
-                      {/*Bash*/}
-                      <div className="head-wrap">
-                        <div className="text-editor-wrap">
-                          <hr />
-                          <div className="text-body">
-                            <Typed
-                              style={{ color: "white" }}
-                              strings={type_message()}
-                              typeSpeed={120}
-                            />
-                          </div>
-                        </div>
-                      </div>
-                      {/*End of Bash*/}
+                      <Terminal />
                     </div>
                   </div>
                 </div>
-                {/* Social Media Profiles */}
-                <SocialSites/>
+                <SocialSites />
               </div>
             </div>
           </div>
         </section>
-      </div>
+      </React.Fragment>
     );
   }
 }
