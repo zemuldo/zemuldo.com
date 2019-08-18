@@ -1,6 +1,7 @@
 const withBundleAnalyzer = require("@zeit/next-bundle-analyzer");
+const withCSS = require('@zeit/next-css')
 
-module.exports = withBundleAnalyzer({
+module.exports = withCSS(withBundleAnalyzer({
     webpack: (config) => {
       config.module.rules.push(
         {
@@ -23,4 +24,4 @@ module.exports = withBundleAnalyzer({
         reportFilename: '../bundles/client.html'
       }
     }
-  });
+  }));

@@ -1,0 +1,10 @@
+h1, h2, h3, h3 {
+    color: #08a6f3;
+}
+
+.editor-toolbar button {
+    margin: 10px !important;
+    color: white !important;
+    background-color: grey !important;
+    font-size: 14px !important;
+}

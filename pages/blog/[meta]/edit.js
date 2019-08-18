@@ -1,9 +1,8 @@
 import React from "react";
 import Container from "@material-ui/core/Container";
-import post1 from "../../src/components/blog/template.md";
-import Footer from "../../src/footer";
-import Menu from "../../src/components/blog/menu";
-import Highlight from "react-highlight";
+import post1 from "../../../src/components/blog/template.md";
+import Footer from "../../../src/footer";
+import Menu from "../../../src/components/blog/menu";
 import "easymde/dist/easymde.min.css";
 import marked from "marked";
 import dynamic from "next/dynamic";
@@ -38,14 +37,6 @@ export default class Blog extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <Head>
-          <link href="/static/css/blog.css" rel="stylesheet" />
-          <link
-            href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-            rel="stylesheet"
-          />
-        </Head>
-        <Menu />
         <Container
           className="blog-md"
           maxWidth="md"
@@ -56,22 +47,27 @@ export default class Blog extends React.Component {
             fontSize: "18px"
           }}
         >
-          <div style={{ float: "right" }}>
-            <Tooltip title="Twitter" placement="right-start">
-              <i className="fa fa-twitter color-blue" />
-            </Tooltip>
-            <br />
-            <Tooltip title="LinkedIn" placement="right">
-              <i className="fa fa-linkedin color-blue" />
-            </Tooltip>
-            <br />
-            <Tooltip title="Edit" placement="right">
-              <Link href="/blog/id/edit">
-                <i className="fa fa-pencil-square-o color-green" />
+            <Head>
+          <link href="/static/css/blog.css" rel="stylesheet" />
+          <link
+            href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+            rel="stylesheet"
+          />
+        </Head>
+        <Menu />
+          <div style={{  zIndex: "9999999 !important" }}>
+            <Tooltip title="Save" placement="right">
+              <Link href="/blog/id">
+                <i className="fa fa-floppy-o color-green" />
               </Link>
             </Tooltip>
           </div>
-          <Highlight innerHTML>{marked(this.state.textValue)}</Highlight>
+          <div style={{ backgroundColor: "" }}>
+            <SimpleMDE
+              onChange={this.handleChange}
+              value={this.state.textValue}
+            />
+          </div>
         </Container>
         <Footer />
       </React.Fragment>

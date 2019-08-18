@@ -4,7 +4,7 @@ import Toolbar from "@material-ui/core/Toolbar";
 import IconButton from "@material-ui/core/IconButton";
 import SearchIcon from "@material-ui/icons/Search";
 import Typography from "@material-ui/core/Typography";
-import Link from "@material-ui/core/Link";
+import Link from "next/link";
 import Button from "@material-ui/core/Button";
 
 const useStyles = makeStyles(theme => ({
@@ -32,13 +32,10 @@ export default function Menu() {
         className={classes.toolbarTitle}
       />
       <IconButton>
-        <SearchIcon style={{ color: "white" }} />
       </IconButton>
-      <Button style={{ color: "white" }} variant="outlined" size="small">
-        Join Me
-      </Button>
-      <Link href="/" style={{ color: "white", marginLeft: "10px" }}>
-        HOME
+      
+      <Link href="/">
+        <a>HOME</a>
       </Link>
     </Toolbar>
   );
