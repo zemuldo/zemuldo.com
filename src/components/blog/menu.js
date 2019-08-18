@@ -16,27 +16,14 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-
-
 export default function Menu() {
   const classes = useStyles();
 
   return (
-    <Toolbar className={classes.toolbar}>
-      <Typography
-        component="h2"
-        variant="h5"
-        color="inherit"
-        align="center"
-        noWrap
-        className={classes.toolbarTitle}
-      />
-      <IconButton>
-      </IconButton>
-      
+    <div style={{margin: "10px 0px 10px 0px"}}>
       <Link href="/">
         <a>HOME</a>
       </Link>
-    </Toolbar>
+    </div>
   );
 }

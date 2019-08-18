@@ -45,9 +45,8 @@ export default class Blog extends React.Component {
             rel="stylesheet"
           />
         </Head>
-        <Menu />
+
         <Container
-          className="blog-md"
           maxWidth="md"
           style={{
             color: "white",
@@ -56,6 +55,7 @@ export default class Blog extends React.Component {
             fontSize: "18px"
           }}
         >
+          <Menu />
           <div style={{ float: "right" }}>
             <Tooltip title="Twitter" placement="right-start">
               <i className="fa fa-twitter color-blue" />
@@ -65,14 +65,13 @@ export default class Blog extends React.Component {
               <i className="fa fa-linkedin color-blue" />
             </Tooltip>
             <br />
-            <Tooltip title="Edit" placement="right">
-              <Link href="/blog/id/edit">
-                <i className="fa fa-pencil-square-o color-green" />
+            <Link href="/blog/[meta]/edit" as="/blog/blog-meta/edit">
+              <i className="fa fa-pencil-square-o color-green" />
               </Link>
-            </Tooltip>
           </div>
           <Highlight innerHTML>{marked(this.state.textValue)}</Highlight>
         </Container>
+        <Highlight innerHTML>{marked(this.state.textValue)}</Highlight>
         <Footer />
       </React.Fragment>
     );

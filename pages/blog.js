@@ -11,7 +11,7 @@ import Container from "@material-ui/core/Container";
 import post1 from "../src/components/blog/template.md";
 import fetch from "isomorphic-unfetch";
 import Head from "next/head";
-import Footer from '../src/footer'
+import Footer from "../src/footer";
 import Blogs from "../src/components/blog";
 import Menu from "../src/components/blog/menu";
 
@@ -42,6 +42,8 @@ const useStyles = makeStyles(theme => ({
     backgroundPosition: "center"
   },
   overlay: {
+    border: "solid 1px grey",
+    borderRadius: "7px",
     position: "absolute",
     top: 0,
     bottom: 0,
@@ -53,7 +55,7 @@ const useStyles = makeStyles(theme => ({
     position: "relative",
     padding: theme.spacing(3),
     [theme.breakpoints.up("md")]: {
-      padding: theme.spacing(6),
+      padding: theme.spacing(3),
       paddingRight: 0
     }
   },
@@ -105,53 +107,50 @@ export default function Blog() {
   const classes = useStyles();
 
   return (
-    
-          <React.Fragment>
-            <CssBaseline />
-            <Container style={{color: "white"}} maxWidth="lg">
-              <Menu/>
-              <main>
-                {/* Main featured post */}
-                <Paper className={classes.mainFeaturedPost}>
-                  {/* Increase the priority of the hero background image */}
-                  {
-                    <img
-                      style={{ display: "none" }}
-                      src="https://source.unsplash.com/user/erondu"
-                      alt="background"
-                    />
-                  }
-                  <div className={classes.overlay} />
-                  <Grid className="eph" container>
-                    <Grid item md={6}>
-                      <div  className={classes.mainFeaturedPostContent}>
-                        <Typography
-                          component="h1"
-                          variant="h3"
-                          color="inherit"
-                          gutterBottom
-                          style={{
-                            color: "#08a6f3",
-                            fontFamily: "'Courier New', Courier, monospace"
-                          }}
-                        >
-                          How to use Ecto as a query validation utility.
-                        </Typography>
-                        <Typography variant="h5" color="inherit" paragraph>
-                          Multiple lines of text that form the lede, informing
-                          new readers quickly and efficiently about what&apos;s
-                          most interesting in this post&apos;s contents.
-                        </Typography>
-                        <Link style={{color: "#08a6f3"}} href="/blog/hello-web">Read Now</Link>
-                      </div>
-                    </Grid>
-                  </Grid>
-                </Paper>
-                <Blogs/>
-              </main>
-            </Container>
-            <Footer/>
-          </React.Fragment>
+    <React.Fragment>
+      <Container style={{ color: "white" }} maxWidth="md">
+        <Menu />
+        <Paper className={classes.mainFeaturedPost}>
+            {/* Increase the priority of the hero background image */}
+            {
+              <img
+                style={{ display: "none" }}
+                src="https://source.unsplash.com/user/erondu"
+                alt="background"
+              />
+            }
+            <div className={classes.overlay} />
+            <Grid className="eph" container>
+              <Grid item md={6}>
+                <div className={classes.mainFeaturedPostContent}>
+                  <Typography
+                    component="h1"
+                    variant="h3"
+                    color="inherit"
+                    gutterBottom
+                    style={{
+                      color: "#08a6f3",
+                      fontFamily: "'Courier New', Courier, monospace"
+                    }}
+                  >
+                    How to use Ecto as a query validation utility.
+                  </Typography>
+                  <Typography variant="h5" color="inherit" paragraph>
+                    Multiple lines of text that form the lede, informing new
+                    readers quickly and efficiently about what&apos;s most
+                    interesting in this post&apos;s contents.
+                  </Typography>
+                  <Link style={{ color: "#08a6f3" }}  href="/blog/[meta]" as="/blog/blog-meta">
+                    Read Now
+                  </Link>
+                </div>
+              </Grid>
+            </Grid>
+          </Paper>
+          <Blogs />
+      </Container>
+      <Footer />
+    </React.Fragment>
   );
 }
 

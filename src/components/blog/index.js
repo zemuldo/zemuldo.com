@@ -7,11 +7,12 @@ import CardActionArea from "@material-ui/core/CardActionArea";
 import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import Hidden from "@material-ui/core/Hidden";
+import { Theme, createStyles } from "@material-ui/core/styles";
+import GridList from "@material-ui/core/GridList";
+import GridListTile from "@material-ui/core/GridListTile";
 
 const useStyles = makeStyles(theme => ({
-  cardGrid: {
-      margin: "10px",
-  },
+  
   card: {
     color: "white",
     boxShadow: "0 8px 15px 0 rgba(90, 91, 95, .33)",
@@ -28,7 +29,7 @@ const useStyles = makeStyles(theme => ({
 
 const featuredPosts = [
   {
-    id: "f8a27bc3d",
+    id: "f8a77bc3d",
     title: "Featured post",
     date: "Nov 12",
     description:
@@ -40,6 +41,27 @@ const featuredPosts = [
     date: "Nov 11",
     description:
       "This is a wider card with supporting text below as a natural lead-in to additional content."
+  },
+  {
+    id: "7bf8a223d",
+    title: "Post title",
+    date: "Nov 11",
+    description:
+      "This is a wider card with supporting text below as a natural lead-in to additional content."
+  },
+  {
+    id: "7bf8a2d3d",
+    title: "Post title",
+    date: "Nov 11",
+    description:
+      "This is a wider card with supporting text below as a natural lead-in to additional content."
+  },
+  {
+    id: "7bf8a243d",
+    title: "Post title",
+    date: "Nov 11",
+    description:
+      "This is a wider card with supporting text below as a natural lead-in to additional content."
   }
 ];
 
@@ -47,9 +69,9 @@ export default function Blogs() {
   const classes = useStyles();
 
   return (
-    <Grid container spacing={4} className={classes.cardGrid}>
+    <Grid container spacing={4}>
       {featuredPosts.map(post => (
-        <Grid item key={post.title} xs={12} md={6}>
+        <Grid item key={post.id} xs={12} md={6}>
           <CardActionArea component="a" href={`/blog/${post.id}`}>
             <Card className={classes.card}>
               <div className={classes.cardDetails}>
