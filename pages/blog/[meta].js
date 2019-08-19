@@ -3,15 +3,14 @@ import Container from "@material-ui/core/Container";
 import post1 from "../../src/components/blog/template.md";
 import Footer from "../../src/footer";
 import Menu from "../../src/components/blog/menu";
-import Highlight from "react-highlight";
-import "easymde/dist/easymde.min.css";
 import marked from "marked";
 import dynamic from "next/dynamic";
 import Head from "next/head";
 import Tooltip from "@material-ui/core/Tooltip";
 import Link from "next/link";
+import "easymde/dist/easymde.min.css";
 
-const SimpleMDE = dynamic(import("react-simplemde-editor"), { ssr: false });
+const Highlight = dynamic(import("react-highlight"));
 
 marked.setOptions({
   gfm: true,
@@ -71,7 +70,6 @@ export default class Blog extends React.Component {
           </div>
           <Highlight innerHTML>{marked(this.state.textValue)}</Highlight>
         </Container>
-        <Highlight innerHTML>{marked(this.state.textValue)}</Highlight>
         <Footer />
       </React.Fragment>
     );

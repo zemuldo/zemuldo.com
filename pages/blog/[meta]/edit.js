@@ -9,7 +9,7 @@ import Head from "next/head";
 import Link from "next/link";
 import "easymde/dist/easymde.min.css";
 
-const SimpleMDE = dynamic(import("react-simplemde-editor"), { ssr: false });
+const SimpleMDE = dynamic(import("react-simplemde-editor"));
 
 marked.setOptions({
   gfm: true,
