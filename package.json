@@ -8,7 +8,6 @@
     "@material-ui/styles": "latest",
     "@zeit/next-css": "^1.0.1",
     "clsx": "latest",
-    "codemirror": "^5.48.2",
     "isomorphic-unfetch": "^3.0.0",
     "markdown-it": "^9.1.0",
     "markdown-to-jsx": "^6.10.3",
@@ -17,17 +16,13 @@
     "prop-types": "latest",
     "raw-loader": "^3.1.0",
     "react": "latest",
-    "react-codemirror": "^1.0.0",
     "react-dom": "latest",
-    "react-draggable": "^3.3.2",
     "react-highlight": "^0.12.0",
-    "react-markdown-editor-lite": "^0.4.3",
     "react-simplemde-editor": "^4.1.0",
-    "react-typed": "^1.2.0",
-    "remarkable": "^2.0.0"
+    "react-typed": "^1.2.0"
   },
   "scripts": {
-    "dev": "next",
+    "dev": "next -p 3001",
     "build": "next build",
     "start": "next start",
     "prod": "NODE_ENV=production next start",
