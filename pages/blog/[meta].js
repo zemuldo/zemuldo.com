@@ -1,5 +1,6 @@
 import React from "react";
 import Container from "@material-ui/core/Container";
+import Button from "@material-ui/core/Button";
 import post1 from "../../src/components/blog/template.md";
 import Footer from "../../src/footer";
 import Menu from "../../src/components/blog/menu";
@@ -9,6 +10,8 @@ import Head from "next/head";
 import Tooltip from "@material-ui/core/Tooltip";
 import Link from "next/link";
 import "easymde/dist/easymde.min.css";
+import { maxHeight } from "@material-ui/system";
+import { format } from "date-fns";
 
 const Highlight = dynamic(import("react-highlight"));
 
@@ -44,30 +47,44 @@ export default class Blog extends React.Component {
             rel="stylesheet"
           />
         </Head>
+        <Container
+          maxWidth="md"
+          style={{
+            color: "white",
+            fontFamily: "'Courier New', Courier, monospace",
+            fontSize: "18px"
+          }}
+        >
+          <Menu />
+          <br />
+          <div style={{ float: "right" }}>
+            <Link href="/blog/[meta]/edit" as="/blog/blog-meta/edit">
+              <i className="fa fa-pencil-square-o color-green" />
+            </Link>
+          </div>
+          <h1>How to use Ecto as a query validation utility.</h1>
+          <br />
+          <p>{format(new Date(), "PPPP")}</p>
+          <p>
+            <button>JavaScript</button>
+          </p>
+        </Container>
+        <Container>
+          <img
+            style={{ maxHeight: "600px" }}
+            src="https://miro.medium.com/max/1000/1*vKd5tDJmDFznrOkMh1kQGg.png"
+          />
+        </Container>
 
         <Container
           maxWidth="md"
           style={{
             color: "white",
-            fontFamily:
-              "'monospaced courier-new', Poppins, sans-serif !important",
+            fontFamily: "'Courier New', Courier, monospace",
             fontSize: "18px"
           }}
         >
-          <Menu />
-          <div style={{ float: "right" }}>
-            <Tooltip title="Twitter" placement="right-start">
-              <i className="fa fa-twitter color-blue" />
-            </Tooltip>
-            <br />
-            <Tooltip title="LinkedIn" placement="right">
-              <i className="fa fa-linkedin color-blue" />
-            </Tooltip>
-            <br />
-            <Link href="/blog/[meta]/edit" as="/blog/blog-meta/edit">
-              <i className="fa fa-pencil-square-o color-green" />
-              </Link>
-          </div>
+          <br />
           <Highlight innerHTML>{marked(this.state.textValue)}</Highlight>
         </Container>
         <Footer />

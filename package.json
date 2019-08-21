@@ -8,6 +8,7 @@
     "@material-ui/styles": "latest",
     "@zeit/next-css": "^1.0.1",
     "clsx": "latest",
+    "date-fns": "^2.0.0",
     "isomorphic-unfetch": "^3.0.0",
     "markdown-it": "^9.1.0",
     "markdown-to-jsx": "^6.10.3",

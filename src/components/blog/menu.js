@@ -20,9 +20,9 @@ export default function Menu() {
   const classes = useStyles();
 
   return (
-    <div style={{margin: "10px 0px 10px 0px"}}>
+    <div style={{margin: "10px 0px 10px 0px", }}>
       <Link href="/">
-        <a>HOME</a>
+        <a style={{color:  "white"}}>HOME</a>
       </Link>
     </div>
   );

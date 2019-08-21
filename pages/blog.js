@@ -109,6 +109,7 @@ export default function Blog() {
     <React.Fragment>
       <Container style={{ color: "white" }} maxWidth="md">
         <Menu />
+        <br/>
         <Paper className={classes.mainFeaturedPost}>
             {/* Increase the priority of the hero background image */}
             {
