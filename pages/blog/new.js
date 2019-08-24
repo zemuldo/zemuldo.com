@@ -79,18 +79,15 @@ class NewBlog extends React.Component {
     };
   }
 
-  handleTagsChange = (tags) =>{
-    this.setState({tags})
+  handleTagsChange = (tags) => {
+    this.setState({ tags })
   }
 
-  handleChange = value => {
-    this.setState({
-      textValue: value
-    });
+  handleTextChange = e => {
+    const {id, value} = e.target;
+    this.setState({[id]:  value})
   };
 
-  handleEdit = () => this.setState({ edit: true });
-  handleExit = () => this.setState({ edit: false });
   render() {
     const { classes } = this.props
     return (
@@ -119,7 +116,7 @@ class NewBlog extends React.Component {
           </div>
           <div className={classes.root}>
             <TextField
-              id="outlined-dense"
+              id="postTitle"
               label="Post Title"
               fullWidth={true}
               InputProps={{
@@ -128,37 +125,41 @@ class NewBlog extends React.Component {
               InputLabelProps={{
                 className: classes.floatingLabelFocusStyle,
               }}
+              onChange={this.handleTextChange}
             />
           </div>
-            <br/>
+          <br />
           <Grid container spacing={2}>
             <Grid item xs={12} sm={6}>
               <TextField
-                 id="outlined-dense"
-                 label="Cover Photo Url"
-                 fullWidth={true}
-                 InputProps={{
-                   className: classes.materialInput
-                 }}
-                 InputLabelProps={{
-                   className: classes.floatingLabelFocusStyle,
-                 }}
+                id="coverPhotoUrl"
+                label="Cover Photo Url"
+                fullWidth={true}
+                InputProps={{
+                  className: classes.materialInput
+                }}
+                InputLabelProps={{
+                  className: classes.floatingLabelFocusStyle,
+                }}
+                onChange={this.handleTextChange}
               />
             </Grid>
             <Grid item xs={12} sm={6}>
-             <div style={{marginTop: "26px"}}>
-             <Tags onChange={this.handleTagsChange}/>
-             </div>
+              <div style={{ marginTop: "26px" }}>
+                <Tags onChange={this.handleTagsChange} />
+              </div>
             </Grid>
           </Grid>
-         <br/>
+          <br />
         </Container>
-        <Container>
-          <img
-            style={{ maxHeight: "600px" }}
-            src="https://miro.medium.com/max/1000/1*vKd5tDJmDFznrOkMh1kQGg.png"
-          />
-        </Container>
+        {
+          this.state.coverPhotoUrl && <Container>
+            <img
+              style={{ maxHeight: "600px" }}
+              src={this.state.coverPhotoUrl}
+            />
+          </Container>
+        }
         <Container
           className="blog-md"
           maxWidth="md"
