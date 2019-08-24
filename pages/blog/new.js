@@ -79,6 +79,13 @@ class NewBlog extends React.Component {
     };
   }
 
+  componentDidMount (){
+    setInterval(()=>{
+      this.setState({saving: true})
+      localStorage.setItem('currentDraft', JSON.stringify(this.state))
+    }, 10000)
+  }
+
   handleTagsChange = (tags) => {
     this.setState({ tags })
   }
@@ -169,6 +176,7 @@ class NewBlog extends React.Component {
               "'monospaced courier-new', Poppins, sans-serif !important"
           }}
         >
+          <h3>Post Body Markdown</h3>
           <SimpleMDE
             onChange={this.handleChange}
             value={this.state.textValue}
