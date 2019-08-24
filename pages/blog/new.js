@@ -8,8 +8,9 @@ import dynamic from "next/dynamic";
 import Head from "next/head";
 import Link from "next/link";
 import TextField from '@material-ui/core/TextField';
-import clsx from 'clsx';
+import Grid from '@material-ui/core/Grid';
 import "easymde/dist/easymde.min.css";
+import Tags from "../../src/components/tags";
 
 const SimpleMDE = dynamic(import("react-simplemde-editor"), { ssr: false });
 
@@ -78,6 +79,10 @@ class NewBlog extends React.Component {
     };
   }
 
+  handleTagsChange = (tags) =>{
+    this.setState({tags})
+  }
+
   handleChange = value => {
     this.setState({
       textValue: value
@@ -113,23 +118,40 @@ class NewBlog extends React.Component {
             </Link>
           </div>
           <div className={classes.root}>
-          <TextField
-            id="outlined-dense"
-            label="Post Title"
-            fullWidth={true}
-            InputProps={{
-              className: classes.materialInput
-            }}
-            InputLabelProps={{
-              className: classes.floatingLabelFocusStyle,
-            }}
-          />
+            <TextField
+              id="outlined-dense"
+              label="Post Title"
+              fullWidth={true}
+              InputProps={{
+                className: classes.materialInput
+              }}
+              InputLabelProps={{
+                className: classes.floatingLabelFocusStyle,
+              }}
+            />
           </div>
-          
-          <br />
-          <p>
-            <button>JavaScript</button>
-          </p>
+            <br/>
+          <Grid container spacing={2}>
+            <Grid item xs={12} sm={6}>
+              <TextField
+                 id="outlined-dense"
+                 label="Cover Photo Url"
+                 fullWidth={true}
+                 InputProps={{
+                   className: classes.materialInput
+                 }}
+                 InputLabelProps={{
+                   className: classes.floatingLabelFocusStyle,
+                 }}
+              />
+            </Grid>
+            <Grid item xs={12} sm={6}>
+             <div style={{marginTop: "26px"}}>
+             <Tags onChange={this.handleTagsChange}/>
+             </div>
+            </Grid>
+          </Grid>
+         <br/>
         </Container>
         <Container>
           <img
