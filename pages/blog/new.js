@@ -75,7 +75,7 @@ class NewBlog extends React.Component {
     super(props);
 
     this.state = {
-      textValue: ""
+      body: ""
     };
   }
 
@@ -94,6 +94,10 @@ class NewBlog extends React.Component {
     const {id, value} = e.target;
     this.setState({[id]:  value})
   };
+
+  handleEditorChange = (value)=>{
+    this.setState({body: value})
+  }
 
   render() {
     const { classes } = this.props
@@ -178,8 +182,8 @@ class NewBlog extends React.Component {
         >
           <h3>Post Body Markdown</h3>
           <SimpleMDE
-            onChange={this.handleChange}
-            value={this.state.textValue}
+            onChange={this.handleEditorChange}
+            value={this.state.body}
           />
         </Container>
         <Footer />
