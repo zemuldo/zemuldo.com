@@ -1,5 +1,5 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
+import { withStyles } from "@material-ui/core/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Paper from "@material-ui/core/Paper";
 import Typography from "@material-ui/core/Typography";
@@ -11,10 +11,11 @@ import post1 from "../src/components/blog/template.md";
 import fetch from "isomorphic-unfetch";
 import Head from "next/head";
 import Footer from "../src/footer";
-import Blogs from "../src/components/blog";
+import Blogs from "../src/components/blog/blogs";
 import Menu from "../src/components/blog/menu";
+import LinearProgress from '@material-ui/core/LinearProgress';
 
-const useStyles = makeStyles(theme => ({
+const styles = theme => ({
   toolbar: {
     borderBottom: `1px solid ${theme.palette.divider}`
   },
@@ -81,36 +82,54 @@ const useStyles = makeStyles(theme => ({
   sidebarSection: {
     marginTop: theme.spacing(3)
   }
-}));
+});
 
-const featuredPosts = [
-  {
-    id: "f8a27bc3d",
-    title: "Featured post",
-    date: "Nov 12",
-    description:
-      "This is a wider card with supporting text below as a natural lead-in to additional content."
-  },
-  {
-    id: "7bf8a2c3d",
-    title: "Post title",
-    date: "Nov 11",
-    description:
-      "This is a wider card with supporting text below as a natural lead-in to additional content."
+class Blog extends React.Component {
+
+  constructor(props) {
+    super(props)
+    this.state = {
+      posts: this.props.posts,
+      lastLength: 10,
+      limit: 10
+    }
   }
-];
 
-const social = ["GitHub", "Twitter", "Facebook"];
+  static async getInitialProps() {
+    const res = await fetch('http://localhost:8090/posts?skip=0&limit=10');
+    const data = await res.json();
+    return {
+      posts: data
+    };
+  }
 
-export default function Blog() {
-  const classes = useStyles();
+  infiniteScroll = async (inView, _) => {
+    const {lastLength, limit} = this.state
+    if (inView && lastLength != 0) {
+      this.setState({fetching: true})
+      const res = await fetch(`http://localhost:8090/posts?skip=${this.state.posts.length}&limit=${limit}`)
+      const data = await res.json();
+      this.setState({ posts: this.state.posts.concat(data), lastLength: data.length })
+      this.setState({fetching: false})
+    }
 
-  return (
-    <React.Fragment>
-      <Container style={{ color: "white" }} maxWidth="md">
-        <Menu />
-        <br/>
-        <Paper className={classes.mainFeaturedPost}>
+  }
+
+
+  render() {
+    const { classes } = this.props;
+    const { posts } = this.state;
+    return (
+      <React.Fragment>
+        <Container style={{ color: "white" }} maxWidth="md">
+        <h4 style={{float: "right"}}>
+          <Link style={{color: "#08a6f3"}} href="/blog/new" as="/blog/new">
+              Create
+            </Link>
+          </h4>
+          <Menu />
+         
+          <Paper className={classes.mainFeaturedPost}>
             {/* Increase the priority of the hero background image */}
             {
               <img
@@ -134,33 +153,28 @@ export default function Blog() {
                     }}
                   >
                     How to use Ecto as a query validation utility.
-                  </Typography>
+                    </Typography>
                   <Typography variant="h5" color="inherit" paragraph>
                     Multiple lines of text that form the lede, informing new
                     readers quickly and efficiently about what&apos;s most
                     interesting in this post&apos;s contents.
-                  </Typography>
-                  <Link style={{ color: "#08a6f3" }}  href="/blog/[meta]" as="/blog/blog-meta">
+                    </Typography>
+                  <Link style={{ color: "#08a6f3" }} href="/blog/[meta]" as="/blog/blog-meta">
                     Read Now
-                  </Link>
+                    </Link>
                 </div>
               </Grid>
             </Grid>
           </Paper>
-          <Blogs />
-      </Container>
-      <Footer />
-    </React.Fragment>
-  );
+          <Blogs infiniteScroll={this.infiniteScroll} posts={posts} />
+          <br/>
+          {this.state.fetching && <div style={{flexGrow: 1, color: "white"}}><LinearProgress /> </div> }
+        </Container>
+        <Footer />
+      </React.Fragment>
+    );
+  }
 }
 
-Blog.getInitialProps = async function() {
-  const res = await fetch("https://api.tvmaze.com/search/shows?q=batman");
-  const data = await res.json();
 
-  console.log(`Show data fetched. Count: ${data.length}`);
-
-  return {
-    shows: data.map(entry => entry.show)
-  };
-};
+export default withStyles(styles)(Blog);

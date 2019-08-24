@@ -30,7 +30,7 @@ export default class Home extends React.Component {
                       </h4>
                       <h3 className="color-orange">Nairobi, Kenya</h3>
                       <br />
-                      <Link href="/blog" color="secondary">
+                      <Link href="/blog" as="/blog" color="secondary">
                         <h3 className="color-6">Blog</h3>
                       </Link>
                     </div>

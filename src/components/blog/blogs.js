@@ -7,12 +7,10 @@ import CardActionArea from "@material-ui/core/CardActionArea";
 import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import Hidden from "@material-ui/core/Hidden";
-import { Theme, createStyles } from "@material-ui/core/styles";
-import GridList from "@material-ui/core/GridList";
-import GridListTile from "@material-ui/core/GridListTile";
+import { InView } from 'react-intersection-observer'
 
 const useStyles = makeStyles(theme => ({
-  
+
   card: {
     color: "white",
     boxShadow: "0 8px 15px 0 rgba(90, 91, 95, .33)",
@@ -27,52 +25,15 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const featuredPosts = [
-  {
-    id: "f8a77bc3d",
-    title: "Featured post",
-    date: "Nov 12",
-    description:
-      "This is a wider card with supporting text below as a natural lead-in to additional content."
-  },
-  {
-    id: "7bf8a2c3d",
-    title: "Post title",
-    date: "Nov 11",
-    description:
-      "This is a wider card with supporting text below as a natural lead-in to additional content."
-  },
-  {
-    id: "7bf8a223d",
-    title: "Post title",
-    date: "Nov 11",
-    description:
-      "This is a wider card with supporting text below as a natural lead-in to additional content."
-  },
-  {
-    id: "7bf8a2d3d",
-    title: "Post title",
-    date: "Nov 11",
-    description:
-      "This is a wider card with supporting text below as a natural lead-in to additional content."
-  },
-  {
-    id: "7bf8a243d",
-    title: "Post title",
-    date: "Nov 11",
-    description:
-      "This is a wider card with supporting text below as a natural lead-in to additional content."
-  }
-];
 
-export default function Blogs() {
+export default function Blogs({ posts, infiniteScroll }) {
   const classes = useStyles();
 
   return (
     <Grid container spacing={4}>
-      {featuredPosts.map(post => (
-        <Grid item key={post.id} xs={12} md={6}>
-          <CardActionArea component="a" href={`/blog/${post.id}`}>
+      {posts.map(post => (
+        <Grid item key={post._id} xs={12} md={6}>
+          <CardActionArea component="a" href={`/blog/${post._id}`}>
             <Card className={classes.card}>
               <div className={classes.cardDetails}>
                 <CardContent>
@@ -98,6 +59,8 @@ export default function Blogs() {
           </CardActionArea>
         </Grid>
       ))}
+      <InView as="div" onChange={infiniteScroll}>
+  </InView>
     </Grid>
   );
 }

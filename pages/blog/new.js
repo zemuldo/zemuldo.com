@@ -1,12 +1,14 @@
 import React from "react";
 import Container from "@material-ui/core/Container";
-import post1 from "../../../src/components/blog/template.md";
-import Footer from "../../../src/footer";
-import Menu from "../../../src/components/blog/menu";
+import { withStyles } from '@material-ui/core/styles';
+import Footer from "../../src/footer";
+import Menu from "../../src/components/blog/menu";
 import marked from "marked";
 import dynamic from "next/dynamic";
 import Head from "next/head";
 import Link from "next/link";
+import TextField from '@material-ui/core/TextField';
+import clsx from 'clsx';
 import "easymde/dist/easymde.min.css";
 
 const SimpleMDE = dynamic(import("react-simplemde-editor"), { ssr: false });
@@ -17,12 +19,62 @@ marked.setOptions({
   breaks: true
 });
 
-export default class Blog extends React.Component {
+const useStyles = theme => ({
+  root: {
+    '& label.Mui-focused': {
+      color: 'green',
+    },
+    '& .MuiInput-underline:after': {
+      borderBottomColor: 'green',
+    },
+    '& .MuiOutlinedInput-root': {
+      '& fieldset': {
+        borderColor: 'red',
+      },
+      '&:hover fieldset': {
+        borderColor: 'yellow',
+      },
+      '&.Mui-focused fieldset': {
+        borderColor: 'green',
+      },
+    },
+  },
+  floatingLabelFocusStyle: {
+    color: "#08a6f3",
+    '&:after': {
+      color: "#08a6f3",
+    },
+  },
+  materialInput: {
+    borderBottom: '1px solid green',
+    '&:after': {
+      borderBottom: '1px solid green',
+    },
+    fontSize: "28px",
+    color: '#08a6f3'
+  },
+  container: {
+    display: 'flex',
+    flexWrap: 'wrap',
+  },
+  textField: {
+    marginLeft: theme.spacing(1),
+    marginRight: theme.spacing(1),
+  },
+  dense: {
+    marginTop: theme.spacing(2),
+  },
+  menu: {
+    width: 200,
+  },
+});
+
+class NewBlog extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      textValue: post1
+      textValue: ""
     };
   }
 
@@ -35,6 +87,7 @@ export default class Blog extends React.Component {
   handleEdit = () => this.setState({ edit: true });
   handleExit = () => this.setState({ edit: false });
   render() {
+    const { classes } = this.props
     return (
       <React.Fragment>
         <Head>
@@ -59,7 +112,20 @@ export default class Blog extends React.Component {
               <i className="fa fa-save color-green" />
             </Link>
           </div>
-          <h1>How to use Ecto as a query validation utility.</h1>
+          <div className={classes.root}>
+          <TextField
+            id="outlined-dense"
+            label="Post Title"
+            fullWidth={true}
+            InputProps={{
+              className: classes.materialInput
+            }}
+            InputLabelProps={{
+              className: classes.floatingLabelFocusStyle,
+            }}
+          />
+          </div>
+          
           <br />
           <p>
             <button>JavaScript</button>
@@ -90,3 +156,5 @@ export default class Blog extends React.Component {
     );
   }
 }
+
+export default withStyles(useStyles)(NewBlog)

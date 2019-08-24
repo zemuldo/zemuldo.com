@@ -56,6 +56,7 @@ export default class Blog extends React.Component {
           }}
         >
           <Menu />
+          
           <br />
           <div style={{ float: "right" }}>
             <Link href="/blog/[meta]/edit" as="/blog/blog-meta/edit">
