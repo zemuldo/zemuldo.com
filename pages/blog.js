@@ -14,6 +14,9 @@ import Footer from "../src/footer";
 import Blogs from "../src/components/blog/blogs";
 import Menu from "../src/components/blog/menu";
 import LinearProgress from '@material-ui/core/LinearProgress';
+import { getCookies } from 'cookies-next'
+import axios from 'axios'
+import { parseCookies } from "nookies";
 
 const styles = theme => ({
   toolbar: {
@@ -95,22 +98,46 @@ class Blog extends React.Component {
     }
   }
 
-  static async getInitialProps() {
-    const res = await fetch('http://localhost:8090/posts?skip=0&limit=10');
+  componentDidMount() {
+    // axios.get('http://localhost:8090/user/auth/user',  {
+    //   withCredentials: true
+    // })
+    // .then(res=>{
+    //   console.log(res)
+    // })
+
+  }
+
+  static async getInitialProps(ctx) {
+    const { authorization } = parseCookies(ctx)
+    const res = await fetch('http://localhost:8090/posts?skip=0&limit=10',
+      {
+        headers: {
+          authorization
+        }
+      }
+    );
     const data = await res.json();
     return {
+      authorization,
       posts: data
     };
   }
 
   infiniteScroll = async (inView, _) => {
-    const {lastLength, limit} = this.state
+    const { lastLength, limit } = this.state
     if (inView && lastLength != 0) {
-      this.setState({fetching: true})
-      const res = await fetch(`http://localhost:8090/posts?skip=${this.state.posts.length}&limit=${limit}`)
+      this.setState({ fetching: true })
+      const res = await fetch(`http://localhost:8090/posts?skip=${this.state.posts.length}&limit=${limit}`,
+        {
+          headers: {
+            authorization: this.props.authorization
+          }
+        }
+      )
       const data = await res.json();
       this.setState({ posts: this.state.posts.concat(data), lastLength: data.length })
-      this.setState({fetching: false})
+      this.setState({ fetching: false })
     }
 
   }
@@ -122,13 +149,17 @@ class Blog extends React.Component {
     return (
       <React.Fragment>
         <Container style={{ color: "white" }} maxWidth="md">
-        <h4 style={{float: "right"}}>
-          <Link style={{color: "#08a6f3"}} href="/blog/new" as="/blog/new">
+          <h4 style={{ float: "right" }}>
+            <Link style={{ color: "#08a6f3" }} href="/blog/new" as="/blog/new">
               Create
+            </Link>
+            {' | '}
+            <Link style={{ color: "#08a6f3" }} href={`/login?redirectTo=http://localhost:3001/blog`}>
+              Join
             </Link>
           </h4>
           <Menu />
-         
+
           <Paper className={classes.mainFeaturedPost}>
             {/* Increase the priority of the hero background image */}
             {
@@ -167,8 +198,8 @@ class Blog extends React.Component {
             </Grid>
           </Paper>
           <Blogs infiniteScroll={this.infiniteScroll} posts={posts} />
-          <br/>
-          {this.state.fetching && <div style={{flexGrow: 1, color: "white"}}><LinearProgress /> </div> }
+          <br />
+          {this.state.fetching && <div style={{ flexGrow: 1, color: "white" }}><LinearProgress /> </div>}
         </Container>
         <Footer />
       </React.Fragment>

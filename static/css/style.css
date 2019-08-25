@@ -275,6 +275,15 @@ hr {
         width: 100%;
         height: 1px;
     }
+    .hr-opposite:before {
+        content: '';
+        background: linear-gradient(to left, rgba(255,0,0,1), rgba(255,0,0,0));;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        width: 100%;
+        height: 1px;
+    }
 
 }
 hr:after {

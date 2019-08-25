@@ -2,7 +2,7 @@ import React from "react";
 import Document, { Head, Main, NextScript } from "next/document";
 import { ServerStyleSheets } from "@material-ui/styles";
 import HeadElements from "../src/components/document/head_elements";
-import theme from "../src/theme";
+import { setCookie } from 'nookies'
 
 
 class MyDocument extends Document {
@@ -26,6 +26,12 @@ class MyDocument extends Document {
 }
 
 MyDocument.getInitialProps = async ctx => {
+  if(ctx.query.token) {
+    setCookie(ctx, 'authorization', ctx.query.token, {
+      maxAge: 30 * 24 * 60 * 60,
+      path: '/',
+    });
+  }
   // Resolution order
   //
   // On the server:
