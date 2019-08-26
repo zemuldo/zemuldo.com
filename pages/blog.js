@@ -17,8 +17,21 @@ import LinearProgress from '@material-ui/core/LinearProgress';
 import { getCookies } from 'cookies-next'
 import axios from 'axios'
 import { parseCookies } from "nookies";
+import { green, pink } from '@material-ui/core/colors';
+import Avatar from '@material-ui/core/Avatar';
+import FolderIcon from '@material-ui/icons/Folder';
+import NewIcon from '@material-ui/icons/NoteAdd';
+import AssignmentIcon from '@material-ui/icons/Assignment';
 
 const styles = theme => ({
+  greenAvatar: {
+    margin: 10,
+    color: '#fff',
+    backgroundColor: green[500],
+  },
+  avatar: {
+    margin: 10,
+  },
   toolbar: {
     borderBottom: `1px solid ${theme.palette.divider}`
   },
@@ -102,7 +115,13 @@ class Blog extends React.Component {
     const { authorization } = parseCookies(ctx)
     const res = await fetch('http://localhost:8090/posts?skip=0&limit=10');
     const data = await res.json();
+    let user;
+    if (authorization) {
+      const res = await fetch('http://localhost:8090/user', { headers: { authorization } });
+      user = await res.json();
+    }
     return {
+      user,
       authorization,
       posts: data
     };
@@ -127,16 +146,24 @@ class Blog extends React.Component {
     return (
       <React.Fragment>
         <Container style={{ color: "white" }} maxWidth="md">
-          <h4 style={{ float: "right" }}>
-            <Link style={{ color: "#08a6f3" }} href="/blog/new" as="/blog/new">
-              Create
-            </Link>
-            {' | '}
-            <Link style={{ color: "#08a6f3" }} href={`/login?redirectTo=http://localhost:3001/blog`}>
-              Join
-            </Link>
-          </h4>
           <Menu />
+          <Grid container justify="center" alignItems="center">
+            <Link href="/blog/new">
+              <Avatar className={classes.greenAvatar}>
+                <NewIcon />
+              </Avatar>
+            </Link>
+
+            {this.props.user && <Avatar alt="User profile" src="/static/images/avatar/1.jpg" className={classes.avatar} src={this.props.user.profilePhotoUrl} />}
+            {
+              !this.props.user &&
+              <Link style={{ color: "#08a6f3" }} href={`/login?redirectTo=http://localhost:3001/blog`}>
+                Join
+                </Link>
+            }
+          </Grid>
+        </Container>
+        <Container style={{ color: "white" }} maxWidth="md">
 
           <Paper className={classes.mainFeaturedPost}>
             {/* Increase the priority of the hero background image */}

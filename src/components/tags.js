@@ -105,6 +105,7 @@ export default function Tags({ onChange }) {
 
     return (
         <Select
+            instanceId="select-tags"
             isMulti
             name="colors"
             options={options}
