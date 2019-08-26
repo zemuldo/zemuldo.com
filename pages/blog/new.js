@@ -12,8 +12,7 @@ import Grid from '@material-ui/core/Grid';
 import "easymde/dist/easymde.min.css";
 import Tags from "../../src/components/tags";
 import { parseCookies } from "nookies";
-
-
+import { withRouter } from 'next/router'
 
 const SimpleMDE = dynamic(import("react-simplemde-editor"), { ssr: false });
 
@@ -116,14 +115,19 @@ class NewBlog extends React.Component {
 
   static async getInitialProps(ctx) {
     const { authorization } = parseCookies(ctx)
+    const loinState= {
+      loggingIn: !!ctx.query.token
+    }
     if (authorization) {
       return {
+        ...loinState,
         authorization,
         authorized: true
       };
     }
     return {
-      authorized: false
+      ...loinState,
+      authorized: false,
     };
   }
 
@@ -151,8 +155,8 @@ class NewBlog extends React.Component {
   }
 
   render() {
-    const { classes, authorized } = this.props
-    console.log(authorized)
+    const { classes, authorized, loggingIn } = this.props
+    if(loggingIn) return <div style={{color: "white"}}>Please wait...</div>
     if (!authorized) {
       return <JoinNow/>
     }
@@ -248,4 +252,4 @@ class NewBlog extends React.Component {
   }
 }
 
-export default withStyles(useStyles)(NewBlog)
+export default withRouter(withStyles(useStyles)(NewBlog))
