@@ -13,7 +13,8 @@ import "easymde/dist/easymde.min.css";
 import Tags from "../../src/components/tags";
 import { parseCookies } from "nookies";
 import { withRouter } from 'next/router'
-import clsx from 'clsx';
+import SaveIcon from '@material-ui/icons/Save';
+import Avatar from '@material-ui/core/Avatar';
 
 const SimpleMDE = dynamic(import("react-simplemde-editor"), { ssr: false });
 
@@ -56,6 +57,14 @@ marked.setOptions({
 });
 
 const useStyles = theme => ({
+  greenAvatar: {
+    margin: 10,
+    color: '#fff',
+    backgroundColor: "#08a6f3",
+    '&:hover':{
+      cursor: "pointer"
+    }
+  },
   root: {
     '& label.Mui-focused': {
       color: 'green',
@@ -97,7 +106,7 @@ const useStyles = theme => ({
     fontSize: "16px",
     color: 'white',
     '& label.Mui-focused': {
-      color: 'green',
+      color: '#08a6f3',
     },
     '& .MuiInput-underline:after': {
       borderBottomColor: 'transparent',
@@ -163,7 +172,6 @@ class NewBlog extends React.Component {
   componentDidMount() {
     const draft = localStorage.getItem("currentDraft")
     if (draft) {
-      console.log(draft)
       const data = JSON.parse(draft)
       this.setState({
         coverPhotoUrl: data.coverPhotoUrl || '',
@@ -218,11 +226,12 @@ class NewBlog extends React.Component {
         >
           <Menu />
           <br />
-          <div style={{ float: "right" }}>
-            <Link href="/blog/[meta]" as="/blog/blog-meta">
-              <i className="fa fa-save color-green" />
-            </Link>
-          </div>
+          <Grid container justify="center" alignItems="center">
+            <Avatar className={classes.greenAvatar}>
+              <SaveIcon />
+          </Avatar>
+          </Grid>
+
           <div className={classes.root}>
             <TextField
               id="postTitle"
@@ -274,6 +283,9 @@ class NewBlog extends React.Component {
             fullWidth
             InputProps={{
               className: classes.materialTextArea
+            }}
+            InputLabelProps={{
+              className: classes.floatingLabelFocusStyle,
             }}
             onChange={this.handleTextChange}
           />
