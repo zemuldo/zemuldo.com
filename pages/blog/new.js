@@ -13,38 +13,39 @@ import "easymde/dist/easymde.min.css";
 import Tags from "../../src/components/tags";
 import { parseCookies } from "nookies";
 import { withRouter } from 'next/router'
+import clsx from 'clsx';
 
 const SimpleMDE = dynamic(import("react-simplemde-editor"), { ssr: false });
 
 const JoinNow = () => (
   <React.Fragment>
-      <Head>
-          <title>Join</title>
-      </Head>
-      <div
-          className="home-section-background"
-          data-stellar-background-ratio="0.6"
-      >
-          <div className="display-table">
-              <div className="display-table-cell">
-                  <div className="container">
-                      <div className="row">
-                          <div style={{ marginTop: "30%" }} className="header-section">
-                              <div className="header-frame">
-                                <h3 className="color-6">You have to become a member to write</h3>
-                                <hr/>
-                                  <Link href="/login?redirectTo=http://localhost:3001/blog/new" >
-                                      <a style={{fontSize: "24px"}} className="color-6">
-                                          <u>Click here to login</u>
-                                      </a>
-                                  </Link>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
+    <Head>
+      <title>Join</title>
+    </Head>
+    <div
+      className="home-section-background"
+      data-stellar-background-ratio="0.6"
+    >
+      <div className="display-table">
+        <div className="display-table-cell">
+          <div className="container">
+            <div className="row">
+              <div style={{ marginTop: "30%" }} className="header-section">
+                <div className="header-frame">
+                  <h3 className="color-6">You have to become a member to write</h3>
+                  <hr />
+                  <Link href="/login?redirectTo=http://localhost:3001/blog/new" >
+                    <a style={{ fontSize: "24px" }} className="color-6">
+                      <u>Click here to login</u>
+                    </a>
+                  </Link>
+                </div>
               </div>
+            </div>
           </div>
+        </div>
       </div>
+    </div>
   </React.Fragment>
 );
 
@@ -88,6 +89,31 @@ const useStyles = theme => ({
     fontSize: "28px",
     color: '#08a6f3'
   },
+  materialTextArea: {
+    border: '1px solid transparent',
+    '&:after': {
+      border: '1px solid transparent',
+    },
+    fontSize: "16px",
+    color: 'white',
+    '& label.Mui-focused': {
+      color: 'green',
+    },
+    '& .MuiInput-underline:after': {
+      borderBottomColor: 'transparent',
+    },
+    '& .MuiOutlinedInput-root': {
+      '& fieldset': {
+        borderColor: 'green',
+      },
+      '&:hover fieldset': {
+        borderColor: 'green',
+      },
+      '&.Mui-focused fieldset': {
+        borderColor: 'green',
+      },
+    }
+  },
   container: {
     display: 'flex',
     flexWrap: 'wrap',
@@ -109,13 +135,16 @@ class NewBlog extends React.Component {
     super(props);
 
     this.state = {
-      body: ""
+      body: "",
+      postTitle: '',
+      coverPhotoUrl: '',
+      description: ''
     };
   }
 
   static async getInitialProps(ctx) {
     const { authorization } = parseCookies(ctx)
-    const loinState= {
+    const loinState = {
       loggingIn: !!ctx.query.token
     }
     if (authorization) {
@@ -132,8 +161,17 @@ class NewBlog extends React.Component {
   }
 
   componentDidMount() {
-    if (window.location.href.includes("?token=")) {
-      window.location.href = window.location.pathname
+    const draft = localStorage.getItem("currentDraft")
+    if (draft) {
+      console.log(draft)
+      const data = JSON.parse(draft)
+      this.setState({
+        coverPhotoUrl: data.coverPhotoUrl || '',
+        postTitle: data.postTitle,
+        body: data.body,
+        tags: data.tags,
+        description: data.description
+      })
     }
     setInterval(() => {
       this.setState({ saving: true })
@@ -156,9 +194,9 @@ class NewBlog extends React.Component {
 
   render() {
     const { classes, authorized, loggingIn } = this.props
-    if(loggingIn) return <div style={{color: "white"}}>Please wait...</div>
+    if (loggingIn) return <div style={{ color: "white" }}>Please wait...</div>
     if (!authorized) {
-      return <JoinNow/>
+      return <JoinNow />
     }
 
     return (
@@ -190,6 +228,7 @@ class NewBlog extends React.Component {
               id="postTitle"
               label="Post Title"
               fullWidth={true}
+              value={this.state.postTitle}
               InputProps={{
                 className: classes.materialInput
               }}
@@ -205,6 +244,7 @@ class NewBlog extends React.Component {
               <TextField
                 id="coverPhotoUrl"
                 label="Cover Photo Url"
+                value={this.state.coverPhotoUrl}
                 fullWidth={true}
                 InputProps={{
                   className: classes.materialInput
@@ -222,15 +262,22 @@ class NewBlog extends React.Component {
             </Grid>
           </Grid>
           <br />
+          <TextField
+            id="description"
+            label="Post Description"
+            multiline
+            rows="4"
+            value={this.state.description}
+            className={classes.materialTextArea}
+            margin="normal"
+            variant="outlined"
+            fullWidth
+            InputProps={{
+              className: classes.materialTextArea
+            }}
+            onChange={this.handleTextChange}
+          />
         </Container>
-        {
-          this.state.coverPhotoUrl && <Container>
-            <img
-              style={{ maxHeight: "600px" }}
-              src={this.state.coverPhotoUrl}
-            />
-          </Container>
-        }
         <Container
           className="blog-md"
           maxWidth="md"

@@ -1,33 +1,24 @@
 import React from "react";
 import { withStyles } from "@material-ui/core/styles";
-import CssBaseline from "@material-ui/core/CssBaseline";
 import Paper from "@material-ui/core/Paper";
 import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
 import Link from "@material-ui/core/Link";
-import Button from "@material-ui/core/Button";
 import Container from "@material-ui/core/Container";
-import post1 from "../src/components/blog/template.md";
 import fetch from "isomorphic-unfetch";
-import Head from "next/head";
 import Footer from "../src/footer";
 import Blogs from "../src/components/blog/blogs";
 import Menu from "../src/components/blog/menu";
 import LinearProgress from '@material-ui/core/LinearProgress';
-import { getCookies } from 'cookies-next'
-import axios from 'axios'
 import { parseCookies } from "nookies";
-import { green, pink } from '@material-ui/core/colors';
 import Avatar from '@material-ui/core/Avatar';
-import FolderIcon from '@material-ui/icons/Folder';
 import NewIcon from '@material-ui/icons/NoteAdd';
-import AssignmentIcon from '@material-ui/icons/Assignment';
 
 const styles = theme => ({
   greenAvatar: {
     margin: 10,
     color: '#fff',
-    backgroundColor: green[500],
+    backgroundColor: "#08a6f3",
   },
   avatar: {
     margin: 10,
@@ -159,7 +150,7 @@ class Blog extends React.Component {
               !this.props.user &&
               <Link style={{ color: "#08a6f3" }} href={`/login?redirectTo=http://localhost:3001/blog`}>
                 Join
-                </Link>
+              </Link>
             }
           </Grid>
         </Container>
