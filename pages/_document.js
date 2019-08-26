@@ -6,6 +6,7 @@ import { setCookie } from 'nookies'
 
 
 class MyDocument extends Document {
+
   render() {
     return (
       <html lang="en">
@@ -67,6 +68,7 @@ MyDocument.getInitialProps = async ctx => {
 
   return {
     ...initialProps,
+    query: ctx.query,
     // Styles fragment is rendered after the app and page rendering finish.
     styles: [
       <React.Fragment key="styles">

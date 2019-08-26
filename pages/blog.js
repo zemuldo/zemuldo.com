@@ -98,25 +98,9 @@ class Blog extends React.Component {
     }
   }
 
-  componentDidMount() {
-    // axios.get('http://localhost:8090/user/auth/user',  {
-    //   withCredentials: true
-    // })
-    // .then(res=>{
-    //   console.log(res)
-    // })
-
-  }
-
   static async getInitialProps(ctx) {
     const { authorization } = parseCookies(ctx)
-    const res = await fetch('http://localhost:8090/posts?skip=0&limit=10',
-      {
-        headers: {
-          authorization
-        }
-      }
-    );
+    const res = await fetch('http://localhost:8090/posts?skip=0&limit=10');
     const data = await res.json();
     return {
       authorization,
@@ -128,13 +112,7 @@ class Blog extends React.Component {
     const { lastLength, limit } = this.state
     if (inView && lastLength != 0) {
       this.setState({ fetching: true })
-      const res = await fetch(`http://localhost:8090/posts?skip=${this.state.posts.length}&limit=${limit}`,
-        {
-          headers: {
-            authorization: this.props.authorization
-          }
-        }
-      )
+      const res = await fetch(`http://localhost:8090/posts?skip=${this.state.posts.length}&limit=${limit}`)
       const data = await res.json();
       this.setState({ posts: this.state.posts.concat(data), lastLength: data.length })
       this.setState({ fetching: false })

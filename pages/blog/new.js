@@ -11,8 +11,43 @@ import TextField from '@material-ui/core/TextField';
 import Grid from '@material-ui/core/Grid';
 import "easymde/dist/easymde.min.css";
 import Tags from "../../src/components/tags";
+import { parseCookies } from "nookies";
+
+
 
 const SimpleMDE = dynamic(import("react-simplemde-editor"), { ssr: false });
+
+const JoinNow = () => (
+  <React.Fragment>
+      <Head>
+          <title>Join</title>
+      </Head>
+      <div
+          className="home-section-background"
+          data-stellar-background-ratio="0.6"
+      >
+          <div className="display-table">
+              <div className="display-table-cell">
+                  <div className="container">
+                      <div className="row">
+                          <div style={{ marginTop: "30%" }} className="header-section">
+                              <div className="header-frame">
+                                <h3 className="color-6">You have to become a member to write</h3>
+                                <hr/>
+                                  <Link href="/login?redirectTo=http://localhost:3001/blog/new" >
+                                      <a style={{fontSize: "24px"}} className="color-6">
+                                          <u>Click here to login</u>
+                                      </a>
+                                  </Link>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </React.Fragment>
+);
 
 marked.setOptions({
   gfm: true,
@@ -79,9 +114,25 @@ class NewBlog extends React.Component {
     };
   }
 
-  componentDidMount (){
-    setInterval(()=>{
-      this.setState({saving: true})
+  static async getInitialProps(ctx) {
+    const { authorization } = parseCookies(ctx)
+    if (authorization) {
+      return {
+        authorization,
+        authorized: true
+      };
+    }
+    return {
+      authorized: false
+    };
+  }
+
+  componentDidMount() {
+    if (window.location.href.includes("?token=")) {
+      window.location.href = window.location.pathname
+    }
+    setInterval(() => {
+      this.setState({ saving: true })
       localStorage.setItem('currentDraft', JSON.stringify(this.state))
     }, 10000)
   }
@@ -91,16 +142,21 @@ class NewBlog extends React.Component {
   }
 
   handleTextChange = e => {
-    const {id, value} = e.target;
-    this.setState({[id]:  value})
+    const { id, value } = e.target;
+    this.setState({ [id]: value })
   };
 
-  handleEditorChange = (value)=>{
-    this.setState({body: value})
+  handleEditorChange = (value) => {
+    this.setState({ body: value })
   }
 
   render() {
-    const { classes } = this.props
+    const { classes, authorized } = this.props
+    console.log(authorized)
+    if (!authorized) {
+      return <JoinNow/>
+    }
+
     return (
       <React.Fragment>
         <Head>
