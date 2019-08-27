@@ -51,7 +51,7 @@ export default function Blogs({ posts, infiniteScroll }) {
               <Hidden xsDown>
                 <CardMedia
                   className={classes.cardMedia}
-                  image="https://source.unsplash.com/random"
+                  image={post.coverPhotoUrl}
                   title="Image title"
                 />
               </Hidden>

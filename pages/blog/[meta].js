@@ -12,6 +12,8 @@ import Link from "next/link";
 import "easymde/dist/easymde.min.css";
 import { maxHeight } from "@material-ui/system";
 import { format } from "date-fns";
+import fetch from "isomorphic-unfetch";
+import { parseCookies } from "nookies";
 
 const Highlight = dynamic(import("react-highlight"));
 
@@ -29,6 +31,25 @@ export default class Blog extends React.Component {
       textValue: post1
     };
   }
+
+  static async getInitialProps(ctx) {
+    const { authorization } = parseCookies(ctx)
+    const { meta } = ctx.query;
+    const res = await fetch(`http://localhost:8090/posts/${meta}`);
+    const data = await res.json();
+    let user;
+    if (authorization) {
+      const res = await fetch('http://localhost:8090/user', { headers: { authorization } });
+      user = await res.json();
+    }
+    return {
+      user,
+      authorization,
+      post: data.post,
+      body: data.postBody
+    };
+  }
+
   handleChange = value => {
     this.setState({
       textValue: value
@@ -38,6 +59,7 @@ export default class Blog extends React.Component {
   handleEdit = () => this.setState({ edit: true });
   handleExit = () => this.setState({ edit: false });
   render() {
+    const {post, body} = this.props
     return (
       <React.Fragment>
         <Head>
@@ -63,17 +85,17 @@ export default class Blog extends React.Component {
               <i className="fa fa-pencil-square-o color-green" />
             </Link>
           </div>
-          <h1>How to use Ecto as a query validation utility.</h1>
+          <h1>{post.title}</h1>
           <br />
-          <p>{format(new Date(), "PPPP")}</p>
-          <p>
-            <button>JavaScript</button>
-          </p>
+          <p>{format(new Date(post.createdAt), "PPPP")}</p>
+          {
+            post.tags.map(tag=><button key={tag.value}>{tag.label}</button>)
+          }
         </Container>
         <Container>
           <img
             style={{ maxHeight: "600px" }}
-            src="https://miro.medium.com/max/1000/1*vKd5tDJmDFznrOkMh1kQGg.png"
+            src={post.coverPhotoUrl}
           />
         </Container>
 
@@ -86,7 +108,7 @@ export default class Blog extends React.Component {
           }}
         >
           <br />
-          <Highlight innerHTML>{marked(this.state.textValue)}</Highlight>
+          <Highlight innerHTML>{marked(body.body)}</Highlight>
         </Container>
         <Footer />
       </React.Fragment>
