@@ -137,7 +137,6 @@ class Blog extends React.Component {
 
   render() {
     const { classes, featurePost } = this.props;
-    console.log(featurePost)
     const { posts } = this.state;
     return (
       <React.Fragment>
