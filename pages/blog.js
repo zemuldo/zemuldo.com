@@ -168,7 +168,9 @@ class Blog extends React.Component {
         </Container>
         <Container style={{ color: "white" }} maxWidth="md">
 
-          <Paper className={classes.mainFeaturedPost}>
+          {
+            featurePost && featurePost.post &&
+            <Paper className={classes.mainFeaturedPost}>
             {/* Increase the priority of the hero background image */}
             {
               <img
@@ -203,6 +205,7 @@ class Blog extends React.Component {
               </Grid>
             </Grid>
           </Paper>
+          }
           <Blogs infiniteScroll={this.infiniteScroll} posts={posts} />
           <br />
           {this.state.fetching && <div style={{ flexGrow: 1, color: "white" }}><LinearProgress /> </div>}
