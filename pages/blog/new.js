@@ -15,6 +15,9 @@ import { parseCookies } from "nookies";
 import { withRouter } from 'next/router'
 import SaveIcon from '@material-ui/icons/Save';
 import Avatar from '@material-ui/core/Avatar';
+import PublishIcon from '@material-ui/icons/Publish';
+import PublishDialogue from '../../src/components/publish_modal'
+import fetch from "isomorphic-unfetch";
 
 const SimpleMDE = dynamic(import("react-simplemde-editor"), { ssr: false });
 
@@ -147,7 +150,8 @@ class NewBlog extends React.Component {
       body: "",
       postTitle: '',
       coverPhotoUrl: '',
-      description: ''
+      description: '',
+      publishDialogueOpen: false
     };
   }
 
@@ -181,12 +185,39 @@ class NewBlog extends React.Component {
         description: data.description
       })
     }
-    setInterval(() => {
+
+    this.autoSave = setInterval(() => {
       this.setState({ saving: true })
       localStorage.setItem('currentDraft', JSON.stringify(this.state))
     }, 10000)
+    
   }
 
+  handleSave = () => localStorage.setItem('currentDraft', JSON.stringify(this.state))
+  handleOpenPublishDialogue = () => this.setState({publishDialogueOpen: true})
+  handleClosePublishDialogue = () => this.setState({publishDialogueOpen: false})
+  handlePublish = async () => {
+    const { authorization } = this.props
+    const res = await fetch('http://localhost:8090/posts', {
+      method: 'post',
+      headers: {authorization, 'Accept': 'application/json', 'Content-Type': 'application/json'},
+      body: JSON.stringify({
+        title: this.state.postTitle,
+        body: this.state.body,
+        tags: this.state.tags,
+        description: this.state.description,
+        coverPhotoUrl: this.state.coverPhotoUrl
+
+      })
+    });
+    const data = await res.json()
+    console.log(data)
+    this.handleClosePublishDialogue()
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.autoSave)
+  }
   handleTagsChange = (tags) => {
     this.setState({ tags })
   }
@@ -202,6 +233,7 @@ class NewBlog extends React.Component {
 
   render() {
     const { classes, authorized, loggingIn } = this.props
+    const {publishDialogueOpen} = this.state
     if (loggingIn) return <div style={{ color: "white" }}>Please wait...</div>
     if (!authorized) {
       return <JoinNow />
@@ -209,6 +241,7 @@ class NewBlog extends React.Component {
 
     return (
       <React.Fragment>
+        <PublishDialogue handlePublish={this.handlePublish} handleClose={this.handleClosePublishDialogue} open={publishDialogueOpen}/>
         <Head>
           <link href="/static/css/blog.css" rel="stylesheet" />
           <link
@@ -225,10 +258,12 @@ class NewBlog extends React.Component {
           }}
         >
           <Menu />
-          <br />
           <Grid container justify="center" alignItems="center">
-            <Avatar className={classes.greenAvatar}>
+            <Avatar onClick={this.handleSave} className={classes.greenAvatar}>
               <SaveIcon />
+          </Avatar>
+          <Avatar onClick={this.handleOpenPublishDialogue} className={classes.greenAvatar}>
+              <PublishIcon />
           </Avatar>
           </Grid>
 
