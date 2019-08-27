@@ -13,6 +13,7 @@ import LinearProgress from '@material-ui/core/LinearProgress';
 import { parseCookies } from "nookies";
 import Avatar from '@material-ui/core/Avatar';
 import NewIcon from '@material-ui/icons/NoteAdd';
+import AddCircleOutlineIcon from '@material-ui/icons/AddCircleOutline';
 
 const styles = theme => ({
   greenAvatar: {
@@ -106,12 +107,15 @@ class Blog extends React.Component {
     const { authorization } = parseCookies(ctx)
     const res = await fetch('http://localhost:8090/posts?skip=0&limit=10');
     const data = await res.json();
+    const res_featured = await fetch('http://localhost:8090/posts/latest');
+    const data_featured = await res_featured.json();
     let user;
     if (authorization) {
       const res = await fetch('http://localhost:8090/user', { headers: { authorization } });
       user = await res.json();
     }
     return {
+      featurePost: data_featured,
       user,
       authorization,
       posts: data
@@ -132,25 +136,31 @@ class Blog extends React.Component {
 
 
   render() {
-    const { classes } = this.props;
+    const { classes, featurePost } = this.props;
+    console.log(featurePost)
     const { posts } = this.state;
     return (
       <React.Fragment>
         <Container style={{ color: "white" }} maxWidth="md">
           <Menu />
           <Grid container justify="center" alignItems="center">
-            <Link href="/blog/new">
-              <Avatar className={classes.greenAvatar}>
-                <NewIcon />
-              </Avatar>
-            </Link>
+           {
+             this.props.authorization &&
+             <Link href="/blog/new">
+             <Avatar className={classes.greenAvatar}>
+               <NewIcon />
+             </Avatar>
+           </Link>
+           }
 
             {this.props.user && <Avatar alt="User profile" src="/static/images/avatar/1.jpg" className={classes.avatar} src={this.props.user.profilePhotoUrl} />}
             {
               !this.props.user &&
-              <Link style={{ color: "#08a6f3" }} href={`/login?redirectTo=http://localhost:3001/blog`}>
-                Join
-              </Link>
+              <Link href={`/login?redirectTo=http://localhost:3001/blog`}>
+             <Avatar className={classes.greenAvatar}>
+               <AddCircleOutlineIcon />
+             </Avatar>
+             </Link>
             }
           </Grid>
         </Container>
@@ -166,7 +176,7 @@ class Blog extends React.Component {
               />
             }
             <div className={classes.overlay} />
-            <Grid className="eph" container>
+            <Grid style ={{minHeight: "400px"}} className="eph" container>
               <Grid item md={6}>
                 <div className={classes.mainFeaturedPostContent}>
                   <Typography
@@ -179,12 +189,10 @@ class Blog extends React.Component {
                       fontFamily: "'Courier New', Courier, monospace"
                     }}
                   >
-                    How to use Ecto as a query validation utility.
+                    {featurePost.post.title}
                     </Typography>
                   <Typography variant="h5" color="inherit" paragraph>
-                    Multiple lines of text that form the lede, informing new
-                    readers quickly and efficiently about what&apos;s most
-                    interesting in this post&apos;s contents.
+                    {featurePost.post.description}
                     </Typography>
                   <Link style={{ color: "#08a6f3" }} href="/blog/[meta]" as="/blog/blog-meta">
                     Read Now

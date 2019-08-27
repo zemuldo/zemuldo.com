@@ -8,9 +8,10 @@ import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import Hidden from "@material-ui/core/Hidden";
 import { InView } from 'react-intersection-observer'
+import GridList from '@material-ui/core/GridList';
+import GridListTile from '@material-ui/core/GridListTile';
 
 const useStyles = makeStyles(theme => ({
-
   card: {
     color: "white",
     boxShadow: "0 8px 15px 0 rgba(90, 91, 95, .33)",
@@ -18,7 +19,8 @@ const useStyles = makeStyles(theme => ({
     display: "flex"
   },
   cardDetails: {
-    flex: 1
+    flex: 1,
+    padding: '5px'
   },
   cardMedia: {
     width: 160
@@ -32,7 +34,7 @@ export default function Blogs({ posts, infiniteScroll }) {
   return (
     <Grid container spacing={4}>
       {posts.map(post => (
-        <Grid item key={post._id} xs={12} md={6}>
+        <Grid style={{height: "auto !important"}} item key={post._id} xs={12} md={6}>
           <CardActionArea component="a" href={`/blog/${post._id}`}>
             <Card className={classes.card}>
               <div className={classes.cardDetails}>

@@ -18,6 +18,7 @@ import Avatar from '@material-ui/core/Avatar';
 import PublishIcon from '@material-ui/icons/Publish';
 import PublishDialogue from '../../src/components/publish_modal'
 import fetch from "isomorphic-unfetch";
+import Router from 'next/router'
 
 const SimpleMDE = dynamic(import("react-simplemde-editor"), { ssr: false });
 
@@ -211,7 +212,8 @@ class NewBlog extends React.Component {
       })
     });
     const data = await res.json()
-    console.log(data)
+    if(res.status == 200) localStorage.removeItem("currentDraft")
+    Router.push(`/blog/${data.post._id}`)
     this.handleClosePublishDialogue()
   }
 
