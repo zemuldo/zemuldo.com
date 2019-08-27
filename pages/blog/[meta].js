@@ -23,6 +23,9 @@ import Grid from "@material-ui/core/Grid";
 
 const Highlight = dynamic(import("react-highlight"));
 
+const api_url = process.env.API_URL
+const base_url = process.env.BASE_URL
+
 
 const styles = theme => ({
   greenAvatar: {
@@ -77,11 +80,11 @@ class Blog extends React.Component {
   static async getInitialProps(ctx) {
     const { authorization } = parseCookies(ctx)
     const { meta } = ctx.query;
-    const res = await fetch(`http://localhost:8090/posts/${meta}`);
+    const res = await fetch(`${api_url}/posts/${meta}`);
     const data = await res.json();
     let user;
     if (authorization) {
-      const res = await fetch('http://localhost:8090/user', { headers: { authorization } });
+      const res = await fetch(`${api_url}/user`, { headers: { authorization } });
       user = await res.json();
     }
     return {

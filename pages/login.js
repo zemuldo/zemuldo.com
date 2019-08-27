@@ -4,6 +4,9 @@ import Grid from "@material-ui/core/Grid"
 import { Link } from "@material-ui/core";
 import { withRouter } from 'next/router'
 
+const api_url = process.env.API_URL
+const base_url = process.env.BASE_URL
+
 class Home extends React.Component {
     static getInitialProps({query}) {
         return {query}
@@ -34,7 +37,7 @@ class Home extends React.Component {
                                                     <hr className="hr-opposite" />
                                                 </Grid>
                                                 <Grid item xs={12} sm={6}>
-                                                    <Link href={`http://localhost:8090/user/auth/github?redirectTo=${query.redirectTo || "http://localhost:3001"}`}>
+                                                    <Link href={`${api_url}/user/auth/github?redirectTo=${query.redirectTo || base_url}`}>
                                                         <h1 className="color-6">Github</h1>
                                                     </Link>
                                                     <hr />

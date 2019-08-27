@@ -15,6 +15,9 @@ import Avatar from '@material-ui/core/Avatar';
 import NewIcon from '@material-ui/icons/NoteAdd';
 import AddCircleOutlineIcon from '@material-ui/icons/AddCircleOutline';
 
+const api_url = process.env.API_URL
+const base_url = process.env.BASE_URL
+
 const styles = theme => ({
   greenAvatar: {
     margin: 10,
@@ -105,13 +108,13 @@ class Blog extends React.Component {
 
   static async getInitialProps(ctx) {
     const { authorization } = parseCookies(ctx)
-    const res = await fetch('http://localhost:8090/posts?skip=0&limit=10');
+    const res = await fetch(`${api_url}/posts?skip=0&limit=10`);
     const data = await res.json();
-    const res_featured = await fetch('http://localhost:8090/posts/latest');
+    const res_featured = await fetch(`${api_url}/posts/latest`);
     const data_featured = await res_featured.json();
     let user;
     if (authorization) {
-      const res = await fetch('http://localhost:8090/user', { headers: { authorization } });
+      const res = await fetch(`${api_url}/user`, { headers: { authorization } });
       user = await res.json();
     }
     return {
@@ -126,7 +129,7 @@ class Blog extends React.Component {
     const { lastLength, limit } = this.state
     if (inView && lastLength != 0) {
       this.setState({ fetching: true })
-      const res = await fetch(`http://localhost:8090/posts?skip=${this.state.posts.length}&limit=${limit}`)
+      const res = await fetch(`${api_url}/posts?skip=${this.state.posts.length}&limit=${limit}`)
       const data = await res.json();
       this.setState({ posts: this.state.posts.concat(data), lastLength: data.length })
       this.setState({ fetching: false })
@@ -155,7 +158,7 @@ class Blog extends React.Component {
             {this.props.user && <Avatar alt="User profile" src="/static/images/avatar/1.jpg" className={classes.avatar} src={this.props.user.profilePhotoUrl} />}
             {
               !this.props.user &&
-              <Link href={`/login?redirectTo=http://localhost:3001/blog`}>
+              <Link href={`/login?redirectTo=${base_url}/blog`}>
              <Avatar className={classes.greenAvatar}>
                <AddCircleOutlineIcon />
              </Avatar>

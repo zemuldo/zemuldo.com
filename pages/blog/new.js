@@ -22,6 +22,9 @@ import Router from 'next/router'
 
 const SimpleMDE = dynamic(import("react-simplemde-editor"), { ssr: false });
 
+const api_url = process.env.API_URL
+const base_url = process.env.BASE_URL
+
 const JoinNow = () => (
   <React.Fragment>
     <Head>
@@ -39,7 +42,7 @@ const JoinNow = () => (
                 <div className="header-frame">
                   <h3 className="color-6">You have to become a member to write</h3>
                   <hr />
-                  <Link href="/login?redirectTo=http://localhost:3001/blog/new" >
+                  <Link href={`/login?redirectTo=${base_url}/blog/new`} >
                     <a style={{ fontSize: "24px" }} className="color-6">
                       <u>Click here to login</u>
                     </a>
@@ -199,7 +202,7 @@ class NewBlog extends React.Component {
   handleClosePublishDialogue = () => this.setState({publishDialogueOpen: false})
   handlePublish = async () => {
     const { authorization } = this.props
-    const res = await fetch('http://localhost:8090/posts', {
+    const res = await fetch(`${api_url}/posts`, {
       method: 'post',
       headers: {authorization, 'Accept': 'application/json', 'Content-Type': 'application/json'},
       body: JSON.stringify({

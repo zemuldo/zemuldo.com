@@ -22,6 +22,9 @@ import Router from 'next/router'
 
 const SimpleMDE = dynamic(import("react-simplemde-editor"), { ssr: false });
 
+const api_url = process.env.API_URL
+const base_url = process.env.BASE_URL
+
 const JoinNow = () => (
   <React.Fragment>
     <Head>
@@ -37,7 +40,7 @@ const JoinNow = () => (
             <div className="row">
               <div style={{ marginTop: "30%" }} className="header-section">
                 <div className="header-frame">
-                  <Link href="/login?redirectTo=http://localhost:3001/blog/new" >
+                  <Link href={`/login?redirectTo=${base_url}/blog/new`} >
                     <a style={{ fontSize: "24px" }} className="color-6">
                       <u>Click here to login</u>
                     </a>
@@ -165,7 +168,7 @@ class NewBlog extends React.Component {
     if (authorization) {
       authorized = true
     }
-    const res = await fetch(`http://localhost:8090/posts/${meta}`);
+    const res = await fetch(`${api_url}/posts/${meta}`);
     const data = await res.json();
     return {
       ...loinState,
@@ -202,7 +205,7 @@ class NewBlog extends React.Component {
   handleClosePublishDialogue = () => this.setState({publishDialogueOpen: false})
   handlePublish = async () => {
     const { authorization } = this.props
-    const res = await fetch(`http://localhost:8090/posts/update/${this.props.post._id}`, {
+    const res = await fetch(`${api_url}/posts/update/${this.props.post._id}`, {
       method: 'post',
       headers: {authorization, 'Accept': 'application/json', 'Content-Type': 'application/json'},
       body: JSON.stringify({
