@@ -194,7 +194,7 @@ class Blog extends React.Component {
                   <Typography variant="h5" color="inherit" paragraph>
                     {featurePost.post.description}
                     </Typography>
-                  <Link style={{ color: "#08a6f3" }} href="/blog/[meta]" as="/blog/blog-meta">
+                  <Link style={{ color: "#08a6f3" }} href={`/blog/${featurePost.post._id}`}>
                     Read Now
                     </Link>
                 </div>
