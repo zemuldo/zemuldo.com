@@ -1,9 +1,10 @@
 # Website and Blog
 
-This is my website : https://zemuldo.com/Using 
+This is my website : https://zemuldo.com
 
-Using :
+Uses :
 
 - Nextjs
-- Nodejs
-- MongoDB
+- Material UI
+- Markdown
+- HeighlightJs
