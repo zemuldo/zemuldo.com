@@ -1,5 +1,6 @@
 import React from "react";
 import Container from "@material-ui/core/Container";
+import { withStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 import post1 from "../../src/components/blog/template.md";
 import Footer from "../../src/footer";
@@ -14,8 +15,37 @@ import { maxHeight } from "@material-ui/system";
 import { format } from "date-fns";
 import fetch from "isomorphic-unfetch";
 import { parseCookies } from "nookies";
+import Avatar from '@material-ui/core/Avatar';
+import NewIcon from '@material-ui/icons/NoteAdd';
+import AddCircleOutlineIcon from '@material-ui/icons/AddCircleOutline';
+import EditIcon from '@material-ui/icons/Edit';
+import Grid from "@material-ui/core/Grid";
 
 const Highlight = dynamic(import("react-highlight"));
+
+
+const styles = theme => ({
+  greenAvatar: {
+    margin: 10,
+    color: '#fff',
+    backgroundColor: "green",
+  },
+  twitterAvatar: {
+    margin: 10,
+    color: '#fff',
+    backgroundColor: "#08a6f3",
+  },
+  fbAvatar: {
+    margin: 10,
+    color: '#fff',
+    backgroundColor: "#00f",
+  },
+  linkedinAvatar: {
+    margin: 10,
+    color: '#fff',
+    backgroundColor: "#08a6f3",
+  }
+});
 
 marked.setOptions({
   gfm: true,
@@ -23,7 +53,7 @@ marked.setOptions({
   breaks: true
 });
 
-export default class Blog extends React.Component {
+class Blog extends React.Component {
   constructor(props) {
     super(props);
 
@@ -49,17 +79,8 @@ export default class Blog extends React.Component {
       body: data.postBody
     };
   }
-
-  handleChange = value => {
-    this.setState({
-      textValue: value
-    });
-  };
-
-  handleEdit = () => this.setState({ edit: true });
-  handleExit = () => this.setState({ edit: false });
   render() {
-    const {post, body} = this.props
+    const {post, body, classes} = this.props
     return (
       <React.Fragment>
         <Head>
@@ -80,11 +101,31 @@ export default class Blog extends React.Component {
           <Menu />
           
           <br />
-          <div style={{ float: "right" }}>
-            <Link href="/blog/[meta]/edit" as="/blog/blog-meta/edit">
-              <i className="fa fa-pencil-square-o color-green" />
-            </Link>
-          </div>
+          <Grid container justify="center" alignItems="center">
+           {
+             this.props.authorization &&
+             <Link href={`/blog/${post._id}/edit`}>
+             <Avatar className={classes.greenAvatar}>
+               <EditIcon />
+             </Avatar>
+           </Link>
+           }
+           <Link href={`/blog/${post._id}/edit`}>
+             <Avatar className={classes.twitterAvatar}>
+             <i className="fa fa-twitter" />
+             </Avatar>
+           </Link>
+           <Link href={`/blog/${post._id}/edit`}>
+             <Avatar className={classes.fbAvatar}>
+             <i className="fa fa-facebook" />
+             </Avatar>
+           </Link>
+           <Link href={`/blog/${post._id}/edit`}>
+             <Avatar className={classes.linkedinAvatar}>
+             <i className="fa fa-linkedin" />
+             </Avatar>
+           </Link>
+          </Grid>
           <h1>{post.title}</h1>
           <br />
           <p>{format(new Date(post.createdAt), "PPPP")}</p>
@@ -115,3 +156,5 @@ export default class Blog extends React.Component {
     );
   }
 }
+
+export default withStyles(styles)(Blog)
