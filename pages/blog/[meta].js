@@ -29,21 +29,33 @@ const styles = theme => ({
     margin: 10,
     color: '#fff',
     backgroundColor: "green",
+    '&:hover': {
+      cursor: "pointer"
+    }
   },
   twitterAvatar: {
     margin: 10,
     color: '#fff',
     backgroundColor: "#08a6f3",
+    '&:hover': {
+      cursor: "pointer"
+    }
   },
   fbAvatar: {
     margin: 10,
     color: '#fff',
     backgroundColor: "#00f",
+    '&:hover': {
+      cursor: "pointer"
+    }
   },
   linkedinAvatar: {
     margin: 10,
     color: '#fff',
     backgroundColor: "#08a6f3",
+    '&:hover': {
+      cursor: "pointer"
+    }
   }
 });
 

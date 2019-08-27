@@ -205,7 +205,7 @@ class NewBlog extends React.Component {
       body: JSON.stringify({
         title: this.state.postTitle,
         body: this.state.body,
-        tags: this.state.tags,
+        tags: this.state.tags || [],
         description: this.state.description,
         coverPhotoUrl: this.state.coverPhotoUrl
 
@@ -303,7 +303,7 @@ class NewBlog extends React.Component {
             </Grid>
             <Grid item xs={12} sm={6}>
               <div style={{ marginTop: "26px" }}>
-                <Tags onChange={this.handleTagsChange} />
+                <Tags defaultValue={this.state.tags} onChange={this.handleTagsChange} />
               </div>
             </Grid>
           </Grid>

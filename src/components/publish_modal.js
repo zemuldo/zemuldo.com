@@ -6,7 +6,7 @@ import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 
-export default function PublishDialogue({open, handleClose, handlePublish }) {
+export default function PublishDialogue({open, handleClose, handlePublish, message}) {
 
   return (
     <div>
@@ -16,12 +16,10 @@ export default function PublishDialogue({open, handleClose, handlePublish }) {
         aria-labelledby="alert-dialog-title"
         aria-describedby="alert-dialog-description"
       >
-        <DialogTitle id="alert-dialog-title">{"Use Google's location service?"}</DialogTitle>
+        <DialogTitle id="alert-dialog-title">{"Please confirm"}</DialogTitle>
         <DialogContent>
           <DialogContentText id="alert-dialog-description">
-            Are you sure this is ready for publishing?
-            Clicking publish will publish this post. 
-            If you still have editing to do, just click Not yet!
+            {message || "Are you sure this is ready for publishing? Clicking publish will publish this post. If you still have editing to do, just click Not yet!"}
           </DialogContentText>
         </DialogContent>
         <DialogActions>

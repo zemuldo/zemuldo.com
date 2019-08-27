@@ -88,7 +88,7 @@ const colourStyles = {
       }),
 };
 
-export default function Tags({ onChange }) {
+export default function Tags({ onChange, defaultValue }) {
 
     const options = [
         { value: 'javascript', label: 'JavaCript', color: '#fcba03' },
@@ -105,6 +105,7 @@ export default function Tags({ onChange }) {
 
     return (
         <Select
+            defaultValue={defaultValue}
             instanceId="select-tags"
             isMulti
             name="colors"
