@@ -32,7 +32,7 @@ class Home extends React.Component {
                                             <Grid justify="space-between" container spacing={2}>
                                                 <Grid item xs={12} sm={6}>
                                                     <Link>
-                                                        <h1 className="color-6">Google</h1>
+                                                        <h1 className="color-6">Twitter</h1>
                                                     </Link>
                                                     <hr className="hr-opposite" />
                                                 </Grid>
