@@ -61,7 +61,7 @@ export default () => {
         <h3>Find me on</h3>
         <li>
           <a href="/blog">
-            <img style={{ marginBottom: "-12%", width: "55%", height: "55%" }} alt="Remy Sharp" src="/static/images/blog2.png" />
+            <img style={{ marginBottom: "-12%", width: "55%", height: "55%" }} alt="Remy Sharp" src="/static/images/blog.png" />
           </a>
         </li>
         <li>
