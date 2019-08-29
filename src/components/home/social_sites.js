@@ -1,4 +1,5 @@
 import React from "react";
+import Avatar from '@material-ui/core/Avatar';
 
 const socials = [
   {
@@ -58,6 +59,17 @@ export default () => {
     <div>
       <ul className="social-icon">
         <h3>Find me on</h3>
+        <li>
+          <a href="/blog">
+            <img style={{ marginBottom: "-12%", width: "55%", height: "55%" }} alt="Remy Sharp" src="/static/images/blog2.png" />
+          </a>
+        </li>
+        <li>
+          <a href="https://dev.to/zemuldo" target="_blank">
+            <img style={{ marginBottom: "-15%", width: "65%", height: "65%" }} alt="Remy Sharp" src="/static/images/dev.to.png" />
+          </a>
+        </li>
+        
         {socials.map(s => {
           return (
             <li key={s.href}>
