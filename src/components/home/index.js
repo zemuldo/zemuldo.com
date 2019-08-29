@@ -35,10 +35,6 @@ export default class Home extends React.Component {
                         HackerBay Inc.
                       </h4>
                       <h3 className="color-orange">Nairobi, Kenya</h3>
-                      <br />
-                      <Link href="/blog" as="/blog" color="secondary">
-                        <h3 className="color-6">Blog</h3>
-                      </Link>
                     </div>
                     <div
                       id="me-pic-wrapper"
