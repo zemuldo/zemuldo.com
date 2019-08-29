@@ -149,8 +149,8 @@ class Blog extends React.Component {
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:site" content="@zemuldo" />
           <meta name="twitter:creator" content="@zemuldo" />
-          <meta name="twitter:title" content="Danstan Onyango - Zemuldo Website" />
-          <meta name="twitter:description" content="The personal website and blog for User @zemuldo" />
+          <meta name="twitter:title" content="Danstan Onyango - Zemuldo Blog" />
+          <meta name="twitter:description" content="A blog by user @zemuldo writing on tech topics" />
           <meta name="twitter:image" content="https://zemuldo.com/static/images/logo/black.jpg" />
         </Head>
         <Container style={{ color: "white" }} maxWidth="md">

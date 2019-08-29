@@ -10,6 +10,12 @@ export default class Home extends React.Component {
       <React.Fragment>
         <Head>
           <title>I'm Danstan ~ Zemuldo</title>
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:site" content="@zemuldo" />
+          <meta name="twitter:creator" content="@zemuldo" />
+          <meta name="twitter:title" content="Danstan Onyango - Zemuldo Website" />
+          <meta name="twitter:description" content="The personal website and blog for User @zemuldo" />
+          <meta name="twitter:image" content="https://zemuldo.com/static/images/logo/black.jpg" />
         </Head>
         <div
           className="home-section-background"
