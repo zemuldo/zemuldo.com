@@ -105,78 +105,78 @@ class Blog extends React.Component {
             href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
             rel="stylesheet"
           />
-          <meta name="twitter:card" content="summary_large_image"/>
-          <meta name="twitter:site" content="@zemuldo"/>
-          <meta name="twitter:creator" content="@zemuldo"/>
-          <meta name="twitter:title" content={post.title}/>
-          <meta name="twitter:description" content={post.description}/>
-          <meta name="twitter:image" content={post.coverPhotoUrl}/>
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:site" content="@zemuldo" />
+          <meta name="twitter:creator" content="@zemuldo" />
+          <meta name="twitter:title" content={post.title} />
+          <meta name="twitter:description" content={post.description} />
+          <meta name="twitter:image" content={post.coverPhotoUrl} />
         </Head>
-                  <Container
-                    maxWidth="md"
-                    style={{
-                      color: "white",
-                      fontFamily: "'Courier New', Courier, monospace",
-                      fontSize: "18px"
-                    }}
-                  >
-                    <Menu />
+        <Container
+          maxWidth="md"
+          style={{
+            color: "white",
+            fontFamily: "'Courier New', Courier, monospace",
+            fontSize: "18px"
+          }}
+        >
+          <Menu />
 
-                    <br />
-                    <Grid container justify="center" alignItems="center">
-                      {
-                        this.props.authorization &&
-                        <Link href={`/blog/${post._id}/edit`}>
-                          <Avatar className={classes.greenAvatar}>
-                            <EditIcon />
-                          </Avatar>
-                        </Link>
-                      }
-                      <Link href={`/blog/${post._id}/edit`}>
-                        <Avatar className={classes.twitterAvatar}>
-                          <i className="fa fa-twitter" />
-                        </Avatar>
-                      </Link>
-                      <Link href={`/blog/${post._id}/edit`}>
-                        <Avatar className={classes.fbAvatar}>
-                          <i className="fa fa-facebook" />
-                        </Avatar>
-                      </Link>
-                      <Link href={`/blog/${post._id}/edit`}>
-                        <Avatar className={classes.linkedinAvatar}>
-                          <i className="fa fa-linkedin" />
-                        </Avatar>
-                      </Link>
-                    </Grid>
-                    <h1>{post.title}</h1>
-                    <br />
-                    <p>{format(new Date(post.createdAt), "PPPP")}</p>
-                    {
-                      post.tags.map(tag => <button key={tag.value}>{tag.label}</button>)
-                    }
-                  </Container>
-                  <Container>
-                    <img
-                      style={{ maxHeight: "600px" }}
-                      src={post.coverPhotoUrl}
-                    />
-                  </Container>
-
-                  <Container
-                    maxWidth="md"
-                    style={{
-                      color: "white",
-                      fontFamily: "'Courier New', Courier, monospace",
-                      fontSize: "18px"
-                    }}
-                  >
-                    <br />
-                    <Highlight innerHTML>{marked(body.body)}</Highlight>
-                  </Container>
-                  <Footer />
-      </React.Fragment>
-                );
-              }
+          <br />
+          <Grid container justify="center" alignItems="center">
+            {
+              this.props.authorization &&
+              <Link href={`/blog/${post._id}/edit`}>
+                <Avatar className={classes.greenAvatar}>
+                  <EditIcon />
+                </Avatar>
+              </Link>
             }
-            
+            <Link href={`/blog/${post._id}/edit`}>
+              <Avatar className={classes.twitterAvatar}>
+                <i className="fa fa-twitter" />
+              </Avatar>
+            </Link>
+            <Link href={`/blog/${post._id}/edit`}>
+              <Avatar className={classes.fbAvatar}>
+                <i className="fa fa-facebook" />
+              </Avatar>
+            </Link>
+            <Link href={`/blog/${post._id}/edit`}>
+              <Avatar className={classes.linkedinAvatar}>
+                <i className="fa fa-linkedin" />
+              </Avatar>
+            </Link>
+          </Grid>
+          <h1>{post.title}</h1>
+          <br />
+          <p>{format(new Date(post.createdAt), "PPPP")}</p>
+          {
+            post.tags.map(tag => <button key={tag.value}>{tag.label}</button>)
+          }
+        </Container>
+        <Container>
+          <img
+            style={{ maxHeight: "600px" }}
+            src={post.coverPhotoUrl}
+          />
+        </Container>
+
+        <Container
+          maxWidth="md"
+          style={{
+            color: "white",
+            fontFamily: "'Courier New', Courier, monospace",
+            fontSize: "18px"
+          }}
+        >
+          <br />
+          <Highlight innerHTML>{marked(body.body)}</Highlight>
+        </Container>
+        <Footer />
+      </React.Fragment>
+    );
+  }
+}
+
 export default withStyles(styles)(Blog)
