@@ -14,6 +14,7 @@ import { parseCookies } from "nookies";
 import Avatar from '@material-ui/core/Avatar';
 import NewIcon from '@material-ui/icons/NoteAdd';
 import AddCircleOutlineIcon from '@material-ui/icons/AddCircleOutline';
+import Head from "next/head";
 
 const api_url = process.env.API_URL
 const base_url = process.env.BASE_URL
@@ -143,6 +144,9 @@ class Blog extends React.Component {
     const { posts } = this.state;
     return (
       <React.Fragment>
+        <Head>
+          <title>Zemuldo-Blog</title>
+        </Head>
         <Container style={{ color: "white" }} maxWidth="md">
           <Menu />
           <Grid container justify="center" alignItems="center">
