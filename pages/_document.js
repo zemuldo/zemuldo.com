@@ -4,6 +4,7 @@ import { ServerStyleSheets } from "@material-ui/styles";
 import HeadElements from "../src/components/document/head_elements";
 import { setCookie } from 'nookies'
 
+const GA_TRACKING_ID = process.env.GA_TRACKING_ID
 
 class MyDocument extends Document {
 
@@ -12,6 +13,20 @@ class MyDocument extends Document {
       <html lang="en">
         <Head>
           <HeadElements />
+          <script
+            async
+            src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
+          />
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GA_TRACKING_ID}');
+          `
+            }}
+          />
           <link
             href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/styles/atom-one-dark.min.css"
             rel="stylesheet"
@@ -27,7 +42,7 @@ class MyDocument extends Document {
 }
 
 MyDocument.getInitialProps = async ctx => {
-  if(ctx.query.token) {
+  if (ctx.query.token) {
     setCookie(ctx, 'authorization', ctx.query.token, {
       maxAge: 30 * 24 * 60 * 60,
       path: '/',
