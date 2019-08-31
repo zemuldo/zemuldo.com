@@ -25,6 +25,7 @@ const Highlight = dynamic(import("react-highlight"));
 
 const api_url = process.env.API_URL
 const base_url = process.env.BASE_URL
+const base_url_domain = process.env.BASE_URL_DOMAIN
 
 
 const styles = theme => ({
@@ -94,6 +95,15 @@ class Blog extends React.Component {
       body: data.postBody
     };
   }
+  tweetShare = () => {
+    const {post} = this.props
+    let hashTgs = '&hashtags=' + post.tags.map(p=>p.label).join(',')
+    let via = '&via=zemuldo'
+    let url = `&url=https%3A%2F%2F${base_url_domain}${window.location.pathname}`
+    let fullURL = `${url}${via}${hashTgs}`
+    let shareURL = `https://twitter.com/intent/tweet?text=${post.title}` + fullURL
+    window.open(shareURL, 'sharer', 'toolbar=0,status=0,width=548,height=325')
+  }
   render() {
     const { post, body, classes } = this.props
     return (
@@ -132,11 +142,9 @@ class Blog extends React.Component {
                 </Avatar>
               </Link>
             }
-            <Link href={`/blog/${post._id}/edit`}>
-              <Avatar className={classes.twitterAvatar}>
+            <Avatar onClick={this.tweetShare} className={classes.twitterAvatar}>
                 <i className="fa fa-twitter" />
               </Avatar>
-            </Link>
             <Link href={`/blog/${post._id}/edit`}>
               <Avatar className={classes.fbAvatar}>
                 <i className="fa fa-facebook" />
