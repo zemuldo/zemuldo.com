@@ -95,9 +95,16 @@ class Blog extends React.Component {
       body: data.postBody
     };
   }
+  fbShare = () => {
+    const { post } = this.props
+    const postUrl = `https%3A%2F%2Fzemuldo.com${window.location.pathname}`
+    let fbShareURL = `https://www.facebook.com/sharer/sharer.php?u=${postUrl}` 
+    let shareURL = fbShareURL + "&amp;src=sdkpreparse'"
+    window.open(shareURL, 'sharer', 'toolbar=0,status=0,width=548,height=325')
+  }
   tweetShare = () => {
-    const {post} = this.props
-    let hashTgs = '&hashtags=' + post.tags.map(p=>p.label).join(',')
+    const { post } = this.props
+    let hashTgs = '&hashtags=' + post.tags.map(p => p.label).join(',')
     let via = '&via=zemuldo'
     let url = `&url=https%3A%2F%2F${base_url_domain}${window.location.pathname}`
     let fullURL = `${url}${via}${hashTgs}`
@@ -143,13 +150,11 @@ class Blog extends React.Component {
               </Link>
             }
             <Avatar onClick={this.tweetShare} className={classes.twitterAvatar}>
-                <i className="fa fa-twitter" />
-              </Avatar>
-            <Link href={`/blog/${post._id}/edit`}>
-              <Avatar className={classes.fbAvatar}>
+              <i className="fa fa-twitter" />
+            </Avatar>
+            <Avatar onClick={this.fbShare} className={classes.fbAvatar}>
                 <i className="fa fa-facebook" />
-              </Avatar>
-            </Link>
+            </Avatar>
             <Link href={`/blog/${post._id}/edit`}>
               <Avatar className={classes.linkedinAvatar}>
                 <i className="fa fa-linkedin" />
