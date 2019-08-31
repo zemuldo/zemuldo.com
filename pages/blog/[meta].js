@@ -98,7 +98,7 @@ class Blog extends React.Component {
   fbShare = () => {
     const { post } = this.props
     const postUrl = `https%3A%2F%2Fzemuldo.com${window.location.pathname}`
-    let fbShareURL = `https://www.facebook.com/sharer/sharer.php?u=${postUrl}` 
+    let fbShareURL = `https://www.facebook.com/sharer/sharer.php?u=${postUrl}`
     let shareURL = fbShareURL + "&amp;src=sdkpreparse'"
     window.open(shareURL, 'sharer', 'toolbar=0,status=0,width=548,height=325')
   }
@@ -128,6 +128,10 @@ class Blog extends React.Component {
           <meta name="twitter:title" content={post.title} />
           <meta name="twitter:description" content={post.description} />
           <meta name="twitter:image" content={post.coverPhotoUrl} />
+          <meta property="og:title" content={post.title} />
+          <meta property="og:description" content={post.description} />
+          <meta property="og:image" content={post.coverPhotoUrl} />
+          <meta property="og:url" content={`${base_url}${window.location.pathname}`} />
         </Head>
         <Container
           maxWidth="md"
@@ -153,7 +157,7 @@ class Blog extends React.Component {
               <i className="fa fa-twitter" />
             </Avatar>
             <Avatar onClick={this.fbShare} className={classes.fbAvatar}>
-                <i className="fa fa-facebook" />
+              <i className="fa fa-facebook" />
             </Avatar>
             <Link href={`/blog/${post._id}/edit`}>
               <Avatar className={classes.linkedinAvatar}>
