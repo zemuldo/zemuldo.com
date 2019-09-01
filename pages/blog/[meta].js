@@ -95,6 +95,12 @@ class Blog extends React.Component {
       body: data.postBody
     };
   }
+  linkedInShare = () =>{
+    const {post} = this.props
+    const initial = 'https://www.linkedin.com/shareArticle?mini=true&url='
+    const shareURL = `${initial}https%3A%2F%2F$zemuldo.com/blog/${post._id}&title=${post.title.split(' ').join('+')}`
+    window.open(shareURL, 'sharer', 'toolbar=0,status=0,width=548,height=325')
+  }
   fbShare = () => {
     const { post } = this.props
     const postUrl = `https%3A%2F%2Fzemuldo.com${window.location.pathname}`
@@ -131,7 +137,7 @@ class Blog extends React.Component {
           <meta property="og:title" content={post.title} />
           <meta property="og:description" content={post.description} />
           <meta property="og:image" content={post.coverPhotoUrl} />
-          <meta property="og:url" content={`${base_url}${window.location.pathname}`} />
+          <meta property="og:url" content={`${base_url}/blog/${post._id}`} />
         </Head>
         <Container
           maxWidth="md"
@@ -159,11 +165,9 @@ class Blog extends React.Component {
             <Avatar onClick={this.fbShare} className={classes.fbAvatar}>
               <i className="fa fa-facebook" />
             </Avatar>
-            <Link href={`/blog/${post._id}/edit`}>
-              <Avatar className={classes.linkedinAvatar}>
+            <Avatar onClick={this.linkedInShare} className={classes.linkedinAvatar}>
                 <i className="fa fa-linkedin" />
-              </Avatar>
-            </Link>
+            </Avatar>
           </Grid>
           <h1>{post.title}</h1>
           <br />
