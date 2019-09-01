@@ -97,7 +97,7 @@ class Blog extends React.Component {
   }
   linkedInShare = () =>{
     const {post} = this.props
-    const initial = 'https://www.linkedin.com/shareArticle?mini=true&url='
+    const initial = 'https://www.linkedin.com/sharing/share-offsite?mini=true&url='
     const shareURL = `${initial}https%3A%2F%2Fzemuldo.com/blog/${post._id}&title=${post.title.split(' ').join('+')}`
     window.open(shareURL, 'sharer', 'toolbar=0,status=0,width=548,height=325')
   }
