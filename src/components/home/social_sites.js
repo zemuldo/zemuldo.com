@@ -86,8 +86,8 @@ export default () => {
         </MouseOverPopover>
         {socials.map(s => {
           return (
-            <MouseOverPopover hoverText={s.hoverText}>
-              <li key={s.href}>
+            <MouseOverPopover key={s.href} hoverText={s.hoverText}>
+              <li>
                 <a href={s.href} target="_blank" className={s.className}>
                   <i className={s.icon_className} />
                 </a>

@@ -1,25 +1,20 @@
 import React from "react";
 import Container from "@material-ui/core/Container";
 import { withStyles } from "@material-ui/core/styles";
-import Button from "@material-ui/core/Button";
 import post1 from "../../src/components/blog/template.md";
 import Footer from "../../src/footer";
 import Menu from "../../src/components/blog/menu";
 import marked from "marked";
 import dynamic from "next/dynamic";
 import Head from "next/head";
-import Tooltip from "@material-ui/core/Tooltip";
 import Link from "next/link";
-import "easymde/dist/easymde.min.css";
-import { maxHeight } from "@material-ui/system";
 import { format } from "date-fns";
 import fetch from "isomorphic-unfetch";
 import { parseCookies } from "nookies";
 import Avatar from '@material-ui/core/Avatar';
-import NewIcon from '@material-ui/icons/NoteAdd';
-import AddCircleOutlineIcon from '@material-ui/icons/AddCircleOutline';
 import EditIcon from '@material-ui/icons/Edit';
 import Grid from "@material-ui/core/Grid";
+import "easymde/dist/easymde.min.css";
 
 const Highlight = dynamic(import("react-highlight"));
 
