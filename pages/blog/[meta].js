@@ -99,14 +99,6 @@ class Blog extends React.Component {
       body: data.postBody
     };
   }
-  devToShare = () =>{
-    const {post} = this.props
-    const tags = post.tags.map(t=>t.value).join(", ")
-    const title = post.title.split('  ').join('%20')
-    const description = post.description.split(' ').join('%20')
-    const shareURL = `https://dev.to/new?prefill=---%0Atitle%3A%20${title}%0Apublished%3A%20true%0Atags%3A${tags}%0A---%0A%0A${description}`
-    window.open(shareURL, 'sharer', 'toolbar=0,status=0,width=700,height=700')
-  }
   linkedInShare = () =>{
     const {post} = this.props
     const initial = 'https://www.linkedin.com/sharing/share-offsite?mini=true&url='
@@ -180,7 +172,6 @@ class Blog extends React.Component {
             <Avatar onClick={this.linkedInShare} className={classes.linkedinAvatar}>
                 <i className="fa fa-linkedin" />
             </Avatar>
-            <Avatar onClick={this.devToShare} alt="Dev.To Share" src="/static/images/dev.to.png" className={classes.devTo} />
           </Grid>
           <h1>{post.title}</h1>
           <br />
