@@ -8,3 +8,6 @@ h1, h2, h3, h3 {
     background-color: grey !important;
     font-size: 14px !important;
 }
+.hljs{
+    font-size: 14px;
+}
