@@ -16,6 +16,10 @@ export default class Home extends React.Component {
           <meta name="twitter:title" content="Danstan Onyango - Zemuldo Website" />
           <meta name="twitter:description" content="The personal website and blog for User @zemuldo. An enthusiastic Geek Freak of Code #Elixir #SQL #NodeJS #ReactJS" />
           <meta name="twitter:image" content="https://zemuldo.com/static/images/site/site_twitter_card.png" />
+          <meta property='og:title' content="I'm Danstan Onyango ~ Zemuldo" />
+          <meta property="og:image" content="https://zemuldo.com/static/images/site/site_twitter_card.png" />
+          <meta property='og:description' content='The Website and Blog for user @zemuldo. Software Engineer with all the passion in the world!' />
+          <meta property='og:url' content='https://zemuldo.com' />
         </Head>
         <div
           className="home-section-background"
