@@ -1,20 +1,6 @@
 import React from 'react';
-import Popover from '@material-ui/core/Popover';
-import Typography from '@material-ui/core/Typography';
-import { makeStyles } from '@material-ui/core/styles';
 
-const useStyles = makeStyles(theme => ({
-  popover: {
-    marginTop: "20px",
-    pointerEvents: 'none',
-  },
-  paper: {
-    padding: theme.spacing(1),
-  }
-}));
-
-export default function MouseOverPopover({children, hoverText}) {
-  const classes = useStyles();
+export default function MouseOverPopover({ children, hoverText, color }) {
   const [anchorEl, setAnchorEl] = React.useState(null);
 
   function handlePopoverOpen(event) {
@@ -28,8 +14,8 @@ export default function MouseOverPopover({children, hoverText}) {
   const open = Boolean(anchorEl);
 
   return (
-     <React.Fragment>
-         <span
+    <React.Fragment>
+      <span
         aria-owns={open ? 'mouse-over-popover' : undefined}
         aria-haspopup="true"
         onMouseEnter={handlePopoverOpen}
@@ -37,29 +23,21 @@ export default function MouseOverPopover({children, hoverText}) {
       >
         {children}
       </span>
-     
-     <Popover
-        id="mouse-over-popover"
-        className={classes.popover}
-        classes={{
-          paper: classes.paper,
-        }}
-        open={open}
-        anchorEl={anchorEl}
-        anchorOrigin={{
-          vertical: 'bottom',
-          horizontal: 'center',
-        }}
-        transformOrigin={{
-          vertical: 'top',
-          horizontal: 'center',
-        }}
-        onClose={handlePopoverClose}
-        disableRestoreFocus
-      >
-        {hoverText}
-      </Popover>
-     </React.Fragment>
-      
+      {
+        open &&
+        <span style={{
+          fontSize: '.8em',
+          textAlign: 'center',
+          color: color,
+          position: "absolute",
+          marginTop: "-20px",
+          boxShadow: '0 2px 5px 0 rgba(0, 0, 0, 0.26)',
+          transform: 'translate(0, 10px)',
+          marginLeft: '-60px'
+        }}>{hoverText}
+        </span>
+      }
+    </React.Fragment>
+
   );
 }

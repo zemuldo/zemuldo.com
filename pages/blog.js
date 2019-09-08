@@ -180,16 +180,10 @@ class Blog extends React.Component {
 
           {
             featurePost && featurePost.post &&
-            <Paper className={classes.mainFeaturedPost}>
-            {/* Increase the priority of the hero background image */}
-            {
-              <img
-                style={{ display: "none" }}
-                src="https://source.unsplash.com/user/erondu"
-                alt="background"
-              />
-            }
-            <div className={classes.overlay} />
+            <Paper style = {{
+              backgroundImage: `url(${featurePost.post.coverPhotoUrl})`
+              }} className={classes.mainFeaturedPost}>
+            <div style={{backgroundColor: "black", opacity: .7}} className={classes.overlay} />
             <Grid style ={{minHeight: "400px"}} className="eph" container>
               <Grid item md={6}>
                 <div className={classes.mainFeaturedPostContent}>
