@@ -10,6 +10,7 @@
     "axios": "^0.19.0",
     "chroma-js": "^2.0.4",
     "clsx": "^1.0.4",
+    "compression": "^1.7.4",
     "cookies-next": "^1.0.6",
     "date-fns": "^2.0.0",
     "dotenv-webpack": "^1.7.0",
@@ -32,10 +33,10 @@
     "react-visibility-sensor": "^5.1.1"
   },
   "scripts": {
-    "dev": "next -p 3001",
+    "dev": "node server.js",
     "build": "next build",
-    "start": "next start",
-    "prod": "NODE_ENV=production next start",
+    "start": "NODE_ENV=production node server.js",
+    "prod": "pm2 start  ecosystem.config.ym",
     "analyze": "BUNDLE_ANALYZE=both next build",
     "analyze:server": "BUNDLE_ANALYZE=server next build",
     "analyze:browser": "BUNDLE_ANALYZE=browser next build"
