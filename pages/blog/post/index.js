@@ -216,7 +216,7 @@ class NewBlog extends React.Component {
     });
     const data = await res.json()
     if(res.status == 200) localStorage.removeItem("currentDraft")
-    Router.push(`/blog/post/${data.post._id}`)
+    Router.push(`/blog/${data.post._id}`)
     this.handleClosePublishDialogue()
   }
 
