@@ -1,7 +1,6 @@
 import React from "react";
 import Container from "@material-ui/core/Container";
 import { withStyles } from "@material-ui/core/styles";
-import post1 from "../../src/components/blog/template.md";
 import Footer from "../../src/footer";
 import Menu from "../../src/components/blog/menu";
 import marked from "marked";
@@ -73,7 +72,7 @@ class Blog extends React.Component {
     super(props);
 
     this.state = {
-      textValue: post1
+      textValue: ""
     };
   }
 
