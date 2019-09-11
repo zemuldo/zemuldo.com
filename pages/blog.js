@@ -158,7 +158,7 @@ class Blog extends React.Component {
           <Grid container justify="center" alignItems="center">
            {
              this.props.authorization &&
-             <Link href="/blog/new">
+             <Link href="/blog/write/new">
              <Avatar className={classes.greenAvatar}>
                <NewIcon />
              </Avatar>

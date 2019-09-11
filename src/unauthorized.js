@@ -18,7 +18,7 @@ const JoinNow = () => (
                         <div className="row">
                             <div style={{ marginTop: "30%" }} className="header-section">
                                 <div className="header-frame">
-                                    <Link href="/login" as="/login?redirectTo=http://localhost:3000/blog/new" >
+                                    <Link href="/login" as="/login?redirectTo=http://localhost:3000/blog/write/new" >
                                         <a className="color-6">
                                             Join with Github
                                                 </a>

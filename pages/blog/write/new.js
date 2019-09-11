@@ -40,7 +40,9 @@ const JoinNow = () => (
             <div className="row">
               <div style={{ marginTop: "30%" }} className="header-section">
                 <div className="header-frame">
-                  <Link href={`/login?redirectTo=${base_url}/blog/write/new`} >
+                  <h3 className="color-6">You have to become a member to write</h3>
+                  <hr />
+                  <Link href={`/login?redirectTo=${base_url}/blog/post/new`} >
                     <a style={{ fontSize: "24px" }} className="color-6">
                       <u>Click here to login</u>
                     </a>
@@ -147,41 +149,36 @@ const useStyles = theme => ({
 class NewBlog extends React.Component {
   constructor(props) {
     super(props);
-    const {post, body} = props;
+
     this.state = {
-      postTitle: post.title,
-      body: body.body,
-      tags: post.tags,
-      description: post.description,
-      coverPhotoUrl: post.coverPhotoUrl,
+      body: "",
+      postTitle: '',
+      coverPhotoUrl: '',
+      description: '',
       publishDialogueOpen: false
     };
   }
 
   static async getInitialProps(ctx) {
     const { authorization } = parseCookies(ctx)
-    const { meta } = ctx.query;
     const loinState = {
       loggingIn: !!ctx.query.token
     }
-    let authorized =  false
     if (authorization) {
-      authorized = true
+      return {
+        ...loinState,
+        authorization,
+        authorized: true
+      };
     }
-    const res = await fetch(`${api_url}/posts/${meta}`);
-    const data = await res.json();
     return {
       ...loinState,
-      authorization,
-      post: data.post,
-      body: data.postBody,
-      authorized,
+      authorized: false,
     };
   }
-  
 
   componentDidMount() {
-    const draft = localStorage.getItem(`state_${this.props.post._id}`)
+    const draft = localStorage.getItem("currentDraft")
     if (draft) {
       const data = JSON.parse(draft)
       this.setState({
@@ -195,34 +192,31 @@ class NewBlog extends React.Component {
 
     this.autoSave = setInterval(() => {
       this.setState({ saving: true })
-      localStorage.setItem(`state_${this.props.post._id}`, JSON.stringify(this.state))
+      localStorage.setItem('currentDraft', JSON.stringify(this.state))
     }, 10000)
     
   }
 
-  handleSave = () => localStorage.setItem(`state_${this.props.post._id}`, JSON.stringify(this.state))
+  handleSave = () => localStorage.setItem('currentDraft', JSON.stringify(this.state))
   handleOpenPublishDialogue = () => this.setState({publishDialogueOpen: true})
   handleClosePublishDialogue = () => this.setState({publishDialogueOpen: false})
   handlePublish = async () => {
     const { authorization } = this.props
-    const res = await fetch(`${api_url}/posts/update/${this.props.post._id}`, {
+    const res = await fetch(`${api_url}/posts`, {
       method: 'post',
       headers: {authorization, 'Accept': 'application/json', 'Content-Type': 'application/json'},
       body: JSON.stringify({
-        _id: this.props.post._id,
-        update: {
-          title: this.state.postTitle,
+        title: this.state.postTitle,
         body: this.state.body,
         tags: this.state.tags || [],
         description: this.state.description,
         coverPhotoUrl: this.state.coverPhotoUrl
-        }
 
       })
     });
     const data = await res.json()
-    if(res.status == 200) localStorage.removeItem(`state_${this.props.post._id}`)
-    Router.push(`/blog/${data.post._id}`)
+    if(res.status == 200) localStorage.removeItem("currentDraft")
+    Router.push(`/blog/post/${data.post._id}`)
     this.handleClosePublishDialogue()
   }
 
@@ -243,7 +237,7 @@ class NewBlog extends React.Component {
   }
 
   render() {
-    const { classes, authorized, loggingIn, post, body } = this.props
+    const { classes, authorized, loggingIn } = this.props
     const {publishDialogueOpen} = this.state
     if (loggingIn) return <div style={{ color: "white" }}>Please wait...</div>
     if (!authorized) {
@@ -252,7 +246,7 @@ class NewBlog extends React.Component {
 
     return (
       <React.Fragment>
-        <PublishDialogue message="Are you sure to update?" handlePublish={this.handlePublish} handleClose={this.handleClosePublishDialogue} open={publishDialogueOpen}/>
+        <PublishDialogue handlePublish={this.handlePublish} handleClose={this.handleClosePublishDialogue} open={publishDialogueOpen}/>
         <Head>
           <link href="/static/css/blog.css" rel="stylesheet" />
           <link
@@ -312,7 +306,7 @@ class NewBlog extends React.Component {
             </Grid>
             <Grid item xs={12} sm={6}>
               <div style={{ marginTop: "26px" }}>
-                <Tags defaultValue = {this.state.tags} onChange={this.handleTagsChange} />
+                <Tags defaultValue={this.state.tags} onChange={this.handleTagsChange} />
               </div>
             </Grid>
           </Grid>
