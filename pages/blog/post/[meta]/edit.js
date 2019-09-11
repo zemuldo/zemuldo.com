@@ -221,7 +221,7 @@ class NewBlog extends React.Component {
 
       })
     });
-    if(res.status !== 200) return alert("Action failed")
+    if(res.status != 200) return alert("Action failed")
     const data = await res.json()
     if(res.status == 200) localStorage.removeItem(`state_${this.props.post._id}`)
     Router.push(`/blog/post/${data.post._id}`)
