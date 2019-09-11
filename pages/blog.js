@@ -168,7 +168,7 @@ class Blog extends React.Component {
             {this.props.user && <Avatar alt="User profile" src="/static/images/avatar/1.jpg" className={classes.avatar} src={this.props.user.profilePhotoUrl} />}
             {
               !this.props.user &&
-              <Link href={`/blog/login?redirectTo=${base_url}/blog`}>
+              <Link href={`/blog/login?redirectTo=/blog/write/new`}>
              <Avatar className={classes.greenAvatar}>
                <AddCircleOutlineIcon />
              </Avatar>

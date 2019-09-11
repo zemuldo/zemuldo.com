@@ -40,7 +40,7 @@ const JoinNow = () => (
             <div className="row">
               <div style={{ marginTop: "30%" }} className="header-section">
                 <div className="header-frame">
-                  <Link href={`/blog/login?redirectTo=${base_url}/blog/write/new`} >
+                  <Link href={`/blog/login?redirectTo=/blog/write/new`} >
                     <a style={{ fontSize: "24px" }} className="color-6">
                       <u>Click here to login</u>
                     </a>

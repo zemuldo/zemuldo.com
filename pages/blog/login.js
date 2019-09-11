@@ -3,19 +3,52 @@ import Head from "next/head";
 import Grid from "@material-ui/core/Grid"
 import { Link } from "@material-ui/core";
 import { withRouter } from 'next/router'
+import Router from 'next/router'
+import { parseCookies } from "nookies";
 
 const api_url = process.env.API_URL
 const base_url = process.env.BASE_URL
 
 class Home extends React.Component {
-    static getInitialProps({query}) {
-        return {query}
-      }
-    
+    static getInitialProps(ctx) {
+        const {query} = ctx
+        const { authorization } = parseCookies(ctx)
+        const loinState = {
+            loggingIn: !!ctx.query.token
+        }
+        if (authorization) {
+            return {
+                ...loinState,
+                loggedIn: true,
+                authorization,
+                authorized: true,
+                query,
+            };
+        }
+        return {
+            ...loinState,
+            authorized: false,
+            query
+        };
+    }
+
+    componentDidMount () {
+        const {query, loggedIn, loggingIn} = this.props
+        if(loggedIn || query.token && query.redirectTo){
+            if(query.token) localStorage.setItem("authorization", query.token)
+            window.location = query.redirectTo || '/'
+        } else if(loggedIn || query.token) {
+            if(query.token) localStorage.setItem("authorization", query.token)
+            window.location = '/blog'
+        }
+    }
+
     render() {
-        const {query} = this.props
+        const { query, loggingIn } = this.props
+        if(loggingIn) return <div style={{ color: "white" }}>Please wait...</div>
         return (
             <React.Fragment>
+                
                 <Head>
                     <title>I'm Danstan ~ Zemuldo</title>
                 </Head>

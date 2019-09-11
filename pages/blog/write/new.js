@@ -42,7 +42,7 @@ const JoinNow = () => (
                 <div className="header-frame">
                   <h3 className="color-6">You have to become a member to write</h3>
                   <hr />
-                  <Link href={`/blog/login?redirectTo=${base_url}/blog/post/new`} >
+                  <Link href={`/blog/login?redirectTo=/blog/write/new`} >
                     <a style={{ fontSize: "24px" }} className="color-6">
                       <u>Click here to login</u>
                     </a>
@@ -151,6 +151,7 @@ class NewBlog extends React.Component {
     super(props);
 
     this.state = {
+      loggingIn: props.loggingIn,
       body: "",
       postTitle: '',
       coverPhotoUrl: '',
@@ -160,24 +161,14 @@ class NewBlog extends React.Component {
   }
 
   static async getInitialProps(ctx) {
-    const { authorization } = parseCookies(ctx)
-    const loinState = {
-      loggingIn: !!ctx.query.token
-    }
-    if (authorization) {
-      return {
-        ...loinState,
-        authorization,
-        authorized: true
-      };
-    }
-    return {
-      ...loinState,
-      authorized: false,
-    };
+    return {}
   }
 
   componentDidMount() {
+    const authorization = localStorage.getItem("authorization")
+    if(authorization) this.setState({authorized: true})
+    else window.location = '/blog/login?redirectTo=/blog/write/new'
+    
     const draft = localStorage.getItem("currentDraft")
     if (draft) {
       const data = JSON.parse(draft)
@@ -194,7 +185,6 @@ class NewBlog extends React.Component {
       this.setState({ saving: true })
       localStorage.setItem('currentDraft', JSON.stringify(this.state))
     }, 10000)
-    
   }
 
   handleSave = () => localStorage.setItem('currentDraft', JSON.stringify(this.state))
@@ -237,13 +227,9 @@ class NewBlog extends React.Component {
   }
 
   render() {
-    const { classes, authorized, loggingIn } = this.props
-    const {publishDialogueOpen} = this.state
-    if (loggingIn) return <div style={{ color: "white" }}>Please wait...</div>
-    if (!authorized) {
-      return <JoinNow />
-    }
-
+    const { classes, loggingIn } = this.props
+    const {publishDialogueOpen, authorized} = this.state
+    if (!authorized) return <div style={{ color: "white" }}>Please wait...</div>
     return (
       <React.Fragment>
         <PublishDialogue handlePublish={this.handlePublish} handleClose={this.handleClosePublishDialogue} open={publishDialogueOpen}/>
