@@ -165,6 +165,7 @@ class NewBlog extends React.Component {
   }
 
   componentDidMount() {
+    console.log(this.props)
     const authorization = localStorage.getItem("authorization")
     if(authorization) this.setState({authorized: true})
     else window.location = '/blog/login?redirectTo=/blog/write/new'

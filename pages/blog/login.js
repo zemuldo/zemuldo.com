@@ -33,20 +33,18 @@ class Home extends React.Component {
     }
 
     componentDidMount() {
-
+        console.log(this.props)
         const { query, loggedIn } = this.props
         
         const authorization = localStorage.getItem("authorization")
         if (authorization) window.location = query.redirectTo || '/blog'
-        else window.location = '/blog/login?redirectTo=/blog/write/new'
-        
-        if (loggedIn || query.token && query.redirectTo) {
-            if (query.token) localStorage.setItem("authorization", query.token)
-            window.location = query.redirectTo || '/blog'
-        } else if (loggedIn || query.token) {
-            if (query.token) localStorage.setItem("authorization", query.token)
-            window.location = '/blog'
-        }
+            if (loggedIn || query.token && query.redirectTo) {
+                if (query.token) localStorage.setItem("authorization", query.token)
+                window.location = query.redirectTo || '/blog'
+            } else if (loggedIn || query.token) {
+                if (query.token) localStorage.setItem("authorization", query.token)
+                window.location = '/blog'
+            }
     }
 
     render() {
