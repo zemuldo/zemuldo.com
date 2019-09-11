@@ -210,6 +210,7 @@ class NewBlog extends React.Component {
       headers: {authorization, 'Accept': 'application/json', 'Content-Type': 'application/json'},
       body: JSON.stringify({
         _id: this.props.post._id,
+        authorId: this.props.post.authorId,
         update: {
           title: this.state.postTitle,
         body: this.state.body,
@@ -220,6 +221,7 @@ class NewBlog extends React.Component {
 
       })
     });
+    if(res.status !== 200) return alert("Action failed")
     const data = await res.json()
     if(res.status == 200) localStorage.removeItem(`state_${this.props.post._id}`)
     Router.push(`/blog/post/${data.post._id}`)
