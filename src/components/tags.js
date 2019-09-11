@@ -92,15 +92,15 @@ export default function Tags({ onChange, defaultValue }) {
 
     const options = [
         { value: 'javascript', label: 'JavaCript', color: '#fcba03' },
+        { value: 'reactjs', label: 'ReactJS', color: '#08a6f3' },
+        { value: 'postgresql', label: 'PostgreSQL', color: 'white' },
         { value: 'elixir', label: 'Elixir', color: '#a767f5' },
-        { value: 'purple', label: 'Purple', color: '#5243AA' },
-        { value: 'red', label: 'Red', color: '#FF5630' },
-        { value: 'orange', label: 'Orange', color: '#FF8B00' },
-        { value: 'yellow', label: 'Yellow', color: '#FFC400' },
-        { value: 'green', label: 'Green', color: '#36B37E' },
-        { value: 'forest', label: 'Forest', color: '#00875A' },
-        { value: 'slate', label: 'Slate', color: '#253858' },
-        { value: 'silver', label: 'Silver', color: '#666666' },
+        { value: 'nodejs', label: 'NodeJS', color: '#40a832' },
+        { value: 'ecto', label: 'Ecto', color: '#40a832' },
+        { value: 'phoenix', label: 'Phoenix', color: 'orange' },
+        { value: 'python', label: 'Python', color: '#fff305' },
+        { value: 'sql', label: 'SQL', color: '#05daff' },
+        { value: 'data', label: 'Data', color: '#05daff' }
     ]
 
     return (
