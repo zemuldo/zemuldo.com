@@ -1,8 +1,8 @@
 import React from "react";
 import Container from "@material-ui/core/Container";
 import { withStyles } from "@material-ui/core/styles";
-import Footer from "../../src/footer";
-import Menu from "../../src/components/blog/menu";
+import Footer from "../../../src/footer";
+import Menu from "../../../src/components/blog/menu";
 import marked from "marked";
 import dynamic from "next/dynamic";
 import Head from "next/head";
@@ -96,7 +96,7 @@ class Blog extends React.Component {
   linkedInShare = () =>{
     const {post} = this.props
     const initial = 'https://www.linkedin.com/sharing/share-offsite?mini=true&url='
-    const shareURL = `${initial}https%3A%2F%2Fzemuldo.com/blog/${post._id}&title=${post.title.split(' ').join('+')}`
+    const shareURL = `${initial}https%3A%2F%2Fzemuldo.com/blog/post/${post._id}&title=${post.title.split(' ').join('+')}`
     window.open(shareURL, 'sharer', 'toolbar=0,status=0,width=548,height=325')
   }
   fbShare = () => {
@@ -135,7 +135,7 @@ class Blog extends React.Component {
           <meta property="og:title" content={post.title} />
           <meta property="og:description" content={post.description} />
           <meta property="og:image" content={post.coverPhotoUrl} />
-          <meta property="og:url" content={`${base_url}/blog/${post._id}`} />
+          <meta property="og:url" content={`${base_url}/blog/post/${post._id}`} />
         </Head>
         <Container
           maxWidth="md"
@@ -151,7 +151,7 @@ class Blog extends React.Component {
           <Grid container justify="center" alignItems="center">
             {
               this.props.authorization &&
-              <Link href={`/blog/${post._id}/edit`}>
+              <Link href={`/blog/post/${post._id}/edit`}>
                 <Avatar className={classes.greenAvatar}>
                   <EditIcon />
                 </Avatar>

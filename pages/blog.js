@@ -168,7 +168,7 @@ class Blog extends React.Component {
             {this.props.user && <Avatar alt="User profile" src="/static/images/avatar/1.jpg" className={classes.avatar} src={this.props.user.profilePhotoUrl} />}
             {
               !this.props.user &&
-              <Link href={`/login?redirectTo=${base_url}/blog`}>
+              <Link href={`/blog/login?redirectTo=${base_url}/blog`}>
              <Avatar className={classes.greenAvatar}>
                <AddCircleOutlineIcon />
              </Avatar>
@@ -202,7 +202,7 @@ class Blog extends React.Component {
                   <Typography variant="h5" color="inherit" paragraph>
                     {featurePost.post.description}
                     </Typography>
-                  <Link style={{ color: "#08a6f3" }} href={`/blog/${featurePost.post._id}`}>
+                  <Link style={{ color: "#08a6f3" }} href={`/blog/post/${featurePost.post._id}`}>
                     Read Now
                     </Link>
                 </div>

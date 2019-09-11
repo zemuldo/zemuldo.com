@@ -1,8 +1,8 @@
 import React from "react";
 import Container from "@material-ui/core/Container";
 import { withStyles } from '@material-ui/core/styles';
-import Footer from "../../../src/footer";
-import Menu from "../../../src/components/blog/menu";
+import Footer from "../../../../src/footer";
+import Menu from "../../../../src/components/blog/menu";
 import marked from "marked";
 import dynamic from "next/dynamic";
 import Head from "next/head";
@@ -10,13 +10,13 @@ import Link from "next/link";
 import TextField from '@material-ui/core/TextField';
 import Grid from '@material-ui/core/Grid';
 import "easymde/dist/easymde.min.css";
-import Tags from "../../../src/components/tags";
+import Tags from "../../../../src/components/tags";
 import { parseCookies } from "nookies";
 import { withRouter } from 'next/router'
 import SaveIcon from '@material-ui/icons/Save';
 import Avatar from '@material-ui/core/Avatar';
 import PublishIcon from '@material-ui/icons/Publish';
-import PublishDialogue from '../../../src/components/publish_modal'
+import PublishDialogue from '../../../../src/components/publish_modal'
 import fetch from "isomorphic-unfetch";
 import Router from 'next/router'
 
@@ -40,7 +40,7 @@ const JoinNow = () => (
             <div className="row">
               <div style={{ marginTop: "30%" }} className="header-section">
                 <div className="header-frame">
-                  <Link href={`/login?redirectTo=${base_url}/blog/write/new`} >
+                  <Link href={`/blog/login?redirectTo=${base_url}/blog/write/new`} >
                     <a style={{ fontSize: "24px" }} className="color-6">
                       <u>Click here to login</u>
                     </a>
@@ -222,7 +222,7 @@ class NewBlog extends React.Component {
     });
     const data = await res.json()
     if(res.status == 200) localStorage.removeItem(`state_${this.props.post._id}`)
-    Router.push(`/blog/${data.post._id}`)
+    Router.push(`/blog/post/${data.post._id}`)
     this.handleClosePublishDialogue()
   }
 

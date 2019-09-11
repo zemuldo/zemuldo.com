@@ -13,8 +13,8 @@ app.prepare().then(() => {
 
   server.use(compression()) 
 
-  server.get('/login', (req, res) => {
-    return app.render(req, res, '/login', req.query)
+  server.get('/blog/login', (req, res) => {
+    return app.render(req, res, '/blog/login', req.query)
   })
 
   server.get('/blog', (req, res) => {
