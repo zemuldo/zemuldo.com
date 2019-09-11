@@ -11,7 +11,7 @@ const base_url = process.env.BASE_URL
 
 class Home extends React.Component {
     static getInitialProps(ctx) {
-        const {query} = ctx
+        const { query } = ctx
         const { authorization } = parseCookies(ctx)
         const loinState = {
             loggingIn: !!ctx.query.token
@@ -32,23 +32,29 @@ class Home extends React.Component {
         };
     }
 
-    componentDidMount () {
-        const {query, loggedIn, loggingIn} = this.props
-        if(loggedIn || query.token && query.redirectTo){
-            if(query.token) localStorage.setItem("authorization", query.token)
-            window.location = query.redirectTo || '/'
-        } else if(loggedIn || query.token) {
-            if(query.token) localStorage.setItem("authorization", query.token)
+    componentDidMount() {
+
+        const { query, loggedIn } = this.props
+        
+        const authorization = localStorage.getItem("authorization")
+        if (authorization) window.location = query.redirectTo || '/blog'
+        else window.location = '/blog/login?redirectTo=/blog/write/new'
+        
+        if (loggedIn || query.token && query.redirectTo) {
+            if (query.token) localStorage.setItem("authorization", query.token)
+            window.location = query.redirectTo || '/blog'
+        } else if (loggedIn || query.token) {
+            if (query.token) localStorage.setItem("authorization", query.token)
             window.location = '/blog'
         }
     }
 
     render() {
         const { query, loggingIn } = this.props
-        if(loggingIn) return <div style={{ color: "white" }}>Please wait...</div>
+        if (loggingIn) return <div style={{ color: "white" }}>Please wait...</div>
         return (
             <React.Fragment>
-                
+
                 <Head>
                     <title>I'm Danstan ~ Zemuldo</title>
                 </Head>
