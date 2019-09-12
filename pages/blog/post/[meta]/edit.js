@@ -246,7 +246,7 @@ class EditBlog extends React.Component {
   }
 
   render() {
-    const { classes, authorized, loggingIn, post, body } = this.props;
+    const { classes, authorized, loggingIn } = this.props;
     const {publishDialogueOpen} = this.state;
     if (loggingIn) return <div style={{ color: 'white' }}>Please wait...</div>;
     if (!authorized) {

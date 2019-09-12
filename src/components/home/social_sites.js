@@ -1,5 +1,4 @@
 import React from 'react';
-import Avatar from '@material-ui/core/Avatar';
 import MouseOverPopover from '../../pop_overs';
 
 const socials = [

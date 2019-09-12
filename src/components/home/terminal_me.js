@@ -1,7 +1,6 @@
 import React from 'react';
 import Typed from 'react-typed';
 import { type_message } from '../../tools/typed';
-import { func } from 'prop-types';
 
 const classes = {
   text_editor_wrap: {

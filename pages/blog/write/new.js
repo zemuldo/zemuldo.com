@@ -10,7 +10,6 @@ import TextField from '@material-ui/core/TextField';
 import Grid from '@material-ui/core/Grid';
 import 'easymde/dist/easymde.min.css';
 import Tags from '../../../src/components/tags';
-import { parseCookies } from 'nookies';
 import Router, { withRouter } from 'next/router';
 import SaveIcon from '@material-ui/icons/Save';
 import Avatar from '@material-ui/core/Avatar';
@@ -127,15 +126,15 @@ class NewBlog extends React.Component {
     };
   }
 
-  static async getInitialProps(ctx) {
+  static async getInitialProps(_ctx) {
     return {};
   }
 
   componentDidMount() {
     const authorization = localStorage.getItem('authorization');
-    if (authorization) this.setState({authorized: true});
+    if (authorization) this.setState({ authorized: true });
     else window.location = '/blog/login?redirectTo=/blog/write/new';
-    
+
     const draft = localStorage.getItem('currentDraft');
     if (draft) {
       const data = JSON.parse(draft);
@@ -155,13 +154,13 @@ class NewBlog extends React.Component {
   }
 
   handleSave = () => localStorage.setItem('currentDraft', JSON.stringify(this.state))
-  handleOpenPublishDialogue = () => this.setState({publishDialogueOpen: true})
-  handleClosePublishDialogue = () => this.setState({publishDialogueOpen: false})
+  handleOpenPublishDialogue = () => this.setState({ publishDialogueOpen: true })
+  handleClosePublishDialogue = () => this.setState({ publishDialogueOpen: false })
   handlePublish = async () => {
     const { authorization } = this.props;
     const res = await fetch(`${api_url}/posts`, {
       method: 'post',
-      headers: {authorization, 'Accept': 'application/json', 'Content-Type': 'application/json'},
+      headers: { authorization, 'Accept': 'application/json', 'Content-Type': 'application/json' },
       body: JSON.stringify({
         title: this.state.postTitle,
         body: this.state.body,
@@ -194,12 +193,16 @@ class NewBlog extends React.Component {
   }
 
   render() {
-    const { classes, loggingIn } = this.props;
-    const {publishDialogueOpen, authorized} = this.state;
+    const { classes } = this.props;
+    const { publishDialogueOpen, authorized } = this.state;
     if (!authorized) return <div style={{ color: 'white' }}>Please wait...</div>;
     return (
       <React.Fragment>
-        <PublishDialogue handlePublish={this.handlePublish} handleClose={this.handleClosePublishDialogue} open={publishDialogueOpen}/>
+        <PublishDialogue
+          handlePublish={this.handlePublish}
+          handleClose={this.handleClosePublishDialogue}
+          open={publishDialogueOpen}
+        />
         <Head>
           <link href="/static/css/blog.css" rel="stylesheet" />
           <link

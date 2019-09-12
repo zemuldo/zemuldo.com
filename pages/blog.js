@@ -18,7 +18,6 @@ import Head from 'next/head';
 import PropTypes from 'prop-types';
 
 const api_url = process.env.API_URL;
-const base_url = process.env.BASE_URL;
 
 const styles = theme => ({
   greenAvatar: {

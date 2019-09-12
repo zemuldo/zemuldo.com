@@ -23,7 +23,7 @@ const base_url = process.env.BASE_URL;
 const base_url_domain = process.env.BASE_URL_DOMAIN;
 
 
-const styles = theme => ({
+const styles = () => ({
   devTo: {
     border: '3px solid #08a6f3',
     margin: 10,
@@ -101,7 +101,6 @@ class Blog extends React.Component {
     window.open(shareURL, 'sharer', 'toolbar=0,status=0,width=548,height=325');
   }
   fbShare = () => {
-    const { post } = this.props;
     const postUrl = `https%3A%2F%2Fzemuldo.com${window.location.pathname}`;
     let fbShareURL = `https://www.facebook.com/sharer/sharer.php?u=${postUrl}`;
     let shareURL = fbShareURL + '&amp;src=sdkpreparse\'';
