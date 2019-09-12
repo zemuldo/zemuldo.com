@@ -1,61 +1,27 @@
-import React from "react";
-import Container from "@material-ui/core/Container";
+import React from 'react';
+import Container from '@material-ui/core/Container';
 import { withStyles } from '@material-ui/core/styles';
-import Footer from "../../../src/footer";
-import Menu from "../../../src/components/blog/menu";
-import marked from "marked";
-import dynamic from "next/dynamic";
-import Head from "next/head";
-import Link from "next/link";
+import Footer from '../../../src/footer';
+import Menu from '../../../src/components/blog/menu';
+import marked from 'marked';
+import dynamic from 'next/dynamic';
+import Head from 'next/head';
 import TextField from '@material-ui/core/TextField';
 import Grid from '@material-ui/core/Grid';
-import "easymde/dist/easymde.min.css";
-import Tags from "../../../src/components/tags";
-import { parseCookies } from "nookies";
-import { withRouter } from 'next/router'
+import 'easymde/dist/easymde.min.css';
+import Tags from '../../../src/components/tags';
+import { parseCookies } from 'nookies';
+import Router, { withRouter } from 'next/router';
 import SaveIcon from '@material-ui/icons/Save';
 import Avatar from '@material-ui/core/Avatar';
 import PublishIcon from '@material-ui/icons/Publish';
-import PublishDialogue from '../../../src/components/publish_modal'
-import fetch from "isomorphic-unfetch";
-import Router from 'next/router'
+import PublishDialogue from '../../../src/components/publish_modal';
+import fetch from 'isomorphic-unfetch';
 
-const SimpleMDE = dynamic(import("react-simplemde-editor"), { ssr: false });
 
-const api_url = process.env.API_URL
-const base_url = process.env.BASE_URL
+const SimpleMDE = dynamic(import('react-simplemde-editor'), { ssr: false });
 
-const JoinNow = () => (
-  <React.Fragment>
-    <Head>
-      <title>Join</title>
-    </Head>
-    <div
-      className="home-section-background"
-      data-stellar-background-ratio="0.6"
-    >
-      <div className="display-table">
-        <div className="display-table-cell">
-          <div className="container">
-            <div className="row">
-              <div style={{ marginTop: "30%" }} className="header-section">
-                <div className="header-frame">
-                  <h3 className="color-6">You have to become a member to write</h3>
-                  <hr />
-                  <Link href={`/blog/login?redirectTo=/blog/write/new`} >
-                    <a style={{ fontSize: "24px" }} className="color-6">
-                      <u>Click here to login</u>
-                    </a>
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </React.Fragment>
-);
+const api_url = process.env.API_URL;
 
 marked.setOptions({
   gfm: true,
@@ -67,9 +33,9 @@ const useStyles = theme => ({
   greenAvatar: {
     margin: 10,
     color: '#fff',
-    backgroundColor: "#08a6f3",
-    '&:hover':{
-      cursor: "pointer"
+    backgroundColor: '#08a6f3',
+    '&:hover': {
+      cursor: 'pointer'
     }
   },
   root: {
@@ -92,9 +58,9 @@ const useStyles = theme => ({
     },
   },
   floatingLabelFocusStyle: {
-    color: "#08a6f3",
+    color: '#08a6f3',
     '&:after': {
-      color: "#08a6f3",
+      color: '#08a6f3',
     },
   },
   materialInput: {
@@ -102,7 +68,7 @@ const useStyles = theme => ({
     '&:after': {
       borderBottom: '1px solid green',
     },
-    fontSize: "28px",
+    fontSize: '28px',
     color: '#08a6f3'
   },
   materialTextArea: {
@@ -110,7 +76,7 @@ const useStyles = theme => ({
     '&:after': {
       border: '1px solid transparent',
     },
-    fontSize: "16px",
+    fontSize: '16px',
     color: 'white',
     '& label.Mui-focused': {
       color: '#08a6f3',
@@ -152,7 +118,7 @@ class NewBlog extends React.Component {
 
     this.state = {
       loggingIn: props.loggingIn,
-      body: "",
+      body: '',
       postTitle: '',
       coverPhotoUrl: '',
       description: '',
@@ -161,37 +127,37 @@ class NewBlog extends React.Component {
   }
 
   static async getInitialProps(ctx) {
-    return {}
+    return {};
   }
 
   componentDidMount() {
-    const authorization = localStorage.getItem("authorization")
-    if(authorization) this.setState({authorized: true})
-    else window.location = '/blog/login?redirectTo=/blog/write/new'
+    const authorization = localStorage.getItem('authorization');
+    if (authorization) this.setState({authorized: true});
+    else window.location = '/blog/login?redirectTo=/blog/write/new';
     
-    const draft = localStorage.getItem("currentDraft")
+    const draft = localStorage.getItem('currentDraft');
     if (draft) {
-      const data = JSON.parse(draft)
+      const data = JSON.parse(draft);
       this.setState({
         coverPhotoUrl: data.coverPhotoUrl || '',
         postTitle: data.postTitle,
         body: data.body,
         tags: data.tags,
         description: data.description
-      })
+      });
     }
 
     this.autoSave = setInterval(() => {
-      this.setState({ saving: true })
-      localStorage.setItem('currentDraft', JSON.stringify(this.state))
-    }, 10000)
+      this.setState({ saving: true });
+      localStorage.setItem('currentDraft', JSON.stringify(this.state));
+    }, 10000);
   }
 
   handleSave = () => localStorage.setItem('currentDraft', JSON.stringify(this.state))
   handleOpenPublishDialogue = () => this.setState({publishDialogueOpen: true})
   handleClosePublishDialogue = () => this.setState({publishDialogueOpen: false})
   handlePublish = async () => {
-    const { authorization } = this.props
+    const { authorization } = this.props;
     const res = await fetch(`${api_url}/posts`, {
       method: 'post',
       headers: {authorization, 'Accept': 'application/json', 'Content-Type': 'application/json'},
@@ -204,32 +170,32 @@ class NewBlog extends React.Component {
 
       })
     });
-    const data = await res.json()
-    if(res.status == 200) localStorage.removeItem("currentDraft")
-    Router.push(`/blog/post/${data.post._id}`)
-    this.handleClosePublishDialogue()
+    const data = await res.json();
+    if (parseInt(res.status) === 200) localStorage.removeItem('currentDraft');
+    Router.push(`/blog/post/${data.post._id}`);
+    this.handleClosePublishDialogue();
   }
 
   componentWillUnmount() {
-    clearInterval(this.autoSave)
+    clearInterval(this.autoSave);
   }
   handleTagsChange = (tags) => {
-    this.setState({ tags })
+    this.setState({ tags });
   }
 
   handleTextChange = e => {
     const { id, value } = e.target;
-    this.setState({ [id]: value })
+    this.setState({ [id]: value });
   };
 
   handleEditorChange = (value) => {
-    this.setState({ body: value })
+    this.setState({ body: value });
   }
 
   render() {
-    const { classes, loggingIn } = this.props
-    const {publishDialogueOpen, authorized} = this.state
-    if (!authorized) return <div style={{ color: "white" }}>Please wait...</div>
+    const { classes, loggingIn } = this.props;
+    const {publishDialogueOpen, authorized} = this.state;
+    if (!authorized) return <div style={{ color: 'white' }}>Please wait...</div>;
     return (
       <React.Fragment>
         <PublishDialogue handlePublish={this.handlePublish} handleClose={this.handleClosePublishDialogue} open={publishDialogueOpen}/>
@@ -243,19 +209,19 @@ class NewBlog extends React.Component {
         <Container
           maxWidth="md"
           style={{
-            color: "white",
-            fontFamily: "'Courier New', Courier, monospace",
-            fontSize: "18px"
+            color: 'white',
+            fontFamily: '\'Courier New\', Courier, monospace',
+            fontSize: '18px'
           }}
         >
           <Menu />
           <Grid container justify="center" alignItems="center">
             <Avatar onClick={this.handleSave} className={classes.greenAvatar}>
               <SaveIcon />
-          </Avatar>
-          <Avatar onClick={this.handleOpenPublishDialogue} className={classes.greenAvatar}>
+            </Avatar>
+            <Avatar onClick={this.handleOpenPublishDialogue} className={classes.greenAvatar}>
               <PublishIcon />
-          </Avatar>
+            </Avatar>
           </Grid>
 
           <div className={classes.root}>
@@ -291,7 +257,7 @@ class NewBlog extends React.Component {
               />
             </Grid>
             <Grid item xs={12} sm={6}>
-              <div style={{ marginTop: "26px" }}>
+              <div style={{ marginTop: '26px' }}>
                 <Tags defaultValue={this.state.tags} onChange={this.handleTagsChange} />
               </div>
             </Grid>
@@ -320,9 +286,9 @@ class NewBlog extends React.Component {
           className="blog-md"
           maxWidth="md"
           style={{
-            color: "white",
+            color: 'white',
             fontFamily:
-              "'monospaced courier-new', Poppins, sans-serif !important"
+              '\'monospaced courier-new\', Poppins, sans-serif !important'
           }}
         >
           <h3>Post Body Markdown</h3>
@@ -337,4 +303,4 @@ class NewBlog extends React.Component {
   }
 }
 
-export default withRouter(withStyles(useStyles)(NewBlog))
+export default withRouter(withStyles(useStyles)(NewBlog));

@@ -1,62 +1,62 @@
-import React from "react";
-import Container from "@material-ui/core/Container";
-import { withStyles } from "@material-ui/core/styles";
-import Footer from "../../../src/footer";
-import Menu from "../../../src/components/blog/menu";
-import marked from "marked";
-import dynamic from "next/dynamic";
-import Head from "next/head";
-import Link from "next/link";
-import { format } from "date-fns";
-import fetch from "isomorphic-unfetch";
-import { parseCookies } from "nookies";
+import React from 'react';
+import Container from '@material-ui/core/Container';
+import { withStyles } from '@material-ui/core/styles';
+import Footer from '../../../src/footer';
+import Menu from '../../../src/components/blog/menu';
+import marked from 'marked';
+import dynamic from 'next/dynamic';
+import Head from 'next/head';
+import Link from 'next/link';
+import { format } from 'date-fns';
+import fetch from 'isomorphic-unfetch';
+import { parseCookies } from 'nookies';
 import Avatar from '@material-ui/core/Avatar';
 import EditIcon from '@material-ui/icons/Edit';
-import Grid from "@material-ui/core/Grid";
-import "easymde/dist/easymde.min.css";
+import Grid from '@material-ui/core/Grid';
+import 'easymde/dist/easymde.min.css';
 
-const Highlight = dynamic(import("react-highlight"));
+const Highlight = dynamic(import('react-highlight'));
 
-const api_url = process.env.API_URL
-const base_url = process.env.BASE_URL
-const base_url_domain = process.env.BASE_URL_DOMAIN
+const api_url = process.env.API_URL;
+const base_url = process.env.BASE_URL;
+const base_url_domain = process.env.BASE_URL_DOMAIN;
 
 
 const styles = theme => ({
   devTo: {
-    border: "3px solid #08a6f3",
+    border: '3px solid #08a6f3',
     margin: 10,
   },
   greenAvatar: {
     margin: 10,
     color: '#fff',
-    backgroundColor: "green",
+    backgroundColor: 'green',
     '&:hover': {
-      cursor: "pointer"
+      cursor: 'pointer'
     }
   },
   twitterAvatar: {
     margin: 10,
     color: '#fff',
-    backgroundColor: "#08a6f3",
+    backgroundColor: '#08a6f3',
     '&:hover': {
-      cursor: "pointer"
+      cursor: 'pointer'
     }
   },
   fbAvatar: {
     margin: 10,
     color: '#fff',
-    backgroundColor: "#00f",
+    backgroundColor: '#00f',
     '&:hover': {
-      cursor: "pointer"
+      cursor: 'pointer'
     }
   },
   linkedinAvatar: {
     margin: 10,
     color: '#fff',
-    backgroundColor: "#08a6f3",
+    backgroundColor: '#08a6f3',
     '&:hover': {
-      cursor: "pointer"
+      cursor: 'pointer'
     }
   }
 });
@@ -72,12 +72,12 @@ class Blog extends React.Component {
     super(props);
 
     this.state = {
-      textValue: ""
+      textValue: ''
     };
   }
 
   static async getInitialProps(ctx) {
-    const { authorization } = parseCookies(ctx)
+    const { authorization } = parseCookies(ctx);
     const { meta } = ctx.query;
     const res = await fetch(`${api_url}/posts/${meta}`);
     const data = await res.json();
@@ -94,29 +94,29 @@ class Blog extends React.Component {
     };
   }
   linkedInShare = () =>{
-    const {post} = this.props
-    const initial = 'https://www.linkedin.com/sharing/share-offsite?mini=true&url='
-    const shareURL = `${initial}https%3A%2F%2Fzemuldo.com/blog/post/${post._id}&title=${post.title.split(' ').join('+')}`
-    window.open(shareURL, 'sharer', 'toolbar=0,status=0,width=548,height=325')
+    const {post} = this.props;
+    const initial = 'https://www.linkedin.com/sharing/share-offsite?mini=true&url=';
+    const shareURL = `${initial}https%3A%2F%2Fzemuldo.com/blog/post/${post._id}&title=${post.title.split(' ').join('+')}`;
+    window.open(shareURL, 'sharer', 'toolbar=0,status=0,width=548,height=325');
   }
   fbShare = () => {
-    const { post } = this.props
-    const postUrl = `https%3A%2F%2Fzemuldo.com${window.location.pathname}`
-    let fbShareURL = `https://www.facebook.com/sharer/sharer.php?u=${postUrl}`
-    let shareURL = fbShareURL + "&amp;src=sdkpreparse'"
-    window.open(shareURL, 'sharer', 'toolbar=0,status=0,width=548,height=325')
+    const { post } = this.props;
+    const postUrl = `https%3A%2F%2Fzemuldo.com${window.location.pathname}`;
+    let fbShareURL = `https://www.facebook.com/sharer/sharer.php?u=${postUrl}`;
+    let shareURL = fbShareURL + '&amp;src=sdkpreparse\'';
+    window.open(shareURL, 'sharer', 'toolbar=0,status=0,width=548,height=325');
   }
   tweetShare = () => {
-    const { post } = this.props
-    let hashTgs = '&hashtags=' + post.tags.map(p => p.label).join(',')
-    let via = '&via=zemuldo'
-    let url = `&url=https%3A%2F%2F${base_url_domain}${window.location.pathname}`
-    let fullURL = `${url}${via}${hashTgs}`
-    let shareURL = `https://twitter.com/intent/tweet?text=${post.title}` + fullURL
-    window.open(shareURL, 'sharer', 'toolbar=0,status=0,width=548,height=325')
+    const { post } = this.props;
+    let hashTgs = '&hashtags=' + post.tags.map(p => p.label).join(',');
+    let via = '&via=zemuldo';
+    let url = `&url=https%3A%2F%2F${base_url_domain}${window.location.pathname}`;
+    let fullURL = `${url}${via}${hashTgs}`;
+    let shareURL = `https://twitter.com/intent/tweet?text=${post.title}` + fullURL;
+    window.open(shareURL, 'sharer', 'toolbar=0,status=0,width=548,height=325');
   }
   render() {
-    const { post, body, classes } = this.props
+    const { post, body, classes } = this.props;
     return (
       <React.Fragment>
         <Head>
@@ -140,9 +140,9 @@ class Blog extends React.Component {
         <Container
           maxWidth="md"
           style={{
-            color: "white",
-            fontFamily: "'Courier New', Courier, monospace",
-            fontSize: "18px"
+            color: 'white',
+            fontFamily: '\'Courier New\', Courier, monospace',
+            fontSize: '18px'
           }}
         >
           <Menu />
@@ -164,19 +164,19 @@ class Blog extends React.Component {
               <i className="fa fa-facebook" />
             </Avatar>
             <Avatar onClick={this.linkedInShare} className={classes.linkedinAvatar}>
-                <i className="fa fa-linkedin" />
+              <i className="fa fa-linkedin" />
             </Avatar>
           </Grid>
           <h1>{post.title}</h1>
           <br />
-          <p>{format(new Date(post.createdAt), "PPPP")}</p>
+          <p>{format(new Date(post.createdAt), 'PPPP')}</p>
           {
             post.tags.map(tag => <button key={tag.value}>{tag.label}</button>)
           }
         </Container>
         <Container>
           <img
-            style={{ maxHeight: "600px" }}
+            style={{ maxHeight: '600px' }}
             src={post.coverPhotoUrl}
           />
         </Container>
@@ -184,9 +184,9 @@ class Blog extends React.Component {
         <Container
           maxWidth="md"
           style={{
-            color: "white",
-            fontFamily: "'Courier New', Courier, monospace",
-            fontSize: "18px"
+            color: 'white',
+            fontFamily: '\'Courier New\', Courier, monospace',
+            fontSize: '18px'
           }}
         >
           <br />
@@ -198,4 +198,4 @@ class Blog extends React.Component {
   }
 }
 
-export default withStyles(styles)(Blog)
+export default withStyles(styles)(Blog);

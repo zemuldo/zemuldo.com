@@ -1,32 +1,32 @@
-import { whiteText, greenText, getYearsBetween } from "../../helpers/utils";
+import { whiteText, greenText, getYearsBetween } from '../../helpers/utils';
 
 export function type_message() {
-    const waitAndBreak = "^700 <br/>";
-    const start =
+  const waitAndBreak = '^700 <br/>';
+  const start =
       '<span style="color: #08a6f3;" class="margin-left--10 font-size-14 !important">➜:~</span>';
-    const myStack =
+  const myStack =
       start +
-      whiteText("Skill Set?") +
+      whiteText('Skill Set?') +
       waitAndBreak +
       greenText([
-        "Nodejs",
-        "ReactJS",
-        "Elixir",
-        "Docker",
-        "Python for Data",
-        "Kubernetes",
-        "GCP",
-        "Heroku",
-        "AWS."
-      ]).join(",^500 ");
-    const experience = getYearsBetween(new Date("February 1 2016 00:00"));
-    const yearsOfExperience =
+        'Nodejs',
+        'ReactJS',
+        'Elixir',
+        'Docker',
+        'Python for Data',
+        'Kubernetes',
+        'GCP',
+        'Heroku',
+        'AWS.'
+      ]).join(',^500 ');
+  const experience = getYearsBetween(new Date('February 1 2016 00:00'));
+  const yearsOfExperience =
       waitAndBreak +
       start +
-      whiteText("Experience?") +
+      whiteText('Experience?') +
       waitAndBreak +
       greenText([experience]);
-    const funGames = greenText(["Chess", "Music", "Dancing."]).join(",^500 ");
-    const fullFunTime = waitAndBreak + start + whiteText("My Fun time?") + waitAndBreak + funGames;
-    return [myStack + yearsOfExperience + fullFunTime];
-  }
+  const funGames = greenText(['Chess', 'Music', 'Dancing.']).join(',^500 ');
+  const fullFunTime = waitAndBreak + start + whiteText('My Fun time?') + waitAndBreak + funGames;
+  return [myStack + yearsOfExperience + fullFunTime];
+}

@@ -21,7 +21,7 @@
     "next": "latest",
     "next-cookies": "^1.1.2",
     "nookies": "^2.0.8",
-    "prop-types": "latest",
+    "prop-types": "^15.7.2",
     "raw-loader": "^3.1.0",
     "react": "latest",
     "react-dom": "latest",
@@ -30,9 +30,11 @@
     "react-select": "^3.0.4",
     "react-simplemde-editor": "^4.1.0",
     "react-typed": "^1.2.0",
-    "react-visibility-sensor": "^5.1.1"
+    "react-visibility-sensor": "^5.1.1",
+    "winston": "^3.2.1"
   },
   "scripts": {
+    "lint": "eslint . --fix",
     "dev": "node server.js",
     "build": "next build",
     "start": "NODE_ENV=production node server.js",
@@ -43,6 +45,10 @@
   },
   "devDependencies": {
     "@zeit/next-bundle-analyzer": "^0.1.2",
-    "dotenv": "^8.1.0"
+    "babel-eslint": "^10.0.3",
+    "dotenv": "^8.1.0",
+    "eslint": "^6.3.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-react": "^7.14.3"
   }
 }

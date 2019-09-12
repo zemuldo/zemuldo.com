@@ -1,29 +1,29 @@
-import React from "react";
-import Container from "@material-ui/core/Container";
+import React from 'react';
+import Container from '@material-ui/core/Container';
 import { withStyles } from '@material-ui/core/styles';
-import Footer from "../../../../src/footer";
-import Menu from "../../../../src/components/blog/menu";
-import marked from "marked";
-import dynamic from "next/dynamic";
-import Head from "next/head";
-import Link from "next/link";
+import Footer from '../../../../src/footer';
+import Menu from '../../../../src/components/blog/menu';
+import marked from 'marked';
+import dynamic from 'next/dynamic';
+import Head from 'next/head';
+import Link from 'next/link';
 import TextField from '@material-ui/core/TextField';
 import Grid from '@material-ui/core/Grid';
-import "easymde/dist/easymde.min.css";
-import Tags from "../../../../src/components/tags";
-import { parseCookies } from "nookies";
-import { withRouter } from 'next/router'
+import 'easymde/dist/easymde.min.css';
+import Tags from '../../../../src/components/tags';
+import { parseCookies } from 'nookies';
+import Router, { withRouter } from 'next/router';
 import SaveIcon from '@material-ui/icons/Save';
 import Avatar from '@material-ui/core/Avatar';
 import PublishIcon from '@material-ui/icons/Publish';
-import PublishDialogue from '../../../../src/components/publish_modal'
-import fetch from "isomorphic-unfetch";
-import Router from 'next/router'
+import PublishDialogue from '../../../../src/components/publish_modal';
+import fetch from 'isomorphic-unfetch';
 
-const SimpleMDE = dynamic(import("react-simplemde-editor"), { ssr: false });
 
-const api_url = process.env.API_URL
-const base_url = process.env.BASE_URL
+const SimpleMDE = dynamic(import('react-simplemde-editor'), { ssr: false });
+
+const api_url = process.env.API_URL;
+const base_url = process.env.BASE_URL;
 
 const JoinNow = () => (
   <React.Fragment>
@@ -38,10 +38,10 @@ const JoinNow = () => (
         <div className="display-table-cell">
           <div className="container">
             <div className="row">
-              <div style={{ marginTop: "30%" }} className="header-section">
+              <div style={{ marginTop: '30%' }} className="header-section">
                 <div className="header-frame">
-                  <Link href={`/blog/login?redirectTo=/blog/write/new`} >
-                    <a style={{ fontSize: "24px" }} className="color-6">
+                  <Link href={'/blog/login?redirectTo=/blog/write/new'} >
+                    <a style={{ fontSize: '24px' }} className="color-6">
                       <u>Click here to login</u>
                     </a>
                   </Link>
@@ -65,9 +65,9 @@ const useStyles = theme => ({
   greenAvatar: {
     margin: 10,
     color: '#fff',
-    backgroundColor: "#08a6f3",
-    '&:hover':{
-      cursor: "pointer"
+    backgroundColor: '#08a6f3',
+    '&:hover': {
+      cursor: 'pointer'
     }
   },
   root: {
@@ -90,9 +90,9 @@ const useStyles = theme => ({
     },
   },
   floatingLabelFocusStyle: {
-    color: "#08a6f3",
+    color: '#08a6f3',
     '&:after': {
-      color: "#08a6f3",
+      color: '#08a6f3',
     },
   },
   materialInput: {
@@ -100,7 +100,7 @@ const useStyles = theme => ({
     '&:after': {
       borderBottom: '1px solid green',
     },
-    fontSize: "28px",
+    fontSize: '28px',
     color: '#08a6f3'
   },
   materialTextArea: {
@@ -108,7 +108,7 @@ const useStyles = theme => ({
     '&:after': {
       border: '1px solid transparent',
     },
-    fontSize: "16px",
+    fontSize: '16px',
     color: 'white',
     '& label.Mui-focused': {
       color: '#08a6f3',
@@ -159,14 +159,14 @@ class NewBlog extends React.Component {
   }
 
   static async getInitialProps(ctx) {
-    const { authorization } = parseCookies(ctx)
+    const { authorization } = parseCookies(ctx);
     const { meta } = ctx.query;
     const loinState = {
       loggingIn: !!ctx.query.token
-    }
-    let authorized =  false
+    };
+    let authorized =  false;
     if (authorization) {
-      authorized = true
+      authorized = true;
     }
     const res = await fetch(`${api_url}/posts/${meta}`);
     const data = await res.json();
@@ -181,22 +181,22 @@ class NewBlog extends React.Component {
   
 
   componentDidMount() {
-    const draft = localStorage.getItem(`state_${this.props.post._id}`)
+    const draft = localStorage.getItem(`state_${this.props.post._id}`);
     if (draft) {
-      const data = JSON.parse(draft)
+      const data = JSON.parse(draft);
       this.setState({
         coverPhotoUrl: data.coverPhotoUrl || '',
         postTitle: data.postTitle,
         body: data.body,
         tags: data.tags,
         description: data.description
-      })
+      });
     }
 
     this.autoSave = setInterval(() => {
-      this.setState({ saving: true })
-      localStorage.setItem(`state_${this.props.post._id}`, JSON.stringify(this.state))
-    }, 10000)
+      this.setState({ saving: true });
+      localStorage.setItem(`state_${this.props.post._id}`, JSON.stringify(this.state));
+    }, 10000);
     
   }
 
@@ -204,7 +204,7 @@ class NewBlog extends React.Component {
   handleOpenPublishDialogue = () => this.setState({publishDialogueOpen: true})
   handleClosePublishDialogue = () => this.setState({publishDialogueOpen: false})
   handlePublish = async () => {
-    const { authorization } = this.props
+    const { authorization } = this.props;
     const res = await fetch(`${api_url}/posts/update/${this.props.post._id}`, {
       method: 'post',
       headers: {authorization, 'Accept': 'application/json', 'Content-Type': 'application/json'},
@@ -213,43 +213,43 @@ class NewBlog extends React.Component {
         authorId: this.props.post.authorId,
         update: {
           title: this.state.postTitle,
-        body: this.state.body,
-        tags: this.state.tags || [],
-        description: this.state.description,
-        coverPhotoUrl: this.state.coverPhotoUrl
+          body: this.state.body,
+          tags: this.state.tags || [],
+          description: this.state.description,
+          coverPhotoUrl: this.state.coverPhotoUrl
         }
 
       })
     });
-    if(res.status != 200) return alert("Action failed")
-    const data = await res.json()
-    if(res.status == 200) localStorage.removeItem(`state_${this.props.post._id}`)
-    Router.push(`/blog/post/${data.post._id}`)
-    this.handleClosePublishDialogue()
+    if (res.status != 200) return alert('Action failed');
+    const data = await res.json();
+    if (parseInt(res.status) === 200) localStorage.removeItem(`state_${this.props.post._id}`);
+    Router.push(`/blog/post/${data.post._id}`);
+    this.handleClosePublishDialogue();
   }
 
   componentWillUnmount() {
-    clearInterval(this.autoSave)
+    clearInterval(this.autoSave);
   }
   handleTagsChange = (tags) => {
-    this.setState({ tags })
+    this.setState({ tags });
   }
 
   handleTextChange = e => {
     const { id, value } = e.target;
-    this.setState({ [id]: value })
+    this.setState({ [id]: value });
   };
 
   handleEditorChange = (value) => {
-    this.setState({ body: value })
+    this.setState({ body: value });
   }
 
   render() {
-    const { classes, authorized, loggingIn, post, body } = this.props
-    const {publishDialogueOpen} = this.state
-    if (loggingIn) return <div style={{ color: "white" }}>Please wait...</div>
+    const { classes, authorized, loggingIn, post, body } = this.props;
+    const {publishDialogueOpen} = this.state;
+    if (loggingIn) return <div style={{ color: 'white' }}>Please wait...</div>;
     if (!authorized) {
-      return <JoinNow />
+      return <JoinNow />;
     }
 
     return (
@@ -265,19 +265,19 @@ class NewBlog extends React.Component {
         <Container
           maxWidth="md"
           style={{
-            color: "white",
-            fontFamily: "'Courier New', Courier, monospace",
-            fontSize: "18px"
+            color: 'white',
+            fontFamily: '\'Courier New\', Courier, monospace',
+            fontSize: '18px'
           }}
         >
           <Menu />
           <Grid container justify="center" alignItems="center">
             <Avatar onClick={this.handleSave} className={classes.greenAvatar}>
               <SaveIcon />
-          </Avatar>
-          <Avatar onClick={this.handleOpenPublishDialogue} className={classes.greenAvatar}>
+            </Avatar>
+            <Avatar onClick={this.handleOpenPublishDialogue} className={classes.greenAvatar}>
               <PublishIcon />
-          </Avatar>
+            </Avatar>
           </Grid>
 
           <div className={classes.root}>
@@ -313,7 +313,7 @@ class NewBlog extends React.Component {
               />
             </Grid>
             <Grid item xs={12} sm={6}>
-              <div style={{ marginTop: "26px" }}>
+              <div style={{ marginTop: '26px' }}>
                 <Tags defaultValue = {this.state.tags} onChange={this.handleTagsChange} />
               </div>
             </Grid>
@@ -342,9 +342,9 @@ class NewBlog extends React.Component {
           className="blog-md"
           maxWidth="md"
           style={{
-            color: "white",
+            color: 'white',
             fontFamily:
-              "'monospaced courier-new', Poppins, sans-serif !important"
+              '\'monospaced courier-new\', Poppins, sans-serif !important'
           }}
         >
           <h3>Post Body Markdown</h3>
@@ -359,4 +359,4 @@ class NewBlog extends React.Component {
   }
 }
 
-export default withRouter(withStyles(useStyles)(NewBlog))
+export default withRouter(withStyles(useStyles)(NewBlog));

@@ -1,15 +1,14 @@
-import React from "react";
-import Link from "../../Link";
-import Head from "next/head";
-import SocialSites from "./social_sites";
-import Terminal from "./terminal_me";
+import React from 'react';
+import Head from 'next/head';
+import SocialSites from './social_sites';
+import Terminal from './terminal_me';
 
 export default class Home extends React.Component {
   render() {
     return (
       <React.Fragment>
         <Head>
-          <title>I'm Danstan ~ Zemuldo</title>
+          <title>I&apos;m Danstan ~ Zemuldo</title>
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:site" content="@zemuldo" />
           <meta name="twitter:creator" content="@zemuldo" />
