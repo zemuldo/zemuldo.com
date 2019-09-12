@@ -17,6 +17,7 @@ import Avatar from '@material-ui/core/Avatar';
 import PublishIcon from '@material-ui/icons/Publish';
 import PublishDialogue from '../../../src/components/publish_modal';
 import fetch from 'isomorphic-unfetch';
+import PropTypes from 'prop-types';
 
 
 const SimpleMDE = dynamic(import('react-simplemde-editor'), { ssr: false });
@@ -171,7 +172,7 @@ class NewBlog extends React.Component {
       })
     });
     const data = await res.json();
-    if (parseInt(res.status) === 200) localStorage.removeItem('currentDraft');
+    if (parseInt(res.status, 10) === 200) localStorage.removeItem('currentDraft');
     Router.push(`/blog/post/${data.post._id}`);
     this.handleClosePublishDialogue();
   }
@@ -302,5 +303,11 @@ class NewBlog extends React.Component {
     );
   }
 }
+
+NewBlog.propTypes = {
+  classes: PropTypes.object.isRequired,
+  loggingIn: PropTypes.bool,
+  authorization: PropTypes.string
+};
 
 export default withRouter(withStyles(useStyles)(NewBlog));

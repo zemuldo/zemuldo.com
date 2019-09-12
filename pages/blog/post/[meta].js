@@ -13,6 +13,7 @@ import { parseCookies } from 'nookies';
 import Avatar from '@material-ui/core/Avatar';
 import EditIcon from '@material-ui/icons/Edit';
 import Grid from '@material-ui/core/Grid';
+import PropTypes from 'prop-types';
 import 'easymde/dist/easymde.min.css';
 
 const Highlight = dynamic(import('react-highlight'));
@@ -197,5 +198,12 @@ class Blog extends React.Component {
     );
   }
 }
+
+Blog.propTypes = {
+  post: PropTypes.object.isRequired,
+  body: PropTypes.object.isRequired,
+  classes: PropTypes.object.isRequired,
+  authorization: PropTypes.string
+};
 
 export default withStyles(styles)(Blog);

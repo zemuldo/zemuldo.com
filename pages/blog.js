@@ -15,6 +15,7 @@ import Avatar from '@material-ui/core/Avatar';
 import NewIcon from '@material-ui/icons/NoteAdd';
 import AddCircleOutlineIcon from '@material-ui/icons/AddCircleOutline';
 import Head from 'next/head';
+import PropTypes from 'prop-types';
 
 const api_url = process.env.API_URL;
 const base_url = process.env.BASE_URL;
@@ -44,7 +45,6 @@ const styles = theme => ({
   },
   mainFeaturedPost: {
     position: 'relative',
-    backgroundColor: theme.palette.grey[800],
     color: theme.palette.common.white,
     marginBottom: theme.spacing(4),
     backgroundColor: 'transparent',
@@ -128,7 +128,7 @@ class Blog extends React.Component {
 
   infiniteScroll = async (inView, _) => {
     const { lastLength, limit } = this.state;
-    if (inView && lastLength != 0) {
+    if (inView && lastLength !== 0) {
       this.setState({ fetching: true });
       const res = await fetch(`${api_url}/posts?skip=${this.state.posts.length}&limit=${limit}`);
       const data = await res.json();
@@ -158,14 +158,14 @@ class Blog extends React.Component {
           <Grid container justify="center" alignItems="center">
             {
               this.props.authorization &&
-             <Link href="/blog/write/new">
-               <Avatar className={classes.greenAvatar}>
-                 <NewIcon />
-               </Avatar>
-             </Link>
+              <Link href="/blog/write/new">
+                <Avatar className={classes.greenAvatar}>
+                  <NewIcon />
+                </Avatar>
+              </Link>
             }
 
-            {this.props.user && <Avatar alt="User profile" src="/static/images/avatar/1.jpg" className={classes.avatar} src={this.props.user.profilePhotoUrl} />}
+            {this.props.user && <Avatar alt="User profile" className={classes.avatar} src={this.props.user.profilePhotoUrl} />}
             {
               !this.props.user &&
               <Link href={'/blog/login?redirectTo=/blog/write/new'}>
@@ -180,11 +180,11 @@ class Blog extends React.Component {
 
           {
             featurePost && featurePost.post &&
-            <Paper style = {{
+            <Paper style={{
               backgroundImage: `url(${featurePost.post.coverPhotoUrl})`
             }} className={classes.mainFeaturedPost}>
-              <div style={{backgroundColor: 'black', opacity: .7}} className={classes.overlay} />
-              <Grid style ={{minHeight: '400px'}} className="eph" container>
+              <div style={{ backgroundColor: 'black', opacity: .7 }} className={classes.overlay} />
+              <Grid style={{ minHeight: '400px' }} className="eph" container>
                 <Grid item md={6}>
                   <div className={classes.mainFeaturedPostContent}>
                     <Typography
@@ -203,7 +203,7 @@ class Blog extends React.Component {
                       {featurePost.post.description}
                     </Typography>
                     <Link style={{ color: '#08a6f3' }} href={`/blog/post/${featurePost.post._id}`}>
-                    Read Now
+                      Read Now
                     </Link>
                   </div>
                 </Grid>
@@ -220,5 +220,12 @@ class Blog extends React.Component {
   }
 }
 
+Blog.propTypes = {
+  posts: PropTypes.array.isRequired,
+  classes: PropTypes.object.isRequired,
+  authorization: PropTypes.string.isRequired,
+  user: PropTypes.object,
+  featurePost: PropTypes.object.isRequired,
+};
 
 export default withStyles(styles)(Blog);

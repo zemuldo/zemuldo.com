@@ -40,5 +40,11 @@
     "keyword-spacing": 1,
     "linebreak-style": 2,
     "no-useless-escape": 0
+  },
+  "settings": {
+    "react": {
+      "version": "detect", 
+      "flowVersion": "0.53"
+    }
   }
 }

@@ -18,6 +18,7 @@ import Avatar from '@material-ui/core/Avatar';
 import PublishIcon from '@material-ui/icons/Publish';
 import PublishDialogue from '../../../../src/components/publish_modal';
 import fetch from 'isomorphic-unfetch';
+import PropTypes from 'prop-types';
 
 
 const SimpleMDE = dynamic(import('react-simplemde-editor'), { ssr: false });
@@ -144,7 +145,7 @@ const useStyles = theme => ({
   },
 });
 
-class NewBlog extends React.Component {
+class EditBlog extends React.Component {
   constructor(props) {
     super(props);
     const {post, body} = props;
@@ -221,9 +222,9 @@ class NewBlog extends React.Component {
 
       })
     });
-    if (res.status != 200) return alert('Action failed');
+    if (res.status !== 200) return alert('Action failed');
     const data = await res.json();
-    if (parseInt(res.status) === 200) localStorage.removeItem(`state_${this.props.post._id}`);
+    if (parseInt(res.status, 10) === 200) localStorage.removeItem(`state_${this.props.post._id}`);
     Router.push(`/blog/post/${data.post._id}`);
     this.handleClosePublishDialogue();
   }
@@ -359,4 +360,13 @@ class NewBlog extends React.Component {
   }
 }
 
-export default withRouter(withStyles(useStyles)(NewBlog));
+EditBlog.propTypes = {
+  post: PropTypes.object.isRequired,
+  body: PropTypes.object.isRequired,
+  classes: PropTypes.object.isRequired,
+  authorization: PropTypes.string,
+  authorized: PropTypes.bool,
+  loggingIn: PropTypes.bool
+};
+
+export default withRouter(withStyles(useStyles)(EditBlog));

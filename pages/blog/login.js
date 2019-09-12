@@ -2,14 +2,14 @@ import React from 'react';
 import Head from 'next/head';
 import Grid from '@material-ui/core/Grid';
 import { Link } from '@material-ui/core';
-import Router, { withRouter } from 'next/router';
-
+import { withRouter } from 'next/router';
+import PropTypes from 'prop-types';
 import { parseCookies } from 'nookies';
 
 const api_url = process.env.API_URL;
 const base_url = process.env.BASE_URL;
 
-class Home extends React.Component {
+class Login extends React.Component {
   static getInitialProps(ctx) {
     const { query } = ctx;
     const { authorization } = parseCookies(ctx);
@@ -53,7 +53,7 @@ class Home extends React.Component {
       <React.Fragment>
 
         <Head>
-          <title>I'm Danstan ~ Zemuldo</title>
+          <title>I&apos;m Danstan ~ Zemuldo</title>
         </Head>
         <div
           className="home-section-background"
@@ -92,4 +92,10 @@ class Home extends React.Component {
   }
 }
 
-export default withRouter(Home);
+Login.propTypes = {
+  query: PropTypes.object.isRequired,
+  loggingIn: PropTypes.bool,
+  loggedIn: PropTypes.bool
+};
+
+export default withRouter(Login);
