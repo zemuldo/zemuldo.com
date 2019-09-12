@@ -41,12 +41,19 @@
     "prod": "NODE_ENV=production pm2 start  server.js --name Zemuldo.COM",
     "analyze": "BUNDLE_ANALYZE=both next build",
     "analyze:server": "BUNDLE_ANALYZE=server next build",
-    "analyze:browser": "BUNDLE_ANALYZE=browser next build"
+    "analyze:browser": "BUNDLE_ANALYZE=browser next build",
+    "storybook": "start-storybook -p 9001 -s ./ -c .storybook",
+    "build-storybook": "build-storybook"
   },
-  
   "devDependencies": {
+    "@babel/core": "^7.6.0",
+    "@storybook/addon-actions": "5.2.0-beta.48",
+    "@storybook/addon-links": "5.2.0-beta.48",
+    "@storybook/addons": "5.2.0-beta.48",
+    "@storybook/react": "5.2.0-beta.48",
     "@zeit/next-bundle-analyzer": "^0.1.2",
     "babel-eslint": "^10.0.3",
+    "babel-loader": "^8.0.6",
     "dotenv": "^8.1.0",
     "eslint": "^6.3.0",
     "eslint-plugin-import": "^2.18.2",
