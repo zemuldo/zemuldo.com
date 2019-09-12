@@ -100,7 +100,9 @@ export default function Tags({ onChange, defaultValue }) {
         { value: 'phoenix', label: 'Phoenix', color: 'orange' },
         { value: 'python', label: 'Python', color: '#fff305' },
         { value: 'sql', label: 'SQL', color: '#05daff' },
-        { value: 'data', label: 'Data', color: '#05daff' }
+        { value: 'data', label: 'Data', color: '#05daff' },
+        { value: 'kubernetes', label: 'Kubernetes', color: 'blue' },
+        { value: 'docker', label: 'Docker', color: '#08a6f3' }
     ]
 
     return (
