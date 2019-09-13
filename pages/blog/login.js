@@ -4,47 +4,12 @@ import Grid from '@material-ui/core/Grid';
 import { Link } from '@material-ui/core';
 import { withRouter } from 'next/router';
 import PropTypes from 'prop-types';
-import { parseCookies } from 'nookies';
+import IfLoggedIn from '../../src/components/IfLoggedIn';
 
 const api_url = process.env.API_URL;
 const base_url = process.env.BASE_URL;
 
 class Login extends React.Component {
-  static getInitialProps(ctx) {
-    const { query } = ctx;
-    const { authorization } = parseCookies(ctx);
-    const loinState = {
-      loggingIn: !!ctx.query.token
-    };
-    if (authorization) {
-      return {
-        ...loinState,
-        loggedIn: true,
-        authorization,
-        authorized: true,
-        query,
-      };
-    }
-    return {
-      ...loinState,
-      authorized: false,
-      query
-    };
-  }
-
-  componentDidMount() {
-    const { query, loggedIn } = this.props;
-
-    const authorization = localStorage.getItem('authorization');
-    if (authorization) window.location = query.redirectTo || '/blog';
-    if (loggedIn || query.token && query.redirectTo) {
-      if (query.token) localStorage.setItem('authorization', query.token);
-      window.location = query.redirectTo || '/blog';
-    } else if (loggedIn || query.token) {
-      if (query.token) localStorage.setItem('authorization', query.token);
-      window.location = '/blog';
-    }
-  }
 
   render() {
     const { query, loggingIn } = this.props;
@@ -98,4 +63,6 @@ Login.propTypes = {
   loggedIn: PropTypes.bool
 };
 
-export default withRouter(Login);
+export const LoginComponent = withRouter(Login);
+
+export default IfLoggedIn(withRouter(Login));

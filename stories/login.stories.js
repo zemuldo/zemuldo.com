@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import Login from '../pages/blog/login';
+import {LoginComponent} from '../pages/blog/login';
 
 const props = {
   router: {
@@ -21,9 +21,9 @@ const props_logingIn = {
 };
 
 storiesOf('Login', module)
-  .add('Not Loggedin', () => (
-    <Login {...props} />
+  .add('Not Logged', () => (
+    <LoginComponent {...props} />
   ))
   .add('Loging in', () => (
-    <Login {...props_logingIn} />
+    <LoginComponent {...props_logingIn} />
   ));

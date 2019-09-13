@@ -26,7 +26,6 @@ const useStyles = makeStyles(() => ({
   }
 }));
 
-
 export default function Blogs({ posts, infiniteScroll }) {
   const classes = useStyles();
 

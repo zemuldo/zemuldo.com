@@ -20,7 +20,7 @@ export default function PublishDialogue({open, handleClose, handlePublish, messa
         <DialogTitle id="alert-dialog-title">{'Please confirm'}</DialogTitle>
         <DialogContent>
           <DialogContentText id="alert-dialog-description">
-            {message || 'Are you sure this is ready for publishing? Clicking publish will publish this post. If you still have editing to do, just click Not yet!'}
+            {message}
           </DialogContentText>
         </DialogContent>
         <DialogActions>

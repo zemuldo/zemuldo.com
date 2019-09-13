@@ -199,6 +199,7 @@ class NewBlog extends React.Component {
     return (
       <React.Fragment>
         <PublishDialogue
+          message="Are you sure this is ready for publishing? Clicking publish will publish this post. If you still have editing to do, just click Not yet!"
           handlePublish={this.handlePublish}
           handleClose={this.handleClosePublishDialogue}
           open={publishDialogueOpen}
