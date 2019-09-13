@@ -1,4 +1,6 @@
-const withBundleAnalyzer = require('@zeit/next-bundle-analyzer');
+const withBundleAnalyzer = require('@next/bundle-analyzer')({
+  enabled: true,
+})
 const withCSS = require('@zeit/next-css');
 require('dotenv').config();
 const path = require('path');
