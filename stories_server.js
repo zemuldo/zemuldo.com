@@ -1,14 +1,19 @@
-const express = require('express')
-const path = require('path')
+const express = require('express');
+const path = require('path');
+const logger = require('./tools/logger')
 
-const app = express()
+require('dotenv').config();
 
-app.use('/static', express.static(path.join(__dirname, 'static')))
-app.use('/', express.static(path.join(__dirname, '.stories')))
+const app = express();
+
+const port = process.env.STORIES_SERVER_PORT;
+
+app.use('/site-stories/static', express.static(path.join(__dirname, 'static')));
+app.use('/site-stories/', express.static(path.join(__dirname, '.stories')));
 
 
-app.get('/', function(req, res) {
-    res.sendFile(path.join(__dirname+'/.stories/index.html'));
+app.get('/*', function(req, res) {
+  res.sendFile(path.join(__dirname+'/.stories/index.html'));
 });
 
-app.listen('9001')
+app.listen(port, logger.debug(`Stories Site Stared on PORT ${port}`));

@@ -3,7 +3,7 @@ const compression = require('compression');
 const next = require('next');
 const logger = require('./tools/logger');
 
-require('dotenv');
+require('dotenv').config();
 
 const dev = process.env.NODE_ENV !== 'production';
 const app = next({ dev });
