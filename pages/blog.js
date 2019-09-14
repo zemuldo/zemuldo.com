@@ -203,7 +203,7 @@ class Blog extends React.Component {
                       {featurePost.post.description}
                     </Typography>
                     <CustomLink style={{ color: '#08a6f3' }} href={`/blog/post/${featurePost.post._id}`}>
-                      Read Now
+                      <span>Read Now</span>
                     </CustomLink>
                   </div>
                 </Grid>
