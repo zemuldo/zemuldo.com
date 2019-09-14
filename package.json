@@ -42,7 +42,8 @@
     "analyze": "BUNDLE_ANALYZE=true next build",
     "storybook": "start-storybook -p 9001 -s ./ -c .storybook",
     "build-storybook": "build-storybook",
-    "test": "NODE_ENV=test jest"
+    "test": "NODE_ENV=test jest",
+    "test:watch": "NODE_ENV=test jest --watch"
   },
   "devDependencies": {
     "@babel/core": "^7.6.0",
