@@ -63,8 +63,8 @@ const blogs_props = {
         }
       ],
       _id: '5d79520a3d510b0fa5ae765a',
-      title: 'Hhhhhhow to use Ecto as a Query Schema validation library',
-      description: 'adsdasd asd asdsajdsadsad sdhasd asdasn dsahdsan dsagdsadasugd asdhsadshusbd as sdfdsf .   ',
+      title: 'How to make sure that you always succeede',
+      description: 'The best way to ensure that you succeede is to always love what you are doing and stay positive.',
       coverPhotoUrl: 'https://miro.medium.com/max/1200/1*vKd5tDJmDFznrOkMh1kQGg.png',
       authorId: '19955045',
       createdAt: '2019-09-11T19:59:06.903Z',
@@ -138,8 +138,8 @@ const blogs_props = {
         }
       ],
       _id: '5d79520a3d510b0fa5ae765a',
-      title: 'Hhhhhhow to use Ecto as a Query Schema validation library',
-      description: 'adsdasd asd asdsajdsadsad sdhasd asdasn dsahdsan dsagdsadasugd asdhsadshusbd as sdfdsf .   ',
+      title: 'How to make sure that you always succeede',
+      description: 'The best way to ensure that you succeede is to always love what you are doing and stay positive.',
       coverPhotoUrl: 'https://miro.medium.com/max/1200/1*vKd5tDJmDFznrOkMh1kQGg.png',
       authorId: '19955045',
       createdAt: '2019-09-11T19:59:06.903Z',
@@ -172,8 +172,8 @@ const blog_props = {
       }
     ],
     _id: '5d79520a3d510b0fa5ae765a',
-    title: 'Hhhhhhow to use Ecto as a Query Schema validation library',
-    description: 'adsdasd asd asdsajdsadsad sdhasd asdasn dsahdsan dsagdsadasugd asdhsadshusbd as sdfdsf .   ',
+    title: 'How to make sure that you always succeede',
+    description: 'The best way to ensure that you succeede is to always love what you are doing and stay positive.',
     coverPhotoUrl: 'https://miro.medium.com/max/1200/1*vKd5tDJmDFznrOkMh1kQGg.png',
     authorId: '19955045',
     createdAt: '2019-09-11T19:59:06.903Z',
@@ -229,8 +229,8 @@ const props_edit_blog = {
       }
     ],
     _id: '5d79520a3d510b0fa5ae765a',
-    title: 'Hhhhhhow to use Ecto as a Query Schema validation library',
-    description: 'adsdasd asd asdsajdsadsad sdhasd asdasn dsahdsan dsagdsadasugd asdhsadshusbd as sdfdsf .   ',
+    title: 'How to make sure that you always succeede',
+    description: 'The best way to ensure that you succeede is to always love what you are doing and stay positive.',
     coverPhotoUrl: 'https://miro.medium.com/max/1200/1*vKd5tDJmDFznrOkMh1kQGg.png',
     authorId: '19955045',
     createdAt: '2019-09-11T19:59:06.903Z',
