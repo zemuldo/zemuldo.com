@@ -27,8 +27,6 @@ app.get('/site-stories', (req, res) => {
     await $('head').prepend('<meta name="robots" content="index,follow" />');
     await $('head').prepend('<link rel="shortcut icon" href="/static/images/favicon/fav.png" />');
     await $('head').prepend('<link rel="apple-touch-icon" sizes="144x144" type="image/x-icon" href="/static/images/favicon/apple-touch-icon.png" />');
-    await $('head').prepend('<link rel="stylesheet" type="text/css" href="/static/css/plugin.css" />');
-    await $('head').prepend('<link rel="stylesheet" type="text/css" href="/static/css/style.css" />');
     await $('head').prepend('<meta name="description" content="Danstan Otieno Onyango is a talented Software Developer. Consult Danstan for your next project. Creative and Clean work for the growth and efficiency of your business.  " />');
     await $('head').prepend('<meta name="twitter:card" content="https://zemuldo.com/static/images/favicon/fav.png" />');
     await $('head').prepend('<meta name="twitter:site" content="@zemuldo" />');
