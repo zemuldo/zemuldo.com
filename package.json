@@ -42,7 +42,7 @@
     "prod": "NODE_ENV=production pm2 start  server.js --name Zemuldo.COM",
     "analyze": "BUNDLE_ANALYZE=true next build",
     "storybook": "start-storybook -p 9001 -s ./ -c .storybook",
-    "build-storybook": "build-storybook",
+    "build-storybook": "build-storybook -c .storybook -o .stories",
     "test": "NODE_ENV=test jest",
     "test:watch": "NODE_ENV=test jest --watch"
   },
