@@ -20,6 +20,7 @@
     "marked": "^0.7.0",
     "next": "latest",
     "next-cookies": "^1.1.2",
+    "next-nprogress": "^1.4.0",
     "nookies": "^2.0.8",
     "prop-types": "^15.7.2",
     "raw-loader": "^3.1.0",
@@ -73,5 +74,8 @@
     "moduleNameMapper": {
       "\\.(css|less|scss|sss|styl)$": "<rootDir>/node_modules/jest-css-modules"
     }
+  },
+  "resolutions": {
+    "styled-jsx": "3.0.0"
   }
 }
