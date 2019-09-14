@@ -33,7 +33,7 @@ export default function Blogs({ posts, _infiniteScroll }) {
     <Grid container spacing={4}>
       {posts.map(post => (
         <Grid style={{height: 'auto !important'}} item key={post._id} xs={12} md={6}>
-          <CardActionArea component="a" href={`/blog/${post._id}`}>
+          <CardActionArea component="a" href={`/blog/post/${post._id}`}>
             <Card className={classes.card}>
               <div className={classes.cardDetails}>
                 <CardContent>
