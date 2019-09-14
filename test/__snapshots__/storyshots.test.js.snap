@@ -74,7 +74,7 @@ Array [
       </div>
     </div>
     <h1>
-      How to make sure that you always succeede
+      How to make sure that you always succeed
     </h1>
     <br />
     <p>
@@ -267,7 +267,7 @@ Array [
             onFocus={[Function]}
             required={false}
             type="text"
-            value="How to make sure that you always succeede"
+            value="How to make sure that you always succeed"
           />
         </div>
       </div>
@@ -531,7 +531,7 @@ Array [
           onFocus={[Function]}
           required={false}
           rows="4"
-          value="The best way to ensure that you succeede is to always love what you are doing and stay positive."
+          value="The best way to ensure that you succeed is to always love what you are doing and stay positive."
         />
         <fieldset
           aria-hidden={true}
@@ -744,12 +744,12 @@ Array [
                 }
               }
             >
-              How to make sure that you always succeede
+              How to make sure that you always succeed
             </h1>
             <p
               className="MuiTypography-root MuiTypography-h5 MuiTypography-colorInherit MuiTypography-paragraph"
             >
-              The best way to ensure that you succeede is to always love what you are doing and stay positive.
+              The best way to ensure that you succeed is to always love what you are doing and stay positive.
             </p>
             <a
               href="/blog/post/5d79520a3d510b0fa5ae765a"
@@ -930,7 +930,7 @@ Array [
                   <h2
                     className="MuiTypography-root MuiTypography-h5"
                   >
-                    How to make sure that you always succeede
+                    How to make sure that you always succeed
                   </h2>
                   <h6
                     className="MuiTypography-root MuiTypography-subtitle1 MuiTypography-colorTextSecondary"
@@ -938,7 +938,7 @@ Array [
                   <p
                     className="MuiTypography-root MuiTypography-subtitle1 MuiTypography-paragraph"
                   >
-                    The best way to ensure that you succeede is to always love what you are doing and stay positive.
+                    The best way to ensure that you succeed is to always love what you are doing and stay positive.
                   </p>
                 </div>
               </div>

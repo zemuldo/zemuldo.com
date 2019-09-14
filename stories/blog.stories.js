@@ -5,9 +5,30 @@ import BlogHome from '../pages/blog';
 import Blog from '../pages/blog/post/[meta]';
 import BlogEdit from '../pages/blog/post/[meta]/edit';
 
-localStorage.setItem('authorization', 'some token');
-localStorage.setItem('state_5d79520a3d510b0fa5ae765a', '{"postTitle":"How to make sure that you always succeede","body":"Most people start off with little or low self-confidence, but as a result of their own efforts, they become bold and brave and outgoing. And we’ve discovered that if you do the same things that other self-confident men and women do, you, too, will experience the same feelings and get the same results.\r\n\r\nThe key is to be true to yourself, to be true to the very best that is in you, and to live your life consistent with your highest values and aspirations. This is the only way to truly learn how to believe in yourself.\r\n\r\nTake some time to think about who you are and what you believe in and what is important to you.\r\n\r\nIf you want to change your life by becoming an author, believe that you can do it. The hardest step in that journey is finding the confidence to learn how to write a book. Once you get a hold of a proven system to plan, produce, and publish your work, the larger goal becomes easier to attain.\r\n\r\nBy believing in yourself, you will find the courage to take immediate action on your goals. And this, as you may know, is the key to success!\r\n\r\nI encourage you to never compromise your integrity by trying to be or say or feel something that is not true for you.\r\n\r\nAnd – more importantly – never compromise your potential to grow due to self-limiting doubts. Instead, embrace your confidence and believe in yourself because you really can do anything you put your mind to.","tags":[{"value":"elixir","label":"Elixir","color":"#a767f5"},{"value":"ecto","label":"Ecto","color":"#40a832"}],"description":"The best way to ensure that you succeede is to always love what you are doing and stay positive.","coverPhotoUrl":"https://miro.medium.com/max/1200/1*vKd5tDJmDFznrOkMh1kQGg.png","publishDialogueOpen":false,"saving":true}')
+const post = {
+  'postTitle': 'How to make sure that you always succeed',
+  'body': 'Most people start off with little or low self-confidence, but as a result of their own efforts, they become bold and brave and outgoing. And we’ve discovered that if you do the same things that other self-confident men and women do, you, too, will experience the same feelings and get the same results.\r\n\r\nThe key is to be true to yourself, to be true to the very best that is in you, and to live your life consistent with your highest values and aspirations. This is the only way to truly learn how to believe in yourself.\r\n\r\nTake some time to think about who you are and what you believe in and what is important to you.\r\n\r\nIf you want to change your life by becoming an author, believe that you can do it. The hardest step in that journey is finding the confidence to learn how to write a book. Once you get a hold of a proven system to plan, produce, and publish your work, the larger goal becomes easier to attain.\r\n\r\nBy believing in yourself, you will find the courage to take immediate action on your goals. And this, as you may know, is the key to success!\r\n\r\nI encourage you to never compromise your integrity by trying to be or say or feel something that is not true for you.\r\n\r\nAnd – more importantly – never compromise your potential to grow due to self-limiting doubts. Instead, embrace your confidence and believe in yourself because you really can do anything you put your mind to.',
+  'tags': [
+    {
+      'value': 'elixir',
+      'label': 'Elixir',
+      'color': '#a767f5'
+    },
+    {
+      'value': 'ecto',
+      'label': 'Ecto',
+      'color': '#40a832'
+    }
+  ],
+  'description': 'The best way to ensure that you succeed is to always love what you are doing and stay positive.',
+  'coverPhotoUrl': 'https://miro.medium.com/max/1200/1*vKd5tDJmDFznrOkMh1kQGg.png',
+  'publishDialogueOpen': false,
+  'saving': true
+};
 
+
+localStorage.setItem('authorization', 'some token');
+localStorage.setItem('state_5d79520a3d510b0fa5ae765a', JSON.stringify(post));
 const props = {
   classes: {
     greenAvatar: 'NewBlog-greenAvatar-1',
@@ -64,8 +85,8 @@ const blogs_props = {
         }
       ],
       _id: '5d79520a3d510b0fa5ae765a',
-      title: 'How to make sure that you always succeede',
-      description: 'The best way to ensure that you succeede is to always love what you are doing and stay positive.',
+      title: 'How to make sure that you always succeed',
+      description: 'The best way to ensure that you succeed is to always love what you are doing and stay positive.',
       coverPhotoUrl: 'https://miro.medium.com/max/1200/1*vKd5tDJmDFznrOkMh1kQGg.png',
       authorId: '19955045',
       createdAt: '2019-09-11T19:59:06.903Z',
@@ -139,8 +160,8 @@ const blogs_props = {
         }
       ],
       _id: '5d79520a3d510b0fa5ae765a',
-      title: 'How to make sure that you always succeede',
-      description: 'The best way to ensure that you succeede is to always love what you are doing and stay positive.',
+      title: 'How to make sure that you always succeed',
+      description: 'The best way to ensure that you succeed is to always love what you are doing and stay positive.',
       coverPhotoUrl: 'https://miro.medium.com/max/1200/1*vKd5tDJmDFznrOkMh1kQGg.png',
       authorId: '19955045',
       createdAt: '2019-09-11T19:59:06.903Z',
@@ -173,8 +194,8 @@ const blog_props = {
       }
     ],
     _id: '5d79520a3d510b0fa5ae765a',
-    title: 'How to make sure that you always succeede',
-    description: 'The best way to ensure that you succeede is to always love what you are doing and stay positive.',
+    title: 'How to make sure that you always succeed',
+    description: 'The best way to ensure that you succeed is to always love what you are doing and stay positive.',
     coverPhotoUrl: 'https://miro.medium.com/max/1200/1*vKd5tDJmDFznrOkMh1kQGg.png',
     authorId: '19955045',
     createdAt: '2019-09-11T19:59:06.903Z',
@@ -230,8 +251,8 @@ const props_edit_blog = {
       }
     ],
     _id: '5d79520a3d510b0fa5ae765a',
-    title: 'How to make sure that you always succeede',
-    description: 'The best way to ensure that you succeede is to always love what you are doing and stay positive.',
+    title: 'How to make sure that you always succeed',
+    description: 'The best way to ensure that you succeed is to always love what you are doing and stay positive.',
     coverPhotoUrl: 'https://miro.medium.com/max/1200/1*vKd5tDJmDFznrOkMh1kQGg.png',
     authorId: '19955045',
     createdAt: '2019-09-11T19:59:06.903Z',
