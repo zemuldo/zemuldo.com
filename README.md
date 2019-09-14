@@ -2,7 +2,7 @@
 
 This is my website : https://zemuldo.com
 
-Component Stoeies : https://zemuldo.com/site-stories
+Component Stories : https://zemuldo.com/site-stories
 
 Uses :
 - Reactjs
