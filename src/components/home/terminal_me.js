@@ -44,11 +44,12 @@ export default function TerminalMe () {
       <div style={classes.text_editor_wrap}>
         <hr />
         <div style={classes.text_body}>
+          {process.env.NODE_ENV !== 'test' &&
           <Typed
             style={{ color: 'white' }}
             strings={type_message()}
             typeSpeed={120}
-          />
+          />}
         </div>
       </div>
     </div>

@@ -41,7 +41,8 @@
     "prod": "NODE_ENV=production pm2 start  server.js --name Zemuldo.COM",
     "analyze": "BUNDLE_ANALYZE=true next build",
     "storybook": "start-storybook -p 9001 -s ./ -c .storybook",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "test": "NODE_ENV=test jest"
   },
   "devDependencies": {
     "@babel/core": "^7.6.0",
@@ -53,12 +54,23 @@
     "@storybook/react": "5.2.0-beta.48",
     "babel-eslint": "^10.0.3",
     "babel-loader": "^8.0.6",
+    "babel-plugin-dynamic-import-node": "^2.3.0",
+    "babel-plugin-require-context-hook": "^1.0.0",
     "dotenv": "^8.1.0",
     "eslint": "^6.3.0",
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-react": "^7.14.3",
     "jest": "^24.9.0",
+    "jest-css-modules": "^2.1.0",
     "react-test-renderer": "^16.9.0",
     "webpack-bundle-analyzer": ">=3.3.2"
+  },
+  "jest": {
+    "setupFiles": [
+      "<rootDir>/.jest/register-context.js"
+    ],
+    "moduleNameMapper": {
+      "\\.(css|less|scss|sss|styl)$": "<rootDir>/node_modules/jest-css-modules"
+    }
   }
 }

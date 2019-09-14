@@ -1,0 +1,2101 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Blog Blog 1`] = `
+Array [
+  <div
+    className="MuiContainer-root MuiContainer-maxWidthMd"
+    style={
+      Object {
+        "color": "white",
+        "fontFamily": "'Courier New', Courier, monospace",
+        "fontSize": "18px",
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "margin": "10px 0px 10px 0px",
+        }
+      }
+    >
+      <div
+        className="MuiGrid-root MuiGrid-container"
+      >
+        <div
+          className="MuiAvatar-root makeStyles-greenAvatar-508 MuiAvatar-colorDefault"
+          onClick={[Function]}
+        >
+          <svg
+            aria-hidden="true"
+            className="MuiSvgIcon-root"
+            focusable="false"
+            role="presentation"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+    <br />
+    <div
+      className="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-center MuiGrid-justify-xs-center"
+    >
+      <div
+        className="MuiAvatar-root Blog-twitterAvatar-498 Blog-twitterAvatar-3 MuiAvatar-colorDefault"
+        onClick={[Function]}
+      >
+        <i
+          className="fa fa-twitter"
+        />
+      </div>
+      <div
+        className="MuiAvatar-root Blog-fbAvatar-499 Blog-fbAvatar-4 MuiAvatar-colorDefault"
+        onClick={[Function]}
+      >
+        <i
+          className="fa fa-facebook"
+        />
+      </div>
+      <div
+        className="MuiAvatar-root Blog-linkedinAvatar-500 Blog-linkedinAvatar-5 MuiAvatar-colorDefault"
+        onClick={[Function]}
+      >
+        <i
+          className="fa fa-linkedin"
+        />
+      </div>
+    </div>
+    <h1>
+      Hhhhhhow to use Ecto as a Query Schema validation library
+    </h1>
+    <br />
+    <p>
+      Wednesday, September 11th, 2019
+    </p>
+    <button>
+      Elixir
+    </button>
+    <button>
+      Ecto
+    </button>
+  </div>,
+  <div
+    className="MuiContainer-root MuiContainer-maxWidthLg"
+  >
+    <img
+      src="https://miro.medium.com/max/1200/1*vKd5tDJmDFznrOkMh1kQGg.png"
+      style={
+        Object {
+          "maxHeight": "600px",
+        }
+      }
+    />
+  </div>,
+  <div
+    className="MuiContainer-root MuiContainer-maxWidthMd"
+    style={
+      Object {
+        "color": "white",
+        "fontFamily": "'Courier New', Courier, monospace",
+        "fontSize": "18px",
+      }
+    }
+  >
+    <br />
+    <Dynamic
+      innerHTML={true}
+    >
+      &lt;p&gt;asdasdsad sdsdfsdd ddfdfdfdfdfdfdfddrrrrr&lt;/p&gt;
+
+    </Dynamic>
+  </div>,
+  <footer
+    className="makeStyles-footer-632"
+  >
+    <div
+      className="MuiContainer-root MuiContainer-maxWidthLg"
+    >
+      <h6
+        className="MuiTypography-root MuiTypography-h6 MuiTypography-gutterBottom MuiTypography-alignCenter"
+      >
+        Zemuldo Blog
+      </h6>
+      <p
+        className="MuiTypography-root MuiTypography-subtitle1 MuiTypography-alignCenter"
+      >
+        Writing more cool stuff everyday.
+      </p>
+      <p
+        className="MuiTypography-root MuiTypography-body2 MuiTypography-alignCenter"
+      >
+        Copyright © 
+        <a
+          className="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorInherit"
+          href="https://zemuldo.com/"
+          onBlur={[Function]}
+          onFocus={[Function]}
+        >
+          Zemuldo
+        </a>
+         
+        2019
+      </p>
+    </div>
+  </footer>,
+]
+`;
+
+exports[`Storyshots Blog Blog Edit 1`] = `
+Array [
+  <div />,
+  <div
+    className="MuiContainer-root MuiContainer-maxWidthMd"
+    style={
+      Object {
+        "color": "white",
+        "fontFamily": "'Courier New', Courier, monospace",
+        "fontSize": "18px",
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "margin": "10px 0px 10px 0px",
+        }
+      }
+    >
+      <div
+        className="MuiGrid-root MuiGrid-container"
+      >
+        <div
+          className="MuiAvatar-root makeStyles-greenAvatar-700 MuiAvatar-colorDefault"
+          onClick={[Function]}
+        >
+          <svg
+            aria-hidden="true"
+            className="MuiSvgIcon-root"
+            focusable="false"
+            role="presentation"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div
+      className="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-center MuiGrid-justify-xs-center"
+    >
+      <div
+        className="MuiAvatar-root EditBlog-greenAvatar-669 EditBlog-greenAvatar-1 MuiAvatar-colorDefault"
+        onClick={[Function]}
+      >
+        <svg
+          aria-hidden="true"
+          className="MuiSvgIcon-root"
+          focusable="false"
+          role="presentation"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M17 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V7l-4-4zm-5 16c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3zm3-10H5V5h10v4z"
+          />
+        </svg>
+      </div>
+      <div
+        className="MuiAvatar-root EditBlog-greenAvatar-669 EditBlog-greenAvatar-1 MuiAvatar-colorDefault"
+        onClick={[Function]}
+      >
+        <svg
+          aria-hidden="true"
+          className="MuiSvgIcon-root"
+          focusable="false"
+          role="presentation"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M5 4v2h14V4H5zm0 10h4v6h6v-6h4l-7-7-7 7z"
+          />
+        </svg>
+      </div>
+    </div>
+    <div
+      className="EditBlog-root-670 EditBlog-root-2"
+    >
+      <div
+        className="MuiFormControl-root MuiTextField-root MuiFormControl-fullWidth"
+      >
+        <label
+          className="MuiFormLabel-root MuiInputLabel-root EditBlog-floatingLabelFocusStyle-671 EditBlog-floatingLabelFocusStyle-3 MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-filled"
+          data-shrink={true}
+          htmlFor="postTitle"
+        >
+          Post Title
+        </label>
+        <div
+          className="MuiInputBase-root MuiInput-root MuiInput-underline EditBlog-materialInput-672 EditBlog-materialInput-4 MuiInputBase-fullWidth MuiInput-fullWidth MuiInputBase-formControl MuiInput-formControl"
+          onClick={[Function]}
+        >
+          <input
+            aria-invalid={false}
+            className="MuiInputBase-input MuiInput-input"
+            disabled={false}
+            id="postTitle"
+            onBlur={[Function]}
+            onChange={[Function]}
+            onFocus={[Function]}
+            required={false}
+            type="text"
+            value="Hhhhhhow to use Ecto as a Query Schema validation library"
+          />
+        </div>
+      </div>
+    </div>
+    <br />
+    <div
+      className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2"
+    >
+      <div
+        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6"
+      >
+        <div
+          className="MuiFormControl-root MuiTextField-root MuiFormControl-fullWidth"
+        >
+          <label
+            className="MuiFormLabel-root MuiInputLabel-root EditBlog-floatingLabelFocusStyle-671 EditBlog-floatingLabelFocusStyle-3 MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-filled"
+            data-shrink={true}
+            htmlFor="coverPhotoUrl"
+          >
+            Cover Photo Url
+          </label>
+          <div
+            className="MuiInputBase-root MuiInput-root MuiInput-underline EditBlog-materialInput-672 EditBlog-materialInput-4 MuiInputBase-fullWidth MuiInput-fullWidth MuiInputBase-formControl MuiInput-formControl"
+            onClick={[Function]}
+          >
+            <input
+              aria-invalid={false}
+              className="MuiInputBase-input MuiInput-input"
+              disabled={false}
+              id="coverPhotoUrl"
+              onBlur={[Function]}
+              onChange={[Function]}
+              onFocus={[Function]}
+              required={false}
+              type="text"
+              value="https://miro.medium.com/max/1200/1*vKd5tDJmDFznrOkMh1kQGg.png"
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6"
+      >
+        <div
+          style={
+            Object {
+              "marginTop": "26px",
+            }
+          }
+        >
+          <div
+            className="basic-multi-select css-2b097c-container"
+            onKeyDown={[Function]}
+          >
+            <div
+              className="select__control css-1b8hiff-control"
+              onMouseDown={[Function]}
+              onTouchEnd={[Function]}
+            >
+              <div
+                className="select__value-container select__value-container--is-multi select__value-container--has-value css-1hwfws3"
+              >
+                <div
+                  className="css-1qjbge0-multiValue select__multi-value"
+                >
+                  <div
+                    className="css-o7aazd select__multi-value__label"
+                  >
+                    Elixir
+                  </div>
+                  <div
+                    className="css-nzz019 select__multi-value__remove"
+                    onClick={[Function]}
+                    onMouseDown={[Function]}
+                    onTouchEnd={[Function]}
+                  >
+                    <svg
+                      aria-hidden="true"
+                      className="css-tj5bde-Svg"
+                      focusable="false"
+                      height={14}
+                      viewBox="0 0 20 20"
+                      width={14}
+                    >
+                      <path
+                        d="M14.348 14.849c-0.469 0.469-1.229 0.469-1.697 0l-2.651-3.030-2.651 3.029c-0.469 0.469-1.229 0.469-1.697 0-0.469-0.469-0.469-1.229 0-1.697l2.758-3.15-2.759-3.152c-0.469-0.469-0.469-1.228 0-1.697s1.228-0.469 1.697 0l2.652 3.031 2.651-3.031c0.469-0.469 1.228-0.469 1.697 0s0.469 1.229 0 1.697l-2.758 3.152 2.758 3.15c0.469 0.469 0.469 1.229 0 1.698z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+                <div
+                  className="css-1l0baik-multiValue select__multi-value"
+                >
+                  <div
+                    className="css-193uw0p select__multi-value__label"
+                  >
+                    Ecto
+                  </div>
+                  <div
+                    className="css-x1nfmn select__multi-value__remove"
+                    onClick={[Function]}
+                    onMouseDown={[Function]}
+                    onTouchEnd={[Function]}
+                  >
+                    <svg
+                      aria-hidden="true"
+                      className="css-tj5bde-Svg"
+                      focusable="false"
+                      height={14}
+                      viewBox="0 0 20 20"
+                      width={14}
+                    >
+                      <path
+                        d="M14.348 14.849c-0.469 0.469-1.229 0.469-1.697 0l-2.651-3.030-2.651 3.029c-0.469 0.469-1.229 0.469-1.697 0-0.469-0.469-0.469-1.229 0-1.697l2.758-3.15-2.759-3.152c-0.469-0.469-0.469-1.228 0-1.697s1.228-0.469 1.697 0l2.652 3.031 2.651-3.031c0.469-0.469 1.228-0.469 1.697 0s0.469 1.229 0 1.697l-2.758 3.152 2.758 3.15c0.469 0.469 0.469 1.229 0 1.698z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+                <div
+                  className="css-i2lz7n-Input"
+                >
+                  <div
+                    className="select__input"
+                    style={
+                      Object {
+                        "display": "inline-block",
+                      }
+                    }
+                  >
+                    <input
+                      aria-autocomplete="list"
+                      autoCapitalize="none"
+                      autoComplete="off"
+                      autoCorrect="off"
+                      disabled={false}
+                      id="react-select-select-tags-input"
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      onFocus={[Function]}
+                      spellCheck="false"
+                      style={
+                        Object {
+                          "background": 0,
+                          "border": 0,
+                          "boxSizing": "content-box",
+                          "color": "inherit",
+                          "fontSize": "inherit",
+                          "label": "input",
+                          "opacity": 1,
+                          "outline": 0,
+                          "padding": 0,
+                          "width": "1px",
+                        }
+                      }
+                      tabIndex="0"
+                      type="text"
+                      value=""
+                    />
+                    <div
+                      style={
+                        Object {
+                          "height": 0,
+                          "left": 0,
+                          "overflow": "scroll",
+                          "position": "absolute",
+                          "top": 0,
+                          "visibility": "hidden",
+                          "whiteSpace": "pre",
+                        }
+                      }
+                    >
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                className="select__indicators css-1g48xl4-IndicatorsContainer"
+              >
+                <div
+                  aria-hidden="true"
+                  className="select__indicator select__clear-indicator css-tlfecz-indicatorContainer"
+                  onMouseDown={[Function]}
+                  onTouchEnd={[Function]}
+                >
+                  <svg
+                    aria-hidden="true"
+                    className="css-tj5bde-Svg"
+                    focusable="false"
+                    height={20}
+                    viewBox="0 0 20 20"
+                    width={20}
+                  >
+                    <path
+                      d="M14.348 14.849c-0.469 0.469-1.229 0.469-1.697 0l-2.651-3.030-2.651 3.029c-0.469 0.469-1.229 0.469-1.697 0-0.469-0.469-0.469-1.229 0-1.697l2.758-3.15-2.759-3.152c-0.469-0.469-0.469-1.228 0-1.697s1.228-0.469 1.697 0l2.652 3.031 2.651-3.031c0.469-0.469 1.228-0.469 1.697 0s0.469 1.229 0 1.697l-2.758 3.152 2.758 3.15c0.469 0.469 0.469 1.229 0 1.698z"
+                    />
+                  </svg>
+                </div>
+                <span
+                  className="select__indicator-separator css-1okebmr-indicatorSeparator"
+                />
+                <div
+                  aria-hidden="true"
+                  className="select__indicator select__dropdown-indicator css-tlfecz-indicatorContainer"
+                  onMouseDown={[Function]}
+                  onTouchEnd={[Function]}
+                >
+                  <svg
+                    aria-hidden="true"
+                    className="css-tj5bde-Svg"
+                    focusable="false"
+                    height={20}
+                    viewBox="0 0 20 20"
+                    width={20}
+                  >
+                    <path
+                      d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div>
+              <input
+                name="colors"
+                type="hidden"
+                value="elixir"
+              />
+              <input
+                name="colors"
+                type="hidden"
+                value="ecto"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br />
+    <div
+      className="MuiFormControl-root MuiTextField-root EditBlog-materialTextArea-673 EditBlog-materialTextArea-5 MuiFormControl-marginNormal MuiFormControl-fullWidth"
+    >
+      <label
+        className="MuiFormLabel-root MuiInputLabel-root EditBlog-floatingLabelFocusStyle-671 EditBlog-floatingLabelFocusStyle-3 MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+        data-shrink={true}
+        htmlFor="description"
+      >
+        Post Description
+      </label>
+      <div
+        className="MuiInputBase-root MuiOutlinedInput-root EditBlog-materialTextArea-673 EditBlog-materialTextArea-5 MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-multiline MuiOutlinedInput-multiline"
+        onClick={[Function]}
+      >
+        <textarea
+          aria-invalid={false}
+          className="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputMultiline MuiOutlinedInput-inputMultiline"
+          disabled={false}
+          id="description"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          required={false}
+          rows="4"
+          value="adsdasd asd asdsajdsadsad sdhasd asdasn dsahdsan dsagdsadasugd asdhsadshusbd as sdfdsf .   "
+        />
+        <fieldset
+          aria-hidden={true}
+          className="PrivateNotchedOutline-root-893 MuiOutlinedInput-notchedOutline"
+          style={
+            Object {
+              "paddingLeft": 8,
+            }
+          }
+        >
+          <legend
+            className="PrivateNotchedOutline-legend-894"
+            style={
+              Object {
+                "width": 0,
+              }
+            }
+          >
+            <span
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": "&#8203;",
+                }
+              }
+            />
+          </legend>
+        </fieldset>
+      </div>
+    </div>
+  </div>,
+  <div
+    className="MuiContainer-root blog-md MuiContainer-maxWidthMd"
+    style={
+      Object {
+        "color": "white",
+        "fontFamily": "'monospaced courier-new', Poppins, sans-serif !important",
+      }
+    }
+  >
+    <h3>
+      Post Body Markdown
+    </h3>
+    <Dynamic
+      onChange={[Function]}
+      value="asdasdsad sdsdfsdd ddfdfdfdfdfdfdfddrrrrr"
+    />
+  </div>,
+  <footer
+    className="makeStyles-footer-895"
+  >
+    <div
+      className="MuiContainer-root MuiContainer-maxWidthLg"
+    >
+      <h6
+        className="MuiTypography-root MuiTypography-h6 MuiTypography-gutterBottom MuiTypography-alignCenter"
+      >
+        Zemuldo Blog
+      </h6>
+      <p
+        className="MuiTypography-root MuiTypography-subtitle1 MuiTypography-alignCenter"
+      >
+        Writing more cool stuff everyday.
+      </p>
+      <p
+        className="MuiTypography-root MuiTypography-body2 MuiTypography-alignCenter"
+      >
+        Copyright © 
+        <a
+          className="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorInherit"
+          href="https://zemuldo.com/"
+          onBlur={[Function]}
+          onFocus={[Function]}
+        >
+          Zemuldo
+        </a>
+         
+        2019
+      </p>
+    </div>
+  </footer>,
+]
+`;
+
+exports[`Storyshots Blog Blogs 1`] = `
+Array [
+  <div
+    className="MuiContainer-root MuiContainer-maxWidthMd"
+    style={
+      Object {
+        "color": "white",
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "margin": "10px 0px 10px 0px",
+        }
+      }
+    >
+      <div
+        className="MuiGrid-root MuiGrid-container"
+      >
+        <div
+          className="MuiAvatar-root makeStyles-greenAvatar-24 MuiAvatar-colorDefault"
+          onClick={[Function]}
+        >
+          <svg
+            aria-hidden="true"
+            className="MuiSvgIcon-root"
+            focusable="false"
+            role="presentation"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div
+      className="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-center MuiGrid-justify-xs-center"
+    >
+      <a
+        className="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
+        href="/blog/login?redirectTo=/blog/write/new"
+        onBlur={[Function]}
+        onFocus={[Function]}
+      >
+        <div
+          className="MuiAvatar-root Blog-greenAvatar-1 Blog-greenAvatar-1 MuiAvatar-colorDefault"
+        >
+          <svg
+            aria-hidden="true"
+            className="MuiSvgIcon-root"
+            focusable="false"
+            role="presentation"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M13 7h-2v4H7v2h4v4h2v-4h4v-2h-4V7zm-1-5C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"
+            />
+          </svg>
+        </div>
+      </a>
+    </div>
+  </div>,
+  <div
+    className="MuiContainer-root MuiContainer-maxWidthMd"
+    style={
+      Object {
+        "color": "white",
+      }
+    }
+  >
+    <div
+      className="MuiPaper-root MuiPaper-elevation1 Blog-mainFeaturedPost-7 Blog-mainFeaturedPost-7 MuiPaper-rounded"
+      style={
+        Object {
+          "backgroundImage": "url(https://miro.medium.com/max/1200/1*vKd5tDJmDFznrOkMh1kQGg.png)",
+        }
+      }
+    >
+      <div
+        className="Blog-overlay-8 Blog-overlay-8"
+        style={
+          Object {
+            "backgroundColor": "black",
+            "opacity": 0.7,
+          }
+        }
+      />
+      <div
+        className="MuiGrid-root eph MuiGrid-container"
+        style={
+          Object {
+            "minHeight": "400px",
+          }
+        }
+      >
+        <div
+          className="MuiGrid-root MuiGrid-item MuiGrid-grid-md-6"
+        >
+          <div
+            className="Blog-mainFeaturedPostContent-9 Blog-mainFeaturedPostContent-9"
+          >
+            <h1
+              className="MuiTypography-root MuiTypography-h3 MuiTypography-colorInherit MuiTypography-gutterBottom"
+              style={
+                Object {
+                  "color": "#08a6f3",
+                  "fontFamily": "'Courier New', Courier, monospace",
+                }
+              }
+            >
+              Hhhhhhow to use Ecto as a Query Schema validation library
+            </h1>
+            <p
+              className="MuiTypography-root MuiTypography-h5 MuiTypography-colorInherit MuiTypography-paragraph"
+            >
+              adsdasd asd asdsajdsadsad sdhasd asdasn dsahdsan dsagdsadasugd asdhsadshusbd as sdfdsf .   
+            </p>
+            <a
+              className="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
+              href="/blog/post/5d79520a3d510b0fa5ae765a"
+              onBlur={[Function]}
+              onFocus={[Function]}
+              style={
+                Object {
+                  "color": "#08a6f3",
+                }
+              }
+            >
+              Read Now
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4"
+    >
+      <div
+        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-6"
+        style={
+          Object {
+            "height": "auto !important",
+          }
+        }
+      >
+        <a
+          className="MuiButtonBase-root MuiCardActionArea-root"
+          href="/blog/5d6754fefe8b7e3fc0707fce"
+          onBlur={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          tabIndex={0}
+        >
+          <div
+            className="MuiPaper-root MuiPaper-elevation1 MuiCard-root makeStyles-card-211 MuiPaper-rounded"
+          >
+            <div
+              className="makeStyles-cardDetails-212"
+            >
+              <div
+                className="MuiCardContent-root"
+              >
+                <h2
+                  className="MuiTypography-root MuiTypography-h5"
+                >
+                  How to use Ecto as a Query Schema validation library
+                </h2>
+                <h6
+                  className="MuiTypography-root MuiTypography-subtitle1 MuiTypography-colorTextSecondary"
+                />
+                <p
+                  className="MuiTypography-root MuiTypography-subtitle1 MuiTypography-paragraph"
+                >
+                  Ecto is one of the greatest libraries in the Elixir community. It comes with Phoenix together.
+                </p>
+              </div>
+            </div>
+          </div>
+          <span
+            className="MuiCardActionArea-focusHighlight"
+          />
+          <span
+            className="MuiTouchRipple-root"
+          />
+        </a>
+      </div>
+      <div
+        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-6"
+        style={
+          Object {
+            "height": "auto !important",
+          }
+        }
+      >
+        <a
+          className="MuiButtonBase-root MuiCardActionArea-root"
+          href="/blog/5d7951be3d510b0fa5ae7658"
+          onBlur={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          tabIndex={0}
+        >
+          <div
+            className="MuiPaper-root MuiPaper-elevation1 MuiCard-root makeStyles-card-211 MuiPaper-rounded"
+          >
+            <div
+              className="makeStyles-cardDetails-212"
+            >
+              <div
+                className="MuiCardContent-root"
+              >
+                <h2
+                  className="MuiTypography-root MuiTypography-h5"
+                >
+                  How to use Ecto as a Query Schema validation library
+                </h2>
+                <h6
+                  className="MuiTypography-root MuiTypography-subtitle1 MuiTypography-colorTextSecondary"
+                />
+                <p
+                  className="MuiTypography-root MuiTypography-subtitle1 MuiTypography-paragraph"
+                >
+                  Ecto is one of the greatest libraries in the Elixir community. It comes with Phoenix together.
+                </p>
+              </div>
+            </div>
+          </div>
+          <span
+            className="MuiCardActionArea-focusHighlight"
+          />
+          <span
+            className="MuiTouchRipple-root"
+          />
+        </a>
+      </div>
+      <div
+        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-6"
+        style={
+          Object {
+            "height": "auto !important",
+          }
+        }
+      >
+        <a
+          className="MuiButtonBase-root MuiCardActionArea-root"
+          href="/blog/5d79520a3d510b0fa5ae765a"
+          onBlur={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          tabIndex={0}
+        >
+          <div
+            className="MuiPaper-root MuiPaper-elevation1 MuiCard-root makeStyles-card-211 MuiPaper-rounded"
+          >
+            <div
+              className="makeStyles-cardDetails-212"
+            >
+              <div
+                className="MuiCardContent-root"
+              >
+                <h2
+                  className="MuiTypography-root MuiTypography-h5"
+                >
+                  Hhhhhhow to use Ecto as a Query Schema validation library
+                </h2>
+                <h6
+                  className="MuiTypography-root MuiTypography-subtitle1 MuiTypography-colorTextSecondary"
+                />
+                <p
+                  className="MuiTypography-root MuiTypography-subtitle1 MuiTypography-paragraph"
+                >
+                  adsdasd asd asdsajdsadsad sdhasd asdasn dsahdsan dsagdsadasugd asdhsadshusbd as sdfdsf .   
+                </p>
+              </div>
+            </div>
+          </div>
+          <span
+            className="MuiCardActionArea-focusHighlight"
+          />
+          <span
+            className="MuiTouchRipple-root"
+          />
+        </a>
+      </div>
+    </div>
+    <br />
+  </div>,
+  <footer
+    className="makeStyles-footer-222"
+  >
+    <div
+      className="MuiContainer-root MuiContainer-maxWidthLg"
+    >
+      <h6
+        className="MuiTypography-root MuiTypography-h6 MuiTypography-gutterBottom MuiTypography-alignCenter"
+      >
+        Zemuldo Blog
+      </h6>
+      <p
+        className="MuiTypography-root MuiTypography-subtitle1 MuiTypography-alignCenter"
+      >
+        Writing more cool stuff everyday.
+      </p>
+      <p
+        className="MuiTypography-root MuiTypography-body2 MuiTypography-alignCenter"
+      >
+        Copyright © 
+        <a
+          className="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorInherit"
+          href="https://zemuldo.com/"
+          onBlur={[Function]}
+          onFocus={[Function]}
+        >
+          Zemuldo
+        </a>
+         
+        2019
+      </p>
+    </div>
+  </footer>,
+]
+`;
+
+exports[`Storyshots Blog New 1`] = `
+Array [
+  <div />,
+  <div
+    className="MuiContainer-root MuiContainer-maxWidthMd"
+    style={
+      Object {
+        "color": "white",
+        "fontFamily": "'Courier New', Courier, monospace",
+        "fontSize": "18px",
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "margin": "10px 0px 10px 0px",
+        }
+      }
+    >
+      <div
+        className="MuiGrid-root MuiGrid-container"
+      >
+        <div
+          className="MuiAvatar-root makeStyles-greenAvatar-264 MuiAvatar-colorDefault"
+          onClick={[Function]}
+        >
+          <svg
+            aria-hidden="true"
+            className="MuiSvgIcon-root"
+            focusable="false"
+            role="presentation"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div
+      className="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-center MuiGrid-justify-xs-center"
+    >
+      <div
+        className="MuiAvatar-root NewBlog-greenAvatar-233 NewBlog-greenAvatar-1 MuiAvatar-colorDefault"
+        onClick={[Function]}
+      >
+        <svg
+          aria-hidden="true"
+          className="MuiSvgIcon-root"
+          focusable="false"
+          role="presentation"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M17 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V7l-4-4zm-5 16c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3zm3-10H5V5h10v4z"
+          />
+        </svg>
+      </div>
+      <div
+        className="MuiAvatar-root NewBlog-greenAvatar-233 NewBlog-greenAvatar-1 MuiAvatar-colorDefault"
+        onClick={[Function]}
+      >
+        <svg
+          aria-hidden="true"
+          className="MuiSvgIcon-root"
+          focusable="false"
+          role="presentation"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M5 4v2h14V4H5zm0 10h4v6h6v-6h4l-7-7-7 7z"
+          />
+        </svg>
+      </div>
+    </div>
+    <div
+      className="NewBlog-root-234 NewBlog-root-2"
+    >
+      <div
+        className="MuiFormControl-root MuiTextField-root MuiFormControl-fullWidth"
+      >
+        <label
+          className="MuiFormLabel-root MuiInputLabel-root NewBlog-floatingLabelFocusStyle-235 NewBlog-floatingLabelFocusStyle-3 MuiInputLabel-formControl MuiInputLabel-animated"
+          data-shrink={false}
+          htmlFor="postTitle"
+        >
+          Post Title
+        </label>
+        <div
+          className="MuiInputBase-root MuiInput-root MuiInput-underline NewBlog-materialInput-236 NewBlog-materialInput-4 MuiInputBase-fullWidth MuiInput-fullWidth MuiInputBase-formControl MuiInput-formControl"
+          onClick={[Function]}
+        >
+          <input
+            aria-invalid={false}
+            className="MuiInputBase-input MuiInput-input"
+            disabled={false}
+            id="postTitle"
+            onBlur={[Function]}
+            onChange={[Function]}
+            onFocus={[Function]}
+            required={false}
+            type="text"
+            value=""
+          />
+        </div>
+      </div>
+    </div>
+    <br />
+    <div
+      className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2"
+    >
+      <div
+        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6"
+      >
+        <div
+          className="MuiFormControl-root MuiTextField-root MuiFormControl-fullWidth"
+        >
+          <label
+            className="MuiFormLabel-root MuiInputLabel-root NewBlog-floatingLabelFocusStyle-235 NewBlog-floatingLabelFocusStyle-3 MuiInputLabel-formControl MuiInputLabel-animated"
+            data-shrink={false}
+            htmlFor="coverPhotoUrl"
+          >
+            Cover Photo Url
+          </label>
+          <div
+            className="MuiInputBase-root MuiInput-root MuiInput-underline NewBlog-materialInput-236 NewBlog-materialInput-4 MuiInputBase-fullWidth MuiInput-fullWidth MuiInputBase-formControl MuiInput-formControl"
+            onClick={[Function]}
+          >
+            <input
+              aria-invalid={false}
+              className="MuiInputBase-input MuiInput-input"
+              disabled={false}
+              id="coverPhotoUrl"
+              onBlur={[Function]}
+              onChange={[Function]}
+              onFocus={[Function]}
+              required={false}
+              type="text"
+              value=""
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6"
+      >
+        <div
+          style={
+            Object {
+              "marginTop": "26px",
+            }
+          }
+        >
+          <div
+            className="basic-multi-select css-2b097c-container"
+            onKeyDown={[Function]}
+          >
+            <div
+              className="select__control css-1b8hiff-control"
+              onMouseDown={[Function]}
+              onTouchEnd={[Function]}
+            >
+              <div
+                className="select__value-container select__value-container--is-multi css-1hwfws3"
+              >
+                <div
+                  className="select__placeholder css-7y8ne7-placeholder"
+                >
+                  Select...
+                </div>
+                <div
+                  className="css-i2lz7n-Input"
+                >
+                  <div
+                    className="select__input"
+                    style={
+                      Object {
+                        "display": "inline-block",
+                      }
+                    }
+                  >
+                    <input
+                      aria-autocomplete="list"
+                      autoCapitalize="none"
+                      autoComplete="off"
+                      autoCorrect="off"
+                      disabled={false}
+                      id="react-select-select-tags-input"
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      onFocus={[Function]}
+                      spellCheck="false"
+                      style={
+                        Object {
+                          "background": 0,
+                          "border": 0,
+                          "boxSizing": "content-box",
+                          "color": "inherit",
+                          "fontSize": "inherit",
+                          "label": "input",
+                          "opacity": 1,
+                          "outline": 0,
+                          "padding": 0,
+                          "width": "1px",
+                        }
+                      }
+                      tabIndex="0"
+                      type="text"
+                      value=""
+                    />
+                    <div
+                      style={
+                        Object {
+                          "height": 0,
+                          "left": 0,
+                          "overflow": "scroll",
+                          "position": "absolute",
+                          "top": 0,
+                          "visibility": "hidden",
+                          "whiteSpace": "pre",
+                        }
+                      }
+                    >
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                className="select__indicators css-1g48xl4-IndicatorsContainer"
+              >
+                <span
+                  className="select__indicator-separator css-1okebmr-indicatorSeparator"
+                />
+                <div
+                  aria-hidden="true"
+                  className="select__indicator select__dropdown-indicator css-tlfecz-indicatorContainer"
+                  onMouseDown={[Function]}
+                  onTouchEnd={[Function]}
+                >
+                  <svg
+                    aria-hidden="true"
+                    className="css-tj5bde-Svg"
+                    focusable="false"
+                    height={20}
+                    viewBox="0 0 20 20"
+                    width={20}
+                  >
+                    <path
+                      d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div>
+              <input
+                name="colors"
+                type="hidden"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br />
+    <div
+      className="MuiFormControl-root MuiTextField-root NewBlog-materialTextArea-237 NewBlog-materialTextArea-5 MuiFormControl-marginNormal MuiFormControl-fullWidth"
+    >
+      <label
+        className="MuiFormLabel-root MuiInputLabel-root NewBlog-floatingLabelFocusStyle-235 NewBlog-floatingLabelFocusStyle-3 MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
+        data-shrink={false}
+        htmlFor="description"
+      >
+        Post Description
+      </label>
+      <div
+        className="MuiInputBase-root MuiOutlinedInput-root NewBlog-materialTextArea-237 NewBlog-materialTextArea-5 MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-multiline MuiOutlinedInput-multiline"
+        onClick={[Function]}
+      >
+        <textarea
+          aria-invalid={false}
+          className="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputMultiline MuiOutlinedInput-inputMultiline"
+          disabled={false}
+          id="description"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          required={false}
+          rows="4"
+          value=""
+        />
+        <fieldset
+          aria-hidden={true}
+          className="PrivateNotchedOutline-root-457 MuiOutlinedInput-notchedOutline"
+          style={
+            Object {
+              "paddingLeft": 8,
+            }
+          }
+        >
+          <legend
+            className="PrivateNotchedOutline-legend-458"
+            style={
+              Object {
+                "width": 0.01,
+              }
+            }
+          >
+            <span
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": "&#8203;",
+                }
+              }
+            />
+          </legend>
+        </fieldset>
+      </div>
+    </div>
+  </div>,
+  <div
+    className="MuiContainer-root blog-md MuiContainer-maxWidthMd"
+    style={
+      Object {
+        "color": "white",
+        "fontFamily": "'monospaced courier-new', Poppins, sans-serif !important",
+      }
+    }
+  >
+    <h3>
+      Post Body Markdown
+    </h3>
+    <Dynamic
+      onChange={[Function]}
+      value=""
+    />
+  </div>,
+  <footer
+    className="makeStyles-footer-459"
+  >
+    <div
+      className="MuiContainer-root MuiContainer-maxWidthLg"
+    >
+      <h6
+        className="MuiTypography-root MuiTypography-h6 MuiTypography-gutterBottom MuiTypography-alignCenter"
+      >
+        Zemuldo Blog
+      </h6>
+      <p
+        className="MuiTypography-root MuiTypography-subtitle1 MuiTypography-alignCenter"
+      >
+        Writing more cool stuff everyday.
+      </p>
+      <p
+        className="MuiTypography-root MuiTypography-body2 MuiTypography-alignCenter"
+      >
+        Copyright © 
+        <a
+          className="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorInherit"
+          href="https://zemuldo.com/"
+          onBlur={[Function]}
+          onFocus={[Function]}
+        >
+          Zemuldo
+        </a>
+         
+        2019
+      </p>
+    </div>
+  </footer>,
+]
+`;
+
+exports[`Storyshots Home Page Footer 1`] = `
+<footer
+  className="makeStyles-footer-932"
+>
+  <div
+    className="MuiContainer-root MuiContainer-maxWidthLg"
+  >
+    <h6
+      className="MuiTypography-root MuiTypography-h6 MuiTypography-gutterBottom MuiTypography-alignCenter"
+    >
+      Zemuldo Blog
+    </h6>
+    <p
+      className="MuiTypography-root MuiTypography-subtitle1 MuiTypography-alignCenter"
+    >
+      Writing more cool stuff everyday.
+    </p>
+    <p
+      className="MuiTypography-root MuiTypography-body2 MuiTypography-alignCenter"
+    >
+      Copyright © 
+      <a
+        className="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorInherit"
+        href="https://zemuldo.com/"
+        onBlur={[Function]}
+        onFocus={[Function]}
+      >
+        Zemuldo
+      </a>
+       
+      2019
+    </p>
+  </div>
+</footer>
+`;
+
+exports[`Storyshots Home Page Normal 1`] = `
+<div
+  className="home-section-background"
+  data-stellar-background-ratio="0.6"
+>
+  <div
+    className="display-table"
+  >
+    <div
+      className="display-table-cell"
+    >
+      <div
+        className="container"
+      >
+        <div
+          className="row"
+        >
+          <div
+            className="header-section"
+          >
+            <div
+              className="header-frame"
+            >
+              <h1
+                className="color-6"
+              >
+                Danstan Onyango
+              </h1>
+              <h3>
+                Software Engineer
+              </h3>
+              <hr />
+              <h4
+                className="font-c-cn-m"
+              >
+                Currently being awesome at SafeBoda and formely at HackerBay Inc.
+              </h4>
+              <h3
+                className="color-orange"
+              >
+                Nairobi, Kenya
+              </h3>
+            </div>
+            <div
+              className="img-frame border-color-green"
+              id="me-pic-wrapper"
+            >
+              <img
+                alt=""
+                id="me-pic"
+                src="/static/images/logo/black.jpg"
+              />
+            </div>
+          </div>
+          <div
+            className="col-md-12 text-center"
+          >
+            <div>
+              <div
+                style={
+                  Object {
+                    "MozTransition": "all .5s ease-out",
+                    "MsTransition": "all .5s ease-out",
+                    "OTransition": "all .5s ease-out",
+                    "WebkitTransition": "all .5s ease-out",
+                    "borderRadius": "10px",
+                    "clear": "both",
+                    "display": "block",
+                    "margin": "auto",
+                    "maxWidth": "700px",
+                    "minHeight": "244px",
+                    "overflow": "hidden",
+                    "transition": "all .5s ease-out",
+                  }
+                }
+              >
+                <hr />
+                <div
+                  style={
+                    Object {
+                      "MozTransition": "all .5s ease-out",
+                      "MsTransition": "all .5s ease-out",
+                      "OTransition": "all .5s ease-out",
+                      "WebkitTransition": "all .5s ease-out",
+                      "backgroundColor": "rgba(0, 0, 0, .85)",
+                      "color": "#f0f0f0",
+                      "fontFamily": "Consolas, \\"Courier New\\", Courier",
+                      "fontSize": "1.2em",
+                      "fontWeight": "500",
+                      "height": "auto",
+                      "lineHeight": "1.4em",
+                      "overflow": "hidden",
+                      "padding": "10px",
+                      "textAlign": "left",
+                      "textShadow": "#000 0 1px 0",
+                      "transition": "all .5s ease-out",
+                    }
+                  }
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <ul
+          className="social-icon"
+        >
+          <h3>
+            Find me on
+          </h3>
+          <div
+            style={
+              Object {
+                "marginTop": "20px",
+              }
+            }
+          >
+            <span
+              aria-haspopup="true"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+            >
+              <li>
+                <a
+                  href="/blog"
+                >
+                  <img
+                    alt="Remy Sharp"
+                    src="/static/images/blog.png"
+                    style={
+                      Object {
+                        "height": "55%",
+                        "marginBottom": "-12%",
+                        "width": "55%",
+                      }
+                    }
+                  />
+                </a>
+              </li>
+            </span>
+            <span
+              aria-haspopup="true"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+            >
+              <li>
+                <a
+                  href="https://dev.to/zemuldo"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  <img
+                    alt="Remy Sharp"
+                    src="/static/images/dev.to.png"
+                    style={
+                      Object {
+                        "height": "65%",
+                        "marginBottom": "-15%",
+                        "width": "65%",
+                      }
+                    }
+                  />
+                </a>
+              </li>
+            </span>
+            <span
+              aria-haspopup="true"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+            >
+              <li>
+                <a
+                  className="github"
+                  href="https://github.com/zemuldo"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  <i
+                    className="fa fa-github"
+                  />
+                </a>
+              </li>
+            </span>
+            <span
+              aria-haspopup="true"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+            >
+              <li>
+                <a
+                  className="github"
+                  href="https://gitlab.com/zemuldo"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  <i
+                    className="fa fa-gitlab color-orange"
+                  />
+                </a>
+              </li>
+            </span>
+            <span
+              aria-haspopup="true"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+            >
+              <li>
+                <a
+                  className="stackoverflow"
+                  href="https://stackoverflow.com/users/story/6856820"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  <i
+                    className="fa fa-stack-overflow"
+                  />
+                </a>
+              </li>
+            </span>
+            <span
+              aria-haspopup="true"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+            >
+              <li>
+                <a
+                  className="medium"
+                  href="https://medium.com/@zemuldo"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  <i
+                    className="fa fa-medium color-green"
+                  />
+                </a>
+              </li>
+            </span>
+            <span
+              aria-haspopup="true"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+            >
+              <li>
+                <a
+                  className="medium"
+                  href="https://stackshare.io/zemuldo"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  <i
+                    className="fa fa-share-alt-square color-blue"
+                  />
+                </a>
+              </li>
+            </span>
+            <span
+              aria-haspopup="true"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+            >
+              <li>
+                <a
+                  className="twitter"
+                  href="https://twitter.com/zemuldo"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  <i
+                    className="fa fa-twitter color-6"
+                  />
+                </a>
+              </li>
+            </span>
+            <span
+              aria-haspopup="true"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+            >
+              <li>
+                <a
+                  className="linkedin"
+                  href="https://www.linkedin.com/in/zemuldo"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  <i
+                    className="fa fa-linkedin color-6"
+                  />
+                </a>
+              </li>
+            </span>
+            <span
+              aria-haspopup="true"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+            >
+              <li>
+                <a
+                  className="facebook"
+                  href="https://app.pluralsight.com/profile/zemuldo"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  <i
+                    className="fa fa-arrow-circle-right color-1"
+                  />
+                </a>
+              </li>
+            </span>
+            <span
+              aria-haspopup="true"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+            >
+              <li>
+                <a
+                  className="facebook"
+                  href="https://web.facebook.com/zemuldo"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  <i
+                    className="fa fa-facebook color-blue"
+                  />
+                </a>
+              </li>
+            </span>
+            <span
+              aria-haspopup="true"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+            >
+              <li>
+                <a
+                  className="facebook"
+                  href="mailto:danstan@zemuldo.com"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  <i
+                    className="fa fa-envelope-o color-gmail"
+                  />
+                </a>
+              </li>
+            </span>
+          </div>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Home Page Social Sites 1`] = `
+<div>
+  <ul
+    className="social-icon"
+  >
+    <h3>
+      Find me on
+    </h3>
+    <div
+      style={
+        Object {
+          "marginTop": "20px",
+        }
+      }
+    >
+      <span
+        aria-haspopup="true"
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+      >
+        <li>
+          <a
+            href="/blog"
+          >
+            <img
+              alt="Remy Sharp"
+              src="/static/images/blog.png"
+              style={
+                Object {
+                  "height": "55%",
+                  "marginBottom": "-12%",
+                  "width": "55%",
+                }
+              }
+            />
+          </a>
+        </li>
+      </span>
+      <span
+        aria-haspopup="true"
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+      >
+        <li>
+          <a
+            href="https://dev.to/zemuldo"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <img
+              alt="Remy Sharp"
+              src="/static/images/dev.to.png"
+              style={
+                Object {
+                  "height": "65%",
+                  "marginBottom": "-15%",
+                  "width": "65%",
+                }
+              }
+            />
+          </a>
+        </li>
+      </span>
+      <span
+        aria-haspopup="true"
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+      >
+        <li>
+          <a
+            className="github"
+            href="https://github.com/zemuldo"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <i
+              className="fa fa-github"
+            />
+          </a>
+        </li>
+      </span>
+      <span
+        aria-haspopup="true"
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+      >
+        <li>
+          <a
+            className="github"
+            href="https://gitlab.com/zemuldo"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <i
+              className="fa fa-gitlab color-orange"
+            />
+          </a>
+        </li>
+      </span>
+      <span
+        aria-haspopup="true"
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+      >
+        <li>
+          <a
+            className="stackoverflow"
+            href="https://stackoverflow.com/users/story/6856820"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <i
+              className="fa fa-stack-overflow"
+            />
+          </a>
+        </li>
+      </span>
+      <span
+        aria-haspopup="true"
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+      >
+        <li>
+          <a
+            className="medium"
+            href="https://medium.com/@zemuldo"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <i
+              className="fa fa-medium color-green"
+            />
+          </a>
+        </li>
+      </span>
+      <span
+        aria-haspopup="true"
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+      >
+        <li>
+          <a
+            className="medium"
+            href="https://stackshare.io/zemuldo"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <i
+              className="fa fa-share-alt-square color-blue"
+            />
+          </a>
+        </li>
+      </span>
+      <span
+        aria-haspopup="true"
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+      >
+        <li>
+          <a
+            className="twitter"
+            href="https://twitter.com/zemuldo"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <i
+              className="fa fa-twitter color-6"
+            />
+          </a>
+        </li>
+      </span>
+      <span
+        aria-haspopup="true"
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+      >
+        <li>
+          <a
+            className="linkedin"
+            href="https://www.linkedin.com/in/zemuldo"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <i
+              className="fa fa-linkedin color-6"
+            />
+          </a>
+        </li>
+      </span>
+      <span
+        aria-haspopup="true"
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+      >
+        <li>
+          <a
+            className="facebook"
+            href="https://app.pluralsight.com/profile/zemuldo"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <i
+              className="fa fa-arrow-circle-right color-1"
+            />
+          </a>
+        </li>
+      </span>
+      <span
+        aria-haspopup="true"
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+      >
+        <li>
+          <a
+            className="facebook"
+            href="https://web.facebook.com/zemuldo"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <i
+              className="fa fa-facebook color-blue"
+            />
+          </a>
+        </li>
+      </span>
+      <span
+        aria-haspopup="true"
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+      >
+        <li>
+          <a
+            className="facebook"
+            href="mailto:danstan@zemuldo.com"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <i
+              className="fa fa-envelope-o color-gmail"
+            />
+          </a>
+        </li>
+      </span>
+    </div>
+  </ul>
+</div>
+`;
+
+exports[`Storyshots Home Page TerminalMe 1`] = `
+<div>
+  <div
+    style={
+      Object {
+        "MozTransition": "all .5s ease-out",
+        "MsTransition": "all .5s ease-out",
+        "OTransition": "all .5s ease-out",
+        "WebkitTransition": "all .5s ease-out",
+        "borderRadius": "10px",
+        "clear": "both",
+        "display": "block",
+        "margin": "auto",
+        "maxWidth": "700px",
+        "minHeight": "244px",
+        "overflow": "hidden",
+        "transition": "all .5s ease-out",
+      }
+    }
+  >
+    <hr />
+    <div
+      style={
+        Object {
+          "MozTransition": "all .5s ease-out",
+          "MsTransition": "all .5s ease-out",
+          "OTransition": "all .5s ease-out",
+          "WebkitTransition": "all .5s ease-out",
+          "backgroundColor": "rgba(0, 0, 0, .85)",
+          "color": "#f0f0f0",
+          "fontFamily": "Consolas, \\"Courier New\\", Courier",
+          "fontSize": "1.2em",
+          "fontWeight": "500",
+          "height": "auto",
+          "lineHeight": "1.4em",
+          "overflow": "hidden",
+          "padding": "10px",
+          "textAlign": "left",
+          "textShadow": "#000 0 1px 0",
+          "transition": "all .5s ease-out",
+        }
+      }
+    />
+  </div>
+</div>
+`;
+
+exports[`Storyshots Login Loging in 1`] = `
+<div
+  style={
+    Object {
+      "color": "white",
+    }
+  }
+>
+  Please wait...
+</div>
+`;
+
+exports[`Storyshots Login Not Logged 1`] = `
+<div
+  className="home-section-background"
+  data-stellar-background-ratio="0.6"
+>
+  <div
+    className="display-table"
+  >
+    <div
+      className="display-table-cell"
+    >
+      <div
+        className="container"
+      >
+        <div
+          className="row"
+        >
+          <div
+            className="header-section"
+            style={
+              Object {
+                "marginTop": "30%",
+              }
+            }
+          >
+            <div
+              className="header-frame"
+            >
+              <div
+                className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 MuiGrid-justify-xs-space-between"
+              >
+                <div
+                  className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6"
+                >
+                  <a
+                    className="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
+                    onBlur={[Function]}
+                    onFocus={[Function]}
+                  >
+                    <h1
+                      className="color-6"
+                    >
+                      Twitter
+                    </h1>
+                  </a>
+                  <hr
+                    className="hr-opposite"
+                  />
+                </div>
+                <div
+                  className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6"
+                >
+                  <a
+                    className="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
+                    href="undefined/user/auth/github?redirectTo=undefined"
+                    onBlur={[Function]}
+                    onFocus={[Function]}
+                  >
+                    <h1
+                      className="color-6"
+                    >
+                      Github
+                    </h1>
+                  </a>
+                  <hr />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

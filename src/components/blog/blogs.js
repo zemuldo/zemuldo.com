@@ -59,8 +59,7 @@ export default function Blogs({ posts, infiniteScroll }) {
           </CardActionArea>
         </Grid>
       ))}
-      <InView as="div" onChange={infiniteScroll}>
-      </InView>
+      {/* <InView as="div" onChange={infiniteScroll}></InView> */}
     </Grid>
   );
 }

@@ -1,3 +1,11 @@
 {
-  "presets": ["next/babel"]
+  "presets": ["next/babel"],
+  "env": {
+    "test": {
+      "plugins": [
+        "require-context-hook",
+        "dynamic-import-node"
+      ]
+    }
+  }
 }
