@@ -22,22 +22,26 @@ Array [
       <div
         className="MuiGrid-root MuiGrid-container"
       >
-        <div
-          className="MuiAvatar-root makeStyles-greenAvatar-508 MuiAvatar-colorDefault"
+        <a
+          href="/"
           onClick={[Function]}
         >
-          <svg
-            aria-hidden="true"
-            className="MuiSvgIcon-root"
-            focusable="false"
-            role="presentation"
-            viewBox="0 0 24 24"
+          <div
+            className="MuiAvatar-root makeStyles-greenAvatar-508 MuiAvatar-colorDefault"
           >
-            <path
-              d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"
-            />
-          </svg>
-        </div>
+            <svg
+              aria-hidden="true"
+              className="MuiSvgIcon-root"
+              focusable="false"
+              role="presentation"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"
+              />
+            </svg>
+          </div>
+        </a>
       </div>
     </div>
     <br />
@@ -172,22 +176,26 @@ Array [
       <div
         className="MuiGrid-root MuiGrid-container"
       >
-        <div
-          className="MuiAvatar-root makeStyles-greenAvatar-700 MuiAvatar-colorDefault"
+        <a
+          href="/"
           onClick={[Function]}
         >
-          <svg
-            aria-hidden="true"
-            className="MuiSvgIcon-root"
-            focusable="false"
-            role="presentation"
-            viewBox="0 0 24 24"
+          <div
+            className="MuiAvatar-root makeStyles-greenAvatar-700 MuiAvatar-colorDefault"
           >
-            <path
-              d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"
-            />
-          </svg>
-        </div>
+            <svg
+              aria-hidden="true"
+              className="MuiSvgIcon-root"
+              focusable="false"
+              role="presentation"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"
+              />
+            </svg>
+          </div>
+        </a>
       </div>
     </div>
     <div
@@ -621,22 +629,26 @@ Array [
       <div
         className="MuiGrid-root MuiGrid-container"
       >
-        <div
-          className="MuiAvatar-root makeStyles-greenAvatar-24 MuiAvatar-colorDefault"
+        <a
+          href="/"
           onClick={[Function]}
         >
-          <svg
-            aria-hidden="true"
-            className="MuiSvgIcon-root"
-            focusable="false"
-            role="presentation"
-            viewBox="0 0 24 24"
+          <div
+            className="MuiAvatar-root makeStyles-greenAvatar-24 MuiAvatar-colorDefault"
           >
-            <path
-              d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"
-            />
-          </svg>
-        </div>
+            <svg
+              aria-hidden="true"
+              className="MuiSvgIcon-root"
+              focusable="false"
+              role="presentation"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"
+              />
+            </svg>
+          </div>
+        </a>
       </div>
     </div>
     <div
@@ -974,22 +986,26 @@ Array [
       <div
         className="MuiGrid-root MuiGrid-container"
       >
-        <div
-          className="MuiAvatar-root makeStyles-greenAvatar-264 MuiAvatar-colorDefault"
+        <a
+          href="/"
           onClick={[Function]}
         >
-          <svg
-            aria-hidden="true"
-            className="MuiSvgIcon-root"
-            focusable="false"
-            role="presentation"
-            viewBox="0 0 24 24"
+          <div
+            className="MuiAvatar-root makeStyles-greenAvatar-264 MuiAvatar-colorDefault"
           >
-            <path
-              d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"
-            />
-          </svg>
-        </div>
+            <svg
+              aria-hidden="true"
+              className="MuiSvgIcon-root"
+              focusable="false"
+              role="presentation"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"
+              />
+            </svg>
+          </div>
+        </a>
       </div>
     </div>
     <div

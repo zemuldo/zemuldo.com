@@ -1,10 +1,11 @@
 import React from 'react';
-import Router, { withRouter } from 'next/router';
+import { withRouter } from 'next/router';
 import HomeIcon from '@material-ui/icons/Home';
 import Avatar from '@material-ui/core/Avatar';
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
+import Link from '../link';
 
 const useStyles = makeStyles(theme => ({
   greenAvatar: {
@@ -94,23 +95,21 @@ function Menu({ router }) {
 
   const classes = useStyles();
 
-  function toHome() {
-    Router.push('/');
-  }
-  function toBlog() {
-    Router.push('/blog');
-  }
-
   return (
     <div style={{ margin: '10px 0px 10px 0px', }}>
       <Grid container >
-        <Avatar onClick={toHome} className={classes.greenAvatar}>
-          <HomeIcon />
-        </Avatar>
+        <Link href='/'>
+          <Avatar className={classes.greenAvatar}>
+            <HomeIcon />
+          </Avatar>
+        </Link>
+        
         {
           router && router.route !== '/blog' &&
-          <Avatar onClick={toBlog} className={classes.greenAvatar} src='/static/images/blog.png'>
-          </Avatar>
+          <Link href='/blog'>
+            <Avatar className={classes.greenAvatar} src='/static/images/blog.png'>
+            </Avatar>
+          </Link>
         }
 
       </Grid>
