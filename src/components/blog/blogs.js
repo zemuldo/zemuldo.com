@@ -8,6 +8,7 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Hidden from '@material-ui/core/Hidden';
 import PropTypes from 'prop-types';
+import CustomLink from '../link';
 // import { InView } from 'react-intersection-observer';
 
 const useStyles = makeStyles(() => ({
@@ -32,31 +33,34 @@ export default function Blogs({ posts, _infiniteScroll }) {
   return (
     <Grid container spacing={4}>
       {posts.map(post => (
-        <Grid style={{height: 'auto !important'}} item key={post._id} xs={12} md={6}>
-          <CardActionArea component="a" href={`/blog/post/${post._id}`}>
-            <Card className={classes.card}>
-              <div className={classes.cardDetails}>
-                <CardContent>
-                  <Typography component="h2" variant="h5">
-                    {post.title}
-                  </Typography>
-                  <Typography variant="subtitle1" color="textSecondary">
-                    {post.date}
-                  </Typography>
-                  <Typography variant="subtitle1" paragraph>
-                    {post.description}
-                  </Typography>
-                </CardContent>
-              </div>
-              <Hidden xsDown>
-                <CardMedia
-                  className={classes.cardMedia}
-                  image={post.coverPhotoUrl}
-                  title="Image title"
-                />
-              </Hidden>
-            </Card>
-          </CardActionArea>
+        <Grid style={{ height: 'auto !important' }} item key={post._id} xs={12} md={6}>
+          <CustomLink href={`/blog/post/${post._id}`}>
+            <CardActionArea component="div" >
+              <Card className={classes.card}>
+                <div className={classes.cardDetails}>
+                  <CardContent>
+                    <Typography component="h2" variant="h5">
+                      {post.title}
+                    </Typography>
+                    <Typography variant="subtitle1" color="textSecondary">
+                      {post.date}
+                    </Typography>
+                    <Typography variant="subtitle1" paragraph>
+                      {post.description}
+                    </Typography>
+                  </CardContent>
+                </div>
+                <Hidden xsDown>
+                  <CardMedia
+                    className={classes.cardMedia}
+                    image={post.coverPhotoUrl}
+                    title="Image title"
+                  />
+                </Hidden>
+              </Card>
+            </CardActionArea>
+          </CustomLink>
+
         </Grid>
       ))}
       {/* <InView as="div" onChange={infiniteScroll}></InView> */}

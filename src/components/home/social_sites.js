@@ -1,5 +1,6 @@
 import React from 'react';
 import MouseOverPopover from '../../pop_overs';
+import CustomLink from '../link';
 
 const socials = [
   {
@@ -82,9 +83,9 @@ export default function SocialSites () {
         <div style={{marginTop: '20px'}}>
           <MouseOverPopover color='orange' hoverText="Blog">
             <li>
-              <a href="/blog">
+              <CustomLink href="/blog">
                 <img style={{ marginBottom: '-12%', width: '55%', height: '55%' }} alt="Remy Sharp" src="/static/images/blog.png" />
-              </a>
+              </CustomLink>
             </li>
           </MouseOverPopover>
           <MouseOverPopover color='white' hoverText="Dev.TO">

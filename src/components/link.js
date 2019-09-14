@@ -2,7 +2,7 @@ import React from 'react';
 import { useRouter } from 'next/router';
 import PropTypes from 'prop-types';
 
-export default function ActiveLink({ children, href }) {
+export default function CustomLink({ children, href }) {
   const router = useRouter();
 
   const handleClick = e => {
@@ -17,7 +17,7 @@ export default function ActiveLink({ children, href }) {
   );
 }
 
-ActiveLink.propTypes = {
+CustomLink.propTypes = {
   href: PropTypes.string.isRequired,
   children: PropTypes.object.isRequired
 };

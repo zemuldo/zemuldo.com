@@ -16,6 +16,7 @@ import NewIcon from '@material-ui/icons/NoteAdd';
 import AddCircleOutlineIcon from '@material-ui/icons/AddCircleOutline';
 import Head from 'next/head';
 import PropTypes from 'prop-types';
+import CustomLink from '../src/components/link';
 
 const api_url = process.env.API_URL;
 
@@ -201,9 +202,9 @@ class Blog extends React.Component {
                     <Typography variant="h5" color="inherit" paragraph>
                       {featurePost.post.description}
                     </Typography>
-                    <Link style={{ color: '#08a6f3' }} href={`/blog/post/${featurePost.post._id}`}>
+                    <CustomLink style={{ color: '#08a6f3' }} href={`/blog/post/${featurePost.post._id}`}>
                       Read Now
-                    </Link>
+                    </CustomLink>
                   </div>
                 </Grid>
               </Grid>
