@@ -74,7 +74,7 @@ const blogs_props = {
     postBody: {
       deleted: false,
       _id: '5d79520a3d510b0fa5ae765b',
-      body: 'asdasdsad sdsdfsdd ddfdfdfdfdfdfdfddrrrrr',
+      body: 'Most people start off with little or low self-confidence, but as a result of their own efforts, they become bold and brave and outgoing. And we\u2019ve discovered that if you do the same things that other self-confident men and women do, you, too, will experience the same feelings and get the same results.\r\n\r\nThe key is to be true to yourself, to be true to the very best that is in you, and to live your life consistent with your highest values and aspirations. This is the only way to truly learn how to believe in yourself.\r\n\r\nTake some time to think about who you are and what you believe in and what is important to you.\r\n\r\nIf you want to change your life by becoming an author, believe that you can do it. The hardest step in that journey is finding the confidence to learn how to write a book. Once you get a hold of a proven system to plan, produce, and publish your work, the larger goal becomes easier to attain.\r\n\r\nBy believing in yourself, you will find the courage to take immediate action on your goals. And this, as you may know, is the key to success!\r\n\r\nI encourage you to never compromise your integrity by trying to be or say or feel something that is not true for you.\r\n\r\nAnd \u2013 more importantly \u2013 never compromise your potential to grow due to self-limiting doubts. Instead, embrace your confidence and believe in yourself because you really can do anything you put your mind to.',
       postId: '5d79520a3d510b0fa5ae765a',
       createdAt: '2019-09-11T19:59:06.904Z',
       updatedAt: '2019-09-11T19:59:06.904Z',
@@ -183,7 +183,7 @@ const blog_props = {
   body: {
     deleted: false,
     _id: '5d79520a3d510b0fa5ae765b',
-    body: 'asdasdsad sdsdfsdd ddfdfdfdfdfdfdfddrrrrr',
+    body: 'Most people start off with little or low self-confidence, but as a result of their own efforts, they become bold and brave and outgoing. And we\u2019ve discovered that if you do the same things that other self-confident men and women do, you, too, will experience the same feelings and get the same results.\r\n\r\nThe key is to be true to yourself, to be true to the very best that is in you, and to live your life consistent with your highest values and aspirations. This is the only way to truly learn how to believe in yourself.\r\n\r\nTake some time to think about who you are and what you believe in and what is important to you.\r\n\r\nIf you want to change your life by becoming an author, believe that you can do it. The hardest step in that journey is finding the confidence to learn how to write a book. Once you get a hold of a proven system to plan, produce, and publish your work, the larger goal becomes easier to attain.\r\n\r\nBy believing in yourself, you will find the courage to take immediate action on your goals. And this, as you may know, is the key to success!\r\n\r\nI encourage you to never compromise your integrity by trying to be or say or feel something that is not true for you.\r\n\r\nAnd \u2013 more importantly \u2013 never compromise your potential to grow due to self-limiting doubts. Instead, embrace your confidence and believe in yourself because you really can do anything you put your mind to.',
     postId: '5d79520a3d510b0fa5ae765a',
     createdAt: '2019-09-11T19:59:06.904Z',
     updatedAt: '2019-09-11T19:59:06.904Z',
@@ -240,7 +240,7 @@ const props_edit_blog = {
   body: {
     deleted: false,
     _id: '5d79520a3d510b0fa5ae765b',
-    body: 'asdasdsad sdsdfsdd ddfdfdfdfdfdfdfddrrrrr',
+    body: 'Most people start off with little or low self-confidence, but as a result of their own efforts, they become bold and brave and outgoing. And we\u2019ve discovered that if you do the same things that other self-confident men and women do, you, too, will experience the same feelings and get the same results.\r\n\r\nThe key is to be true to yourself, to be true to the very best that is in you, and to live your life consistent with your highest values and aspirations. This is the only way to truly learn how to believe in yourself.\r\n\r\nTake some time to think about who you are and what you believe in and what is important to you.\r\n\r\nIf you want to change your life by becoming an author, believe that you can do it. The hardest step in that journey is finding the confidence to learn how to write a book. Once you get a hold of a proven system to plan, produce, and publish your work, the larger goal becomes easier to attain.\r\n\r\nBy believing in yourself, you will find the courage to take immediate action on your goals. And this, as you may know, is the key to success!\r\n\r\nI encourage you to never compromise your integrity by trying to be or say or feel something that is not true for you.\r\n\r\nAnd \u2013 more importantly \u2013 never compromise your potential to grow due to self-limiting doubts. Instead, embrace your confidence and believe in yourself because you really can do anything you put your mind to.',
     postId: '5d79520a3d510b0fa5ae765a',
     createdAt: '2019-09-11T19:59:06.904Z',
     updatedAt: '2019-09-11T19:59:06.904Z',
