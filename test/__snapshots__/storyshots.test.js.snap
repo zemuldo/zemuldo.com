@@ -751,7 +751,7 @@ Array [
       >
         <a
           className="MuiButtonBase-root MuiCardActionArea-root"
-          href="/blog/5d6754fefe8b7e3fc0707fce"
+          href="/blog/post/5d6754fefe8b7e3fc0707fce"
           onBlur={[Function]}
           onDragLeave={[Function]}
           onFocus={[Function]}
@@ -808,7 +808,7 @@ Array [
       >
         <a
           className="MuiButtonBase-root MuiCardActionArea-root"
-          href="/blog/5d7951be3d510b0fa5ae7658"
+          href="/blog/post/5d7951be3d510b0fa5ae7658"
           onBlur={[Function]}
           onDragLeave={[Function]}
           onFocus={[Function]}
@@ -865,7 +865,7 @@ Array [
       >
         <a
           className="MuiButtonBase-root MuiCardActionArea-root"
-          href="/blog/5d79520a3d510b0fa5ae765a"
+          href="/blog/post/5d79520a3d510b0fa5ae765a"
           onBlur={[Function]}
           onDragLeave={[Function]}
           onFocus={[Function]}

@@ -4,6 +4,7 @@ import HomeIcon from '@material-ui/icons/Home';
 import Avatar from '@material-ui/core/Avatar';
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
+import PropTypes from 'prop-types';
 
 const useStyles = makeStyles(theme => ({
   greenAvatar: {
@@ -88,23 +89,37 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-function Menu() {
+function Menu({ router }) {
+
 
   const classes = useStyles();
 
-  function handleClick() {
+  function toHome() {
     Router.push('/');
+  }
+  function toBlog() {
+    Router.push('/blog');
   }
 
   return (
     <div style={{ margin: '10px 0px 10px 0px', }}>
       <Grid container >
-        <Avatar onClick={handleClick} className={classes.greenAvatar}>
+        <Avatar onClick={toHome} className={classes.greenAvatar}>
           <HomeIcon />
         </Avatar>
+        {
+          router && router.route !== '/blog' &&
+          <Avatar onClick={toBlog} className={classes.greenAvatar} src='/static/images/blog.png'>
+          </Avatar>
+        }
+
       </Grid>
     </div>
   );
 }
+
+Menu.propTypes = {
+  router: PropTypes.object
+};
 
 export default withRouter(Menu);
