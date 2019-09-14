@@ -20,11 +20,11 @@ app.get('/site-stories', (req, res) => {
     $('head').prepend('<meta name="twitter:site" content="@zemuldo" />');
     $('head').prepend('<meta name="twitter:creator" content="@zemuldo" />');
     $('head').prepend('<meta name="twitter:title" content="Zemuldo Site Stories" />');
-    $('head').prepend('<meta name="twitter:description" content="The personal website and blog for User @zemuldo. An enthusiastic Geek Freak of Code #Elixir #SQL #NodeJS #ReactJS" />');
+    $('head').prepend('<meta name="twitter:description" content="These are StorybookJS stories of the components that make up the website for user @zemuldo" />');
     $('head').prepend('<meta name="twitter:image" content="https://zemuldo.com/static/images/site/site_twitter_card.png" />');
     $('head').prepend('<meta property="og:title" content="Zemuldo Site Stories" />');
     $('head').prepend('<meta property="og:image" content="https://zemuldo.com/static/images/site/site_twitter_card.png" />');
-    $('head').prepend('<meta property="og:description" content="These are StorybookJS stories of the website for user @zemuldo" />');
+    $('head').prepend('<meta property="og:description" content="These are StorybookJS stories of the components that make up the website for user @zemuldo" />');
     $('head').prepend('<meta property="og:url" content="https://zemuldo.com/site-stories" />');
 
     res.send($.html());
