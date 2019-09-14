@@ -7,8 +7,8 @@ import CardActionArea from '@material-ui/core/CardActionArea';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Hidden from '@material-ui/core/Hidden';
-import { InView } from 'react-intersection-observer';
 import PropTypes from 'prop-types';
+// import { InView } from 'react-intersection-observer';
 
 const useStyles = makeStyles(() => ({
   card: {
@@ -26,7 +26,7 @@ const useStyles = makeStyles(() => ({
   }
 }));
 
-export default function Blogs({ posts, infiniteScroll }) {
+export default function Blogs({ posts, _infiniteScroll }) {
   const classes = useStyles();
 
   return (
@@ -65,6 +65,6 @@ export default function Blogs({ posts, infiniteScroll }) {
 }
 
 Blogs.propTypes = {
-  infiniteScroll: PropTypes.func.isRequired,
+  _infiniteScroll: PropTypes.func.isRequired,
   posts: PropTypes.array.isRequired
 };

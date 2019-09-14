@@ -209,7 +209,7 @@ class Blog extends React.Component {
               </Grid>
             </Paper>
           }
-          <Blogs infiniteScroll={this.infiniteScroll} posts={posts} />
+          <Blogs _infiniteScroll={this.infiniteScroll} posts={posts} />
           <br />
           {this.state.fetching && <div style={{ flexGrow: 1, color: 'white' }}><LinearProgress /> </div>}
         </Container>
