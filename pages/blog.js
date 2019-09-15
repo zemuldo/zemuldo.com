@@ -6,9 +6,9 @@ import Grid from '@material-ui/core/Grid';
 import Link from '@material-ui/core/Link';
 import Container from '@material-ui/core/Container';
 import fetch from 'isomorphic-unfetch';
-import Footer from '../src/footer';
-import Blogs from '../src/components/blog/blogs';
-import Menu from '../src/components/blog/menu';
+import Footer from '../components/footer';
+import Blogs from '../components/blog/blogs';
+import Menu from '../components/blog/menu';
 import LinearProgress from '@material-ui/core/LinearProgress';
 import { parseCookies } from 'nookies';
 import Avatar from '@material-ui/core/Avatar';
@@ -16,7 +16,7 @@ import NewIcon from '@material-ui/icons/NoteAdd';
 import AddCircleOutlineIcon from '@material-ui/icons/AddCircleOutline';
 import Head from 'next/head';
 import PropTypes from 'prop-types';
-import CustomLink from '../src/components/link';
+import CustomLink from '../components/link';
 
 const api_url = process.env.API_URL;
 

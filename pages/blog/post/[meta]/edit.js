@@ -1,8 +1,8 @@
 import React from 'react';
 import Container from '@material-ui/core/Container';
 import { withStyles } from '@material-ui/core/styles';
-import Footer from '../../../../src/footer';
-import Menu from '../../../../src/components/blog/menu';
+import Footer from '../../../../components/footer';
+import Menu from '../../../../components/blog/menu';
 import marked from 'marked';
 import dynamic from 'next/dynamic';
 import Head from 'next/head';
@@ -10,13 +10,13 @@ import Link from 'next/link';
 import TextField from '@material-ui/core/TextField';
 import Grid from '@material-ui/core/Grid';
 import 'easymde/dist/easymde.min.css';
-import Tags from '../../../../src/components/tags';
+import Tags from '../../../../components/tags';
 import { parseCookies } from 'nookies';
 import Router, { withRouter } from 'next/router';
 import SaveIcon from '@material-ui/icons/Save';
 import Avatar from '@material-ui/core/Avatar';
 import PublishIcon from '@material-ui/icons/Publish';
-import PublishDialogue from '../../../../src/components/publish_modal';
+import PublishDialogue from '../../../../components/publish_modal';
 import fetch from 'isomorphic-unfetch';
 import PropTypes from 'prop-types';
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import MouseOverPopover from '../../pop_overs';
+import MouseOverPopover from '../pop_overs';
 import CustomLink from '../link';
 
 const socials = [

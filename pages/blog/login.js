@@ -4,7 +4,7 @@ import Grid from '@material-ui/core/Grid';
 import { Link } from '@material-ui/core';
 import { withRouter } from 'next/router';
 import PropTypes from 'prop-types';
-import IfLoggedIn from '../../src/components/IfLoggedIn';
+import IfLoggedIn from '../../components/IfLoggedIn';
 
 const api_url = process.env.API_URL;
 const base_url = process.env.BASE_URL;
