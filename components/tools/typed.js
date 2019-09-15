@@ -9,15 +9,15 @@ export function type_message() {
       whiteText('Skill Set?') +
       waitAndBreak +
       greenText([
+        'Elixir',
         'Nodejs',
         'ReactJS',
-        'Elixir',
-        'Docker',
         'Python for Data',
+        'Docker',
         'Kubernetes',
         'GCP',
-        'Heroku',
-        'AWS.'
+        'AWS',
+        'Learning Azure and IBM Clouds.'
       ]).join(',^500 ');
   const experience = getYearsBetween(new Date('February 1 2016 00:00'));
   const yearsOfExperience =
