@@ -37,6 +37,7 @@
   },
   "scripts": {
     "pretest": "eslint . --fix",
+    "lint": "eslint . --fix",
     "dev": "node server.js",
     "build": "next build",
     "start": "NODE_ENV=production node server.js",

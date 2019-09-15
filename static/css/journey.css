@@ -105,82 +105,82 @@ a:hover {
     transform: translate(115%, 0%)
 }
 
-.story .header h4 {
+.journey .header h4 {
     margin-bottom: 12px
 }
 
-.story .header h4 {
+.journey .header h4 {
     color: #0C0D0E;
     font-size: 24px;
     font-weight: 700
 }
 
-.story-wrapper {
+.journey-wrapper {
     display: flex;
     -ms-display: flex
 }
 
-.story-wrapper .story {
+.journey-wrapper .journey {
     flex-shrink: 0;
     -ms-flex-shrink: 0;
     width: 800px;
     margin: 0 auto 40px auto
 }
 
-.story-wrapper:before,
-.story-wrapper:after {
+.journey-wrapper:before,
+.journey-wrapper:after {
     content: "";
     display: table
 }
 
-.story-wrapper:after {
+.journey-wrapper:after {
     clear: both
 }
 
-.story .header {
+.journey .header {
     margin: 0 auto;
     text-align: center;
     max-width: 620px
 }
 
-.story .header .meta a {
+.journey .header .meta a {
     color: #6a737c
 }
 
-.story .header .meta a:hover {
+.journey .header .meta a:hover {
     color: #3b4045
 }
 
-.story .header .meta a:hover .meta-icon {
+.journey .header .meta a:hover .meta-icon {
     color: #6a737c
 }
 
-.story .header .job {
+.journey .header .job {
     margin-bottom: 8px;
     font-size: 19px;
     color: #6a737c;
     line-height: 1.15789474
 }
 
-.story .header .meta {
+.journey .header .meta {
     margin-bottom: 12px;
     color: #6a737c
 }
 
-.story .header .meta-icon {
+.journey .header .meta-icon {
     color: #9199a1
 }
 
-.story .header .meta-icon .svg-icon {
+.journey .header .meta-icon .svg-icon {
     width: 14px;
     height: 14px
 }
 
-.story ._hidden {
+.journey ._hidden {
     display: none !important
 }
 
-.story .feature-banner {
+.journey .feature-banner {
     padding: 20px 24px;
     margin-top: -12px;
     width: 100%;
@@ -189,154 +189,153 @@ a:hover {
     text-align: center
 }
 
-.story .feature-banner--logo {
+.journey .feature-banner--logo {
     margin: 0 auto 16px
 }
 
-.story .feature-banner--iqs {
+.journey .feature-banner--iqs {
     margin-top: -4px;
     margin-bottom: 12px
 }
 
-.story .feature-banner--items {
+.journey .feature-banner--items {
     margin-top: 4px;
     margin-bottom: 4px
 }
 
-.story .feature-banner--link {
+.journey .feature-banner--link {
     margin: 0 auto;
     color: #4c8dbd
 }
 
-.story .feature-banner--link:hover {
+.journey .feature-banner--link:hover {
     color: #39739d
 }
 
-.story header .description,
-.story .tools {
+.journey header .description,
+.journey .tools {
     font-size: 16px;
     line-height: 1.4em
 }
 
-.story header .description {
+.journey header .description {
     margin: 30px auto 10px auto
 }
 
-.story header .description .description-expander-label {
+.journey header .description .description-expander-label {
     cursor: pointer
 }
 
-.story header .description .description-expander~.description-content-truncated {
+.journey header .description .description-expander~.description-content-truncated {
     display: block;
     overflow: hidden;
     max-height: 200px
 }
 
-.story header .description .description-expander:checked~.description-content-truncated {
+.journey header .description .description-expander:checked~.description-content-truncated {
     display: none
 }
 
-.story header .description .description-expander~.description-content-full {
+.journey header .description .description-expander~.description-content-full {
     display: none
 }
 
-.story header .description .description-expander:checked~.description-content-full {
+.journey header .description .description-expander:checked~.description-content-full {
     display: inline
 }
 
-.story header .description .description-expander~.description-expander-label::after {
+.journey header .description .description-expander~.description-expander-label::after {
     content: attr(data-more)
 }
 
-.story header .description .description-expander:checked~.description-expander-label::after {
+.journey header .description .description-expander:checked~.description-expander-label::after {
     content: attr(data-less)
 }
 
-.story header .description .description-expander~.description-expander-label {
+.journey header .description .description-expander~.description-expander-label {
     color: #07C;
     display: none;
     margin-top: 4px
 }
 
-.story header .description .description-expander:checked~.description-expander-label:after {
+.journey header .description .description-expander:checked~.description-expander-label:after {
     background-image: none;
     width: auto
 }
 
-.story header .description:not(.placeholder-text)~.tools:before {
+.journey header .description:not(.placeholder-text)~.tools:before {
     content: '';
     display: block;
     width: 50px;
     height: 2px;
-    background: #F48024;
     margin: 10px auto 15px auto
 }
 
-.story header .description .description-content-full>*:last-child,
-.story header .description .description-content-truncated>*:last-child {
+.journey header .description .description-content-full>*:last-child,
+.journey header .description .description-content-truncated>*:last-child {
     margin-bottom: 0
 }
 
-.story .header-edit-section:hover .description .description-expander-label {
+.journey .header-edit-section:hover .description .description-expander-label {
     cursor: pointer
 }
 
-.story .header-edit-section:hover .description .description-expander~.description-content-truncated {
+.journey .header-edit-section:hover .description .description-expander~.description-content-truncated {
     display: block;
     overflow: hidden;
     max-height: 200px
 }
 
-.story .header-edit-section:hover .description .description-expander:checked~.description-content-truncated {
+.journey .header-edit-section:hover .description .description-expander:checked~.description-content-truncated {
     display: none
 }
 
-.story .header-edit-section:hover .description .description-expander~.description-content-full {
+.journey .header-edit-section:hover .description .description-expander~.description-content-full {
     display: none
 }
 
-.story .header-edit-section:hover .description .description-expander:checked~.description-content-full {
+.journey .header-edit-section:hover .description .description-expander:checked~.description-content-full {
     display: inline
 }
 
-.story .header-edit-section:hover .description .description-expander~.description-expander-label::after {
+.journey .header-edit-section:hover .description .description-expander~.description-expander-label::after {
     content: attr(data-more)
 }
 
-.story .header-edit-section:hover .description .description-expander:checked~.description-expander-label::after {
+.journey .header-edit-section:hover .description .description-expander:checked~.description-expander-label::after {
     content: attr(data-less)
 }
 
-.story .header-edit-section:hover .description .description-expander~.description-expander-label {
+.journey .header-edit-section:hover .description .description-expander~.description-expander-label {
     color: #07C;
     display: none;
     margin-top: 4px
 }
 
-.story .header-edit-section:hover .description .description-expander:checked~.description-expander-label:after {
+.journey .header-edit-section:hover .description .description-expander:checked~.description-expander-label:after {
     background-image: none;
     width: auto
 }
 
-.story .tools {
+.journey .tools {
     margin-top: 10px;
     margin-bottom: 30px
 }
 
-.story .user-technologies {
+.journey .user-technologies {
     margin: 20px auto;
     text-align: center
 }
 
-.story .user-technologies label {
+.journey .user-technologies label {
     padding-bottom: 4px
 }
 
-.story .user-technologies .dislike {
+.journey .user-technologies .dislike {
     margin-top: 15px
 }
 
-.story .user-technologies .tag-wrapper {
+.journey .user-technologies .tag-wrapper {
     display: flex;
     justify-content: center;
     -ms-display: flex;
@@ -344,52 +343,52 @@ a:hover {
     margin-top: 15px
 }
 
-.story .header-edit-section .header-edit-btn {
+.journey .header-edit-section .header-edit-btn {
     display: none
 }
 
-.story .header-edit-section {
+.journey .header-edit-section {
     position: relative
 }
 
-.story .header-edit-section:hover .header-edit-btn {
+.journey .header-edit-section:hover .header-edit-btn {
     display: block;
     z-index: 999
 }
 
-.story .header-edit-section:hover {
+.journey .header-edit-section:hover {
     background: #f4f8fb
 }
 
-.story .header-edit-section .header-edit-btn {
+.journey .header-edit-section .header-edit-btn {
     display: none;
     position: absolute;
     top: 10px;
     right: 10px
 }
 
-.story .header-edit-section label.block {
+.journey .header-edit-section label.block {
     margin-top: 5px
 }
 
-.story-feed {
+.journey-feed {
     max-width: 100%;
     margin: 45px auto;
     position: relative;
     font-size: 0
 }
 
-.story-feed:before,
-.story-feed:after {
+.journey-feed:before,
+.journey-feed:after {
     content: "";
     display: table
 }
 
-.story-feed:after {
+.journey-feed:after {
     clear: both
 }
 
-.story-feed .story-line {
+.journey-feed .journey-line {
     width: 1px;
     background: #e1e1e1;
     position: absolute;
@@ -398,204 +397,203 @@ a:hover {
     bottom: 0
 }
 
-.story-feed .story-item {
+.journey-feed .journey-item {
     display: inline-block;
     vertical-align: top
 }
 
-.story-feed .story-item:nth-child(even) {
+.journey-feed .journey-item:nth-child(even) {
     margin-top: 60px
 }
 
-.story-feed .story-item:nth-child(odd) {
+.journey-feed .journey-item:nth-child(odd) {
     margin-left: 48px;
     margin-top: 160px;
     margin-bottom: -100px
 }
 
-.story-feed .story-item:nth-child(2) {
+.journey-feed .journey-item:nth-child(2) {
     margin-top: 0
 }
 
-.story-feed .story-item:last-of-type {
+.journey-feed .journey-item:last-of-type {
     margin-bottom: 0
 }
 
-.story-item {
+.journey-item {
     position: relative;
     padding: 24px;
     width: calc(50% - 24px);
     border: 1px solid #08a6f3;
-    border-radius: 3px;
     font-size: 13px;
     line-height: 1.26666667;
     color: #242729
 }
 
-.story-item:not(.edit) .story-item-content {
+.journey-item:not(.edit) .journey-item-content {
     display: flex;
     align-items: center;
     word-break: break-word
 }
 
-.story-item:not(.edit) .story-item-content.with-description {
+.journey-item:not(.edit) .journey-item-content.with-description {
     align-items: flex-start
 }
 
-.story-item .story-item-paragraph,
-.story-item .story-item-tags {
+.journey-item .journey-item-paragraph,
+.journey-item .journey-item-tags {
     padding-top: 8px
 }
 
-.story-item .story-item-paragraph {
+.journey-item .journey-item-paragraph {
     color: #535a60
 }
 
-.story-item .story-item-paragraph *:last-child {
+.journey-item .journey-item-paragraph *:last-child {
     margin-bottom: 0
 }
 
-.story-item .story-item-text {
+.journey-item .journey-item-text {
     flex: 1 auto;
     color: #535a60
 }
 
-.story-item .story-item-title {
+.journey-item .journey-item-title {
     font-size: 15px;
     line-height: 1.13333333;
     color: #242729
 }
 
-.story-item .description {
+.journey-item .description {
     max-width: 334px
 }
 
-.story-item .description .description-expander-label {
+.journey-item .description .description-expander-label {
     cursor: pointer
 }
 
-.story-item .description .description-expander~.description-content-truncated {
+.journey-item .description .description-expander~.description-content-truncated {
     display: block;
     overflow: hidden;
     max-height: 65px
 }
 
-.story-item .description .description-expander:checked~.description-content-truncated {
+.journey-item .description .description-expander:checked~.description-content-truncated {
     display: none
 }
 
-.story-item .description .description-expander~.description-content-full {
+.journey-item .description .description-expander~.description-content-full {
     display: none
 }
 
-.story-item .description .description-expander:checked~.description-content-full {
+.journey-item .description .description-expander:checked~.description-content-full {
     display: inline
 }
 
-.story-item .description .description-expander~.description-expander-label::after {
+.journey-item .description .description-expander~.description-expander-label::after {
     content: attr(data-more)
 }
 
-.story-item .description .description-expander:checked~.description-expander-label::after {
+.journey-item .description .description-expander:checked~.description-expander-label::after {
     content: attr(data-less)
 }
 
-.story-item .description .description-expander~.description-expander-label {
+.journey-item .description .description-expander~.description-expander-label {
     color: #07C;
     display: none;
     margin-top: 4px
 }
 
-.story-item .description .description-expander:checked~.description-expander-label:after {
+.journey-item .description .description-expander:checked~.description-expander-label:after {
     background-image: none;
     width: auto
 }
 
-.story-item .img img {
+.journey-item .img img {
     width: 100%;
     max-width: 100%;
     height: auto;
     vertical-align: middle
 }
 
-.story-item .img.logo {
+.journey-item .img.logo {
     flex-shrink: 0;
     margin-right: 12px;
     padding: 2px;
     width: 60px
 }
 
-.story-item .img.logo.align-self {
+.journey-item .img.logo.align-self {
     align-self: flex-start
 }
 
-.story-item header {
+.journey-item header {
     position: relative;
     margin-bottom: 4px;
     font-size: 12px;
     color: #6a737c
 }
 
-.story-item header .edit-item {
+.journey-item header .edit-item {
     position: absolute;
     right: 0;
     padding: 8px;
     cursor: pointer
 }
 
-.story-item header .edit-item .dropdown {
+.journey-item header .edit-item .dropdown {
     display: none;
     top: 24px;
     right: -6px
 }
 
-.story-item header .edit-item .dropdown li>a,
-.story-item header .edit-item .dropdown li label {
+.journey-item header .edit-item .dropdown li>a,
+.journey-item header .edit-item .dropdown li label {
     display: inline-block;
     padding: 8px 12px;
     font-size: 12px
 }
 
-.story-item header .edit-item .dropdown li label {
+.journey-item header .edit-item .dropdown li label {
     color: #4E82C2
 }
 
-.story-item header .edit-item .dropdown li label:hover {
+.journey-item header .edit-item .dropdown li label:hover {
     color: #4CA3D7
 }
 
-.story-item header .edit-item .item-delete-button label {
+.journey-item header .edit-item .item-delete-button label {
     display: inline-block;
     cursor: pointer
 }
 
-.story-item header .edit-item .item-delete-button input[type="submit"] {
+.journey-item header .edit-item .item-delete-button input[type="submit"] {
     display: none
 }
 
-.story-item header .edit-item.icon-settings-off {
+.journey-item header .edit-item.icon-settings-off {
     background-position: 4px -352px
 }
 
-.story-item header .edit-item:hover .dropdown {
+.journey-item header .edit-item:hover .dropdown {
     display: block
 }
 
-.story-item header .edit-item:hover.icon-settings-off {
+.journey-item header .edit-item:hover.icon-settings-off {
     background-position: 4px -367px
 }
 
-.story-item header .story-item-date:before {
+.journey-item header .journey-item-date:before {
     content: " \02022 "
 }
 
-.story-item:before,
-.story-item:after {
+.journey-item:before,
+.journey-item:after {
     content: "";
     position: absolute
 }
 
-.story-item:before {
+.journey-item:before {
     box-sizing: border-box;
     top: 16px;
     width: 27px;
@@ -606,19 +604,19 @@ a:hover {
     background-repeat: no-repeat
 }
 
-.story-item:nth-child(even):before {
+.journey-item:nth-child(even):before {
     right: -39px
 }
 
-.story-item:nth-child(odd):before {
+.journey-item:nth-child(odd):before {
     left: -39px
 }
 
-.story-item:after {
+.journey-item:after {
     top: 24px
 }
 
-.story-item:nth-child(even):after {
+.journey-item:nth-child(even):after {
     right: -8px;
     width: 0;
     height: 0;
@@ -627,7 +625,7 @@ a:hover {
     border-left: 8px solid #08a6f3
 }
 
-.story-item:nth-child(odd):after {
+.journey-item:nth-child(odd):after {
     left: -8px;
     width: 0;
     height: 0;
@@ -636,50 +634,48 @@ a:hover {
     border-right: 8px solid #08a6f3
 }
 
-.story-item.job header {
+.journey-item.job header {
     margin-bottom: 24px;
     padding-bottom: 8px;
     border-bottom: 1px solid #e4e6e8
 }
 
-.story-item.job header:before {
+.journey-item.job header:before {
     content: "";
     position: absolute;
     top: -25px;
     left: -25px;
     right: -25px;
     height: 2px;
-    background-color: #F48024
 }
 
-.story-item.job:before {
-    border-color: #F48024;
+.journey-item.job:before {
     background-position: 6px -95px
 }
 
-.story-item.job .story-item-title {
+.journey-item.job .journey-item-title {
     font-weight: 700
 }
 
-.story-item.job .logo-blank {
+.journey-item.job .logo-blank {
     background-color: #eff0f1;
     color: #9fa6ad;
     height: 60px
 }
 
-.story-item.job .logo-blank.dno {
+.journey-item.job .logo-blank.dno {
     display: none
 }
 
-.story-item.artifact:before {
+.journey-item.artifact:before {
     background-position: 6px -34px
 }
 
-.story-item.github:before {
+.journey-item.github:before {
     background-position: 6px -55px
 }
 
-.story-item.github .img.logo:before {
+.journey-item.github .img.logo:before {
     content: "";
     display: block;
     margin: 0 auto;
@@ -688,60 +684,60 @@ a:hover {
     background-repeat: no-repeat
 }
 
-.story-item.github header {
+.journey-item.github header {
     margin-bottom: 12px
 }
 
-.story-item.github .-commits {
+.journey-item.github .-commits {
     margin-bottom: 12px;
     line-height: 1.26666667;
     color: #6a737c
 }
 
-.story-item.github .-commits._last {
+.journey-item.github .-commits._last {
     font-size: 12px
 }
 
-.story-item.github .-commits .-additions {
+.journey-item.github .-commits .-additions {
     color: #45A163
 }
 
-.story-item.github .-commits .-deletions {
+.journey-item.github .-commits .-deletions {
     color: #dc3d4c
 }
 
-.story-item.github .story-item-paragraph {
+.journey-item.github .journey-item-paragraph {
     padding-top: 0
 }
 
-.story-item.github .img.logo:before {
+.journey-item.github .img.logo:before {
     background-position: -120px -532px
 }
 
-.story-item.assessment {
+.journey-item.assessment {
     padding-bottom: 0;
     border-color: transparent;
     background-color: #231f20
 }
 
-.story-item.assessment:nth-child(even):after {
+.journey-item.assessment:nth-child(even):after {
     border-left-color: #231f20
 }
 
-.story-item.assessment:nth-child(odd):after {
+.journey-item.assessment:nth-child(odd):after {
     border-right-color: #231f20
 }
 
-.story-item.assessment .-image {
+.journey-item.assessment .-image {
     width: calc(100% + 46px);
     margin: 0 -24px 12px
 }
 
-.story-item.assessment .fl-none {
+.journey-item.assessment .fl-none {
     flex: 0 auto !important
 }
 
-.story-item.assessment:not(.edit) .story-item-tags {
+.journey-item.assessment:not(.edit) .journey-item-tags {
     border: 1px solid #d6d9dc;
     background-color: white;
     margin: 0 -25px -1px;
@@ -749,18 +745,18 @@ a:hover {
     padding: 8px 12px
 }
 
-.story-item.generic:before {
+.journey-item.generic:before {
     background-position: -16px -95px
 }
 
 
-.story-item .joined-so-wrapper {
+.journey-item .joined-so-wrapper {
     display: flex;
     justify-content: center;
     align-items: center
 }
 
-.story-item .joined-so-wrapper .img {
+.journey-item .joined-so-wrapper .img {
     margin-right: 16px;
     width: 126px;
     height: 103px;

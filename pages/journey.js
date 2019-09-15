@@ -1,22 +1,55 @@
 import React from 'react';
 import Head from 'next/head';
-import JourneyItem from '../components/journey/item';
+import Item from '../components/journey/item';
+
+const journies = [
+  { template: 'experience' , 
+    link: 'https://safeboda.com', 
+    title: 'Software Engineer',
+    startDate: '2019-04-08T00:00:00.000Z',
+    companyName: 'SafeBoda',
+    companyDescription: 'Backend Engineer. SafeBoda is a Tech Company based in Uganda with a distributed tech team and using modern tech stacks.',
+    companyLogo: '/static/images/companies/safeboda.png',
+    stacks: [
+      { value: 'elixir', label: 'Elixir', color: '#a767f5' },
+      { value: 'postgresql', label: 'PostgreSQL', color: 'white' }
+    ]
+  },
+  { template: 'experience' , 
+    link: 'https://hackerbay.io', 
+    title: 'FullStack Software Engineer',
+    startDate: '2018-05-08T00:00:00.000Z',
+    endDate: '2019-04-08T00:00:00.000Z',
+    companyName: 'HackerBay',
+    companyDescription: 'I was a remote Software Engineer at HackerBay.',
+    companyLogo: '/static/images/companies/hb.svg',
+    stacks: [
+      { value: 'nodejs', label: 'NodeJS', color: '#a767f5' },
+      { value: 'reactjs', label: 'ReactJS', color: 'white' },
+      { value: 'docker', label: 'Docker', color: '#a767f5' },
+      { value: 'kubernetes', label: 'Kubernetes', color: '#a767f5' },
+      { value: 'gcp', label: 'Google Cloud', color: '#a767f5' }
+      
+    ]
+  },
+  { template: 'project', link: 'https://safeboda.com'}
+];
 
 export default function DeveloperStory() {
   return (
     <React.Fragment>
       <Head>
         <link rel="stylesheet" type="text/css" href="/static/css/journey.css" />
-      </Head>       
+      </Head>
       <div id="content" className="snippet-hidden">
-        <div id="mainbar-full" className="user-show-new developer-story">
-          <div className="story-wrapper">
-            <div className="story  story-mine">
-              <div className="story-feed">
-                <div className="story-line" />
+        <div id="mainbar-full" className="user-show-new developer-journey">
+          <div className="journey-wrapper">
+            <div className="journey  journey-mine">
+              <div className="journey-feed">
+                <div className="journey-line" />
                 {
-                  [1, 2,3, 4, 5, 6, 7, 8].map((item)=>{
-                    return <JourneyItem key={item}/>;
+                  journies.map((item) => {
+                    return <Item {...item} key={item.template} />;
                   })
                 }
               </div>
