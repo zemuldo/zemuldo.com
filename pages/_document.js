@@ -1,7 +1,7 @@
 import React from 'react';
 import Document, { Head, Main, NextScript } from 'next/document';
 import { ServerStyleSheets } from '@material-ui/styles';
-import HeadElements from '../src/components/document/head_elements';
+import HeadElements from '../components/document/head_elements';
 import { setCookie } from 'nookies';
 
 const GA_TRACKING_ID = process.env.GA_TRACKING_ID;

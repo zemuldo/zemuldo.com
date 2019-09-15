@@ -3,7 +3,7 @@ import App, { Container } from 'next/app';
 import Head from 'next/head';
 import { ThemeProvider } from '@material-ui/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
-import theme from '../src/theme';
+import theme from '../components/theme';
 import NProgress from 'nprogress';
 import Router from 'next/router';
 

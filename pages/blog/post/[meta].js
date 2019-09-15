@@ -1,8 +1,8 @@
 import React from 'react';
 import Container from '@material-ui/core/Container';
 import { withStyles } from '@material-ui/core/styles';
-import Footer from '../../../src/footer';
-import Menu from '../../../src/components/blog/menu';
+import Footer from '../../../components/footer';
+import Menu from '../../../components/blog/menu';
 import marked from 'marked';
 import dynamic from 'next/dynamic';
 import Head from 'next/head';
