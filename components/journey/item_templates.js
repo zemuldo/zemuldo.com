@@ -42,16 +42,16 @@ export function Project() {
 
 }
 
-export function Experience({link, title, stacks, companyLogo, companyDescription, startDate, endDate, companyName}) {
+export function Experience(props) {
   return (
     <div id="item-6904780" className="journey-item job" data-order-by="20190809-002-0006904780">
       <header>
         <span className="journey-item-type">Joined</span>
         <span className="journey-item-date">
           <span>
-            {` ${format(new Date(startDate), 'LLLL, yyyy')}`} → {endDate? format(new Date(endDate), 'LLLL, yyyy'): 'Current'}
+            {` ${format(new Date(props.startDate), 'LLLL, yyyy')}`} → {props.endDate? format(new Date(props.endDate), 'LLLL, yyyy'): 'Current'}
           </span>
-          <span>{` ~ ${formatDistanceStrict(new Date(startDate), new Date(endDate || new Date()))}`}</span>
+          <span>{` ~ ${formatDistanceStrict(new Date(props.startDate), new Date(props.endDate || new Date()))}`}</span>
         </span>
       </header>
       <div className="journey-item-content with-description">
@@ -62,22 +62,22 @@ export function Experience({link, title, stacks, companyLogo, companyDescription
           </svg>
         </div>
         <div className="img logo align-self js-listcard-hover" data-list-url="/users/story/lists/60269/safeboda?storyType=1">
-          <a target='_blank' rel='noopener noreferrer' href={link}>
-            <img src={companyLogo} alt="SafeBoda" className="js-list-img" data-list-id={60269} />
+          <a target='_blank' rel='noopener noreferrer' href={props.link}>
+            <img src={props.companyLogo} alt="SafeBoda" className="js-list-img" data-list-id={60269} />
           </a>
           
         </div>
         <div className="journey-item-text">
           <div className="journey-item-title">
-            <h4>{title}</h4> 
+            <h4>{props.title}</h4> 
             <span className="js-listcard-hover" data-list-url="/users/story/lists/60269/safeboda?storyType=1">
-              <a target='_blank' rel='noopener noreferrer' href={link}>{companyName}</a>
+              <a target='_blank' rel='noopener noreferrer' href={props.link}>{props.companyName}</a>
             </span>
           </div>
           <div>
             <h4>Tech Stack</h4> 
             {
-              stacks.map((entry)=>{
+              props.stacks.map((entry)=>{
                 return <button className="post-tag">{entry.label}</button>;
               })
             }
@@ -85,7 +85,7 @@ export function Experience({link, title, stacks, companyLogo, companyDescription
           <div className="journey-item-paragraph">
             <div className="description">
               <span className="description-content-full">
-                <p>{companyDescription}</p>
+                <p>{props.companyDescription}</p>
               </span>
               <label className="description-expander-label" htmlFor="item-6904780-collapsible-description" data-less="Less" data-more="Read more" />
             </div>
