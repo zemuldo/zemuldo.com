@@ -1,6 +1,9 @@
 import React from 'react';
 import Head from 'next/head';
 import Item from '../components/journey/item';
+import Menu from '../components/blog/menu';
+import { Container } from '@material-ui/core';
+import Grid from '@material-ui/core/Grid';
 
 const journies = [
   { template: 'experience' , 
@@ -31,8 +34,7 @@ const journies = [
       { value: 'gcp', label: 'Google Cloud', color: '#a767f5' }
       
     ]
-  },
-  { template: 'project', link: 'https://safeboda.com'}
+  }
 ];
 
 export default function DeveloperStory() {
@@ -41,6 +43,11 @@ export default function DeveloperStory() {
       <Head>
         <link rel="stylesheet" type="text/css" href="/static/css/journey.css" />
       </Head>
+      <Container maxWidth="md">
+        <Grid container justify="center" alignItems="center">
+          <Menu/>
+        </Grid>
+      </Container>
       <div id="content" className="snippet-hidden">
         <div id="mainbar-full" className="user-show-new developer-journey">
           <div className="journey-wrapper">
@@ -53,6 +60,7 @@ export default function DeveloperStory() {
                   })
                 }
               </div>
+              
             </div>
           </div>
         </div>

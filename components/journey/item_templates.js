@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { format, formatDistanceStrict } from 'date-fns';
 
 export function Project() {
@@ -42,16 +43,16 @@ export function Project() {
 
 }
 
-export function Experience(props) {
+export function Experience({details}) {
   return (
     <div id="item-6904780" className="journey-item job" data-order-by="20190809-002-0006904780">
       <header>
         <span className="journey-item-type">Joined</span>
         <span className="journey-item-date">
           <span>
-            {` ${format(new Date(props.startDate), 'LLLL, yyyy')}`} → {props.endDate? format(new Date(props.endDate), 'LLLL, yyyy'): 'Current'}
+            {` ${format(new Date(details.startDate), 'LLLL, yyyy')}`} → {details.endDate? format(new Date(details.endDate), 'LLLL, yyyy'): 'Current'}
           </span>
-          <span>{` ~ ${formatDistanceStrict(new Date(props.startDate), new Date(props.endDate || new Date()))}`}</span>
+          <span>{` ~ ${formatDistanceStrict(new Date(details.startDate), new Date(details.endDate || new Date()))}`}</span>
         </span>
       </header>
       <div className="journey-item-content with-description">
@@ -62,30 +63,30 @@ export function Experience(props) {
           </svg>
         </div>
         <div className="img logo align-self js-listcard-hover" data-list-url="/users/story/lists/60269/safeboda?storyType=1">
-          <a target='_blank' rel='noopener noreferrer' href={props.link}>
-            <img src={props.companyLogo} alt="SafeBoda" className="js-list-img" data-list-id={60269} />
+          <a target='_blank' rel='noopener noreferrer' href={details.link}>
+            <img src={details.companyLogo} alt="SafeBoda" className="js-list-img" data-list-id={60269} />
           </a>
           
         </div>
         <div className="journey-item-text">
           <div className="journey-item-title">
-            <h4>{props.title}</h4> 
+            <h4>{details.title}</h4> 
             <span className="js-listcard-hover" data-list-url="/users/story/lists/60269/safeboda?storyType=1">
-              <a target='_blank' rel='noopener noreferrer' href={props.link}>{props.companyName}</a>
+              <a target='_blank' rel='noopener noreferrer' href={details.link}>{details.companyName}</a>
             </span>
           </div>
           <div>
             <h4>Tech Stack</h4> 
             {
-              props.stacks.map((entry)=>{
-                return <button className="post-tag">{entry.label}</button>;
+              details.stacks.map((entry)=>{
+                return <button key={entry.value} className="post-tag">{entry.label}</button>;
               })
             }
           </div>
           <div className="journey-item-paragraph">
             <div className="description">
               <span className="description-content-full">
-                <p>{props.companyDescription}</p>
+                <p>{details.companyDescription}</p>
               </span>
               <label className="description-expander-label" htmlFor="item-6904780-collapsible-description" data-less="Less" data-more="Read more" />
             </div>
@@ -96,3 +97,7 @@ export function Experience(props) {
   );
 
 }
+
+Experience.propTypes = {
+  details: PropTypes.object.isRequired
+};

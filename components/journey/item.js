@@ -6,9 +6,9 @@ export default function Item(props) {
 
   switch (props.template) {
     case 'experience':
-      return <Experience {...props} />;
+      return <Experience details= {{...props}} />;
     default:
-      return <Project {...props} />;
+      return <Project details= {{...props}} />;
   }
 }
 Item.propTypes = {
