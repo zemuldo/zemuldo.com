@@ -79,7 +79,13 @@ export default function SocialSites () {
   return (
     <div>
       <ul className="social-icon">
-        <h3>Find me on</h3>
+        <h3>
+          <CustomLink href="/journey">
+          See my Journey
+          </CustomLink>
+          <span> OR </span>
+          <span> Find me on</span>
+        </h3>
         <div style={{marginTop: '20px'}}>
           <MouseOverPopover color='orange' hoverText="Blog">
             <li>

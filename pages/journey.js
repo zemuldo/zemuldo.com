@@ -4,7 +4,7 @@ import Item from '../components/journey/item';
 import Menu from '../components/blog/menu';
 import { Container } from '@material-ui/core';
 import Grid from '@material-ui/core/Grid';
-
+import '../components/journey/journey.css';
 const journies = [
   { template: 'experience' , 
     link: 'https://safeboda.com', 
@@ -32,7 +32,6 @@ const journies = [
       { value: 'docker', label: 'Docker', color: '#a767f5' },
       { value: 'kubernetes', label: 'Kubernetes', color: '#a767f5' },
       { value: 'gcp', label: 'Google Cloud', color: '#a767f5' }
-      
     ]
   }
 ];
@@ -41,7 +40,6 @@ export default function DeveloperStory() {
   return (
     <React.Fragment>
       <Head>
-        <link rel="stylesheet" type="text/css" href="/static/css/journey.css" />
       </Head>
       <Container maxWidth="md">
         <Grid container justify="center" alignItems="center">

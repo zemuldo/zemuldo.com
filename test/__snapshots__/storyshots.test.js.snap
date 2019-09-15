@@ -1516,7 +1516,18 @@ exports[`Storyshots Home Page Normal 1`] = `
           className="social-icon"
         >
           <h3>
-            Find me on
+            <a
+              href="/journey"
+              onClick={[Function]}
+            >
+              See my Journey
+            </a>
+            <span>
+               OR 
+            </span>
+            <span>
+               Find me on
+            </span>
           </h3>
           <div
             style={
@@ -1768,7 +1779,18 @@ exports[`Storyshots Home Page Social Sites 1`] = `
     className="social-icon"
   >
     <h3>
-      Find me on
+      <a
+        href="/journey"
+        onClick={[Function]}
+      >
+        See my Journey
+      </a>
+      <span>
+         OR 
+      </span>
+      <span>
+         Find me on
+      </span>
     </h3>
     <div
       style={
