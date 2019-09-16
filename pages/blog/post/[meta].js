@@ -146,7 +146,7 @@ class Blog extends React.Component {
           }}
         >
           <Grid container justify="center" alignItems="center">
-          <Menu />
+            <Menu />
             {
               this.props.authorization &&
               <Link href={`/blog/post/${post._id}/edit`}>

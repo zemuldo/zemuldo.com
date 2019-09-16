@@ -220,7 +220,7 @@ class NewBlog extends React.Component {
           }}
         >
           <Grid container justify="center" alignItems="center">
-          <Menu />
+            <Menu />
             <Avatar onClick={this.handleSave} className={classes.greenAvatar}>
               <SaveIcon />
             </Avatar>

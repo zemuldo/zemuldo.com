@@ -156,7 +156,7 @@ class Blog extends React.Component {
         <Container style={{ color: 'white' }} maxWidth="md">
           
           <Grid container justify="center" alignItems="center">
-          <Menu />
+            <Menu />
             {
               this.props.authorization &&
               <Link href="/blog/write/new">
