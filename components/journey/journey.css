@@ -1,4 +1,5 @@
 .journey-wrapper {
+    overflow: hidden;
     display: flex;
     -ms-display: flex
 }
@@ -533,11 +534,7 @@
 }
 
 @media only screen and (max-width: 807px) {
-    .journey-item:nth-child(even):before {
-        right: -39px
-    }
-    
-    .journey-item:nth-child(odd):before {
+    .journey-item:before {
         right: -39px
     }
 }

@@ -19,5 +19,5 @@ export default function CustomLink({ children, href }) {
 
 CustomLink.propTypes = {
   href: PropTypes.string.isRequired,
-  children: PropTypes.object.isRequired
+  children: PropTypes.oneOfType([PropTypes.string, PropTypes.object]).isRequired
 };

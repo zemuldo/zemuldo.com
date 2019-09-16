@@ -58,24 +58,26 @@ export default function DeveloperStory() {
           <Menu/>
         </Grid>
       </Container>
-      <div id="content" className="snippet-hidden">
-        <div id="mainbar-full" className="user-show-new developer-journey">
-          <div className="journey-wrapper">
-            <div className="journey  journey-mine">
-              <div className="journey-feed">
-                <div className="journey-line" />
-                
-                {
-                  journies.map((item) => {
-                    return <Item {...item} key={item.template} />;
-                  })
-                }
-              </div>
+      <Container maxWidth="md">
+        <div id="content" className="snippet-hidden">
+          <div id="mainbar-full" className="user-show-new developer-journey">
+            <div className="journey-wrapper">
+              <div className="journey  journey-mine">
+                <div className="journey-feed">
+                  <div className="journey-line" />
+                  {
+                    journies.map((item) => {
+                      return <Item style={{display: 'inline-block'}} {...item} key={item.template} />;
+                    })
+                  }
+                </div>
               
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </Container>
+      
     </React.Fragment>
   );
 }
