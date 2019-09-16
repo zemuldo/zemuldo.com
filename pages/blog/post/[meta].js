@@ -145,10 +145,8 @@ class Blog extends React.Component {
             fontSize: '18px'
           }}
         >
-          <Menu />
-
-          <br />
           <Grid container justify="center" alignItems="center">
+          <Menu />
             {
               this.props.authorization &&
               <Link href={`/blog/post/${post._id}/edit`}>
