@@ -79,7 +79,9 @@ export default function SocialSites () {
   return (
     <div>
       <ul className="social-icon">
-        <h3>Find me on</h3>
+        <h3 className='color-1'>
+        Find me on
+        </h3>
         <div style={{marginTop: '20px'}}>
           <MouseOverPopover color='orange' hoverText="Blog">
             <li>

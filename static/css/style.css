@@ -56,15 +56,6 @@ h1 {
     font-weight: 400;
     margin: 0
 }
-
-a {
-    color: #96979c
-}
-
-a:hover {
-    font-weight: 700
-}
-
 .img-frame {
     position: relative;
     width: 300px;

@@ -1,0 +1,713 @@
+.journey-wrapper {
+    overflow: hidden;
+    display: flex;
+    -ms-display: flex
+}
+
+.journey-wrapper .journey {
+    flex-shrink: 0;
+    -ms-flex-shrink: 0;
+    margin: 0 auto 40px auto
+}
+
+@media only screen and (min-width: 807px){
+    .journey-wrapper .journey {
+        width: 800px;
+    }
+}
+
+@media only screen and (max-width: 807px){
+    .journey-wrapper .journey {
+        width: 600px;
+    }
+}
+
+.journey-wrapper:before,
+.journey-wrapper:after {
+    content: "";
+    display: table
+}
+
+.journey-wrapper:after {
+    clear: both
+}
+
+.journey .header {
+    margin: 0 auto;
+    text-align: center;
+    max-width: 620px
+}
+
+.journey .header .meta a {
+    color: #6a737c
+}
+
+.journey .header .meta a:hover {
+    color: #3b4045
+}
+
+.journey .header .meta a:hover .meta-icon {
+    color: #6a737c
+}
+
+.journey .header .job {
+    margin-bottom: 8px;
+    font-size: 19px;
+    color: #6a737c;
+    line-height: 1.15789474
+}
+
+.journey .header .meta {
+    margin-bottom: 12px;
+    color: #6a737c
+}
+
+.journey .header .meta-icon {
+    color: #9199a1
+}
+
+.journey .header .meta-icon .svg-icon {
+    width: 14px;
+    height: 14px
+}
+
+.journey ._hidden {
+    display: none !important
+}
+
+.journey .feature-banner {
+    padding: 20px 24px;
+    margin-top: -12px;
+    width: 100%;
+    font-size: 12px;
+    line-height: 1.26666667;
+    text-align: center
+}
+
+.journey .feature-banner--logo {
+    margin: 0 auto 16px
+}
+
+.journey .feature-banner--iqs {
+    margin-top: -4px;
+    margin-bottom: 12px
+}
+
+.journey .feature-banner--items {
+    margin-top: 4px;
+    margin-bottom: 4px
+}
+
+.journey .feature-banner--link {
+    margin: 0 auto;
+    color: #4c8dbd
+}
+
+.journey .feature-banner--link:hover {
+    color: #39739d
+}
+
+.journey header .description,
+.journey .tools {
+    font-size: 16px;
+    line-height: 1.4em
+}
+
+.journey header .description {
+    margin: 30px auto 10px auto
+}
+
+.journey header .description .description-expander-label {
+    cursor: pointer
+}
+
+.journey header .description .description-expander~.description-content-truncated {
+    display: block;
+    overflow: hidden;
+    max-height: 200px
+}
+
+.journey header .description .description-expander:checked~.description-content-truncated {
+    display: none
+}
+
+.journey header .description .description-expander~.description-content-full {
+    display: none
+}
+
+.journey header .description .description-expander:checked~.description-content-full {
+    display: inline
+}
+
+.journey header .description .description-expander~.description-expander-label::after {
+    content: attr(data-more)
+}
+
+.journey header .description .description-expander:checked~.description-expander-label::after {
+    content: attr(data-less)
+}
+
+.journey header .description .description-expander~.description-expander-label {
+    color: #07C;
+    display: none;
+    margin-top: 4px
+}
+
+.journey header .description .description-expander:checked~.description-expander-label:after {
+    background-image: none;
+    width: auto
+}
+
+.journey header .description:not(.placeholder-text)~.tools:before {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 2px;
+    margin: 10px auto 15px auto
+}
+
+.journey header .description .description-content-full>*:last-child,
+.journey header .description .description-content-truncated>*:last-child {
+    margin-bottom: 0
+}
+
+.journey .header-edit-section:hover .description .description-expander-label {
+    cursor: pointer
+}
+
+.journey .header-edit-section:hover .description .description-expander~.description-content-truncated {
+    display: block;
+    overflow: hidden;
+    max-height: 200px
+}
+
+.journey .header-edit-section:hover .description .description-expander:checked~.description-content-truncated {
+    display: none
+}
+
+.journey .header-edit-section:hover .description .description-expander~.description-content-full {
+    display: none
+}
+
+.journey .header-edit-section:hover .description .description-expander:checked~.description-content-full {
+    display: inline
+}
+
+.journey .header-edit-section:hover .description .description-expander~.description-expander-label::after {
+    content: attr(data-more)
+}
+
+.journey .header-edit-section:hover .description .description-expander:checked~.description-expander-label::after {
+    content: attr(data-less)
+}
+
+.journey .header-edit-section:hover .description .description-expander~.description-expander-label {
+    color: #07C;
+    display: none;
+    margin-top: 4px
+}
+
+.journey .header-edit-section:hover .description .description-expander:checked~.description-expander-label:after {
+    background-image: none;
+    width: auto
+}
+
+.journey .tools {
+    margin-top: 10px;
+    margin-bottom: 30px
+}
+
+.journey .user-technologies {
+    margin: 20px auto;
+    text-align: center
+}
+
+.journey .user-technologies label {
+    padding-bottom: 4px
+}
+
+.journey .user-technologies .dislike {
+    margin-top: 15px
+}
+
+.journey .user-technologies .tag-wrapper {
+    display: flex;
+    justify-content: center;
+    -ms-display: flex;
+    -ms-justify-content: center;
+    margin-top: 15px
+}
+
+.journey .header-edit-section .header-edit-btn {
+    display: none
+}
+
+.journey .header-edit-section {
+    position: relative
+}
+
+.journey .header-edit-section:hover .header-edit-btn {
+    display: block;
+    z-index: 999
+}
+
+.journey .header-edit-section:hover {
+    background: #f4f8fb
+}
+
+.journey .header-edit-section .header-edit-btn {
+    display: none;
+    position: absolute;
+    top: 10px;
+    right: 10px
+}
+
+.journey .header-edit-section label.block {
+    margin-top: 5px
+}
+
+.journey-feed {
+    max-width: 100%;
+    margin: 45px auto;
+    position: relative;
+    font-size: 0
+}
+
+.journey-feed:before,
+.journey-feed:after {
+    content: "";
+    display: table
+}
+
+.journey-feed:after {
+    clear: both
+}
+
+@media only screen and (min-width: 807px){
+    .journey-feed .journey-line {
+        width: 1px;
+        background: #e1e1e1;
+        position: absolute;
+        top: 24px;
+        left: 50%;
+        bottom: 0
+    }
+}
+@media only screen and (max-width: 807px){
+    .journey-feed .journey-line {
+        width: 1px;
+        background: #e1e1e1;
+        position: absolute;
+        top: 24px;
+        left: 58%;
+        bottom: 0
+    }
+}
+
+.journey-feed .journey-item {
+    display: inline-block;
+    vertical-align: top
+}
+
+
+@media only screen and (max-width: 800px){
+    
+    .journey-feed .journey-item {
+        margin-left: 48px;
+        margin-top: 160px;
+        margin-bottom: -100px
+    }
+}
+
+@media only screen and (min-width: 800px){
+    .journey-feed .journey-item:nth-child(even) {
+        margin-top: 60px
+    }
+    
+    .journey-feed .journey-item:nth-child(odd) {
+        margin-left: 48px;
+        margin-top: 160px;
+        margin-bottom: -100px
+    }
+}
+
+.journey-feed .journey-item:nth-child(2) {
+    margin-top: 0
+}
+
+.journey-feed .journey-item:last-of-type {
+    margin-bottom: 0
+}
+
+.journey-item {
+    position: relative;
+    padding: 24px;
+    width: calc(50% - 24px);
+    border: 1px solid #08a6f3;
+    font-size: 13px;
+    line-height: 1.26666667;
+    color: #242729
+}
+
+.journey-item:not(.edit) .journey-item-content {
+    display: flex;
+    align-items: center;
+    word-break: break-word
+}
+
+.journey-item:not(.edit) .journey-item-content.with-description {
+    align-items: flex-start
+}
+
+.journey-item .journey-item-paragraph,
+.journey-item .journey-item-tags {
+    padding-top: 8px
+}
+
+.journey-item .journey-item-paragraph {
+    color: #535a60
+}
+
+.journey-item .journey-item-paragraph *:last-child {
+    margin-bottom: 0
+}
+
+.journey-item .journey-item-text {
+    flex: 1 auto;
+    color: #535a60
+}
+
+.journey-item .journey-item-title {
+    font-size: 15px;
+    line-height: 1.13333333;
+    color: #242729
+}
+
+.journey-item .description {
+    max-width: 334px
+}
+
+.journey-item .description .description-expander-label {
+    cursor: pointer
+}
+
+.journey-item .description .description-expander~.description-content-truncated {
+    display: block;
+    overflow: hidden;
+    max-height: 65px
+}
+
+.journey-item .description .description-expander:checked~.description-content-truncated {
+    display: none
+}
+
+.journey-item .description .description-expander~.description-content-full {
+    display: none
+}
+
+.journey-item .description .description-expander:checked~.description-content-full {
+    display: inline
+}
+
+.journey-item .description .description-expander~.description-expander-label::after {
+    content: attr(data-more)
+}
+
+.journey-item .description .description-expander:checked~.description-expander-label::after {
+    content: attr(data-less)
+}
+
+.journey-item .description .description-expander~.description-expander-label {
+    color: #07C;
+    display: none;
+    margin-top: 4px
+}
+
+.journey-item .description .description-expander:checked~.description-expander-label:after {
+    background-image: none;
+    width: auto
+}
+
+.journey-item .img img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle
+}
+
+.journey-item .img.logo {
+    flex-shrink: 0;
+    margin-right: 12px;
+    padding: 2px;
+    width: 60px
+}
+
+.journey-item .img.logo.align-self {
+    align-self: flex-start
+}
+
+.journey-item header {
+    position: relative;
+    margin-bottom: 4px;
+    font-size: 12px;
+    color: #6a737c
+}
+
+.journey-item header .edit-item {
+    position: absolute;
+    right: 0;
+    padding: 8px;
+    cursor: pointer
+}
+
+.journey-item header .edit-item .dropdown {
+    display: none;
+    top: 24px;
+    right: -6px
+}
+
+.journey-item header .edit-item .dropdown li>a,
+.journey-item header .edit-item .dropdown li label {
+    display: inline-block;
+    padding: 8px 12px;
+    font-size: 12px
+}
+
+.journey-item header .edit-item .dropdown li label {
+    color: #4E82C2
+}
+
+.journey-item header .edit-item .dropdown li label:hover {
+    color: #4CA3D7
+}
+
+.journey-item header .edit-item.icon-settings-off {
+    background-position: 4px -352px
+}
+
+.journey-item header .edit-item:hover .dropdown {
+    display: block
+}
+
+.journey-item header .edit-item:hover.icon-settings-off {
+    background-position: 4px -367px
+}
+
+.journey-item header .journey-item-date:before {
+    content: " \02022 "
+}
+
+.journey-item:before,
+.journey-item:after {
+    content: "";
+    position: absolute
+}
+
+.journey-item:before {
+    box-sizing: border-box;
+    top: 16px;
+    width: 27px;
+    height: 27px;
+    border: 2px solid #9199a1;
+    border-radius: 50%;
+    background-color: #08a6f3;
+    background-repeat: no-repeat
+}
+
+@media only screen and (min-width: 807px) {
+    .journey-item:nth-child(even):before {
+        right: -39px
+    }
+    
+    .journey-item:nth-child(odd):before {
+        left: -39px
+    }
+}
+
+@media only screen and (max-width: 807px) {
+    .journey-item:before {
+        right: -39px
+    }
+}
+
+.journey-item:after {
+    top: 24px
+}
+
+@media only screen and (min-width: 807px){
+    .journey-item:nth-child(even):after {
+        right: -8px;
+        width: 0;
+        height: 0;
+        border-top: 6px solid transparent;
+        border-bottom: 6px solid transparent;
+        border-left: 8px solid #08a6f3
+    }
+    
+    .journey-item:nth-child(odd):after {
+        left: -8px;
+        width: 0;
+        height: 0;
+        border-top: 6px solid transparent;
+        border-bottom: 6px solid transparent;
+        border-right: 8px solid #08a6f3
+    }
+}
+@media only screen and (max-width: 807px){
+    .journey-item:nth-child(even):after {
+        right: -8px;
+        width: 0;
+        height: 0;
+        border-top: 6px solid transparent;
+        border-bottom: 6px solid transparent;
+        border-left: 8px solid #08a6f3
+    }
+    
+    .journey-item:nth-child(odd):after {
+        right: -8px;
+        width: 0;
+        height: 0;
+        border-top: 6px solid transparent;
+        border-bottom: 6px solid transparent;
+        border-left: 8px solid #08a6f3
+    }
+}
+
+.journey-item.job header {
+    margin-bottom: 24px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #e4e6e8
+}
+
+.journey-item.job header:before {
+    content: "";
+    position: absolute;
+    top: -25px;
+    left: -25px;
+    right: -25px;
+    height: 2px;
+}
+
+.journey-item.job:before {
+    background-position: 6px -95px
+}
+
+.journey-item.job .journey-item-title {
+    font-weight: 700
+}
+
+.journey-item.artifact:before {
+    background-position: 6px -34px
+}
+
+.journey-item.github:before {
+    background-position: 6px -55px
+}
+
+.journey-item.github .img.logo:before {
+    content: "";
+    display: block;
+    margin: 0 auto;
+    width: 42px;
+    height: 40px;
+    background-repeat: no-repeat
+}
+
+.journey-item.github header {
+    margin-bottom: 12px
+}
+
+.journey-item.github .-commits {
+    margin-bottom: 12px;
+    line-height: 1.26666667;
+    color: #6a737c
+}
+
+.journey-item.github .-commits._last {
+    font-size: 12px
+}
+
+.journey-item.github .-commits .-additions {
+    color: #45A163
+}
+
+.journey-item.github .-commits .-deletions {
+    color: #dc3d4c
+}
+
+.journey-item.github .journey-item-paragraph {
+    padding-top: 0
+}
+
+.journey-item.github .img.logo:before {
+    background-position: -120px -532px
+}
+
+.journey-item.assessment {
+    padding-bottom: 0;
+    border-color: transparent;
+    background-color: #231f20
+}
+
+.journey-item.assessment:nth-child(even):after {
+    border-left-color: #231f20
+}
+
+.journey-item.assessment:nth-child(odd):after {
+    border-right-color: #231f20
+}
+
+.journey-item.assessment .-image {
+    width: calc(100% + 46px);
+    margin: 0 -24px 12px
+}
+
+.journey-item.assessment .fl-none {
+    flex: 0 auto !important
+}
+
+.journey-item.assessment:not(.edit) .journey-item-tags {
+    border: 1px solid #d6d9dc;
+    background-color: white;
+    margin: 0 -25px -1px;
+    min-width: calc(100% + 50px);
+    padding: 8px 12px
+}
+
+.journey-item.generic:before {
+    background-position: -16px -95px
+}
+
+
+.journey-item .joined-so-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.journey-item .joined-so-wrapper .img {
+    margin-right: 16px;
+    width: 126px;
+    height: 103px;
+    background-position: center center;
+    background-repeat: no-repeat
+}
+
+.stacks{
+    text-align: justify;
+}
+.stacks:after{
+    display: inline-block;
+}
+
+.stacks div{
+    color: 'white';
+    padding: 4px;
+    font-size: 14px;
+    border-radius: 3px;
+}
+
+.stacks div:last-child .separator{
+    display: none;
+}
+.clearBoth { clear:both; }

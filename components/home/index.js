@@ -2,6 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import SocialSites from './social_sites';
 import Terminal from './terminal_me';
+import CustomLink from '../link';
 
 export default class Home extends React.Component {
   render() {
@@ -38,6 +39,11 @@ export default class Home extends React.Component {
                         HackerBay Inc.
                       </h4>
                       <h3 className="color-orange">Nairobi, Kenya</h3>
+                      <h4 style={{marginTop: '30px', fontSize: '1.8em'}} className="color-6 font-c-cn-m">
+                        <CustomLink href='/journey'>
+                          <b>See my journey 🚀🚀</b>
+                        </CustomLink>
+                      </h4>
                     </div>
                     <div
                       id="me-pic-wrapper"

@@ -219,8 +219,8 @@ class NewBlog extends React.Component {
             fontSize: '18px'
           }}
         >
-          <Menu />
           <Grid container justify="center" alignItems="center">
+            <Menu />
             <Avatar onClick={this.handleSave} className={classes.greenAvatar}>
               <SaveIcon />
             </Avatar>

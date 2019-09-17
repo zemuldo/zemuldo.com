@@ -154,8 +154,9 @@ class Blog extends React.Component {
           <meta name="twitter:image" content="https://zemuldo.com/static/images/logo/black.jpg" />
         </Head>
         <Container style={{ color: 'white' }} maxWidth="md">
-          <Menu />
+          
           <Grid container justify="center" alignItems="center">
+            <Menu />
             {
               this.props.authorization &&
               <Link href="/blog/write/new">
