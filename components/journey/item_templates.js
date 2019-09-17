@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { format, formatDistanceStrict } from 'date-fns';
 
-export function Project({details}) {
+export function Project() {
   return (
     <div id="item-6919178" className="journey-item project github" data-order-by="20190809-000-0006919178">
       <header>
@@ -42,9 +42,6 @@ export function Project({details}) {
   );
 
 }
-Project.propTypes = {
-  details: PropTypes.object.isRequired
-};
 
 export function Experience({ details }) {
   return (

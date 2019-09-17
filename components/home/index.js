@@ -41,7 +41,7 @@ export default class Home extends React.Component {
                       <h3 className="color-orange">Nairobi, Kenya</h3>
                       <h4 style={{marginTop: '30px', fontSize: '1.8em'}} className="color-6 font-c-cn-m">
                         <CustomLink href='/journey'>
-                          <b>See is my journey 🚀🚀</b>
+                          <b>See my journey 🚀🚀</b>
                         </CustomLink>
                       </h4>
                     </div>
