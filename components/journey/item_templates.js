@@ -43,54 +43,54 @@ export function Project() {
 
 }
 
-export function Experience({details}) {
+export function Experience({ details }) {
   return (
-    <div id="item-6904780" className="journey-item job" data-order-by="20190809-002-0006904780">
+    <div className="journey-item job">
       <header>
         <span className="journey-item-type">Joined</span>
         <span className="journey-item-date">
           <span>
-            {` ${format(new Date(details.startDate), 'LLLL, yyyy')}`} → {details.endDate? format(new Date(details.endDate), 'LLLL, yyyy'): 'Current'}
+            {` ${format(new Date(details.startDate), 'LLLL, yyyy')}`} → {details.endDate ? format(new Date(details.endDate), 'LLLL, yyyy') : 'Current'}
           </span>
           <span>{` ~ ${formatDistanceStrict(new Date(details.startDate), new Date(details.endDate || new Date()))}`}</span>
         </span>
       </header>
       <div className="journey-item-content with-description">
-        <div className="js-listcard-container" />
-        <div className="g-center img logo logo-blank js-logo-blank dno align-self js-listcard-hover" data-list-url="/users/story/lists/60269/safeboda?storyType=1">
-          <svg aria-hidden="true" className="svg-icon iconIndustry" width={18} height={18} viewBox="0 0 18 18">
-            <path d="M10 16v-4H8v4H2V4c0-1.1.9-2 2-2h6a2 2 0 0 1 2 2v2h2a2 2 0 0 1 2 2v8h-6zM4 4v2h2V4H4zm0 4v2h2V8H4zm4-4v2h2V4H8zm0 4v2h2V8H8zm-4 4v2h2v-2H4zm8 0v2h2v-2h-2zm0-4v2h2V8h-2z" />
-          </svg>
-        </div>
-        <div className="img logo align-self js-listcard-hover" data-list-url="/users/story/lists/60269/safeboda?storyType=1">
+        <div className="img logo align-self js-listcard-hover">
           <a target='_blank' rel='noopener noreferrer' href={details.link}>
             <img src={details.companyLogo} alt="SafeBoda" className="js-list-img" data-list-id={60269} />
           </a>
-          
         </div>
         <div className="journey-item-text">
           <div className="journey-item-title">
-            <h4>{details.title}</h4> 
-            <span className="js-listcard-hover" data-list-url="/users/story/lists/60269/safeboda?storyType=1">
+            <h4>{details.title}</h4>
+            <span className="js-listcard-hover">
               <a target='_blank' rel='noopener noreferrer' href={details.link}>{details.companyName}</a>
             </span>
           </div>
           <div>
-            <h4>Tech Stack</h4> 
-            {
-              details.stacks.map((entry)=>{
-                return <button key={entry.value} className="post-tag">{entry.label}</button>;
-              })
-            }
-          </div>
-          <div className="journey-item-paragraph">
-            <div className="description">
-              <span className="description-content-full">
-                <p>{details.companyDescription}</p>
-              </span>
-              <label className="description-expander-label" htmlFor="item-6904780-collapsible-description" data-less="Less" data-more="Read more" />
+            <h4>Tech Stack</h4>
+            <div className='stacks'>
+              {
+                details.stacks.map((entry) => {
+                  return <div style={{ float: 'left' }} key={entry.value} >
+                    <span className='color-6'>{` ${entry.label} `}</span>
+                    <span className='separator'>,</span>
+                  </div>;
+                })
+              }
+
             </div>
+            <br className="clearBoth" />
           </div>
+         
+        </div>
+      </div>
+      <div className="journey-item-paragraph">
+        <div className="description">
+          <span className="description-content-full">
+            <p>{details.companyDescription}</p>
+          </span>
         </div>
       </div>
     </div>

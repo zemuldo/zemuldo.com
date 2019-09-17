@@ -481,15 +481,6 @@
     color: #4CA3D7
 }
 
-.journey-item header .edit-item .item-delete-button label {
-    display: inline-block;
-    cursor: pointer
-}
-
-.journey-item header .edit-item .item-delete-button input[type="submit"] {
-    display: none
-}
-
 .journey-item header .edit-item.icon-settings-off {
     background-position: 4px -352px
 }
@@ -605,16 +596,6 @@
     font-weight: 700
 }
 
-.journey-item.job .logo-blank {
-    background-color: #eff0f1;
-    color: #9fa6ad;
-    height: 60px
-}
-
-.journey-item.job .logo-blank.dno {
-    display: none
-}
-
 .journey-item.artifact:before {
     background-position: 6px -34px
 }
@@ -711,3 +692,21 @@
     background-position: center center;
     background-repeat: no-repeat
 }
+
+.stacks{
+    text-align: justify;
+}
+.stacks:after{
+    display: inline-block;
+}
+
+.stacks div{
+    color: 'white';
+    font-size: 12px;
+    border-radius: 3px;
+}
+
+.stacks div:last-child .separator{
+    display: none;
+}
+.clearBoth { clear:both; }
