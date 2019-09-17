@@ -702,7 +702,8 @@
 
 .stacks div{
     color: 'white';
-    font-size: 12px;
+    padding: 4px;
+    font-size: 14px;
     border-radius: 3px;
 }
 
