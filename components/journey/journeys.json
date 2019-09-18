@@ -10,7 +10,7 @@
     "stacks": [
       { "value": "elixir", "label": "Elixir", "color": "#a767f5" },
       { "value": "docker", "label": "Docker", "color": "#a767f5" },
-      { "value": "es", "label": "Elastic Reach", "color": "#a767f5" },
+      { "value": "es", "label": "Elastic Search", "color": "#a767f5" },
       { "value": "redis", "label": "Redis", "color": "#a767f5" },
       { "value": "rabbitmq", "label": "RabbitMQ", "color": "#a767f5" },
       { "value": "postgresql", "label": "PostgreSQL", "color": "white" },
