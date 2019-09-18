@@ -6,6 +6,7 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import theme from '../components/theme';
 import NProgress from 'nprogress';
 import Router from 'next/router';
+import '../components/app/app.css'
 
 Router.onRouteChangeStart = () => {
   NProgress.start();
