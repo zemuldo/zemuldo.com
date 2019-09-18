@@ -26,7 +26,7 @@ export default function DeveloperStory() {
                   <div className="journey-line" />
                   {
                     journeys.map((item) => {
-                      return <Item style={{display: 'inline-block'}} {...item} key={item.template} />;
+                      return <Item style={{display: 'inline-block'}} {...item} key={`${item.startDate}-${item.endDate}-${item.title}`} />;
                     })
                   }
                 </div>
