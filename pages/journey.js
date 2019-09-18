@@ -4,13 +4,13 @@ import Item from '../components/journey/item';
 import Menu from '../components/blog/menu';
 import { Container } from '@material-ui/core';
 import Grid from '@material-ui/core/Grid';
-import journeys from '../components/journey/journeys.json'
+import journeys from '../components/journey/journeys.json';
+import '../components/journey/journey.css';
 
 export default function DeveloperStory() {
   return (
     <React.Fragment>
       <Head>
-      <link rel="stylesheet" type="text/css" href="/static/css/journey.css" />
       </Head>
       <Container maxWidth="md">
         <Grid container justify="center" alignItems="center">
