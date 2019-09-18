@@ -47,10 +47,10 @@ export function Experience({ details }) {
   return (
     <div className="journey-item job">
       <header>
-        <span className="journey-item-type">Joined</span>
+        <span className="journey-item-type">From</span>
         <span className="journey-item-date">
           <span>
-            {` ${format(new Date(details.startDate), 'LLLL, yyyy')}`} → {details.endDate ? format(new Date(details.endDate), 'LLLL, yyyy') : 'Current'}
+            {` ${format(new Date(details.startDate), 'LLLL, yyyy')}`} → {details.endDate ? format(new Date(details.endDate), 'LLLL, yyyy') : 'Present'}
           </span>
           <span>{` ~ ${formatDistanceStrict(new Date(details.startDate), new Date(details.endDate || new Date()))}`}</span>
         </span>
@@ -65,7 +65,7 @@ export function Experience({ details }) {
           <div className="journey-item-title">
             <h4>{details.title}</h4>
             <span className="js-listcard-hover">
-              <a target='_blank' rel='noopener noreferrer' href={details.link}>{details.companyName}</a>
+              <a className='color-1' target='_blank' rel='noopener noreferrer' href={details.link}>{details.companyName}</a>
             </span>
           </div>
           <div>

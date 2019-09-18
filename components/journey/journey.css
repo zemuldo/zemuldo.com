@@ -365,7 +365,8 @@
 }
 
 .journey-item .journey-item-paragraph {
-    color: #535a60
+    color: #535a60;
+    font-size: 1.2em;
 }
 
 .journey-item .journey-item-paragraph *:last-child {
@@ -449,7 +450,7 @@
 .journey-item header {
     position: relative;
     margin-bottom: 4px;
-    font-size: 12px;
+    font-size: 1.2em;
     color: #6a737c
 }
 
