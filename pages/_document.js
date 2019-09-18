@@ -6,6 +6,7 @@ import { setCookie } from 'nookies';
 
 const GA_TRACKING_ID = process.env.GA_TRACKING_ID;
 
+
 class MyDocument extends Document {
 
   render() {

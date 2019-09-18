@@ -4,8 +4,8 @@ import Item from '../components/journey/item';
 import Menu from '../components/blog/menu';
 import { Container } from '@material-ui/core';
 import Grid from '@material-ui/core/Grid';
+import journeys from '../components/journey/journeys.json';
 import '../components/journey/journey.css';
-import journeys from '../components/journey/journeys.json'
 
 export default function DeveloperStory() {
   return (
