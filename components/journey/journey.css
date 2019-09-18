@@ -1,7 +1,12 @@
 .journey-wrapper {
-    overflow: hidden;
     display: flex;
     -ms-display: flex
+}
+
+@media only screen and (max-width: 370px){
+    .journey-wrapper{
+        margin-left: -47px;
+    }
 }
 
 .journey-wrapper .journey {
@@ -310,10 +315,21 @@
 }
 
 
+
+
 @media only screen and (max-width: 800px){
     
     .journey-feed .journey-item {
         margin-left: 48px;
+        margin-top: 160px;
+        margin-bottom: -100px
+    }
+}
+
+@media only screen and (max-width: 300px){
+    
+    .journey-feed .journey-item {
+        margin-left: -48px;
         margin-top: 160px;
         margin-bottom: -100px
     }
@@ -343,6 +359,7 @@
     position: relative;
     padding: 24px;
     width: calc(50% - 24px);
+    min-width: 200px;
     border: 1px solid #08a6f3;
     font-size: 13px;
     line-height: 1.26666667;
