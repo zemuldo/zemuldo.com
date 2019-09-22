@@ -157,7 +157,7 @@ class NewBlog extends React.Component {
   handleOpenPublishDialogue = () => this.setState({ publishDialogueOpen: true })
   handleClosePublishDialogue = () => this.setState({ publishDialogueOpen: false })
   handlePublish = async () => {
-    const { authorization } = this.props;
+    const authorization = localStorage.getItem('authorization');
     const res = await fetch(`${api_url}/posts`, {
       method: 'post',
       headers: { authorization, 'Accept': 'application/json', 'Content-Type': 'application/json' },
@@ -171,7 +171,8 @@ class NewBlog extends React.Component {
       })
     });
     const data = await res.json();
-    if (parseInt(res.status, 10) === 200) localStorage.removeItem('currentDraft');
+    if (parseInt(res.status, 10) !== 200) return alert(data[0].errorMessage);
+    localStorage.removeItem('currentDraft');
     Router.push(`/blog/post/${data.post._id}`);
     this.handleClosePublishDialogue();
   }
