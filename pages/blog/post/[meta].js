@@ -73,6 +73,9 @@ marked.setOptions({
 renderer.link = function( href, title, text ) {
   return '<a class="b-link" rel="noopener noreferrer" target="_blank" href="'+ href +'" title="' + (title || href) + '">' + text + '</a>';
 };
+renderer.image = function( src, alt ) {
+  return `<img class="b-img" src="${src}" alt="${alt}" />`;
+};
 
 class Blog extends React.Component {
   constructor(props) {
