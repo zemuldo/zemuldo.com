@@ -90,7 +90,7 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-function Menu({ router }) {
+function Menu() {
 
 
   const classes = useStyles();
@@ -104,13 +104,10 @@ function Menu({ router }) {
           </Avatar>
         </Link>
         
-        {
-          router && router.route !== '/blog' &&
-          <Link href='/blog'>
-            <Avatar className={classes.greenAvatar} src='/static/images/blog.png'>
-            </Avatar>
-          </Link>
-        }
+        <Link href='/blog'>
+          <Avatar className={classes.greenAvatar} src='/static/images/blog.png'>
+          </Avatar>
+        </Link>
 
       </Grid>
     </div>
