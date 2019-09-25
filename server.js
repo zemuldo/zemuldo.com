@@ -11,7 +11,7 @@ const handle = app.getRequestHandler();
 
 const router = express();
 
-router.use('/blog/static', express.static('static'))
+router.use('/blog/static', express.static('static'));
 
 router.use(compression());
 

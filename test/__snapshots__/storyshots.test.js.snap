@@ -99,7 +99,7 @@ Array [
     />
   </div>,
   <div
-    className="MuiContainer-root MuiContainer-maxWidthMd"
+    className="MuiContainer-root blog-body MuiContainer-maxWidthMd"
     style={
       Object {
         "color": "white",
@@ -2162,7 +2162,7 @@ Array [
                       Present
                     </span>
                     <span>
-                       ~ 5 months
+                       ~ 6 months
                     </span>
                   </span>
                 </header>
