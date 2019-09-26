@@ -6,6 +6,7 @@ import { Container } from '@material-ui/core';
 import Grid from '@material-ui/core/Grid';
 import journeys from '../components/journey/journeys.json';
 import '../components/journey/journey.css';
+import Footer from '../components/footer';
 
 export default function DeveloperStory() {
   return (
@@ -34,6 +35,8 @@ export default function DeveloperStory() {
           </div>
         </div>
       </Container>
+
+      <Footer/>
       
     </React.Fragment>
   );

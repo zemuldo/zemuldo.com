@@ -18,14 +18,21 @@ export default function Footer() {
     <footer className={classes.footer}>
       <Container maxWidth="lg">
         <Typography variant="h6" align="center" gutterBottom>
-          Zemuldo Blog
+          <span className='color-1' >Zemuldo Website and Blog</span>
         </Typography>
         <Typography
           variant="subtitle1"
           align="center"
           component="p"
         >
-          Writing more cool stuff everyday.
+          Want to talk? Check my <a href='https://calendly.com/zemuldo' target='_blank' rel='noopener noreferrer'  >Calendly</a>
+        </Typography>
+        <Typography
+          variant="subtitle1"
+          align="center"
+          component="p"
+        >
+          <span>Learning while Writing more cool stuff everyday.</span>
         </Typography>
         <Typography variant="body2" align="center">
           {'Copyright © '}
