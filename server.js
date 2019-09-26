@@ -44,13 +44,7 @@ app.prepare().then(() => {
 
   server.get('*', (req, res) => {
     return handle(req, res);
-  });
-
-  server.use('*', (req, _res, next)=>{
-    logger.info(`Serving:::: ${req.url}`);
-    next();
-  });
-
+  }); 
 
   server.listen(process.env.PORT, err => {
     if (err) throw err;
