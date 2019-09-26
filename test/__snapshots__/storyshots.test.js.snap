@@ -45,6 +45,19 @@ Array [
               </svg>
             </div>
           </a>
+          <a
+            href="/blog"
+            onClick={[Function]}
+          >
+            <div
+              className="MuiAvatar-root makeStyles-greenAvatar-611"
+            >
+              <img
+                className="MuiAvatar-img"
+                src="/static/images/blog.png"
+              />
+            </div>
+          </a>
         </div>
       </div>
       <div
@@ -199,6 +212,19 @@ Array [
                 d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"
               />
             </svg>
+          </div>
+        </a>
+        <a
+          href="/blog"
+          onClick={[Function]}
+        >
+          <div
+            className="MuiAvatar-root makeStyles-greenAvatar-700"
+          >
+            <img
+              className="MuiAvatar-img"
+              src="/static/images/blog.png"
+            />
           </div>
         </a>
       </div>
@@ -669,6 +695,19 @@ Array [
               </svg>
             </div>
           </a>
+          <a
+            href="/blog"
+            onClick={[Function]}
+          >
+            <div
+              className="MuiAvatar-root makeStyles-greenAvatar-127"
+            >
+              <img
+                className="MuiAvatar-img"
+                src="/static/images/blog.png"
+              />
+            </div>
+          </a>
         </div>
       </div>
       <a
@@ -1034,6 +1073,19 @@ Array [
                   d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"
                 />
               </svg>
+            </div>
+          </a>
+          <a
+            href="/blog"
+            onClick={[Function]}
+          >
+            <div
+              className="MuiAvatar-root makeStyles-greenAvatar-367"
+            >
+              <img
+                className="MuiAvatar-img"
+                src="/static/images/blog.png"
+              />
             </div>
           </a>
         </div>
@@ -2079,7 +2131,255 @@ exports[`Storyshots Home Page TerminalMe 1`] = `
 </div>
 `;
 
-exports[`Storyshots Journey Main 1`] = `
+exports[`Storyshots Journey Experience 1`] = `
+<div
+  style={
+    Object {
+      "margin": "10%",
+    }
+  }
+>
+  <div
+    className="journey-item job"
+  >
+    <header>
+      <span
+        className="journey-item-type"
+      >
+        From
+      </span>
+      <span
+        className="journey-item-date"
+      >
+        <span>
+           January, 2018
+           → 
+          April, 2019
+        </span>
+        <span>
+           ~ 1 year
+        </span>
+      </span>
+    </header>
+    <div
+      className="journey-item-content with-description"
+    >
+      <div
+        className="img logo align-self js-listcard-hover"
+      >
+        <a
+          href="https://dataintegrated.co.ke"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <img
+            alt="SafeBoda"
+            className="js-list-img"
+            data-list-id={60269}
+            src="/static/images/companies/dil.png"
+          />
+        </a>
+      </div>
+      <div
+        className="journey-item-text"
+      >
+        <div
+          className="journey-item-title"
+        >
+          <h4>
+            Lead Software Developer
+          </h4>
+          <span
+            className="js-listcard-hover"
+          >
+            <a
+              className="color-1"
+              href="https://dataintegrated.co.ke"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              Data Integrated Limited
+            </a>
+          </span>
+        </div>
+        <div>
+          <h4>
+            Tech Stack
+          </h4>
+          <div
+            className="stacks"
+          >
+            <div
+              style={
+                Object {
+                  "float": "left",
+                }
+              }
+            >
+              <span
+                className="color-6"
+              >
+                 NodeJS 
+              </span>
+              <span
+                className="separator"
+              >
+                ,
+              </span>
+            </div>
+            <div
+              style={
+                Object {
+                  "float": "left",
+                }
+              }
+            >
+              <span
+                className="color-6"
+              >
+                 ReactJS 
+              </span>
+              <span
+                className="separator"
+              >
+                ,
+              </span>
+            </div>
+            <div
+              style={
+                Object {
+                  "float": "left",
+                }
+              }
+            >
+              <span
+                className="color-6"
+              >
+                 Docker 
+              </span>
+              <span
+                className="separator"
+              >
+                ,
+              </span>
+            </div>
+            <div
+              style={
+                Object {
+                  "float": "left",
+                }
+              }
+            >
+              <span
+                className="color-6"
+              >
+                 MongoDB 
+              </span>
+              <span
+                className="separator"
+              >
+                ,
+              </span>
+            </div>
+            <div
+              style={
+                Object {
+                  "float": "left",
+                }
+              }
+            >
+              <span
+                className="color-6"
+              >
+                 RethinkDB 
+              </span>
+              <span
+                className="separator"
+              >
+                ,
+              </span>
+            </div>
+            <div
+              style={
+                Object {
+                  "float": "left",
+                }
+              }
+            >
+              <span
+                className="color-6"
+              >
+                 Kubernetes 
+              </span>
+              <span
+                className="separator"
+              >
+                ,
+              </span>
+            </div>
+            <div
+              style={
+                Object {
+                  "float": "left",
+                }
+              }
+            >
+              <span
+                className="color-6"
+              >
+                 Google Cloud 
+              </span>
+              <span
+                className="separator"
+              >
+                ,
+              </span>
+            </div>
+            <div
+              style={
+                Object {
+                  "float": "left",
+                }
+              }
+            >
+              <span
+                className="color-6"
+              >
+                 AWS Cloud 
+              </span>
+              <span
+                className="separator"
+              >
+                ,
+              </span>
+            </div>
+          </div>
+          <br
+            className="clearBoth"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      className="journey-item-paragraph"
+    >
+      <div
+        className="description"
+      >
+        <span
+          className="description-content-full"
+        >
+          <p>
+            As a lead software engineer, I was responsible for leading the tech team and performing CTO roles related to all products.
+          </p>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Journey Journey 1`] = `
 Array [
   <div
     className="MuiContainer-root MuiContainer-maxWidthMd"
@@ -2117,6 +2417,19 @@ Array [
               </svg>
             </div>
           </a>
+          <a
+            href="/blog"
+            onClick={[Function]}
+          >
+            <div
+              className="MuiAvatar-root makeStyles-greenAvatar-1086"
+            >
+              <img
+                className="MuiAvatar-img"
+                src="/static/images/blog.png"
+              />
+            </div>
+          </a>
         </div>
       </div>
     </div>
@@ -2129,1663 +2442,1658 @@ Array [
       id="content"
     >
       <div
-        className="user-show-new developer-journey"
-        id="mainbar-full"
+        className="journey-wrapper"
       >
         <div
-          className="journey-wrapper"
+          className="journey  journey-mine"
         >
           <div
-            className="journey  journey-mine"
+            className="journey-feed"
           >
             <div
-              className="journey-feed"
+              className="journey-line"
+            />
+            <div
+              className="journey-item job"
             >
-              <div
-                className="journey-line"
-              />
-              <div
-                className="journey-item job"
-              >
-                <header>
-                  <span
-                    className="journey-item-type"
-                  >
-                    From
-                  </span>
-                  <span
-                    className="journey-item-date"
-                  >
-                    <span>
-                       April, 2019
-                       → 
-                      Present
-                    </span>
-                    <span>
-                       ~ 6 months
-                    </span>
-                  </span>
-                </header>
-                <div
-                  className="journey-item-content with-description"
+              <header>
+                <span
+                  className="journey-item-type"
                 >
-                  <div
-                    className="img logo align-self js-listcard-hover"
+                  From
+                </span>
+                <span
+                  className="journey-item-date"
+                >
+                  <span>
+                     April, 2019
+                     → 
+                    Present
+                  </span>
+                  <span>
+                     ~ 6 months
+                  </span>
+                </span>
+              </header>
+              <div
+                className="journey-item-content with-description"
+              >
+                <div
+                  className="img logo align-self js-listcard-hover"
+                >
+                  <a
+                    href="https://safeboda.com"
+                    rel="noopener noreferrer"
+                    target="_blank"
                   >
-                    <a
-                      href="https://safeboda.com"
-                      rel="noopener noreferrer"
-                      target="_blank"
-                    >
-                      <img
-                        alt="SafeBoda"
-                        className="js-list-img"
-                        data-list-id={60269}
-                        src="/static/images/companies/safeboda.png"
-                      />
-                    </a>
-                  </div>
-                  <div
-                    className="journey-item-text"
-                  >
-                    <div
-                      className="journey-item-title"
-                    >
-                      <h4>
-                        Software Engineer
-                      </h4>
-                      <span
-                        className="js-listcard-hover"
-                      >
-                        <a
-                          className="color-1"
-                          href="https://safeboda.com"
-                          rel="noopener noreferrer"
-                          target="_blank"
-                        >
-                          SafeBoda
-                        </a>
-                      </span>
-                    </div>
-                    <div>
-                      <h4>
-                        Tech Stack
-                      </h4>
-                      <div
-                        className="stacks"
-                      >
-                        <div
-                          style={
-                            Object {
-                              "float": "left",
-                            }
-                          }
-                        >
-                          <span
-                            className="color-6"
-                          >
-                             Elixir 
-                          </span>
-                          <span
-                            className="separator"
-                          >
-                            ,
-                          </span>
-                        </div>
-                        <div
-                          style={
-                            Object {
-                              "float": "left",
-                            }
-                          }
-                        >
-                          <span
-                            className="color-6"
-                          >
-                             Docker 
-                          </span>
-                          <span
-                            className="separator"
-                          >
-                            ,
-                          </span>
-                        </div>
-                        <div
-                          style={
-                            Object {
-                              "float": "left",
-                            }
-                          }
-                        >
-                          <span
-                            className="color-6"
-                          >
-                             Elastic Search 
-                          </span>
-                          <span
-                            className="separator"
-                          >
-                            ,
-                          </span>
-                        </div>
-                        <div
-                          style={
-                            Object {
-                              "float": "left",
-                            }
-                          }
-                        >
-                          <span
-                            className="color-6"
-                          >
-                             Redis 
-                          </span>
-                          <span
-                            className="separator"
-                          >
-                            ,
-                          </span>
-                        </div>
-                        <div
-                          style={
-                            Object {
-                              "float": "left",
-                            }
-                          }
-                        >
-                          <span
-                            className="color-6"
-                          >
-                             RabbitMQ 
-                          </span>
-                          <span
-                            className="separator"
-                          >
-                            ,
-                          </span>
-                        </div>
-                        <div
-                          style={
-                            Object {
-                              "float": "left",
-                            }
-                          }
-                        >
-                          <span
-                            className="color-6"
-                          >
-                             PostgreSQL 
-                          </span>
-                          <span
-                            className="separator"
-                          >
-                            ,
-                          </span>
-                        </div>
-                        <div
-                          style={
-                            Object {
-                              "float": "left",
-                            }
-                          }
-                        >
-                          <span
-                            className="color-6"
-                          >
-                             Heroku 
-                          </span>
-                          <span
-                            className="separator"
-                          >
-                            ,
-                          </span>
-                        </div>
-                      </div>
-                      <br
-                        className="clearBoth"
-                      />
-                    </div>
-                  </div>
+                    <img
+                      alt="SafeBoda"
+                      className="js-list-img"
+                      data-list-id={60269}
+                      src="/static/images/companies/safeboda.png"
+                    />
+                  </a>
                 </div>
                 <div
-                  className="journey-item-paragraph"
+                  className="journey-item-text"
                 >
                   <div
-                    className="description"
+                    className="journey-item-title"
                   >
+                    <h4>
+                      Software Engineer
+                    </h4>
                     <span
-                      className="description-content-full"
+                      className="js-listcard-hover"
                     >
-                      <p>
-                        Backend Engineer. SafeBoda is a Tech Company based in Uganda with a distributed tech team and using modern tech stacks. My role is exclusively backend engineering using Phoenix Framework and Elixir
-                      </p>
+                      <a
+                        className="color-1"
+                        href="https://safeboda.com"
+                        rel="noopener noreferrer"
+                        target="_blank"
+                      >
+                        SafeBoda
+                      </a>
                     </span>
+                  </div>
+                  <div>
+                    <h4>
+                      Tech Stack
+                    </h4>
+                    <div
+                      className="stacks"
+                    >
+                      <div
+                        style={
+                          Object {
+                            "float": "left",
+                          }
+                        }
+                      >
+                        <span
+                          className="color-6"
+                        >
+                           Elixir 
+                        </span>
+                        <span
+                          className="separator"
+                        >
+                          ,
+                        </span>
+                      </div>
+                      <div
+                        style={
+                          Object {
+                            "float": "left",
+                          }
+                        }
+                      >
+                        <span
+                          className="color-6"
+                        >
+                           Docker 
+                        </span>
+                        <span
+                          className="separator"
+                        >
+                          ,
+                        </span>
+                      </div>
+                      <div
+                        style={
+                          Object {
+                            "float": "left",
+                          }
+                        }
+                      >
+                        <span
+                          className="color-6"
+                        >
+                           Elastic Search 
+                        </span>
+                        <span
+                          className="separator"
+                        >
+                          ,
+                        </span>
+                      </div>
+                      <div
+                        style={
+                          Object {
+                            "float": "left",
+                          }
+                        }
+                      >
+                        <span
+                          className="color-6"
+                        >
+                           Redis 
+                        </span>
+                        <span
+                          className="separator"
+                        >
+                          ,
+                        </span>
+                      </div>
+                      <div
+                        style={
+                          Object {
+                            "float": "left",
+                          }
+                        }
+                      >
+                        <span
+                          className="color-6"
+                        >
+                           RabbitMQ 
+                        </span>
+                        <span
+                          className="separator"
+                        >
+                          ,
+                        </span>
+                      </div>
+                      <div
+                        style={
+                          Object {
+                            "float": "left",
+                          }
+                        }
+                      >
+                        <span
+                          className="color-6"
+                        >
+                           PostgreSQL 
+                        </span>
+                        <span
+                          className="separator"
+                        >
+                          ,
+                        </span>
+                      </div>
+                      <div
+                        style={
+                          Object {
+                            "float": "left",
+                          }
+                        }
+                      >
+                        <span
+                          className="color-6"
+                        >
+                           Heroku 
+                        </span>
+                        <span
+                          className="separator"
+                        >
+                          ,
+                        </span>
+                      </div>
+                    </div>
+                    <br
+                      className="clearBoth"
+                    />
                   </div>
                 </div>
               </div>
               <div
-                className="journey-item job"
+                className="journey-item-paragraph"
               >
-                <header>
-                  <span
-                    className="journey-item-type"
-                  >
-                    From
-                  </span>
-                  <span
-                    className="journey-item-date"
-                  >
-                    <span>
-                       May, 2018
-                       → 
-                      April, 2019
-                    </span>
-                    <span>
-                       ~ 11 months
-                    </span>
-                  </span>
-                </header>
                 <div
-                  className="journey-item-content with-description"
+                  className="description"
                 >
-                  <div
-                    className="img logo align-self js-listcard-hover"
+                  <span
+                    className="description-content-full"
                   >
-                    <a
-                      href="https://hackerbay.io"
-                      rel="noopener noreferrer"
-                      target="_blank"
-                    >
-                      <img
-                        alt="SafeBoda"
-                        className="js-list-img"
-                        data-list-id={60269}
-                        src="/static/images/companies/hb.svg"
-                      />
-                    </a>
-                  </div>
-                  <div
-                    className="journey-item-text"
+                    <p>
+                      Backend Engineer. SafeBoda is a Tech Company based in Uganda with a distributed tech team and using modern tech stacks. My role is exclusively backend engineering using Phoenix Framework and Elixir
+                    </p>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div
+              className="journey-item job"
+            >
+              <header>
+                <span
+                  className="journey-item-type"
+                >
+                  From
+                </span>
+                <span
+                  className="journey-item-date"
+                >
+                  <span>
+                     May, 2018
+                     → 
+                    April, 2019
+                  </span>
+                  <span>
+                     ~ 11 months
+                  </span>
+                </span>
+              </header>
+              <div
+                className="journey-item-content with-description"
+              >
+                <div
+                  className="img logo align-self js-listcard-hover"
+                >
+                  <a
+                    href="https://hackerbay.io"
+                    rel="noopener noreferrer"
+                    target="_blank"
                   >
-                    <div
-                      className="journey-item-title"
-                    >
-                      <h4>
-                        FullStack Software Engineer
-                      </h4>
-                      <span
-                        className="js-listcard-hover"
-                      >
-                        <a
-                          className="color-1"
-                          href="https://hackerbay.io"
-                          rel="noopener noreferrer"
-                          target="_blank"
-                        >
-                          HackerBay
-                        </a>
-                      </span>
-                    </div>
-                    <div>
-                      <h4>
-                        Tech Stack
-                      </h4>
-                      <div
-                        className="stacks"
-                      >
-                        <div
-                          style={
-                            Object {
-                              "float": "left",
-                            }
-                          }
-                        >
-                          <span
-                            className="color-6"
-                          >
-                             NodeJS 
-                          </span>
-                          <span
-                            className="separator"
-                          >
-                            ,
-                          </span>
-                        </div>
-                        <div
-                          style={
-                            Object {
-                              "float": "left",
-                            }
-                          }
-                        >
-                          <span
-                            className="color-6"
-                          >
-                             ReactJS 
-                          </span>
-                          <span
-                            className="separator"
-                          >
-                            ,
-                          </span>
-                        </div>
-                        <div
-                          style={
-                            Object {
-                              "float": "left",
-                            }
-                          }
-                        >
-                          <span
-                            className="color-6"
-                          >
-                             Docker 
-                          </span>
-                          <span
-                            className="separator"
-                          >
-                            ,
-                          </span>
-                        </div>
-                        <div
-                          style={
-                            Object {
-                              "float": "left",
-                            }
-                          }
-                        >
-                          <span
-                            className="color-6"
-                          >
-                             Kubernetes 
-                          </span>
-                          <span
-                            className="separator"
-                          >
-                            ,
-                          </span>
-                        </div>
-                        <div
-                          style={
-                            Object {
-                              "float": "left",
-                            }
-                          }
-                        >
-                          <span
-                            className="color-6"
-                          >
-                             MongoDB 
-                          </span>
-                          <span
-                            className="separator"
-                          >
-                            ,
-                          </span>
-                        </div>
-                        <div
-                          style={
-                            Object {
-                              "float": "left",
-                            }
-                          }
-                        >
-                          <span
-                            className="color-6"
-                          >
-                             Redis 
-                          </span>
-                          <span
-                            className="separator"
-                          >
-                            ,
-                          </span>
-                        </div>
-                        <div
-                          style={
-                            Object {
-                              "float": "left",
-                            }
-                          }
-                        >
-                          <span
-                            className="color-6"
-                          >
-                             StorybookJS 
-                          </span>
-                          <span
-                            className="separator"
-                          >
-                            ,
-                          </span>
-                        </div>
-                        <div
-                          style={
-                            Object {
-                              "float": "left",
-                            }
-                          }
-                        >
-                          <span
-                            className="color-6"
-                          >
-                             Google Cloud 
-                          </span>
-                          <span
-                            className="separator"
-                          >
-                            ,
-                          </span>
-                        </div>
-                      </div>
-                      <br
-                        className="clearBoth"
-                      />
-                    </div>
-                  </div>
+                    <img
+                      alt="SafeBoda"
+                      className="js-list-img"
+                      data-list-id={60269}
+                      src="/static/images/companies/hb.svg"
+                    />
+                  </a>
                 </div>
                 <div
-                  className="journey-item-paragraph"
+                  className="journey-item-text"
                 >
                   <div
-                    className="description"
+                    className="journey-item-title"
                   >
+                    <h4>
+                      FullStack Software Engineer
+                    </h4>
                     <span
-                      className="description-content-full"
+                      className="js-listcard-hover"
                     >
-                      <p>
-                        At HackerBay, I was a fully remote FullStack Software Engineer working with a distributed team on products like Fyipe and CloudBoost. 
-                      </p>
+                      <a
+                        className="color-1"
+                        href="https://hackerbay.io"
+                        rel="noopener noreferrer"
+                        target="_blank"
+                      >
+                        HackerBay
+                      </a>
                     </span>
+                  </div>
+                  <div>
+                    <h4>
+                      Tech Stack
+                    </h4>
+                    <div
+                      className="stacks"
+                    >
+                      <div
+                        style={
+                          Object {
+                            "float": "left",
+                          }
+                        }
+                      >
+                        <span
+                          className="color-6"
+                        >
+                           NodeJS 
+                        </span>
+                        <span
+                          className="separator"
+                        >
+                          ,
+                        </span>
+                      </div>
+                      <div
+                        style={
+                          Object {
+                            "float": "left",
+                          }
+                        }
+                      >
+                        <span
+                          className="color-6"
+                        >
+                           ReactJS 
+                        </span>
+                        <span
+                          className="separator"
+                        >
+                          ,
+                        </span>
+                      </div>
+                      <div
+                        style={
+                          Object {
+                            "float": "left",
+                          }
+                        }
+                      >
+                        <span
+                          className="color-6"
+                        >
+                           Docker 
+                        </span>
+                        <span
+                          className="separator"
+                        >
+                          ,
+                        </span>
+                      </div>
+                      <div
+                        style={
+                          Object {
+                            "float": "left",
+                          }
+                        }
+                      >
+                        <span
+                          className="color-6"
+                        >
+                           Kubernetes 
+                        </span>
+                        <span
+                          className="separator"
+                        >
+                          ,
+                        </span>
+                      </div>
+                      <div
+                        style={
+                          Object {
+                            "float": "left",
+                          }
+                        }
+                      >
+                        <span
+                          className="color-6"
+                        >
+                           MongoDB 
+                        </span>
+                        <span
+                          className="separator"
+                        >
+                          ,
+                        </span>
+                      </div>
+                      <div
+                        style={
+                          Object {
+                            "float": "left",
+                          }
+                        }
+                      >
+                        <span
+                          className="color-6"
+                        >
+                           Redis 
+                        </span>
+                        <span
+                          className="separator"
+                        >
+                          ,
+                        </span>
+                      </div>
+                      <div
+                        style={
+                          Object {
+                            "float": "left",
+                          }
+                        }
+                      >
+                        <span
+                          className="color-6"
+                        >
+                           StorybookJS 
+                        </span>
+                        <span
+                          className="separator"
+                        >
+                          ,
+                        </span>
+                      </div>
+                      <div
+                        style={
+                          Object {
+                            "float": "left",
+                          }
+                        }
+                      >
+                        <span
+                          className="color-6"
+                        >
+                           Google Cloud 
+                        </span>
+                        <span
+                          className="separator"
+                        >
+                          ,
+                        </span>
+                      </div>
+                    </div>
+                    <br
+                      className="clearBoth"
+                    />
                   </div>
                 </div>
               </div>
               <div
-                className="journey-item job"
+                className="journey-item-paragraph"
               >
-                <header>
-                  <span
-                    className="journey-item-type"
-                  >
-                    From
-                  </span>
-                  <span
-                    className="journey-item-date"
-                  >
-                    <span>
-                       May, 2018
-                       → 
-                      April, 2019
-                    </span>
-                    <span>
-                       ~ 11 months
-                    </span>
-                  </span>
-                </header>
                 <div
-                  className="journey-item-content with-description"
+                  className="description"
                 >
-                  <div
-                    className="img logo align-self js-listcard-hover"
+                  <span
+                    className="description-content-full"
                   >
-                    <a
-                      href="https://hackerbayuniversity.com/"
-                      rel="noopener noreferrer"
-                      target="_blank"
-                    >
-                      <img
-                        alt="SafeBoda"
-                        className="js-list-img"
-                        data-list-id={60269}
-                        src="/static/images/companies/hbu.svg"
-                      />
-                    </a>
-                  </div>
-                  <div
-                    className="journey-item-text"
+                    <p>
+                      At HackerBay, I was a fully remote FullStack Software Engineer working with a distributed team on products like Fyipe and CloudBoost. 
+                    </p>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div
+              className="journey-item job"
+            >
+              <header>
+                <span
+                  className="journey-item-type"
+                >
+                  From
+                </span>
+                <span
+                  className="journey-item-date"
+                >
+                  <span>
+                     May, 2018
+                     → 
+                    April, 2019
+                  </span>
+                  <span>
+                     ~ 11 months
+                  </span>
+                </span>
+              </header>
+              <div
+                className="journey-item-content with-description"
+              >
+                <div
+                  className="img logo align-self js-listcard-hover"
+                >
+                  <a
+                    href="https://hackerbayuniversity.com/"
+                    rel="noopener noreferrer"
+                    target="_blank"
                   >
-                    <div
-                      className="journey-item-title"
-                    >
-                      <h4>
-                        Mentor
-                      </h4>
-                      <span
-                        className="js-listcard-hover"
-                      >
-                        <a
-                          className="color-1"
-                          href="https://hackerbayuniversity.com/"
-                          rel="noopener noreferrer"
-                          target="_blank"
-                        >
-                          HackerBay
-                        </a>
-                      </span>
-                    </div>
-                    <div>
-                      <h4>
-                        Tech Stack
-                      </h4>
-                      <div
-                        className="stacks"
-                      >
-                        <div
-                          style={
-                            Object {
-                              "float": "left",
-                            }
-                          }
-                        >
-                          <span
-                            className="color-6"
-                          >
-                             NodeJS 
-                          </span>
-                          <span
-                            className="separator"
-                          >
-                            ,
-                          </span>
-                        </div>
-                        <div
-                          style={
-                            Object {
-                              "float": "left",
-                            }
-                          }
-                        >
-                          <span
-                            className="color-6"
-                          >
-                             ReactJS 
-                          </span>
-                          <span
-                            className="separator"
-                          >
-                            ,
-                          </span>
-                        </div>
-                        <div
-                          style={
-                            Object {
-                              "float": "left",
-                            }
-                          }
-                        >
-                          <span
-                            className="color-6"
-                          >
-                             Docker 
-                          </span>
-                          <span
-                            className="separator"
-                          >
-                            ,
-                          </span>
-                        </div>
-                        <div
-                          style={
-                            Object {
-                              "float": "left",
-                            }
-                          }
-                        >
-                          <span
-                            className="color-6"
-                          >
-                             Kubernetes 
-                          </span>
-                          <span
-                            className="separator"
-                          >
-                            ,
-                          </span>
-                        </div>
-                        <div
-                          style={
-                            Object {
-                              "float": "left",
-                            }
-                          }
-                        >
-                          <span
-                            className="color-6"
-                          >
-                             Google Cloud 
-                          </span>
-                          <span
-                            className="separator"
-                          >
-                            ,
-                          </span>
-                        </div>
-                      </div>
-                      <br
-                        className="clearBoth"
-                      />
-                    </div>
-                  </div>
+                    <img
+                      alt="SafeBoda"
+                      className="js-list-img"
+                      data-list-id={60269}
+                      src="/static/images/companies/hbu.svg"
+                    />
+                  </a>
                 </div>
                 <div
-                  className="journey-item-paragraph"
+                  className="journey-item-text"
                 >
                   <div
-                    className="description"
+                    className="journey-item-title"
                   >
+                    <h4>
+                      Mentor
+                    </h4>
                     <span
-                      className="description-content-full"
+                      className="js-listcard-hover"
                     >
-                      <p>
-                        Mentoring students to become Professional Software Engineers using the latest technology.
-                      </p>
+                      <a
+                        className="color-1"
+                        href="https://hackerbayuniversity.com/"
+                        rel="noopener noreferrer"
+                        target="_blank"
+                      >
+                        HackerBay
+                      </a>
                     </span>
+                  </div>
+                  <div>
+                    <h4>
+                      Tech Stack
+                    </h4>
+                    <div
+                      className="stacks"
+                    >
+                      <div
+                        style={
+                          Object {
+                            "float": "left",
+                          }
+                        }
+                      >
+                        <span
+                          className="color-6"
+                        >
+                           NodeJS 
+                        </span>
+                        <span
+                          className="separator"
+                        >
+                          ,
+                        </span>
+                      </div>
+                      <div
+                        style={
+                          Object {
+                            "float": "left",
+                          }
+                        }
+                      >
+                        <span
+                          className="color-6"
+                        >
+                           ReactJS 
+                        </span>
+                        <span
+                          className="separator"
+                        >
+                          ,
+                        </span>
+                      </div>
+                      <div
+                        style={
+                          Object {
+                            "float": "left",
+                          }
+                        }
+                      >
+                        <span
+                          className="color-6"
+                        >
+                           Docker 
+                        </span>
+                        <span
+                          className="separator"
+                        >
+                          ,
+                        </span>
+                      </div>
+                      <div
+                        style={
+                          Object {
+                            "float": "left",
+                          }
+                        }
+                      >
+                        <span
+                          className="color-6"
+                        >
+                           Kubernetes 
+                        </span>
+                        <span
+                          className="separator"
+                        >
+                          ,
+                        </span>
+                      </div>
+                      <div
+                        style={
+                          Object {
+                            "float": "left",
+                          }
+                        }
+                      >
+                        <span
+                          className="color-6"
+                        >
+                           Google Cloud 
+                        </span>
+                        <span
+                          className="separator"
+                        >
+                          ,
+                        </span>
+                      </div>
+                    </div>
+                    <br
+                      className="clearBoth"
+                    />
                   </div>
                 </div>
               </div>
               <div
-                className="journey-item job"
+                className="journey-item-paragraph"
               >
-                <header>
-                  <span
-                    className="journey-item-type"
-                  >
-                    From
-                  </span>
-                  <span
-                    className="journey-item-date"
-                  >
-                    <span>
-                       January, 2018
-                       → 
-                      April, 2019
-                    </span>
-                    <span>
-                       ~ 1 year
-                    </span>
-                  </span>
-                </header>
                 <div
-                  className="journey-item-content with-description"
+                  className="description"
                 >
-                  <div
-                    className="img logo align-self js-listcard-hover"
+                  <span
+                    className="description-content-full"
                   >
-                    <a
-                      href="https://dataintegrated.co.ke"
-                      rel="noopener noreferrer"
-                      target="_blank"
-                    >
-                      <img
-                        alt="SafeBoda"
-                        className="js-list-img"
-                        data-list-id={60269}
-                        src="/static/images/companies/dil.png"
-                      />
-                    </a>
-                  </div>
-                  <div
-                    className="journey-item-text"
+                    <p>
+                      Mentoring students to become Professional Software Engineers using the latest technology.
+                    </p>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div
+              className="journey-item job"
+            >
+              <header>
+                <span
+                  className="journey-item-type"
+                >
+                  From
+                </span>
+                <span
+                  className="journey-item-date"
+                >
+                  <span>
+                     January, 2018
+                     → 
+                    April, 2019
+                  </span>
+                  <span>
+                     ~ 1 year
+                  </span>
+                </span>
+              </header>
+              <div
+                className="journey-item-content with-description"
+              >
+                <div
+                  className="img logo align-self js-listcard-hover"
+                >
+                  <a
+                    href="https://dataintegrated.co.ke"
+                    rel="noopener noreferrer"
+                    target="_blank"
                   >
-                    <div
-                      className="journey-item-title"
-                    >
-                      <h4>
-                        Lead Software Developer
-                      </h4>
-                      <span
-                        className="js-listcard-hover"
-                      >
-                        <a
-                          className="color-1"
-                          href="https://dataintegrated.co.ke"
-                          rel="noopener noreferrer"
-                          target="_blank"
-                        >
-                          Data Integrated Limited
-                        </a>
-                      </span>
-                    </div>
-                    <div>
-                      <h4>
-                        Tech Stack
-                      </h4>
-                      <div
-                        className="stacks"
-                      >
-                        <div
-                          style={
-                            Object {
-                              "float": "left",
-                            }
-                          }
-                        >
-                          <span
-                            className="color-6"
-                          >
-                             NodeJS 
-                          </span>
-                          <span
-                            className="separator"
-                          >
-                            ,
-                          </span>
-                        </div>
-                        <div
-                          style={
-                            Object {
-                              "float": "left",
-                            }
-                          }
-                        >
-                          <span
-                            className="color-6"
-                          >
-                             ReactJS 
-                          </span>
-                          <span
-                            className="separator"
-                          >
-                            ,
-                          </span>
-                        </div>
-                        <div
-                          style={
-                            Object {
-                              "float": "left",
-                            }
-                          }
-                        >
-                          <span
-                            className="color-6"
-                          >
-                             Docker 
-                          </span>
-                          <span
-                            className="separator"
-                          >
-                            ,
-                          </span>
-                        </div>
-                        <div
-                          style={
-                            Object {
-                              "float": "left",
-                            }
-                          }
-                        >
-                          <span
-                            className="color-6"
-                          >
-                             MongoDB 
-                          </span>
-                          <span
-                            className="separator"
-                          >
-                            ,
-                          </span>
-                        </div>
-                        <div
-                          style={
-                            Object {
-                              "float": "left",
-                            }
-                          }
-                        >
-                          <span
-                            className="color-6"
-                          >
-                             RethinkDB 
-                          </span>
-                          <span
-                            className="separator"
-                          >
-                            ,
-                          </span>
-                        </div>
-                        <div
-                          style={
-                            Object {
-                              "float": "left",
-                            }
-                          }
-                        >
-                          <span
-                            className="color-6"
-                          >
-                             Kubernetes 
-                          </span>
-                          <span
-                            className="separator"
-                          >
-                            ,
-                          </span>
-                        </div>
-                        <div
-                          style={
-                            Object {
-                              "float": "left",
-                            }
-                          }
-                        >
-                          <span
-                            className="color-6"
-                          >
-                             Google Cloud 
-                          </span>
-                          <span
-                            className="separator"
-                          >
-                            ,
-                          </span>
-                        </div>
-                        <div
-                          style={
-                            Object {
-                              "float": "left",
-                            }
-                          }
-                        >
-                          <span
-                            className="color-6"
-                          >
-                             AWS Cloud 
-                          </span>
-                          <span
-                            className="separator"
-                          >
-                            ,
-                          </span>
-                        </div>
-                      </div>
-                      <br
-                        className="clearBoth"
-                      />
-                    </div>
-                  </div>
+                    <img
+                      alt="SafeBoda"
+                      className="js-list-img"
+                      data-list-id={60269}
+                      src="/static/images/companies/dil.png"
+                    />
+                  </a>
                 </div>
                 <div
-                  className="journey-item-paragraph"
+                  className="journey-item-text"
                 >
                   <div
-                    className="description"
+                    className="journey-item-title"
                   >
+                    <h4>
+                      Lead Software Developer
+                    </h4>
                     <span
-                      className="description-content-full"
+                      className="js-listcard-hover"
                     >
-                      <p>
-                        As a lead software engineer, I was responsible for leading the tech team and performing CTO roles related to all products.
-                      </p>
+                      <a
+                        className="color-1"
+                        href="https://dataintegrated.co.ke"
+                        rel="noopener noreferrer"
+                        target="_blank"
+                      >
+                        Data Integrated Limited
+                      </a>
                     </span>
+                  </div>
+                  <div>
+                    <h4>
+                      Tech Stack
+                    </h4>
+                    <div
+                      className="stacks"
+                    >
+                      <div
+                        style={
+                          Object {
+                            "float": "left",
+                          }
+                        }
+                      >
+                        <span
+                          className="color-6"
+                        >
+                           NodeJS 
+                        </span>
+                        <span
+                          className="separator"
+                        >
+                          ,
+                        </span>
+                      </div>
+                      <div
+                        style={
+                          Object {
+                            "float": "left",
+                          }
+                        }
+                      >
+                        <span
+                          className="color-6"
+                        >
+                           ReactJS 
+                        </span>
+                        <span
+                          className="separator"
+                        >
+                          ,
+                        </span>
+                      </div>
+                      <div
+                        style={
+                          Object {
+                            "float": "left",
+                          }
+                        }
+                      >
+                        <span
+                          className="color-6"
+                        >
+                           Docker 
+                        </span>
+                        <span
+                          className="separator"
+                        >
+                          ,
+                        </span>
+                      </div>
+                      <div
+                        style={
+                          Object {
+                            "float": "left",
+                          }
+                        }
+                      >
+                        <span
+                          className="color-6"
+                        >
+                           MongoDB 
+                        </span>
+                        <span
+                          className="separator"
+                        >
+                          ,
+                        </span>
+                      </div>
+                      <div
+                        style={
+                          Object {
+                            "float": "left",
+                          }
+                        }
+                      >
+                        <span
+                          className="color-6"
+                        >
+                           RethinkDB 
+                        </span>
+                        <span
+                          className="separator"
+                        >
+                          ,
+                        </span>
+                      </div>
+                      <div
+                        style={
+                          Object {
+                            "float": "left",
+                          }
+                        }
+                      >
+                        <span
+                          className="color-6"
+                        >
+                           Kubernetes 
+                        </span>
+                        <span
+                          className="separator"
+                        >
+                          ,
+                        </span>
+                      </div>
+                      <div
+                        style={
+                          Object {
+                            "float": "left",
+                          }
+                        }
+                      >
+                        <span
+                          className="color-6"
+                        >
+                           Google Cloud 
+                        </span>
+                        <span
+                          className="separator"
+                        >
+                          ,
+                        </span>
+                      </div>
+                      <div
+                        style={
+                          Object {
+                            "float": "left",
+                          }
+                        }
+                      >
+                        <span
+                          className="color-6"
+                        >
+                           AWS Cloud 
+                        </span>
+                        <span
+                          className="separator"
+                        >
+                          ,
+                        </span>
+                      </div>
+                    </div>
+                    <br
+                      className="clearBoth"
+                    />
                   </div>
                 </div>
               </div>
               <div
-                className="journey-item job"
+                className="journey-item-paragraph"
               >
-                <header>
-                  <span
-                    className="journey-item-type"
-                  >
-                    From
-                  </span>
-                  <span
-                    className="journey-item-date"
-                  >
-                    <span>
-                       July, 2017
-                       → 
-                      January, 2018
-                    </span>
-                    <span>
-                       ~ 6 months
-                    </span>
-                  </span>
-                </header>
                 <div
-                  className="journey-item-content with-description"
+                  className="description"
                 >
-                  <div
-                    className="img logo align-self js-listcard-hover"
+                  <span
+                    className="description-content-full"
                   >
-                    <a
-                      href="https://dataintegrated.co.ke"
-                      rel="noopener noreferrer"
-                      target="_blank"
-                    >
-                      <img
-                        alt="SafeBoda"
-                        className="js-list-img"
-                        data-list-id={60269}
-                        src="/static/images/companies/dil.png"
-                      />
-                    </a>
-                  </div>
-                  <div
-                    className="journey-item-text"
+                    <p>
+                      As a lead software engineer, I was responsible for leading the tech team and performing CTO roles related to all products.
+                    </p>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div
+              className="journey-item job"
+            >
+              <header>
+                <span
+                  className="journey-item-type"
+                >
+                  From
+                </span>
+                <span
+                  className="journey-item-date"
+                >
+                  <span>
+                     July, 2017
+                     → 
+                    January, 2018
+                  </span>
+                  <span>
+                     ~ 6 months
+                  </span>
+                </span>
+              </header>
+              <div
+                className="journey-item-content with-description"
+              >
+                <div
+                  className="img logo align-self js-listcard-hover"
+                >
+                  <a
+                    href="https://dataintegrated.co.ke"
+                    rel="noopener noreferrer"
+                    target="_blank"
                   >
-                    <div
-                      className="journey-item-title"
-                    >
-                      <h4>
-                        Senior Software Developer
-                      </h4>
-                      <span
-                        className="js-listcard-hover"
-                      >
-                        <a
-                          className="color-1"
-                          href="https://dataintegrated.co.ke"
-                          rel="noopener noreferrer"
-                          target="_blank"
-                        >
-                          Data Integrated Limited
-                        </a>
-                      </span>
-                    </div>
-                    <div>
-                      <h4>
-                        Tech Stack
-                      </h4>
-                      <div
-                        className="stacks"
-                      >
-                        <div
-                          style={
-                            Object {
-                              "float": "left",
-                            }
-                          }
-                        >
-                          <span
-                            className="color-6"
-                          >
-                             NodeJS 
-                          </span>
-                          <span
-                            className="separator"
-                          >
-                            ,
-                          </span>
-                        </div>
-                        <div
-                          style={
-                            Object {
-                              "float": "left",
-                            }
-                          }
-                        >
-                          <span
-                            className="color-6"
-                          >
-                             ReactJS 
-                          </span>
-                          <span
-                            className="separator"
-                          >
-                            ,
-                          </span>
-                        </div>
-                        <div
-                          style={
-                            Object {
-                              "float": "left",
-                            }
-                          }
-                        >
-                          <span
-                            className="color-6"
-                          >
-                             Docker 
-                          </span>
-                          <span
-                            className="separator"
-                          >
-                            ,
-                          </span>
-                        </div>
-                        <div
-                          style={
-                            Object {
-                              "float": "left",
-                            }
-                          }
-                        >
-                          <span
-                            className="color-6"
-                          >
-                             MongoDB 
-                          </span>
-                          <span
-                            className="separator"
-                          >
-                            ,
-                          </span>
-                        </div>
-                        <div
-                          style={
-                            Object {
-                              "float": "left",
-                            }
-                          }
-                        >
-                          <span
-                            className="color-6"
-                          >
-                             RethinkDB 
-                          </span>
-                          <span
-                            className="separator"
-                          >
-                            ,
-                          </span>
-                        </div>
-                        <div
-                          style={
-                            Object {
-                              "float": "left",
-                            }
-                          }
-                        >
-                          <span
-                            className="color-6"
-                          >
-                             Kubernetes 
-                          </span>
-                          <span
-                            className="separator"
-                          >
-                            ,
-                          </span>
-                        </div>
-                        <div
-                          style={
-                            Object {
-                              "float": "left",
-                            }
-                          }
-                        >
-                          <span
-                            className="color-6"
-                          >
-                             Google Cloud 
-                          </span>
-                          <span
-                            className="separator"
-                          >
-                            ,
-                          </span>
-                        </div>
-                      </div>
-                      <br
-                        className="clearBoth"
-                      />
-                    </div>
-                  </div>
+                    <img
+                      alt="SafeBoda"
+                      className="js-list-img"
+                      data-list-id={60269}
+                      src="/static/images/companies/dil.png"
+                    />
+                  </a>
                 </div>
                 <div
-                  className="journey-item-paragraph"
+                  className="journey-item-text"
                 >
                   <div
-                    className="description"
+                    className="journey-item-title"
                   >
+                    <h4>
+                      Senior Software Developer
+                    </h4>
                     <span
-                      className="description-content-full"
+                      className="js-listcard-hover"
                     >
-                      <p>
-                        Roles included GCP Administration and Architecture, Backend Engineering in Nodejs, Frontend Development in ReactJS. The products were real-time dashboards and apis for SaS solutions to businesses.
-                      </p>
+                      <a
+                        className="color-1"
+                        href="https://dataintegrated.co.ke"
+                        rel="noopener noreferrer"
+                        target="_blank"
+                      >
+                        Data Integrated Limited
+                      </a>
                     </span>
+                  </div>
+                  <div>
+                    <h4>
+                      Tech Stack
+                    </h4>
+                    <div
+                      className="stacks"
+                    >
+                      <div
+                        style={
+                          Object {
+                            "float": "left",
+                          }
+                        }
+                      >
+                        <span
+                          className="color-6"
+                        >
+                           NodeJS 
+                        </span>
+                        <span
+                          className="separator"
+                        >
+                          ,
+                        </span>
+                      </div>
+                      <div
+                        style={
+                          Object {
+                            "float": "left",
+                          }
+                        }
+                      >
+                        <span
+                          className="color-6"
+                        >
+                           ReactJS 
+                        </span>
+                        <span
+                          className="separator"
+                        >
+                          ,
+                        </span>
+                      </div>
+                      <div
+                        style={
+                          Object {
+                            "float": "left",
+                          }
+                        }
+                      >
+                        <span
+                          className="color-6"
+                        >
+                           Docker 
+                        </span>
+                        <span
+                          className="separator"
+                        >
+                          ,
+                        </span>
+                      </div>
+                      <div
+                        style={
+                          Object {
+                            "float": "left",
+                          }
+                        }
+                      >
+                        <span
+                          className="color-6"
+                        >
+                           MongoDB 
+                        </span>
+                        <span
+                          className="separator"
+                        >
+                          ,
+                        </span>
+                      </div>
+                      <div
+                        style={
+                          Object {
+                            "float": "left",
+                          }
+                        }
+                      >
+                        <span
+                          className="color-6"
+                        >
+                           RethinkDB 
+                        </span>
+                        <span
+                          className="separator"
+                        >
+                          ,
+                        </span>
+                      </div>
+                      <div
+                        style={
+                          Object {
+                            "float": "left",
+                          }
+                        }
+                      >
+                        <span
+                          className="color-6"
+                        >
+                           Kubernetes 
+                        </span>
+                        <span
+                          className="separator"
+                        >
+                          ,
+                        </span>
+                      </div>
+                      <div
+                        style={
+                          Object {
+                            "float": "left",
+                          }
+                        }
+                      >
+                        <span
+                          className="color-6"
+                        >
+                           Google Cloud 
+                        </span>
+                        <span
+                          className="separator"
+                        >
+                          ,
+                        </span>
+                      </div>
+                    </div>
+                    <br
+                      className="clearBoth"
+                    />
                   </div>
                 </div>
               </div>
               <div
-                className="journey-item job"
+                className="journey-item-paragraph"
               >
-                <header>
-                  <span
-                    className="journey-item-type"
-                  >
-                    From
-                  </span>
-                  <span
-                    className="journey-item-date"
-                  >
-                    <span>
-                       May, 2017
-                       → 
-                      July, 2017
-                    </span>
-                    <span>
-                       ~ 2 months
-                    </span>
-                  </span>
-                </header>
                 <div
-                  className="journey-item-content with-description"
+                  className="description"
                 >
-                  <div
-                    className="img logo align-self js-listcard-hover"
+                  <span
+                    className="description-content-full"
                   >
-                    <a
-                      href="https://dataintegrated.co.ke"
-                      rel="noopener noreferrer"
-                      target="_blank"
-                    >
-                      <img
-                        alt="SafeBoda"
-                        className="js-list-img"
-                        data-list-id={60269}
-                        src="/static/images/companies/dil.png"
-                      />
-                    </a>
-                  </div>
-                  <div
-                    className="journey-item-text"
+                    <p>
+                      Roles included GCP Administration and Architecture, Backend Engineering in Nodejs, Frontend Development in ReactJS. The products were real-time dashboards and apis for SaS solutions to businesses.
+                    </p>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div
+              className="journey-item job"
+            >
+              <header>
+                <span
+                  className="journey-item-type"
+                >
+                  From
+                </span>
+                <span
+                  className="journey-item-date"
+                >
+                  <span>
+                     May, 2017
+                     → 
+                    July, 2017
+                  </span>
+                  <span>
+                     ~ 2 months
+                  </span>
+                </span>
+              </header>
+              <div
+                className="journey-item-content with-description"
+              >
+                <div
+                  className="img logo align-self js-listcard-hover"
+                >
+                  <a
+                    href="https://dataintegrated.co.ke"
+                    rel="noopener noreferrer"
+                    target="_blank"
                   >
-                    <div
-                      className="journey-item-title"
-                    >
-                      <h4>
-                        Junior Software Developer
-                      </h4>
-                      <span
-                        className="js-listcard-hover"
-                      >
-                        <a
-                          className="color-1"
-                          href="https://dataintegrated.co.ke"
-                          rel="noopener noreferrer"
-                          target="_blank"
-                        >
-                          Data Integrated Limited
-                        </a>
-                      </span>
-                    </div>
-                    <div>
-                      <h4>
-                        Tech Stack
-                      </h4>
-                      <div
-                        className="stacks"
-                      >
-                        <div
-                          style={
-                            Object {
-                              "float": "left",
-                            }
-                          }
-                        >
-                          <span
-                            className="color-6"
-                          >
-                             NodeJS 
-                          </span>
-                          <span
-                            className="separator"
-                          >
-                            ,
-                          </span>
-                        </div>
-                        <div
-                          style={
-                            Object {
-                              "float": "left",
-                            }
-                          }
-                        >
-                          <span
-                            className="color-6"
-                          >
-                             ReactJS 
-                          </span>
-                          <span
-                            className="separator"
-                          >
-                            ,
-                          </span>
-                        </div>
-                        <div
-                          style={
-                            Object {
-                              "float": "left",
-                            }
-                          }
-                        >
-                          <span
-                            className="color-6"
-                          >
-                             Docker 
-                          </span>
-                          <span
-                            className="separator"
-                          >
-                            ,
-                          </span>
-                        </div>
-                        <div
-                          style={
-                            Object {
-                              "float": "left",
-                            }
-                          }
-                        >
-                          <span
-                            className="color-6"
-                          >
-                             Kubernetes 
-                          </span>
-                          <span
-                            className="separator"
-                          >
-                            ,
-                          </span>
-                        </div>
-                        <div
-                          style={
-                            Object {
-                              "float": "left",
-                            }
-                          }
-                        >
-                          <span
-                            className="color-6"
-                          >
-                             Google Cloud 
-                          </span>
-                          <span
-                            className="separator"
-                          >
-                            ,
-                          </span>
-                        </div>
-                      </div>
-                      <br
-                        className="clearBoth"
-                      />
-                    </div>
-                  </div>
+                    <img
+                      alt="SafeBoda"
+                      className="js-list-img"
+                      data-list-id={60269}
+                      src="/static/images/companies/dil.png"
+                    />
+                  </a>
                 </div>
                 <div
-                  className="journey-item-paragraph"
+                  className="journey-item-text"
                 >
                   <div
-                    className="description"
+                    className="journey-item-title"
                   >
+                    <h4>
+                      Junior Software Developer
+                    </h4>
                     <span
-                      className="description-content-full"
+                      className="js-listcard-hover"
                     >
-                      <p>
-                        I joined Data Integrated as a Junior Developer with no experience in web development. I started out with taking over a REST api backend written in JavaScript.
-                      </p>
+                      <a
+                        className="color-1"
+                        href="https://dataintegrated.co.ke"
+                        rel="noopener noreferrer"
+                        target="_blank"
+                      >
+                        Data Integrated Limited
+                      </a>
                     </span>
+                  </div>
+                  <div>
+                    <h4>
+                      Tech Stack
+                    </h4>
+                    <div
+                      className="stacks"
+                    >
+                      <div
+                        style={
+                          Object {
+                            "float": "left",
+                          }
+                        }
+                      >
+                        <span
+                          className="color-6"
+                        >
+                           NodeJS 
+                        </span>
+                        <span
+                          className="separator"
+                        >
+                          ,
+                        </span>
+                      </div>
+                      <div
+                        style={
+                          Object {
+                            "float": "left",
+                          }
+                        }
+                      >
+                        <span
+                          className="color-6"
+                        >
+                           ReactJS 
+                        </span>
+                        <span
+                          className="separator"
+                        >
+                          ,
+                        </span>
+                      </div>
+                      <div
+                        style={
+                          Object {
+                            "float": "left",
+                          }
+                        }
+                      >
+                        <span
+                          className="color-6"
+                        >
+                           Docker 
+                        </span>
+                        <span
+                          className="separator"
+                        >
+                          ,
+                        </span>
+                      </div>
+                      <div
+                        style={
+                          Object {
+                            "float": "left",
+                          }
+                        }
+                      >
+                        <span
+                          className="color-6"
+                        >
+                           Kubernetes 
+                        </span>
+                        <span
+                          className="separator"
+                        >
+                          ,
+                        </span>
+                      </div>
+                      <div
+                        style={
+                          Object {
+                            "float": "left",
+                          }
+                        }
+                      >
+                        <span
+                          className="color-6"
+                        >
+                           Google Cloud 
+                        </span>
+                        <span
+                          className="separator"
+                        >
+                          ,
+                        </span>
+                      </div>
+                    </div>
+                    <br
+                      className="clearBoth"
+                    />
                   </div>
                 </div>
               </div>
               <div
-                className="journey-item job"
+                className="journey-item-paragraph"
               >
-                <header>
-                  <span
-                    className="journey-item-type"
-                  >
-                    From
-                  </span>
-                  <span
-                    className="journey-item-date"
-                  >
-                    <span>
-                       September, 2016
-                       → 
-                      May, 2017
-                    </span>
-                    <span>
-                       ~ 8 months
-                    </span>
-                  </span>
-                </header>
                 <div
-                  className="journey-item-content with-description"
+                  className="description"
                 >
-                  <div
-                    className="img logo align-self js-listcard-hover"
+                  <span
+                    className="description-content-full"
                   >
-                    <a
-                      href="https://impalapay.com"
-                      rel="noopener noreferrer"
-                      target="_blank"
-                    >
-                      <img
-                        alt="SafeBoda"
-                        className="js-list-img"
-                        data-list-id={60269}
-                        src="/static/images/companies/impala.PNG"
-                      />
-                    </a>
-                  </div>
-                  <div
-                    className="journey-item-text"
+                    <p>
+                      I joined Data Integrated as a Junior Developer with no experience in web development. I started out with taking over a REST api backend written in JavaScript.
+                    </p>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div
+              className="journey-item job"
+            >
+              <header>
+                <span
+                  className="journey-item-type"
+                >
+                  From
+                </span>
+                <span
+                  className="journey-item-date"
+                >
+                  <span>
+                     September, 2016
+                     → 
+                    May, 2017
+                  </span>
+                  <span>
+                     ~ 8 months
+                  </span>
+                </span>
+              </header>
+              <div
+                className="journey-item-content with-description"
+              >
+                <div
+                  className="img logo align-self js-listcard-hover"
+                >
+                  <a
+                    href="https://impalapay.com"
+                    rel="noopener noreferrer"
+                    target="_blank"
                   >
-                    <div
-                      className="journey-item-title"
-                    >
-                      <h4>
-                        Junior Software Developer
-                      </h4>
-                      <span
-                        className="js-listcard-hover"
-                      >
-                        <a
-                          className="color-1"
-                          href="https://impalapay.com"
-                          rel="noopener noreferrer"
-                          target="_blank"
-                        >
-                          ImpalaPay
-                        </a>
-                      </span>
-                    </div>
-                    <div>
-                      <h4>
-                        Tech Stack
-                      </h4>
-                      <div
-                        className="stacks"
-                      >
-                        <div
-                          style={
-                            Object {
-                              "float": "left",
-                            }
-                          }
-                        >
-                          <span
-                            className="color-6"
-                          >
-                             NodeJS 
-                          </span>
-                          <span
-                            className="separator"
-                          >
-                            ,
-                          </span>
-                        </div>
-                        <div
-                          style={
-                            Object {
-                              "float": "left",
-                            }
-                          }
-                        >
-                          <span
-                            className="color-6"
-                          >
-                             ReactJS 
-                          </span>
-                          <span
-                            className="separator"
-                          >
-                            ,
-                          </span>
-                        </div>
-                        <div
-                          style={
-                            Object {
-                              "float": "left",
-                            }
-                          }
-                        >
-                          <span
-                            className="color-6"
-                          >
-                             Docker 
-                          </span>
-                          <span
-                            className="separator"
-                          >
-                            ,
-                          </span>
-                        </div>
-                        <div
-                          style={
-                            Object {
-                              "float": "left",
-                            }
-                          }
-                        >
-                          <span
-                            className="color-6"
-                          >
-                             Kubernetes 
-                          </span>
-                          <span
-                            className="separator"
-                          >
-                            ,
-                          </span>
-                        </div>
-                        <div
-                          style={
-                            Object {
-                              "float": "left",
-                            }
-                          }
-                        >
-                          <span
-                            className="color-6"
-                          >
-                             Google Cloud 
-                          </span>
-                          <span
-                            className="separator"
-                          >
-                            ,
-                          </span>
-                        </div>
-                      </div>
-                      <br
-                        className="clearBoth"
-                      />
-                    </div>
-                  </div>
+                    <img
+                      alt="SafeBoda"
+                      className="js-list-img"
+                      data-list-id={60269}
+                      src="/static/images/companies/impala.PNG"
+                    />
+                  </a>
                 </div>
                 <div
-                  className="journey-item-paragraph"
+                  className="journey-item-text"
                 >
                   <div
-                    className="description"
+                    className="journey-item-title"
                   >
+                    <h4>
+                      Junior Software Developer
+                    </h4>
                     <span
-                      className="description-content-full"
+                      className="js-listcard-hover"
                     >
-                      <p>
-                        My tasks as a junior included web services integrations in Java and POS application development in C. I also did cloud and local network administration. There was a lot to learn in this episode.
-                      </p>
+                      <a
+                        className="color-1"
+                        href="https://impalapay.com"
+                        rel="noopener noreferrer"
+                        target="_blank"
+                      >
+                        ImpalaPay
+                      </a>
                     </span>
+                  </div>
+                  <div>
+                    <h4>
+                      Tech Stack
+                    </h4>
+                    <div
+                      className="stacks"
+                    >
+                      <div
+                        style={
+                          Object {
+                            "float": "left",
+                          }
+                        }
+                      >
+                        <span
+                          className="color-6"
+                        >
+                           NodeJS 
+                        </span>
+                        <span
+                          className="separator"
+                        >
+                          ,
+                        </span>
+                      </div>
+                      <div
+                        style={
+                          Object {
+                            "float": "left",
+                          }
+                        }
+                      >
+                        <span
+                          className="color-6"
+                        >
+                           ReactJS 
+                        </span>
+                        <span
+                          className="separator"
+                        >
+                          ,
+                        </span>
+                      </div>
+                      <div
+                        style={
+                          Object {
+                            "float": "left",
+                          }
+                        }
+                      >
+                        <span
+                          className="color-6"
+                        >
+                           Docker 
+                        </span>
+                        <span
+                          className="separator"
+                        >
+                          ,
+                        </span>
+                      </div>
+                      <div
+                        style={
+                          Object {
+                            "float": "left",
+                          }
+                        }
+                      >
+                        <span
+                          className="color-6"
+                        >
+                           Kubernetes 
+                        </span>
+                        <span
+                          className="separator"
+                        >
+                          ,
+                        </span>
+                      </div>
+                      <div
+                        style={
+                          Object {
+                            "float": "left",
+                          }
+                        }
+                      >
+                        <span
+                          className="color-6"
+                        >
+                           Google Cloud 
+                        </span>
+                        <span
+                          className="separator"
+                        >
+                          ,
+                        </span>
+                      </div>
+                    </div>
+                    <br
+                      className="clearBoth"
+                    />
                   </div>
                 </div>
               </div>
               <div
-                className="journey-item job"
+                className="journey-item-paragraph"
               >
-                <header>
-                  <span
-                    className="journey-item-type"
-                  >
-                    From
-                  </span>
-                  <span
-                    className="journey-item-date"
-                  >
-                    <span>
-                       June, 2016
-                       → 
-                      September, 2016
-                    </span>
-                    <span>
-                       ~ 3 months
-                    </span>
-                  </span>
-                </header>
                 <div
-                  className="journey-item-content with-description"
+                  className="description"
                 >
-                  <div
-                    className="img logo align-self js-listcard-hover"
+                  <span
+                    className="description-content-full"
                   >
-                    <a
-                      href="https://impalapay.com"
-                      rel="noopener noreferrer"
-                      target="_blank"
-                    >
-                      <img
-                        alt="SafeBoda"
-                        className="js-list-img"
-                        data-list-id={60269}
-                        src="/static/images/companies/impala.PNG"
-                      />
-                    </a>
-                  </div>
-                  <div
-                    className="journey-item-text"
+                    <p>
+                      My tasks as a junior included web services integrations in Java and POS application development in C. I also did cloud and local network administration. There was a lot to learn in this episode.
+                    </p>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div
+              className="journey-item job"
+            >
+              <header>
+                <span
+                  className="journey-item-type"
+                >
+                  From
+                </span>
+                <span
+                  className="journey-item-date"
+                >
+                  <span>
+                     June, 2016
+                     → 
+                    September, 2016
+                  </span>
+                  <span>
+                     ~ 3 months
+                  </span>
+                </span>
+              </header>
+              <div
+                className="journey-item-content with-description"
+              >
+                <div
+                  className="img logo align-self js-listcard-hover"
+                >
+                  <a
+                    href="https://impalapay.com"
+                    rel="noopener noreferrer"
+                    target="_blank"
                   >
-                    <div
-                      className="journey-item-title"
-                    >
-                      <h4>
-                        Intern
-                      </h4>
-                      <span
-                        className="js-listcard-hover"
-                      >
-                        <a
-                          className="color-1"
-                          href="https://impalapay.com"
-                          rel="noopener noreferrer"
-                          target="_blank"
-                        >
-                          ImpalaPay
-                        </a>
-                      </span>
-                    </div>
-                    <div>
-                      <h4>
-                        Tech Stack
-                      </h4>
-                      <div
-                        className="stacks"
-                      >
-                        <div
-                          style={
-                            Object {
-                              "float": "left",
-                            }
-                          }
-                        >
-                          <span
-                            className="color-6"
-                          >
-                             NodeJS 
-                          </span>
-                          <span
-                            className="separator"
-                          >
-                            ,
-                          </span>
-                        </div>
-                        <div
-                          style={
-                            Object {
-                              "float": "left",
-                            }
-                          }
-                        >
-                          <span
-                            className="color-6"
-                          >
-                             ReactJS 
-                          </span>
-                          <span
-                            className="separator"
-                          >
-                            ,
-                          </span>
-                        </div>
-                        <div
-                          style={
-                            Object {
-                              "float": "left",
-                            }
-                          }
-                        >
-                          <span
-                            className="color-6"
-                          >
-                             Docker 
-                          </span>
-                          <span
-                            className="separator"
-                          >
-                            ,
-                          </span>
-                        </div>
-                        <div
-                          style={
-                            Object {
-                              "float": "left",
-                            }
-                          }
-                        >
-                          <span
-                            className="color-6"
-                          >
-                             Kubernetes 
-                          </span>
-                          <span
-                            className="separator"
-                          >
-                            ,
-                          </span>
-                        </div>
-                        <div
-                          style={
-                            Object {
-                              "float": "left",
-                            }
-                          }
-                        >
-                          <span
-                            className="color-6"
-                          >
-                             Google Cloud 
-                          </span>
-                          <span
-                            className="separator"
-                          >
-                            ,
-                          </span>
-                        </div>
-                      </div>
-                      <br
-                        className="clearBoth"
-                      />
-                    </div>
-                  </div>
+                    <img
+                      alt="SafeBoda"
+                      className="js-list-img"
+                      data-list-id={60269}
+                      src="/static/images/companies/impala.PNG"
+                    />
+                  </a>
                 </div>
                 <div
-                  className="journey-item-paragraph"
+                  className="journey-item-text"
                 >
                   <div
-                    className="description"
+                    className="journey-item-title"
                   >
+                    <h4>
+                      Intern
+                    </h4>
                     <span
-                      className="description-content-full"
+                      className="js-listcard-hover"
                     >
-                      <p>
-                        This was my first internship. I did common tasks like wireframes, network troubleshooting. I also tested new POS devices.
-                      </p>
+                      <a
+                        className="color-1"
+                        href="https://impalapay.com"
+                        rel="noopener noreferrer"
+                        target="_blank"
+                      >
+                        ImpalaPay
+                      </a>
                     </span>
                   </div>
+                  <div>
+                    <h4>
+                      Tech Stack
+                    </h4>
+                    <div
+                      className="stacks"
+                    >
+                      <div
+                        style={
+                          Object {
+                            "float": "left",
+                          }
+                        }
+                      >
+                        <span
+                          className="color-6"
+                        >
+                           NodeJS 
+                        </span>
+                        <span
+                          className="separator"
+                        >
+                          ,
+                        </span>
+                      </div>
+                      <div
+                        style={
+                          Object {
+                            "float": "left",
+                          }
+                        }
+                      >
+                        <span
+                          className="color-6"
+                        >
+                           ReactJS 
+                        </span>
+                        <span
+                          className="separator"
+                        >
+                          ,
+                        </span>
+                      </div>
+                      <div
+                        style={
+                          Object {
+                            "float": "left",
+                          }
+                        }
+                      >
+                        <span
+                          className="color-6"
+                        >
+                           Docker 
+                        </span>
+                        <span
+                          className="separator"
+                        >
+                          ,
+                        </span>
+                      </div>
+                      <div
+                        style={
+                          Object {
+                            "float": "left",
+                          }
+                        }
+                      >
+                        <span
+                          className="color-6"
+                        >
+                           Kubernetes 
+                        </span>
+                        <span
+                          className="separator"
+                        >
+                          ,
+                        </span>
+                      </div>
+                      <div
+                        style={
+                          Object {
+                            "float": "left",
+                          }
+                        }
+                      >
+                        <span
+                          className="color-6"
+                        >
+                           Google Cloud 
+                        </span>
+                        <span
+                          className="separator"
+                        >
+                          ,
+                        </span>
+                      </div>
+                    </div>
+                    <br
+                      className="clearBoth"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div
+                className="journey-item-paragraph"
+              >
+                <div
+                  className="description"
+                >
+                  <span
+                    className="description-content-full"
+                  >
+                    <p>
+                      This was my first internship. I did common tasks like wireframes, network troubleshooting. I also tested new POS devices.
+                    </p>
+                  </span>
                 </div>
               </div>
             </div>

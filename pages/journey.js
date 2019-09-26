@@ -19,19 +19,17 @@ export default function DeveloperStory() {
       </Container>
       <Container maxWidth="md">
         <div id="content" className="snippet-hidden">
-          <div id="mainbar-full" className="user-show-new developer-journey">
-            <div className="journey-wrapper">
-              <div className="journey  journey-mine">
-                <div className="journey-feed">
-                  <div className="journey-line" />
-                  {
-                    journeys.map((item) => {
-                      return <Item style={{display: 'inline-block'}} {...item} key={`${item.startDate}-${item.endDate}-${item.title}`} />;
-                    })
-                  }
-                </div>
-              
+          <div className="journey-wrapper">
+            <div className="journey  journey-mine">
+              <div className="journey-feed">
+                <div className="journey-line" />
+                {
+                  journeys.map((item) => {
+                    return <Item style={{display: 'inline-block'}} {...item} key={`${item.startDate}-${item.endDate}-${item.title}`} />;
+                  })
+                }
               </div>
+              
             </div>
           </div>
         </div>
