@@ -112,7 +112,7 @@ Array [
     />
   </div>,
   <div
-    className="MuiContainer-root MuiContainer-maxWidthMd"
+    className="MuiContainer-root blog-body MuiContainer-maxWidthMd"
     style={
       Object {
         "color": "white",
@@ -144,12 +144,30 @@ Array [
       <h6
         className="MuiTypography-root MuiTypography-h6 MuiTypography-gutterBottom MuiTypography-alignCenter"
       >
-        Zemuldo Blog
+        <span
+          className="color-1"
+        >
+          Zemuldo Website and Blog
+        </span>
       </h6>
       <p
         className="MuiTypography-root MuiTypography-subtitle1 MuiTypography-alignCenter"
       >
-        Writing more cool stuff everyday.
+        Want to talk? Check my 
+        <a
+          href="https://calendly.com/zemuldo"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          Calendly
+        </a>
+      </p>
+      <p
+        className="MuiTypography-root MuiTypography-subtitle1 MuiTypography-alignCenter"
+      >
+        <span>
+          Learning while Writing more cool stuff everyday.
+        </span>
       </p>
       <p
         className="MuiTypography-root MuiTypography-body2 MuiTypography-alignCenter"
@@ -625,12 +643,30 @@ And – more importantly – never compromise your potential to grow due to self
       <h6
         className="MuiTypography-root MuiTypography-h6 MuiTypography-gutterBottom MuiTypography-alignCenter"
       >
-        Zemuldo Blog
+        <span
+          className="color-1"
+        >
+          Zemuldo Website and Blog
+        </span>
       </h6>
       <p
         className="MuiTypography-root MuiTypography-subtitle1 MuiTypography-alignCenter"
       >
-        Writing more cool stuff everyday.
+        Want to talk? Check my 
+        <a
+          href="https://calendly.com/zemuldo"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          Calendly
+        </a>
+      </p>
+      <p
+        className="MuiTypography-root MuiTypography-subtitle1 MuiTypography-alignCenter"
+      >
+        <span>
+          Learning while Writing more cool stuff everyday.
+        </span>
       </p>
       <p
         className="MuiTypography-root MuiTypography-body2 MuiTypography-alignCenter"
@@ -1002,12 +1038,30 @@ Array [
       <h6
         className="MuiTypography-root MuiTypography-h6 MuiTypography-gutterBottom MuiTypography-alignCenter"
       >
-        Zemuldo Blog
+        <span
+          className="color-1"
+        >
+          Zemuldo Website and Blog
+        </span>
       </h6>
       <p
         className="MuiTypography-root MuiTypography-subtitle1 MuiTypography-alignCenter"
       >
-        Writing more cool stuff everyday.
+        Want to talk? Check my 
+        <a
+          href="https://calendly.com/zemuldo"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          Calendly
+        </a>
+      </p>
+      <p
+        className="MuiTypography-root MuiTypography-subtitle1 MuiTypography-alignCenter"
+      >
+        <span>
+          Learning while Writing more cool stuff everyday.
+        </span>
       </p>
       <p
         className="MuiTypography-root MuiTypography-body2 MuiTypography-alignCenter"
@@ -1395,12 +1449,30 @@ Array [
       <h6
         className="MuiTypography-root MuiTypography-h6 MuiTypography-gutterBottom MuiTypography-alignCenter"
       >
-        Zemuldo Blog
+        <span
+          className="color-1"
+        >
+          Zemuldo Website and Blog
+        </span>
       </h6>
       <p
         className="MuiTypography-root MuiTypography-subtitle1 MuiTypography-alignCenter"
       >
-        Writing more cool stuff everyday.
+        Want to talk? Check my 
+        <a
+          href="https://calendly.com/zemuldo"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          Calendly
+        </a>
+      </p>
+      <p
+        className="MuiTypography-root MuiTypography-subtitle1 MuiTypography-alignCenter"
+      >
+        <span>
+          Learning while Writing more cool stuff everyday.
+        </span>
       </p>
       <p
         className="MuiTypography-root MuiTypography-body2 MuiTypography-alignCenter"
@@ -1424,7 +1496,7 @@ Array [
 
 exports[`Storyshots Home Page Footer 1`] = `
 <footer
-  className="makeStyles-footer-932"
+  className="makeStyles-footer-976"
 >
   <div
     className="MuiContainer-root MuiContainer-maxWidthLg"
@@ -1432,12 +1504,30 @@ exports[`Storyshots Home Page Footer 1`] = `
     <h6
       className="MuiTypography-root MuiTypography-h6 MuiTypography-gutterBottom MuiTypography-alignCenter"
     >
-      Zemuldo Blog
+      <span
+        className="color-1"
+      >
+        Zemuldo Website and Blog
+      </span>
     </h6>
     <p
       className="MuiTypography-root MuiTypography-subtitle1 MuiTypography-alignCenter"
     >
-      Writing more cool stuff everyday.
+      Want to talk? Check my 
+      <a
+        href="https://calendly.com/zemuldo"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        Calendly
+      </a>
+    </p>
+    <p
+      className="MuiTypography-root MuiTypography-subtitle1 MuiTypography-alignCenter"
+    >
+      <span>
+        Learning while Writing more cool stuff everyday.
+      </span>
     </p>
     <p
       className="MuiTypography-root MuiTypography-body2 MuiTypography-alignCenter"
@@ -1459,100 +1549,82 @@ exports[`Storyshots Home Page Footer 1`] = `
 `;
 
 exports[`Storyshots Home Page Normal 1`] = `
-<div
-  className="home-section-background"
-  data-stellar-background-ratio="0.6"
->
+Array [
   <div
-    className="display-table"
+    className="home-section-background"
+    data-stellar-background-ratio="0.6"
   >
     <div
-      className="display-table-cell"
+      className="display-table"
     >
       <div
-        className="container"
+        className="display-table-cell"
       >
         <div
-          className="row"
+          className="container"
         >
           <div
-            className="header-section"
+            className="row"
           >
             <div
-              className="header-frame"
+              className="header-section"
             >
-              <h1
-                className="color-6"
-              >
-                Danstan Onyango
-              </h1>
-              <h3>
-                Software Engineer
-              </h3>
-              <hr />
-              <h4
-                className="font-c-cn-m"
-              >
-                Currently being awesome at SafeBoda and formely at HackerBay Inc.
-              </h4>
-              <h3
-                className="color-orange"
-              >
-                Nairobi, Kenya
-              </h3>
-              <h4
-                className="color-6 font-c-cn-m"
-                style={
-                  Object {
-                    "fontSize": "1.8em",
-                    "marginTop": "30px",
-                  }
-                }
-              >
-                <a
-                  href="/journey"
-                  onClick={[Function]}
-                >
-                  <b>
-                    See my journey 🚀🚀
-                  </b>
-                </a>
-              </h4>
-            </div>
-            <div
-              className="img-frame border-color-green"
-              id="me-pic-wrapper"
-            >
-              <img
-                alt=""
-                id="me-pic"
-                src="/static/images/logo/black.jpg"
-              />
-            </div>
-          </div>
-          <div
-            className="col-md-12 text-center"
-          >
-            <div>
               <div
-                style={
-                  Object {
-                    "MozTransition": "all .5s ease-out",
-                    "MsTransition": "all .5s ease-out",
-                    "OTransition": "all .5s ease-out",
-                    "WebkitTransition": "all .5s ease-out",
-                    "borderRadius": "10px",
-                    "clear": "both",
-                    "display": "block",
-                    "margin": "auto",
-                    "maxWidth": "700px",
-                    "minHeight": "244px",
-                    "overflow": "hidden",
-                    "transition": "all .5s ease-out",
-                  }
-                }
+                className="header-frame"
               >
+                <h1
+                  className="color-6"
+                >
+                  Danstan Onyango
+                </h1>
+                <h3>
+                  Software Engineer
+                </h3>
                 <hr />
+                <h4
+                  className="font-c-cn-m"
+                >
+                  Currently being awesome at SafeBoda and formely at HackerBay Inc.
+                </h4>
+                <h3
+                  className="color-orange"
+                >
+                  Nairobi, Kenya
+                </h3>
+                <h4
+                  className="color-6 font-c-cn-m"
+                  style={
+                    Object {
+                      "fontSize": "1.8em",
+                      "marginTop": "30px",
+                    }
+                  }
+                >
+                  <a
+                    href="/journey"
+                    onClick={[Function]}
+                  >
+                    <b>
+                      See my journey 🚀🚀
+                    </b>
+                  </a>
+                </h4>
+              </div>
+              <div
+                className="img-frame border-color-green"
+                id="me-pic-wrapper"
+              >
+                <img
+                  alt=""
+                  id="me-pic"
+                  src="/static/images/logo/black.jpg"
+                />
+              </div>
+            </div>
+            <div
+              className="col-md-12 text-center"
+            >
+              <div>
                 <div
                   style={
                     Object {
@@ -1560,277 +1632,348 @@ exports[`Storyshots Home Page Normal 1`] = `
                       "MsTransition": "all .5s ease-out",
                       "OTransition": "all .5s ease-out",
                       "WebkitTransition": "all .5s ease-out",
-                      "backgroundColor": "rgba(0, 0, 0, .85)",
-                      "color": "#f0f0f0",
-                      "fontFamily": "Consolas, \\"Courier New\\", Courier",
-                      "fontSize": "1.2em",
-                      "fontWeight": "500",
-                      "height": "auto",
-                      "lineHeight": "1.4em",
+                      "borderRadius": "10px",
+                      "clear": "both",
+                      "display": "block",
+                      "margin": "auto",
+                      "maxWidth": "700px",
+                      "minHeight": "244px",
                       "overflow": "hidden",
-                      "padding": "10px",
-                      "textAlign": "left",
-                      "textShadow": "#000 0 1px 0",
                       "transition": "all .5s ease-out",
                     }
                   }
-                />
+                >
+                  <hr />
+                  <div
+                    style={
+                      Object {
+                        "MozTransition": "all .5s ease-out",
+                        "MsTransition": "all .5s ease-out",
+                        "OTransition": "all .5s ease-out",
+                        "WebkitTransition": "all .5s ease-out",
+                        "backgroundColor": "rgba(0, 0, 0, .85)",
+                        "color": "#f0f0f0",
+                        "fontFamily": "Consolas, \\"Courier New\\", Courier",
+                        "fontSize": "1.2em",
+                        "fontWeight": "500",
+                        "height": "auto",
+                        "lineHeight": "1.4em",
+                        "overflow": "hidden",
+                        "padding": "10px",
+                        "textAlign": "left",
+                        "textShadow": "#000 0 1px 0",
+                        "transition": "all .5s ease-out",
+                      }
+                    }
+                  />
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <div>
-        <ul
-          className="social-icon"
-        >
-          <h3
-            className="color-1"
+        <div>
+          <ul
+            className="social-icon"
           >
-            Find me on
-          </h3>
-          <div
-            style={
-              Object {
-                "marginTop": "20px",
+            <h3
+              className="color-1"
+            >
+              Find me on
+            </h3>
+            <div
+              style={
+                Object {
+                  "marginTop": "20px",
+                }
               }
-            }
-          >
-            <span
-              aria-haspopup="true"
-              onMouseEnter={[Function]}
-              onMouseLeave={[Function]}
             >
-              <li>
-                <a
-                  href="/blog"
-                  onClick={[Function]}
-                >
-                  <img
-                    alt="Remy Sharp"
-                    src="/static/images/blog.png"
-                    style={
-                      Object {
-                        "height": "55%",
-                        "marginBottom": "-12%",
-                        "width": "55%",
+              <span
+                aria-haspopup="true"
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
+              >
+                <li>
+                  <a
+                    href="/blog"
+                    onClick={[Function]}
+                  >
+                    <img
+                      alt="Remy Sharp"
+                      src="/static/images/blog.png"
+                      style={
+                        Object {
+                          "height": "55%",
+                          "marginBottom": "-12%",
+                          "width": "55%",
+                        }
                       }
-                    }
-                  />
-                </a>
-              </li>
-            </span>
-            <span
-              aria-haspopup="true"
-              onMouseEnter={[Function]}
-              onMouseLeave={[Function]}
-            >
-              <li>
-                <a
-                  href="https://dev.to/zemuldo"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  <img
-                    alt="Remy Sharp"
-                    src="/static/images/dev.to.png"
-                    style={
-                      Object {
-                        "height": "65%",
-                        "marginBottom": "-15%",
-                        "width": "65%",
+                    />
+                  </a>
+                </li>
+              </span>
+              <span
+                aria-haspopup="true"
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
+              >
+                <li>
+                  <a
+                    href="https://dev.to/zemuldo"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    <img
+                      alt="Remy Sharp"
+                      src="/static/images/dev.to.png"
+                      style={
+                        Object {
+                          "height": "65%",
+                          "marginBottom": "-15%",
+                          "width": "65%",
+                        }
                       }
-                    }
-                  />
-                </a>
-              </li>
-            </span>
-            <span
-              aria-haspopup="true"
-              onMouseEnter={[Function]}
-              onMouseLeave={[Function]}
-            >
-              <li>
-                <a
-                  className="github"
-                  href="https://github.com/zemuldo"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  <i
-                    className="fa fa-github"
-                  />
-                </a>
-              </li>
-            </span>
-            <span
-              aria-haspopup="true"
-              onMouseEnter={[Function]}
-              onMouseLeave={[Function]}
-            >
-              <li>
-                <a
-                  className="github"
-                  href="https://gitlab.com/zemuldo"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  <i
-                    className="fa fa-gitlab color-orange"
-                  />
-                </a>
-              </li>
-            </span>
-            <span
-              aria-haspopup="true"
-              onMouseEnter={[Function]}
-              onMouseLeave={[Function]}
-            >
-              <li>
-                <a
-                  className="stackoverflow"
-                  href="https://stackoverflow.com/users/story/6856820"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  <i
-                    className="fa fa-stack-overflow"
-                  />
-                </a>
-              </li>
-            </span>
-            <span
-              aria-haspopup="true"
-              onMouseEnter={[Function]}
-              onMouseLeave={[Function]}
-            >
-              <li>
-                <a
-                  className="medium"
-                  href="https://medium.com/@zemuldo"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  <i
-                    className="fa fa-medium color-green"
-                  />
-                </a>
-              </li>
-            </span>
-            <span
-              aria-haspopup="true"
-              onMouseEnter={[Function]}
-              onMouseLeave={[Function]}
-            >
-              <li>
-                <a
-                  className="medium"
-                  href="https://stackshare.io/zemuldo"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  <i
-                    className="fa fa-share-alt-square color-blue"
-                  />
-                </a>
-              </li>
-            </span>
-            <span
-              aria-haspopup="true"
-              onMouseEnter={[Function]}
-              onMouseLeave={[Function]}
-            >
-              <li>
-                <a
-                  className="twitter"
-                  href="https://twitter.com/zemuldo"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  <i
-                    className="fa fa-twitter color-6"
-                  />
-                </a>
-              </li>
-            </span>
-            <span
-              aria-haspopup="true"
-              onMouseEnter={[Function]}
-              onMouseLeave={[Function]}
-            >
-              <li>
-                <a
-                  className="linkedin"
-                  href="https://www.linkedin.com/in/zemuldo"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  <i
-                    className="fa fa-linkedin color-6"
-                  />
-                </a>
-              </li>
-            </span>
-            <span
-              aria-haspopup="true"
-              onMouseEnter={[Function]}
-              onMouseLeave={[Function]}
-            >
-              <li>
-                <a
-                  className="facebook"
-                  href="https://app.pluralsight.com/profile/zemuldo"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  <i
-                    className="fa fa-arrow-circle-right color-1"
-                  />
-                </a>
-              </li>
-            </span>
-            <span
-              aria-haspopup="true"
-              onMouseEnter={[Function]}
-              onMouseLeave={[Function]}
-            >
-              <li>
-                <a
-                  className="facebook"
-                  href="https://web.facebook.com/zemuldo"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  <i
-                    className="fa fa-facebook color-blue"
-                  />
-                </a>
-              </li>
-            </span>
-            <span
-              aria-haspopup="true"
-              onMouseEnter={[Function]}
-              onMouseLeave={[Function]}
-            >
-              <li>
-                <a
-                  className="facebook"
-                  href="mailto:danstan@zemuldo.com"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  <i
-                    className="fa fa-envelope-o color-gmail"
-                  />
-                </a>
-              </li>
-            </span>
-          </div>
-        </ul>
+                    />
+                  </a>
+                </li>
+              </span>
+              <span
+                aria-haspopup="true"
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
+              >
+                <li>
+                  <a
+                    className="github"
+                    href="https://github.com/zemuldo"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    <i
+                      className="fa fa-github"
+                    />
+                  </a>
+                </li>
+              </span>
+              <span
+                aria-haspopup="true"
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
+              >
+                <li>
+                  <a
+                    className="github"
+                    href="https://gitlab.com/zemuldo"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    <i
+                      className="fa fa-gitlab color-orange"
+                    />
+                  </a>
+                </li>
+              </span>
+              <span
+                aria-haspopup="true"
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
+              >
+                <li>
+                  <a
+                    className="stackoverflow"
+                    href="https://stackoverflow.com/users/story/6856820"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    <i
+                      className="fa fa-stack-overflow"
+                    />
+                  </a>
+                </li>
+              </span>
+              <span
+                aria-haspopup="true"
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
+              >
+                <li>
+                  <a
+                    className="medium"
+                    href="https://medium.com/@zemuldo"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    <i
+                      className="fa fa-medium color-green"
+                    />
+                  </a>
+                </li>
+              </span>
+              <span
+                aria-haspopup="true"
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
+              >
+                <li>
+                  <a
+                    className="medium"
+                    href="https://stackshare.io/zemuldo"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    <i
+                      className="fa fa-share-alt-square color-blue"
+                    />
+                  </a>
+                </li>
+              </span>
+              <span
+                aria-haspopup="true"
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
+              >
+                <li>
+                  <a
+                    className="twitter"
+                    href="https://twitter.com/zemuldo"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    <i
+                      className="fa fa-twitter color-6"
+                    />
+                  </a>
+                </li>
+              </span>
+              <span
+                aria-haspopup="true"
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
+              >
+                <li>
+                  <a
+                    className="linkedin"
+                    href="https://www.linkedin.com/in/zemuldo"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    <i
+                      className="fa fa-linkedin color-6"
+                    />
+                  </a>
+                </li>
+              </span>
+              <span
+                aria-haspopup="true"
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
+              >
+                <li>
+                  <a
+                    className="facebook"
+                    href="https://app.pluralsight.com/profile/zemuldo"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    <i
+                      className="fa fa-arrow-circle-right color-1"
+                    />
+                  </a>
+                </li>
+              </span>
+              <span
+                aria-haspopup="true"
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
+              >
+                <li>
+                  <a
+                    className="facebook"
+                    href="https://web.facebook.com/zemuldo"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    <i
+                      className="fa fa-facebook color-blue"
+                    />
+                  </a>
+                </li>
+              </span>
+              <span
+                aria-haspopup="true"
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
+              >
+                <li>
+                  <a
+                    className="facebook"
+                    href="mailto:danstan@zemuldo.com"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    <i
+                      className="fa fa-envelope-o color-gmail"
+                    />
+                  </a>
+                </li>
+              </span>
+            </div>
+          </ul>
+        </div>
       </div>
     </div>
-  </div>
-</div>
+  </div>,
+  <footer
+    className="makeStyles-footer-932"
+  >
+    <div
+      className="MuiContainer-root MuiContainer-maxWidthLg"
+    >
+      <h6
+        className="MuiTypography-root MuiTypography-h6 MuiTypography-gutterBottom MuiTypography-alignCenter"
+      >
+        <span
+          className="color-1"
+        >
+          Zemuldo Website and Blog
+        </span>
+      </h6>
+      <p
+        className="MuiTypography-root MuiTypography-subtitle1 MuiTypography-alignCenter"
+      >
+        Want to talk? Check my 
+        <a
+          href="https://calendly.com/zemuldo"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          Calendly
+        </a>
+      </p>
+      <p
+        className="MuiTypography-root MuiTypography-subtitle1 MuiTypography-alignCenter"
+      >
+        <span>
+          Learning while Writing more cool stuff everyday.
+        </span>
+      </p>
+      <p
+        className="MuiTypography-root MuiTypography-body2 MuiTypography-alignCenter"
+      >
+        Copyright © 
+        <a
+          className="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorInherit"
+          href="https://zemuldo.com/"
+          onBlur={[Function]}
+          onFocus={[Function]}
+        >
+          Zemuldo
+        </a>
+         
+        2019
+      </p>
+    </div>
+  </footer>,
+]
 `;
 
 exports[`Storyshots Home Page Social Sites 1`] = `
@@ -2402,7 +2545,7 @@ Array [
             onClick={[Function]}
           >
             <div
-              className="MuiAvatar-root makeStyles-greenAvatar-1086 MuiAvatar-colorDefault"
+              className="MuiAvatar-root makeStyles-greenAvatar-1130 MuiAvatar-colorDefault"
             >
               <svg
                 aria-hidden="true"
@@ -2422,7 +2565,7 @@ Array [
             onClick={[Function]}
           >
             <div
-              className="MuiAvatar-root makeStyles-greenAvatar-1086"
+              className="MuiAvatar-root makeStyles-greenAvatar-1130"
             >
               <img
                 className="MuiAvatar-img"
@@ -2471,7 +2614,7 @@ Array [
                     Present
                   </span>
                   <span>
-                     ~ 5 months
+                     ~ 6 months
                   </span>
                 </span>
               </header>
@@ -4102,6 +4245,57 @@ Array [
       </div>
     </div>
   </div>,
+  <footer
+    className="makeStyles-footer-1151"
+  >
+    <div
+      className="MuiContainer-root MuiContainer-maxWidthLg"
+    >
+      <h6
+        className="MuiTypography-root MuiTypography-h6 MuiTypography-gutterBottom MuiTypography-alignCenter"
+      >
+        <span
+          className="color-1"
+        >
+          Zemuldo Website and Blog
+        </span>
+      </h6>
+      <p
+        className="MuiTypography-root MuiTypography-subtitle1 MuiTypography-alignCenter"
+      >
+        Want to talk? Check my 
+        <a
+          href="https://calendly.com/zemuldo"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          Calendly
+        </a>
+      </p>
+      <p
+        className="MuiTypography-root MuiTypography-subtitle1 MuiTypography-alignCenter"
+      >
+        <span>
+          Learning while Writing more cool stuff everyday.
+        </span>
+      </p>
+      <p
+        className="MuiTypography-root MuiTypography-body2 MuiTypography-alignCenter"
+      >
+        Copyright © 
+        <a
+          className="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorInherit"
+          href="https://zemuldo.com/"
+          onBlur={[Function]}
+          onFocus={[Function]}
+        >
+          Zemuldo
+        </a>
+         
+        2019
+      </p>
+    </div>
+  </footer>,
 ]
 `;
 

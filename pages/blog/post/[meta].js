@@ -3,7 +3,7 @@ import Container from '@material-ui/core/Container';
 import { withStyles } from '@material-ui/core/styles';
 import Footer from '../../../components/footer';
 import Menu from '../../../components/blog/menu';
-import marked from 'marked';
+import marked, {Renderer} from 'marked';
 import dynamic from 'next/dynamic';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -17,6 +17,8 @@ import PropTypes from 'prop-types';
 import 'easymde/dist/easymde.min.css';
 
 const Highlight = dynamic(import('react-highlight'));
+
+const renderer = new Renderer();
 
 const api_url = process.env.API_URL;
 const base_url = process.env.BASE_URL;
@@ -67,6 +69,13 @@ marked.setOptions({
   tables: true,
   breaks: true
 });
+
+renderer.link = function( href, title, text ) {
+  return '<a class="b-link" rel="noopener noreferrer" target="_blank" href="'+ href +'" title="' + (title || href) + '">' + text + '</a>';
+};
+renderer.image = function( src, alt ) {
+  return `<img class="b-img" src="${src}" alt="${alt}" />`;
+};
 
 class Blog extends React.Component {
   constructor(props) {
@@ -180,6 +189,7 @@ class Blog extends React.Component {
         </Container>
 
         <Container
+          className='blog-body'
           maxWidth="md"
           style={{
             color: 'white',
@@ -188,7 +198,7 @@ class Blog extends React.Component {
           }}
         >
           <br />
-          <Highlight innerHTML>{marked(body.body)}</Highlight>
+          <Highlight innerHTML>{marked(body.body, { renderer: renderer })}</Highlight>
         </Container>
         <Footer />
       </React.Fragment>
