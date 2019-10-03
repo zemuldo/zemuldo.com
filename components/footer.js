@@ -1,7 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
-import Link from '@material-ui/core/Link';
+import CustomLink from './link';
 import Container from '@material-ui/core/Container';
 
 const useStyles =  makeStyles(theme => ({
@@ -17,28 +17,21 @@ export default function Footer() {
   return (
     <footer className={classes.footer}>
       <Container maxWidth="lg">
-        <Typography variant="h6" align="center" gutterBottom>
-          <span className='color-1' >Zemuldo Website and Blog</span>
+        <Typography  variant="body1" align="center" gutterBottom>
+          <span className='color-1' >Danstan Onyango ~ Zemuldo</span>
         </Typography>
         <Typography
           variant="subtitle1"
           align="center"
           component="p"
         >
-          Want to talk? Check my <a href='https://calendly.com/zemuldo' target='_blank' rel='noopener noreferrer'  >Calendly</a>
-        </Typography>
-        <Typography
-          variant="subtitle1"
-          align="center"
-          component="p"
-        >
-          <span>Learning while Writing more cool stuff everyday.</span>
+          Want to talk? Check my <a href='https://calendly.com/zemuldo/general-chat' target='_blank' rel='noopener noreferrer'  >Calendly</a>
         </Typography>
         <Typography variant="body2" align="center">
           {'Copyright © '}
-          <Link color="inherit" href="https://zemuldo.com/">
+          <CustomLink color="inherit" href="https://zemuldo.com/">
             Zemuldo
-          </Link>{' '}
+          </CustomLink>{' '}
           {new Date().getFullYear()}
         </Typography>
       </Container>
