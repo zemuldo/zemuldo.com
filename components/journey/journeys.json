@@ -120,11 +120,11 @@
     "companyDescription": "My tasks as a junior included web services integrations in Java and POS application development in C. I also did cloud and local network administration. There was a lot to learn in this episode.",
     "companyLogo": "/static/images/companies/impala.PNG",
     "stacks": [
-      { "value": "nodejs", "label": "NodeJS", "color": "#a767f5" },
-      { "value": "reactjs", "label": "ReactJS", "color": "white" },
-      { "value": "docker", "label": "Docker", "color": "#a767f5" },
-      { "value": "kubernetes", "label": "Kubernetes", "color": "#a767f5" },
-      { "value": "gcp", "label": "Google Cloud", "color": "#a767f5" }
+      { "value": "c", "label": "C", "color": "#a767f5" },
+      { "value": "ipsec", "label": "IPSec VPNs", "color": "white" },
+      { "value": "cloud", "label": "Cloud", "color": "#a767f5" },
+      { "value": "network", "label": "Network Admin", "color": "#a767f5" },
+      { "value": "pos", "label": "Point of Sale", "color": "#a767f5" }
     ]
   },
   {
@@ -137,11 +137,9 @@
     "companyDescription": "This was my first internship. I did common tasks like wireframes, network troubleshooting. I also tested new POS devices.",
     "companyLogo": "/static/images/companies/impala.PNG",
     "stacks": [
-      { "value": "nodejs", "label": "NodeJS", "color": "#a767f5" },
-      { "value": "reactjs", "label": "ReactJS", "color": "white" },
-      { "value": "docker", "label": "Docker", "color": "#a767f5" },
-      { "value": "kubernetes", "label": "Kubernetes", "color": "#a767f5" },
-      { "value": "gcp", "label": "Google Cloud", "color": "#a767f5" }
+      { "value": "network", "label": "LAN, WAN", "color": "#a767f5" },
+      { "value": "c", "label": "C", "color": "#a767f5" },
+      { "value": "cisco", "label": "Cisco IOS", "color": "#a767f5" }
     ]
   }
 ]
