@@ -176,7 +176,7 @@ class NewBlog extends React.Component {
       })
     });
 
-    localStorage.removeItem(`currentDraft-${draft._id}`)
+    localStorage.removeItem(`currentDraft-${draft._id}`);
 
     Router.push(`/blog/write/draft/${draft._id}`);
 

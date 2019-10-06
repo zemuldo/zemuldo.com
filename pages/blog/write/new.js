@@ -154,7 +154,7 @@ class NewBlog extends React.Component {
 
     this.autoSave = setInterval(() => {
       this.setState({ saving: true });
-      const { postTitle, coverPhotoUrl, tags, description } = this.state
+      const { postTitle, coverPhotoUrl, tags, description } = this.state;
       if (postTitle || coverPhotoUrl || tags || description) localStorage.setItem('currentDraft', JSON.stringify(this.state));
     }, 5000);
   }
@@ -174,10 +174,10 @@ class NewBlog extends React.Component {
       })
     });
 
-    const data =  await res.json()
-    localStorage.removeItem(`state_${data._id}`)
+    const data =  await res.json();
+    localStorage.removeItem(`state_${data._id}`);
 
-    Router.push(`/blog/write/draft/${data._id}`)
+    Router.push(`/blog/write/draft/${data._id}`);
   }
 
   handleOpenPublishDialogue = () => this.setState({ publishDialogueOpen: true })
