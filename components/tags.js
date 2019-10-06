@@ -94,7 +94,7 @@ export default function Tags({ onChange, defaultValue }) {
 
   return (
     <Select
-      defaultValue={defaultValue}
+      value={defaultValue}
       instanceId="select-tags"
       isMulti
       name="colors"

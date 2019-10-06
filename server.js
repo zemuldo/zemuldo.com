@@ -20,7 +20,7 @@ app.prepare().then(() => {
   const server = express();
 
   server.use('*', (req, _res, next)=>{
-    if(process.env.NODE_ENV === 'production') logger.info(`Serving:::: ${req.url}`);
+    if (process.env.NODE_ENV === 'production') logger.info(`Serving:::: ${req.url}`);
     next();
   });
 

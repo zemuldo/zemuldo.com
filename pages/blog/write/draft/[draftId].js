@@ -1,20 +1,20 @@
 import React from 'react';
 import Container from '@material-ui/core/Container';
 import { withStyles } from '@material-ui/core/styles';
-import Footer from '../../../components/footer';
-import Menu from '../../../components/blog/menu';
+import Footer from '../../../../components/footer';
+import Menu from '../../../../components/blog/menu';
 import marked from 'marked';
 import dynamic from 'next/dynamic';
 import Head from 'next/head';
 import TextField from '@material-ui/core/TextField';
 import Grid from '@material-ui/core/Grid';
 import 'easymde/dist/easymde.min.css';
-import Tags from '../../../components/tags';
+import Tags from '../../../../components/tags';
 import Router, { withRouter } from 'next/router';
 import SaveIcon from '@material-ui/icons/Save';
 import Avatar from '@material-ui/core/Avatar';
 import PublishIcon from '@material-ui/icons/Publish';
-import PublishDialogue from '../../../components/publish_modal';
+import PublishDialogue from '../../../../components/publish_modal';
 import fetch from 'isomorphic-unfetch';
 import { parseCookies } from 'nookies';
 import PropTypes from 'prop-types';
@@ -128,62 +128,63 @@ class NewBlog extends React.Component {
   }
 
   static async getInitialProps(ctx) {
+    const { draftId } = ctx.query;
     const { authorization } = parseCookies(ctx);
 
-    return { authorization };
+    const draftRes = await fetch(`${api_url}/posts/draft/${draftId}`, {
+      method: 'get',
+      headers: { authorization, 'Accept': 'application/json', 'Content-Type': 'application/json' }
+    });
+    
+
+    const data = await draftRes.json();
+    return { draft: data, authorization };
   }
 
   componentDidMount() {
-    const {authorization} = this.props;
-    if (!authorization) window.location = '/blog/login?redirectTo=/blog/write/new';
+    const { draft } = this.props;
 
-    const draft = localStorage.getItem('currentDraft');
     if (draft) {
-      
-      const data = JSON.parse(draft);
-      const { postTitle, coverPhotoUrl, tags, description } = data;
-      if (postTitle || coverPhotoUrl || tags || description) this.setState({
-        coverPhotoUrl: data.coverPhotoUrl || '',
-        postTitle: data.postTitle,
-        body: data.body,
-        tags: data.tags,
-        description: data.description
+      this.setState({
+        coverPhotoUrl: draft.coverPhotoUrl || '',
+        postTitle: draft.title || '',
+        body: draft.body || '',
+        tags: draft.tags,
+        description: draft.description || ''
       });
-
     }
 
     this.autoSave = setInterval(() => {
       this.setState({ saving: true });
-      const { postTitle, coverPhotoUrl, tags, description } = this.state
-      if (postTitle || coverPhotoUrl || tags || description) localStorage.setItem('currentDraft', JSON.stringify(this.state));
-    }, 5000);
+      localStorage.setItem(`currentDraft-${draft._id}`, JSON.stringify(this.state));
+    }, 10000);
   }
 
- 
   handleSave = async () => {
+    const { draft } = this.props;
+    localStorage.setItem(`currentDraft-${draft._id}`, JSON.stringify(this.state));
     const { authorization } = this.props;
-    const res = await fetch(`${api_url}/posts/draft`, {
-      method: 'post',
-      headers: {authorization, 'Accept': 'application/json', 'Content-Type': 'application/json'},
+    const _res = await fetch(`${api_url}/posts/draft/${draft._id}`, {
+      method: 'put',
+      headers: { authorization, 'Accept': 'application/json', 'Content-Type': 'application/json' },
       body: JSON.stringify({
         title: this.state.postTitle,
         body: this.state.body,
         tags: this.state.tags || [],
         description: this.state.description,
-        coverPhotoUrl: this.state.coverPhotoUrl
+        coverPhotoUrl: this.state.coverPhotoUrl,
       })
     });
 
-    const data =  await res.json()
-    localStorage.removeItem(`state_${data._id}`)
+    localStorage.removeItem(`currentDraft-${draft._id}`)
 
-    Router.push(`/blogs/write/draft/${data._id}`)
+    Router.push(`/blog/write/draft/${draft._id}`);
+
   }
-
   handleOpenPublishDialogue = () => this.setState({ publishDialogueOpen: true })
   handleClosePublishDialogue = () => this.setState({ publishDialogueOpen: false })
   handlePublish = async () => {
-    const authorization = localStorage.getItem('authorization');
+    const { authorization, draft } = this.props;
     const res = await fetch(`${api_url}/posts`, {
       method: 'post',
       headers: { authorization, 'Accept': 'application/json', 'Content-Type': 'application/json' },
@@ -193,11 +194,12 @@ class NewBlog extends React.Component {
         tags: this.state.tags || [],
         description: this.state.description,
         coverPhotoUrl: this.state.coverPhotoUrl
+
       })
     });
     const data = await res.json();
     if (parseInt(res.status, 10) !== 200) return alert(data[0].errorMessage);
-    localStorage.removeItem('currentDraft');
+    localStorage.removeItem(`currentDraft-${draft._id}`);
     Router.push(`/blog/post/${data.post._id}`);
     this.handleClosePublishDialogue();
   }
@@ -337,7 +339,8 @@ class NewBlog extends React.Component {
 NewBlog.propTypes = {
   classes: PropTypes.object.isRequired,
   loggingIn: PropTypes.bool,
-  authorization: PropTypes.string
+  authorization: PropTypes.string,
+  draft: PropTypes.object.isRequired
 };
 
 export default withRouter(withStyles(useStyles)(NewBlog));

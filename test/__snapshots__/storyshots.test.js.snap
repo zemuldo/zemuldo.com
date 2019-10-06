@@ -30,7 +30,7 @@ Array [
             onClick={[Function]}
           >
             <div
-              className="MuiAvatar-root makeStyles-greenAvatar-611 MuiAvatar-colorDefault"
+              className="MuiAvatar-root makeStyles-greenAvatar-605 MuiAvatar-colorDefault"
             >
               <svg
                 aria-hidden="true"
@@ -50,7 +50,7 @@ Array [
             onClick={[Function]}
           >
             <div
-              className="MuiAvatar-root makeStyles-greenAvatar-611"
+              className="MuiAvatar-root makeStyles-greenAvatar-605"
             >
               <img
                 className="MuiAvatar-img"
@@ -61,7 +61,7 @@ Array [
         </div>
       </div>
       <div
-        className="MuiAvatar-root Blog-twitterAvatar-498 Blog-twitterAvatar-3 MuiAvatar-colorDefault"
+        className="MuiAvatar-root Blog-twitterAvatar-492 Blog-twitterAvatar-3 MuiAvatar-colorDefault"
         onClick={[Function]}
       >
         <i
@@ -69,7 +69,7 @@ Array [
         />
       </div>
       <div
-        className="MuiAvatar-root Blog-fbAvatar-499 Blog-fbAvatar-4 MuiAvatar-colorDefault"
+        className="MuiAvatar-root Blog-fbAvatar-493 Blog-fbAvatar-4 MuiAvatar-colorDefault"
         onClick={[Function]}
       >
         <i
@@ -77,7 +77,7 @@ Array [
         />
       </div>
       <div
-        className="MuiAvatar-root Blog-linkedinAvatar-500 Blog-linkedinAvatar-5 MuiAvatar-colorDefault"
+        className="MuiAvatar-root Blog-linkedinAvatar-494 Blog-linkedinAvatar-5 MuiAvatar-colorDefault"
         onClick={[Function]}
       >
         <i
@@ -136,26 +136,26 @@ Array [
     </Dynamic>
   </div>,
   <footer
-    className="makeStyles-footer-632"
+    className="makeStyles-footer-626"
   >
     <div
       className="MuiContainer-root MuiContainer-maxWidthLg"
     >
-      <h6
-        className="MuiTypography-root MuiTypography-h6 MuiTypography-gutterBottom MuiTypography-alignCenter"
+      <p
+        className="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom MuiTypography-alignCenter"
       >
         <span
           className="color-1"
         >
-          Zemuldo Website and Blog
+          Danstan Onyango ~ Zemuldo
         </span>
-      </h6>
+      </p>
       <p
         className="MuiTypography-root MuiTypography-subtitle1 MuiTypography-alignCenter"
       >
         Want to talk? Check my 
         <a
-          href="https://calendly.com/zemuldo"
+          href="https://calendly.com/zemuldo/general-chat"
           rel="noopener noreferrer"
           target="_blank"
         >
@@ -163,21 +163,12 @@ Array [
         </a>
       </p>
       <p
-        className="MuiTypography-root MuiTypography-subtitle1 MuiTypography-alignCenter"
-      >
-        <span>
-          Learning while Writing more cool stuff everyday.
-        </span>
-      </p>
-      <p
         className="MuiTypography-root MuiTypography-body2 MuiTypography-alignCenter"
       >
         Copyright © 
         <a
-          className="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorInherit"
           href="https://zemuldo.com/"
-          onBlur={[Function]}
-          onFocus={[Function]}
+          onClick={[Function]}
         >
           Zemuldo
         </a>
@@ -217,7 +208,7 @@ Array [
           onClick={[Function]}
         >
           <div
-            className="MuiAvatar-root makeStyles-greenAvatar-700 MuiAvatar-colorDefault"
+            className="MuiAvatar-root makeStyles-greenAvatar-688 MuiAvatar-colorDefault"
           >
             <svg
               aria-hidden="true"
@@ -237,7 +228,7 @@ Array [
           onClick={[Function]}
         >
           <div
-            className="MuiAvatar-root makeStyles-greenAvatar-700"
+            className="MuiAvatar-root makeStyles-greenAvatar-688"
           >
             <img
               className="MuiAvatar-img"
@@ -251,7 +242,7 @@ Array [
       className="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-center MuiGrid-justify-xs-center"
     >
       <div
-        className="MuiAvatar-root EditBlog-greenAvatar-669 EditBlog-greenAvatar-1 MuiAvatar-colorDefault"
+        className="MuiAvatar-root EditBlog-greenAvatar-657 EditBlog-greenAvatar-1 MuiAvatar-colorDefault"
         onClick={[Function]}
       >
         <svg
@@ -267,7 +258,7 @@ Array [
         </svg>
       </div>
       <div
-        className="MuiAvatar-root EditBlog-greenAvatar-669 EditBlog-greenAvatar-1 MuiAvatar-colorDefault"
+        className="MuiAvatar-root EditBlog-greenAvatar-657 EditBlog-greenAvatar-1 MuiAvatar-colorDefault"
         onClick={[Function]}
       >
         <svg
@@ -284,20 +275,20 @@ Array [
       </div>
     </div>
     <div
-      className="EditBlog-root-670 EditBlog-root-2"
+      className="EditBlog-root-658 EditBlog-root-2"
     >
       <div
         className="MuiFormControl-root MuiTextField-root MuiFormControl-fullWidth"
       >
         <label
-          className="MuiFormLabel-root MuiInputLabel-root EditBlog-floatingLabelFocusStyle-671 EditBlog-floatingLabelFocusStyle-3 MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-filled"
+          className="MuiFormLabel-root MuiInputLabel-root EditBlog-floatingLabelFocusStyle-659 EditBlog-floatingLabelFocusStyle-3 MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-filled"
           data-shrink={true}
           htmlFor="postTitle"
         >
           Post Title
         </label>
         <div
-          className="MuiInputBase-root MuiInput-root MuiInput-underline EditBlog-materialInput-672 EditBlog-materialInput-4 MuiInputBase-fullWidth MuiInput-fullWidth MuiInputBase-formControl MuiInput-formControl"
+          className="MuiInputBase-root MuiInput-root MuiInput-underline EditBlog-materialInput-660 EditBlog-materialInput-4 MuiInputBase-fullWidth MuiInput-fullWidth MuiInputBase-formControl MuiInput-formControl"
           onClick={[Function]}
         >
           <input
@@ -326,14 +317,14 @@ Array [
           className="MuiFormControl-root MuiTextField-root MuiFormControl-fullWidth"
         >
           <label
-            className="MuiFormLabel-root MuiInputLabel-root EditBlog-floatingLabelFocusStyle-671 EditBlog-floatingLabelFocusStyle-3 MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-filled"
+            className="MuiFormLabel-root MuiInputLabel-root EditBlog-floatingLabelFocusStyle-659 EditBlog-floatingLabelFocusStyle-3 MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-filled"
             data-shrink={true}
             htmlFor="coverPhotoUrl"
           >
             Cover Photo Url
           </label>
           <div
-            className="MuiInputBase-root MuiInput-root MuiInput-underline EditBlog-materialInput-672 EditBlog-materialInput-4 MuiInputBase-fullWidth MuiInput-fullWidth MuiInputBase-formControl MuiInput-formControl"
+            className="MuiInputBase-root MuiInput-root MuiInput-underline EditBlog-materialInput-660 EditBlog-materialInput-4 MuiInputBase-fullWidth MuiInput-fullWidth MuiInputBase-formControl MuiInput-formControl"
             onClick={[Function]}
           >
             <input
@@ -551,17 +542,17 @@ Array [
     </div>
     <br />
     <div
-      className="MuiFormControl-root MuiTextField-root EditBlog-materialTextArea-673 EditBlog-materialTextArea-5 MuiFormControl-marginNormal MuiFormControl-fullWidth"
+      className="MuiFormControl-root MuiTextField-root EditBlog-materialTextArea-661 EditBlog-materialTextArea-5 MuiFormControl-marginNormal MuiFormControl-fullWidth"
     >
       <label
-        className="MuiFormLabel-root MuiInputLabel-root EditBlog-floatingLabelFocusStyle-671 EditBlog-floatingLabelFocusStyle-3 MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+        className="MuiFormLabel-root MuiInputLabel-root EditBlog-floatingLabelFocusStyle-659 EditBlog-floatingLabelFocusStyle-3 MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
         data-shrink={true}
         htmlFor="description"
       >
         Post Description
       </label>
       <div
-        className="MuiInputBase-root MuiOutlinedInput-root EditBlog-materialTextArea-673 EditBlog-materialTextArea-5 MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-multiline MuiOutlinedInput-multiline"
+        className="MuiInputBase-root MuiOutlinedInput-root EditBlog-materialTextArea-661 EditBlog-materialTextArea-5 MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-multiline MuiOutlinedInput-multiline"
         onClick={[Function]}
       >
         <textarea
@@ -578,7 +569,7 @@ Array [
         />
         <fieldset
           aria-hidden={true}
-          className="PrivateNotchedOutline-root-893 MuiOutlinedInput-notchedOutline"
+          className="PrivateNotchedOutline-root-881 MuiOutlinedInput-notchedOutline"
           style={
             Object {
               "paddingLeft": 8,
@@ -586,7 +577,7 @@ Array [
           }
         >
           <legend
-            className="PrivateNotchedOutline-legend-894"
+            className="PrivateNotchedOutline-legend-882"
             style={
               Object {
                 "width": 0,
@@ -635,26 +626,26 @@ And – more importantly – never compromise your potential to grow due to self
     />
   </div>,
   <footer
-    className="makeStyles-footer-895"
+    className="makeStyles-footer-883"
   >
     <div
       className="MuiContainer-root MuiContainer-maxWidthLg"
     >
-      <h6
-        className="MuiTypography-root MuiTypography-h6 MuiTypography-gutterBottom MuiTypography-alignCenter"
+      <p
+        className="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom MuiTypography-alignCenter"
       >
         <span
           className="color-1"
         >
-          Zemuldo Website and Blog
+          Danstan Onyango ~ Zemuldo
         </span>
-      </h6>
+      </p>
       <p
         className="MuiTypography-root MuiTypography-subtitle1 MuiTypography-alignCenter"
       >
         Want to talk? Check my 
         <a
-          href="https://calendly.com/zemuldo"
+          href="https://calendly.com/zemuldo/general-chat"
           rel="noopener noreferrer"
           target="_blank"
         >
@@ -662,21 +653,12 @@ And – more importantly – never compromise your potential to grow due to self
         </a>
       </p>
       <p
-        className="MuiTypography-root MuiTypography-subtitle1 MuiTypography-alignCenter"
-      >
-        <span>
-          Learning while Writing more cool stuff everyday.
-        </span>
-      </p>
-      <p
         className="MuiTypography-root MuiTypography-body2 MuiTypography-alignCenter"
       >
         Copyright © 
         <a
-          className="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorInherit"
           href="https://zemuldo.com/"
-          onBlur={[Function]}
-          onFocus={[Function]}
+          onClick={[Function]}
         >
           Zemuldo
         </a>
@@ -1035,21 +1017,21 @@ Array [
     <div
       className="MuiContainer-root MuiContainer-maxWidthLg"
     >
-      <h6
-        className="MuiTypography-root MuiTypography-h6 MuiTypography-gutterBottom MuiTypography-alignCenter"
+      <p
+        className="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom MuiTypography-alignCenter"
       >
         <span
           className="color-1"
         >
-          Zemuldo Website and Blog
+          Danstan Onyango ~ Zemuldo
         </span>
-      </h6>
+      </p>
       <p
         className="MuiTypography-root MuiTypography-subtitle1 MuiTypography-alignCenter"
       >
         Want to talk? Check my 
         <a
-          href="https://calendly.com/zemuldo"
+          href="https://calendly.com/zemuldo/general-chat"
           rel="noopener noreferrer"
           target="_blank"
         >
@@ -1057,21 +1039,12 @@ Array [
         </a>
       </p>
       <p
-        className="MuiTypography-root MuiTypography-subtitle1 MuiTypography-alignCenter"
-      >
-        <span>
-          Learning while Writing more cool stuff everyday.
-        </span>
-      </p>
-      <p
         className="MuiTypography-root MuiTypography-body2 MuiTypography-alignCenter"
       >
         Copyright © 
         <a
-          className="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorInherit"
           href="https://zemuldo.com/"
-          onBlur={[Function]}
-          onFocus={[Function]}
+          onClick={[Function]}
         >
           Zemuldo
         </a>
@@ -1446,21 +1419,21 @@ Array [
     <div
       className="MuiContainer-root MuiContainer-maxWidthLg"
     >
-      <h6
-        className="MuiTypography-root MuiTypography-h6 MuiTypography-gutterBottom MuiTypography-alignCenter"
+      <p
+        className="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom MuiTypography-alignCenter"
       >
         <span
           className="color-1"
         >
-          Zemuldo Website and Blog
+          Danstan Onyango ~ Zemuldo
         </span>
-      </h6>
+      </p>
       <p
         className="MuiTypography-root MuiTypography-subtitle1 MuiTypography-alignCenter"
       >
         Want to talk? Check my 
         <a
-          href="https://calendly.com/zemuldo"
+          href="https://calendly.com/zemuldo/general-chat"
           rel="noopener noreferrer"
           target="_blank"
         >
@@ -1468,21 +1441,12 @@ Array [
         </a>
       </p>
       <p
-        className="MuiTypography-root MuiTypography-subtitle1 MuiTypography-alignCenter"
-      >
-        <span>
-          Learning while Writing more cool stuff everyday.
-        </span>
-      </p>
-      <p
         className="MuiTypography-root MuiTypography-body2 MuiTypography-alignCenter"
       >
         Copyright © 
         <a
-          className="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorInherit"
           href="https://zemuldo.com/"
-          onBlur={[Function]}
-          onFocus={[Function]}
+          onClick={[Function]}
         >
           Zemuldo
         </a>
@@ -1496,26 +1460,26 @@ Array [
 
 exports[`Storyshots Home Page Footer 1`] = `
 <footer
-  className="makeStyles-footer-976"
+  className="makeStyles-footer-952"
 >
   <div
     className="MuiContainer-root MuiContainer-maxWidthLg"
   >
-    <h6
-      className="MuiTypography-root MuiTypography-h6 MuiTypography-gutterBottom MuiTypography-alignCenter"
+    <p
+      className="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom MuiTypography-alignCenter"
     >
       <span
         className="color-1"
       >
-        Zemuldo Website and Blog
+        Danstan Onyango ~ Zemuldo
       </span>
-    </h6>
+    </p>
     <p
       className="MuiTypography-root MuiTypography-subtitle1 MuiTypography-alignCenter"
     >
       Want to talk? Check my 
       <a
-        href="https://calendly.com/zemuldo"
+        href="https://calendly.com/zemuldo/general-chat"
         rel="noopener noreferrer"
         target="_blank"
       >
@@ -1523,21 +1487,12 @@ exports[`Storyshots Home Page Footer 1`] = `
       </a>
     </p>
     <p
-      className="MuiTypography-root MuiTypography-subtitle1 MuiTypography-alignCenter"
-    >
-      <span>
-        Learning while Writing more cool stuff everyday.
-      </span>
-    </p>
-    <p
       className="MuiTypography-root MuiTypography-body2 MuiTypography-alignCenter"
     >
       Copyright © 
       <a
-        className="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorInherit"
         href="https://zemuldo.com/"
-        onBlur={[Function]}
-        onFocus={[Function]}
+        onClick={[Function]}
       >
         Zemuldo
       </a>
@@ -1923,26 +1878,26 @@ Array [
     </div>
   </div>,
   <footer
-    className="makeStyles-footer-932"
+    className="makeStyles-footer-914"
   >
     <div
       className="MuiContainer-root MuiContainer-maxWidthLg"
     >
-      <h6
-        className="MuiTypography-root MuiTypography-h6 MuiTypography-gutterBottom MuiTypography-alignCenter"
+      <p
+        className="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom MuiTypography-alignCenter"
       >
         <span
           className="color-1"
         >
-          Zemuldo Website and Blog
+          Danstan Onyango ~ Zemuldo
         </span>
-      </h6>
+      </p>
       <p
         className="MuiTypography-root MuiTypography-subtitle1 MuiTypography-alignCenter"
       >
         Want to talk? Check my 
         <a
-          href="https://calendly.com/zemuldo"
+          href="https://calendly.com/zemuldo/general-chat"
           rel="noopener noreferrer"
           target="_blank"
         >
@@ -1950,21 +1905,12 @@ Array [
         </a>
       </p>
       <p
-        className="MuiTypography-root MuiTypography-subtitle1 MuiTypography-alignCenter"
-      >
-        <span>
-          Learning while Writing more cool stuff everyday.
-        </span>
-      </p>
-      <p
         className="MuiTypography-root MuiTypography-body2 MuiTypography-alignCenter"
       >
         Copyright © 
         <a
-          className="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorInherit"
           href="https://zemuldo.com/"
-          onBlur={[Function]}
-          onFocus={[Function]}
+          onClick={[Function]}
         >
           Zemuldo
         </a>
@@ -2545,7 +2491,7 @@ Array [
             onClick={[Function]}
           >
             <div
-              className="MuiAvatar-root makeStyles-greenAvatar-1130 MuiAvatar-colorDefault"
+              className="MuiAvatar-root makeStyles-greenAvatar-1100 MuiAvatar-colorDefault"
             >
               <svg
                 aria-hidden="true"
@@ -2565,7 +2511,7 @@ Array [
             onClick={[Function]}
           >
             <div
-              className="MuiAvatar-root makeStyles-greenAvatar-1130"
+              className="MuiAvatar-root makeStyles-greenAvatar-1100"
             >
               <img
                 className="MuiAvatar-img"
@@ -3954,7 +3900,7 @@ Array [
                         <span
                           className="color-6"
                         >
-                           NodeJS 
+                           C 
                         </span>
                         <span
                           className="separator"
@@ -3972,7 +3918,7 @@ Array [
                         <span
                           className="color-6"
                         >
-                           ReactJS 
+                           IPSec VPNs 
                         </span>
                         <span
                           className="separator"
@@ -3990,7 +3936,7 @@ Array [
                         <span
                           className="color-6"
                         >
-                           Docker 
+                           Cloud 
                         </span>
                         <span
                           className="separator"
@@ -4008,7 +3954,7 @@ Array [
                         <span
                           className="color-6"
                         >
-                           Kubernetes 
+                           Network Admin 
                         </span>
                         <span
                           className="separator"
@@ -4026,7 +3972,7 @@ Array [
                         <span
                           className="color-6"
                         >
-                           Google Cloud 
+                           Point of Sale 
                         </span>
                         <span
                           className="separator"
@@ -4137,7 +4083,7 @@ Array [
                         <span
                           className="color-6"
                         >
-                           NodeJS 
+                           LAN, WAN 
                         </span>
                         <span
                           className="separator"
@@ -4155,7 +4101,7 @@ Array [
                         <span
                           className="color-6"
                         >
-                           ReactJS 
+                           C 
                         </span>
                         <span
                           className="separator"
@@ -4173,43 +4119,7 @@ Array [
                         <span
                           className="color-6"
                         >
-                           Docker 
-                        </span>
-                        <span
-                          className="separator"
-                        >
-                          ,
-                        </span>
-                      </div>
-                      <div
-                        style={
-                          Object {
-                            "float": "left",
-                          }
-                        }
-                      >
-                        <span
-                          className="color-6"
-                        >
-                           Kubernetes 
-                        </span>
-                        <span
-                          className="separator"
-                        >
-                          ,
-                        </span>
-                      </div>
-                      <div
-                        style={
-                          Object {
-                            "float": "left",
-                          }
-                        }
-                      >
-                        <span
-                          className="color-6"
-                        >
-                           Google Cloud 
+                           Cisco IOS 
                         </span>
                         <span
                           className="separator"
@@ -4246,26 +4156,26 @@ Array [
     </div>
   </div>,
   <footer
-    className="makeStyles-footer-1151"
+    className="makeStyles-footer-1121"
   >
     <div
       className="MuiContainer-root MuiContainer-maxWidthLg"
     >
-      <h6
-        className="MuiTypography-root MuiTypography-h6 MuiTypography-gutterBottom MuiTypography-alignCenter"
+      <p
+        className="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom MuiTypography-alignCenter"
       >
         <span
           className="color-1"
         >
-          Zemuldo Website and Blog
+          Danstan Onyango ~ Zemuldo
         </span>
-      </h6>
+      </p>
       <p
         className="MuiTypography-root MuiTypography-subtitle1 MuiTypography-alignCenter"
       >
         Want to talk? Check my 
         <a
-          href="https://calendly.com/zemuldo"
+          href="https://calendly.com/zemuldo/general-chat"
           rel="noopener noreferrer"
           target="_blank"
         >
@@ -4273,21 +4183,12 @@ Array [
         </a>
       </p>
       <p
-        className="MuiTypography-root MuiTypography-subtitle1 MuiTypography-alignCenter"
-      >
-        <span>
-          Learning while Writing more cool stuff everyday.
-        </span>
-      </p>
-      <p
         className="MuiTypography-root MuiTypography-body2 MuiTypography-alignCenter"
       >
         Copyright © 
         <a
-          className="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorInherit"
           href="https://zemuldo.com/"
-          onBlur={[Function]}
-          onFocus={[Function]}
+          onClick={[Function]}
         >
           Zemuldo
         </a>
