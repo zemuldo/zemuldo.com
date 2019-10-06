@@ -177,7 +177,7 @@ class NewBlog extends React.Component {
     const data =  await res.json()
     localStorage.removeItem(`state_${data._id}`)
 
-    Router.push(`/blogs/write/draft/${data._id}`)
+    Router.push(`/blog/write/draft/${data._id}`)
   }
 
   handleOpenPublishDialogue = () => this.setState({ publishDialogueOpen: true })
