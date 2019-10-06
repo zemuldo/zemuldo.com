@@ -15,28 +15,12 @@ router.use('/blog/static', express.static('static'));
 
 router.use(compression());
 
-router.get('/blog', (req, res) => {
-  return app.render(req, res, '/blog', req.query);
-});
-
-router.get('/blog/login', (req, res) => {
-  return app.render(req, res, '/blog/login', req.query);
-});
-
-router.get('/blog/:meta', (req, res) => {
-  return app.render(req, res, '/blog/[meta]', { meta: req.params.meta });
-});
-
-router.get('/blog/:meta/edit', (req, res) => {
-  return app.render(req, res, '/blog/[meta]/edit', { meta: req.params.meta });
-});
-
 app.prepare().then(() => {
 
   const server = express();
 
   server.use('*', (req, _res, next)=>{
-    logger.info(`Serving:::: ${req.url}`);
+    if(process.env.NODE_ENV === 'production') logger.info(`Serving:::: ${req.url}`);
     next();
   });
 
