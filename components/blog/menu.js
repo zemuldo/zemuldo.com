@@ -109,6 +109,10 @@ function Menu() {
           </Avatar>
         </Link>
 
+        <Link href='/blog/drafts'>
+          <Avatar className={classes.greenAvatar} src='/static/images/draft.png'>
+          </Avatar>
+        </Link>
       </Grid>
     </div>
   );
