@@ -156,6 +156,7 @@ class NewBlog extends React.Component {
 
     this.autoSave = setInterval(() => {
       this.setState({ saving: true });
+      this.handleSave()
       localStorage.setItem(`currentDraft-${draft._id}`, JSON.stringify(this.state));
     }, 10000);
   }
