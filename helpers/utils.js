@@ -21,13 +21,3 @@ export function getYearsBetween(sdt) {
   };
   return years + ' Years' + months(date_difference.getMonth() + 1);
 }
-
-export async function rescue(unsafe) {
-  try {
-    const data = await unsafe();
-    return data;
-  } catch (_e) {
-    console.log(_e);
-    return;
-  }
-}
