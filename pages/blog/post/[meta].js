@@ -125,7 +125,7 @@ class Blog extends React.Component {
     window.open(shareURL, 'sharer', 'toolbar=0,status=0,width=548,height=325');
   }
   render() {
-    const { post, body, classes } = this.props;
+    const { post, body, classes, authorization } = this.props;
     return (
       <React.Fragment>
         <Head>
@@ -155,7 +155,7 @@ class Blog extends React.Component {
           }}
         >
           <Grid container justify="center" alignItems="center">
-            <Menu />
+            <Menu authorization />
             {
               this.props.authorization &&
               <Link href={`/blog/post/${post._id}/edit`}>
@@ -210,7 +210,7 @@ Blog.propTypes = {
   post: PropTypes.object.isRequired,
   body: PropTypes.object.isRequired,
   classes: PropTypes.object.isRequired,
-  authorization: PropTypes.string
+  authorization: PropTypes.oneOfType([PropTypes.string, PropTypes.oneOf([null])])
 };
 
 export default withStyles(styles)(Blog);
