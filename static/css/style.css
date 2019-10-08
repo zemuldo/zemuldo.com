@@ -299,3 +299,7 @@ hr:after {
     border-bottom: solid 0.009em #08a6f3;
     color: #08a6f3;
 }
+
+.center-content{
+    margin: 10% auto;
+}

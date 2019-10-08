@@ -124,9 +124,16 @@ export default function Drafts({ drafts, authorization }) {
       <Container style={{ color: 'white' }} maxWidth="md">
 
         <Grid container justify="center" alignItems="center">
-          <Menu />
+          <Menu authorization={authorization} />
           <Grid container spacing={4}>
-            {data.map(draft => (
+            {
+              !data[0] && 
+              <div className='center-content'>
+                <h1>Sorry Nothing here 😭😭</h1>
+              </div>
+             
+            }
+            {data[0] && data.map(draft => (
               <Grid item key={draft._id} xs={12} sm={6} md={4}>
                 <Card className={classes.card}>
                   <CardMedia
@@ -162,7 +169,7 @@ export default function Drafts({ drafts, authorization }) {
 
 Drafts.propTypes = {
   drafts: PropTypes.array.isRequired,
-  authorization: PropTypes.string.isRequired
+  authorization: PropTypes.oneOfType([PropTypes.string, PropTypes.oneOf([null])])
 };
 
 Drafts.getInitialProps = async (ctx) => {
@@ -173,7 +180,11 @@ Drafts.getInitialProps = async (ctx) => {
     headers: { authorization, 'Accept': 'application/json', 'Content-Type': 'application/json' }
   });
 
-
-  const data = await draftRes.json();
+  let data;
+  try {
+    data = await draftRes.json();
+  } catch (_e) {
+    data = []; 
+  }
   return { drafts: data, authorization };
 };

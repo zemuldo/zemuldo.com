@@ -18,6 +18,7 @@ import PublishDialogue from '../../../../components/publish_modal';
 import fetch from 'isomorphic-unfetch';
 import { parseCookies } from 'nookies';
 import PropTypes from 'prop-types';
+import { rescue } from '../../../../helpers/utils';
 
 
 const SimpleMDE = dynamic(import('react-simplemde-editor'), { ssr: false });
@@ -137,7 +138,7 @@ class NewBlog extends React.Component {
     });
     
 
-    const data = await draftRes.json();
+    const data = await rescue(draftRes.json);
     return { draft: data, authorization };
   }
 
@@ -156,7 +157,7 @@ class NewBlog extends React.Component {
 
     this.autoSave = setInterval(() => {
       this.setState({ saving: true });
-      this.handleSave()
+      this.handleSave();
       localStorage.setItem(`currentDraft-${draft._id}`, JSON.stringify(this.state));
     }, 10000);
   }
@@ -249,7 +250,7 @@ class NewBlog extends React.Component {
           }}
         >
           <Grid container justify="center" alignItems="center">
-            <Menu />
+            <Menu authorization = {authorization} />
             <Avatar onClick={this.handleSave} className={classes.greenAvatar}>
               <SaveIcon />
             </Avatar>
