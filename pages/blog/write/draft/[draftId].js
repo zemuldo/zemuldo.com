@@ -136,8 +136,12 @@ class NewBlog extends React.Component {
       headers: { authorization, 'Accept': 'application/json', 'Content-Type': 'application/json' }
     });
     
-
-    const data = await draftRes.json();
+    let data;
+    try {
+      data = await draftRes.json();
+    } catch (_e){
+      data = null;
+    }
     return { draft: data, authorization };
   }
 
@@ -152,18 +156,16 @@ class NewBlog extends React.Component {
         tags: draft.tags,
         description: draft.description || ''
       });
+      this.autoSave = setInterval(() => {
+        this.setState({ saving: true });
+        this.handleSave();
+      }, 10000);
     }
-
-    this.autoSave = setInterval(() => {
-      this.setState({ saving: true });
-      this.handleSave()
-      localStorage.setItem(`currentDraft-${draft._id}`, JSON.stringify(this.state));
-    }, 10000);
   }
 
   handleSave = async () => {
+    if (!draft) return;
     const { draft } = this.props;
-    localStorage.setItem(`currentDraft-${draft._id}`, JSON.stringify(this.state));
     const { authorization } = this.props;
     const _res = await fetch(`${api_url}/posts/draft/${draft._id}`, {
       method: 'put',
@@ -176,11 +178,6 @@ class NewBlog extends React.Component {
         coverPhotoUrl: this.state.coverPhotoUrl,
       })
     });
-
-    localStorage.removeItem(`currentDraft-${draft._id}`);
-
-    Router.push(`/blog/write/draft/${draft._id}`);
-
   }
   handleOpenPublishDialogue = () => this.setState({ publishDialogueOpen: true })
   handleClosePublishDialogue = () => this.setState({ publishDialogueOpen: false })
@@ -194,13 +191,12 @@ class NewBlog extends React.Component {
         body: this.state.body,
         tags: this.state.tags || [],
         description: this.state.description,
-        coverPhotoUrl: this.state.coverPhotoUrl
-
+        coverPhotoUrl: this.state.coverPhotoUrl,
+        draftId: draft._id
       })
     });
     const data = await res.json();
     if (parseInt(res.status, 10) !== 200) return alert(data[0].errorMessage);
-    localStorage.removeItem(`currentDraft-${draft._id}`);
     Router.push(`/blog/post/${data.post._id}`);
     this.handleClosePublishDialogue();
   }
@@ -222,9 +218,8 @@ class NewBlog extends React.Component {
   }
 
   render() {
-    const { classes, authorization } = this.props;
+    const { classes, authorization, draft } = this.props;
     const { publishDialogueOpen } = this.state;
-    if (!authorization) return <div style={{ color: 'white' }}>Please wait...</div>;
     return (
       <React.Fragment>
         <PublishDialogue
@@ -249,7 +244,7 @@ class NewBlog extends React.Component {
           }}
         >
           <Grid container justify="center" alignItems="center">
-            <Menu />
+            <Menu authorization = {authorization} />
             <Avatar onClick={this.handleSave} className={classes.greenAvatar}>
               <SaveIcon />
             </Avatar>
@@ -257,80 +252,105 @@ class NewBlog extends React.Component {
               <PublishIcon />
             </Avatar>
           </Grid>
+        </Container>
+        <Grid container justify="center" alignItems="center">
+          <Grid container spacing={4}>
+            {
+              !draft && 
+              <div className='center-content'>
+                <h1>Sorry Nothing here 😭😭</h1>
+              </div>
+             
+            }
+          </Grid>
+        </Grid>
+        {
+          draft && <React.Fragment>
+            <Container
+              maxWidth="md"
+              style={{
+                color: 'white',
+                fontFamily: '\'Courier New\', Courier, monospace',
+                fontSize: '18px'
+              }}
+            >
 
-          <div className={classes.root}>
-            <TextField
-              id="postTitle"
-              label="Post Title"
-              fullWidth={true}
-              value={this.state.postTitle}
-              InputProps={{
-                className: classes.materialInput
-              }}
-              InputLabelProps={{
-                className: classes.floatingLabelFocusStyle,
-              }}
-              onChange={this.handleTextChange}
-            />
-          </div>
-          <br />
-          <Grid container spacing={2}>
-            <Grid item xs={12} sm={6}>
+              <div className={classes.root}>
+                <TextField
+                  id="postTitle"
+                  label="Post Title"
+                  fullWidth={true}
+                  value={this.state.postTitle}
+                  InputProps={{
+                    className: classes.materialInput
+                  }}
+                  InputLabelProps={{
+                    className: classes.floatingLabelFocusStyle,
+                  }}
+                  onChange={this.handleTextChange}
+                />
+              </div>
+              <br />
+              <Grid container spacing={2}>
+                <Grid item xs={12} sm={6}>
+                  <TextField
+                    id="coverPhotoUrl"
+                    label="Cover Photo Url"
+                    value={this.state.coverPhotoUrl}
+                    fullWidth={true}
+                    InputProps={{
+                      className: classes.materialInput
+                    }}
+                    InputLabelProps={{
+                      className: classes.floatingLabelFocusStyle,
+                    }}
+                    onChange={this.handleTextChange}
+                  />
+                </Grid>
+                <Grid item xs={12} sm={6}>
+                  <div style={{ marginTop: '26px' }}>
+                    <Tags defaultValue={this.state.tags} onChange={this.handleTagsChange} />
+                  </div>
+                </Grid>
+              </Grid>
+              <br />
               <TextField
-                id="coverPhotoUrl"
-                label="Cover Photo Url"
-                value={this.state.coverPhotoUrl}
-                fullWidth={true}
+                id="description"
+                label="Post Description"
+                multiline
+                rows="4"
+                value={this.state.description}
+                className={classes.materialTextArea}
+                margin="normal"
+                variant="outlined"
+                fullWidth
                 InputProps={{
-                  className: classes.materialInput
+                  className: classes.materialTextArea
                 }}
                 InputLabelProps={{
                   className: classes.floatingLabelFocusStyle,
                 }}
                 onChange={this.handleTextChange}
               />
-            </Grid>
-            <Grid item xs={12} sm={6}>
-              <div style={{ marginTop: '26px' }}>
-                <Tags defaultValue={this.state.tags} onChange={this.handleTagsChange} />
-              </div>
-            </Grid>
-          </Grid>
-          <br />
-          <TextField
-            id="description"
-            label="Post Description"
-            multiline
-            rows="4"
-            value={this.state.description}
-            className={classes.materialTextArea}
-            margin="normal"
-            variant="outlined"
-            fullWidth
-            InputProps={{
-              className: classes.materialTextArea
-            }}
-            InputLabelProps={{
-              className: classes.floatingLabelFocusStyle,
-            }}
-            onChange={this.handleTextChange}
-          />
-        </Container>
-        <Container
-          className="blog-md"
-          maxWidth="md"
-          style={{
-            color: 'white',
-            fontFamily:
+            </Container>
+            <Container
+              className="blog-md"
+              maxWidth="md"
+              style={{
+                color: 'white',
+                fontFamily:
               '\'monospaced courier-new\', Poppins, sans-serif !important'
-          }}
-        >
-          <h3>Post Body Markdown</h3>
-          <SimpleMDE
-            onChange={this.handleEditorChange}
-            value={this.state.body}
-          />
-        </Container>
+              }}
+            >
+              <h3>Post Body Markdown</h3>
+              <SimpleMDE
+                onChange={this.handleEditorChange}
+                value={this.state.body}
+              />
+            </Container>
+          </React.Fragment>
+       
+        }
         <Footer />
       </React.Fragment>
     );
@@ -340,7 +360,7 @@ class NewBlog extends React.Component {
 NewBlog.propTypes = {
   classes: PropTypes.object.isRequired,
   loggingIn: PropTypes.bool,
-  authorization: PropTypes.string,
+  authorization: PropTypes.oneOfType([PropTypes.string, PropTypes.oneOf([null])]),
   draft: PropTypes.object.isRequired
 };
 

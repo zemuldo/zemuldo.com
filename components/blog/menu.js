@@ -90,8 +90,7 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-function Menu() {
-
+function Menu({ authorization }) {
 
   const classes = useStyles();
 
@@ -109,17 +108,18 @@ function Menu() {
           </Avatar>
         </Link>
 
-        <Link href='/blog/drafts'>
+        {authorization && <Link href='/blog/drafts'>
           <Avatar className={classes.greenAvatar} src='/static/images/draft.png'>
           </Avatar>
-        </Link>
+        </Link>}
       </Grid>
     </div>
   );
 }
 
 Menu.propTypes = {
-  router: PropTypes.object
+  router: PropTypes.object,
+  authorization: PropTypes.oneOfType([PropTypes.string, PropTypes.oneOf([null])])
 };
 
 export default withRouter(Menu);

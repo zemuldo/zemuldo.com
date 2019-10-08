@@ -140,7 +140,7 @@ class Blog extends React.Component {
 
 
   render() {
-    const { classes, featurePost } = this.props;
+    const { classes, featurePost, authorization } = this.props;
     const { posts } = this.state;
     return (
       <React.Fragment>
@@ -156,7 +156,7 @@ class Blog extends React.Component {
         <Container style={{ color: 'white' }} maxWidth="md">
           
           <Grid container justify="center" alignItems="center">
-            <Menu />
+            <Menu authorization = {authorization}/>
             {
               this.props.authorization &&
               <Link href="/blog/write/new">

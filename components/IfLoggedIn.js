@@ -21,8 +21,6 @@ export default function (ComposedComponent) {
       if (authorization) window.location = query.redirectTo || '/blog';
     }
 
-
-
     render() {
       return <ComposedComponent {...this.props} />;
     }
