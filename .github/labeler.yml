@@ -1,0 +1,17 @@
+# Add 'repo' label to any root file changes
+repo:
+  - ./*
+  
+components:
+  - ./components/*
+pages:
+  - ./pages/*
+
+server:
+  - server.js
+
+packages:
+  - ./package*
+
+test:
+  - ./test/*
