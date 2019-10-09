@@ -103,6 +103,7 @@ Array [
     className="MuiContainer-root MuiContainer-maxWidthLg"
   >
     <img
+      alt="How to make sure that you always succeed"
       src="https://miro.medium.com/max/1200/1*vKd5tDJmDFznrOkMh1kQGg.png"
       style={
         Object {
@@ -1140,11 +1141,20 @@ Array [
                 <h1
                   className="color-6"
                 >
-                  Danstan Onyango
+                  Danstan Otieno Onyango
                 </h1>
                 <h3>
                   Software Engineer
                 </h3>
+                <h2>
+                  <a
+                    href="https://safeboda.com"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    SafeBoda ~ Elixir, P-SQL, JS
+                  </a>
+                </h2>
                 <hr />
                 <h4
                   className="font-c-cn-m"
@@ -1180,7 +1190,7 @@ Array [
                 id="me-pic-wrapper"
               >
                 <img
-                  alt=""
+                  alt="Danstan Otieno Onyango, Zemuldo"
                   id="me-pic"
                   src="/static/images/logo/black.jpg"
                 />
@@ -1263,7 +1273,7 @@ Array [
                     onClick={[Function]}
                   >
                     <img
-                      alt="Remy Sharp"
+                      alt="Zemuldo Blog"
                       src="/static/images/blog.png"
                       style={
                         Object {
@@ -1288,7 +1298,7 @@ Array [
                     target="_blank"
                   >
                     <img
-                      alt="Remy Sharp"
+                      alt="Danstan Onyango on DEV"
                       src="/static/images/dev.to.png"
                       style={
                         Object {
@@ -1560,7 +1570,7 @@ exports[`Storyshots Home Page Social Sites 1`] = `
             onClick={[Function]}
           >
             <img
-              alt="Remy Sharp"
+              alt="Zemuldo Blog"
               src="/static/images/blog.png"
               style={
                 Object {
@@ -1585,7 +1595,7 @@ exports[`Storyshots Home Page Social Sites 1`] = `
             target="_blank"
           >
             <img
-              alt="Remy Sharp"
+              alt="Danstan Onyango on DEV"
               src="/static/images/dev.to.png"
               style={
                 Object {

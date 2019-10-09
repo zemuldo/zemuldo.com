@@ -31,7 +31,7 @@ export default function Home() {
               <div className="row">
                 <div className="header-section">
                   <div className="header-frame">
-                    <h1 className="color-6">Danstan Onyango</h1>
+                    <h1 className="color-6">Danstan Otieno Onyango</h1>
                     <h3>Software Engineer</h3>
                     <h2>
                       <a href= 'https://safeboda.com' target='_blank' rel="noopener noreferrer">SafeBoda ~ Elixir, P-SQL, JS</a>
