@@ -3,15 +3,15 @@ repo:
   - ./*
   
 components:
-  - ./components/*
+  - components/*
 pages:
-  - ./pages/*
+  - pages/*
 
 server:
   - server.js
 
 packages:
-  - ./package*
+  - package*
 
 test:
-  - ./test/*
+  - test/*
