@@ -24,7 +24,7 @@ export default function HeaderElements () {
       <meta name="twitter:creator" content="@zemuldo" />
       <meta name="twitter:image" content="https://zemuldo.com/static/images/favicon/fav.png" />
       <meta name="twitter:domain" content="https://zemuldo.com" />
-      <meta name="keywords" content="zemuldo, danstan, danstan onyango, danstan otieno onyango, developer, engineer, software developer, software engineer, software developer nairobi, software engineer nairobi, linux, nodejs, software, zemuldo.com, programming, coder, nodejs, elixir " />
+      <meta name="keywords" content="zemuldo, danstan, danstan onyango, danstan otieno onyango, developer, engineer, software developer, software engineer, software developer nairobi, software engineer nairobi, linux, nodejs, software, zemuldo.com, programming, coder, nodejs, elixir, software engineer in nairobi, software developer in nairobi, top software engineers in kenya, elixir software engineer developer, nodejs engineer developer" />
            
     </React.Fragment>
   );
