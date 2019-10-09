@@ -150,8 +150,13 @@ class Blog extends React.Component {
           <meta name="twitter:site" content="@zemuldo" />
           <meta name="twitter:creator" content="@zemuldo" />
           <meta name="twitter:title" content="Danstan Onyango - Zemuldo Blog" />
-          <meta name="twitter:description" content="A blog by user @zemuldo writing on tech topics" />
+          <meta name="org:title" content="Danstan Onyango - Zemuldo Blog" />
+          <meta name="twitter:description" content="Blog by Danstan Otieno Onyango, user @zemuldo. Writting quality content in cool tech topics for your reading" />
+          <meta name="org:description" content="Blog by Danstan Otieno Onyango, user @zemuldo. Writting quality content in cool tech topics for your reading" />
+          <meta name="description" content='Blog by Danstan Otieno Onyango, user @zemuldo. Writting quality content in cool tech topics for your reading' />
           <meta name="twitter:image" content="https://zemuldo.com/static/images/logo/black.jpg" />
+          <meta name="org:image" content="https://zemuldo.com/static/images/logo/black.jpg" />
+          <meta name="org:url" content="https://zemuldo.com/blog" />
         </Head>
         <Container style={{ color: 'white' }} maxWidth="md">
           
