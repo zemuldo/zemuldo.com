@@ -31,7 +31,7 @@ export default function Home() {
                 <div className="header-section">
                   <div className="header-frame">
                     <h1 className="color-6">Danstan Onyango</h1>
-                    <h3>Software Engineer</h3>
+                    <h2>Software Engineer</h2>
                     <hr />
                     <h4 className="font-c-cn-m">
                       Currently being awesome at SafeBoda and formely at

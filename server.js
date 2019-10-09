@@ -21,19 +21,13 @@ const prepSiteStories = (data) => {
   $('head').prepend('<meta property="og:description" content="These are StorybookJS stories of the components that make up the website for user @zemuldo" />');
   $('head').prepend('<meta property="og:url" content="https://zemuldo.com/site-stories" />');
   return $;
-}
+};
 
 const dev = process.env.NODE_ENV !== 'production';
 const app = next({ dev });
 const handle = app.getRequestHandler();
 
 const router = express();
-
-router.use('/blog/static', express.static('static'));
-
-router.get('/', (req, res) => {
-  return app.render(req, res, '/', req.query);
-});
 
 router.get('/site-stories', (req, res) => {
   fs.readFile(path.join(__dirname + '/.stories/index.html'), 'utf8', async function (err, data) {
@@ -46,11 +40,15 @@ router.get('/site-stories', (req, res) => {
   });
 });
 
+router.get('/', (req, res)=>{
+  return handle(req, res);
+});
+
+router.use('/blog/static', express.static('static'));
 router.use('/site-stories/static', express.static(path.join(__dirname, 'static')));
 router.use('/site-stories/', express.static(path.join(__dirname, '.stories')));
 router.use('/', express.static(path.join(__dirname, '..next')));
 router.use('/', express.static(path.join(__dirname, '.stories')));
-
 router.use(compression());
 
 app.prepare().then(() => {
@@ -70,7 +68,7 @@ app.prepare().then(() => {
 
   server.listen(process.env.PORT, err => {
     if (err) throw err;
-    logger.debug(`> Ready on http://localhost:${process.env.PORT}`);
+    logger.info(`> Ready on http://localhost:${process.env.PORT}`);
   });
 
 });
