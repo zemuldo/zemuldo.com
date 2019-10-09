@@ -33,6 +33,7 @@ app.get('/site-stories', (req, res) => {
 
 app.use('/site-stories/static', express.static(path.join(__dirname, 'static')));
 app.use('/site-stories/', express.static(path.join(__dirname, '.stories')));
+app.use('/', express.static(path.join(__dirname, '.stories')));
 
 app.get('/*', function async(_req, res) {
   fs.readFile(path.join(__dirname + '/.stories/index.html'), 'utf8', async function (err, data) {
