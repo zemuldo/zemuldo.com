@@ -30,11 +30,11 @@ export default function Home() {
             <div className="container">
               <div className="row">
                 <div className="header-section">
-                  <div className="header-frame">
+                  <div style={{paddingLeft: '10px'}} className="header-frame">
                     <h1 className="color-6">Danstan Onyango</h1>
                     <h2>Software Engineer</h2>
                     <h3>
-                    <a className='color-6' href= 'https://safeboda.com' target='_blank' rel="noopener noreferrer">SafeBoda</a>
+                      <a className='color-6' href= 'https://safeboda.com' target='_blank' rel="noopener noreferrer">SafeBoda</a>
                     </h3>
                     <hr />
                     <h3 className="font-c-cn-m">
