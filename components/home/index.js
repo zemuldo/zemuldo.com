@@ -13,11 +13,11 @@ export default function Home() {
         <meta name="twitter:site" content="@zemuldo" />
         <meta name="twitter:creator" content="@zemuldo" />
         <meta name="twitter:title" content="Danstan Onyango - Zemuldo Website" />
-        <meta name="twitter:description" content="The personal website and blog for User @zemuldo. An enthusiastic Geek Freak of Code #Elixir #SQL #NodeJS #ReactJS" />
+        <meta name="twitter:description" content="Danstan Onyango is zemuldo. Software Engineer, Nairobi, Kenya. Passion mixed with enthusiasm and bundled together with Geekiness, served on port Awesomeness." />
         <meta name="twitter:image" content="https://zemuldo.com/static/images/site/site_twitter_card.png" />
         <meta property='og:title' content="I'm Danstan Onyango ~ Zemuldo" />
         <meta property="og:image" content="https://zemuldo.com/static/images/site/site_twitter_card.png" />
-        <meta property='og:description' content='The Website and Blog for user @zemuldo. Software Engineer with all the passion in the world!' />
+        <meta property='og:description' content='Danstan Onyango is zemuldo. Software Engineer, Nairobi, Kenya. Passion mixed with enthusiasm and bundled together with Geekiness, served on port Awesomeness.' />
         <meta property='og:url' content='https://zemuldo.com' />
       </Head>
       <div
