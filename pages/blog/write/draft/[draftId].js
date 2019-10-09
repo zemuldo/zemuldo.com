@@ -164,8 +164,8 @@ class NewBlog extends React.Component {
   }
 
   handleSave = async () => {
-    if (!draft) return;
     const { draft } = this.props;
+    if (!draft) return;
     const { authorization } = this.props;
     const _res = await fetch(`${api_url}/posts/draft/${draft._id}`, {
       method: 'put',

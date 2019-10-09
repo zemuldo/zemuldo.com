@@ -7,6 +7,9 @@ import Grid from '@material-ui/core/Grid';
 import { withStyles } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
 import Link from '../link';
+import NewIcon from '@material-ui/icons/NoteAdd';
+import AddCircleOutlineIcon from '@material-ui/icons/AddCircleOutline';
+import LinearScaleIcon from '@material-ui/icons/LinearScale';
 
 const api_url = process.env.API_URL;
 
@@ -148,11 +151,29 @@ class Menu extends React.Component{
           </Link>
           }
           
-          {authorization && <Link href='/blog/drafts'>
+          {path !=='/blog/drafts' && authorization && <Link href='/blog/drafts'>
             <Avatar className={classes.greenAvatar} src='/static/images/draft.png'>
             </Avatar>
           </Link>
           }
+
+          {
+            path !=='/blog/write/new' && !user &&
+              <Link href={'/blog/login?redirectTo=/blog/write/new'}>
+                <Avatar className={classes.greenAvatar}>
+                  <AddCircleOutlineIcon />
+                </Avatar>
+              </Link>
+          }
+          {
+            path !=='/blog/write/new' && this.props.authorization &&
+              <Link href="/blog/write/new">
+                <Avatar className={classes.greenAvatar}>
+                  <NewIcon />
+                </Avatar>
+              </Link>
+          }
+
           {children}
 
           {path.includes('/blog') && !authorization && <Link href={`/blog/login?redirectTo=${path}`}>

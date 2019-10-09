@@ -143,7 +143,7 @@ export default function Drafts({ drafts, authorization }) {
                   />
                   <CardContent className={classes.cardContent}>
                     <Typography gutterBottom variant="h5" component="h2">
-                      {draft.postTitle || 'Post Title Here'}
+                      {draft.title || 'Post Title Here'}
                     </Typography>
                     <Typography>
                       {draft.description || 'Some cool post description will go here'}

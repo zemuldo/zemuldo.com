@@ -3,7 +3,6 @@ import { withStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
-import Link from '@material-ui/core/Link';
 import Container from '@material-ui/core/Container';
 import fetch from 'isomorphic-unfetch';
 import Footer from '../components/footer';
@@ -11,9 +10,6 @@ import Blogs from '../components/blog/blogs';
 import Menu from '../components/blog/menu';
 import LinearProgress from '@material-ui/core/LinearProgress';
 import { parseCookies } from 'nookies';
-import Avatar from '@material-ui/core/Avatar';
-import NewIcon from '@material-ui/icons/NoteAdd';
-import AddCircleOutlineIcon from '@material-ui/icons/AddCircleOutline';
 import Head from 'next/head';
 import PropTypes from 'prop-types';
 import CustomLink from '../components/link';
@@ -161,24 +157,7 @@ class Blog extends React.Component {
         <Container style={{ color: 'white' }} maxWidth="md">
           
           <Grid container justify="center" alignItems="center">
-            <Menu authorization = {authorization}>
-              {
-                this.props.authorization &&
-              <Link href="/blog/write/new">
-                <Avatar className={classes.greenAvatar}>
-                  <NewIcon />
-                </Avatar>
-              </Link>
-              }
-              {
-                !this.props.user &&
-              <Link href={'/blog/login?redirectTo=/blog/write/new'}>
-                <Avatar className={classes.greenAvatar}>
-                  <AddCircleOutlineIcon />
-                </Avatar>
-              </Link>
-              }
-            </Menu>
+            <Menu authorization = {authorization}/>
            
           </Grid>
         </Container>
