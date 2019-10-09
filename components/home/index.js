@@ -54,7 +54,7 @@ export default function Home() {
                     <img
                       id="me-pic"
                       src="/static/images/logo/black.jpg"
-                      alt=""
+                      alt="Danstan Otieno Onyango, Zemuldo"
                     />
                   </div>
                 </div>
