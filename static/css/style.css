@@ -243,7 +243,7 @@ hr {
   font-size: 20px;
   position: relative;
   border: 0;
-  height: 1.5em;
+  height: .5em;
 }
 @media only screen and (max-width: 600px) {
     hr:before {
