@@ -19,6 +19,7 @@ export default function Home() {
         <meta property="og:image" content="https://zemuldo.com/static/images/site/site_twitter_card.png" />
         <meta property='og:description' content='Danstan Onyango is zemuldo. Software Engineer, Nairobi, Kenya. Passion mixed with enthusiasm and bundled together with Geekiness, served on port Awesomeness.' />
         <meta property='og:url' content='https://zemuldo.com' />
+        <meta name="description" content="Danstan Onyango is zemuldo. Software Engineer, Nairobi, Kenya. Passion mixed with enthusiasm and bundled together with Geekiness, served on port Awesomeness." />
       </Head>
       <div
         className="home-section-background"
