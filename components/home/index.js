@@ -33,7 +33,7 @@ export default function Home() {
                     <h1 className="color-6">Danstan Onyango</h1>
                     <h3>Software Engineer</h3>
                     <h2>
-                      <a href= 'https://safeboda.com' target='_blank' rel="noopener noreferrer">SafeBoda</a>
+                      <a href= 'https://safeboda.com' target='_blank' rel="noopener noreferrer">SafeBoda ~ Elixir, P-SQL, JS</a>
                     </h2>
                     <hr />
                     <h4 className="font-c-cn-m">

@@ -48,7 +48,7 @@ export default function TerminalMe () {
           <Typed
             style={{ color: 'white' }}
             strings={type_message()}
-            typeSpeed={120}
+            typeSpeed={60}
           />}
         </div>
       </div>
