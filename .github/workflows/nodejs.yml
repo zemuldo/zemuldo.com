@@ -1,4 +1,4 @@
-name: LINT JEST
+name: LINT & JEST
 
 on: [push]
 
