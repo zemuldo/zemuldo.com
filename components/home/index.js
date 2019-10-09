@@ -30,12 +30,15 @@ export default function Home() {
             <div className="container">
               <div className="row">
                 <div className="header-section">
-                  <div className="header-frame">
-                    <h1 className="color-6">Danstan Onyango <br/><span style={{fontSize: '.7em'}}>And I am @zemuldo</span></h1>
+                  <div style={{paddingLeft: '10px'}} className="header-frame">
+                    <h1 className="color-6">Danstan Onyango</h1>
                     <h2>Software Engineer</h2>
+                    <h3>
+                      <a className='color-6' href= 'https://safeboda.com' target='_blank' rel="noopener noreferrer">SafeBoda</a>
+                    </h3>
                     <hr />
                     <h3 className="font-c-cn-m">
-                      Currently being awesome at <a className='color-6' href= 'https://safeboda.com' target='_blank' rel="noopener noreferrer">SafeBoda</a> and formely at
+                      Currently being awesome at SafeBoda and formely at
                       HackerBay Inc.
                     </h3>
                     <h3 className="color-orange">Nairobi, Kenya</h3>

@@ -1137,30 +1137,36 @@ Array [
             >
               <div
                 className="header-frame"
+                style={
+                  Object {
+                    "paddingLeft": "10px",
+                  }
+                }
               >
                 <h1
                   className="color-6"
                 >
-                  Danstan Otieno Onyango
+                  Danstan Onyango
                 </h1>
-                <h3>
-                  Software Engineer
-                </h3>
                 <h2>
+                  Software Engineer
+                </h2>
+                <h3>
                   <a
+                    className="color-6"
                     href="https://safeboda.com"
                     rel="noopener noreferrer"
                     target="_blank"
                   >
-                    SafeBoda ~ Elixir, P-SQL, JS
+                    SafeBoda
                   </a>
-                </h2>
+                </h3>
                 <hr />
-                <h4
+                <h3
                   className="font-c-cn-m"
                 >
                   Currently being awesome at SafeBoda and formely at HackerBay Inc.
-                </h4>
+                </h3>
                 <h3
                   className="color-orange"
                 >
