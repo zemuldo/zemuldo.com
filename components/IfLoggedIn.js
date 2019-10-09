@@ -10,7 +10,6 @@ export default function (ComposedComponent) {
       
       const { query } = ctx;
       const { authorization } = parseCookies(ctx);
-      console.log(authorization);
       return {
         authorization,
         query,

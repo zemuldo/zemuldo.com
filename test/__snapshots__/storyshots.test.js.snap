@@ -45,19 +45,6 @@ Array [
               </svg>
             </div>
           </a>
-          <a
-            href="/blog"
-            onClick={[Function]}
-          >
-            <div
-              className="MuiAvatar-root Menu-greenAvatar-359"
-            >
-              <img
-                className="MuiAvatar-img"
-                src="/static/images/blog.png"
-              />
-            </div>
-          </a>
           <div
             className="MuiAvatar-root Blog-twitterAvatar-246 Blog-twitterAvatar-3 MuiAvatar-colorDefault"
             onClick={[Function]}
@@ -245,19 +232,6 @@ Array [
                   d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"
                 />
               </svg>
-            </div>
-          </a>
-          <a
-            href="/blog"
-            onClick={[Function]}
-          >
-            <div
-              className="MuiAvatar-root Menu-greenAvatar-547"
-            >
-              <img
-                className="MuiAvatar-img"
-                src="/static/images/blog.png"
-              />
             </div>
           </a>
           <a
@@ -745,19 +719,6 @@ Array [
                   d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"
                 />
               </svg>
-            </div>
-          </a>
-          <a
-            href="/blog"
-            onClick={[Function]}
-          >
-            <div
-              className="MuiAvatar-root Menu-greenAvatar-127"
-            >
-              <img
-                className="MuiAvatar-img"
-                src="/static/images/blog.png"
-              />
             </div>
           </a>
           <a
@@ -2183,19 +2144,6 @@ Array [
                   d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"
                 />
               </svg>
-            </div>
-          </a>
-          <a
-            href="/blog"
-            onClick={[Function]}
-          >
-            <div
-              className="MuiAvatar-root Menu-greenAvatar-858"
-            >
-              <img
-                className="MuiAvatar-img"
-                src="/static/images/blog.png"
-              />
             </div>
           </a>
           <a
