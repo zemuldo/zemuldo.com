@@ -1,4 +1,4 @@
-name: LINT & JEST
+name: Node CI
 
 on: [push]
 
