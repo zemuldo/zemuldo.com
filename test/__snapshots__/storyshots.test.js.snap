@@ -30,7 +30,7 @@ Array [
             onClick={[Function]}
           >
             <div
-              className="MuiAvatar-root makeStyles-greenAvatar-357 MuiAvatar-colorDefault"
+              className="MuiAvatar-root Menu-greenAvatar-359 MuiAvatar-colorDefault"
             >
               <svg
                 aria-hidden="true"
@@ -50,7 +50,7 @@ Array [
             onClick={[Function]}
           >
             <div
-              className="MuiAvatar-root makeStyles-greenAvatar-357"
+              className="MuiAvatar-root Menu-greenAvatar-359"
             >
               <img
                 className="MuiAvatar-img"
@@ -58,31 +58,51 @@ Array [
               />
             </div>
           </a>
+          <div
+            className="MuiAvatar-root Blog-twitterAvatar-246 Blog-twitterAvatar-3 MuiAvatar-colorDefault"
+            onClick={[Function]}
+          >
+            <i
+              className="fa fa-twitter"
+            />
+          </div>
+          <div
+            className="MuiAvatar-root Blog-fbAvatar-247 Blog-fbAvatar-4 MuiAvatar-colorDefault"
+            onClick={[Function]}
+          >
+            <i
+              className="fa fa-facebook"
+            />
+          </div>
+          <div
+            className="MuiAvatar-root Blog-linkedinAvatar-248 Blog-linkedinAvatar-5 MuiAvatar-colorDefault"
+            onClick={[Function]}
+          >
+            <i
+              className="fa fa-linkedin"
+            />
+          </div>
+          <a
+            href="/blog/login?redirectTo=/"
+            onClick={[Function]}
+          >
+            <div
+              className="MuiAvatar-root Menu-greenAvatarGreen-360 MuiAvatar-colorDefault"
+            >
+              <svg
+                aria-hidden="true"
+                className="MuiSvgIcon-root"
+                focusable="false"
+                role="presentation"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12.65 10C11.83 7.67 9.61 6 7 6c-3.31 0-6 2.69-6 6s2.69 6 6 6c2.61 0 4.83-1.67 5.65-4H17v4h4v-4h2v-4H12.65zM7 14c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"
+                />
+              </svg>
+            </div>
+          </a>
         </div>
-      </div>
-      <div
-        className="MuiAvatar-root Blog-twitterAvatar-244 Blog-twitterAvatar-3 MuiAvatar-colorDefault"
-        onClick={[Function]}
-      >
-        <i
-          className="fa fa-twitter"
-        />
-      </div>
-      <div
-        className="MuiAvatar-root Blog-fbAvatar-245 Blog-fbAvatar-4 MuiAvatar-colorDefault"
-        onClick={[Function]}
-      >
-        <i
-          className="fa fa-facebook"
-        />
-      </div>
-      <div
-        className="MuiAvatar-root Blog-linkedinAvatar-246 Blog-linkedinAvatar-5 MuiAvatar-colorDefault"
-        onClick={[Function]}
-      >
-        <i
-          className="fa fa-linkedin"
-        />
       </div>
     </div>
     <h1>
@@ -137,7 +157,7 @@ Array [
     </Dynamic>
   </div>,
   <footer
-    className="makeStyles-footer-378"
+    className="makeStyles-footer-382"
   >
     <div
       className="MuiContainer-root MuiContainer-maxWidthLg"
@@ -195,21 +215,67 @@ Array [
     }
   >
     <div
-      style={
-        Object {
-          "margin": "10px 0px 10px 0px",
-        }
-      }
+      className="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-center MuiGrid-justify-xs-center"
     >
       <div
-        className="MuiGrid-root MuiGrid-container"
+        style={
+          Object {
+            "margin": "10px 0px 10px 0px",
+          }
+        }
       >
-        <a
-          href="/"
-          onClick={[Function]}
+        <div
+          className="MuiGrid-root MuiGrid-container"
         >
+          <a
+            href="/"
+            onClick={[Function]}
+          >
+            <div
+              className="MuiAvatar-root Menu-greenAvatar-547 MuiAvatar-colorDefault"
+            >
+              <svg
+                aria-hidden="true"
+                className="MuiSvgIcon-root"
+                focusable="false"
+                role="presentation"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"
+                />
+              </svg>
+            </div>
+          </a>
+          <a
+            href="/blog"
+            onClick={[Function]}
+          >
+            <div
+              className="MuiAvatar-root Menu-greenAvatar-547"
+            >
+              <img
+                className="MuiAvatar-img"
+                src="/static/images/blog.png"
+              />
+            </div>
+          </a>
+          <a
+            href="/blog/drafts"
+            onClick={[Function]}
+          >
+            <div
+              className="MuiAvatar-root Menu-greenAvatar-547"
+            >
+              <img
+                className="MuiAvatar-img"
+                src="/static/images/draft.png"
+              />
+            </div>
+          </a>
           <div
-            className="MuiAvatar-root makeStyles-greenAvatar-440 MuiAvatar-colorDefault"
+            className="MuiAvatar-root EditBlog-greenAvatar-413 EditBlog-greenAvatar-1 MuiAvatar-colorDefault"
+            onClick={[Function]}
           >
             <svg
               aria-hidden="true"
@@ -219,77 +285,44 @@ Array [
               viewBox="0 0 24 24"
             >
               <path
-                d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"
+                d="M17 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V7l-4-4zm-5 16c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3zm3-10H5V5h10v4z"
               />
             </svg>
           </div>
-        </a>
-        <a
-          href="/blog"
-          onClick={[Function]}
-        >
           <div
-            className="MuiAvatar-root makeStyles-greenAvatar-440"
+            className="MuiAvatar-root EditBlog-greenAvatar-413 EditBlog-greenAvatar-1 MuiAvatar-colorDefault"
+            onClick={[Function]}
           >
-            <img
-              className="MuiAvatar-img"
-              src="/static/images/blog.png"
-            />
+            <svg
+              aria-hidden="true"
+              className="MuiSvgIcon-root"
+              focusable="false"
+              role="presentation"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M5 4v2h14V4H5zm0 10h4v6h6v-6h4l-7-7-7 7z"
+              />
+            </svg>
           </div>
-        </a>
+        </div>
       </div>
     </div>
     <div
-      className="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-center MuiGrid-justify-xs-center"
-    >
-      <div
-        className="MuiAvatar-root EditBlog-greenAvatar-409 EditBlog-greenAvatar-1 MuiAvatar-colorDefault"
-        onClick={[Function]}
-      >
-        <svg
-          aria-hidden="true"
-          className="MuiSvgIcon-root"
-          focusable="false"
-          role="presentation"
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M17 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V7l-4-4zm-5 16c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3zm3-10H5V5h10v4z"
-          />
-        </svg>
-      </div>
-      <div
-        className="MuiAvatar-root EditBlog-greenAvatar-409 EditBlog-greenAvatar-1 MuiAvatar-colorDefault"
-        onClick={[Function]}
-      >
-        <svg
-          aria-hidden="true"
-          className="MuiSvgIcon-root"
-          focusable="false"
-          role="presentation"
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M5 4v2h14V4H5zm0 10h4v6h6v-6h4l-7-7-7 7z"
-          />
-        </svg>
-      </div>
-    </div>
-    <div
-      className="EditBlog-root-410 EditBlog-root-2"
+      className="EditBlog-root-414 EditBlog-root-2"
     >
       <div
         className="MuiFormControl-root MuiTextField-root MuiFormControl-fullWidth"
       >
         <label
-          className="MuiFormLabel-root MuiInputLabel-root EditBlog-floatingLabelFocusStyle-411 EditBlog-floatingLabelFocusStyle-3 MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-filled"
+          className="MuiFormLabel-root MuiInputLabel-root EditBlog-floatingLabelFocusStyle-415 EditBlog-floatingLabelFocusStyle-3 MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-filled"
           data-shrink={true}
           htmlFor="postTitle"
         >
           Post Title
         </label>
         <div
-          className="MuiInputBase-root MuiInput-root MuiInput-underline EditBlog-materialInput-412 EditBlog-materialInput-4 MuiInputBase-fullWidth MuiInput-fullWidth MuiInputBase-formControl MuiInput-formControl"
+          className="MuiInputBase-root MuiInput-root MuiInput-underline EditBlog-materialInput-416 EditBlog-materialInput-4 MuiInputBase-fullWidth MuiInput-fullWidth MuiInputBase-formControl MuiInput-formControl"
           onClick={[Function]}
         >
           <input
@@ -318,14 +351,14 @@ Array [
           className="MuiFormControl-root MuiTextField-root MuiFormControl-fullWidth"
         >
           <label
-            className="MuiFormLabel-root MuiInputLabel-root EditBlog-floatingLabelFocusStyle-411 EditBlog-floatingLabelFocusStyle-3 MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-filled"
+            className="MuiFormLabel-root MuiInputLabel-root EditBlog-floatingLabelFocusStyle-415 EditBlog-floatingLabelFocusStyle-3 MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-filled"
             data-shrink={true}
             htmlFor="coverPhotoUrl"
           >
             Cover Photo Url
           </label>
           <div
-            className="MuiInputBase-root MuiInput-root MuiInput-underline EditBlog-materialInput-412 EditBlog-materialInput-4 MuiInputBase-fullWidth MuiInput-fullWidth MuiInputBase-formControl MuiInput-formControl"
+            className="MuiInputBase-root MuiInput-root MuiInput-underline EditBlog-materialInput-416 EditBlog-materialInput-4 MuiInputBase-fullWidth MuiInput-fullWidth MuiInputBase-formControl MuiInput-formControl"
             onClick={[Function]}
           >
             <input
@@ -543,17 +576,17 @@ Array [
     </div>
     <br />
     <div
-      className="MuiFormControl-root MuiTextField-root EditBlog-materialTextArea-413 EditBlog-materialTextArea-5 MuiFormControl-marginNormal MuiFormControl-fullWidth"
+      className="MuiFormControl-root MuiTextField-root EditBlog-materialTextArea-417 EditBlog-materialTextArea-5 MuiFormControl-marginNormal MuiFormControl-fullWidth"
     >
       <label
-        className="MuiFormLabel-root MuiInputLabel-root EditBlog-floatingLabelFocusStyle-411 EditBlog-floatingLabelFocusStyle-3 MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+        className="MuiFormLabel-root MuiInputLabel-root EditBlog-floatingLabelFocusStyle-415 EditBlog-floatingLabelFocusStyle-3 MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
         data-shrink={true}
         htmlFor="description"
       >
         Post Description
       </label>
       <div
-        className="MuiInputBase-root MuiOutlinedInput-root EditBlog-materialTextArea-413 EditBlog-materialTextArea-5 MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-multiline MuiOutlinedInput-multiline"
+        className="MuiInputBase-root MuiOutlinedInput-root EditBlog-materialTextArea-417 EditBlog-materialTextArea-5 MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-multiline MuiOutlinedInput-multiline"
         onClick={[Function]}
       >
         <textarea
@@ -570,7 +603,7 @@ Array [
         />
         <fieldset
           aria-hidden={true}
-          className="PrivateNotchedOutline-root-633 MuiOutlinedInput-notchedOutline"
+          className="PrivateNotchedOutline-root-639 MuiOutlinedInput-notchedOutline"
           style={
             Object {
               "paddingLeft": 8,
@@ -578,7 +611,7 @@ Array [
           }
         >
           <legend
-            className="PrivateNotchedOutline-legend-634"
+            className="PrivateNotchedOutline-legend-640"
             style={
               Object {
                 "width": 0,
@@ -627,7 +660,7 @@ And – more importantly – never compromise your potential to grow due to self
     />
   </div>,
   <footer
-    className="makeStyles-footer-635"
+    className="makeStyles-footer-641"
   >
     <div
       className="MuiContainer-root MuiContainer-maxWidthLg"
@@ -699,7 +732,7 @@ Array [
             onClick={[Function]}
           >
             <div
-              className="MuiAvatar-root makeStyles-greenAvatar-127 MuiAvatar-colorDefault"
+              className="MuiAvatar-root Menu-greenAvatar-127 MuiAvatar-colorDefault"
             >
               <svg
                 aria-hidden="true"
@@ -719,7 +752,7 @@ Array [
             onClick={[Function]}
           >
             <div
-              className="MuiAvatar-root makeStyles-greenAvatar-127"
+              className="MuiAvatar-root Menu-greenAvatar-127"
             >
               <img
                 className="MuiAvatar-img"
@@ -727,30 +760,50 @@ Array [
               />
             </div>
           </a>
+          <a
+            className="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
+            href="/blog/login?redirectTo=/blog/write/new"
+            onBlur={[Function]}
+            onFocus={[Function]}
+          >
+            <div
+              className="MuiAvatar-root Blog-greenAvatar-1 Blog-greenAvatar-1 MuiAvatar-colorDefault"
+            >
+              <svg
+                aria-hidden="true"
+                className="MuiSvgIcon-root"
+                focusable="false"
+                role="presentation"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M13 7h-2v4H7v2h4v4h2v-4h4v-2h-4V7zm-1-5C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"
+                />
+              </svg>
+            </div>
+          </a>
+          <a
+            href="/blog/login?redirectTo=/"
+            onClick={[Function]}
+          >
+            <div
+              className="MuiAvatar-root Menu-greenAvatarGreen-128 MuiAvatar-colorDefault"
+            >
+              <svg
+                aria-hidden="true"
+                className="MuiSvgIcon-root"
+                focusable="false"
+                role="presentation"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12.65 10C11.83 7.67 9.61 6 7 6c-3.31 0-6 2.69-6 6s2.69 6 6 6c2.61 0 4.83-1.67 5.65-4H17v4h4v-4h2v-4H12.65zM7 14c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"
+                />
+              </svg>
+            </div>
+          </a>
         </div>
       </div>
-      <a
-        className="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
-        href="/blog/login?redirectTo=/blog/write/new"
-        onBlur={[Function]}
-        onFocus={[Function]}
-      >
-        <div
-          className="MuiAvatar-root Blog-greenAvatar-1 Blog-greenAvatar-1 MuiAvatar-colorDefault"
-        >
-          <svg
-            aria-hidden="true"
-            className="MuiSvgIcon-root"
-            focusable="false"
-            role="presentation"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M13 7h-2v4H7v2h4v4h2v-4h4v-2h-4V7zm-1-5C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"
-            />
-          </svg>
-        </div>
-      </a>
     </div>
   </div>,
   <div
@@ -852,10 +905,10 @@ Array [
             tabIndex={0}
           >
             <div
-              className="MuiPaper-root MuiPaper-elevation1 MuiCard-root makeStyles-card-211 MuiPaper-rounded"
+              className="MuiPaper-root MuiPaper-elevation1 MuiCard-root makeStyles-card-213 MuiPaper-rounded"
             >
               <div
-                className="makeStyles-cardDetails-212"
+                className="makeStyles-cardDetails-214"
               >
                 <div
                   className="MuiCardContent-root"
@@ -914,10 +967,10 @@ Array [
             tabIndex={0}
           >
             <div
-              className="MuiPaper-root MuiPaper-elevation1 MuiCard-root makeStyles-card-211 MuiPaper-rounded"
+              className="MuiPaper-root MuiPaper-elevation1 MuiCard-root makeStyles-card-213 MuiPaper-rounded"
             >
               <div
-                className="makeStyles-cardDetails-212"
+                className="makeStyles-cardDetails-214"
               >
                 <div
                   className="MuiCardContent-root"
@@ -976,10 +1029,10 @@ Array [
             tabIndex={0}
           >
             <div
-              className="MuiPaper-root MuiPaper-elevation1 MuiCard-root makeStyles-card-211 MuiPaper-rounded"
+              className="MuiPaper-root MuiPaper-elevation1 MuiCard-root makeStyles-card-213 MuiPaper-rounded"
             >
               <div
-                className="makeStyles-cardDetails-212"
+                className="makeStyles-cardDetails-214"
               >
                 <div
                   className="MuiCardContent-root"
@@ -1013,7 +1066,7 @@ Array [
     <br />
   </div>,
   <footer
-    className="makeStyles-footer-222"
+    className="makeStyles-footer-224"
   >
     <div
       className="MuiContainer-root MuiContainer-maxWidthLg"
@@ -1071,7 +1124,7 @@ exports[`Storyshots Blog New 1`] = `
 
 exports[`Storyshots Home Page Footer 1`] = `
 <footer
-  className="makeStyles-footer-704"
+  className="makeStyles-footer-710"
 >
   <div
     className="MuiContainer-root MuiContainer-maxWidthLg"
@@ -1504,7 +1557,7 @@ Array [
     </div>
   </div>,
   <footer
-    className="makeStyles-footer-666"
+    className="makeStyles-footer-672"
   >
     <div
       className="MuiContainer-root MuiContainer-maxWidthLg"
@@ -2117,7 +2170,7 @@ Array [
             onClick={[Function]}
           >
             <div
-              className="MuiAvatar-root makeStyles-greenAvatar-852 MuiAvatar-colorDefault"
+              className="MuiAvatar-root Menu-greenAvatar-858 MuiAvatar-colorDefault"
             >
               <svg
                 aria-hidden="true"
@@ -2137,12 +2190,32 @@ Array [
             onClick={[Function]}
           >
             <div
-              className="MuiAvatar-root makeStyles-greenAvatar-852"
+              className="MuiAvatar-root Menu-greenAvatar-858"
             >
               <img
                 className="MuiAvatar-img"
                 src="/static/images/blog.png"
               />
+            </div>
+          </a>
+          <a
+            href="/blog/login?redirectTo=/"
+            onClick={[Function]}
+          >
+            <div
+              className="MuiAvatar-root Menu-greenAvatarGreen-859 MuiAvatar-colorDefault"
+            >
+              <svg
+                aria-hidden="true"
+                className="MuiSvgIcon-root"
+                focusable="false"
+                role="presentation"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12.65 10C11.83 7.67 9.61 6 7 6c-3.31 0-6 2.69-6 6s2.69 6 6 6c2.61 0 4.83-1.67 5.65-4H17v4h4v-4h2v-4H12.65zM7 14c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"
+                />
+              </svg>
             </div>
           </a>
         </div>
@@ -3782,7 +3855,7 @@ Array [
     </div>
   </div>,
   <footer
-    className="makeStyles-footer-873"
+    className="makeStyles-footer-881"
   >
     <div
       className="MuiContainer-root MuiContainer-maxWidthLg"
@@ -3828,13 +3901,28 @@ Array [
 
 exports[`Storyshots Login Loging in 1`] = `
 <div
+  className="MuiContainer-root MuiContainer-maxWidthMd"
   style={
     Object {
       "color": "white",
     }
   }
 >
-  Please wait...
+  <div
+    className="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-center MuiGrid-justify-xs-center"
+  >
+    <div
+      className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4"
+    >
+      <div
+        className="center-content"
+      >
+        <h1>
+          Please wait
+        </h1>
+      </div>
+    </div>
+  </div>
 </div>
 `;
 

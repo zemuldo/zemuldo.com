@@ -7,8 +7,10 @@ export default function (ComposedComponent) {
   class IfLoggedIn extends React.Component {
 
     static getInitialProps(ctx) {
+      
       const { query } = ctx;
       const { authorization } = parseCookies(ctx);
+      console.log(authorization);
       return {
         authorization,
         query,

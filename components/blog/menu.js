@@ -1,13 +1,24 @@
 import React from 'react';
 import { withRouter } from 'next/router';
 import HomeIcon from '@material-ui/icons/Home';
+import VpnKeyIcon from '@material-ui/icons/VpnKey';
 import Avatar from '@material-ui/core/Avatar';
 import Grid from '@material-ui/core/Grid';
-import { makeStyles } from '@material-ui/core/styles';
+import { withStyles } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
 import Link from '../link';
 
-const useStyles = makeStyles(theme => ({
+const api_url = process.env.API_URL;
+
+const currentPath = () => {
+  if (typeof window === 'object') {
+    return window.location.pathname;
+  } else {
+    return '/blog';
+  }
+};
+
+const styles = theme => ({
   greenAvatar: {
     margin: 10,
     color: '#fff',
@@ -15,6 +26,17 @@ const useStyles = makeStyles(theme => ({
     '&:hover': {
       cursor: 'pointer'
     }
+  },
+  greenAvatarGreen: {
+    margin: 10,
+    color: '#fff',
+    backgroundColor: 'green',
+    '&:hover': {
+      cursor: 'pointer'
+    }
+  },
+  avatar: {
+    margin: 10,
   },
   root: {
     '& label.Mui-focused': {
@@ -88,38 +110,68 @@ const useStyles = makeStyles(theme => ({
   menu: {
     width: 200,
   },
-}));
+});
 
-function Menu({ authorization }) {
+class Menu extends React.Component{
 
-  const classes = useStyles();
+  constructor(props){
+    super(props);
+    this.state = {};
+  }
 
-  return (
-    <div style={{ margin: '10px 0px 10px 0px', }}>
-      <Grid container >
-        <Link href='/'>
-          <Avatar className={classes.greenAvatar}>
-            <HomeIcon />
-          </Avatar>
-        </Link>
+  async componentDidMount(){
+    const {authorization} = this.props;
+    if (authorization) {
+      const res = await fetch(`${api_url}/user`, { headers: { authorization } });
+      const user = await res.json();
+      this.setState({user});
+    }
+  }
+  render () {
+    const { authorization, classes, children } = this.props;
+    const {user} = this.state; 
+
+    return (
+      <div style={{ margin: '10px 0px 10px 0px', }}>
+        <Grid container >
+          <Link href='/'>
+            <Avatar className={classes.greenAvatar}>
+              <HomeIcon />
+            </Avatar>
+          </Link>
         
-        <Link href='/blog'>
-          <Avatar className={classes.greenAvatar} src='/static/images/blog.png'>
-          </Avatar>
-        </Link>
+          <Link href='/blog'>
+            <Avatar className={classes.greenAvatar} src='/static/images/blog.png'>
+            </Avatar>
+          </Link>
 
-        {authorization && <Link href='/blog/drafts'>
-          <Avatar className={classes.greenAvatar} src='/static/images/draft.png'>
-          </Avatar>
-        </Link>}
-      </Grid>
-    </div>
-  );
+          {authorization && <Link href='/blog/drafts'>
+            <Avatar className={classes.greenAvatar} src='/static/images/draft.png'>
+            </Avatar>
+          </Link>
+          }
+          {children}
+
+          {!authorization && <Link href={`/blog/login?redirectTo=${currentPath()}`}>
+            <Avatar className={classes.greenAvatarGreen}>
+              <VpnKeyIcon/>
+            </Avatar>
+          </Link>
+          }
+
+          {user && <Avatar alt="User profile" className={classes.avatar} src={user.profilePhotoUrl} />}
+        </Grid>
+      </div>
+    );
+  }
 }
 
 Menu.propTypes = {
   router: PropTypes.object,
+  classes: PropTypes.object,
+  children: PropTypes.array,
+  user: PropTypes.object,
   authorization: PropTypes.oneOfType([PropTypes.string, PropTypes.oneOf([null])])
 };
 
-export default withRouter(Menu);
+export default withRouter(withStyles(styles)(Menu));

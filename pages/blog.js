@@ -161,25 +161,25 @@ class Blog extends React.Component {
         <Container style={{ color: 'white' }} maxWidth="md">
           
           <Grid container justify="center" alignItems="center">
-            <Menu authorization = {authorization}/>
-            {
-              this.props.authorization &&
+            <Menu authorization = {authorization}>
+              {
+                this.props.authorization &&
               <Link href="/blog/write/new">
                 <Avatar className={classes.greenAvatar}>
                   <NewIcon />
                 </Avatar>
               </Link>
-            }
-
-            {this.props.user && <Avatar alt="User profile" className={classes.avatar} src={this.props.user.profilePhotoUrl} />}
-            {
-              !this.props.user &&
+              }
+              {
+                !this.props.user &&
               <Link href={'/blog/login?redirectTo=/blog/write/new'}>
                 <Avatar className={classes.greenAvatar}>
                   <AddCircleOutlineIcon />
                 </Avatar>
               </Link>
-            }
+              }
+            </Menu>
+           
           </Grid>
         </Container>
         <Container style={{ color: 'white' }} maxWidth="md">

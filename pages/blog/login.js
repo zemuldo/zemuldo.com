@@ -5,15 +5,20 @@ import { Link } from '@material-ui/core';
 import { withRouter } from 'next/router';
 import PropTypes from 'prop-types';
 import IfLoggedIn from '../../components/IfLoggedIn';
+import PleaseWait from '../../components/please_wait';
 
 const api_url = process.env.API_URL;
 const base_url = process.env.BASE_URL;
 
 class Login extends React.Component {
 
+  componentDidMount(){
+    if (this.props.query.token) window.location.reload();
+  }
+
   render() {
     const { query, loggingIn } = this.props;
-    if (loggingIn) return <div style={{ color: 'white' }}>Please wait...</div>;
+    if (loggingIn || query.token) return <PleaseWait/>;
     return (
       <React.Fragment>
 

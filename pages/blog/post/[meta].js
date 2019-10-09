@@ -155,24 +155,26 @@ class Blog extends React.Component {
           }}
         >
           <Grid container justify="center" alignItems="center">
-            <Menu authorization={authorization} />
-            {
-              this.props.authorization &&
+            <Menu authorization={authorization}>
+              {
+                this.props.authorization &&
               <Link href={`/blog/post/${post._id}/edit`}>
                 <Avatar className={classes.greenAvatar}>
                   <EditIcon />
                 </Avatar>
               </Link>
-            }
-            <Avatar onClick={this.tweetShare} className={classes.twitterAvatar}>
-              <i className="fa fa-twitter" />
-            </Avatar>
-            <Avatar onClick={this.fbShare} className={classes.fbAvatar}>
-              <i className="fa fa-facebook" />
-            </Avatar>
-            <Avatar onClick={this.linkedInShare} className={classes.linkedinAvatar}>
-              <i className="fa fa-linkedin" />
-            </Avatar>
+              }
+              <Avatar onClick={this.tweetShare} className={classes.twitterAvatar}>
+                <i className="fa fa-twitter" />
+              </Avatar>
+              <Avatar onClick={this.fbShare} className={classes.fbAvatar}>
+                <i className="fa fa-facebook" />
+              </Avatar>
+              <Avatar onClick={this.linkedInShare} className={classes.linkedinAvatar}>
+                <i className="fa fa-linkedin" />
+              </Avatar>
+            </Menu>
+            
           </Grid>
           <h1>{post.title}</h1>
           <br />

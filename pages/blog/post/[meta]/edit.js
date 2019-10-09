@@ -271,14 +271,16 @@ class EditBlog extends React.Component {
             fontSize: '18px'
           }}
         >
-          <Menu />
           <Grid container justify="center" alignItems="center">
-            <Avatar onClick={this.handleSave} className={classes.greenAvatar}>
-              <SaveIcon />
-            </Avatar>
-            <Avatar onClick={this.handleOpenPublishDialogue} className={classes.greenAvatar}>
-              <PublishIcon />
-            </Avatar>
+            <Menu authorization={this.props.authorization}>
+              <Avatar onClick={this.handleSave} className={classes.greenAvatar}>
+                <SaveIcon />
+              </Avatar>
+              <Avatar onClick={this.handleOpenPublishDialogue} className={classes.greenAvatar}>
+                <PublishIcon />
+              </Avatar>
+            </Menu>
+           
           </Grid>
 
           <div className={classes.root}>
