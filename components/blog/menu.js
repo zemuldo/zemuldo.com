@@ -147,7 +147,6 @@ class Menu extends React.Component{
           </Link>
           }
           
-
           {authorization && <Link href='/blog/drafts'>
             <Avatar className={classes.greenAvatar} src='/static/images/draft.png'>
             </Avatar>
