@@ -7,15 +7,19 @@ import Grid from '@material-ui/core/Grid';
 import journeys from '../components/journey/journeys.json';
 import '../components/journey/journey.css';
 import Footer from '../components/footer';
+import { parseCookies } from 'nookies';
+import PropTypes from 'prop-types';
 
-export default function DeveloperStory() {
+const api_url = process.env.API_URL;
+
+export default function DeveloperStory({authorization}) {
   return (
     <React.Fragment>
       <Head>
       </Head>
       <Container maxWidth="md">
         <Grid container justify="center" alignItems="center">
-          <Menu/>
+          <Menu authorization={authorization}/>
         </Grid>
       </Container>
       <Container maxWidth="md">
@@ -41,3 +45,13 @@ export default function DeveloperStory() {
     </React.Fragment>
   );
 }
+
+DeveloperStory.propTypes = {
+  authorization: PropTypes.string
+};
+
+DeveloperStory.getInitialProps = async (ctx) => {
+  const { authorization } = parseCookies(ctx);
+
+  return { authorization };
+};

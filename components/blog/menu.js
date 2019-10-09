@@ -130,6 +130,7 @@ class Menu extends React.Component{
   render () {
     const { authorization, classes, children, router } = this.props;
     const {user} = this.state; 
+    const path = currentPath();
 
     return (
       <div style={{ margin: '10px 0px 10px 0px', }}>
@@ -154,7 +155,7 @@ class Menu extends React.Component{
           }
           {children}
 
-          {!authorization && <Link href={`/blog/login?redirectTo=${currentPath()}`}>
+          {path.includes('/blog') && !authorization && <Link href={`/blog/login?redirectTo=${path}`}>
             <Avatar className={classes.greenAvatarGreen}>
               <VpnKeyIcon/>
             </Avatar>
