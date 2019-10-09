@@ -128,7 +128,7 @@ class Menu extends React.Component{
     }
   }
   render () {
-    const { authorization, classes, children } = this.props;
+    const { authorization, classes, children, router } = this.props;
     const {user} = this.state; 
 
     return (
@@ -139,11 +139,14 @@ class Menu extends React.Component{
               <HomeIcon />
             </Avatar>
           </Link>
-        
+        {
+          router.pathname !== '/blog' &&
           <Link href='/blog'>
             <Avatar className={classes.greenAvatar} src='/static/images/blog.png'>
             </Avatar>
           </Link>
+        }
+          
 
           {authorization && <Link href='/blog/drafts'>
             <Avatar className={classes.greenAvatar} src='/static/images/draft.png'>
