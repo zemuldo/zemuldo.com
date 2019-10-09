@@ -9,7 +9,6 @@ import PropTypes from 'prop-types';
 import Link from '../link';
 import NewIcon from '@material-ui/icons/NoteAdd';
 import AddCircleOutlineIcon from '@material-ui/icons/AddCircleOutline';
-import LinearScaleIcon from '@material-ui/icons/LinearScale';
 
 const api_url = process.env.API_URL;
 
