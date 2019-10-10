@@ -18,6 +18,7 @@ import PublishDialogue from '../../../../components/publish_modal';
 import fetch from 'isomorphic-unfetch';
 import { parseCookies } from 'nookies';
 import PropTypes from 'prop-types';
+import Notification from '../../../../components/notification';
 
 
 const SimpleMDE = dynamic(import('react-simplemde-editor'), { ssr: false });
@@ -164,6 +165,7 @@ class NewBlog extends React.Component {
   }
 
   handleSave = async () => {
+    window.notification('Updating..');
     const { draft } = this.props;
     if (!draft) return;
     const { authorization } = this.props;
@@ -178,6 +180,8 @@ class NewBlog extends React.Component {
         coverPhotoUrl: this.state.coverPhotoUrl,
       })
     });
+
+    if (_res.status === 200) window.notification('Updated');
   }
   handleOpenPublishDialogue = () => this.setState({ publishDialogueOpen: true })
   handleClosePublishDialogue = () => this.setState({ publishDialogueOpen: false })
@@ -244,13 +248,14 @@ class NewBlog extends React.Component {
           }}
         >
           <Grid container justify="center" alignItems="center">
-            <Menu authorization = {authorization} />
-            <Avatar onClick={this.handleSave} className={classes.greenAvatar}>
-              <SaveIcon />
-            </Avatar>
-            <Avatar onClick={this.handleOpenPublishDialogue} className={classes.greenAvatar}>
-              <PublishIcon />
-            </Avatar>
+            <Menu authorization = {authorization}>
+              <Avatar onClick={this.handleSave} className={classes.greenAvatar}>
+                <SaveIcon />
+              </Avatar>
+              <Avatar onClick={this.handleOpenPublishDialogue} className={classes.greenAvatar}>
+                <PublishIcon />
+              </Avatar>
+            </Menu>
           </Grid>
         </Container>
         <Grid container justify="center" alignItems="center">
@@ -352,6 +357,7 @@ class NewBlog extends React.Component {
        
         }
         <Footer />
+        <Notification/>
       </React.Fragment>
     );
   }
