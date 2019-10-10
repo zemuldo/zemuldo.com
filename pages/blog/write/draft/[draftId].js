@@ -181,7 +181,7 @@ class NewBlog extends React.Component {
       })
     });
 
-    if(_res.status === 200) window.notification('Updated');
+    if (_res.status === 200) window.notification('Updated');
   }
   handleOpenPublishDialogue = () => this.setState({ publishDialogueOpen: true })
   handleClosePublishDialogue = () => this.setState({ publishDialogueOpen: false })
