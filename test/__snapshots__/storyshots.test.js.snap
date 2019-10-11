@@ -1315,6 +1315,7 @@ Array [
                       src="/static/images/blog.png"
                       style={
                         Object {
+                          "borderRadius": "50%",
                           "height": "55%",
                           "marginBottom": "-12%",
                           "width": "55%",
@@ -1612,6 +1613,7 @@ exports[`Storyshots Home Page Social Sites 1`] = `
               src="/static/images/blog.png"
               style={
                 Object {
+                  "borderRadius": "50%",
                   "height": "55%",
                   "marginBottom": "-12%",
                   "width": "55%",
