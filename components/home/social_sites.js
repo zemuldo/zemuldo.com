@@ -86,7 +86,7 @@ export default function SocialSites () {
           <MouseOverPopover color='orange' hoverText="Blog">
             <li>
               <CustomLink href="/blog">
-                <img style={{ marginBottom: '-12%', width: '55%', height: '55%' }} alt="Zemuldo Blog" src="/static/images/blog.png" />
+                <img style={{ marginBottom: '-12%', width: '55%', height: '55%', borderRadius: '50%' }} alt="Zemuldo Blog" src="/static/images/blog.png" />
               </CustomLink>
             </li>
           </MouseOverPopover>
