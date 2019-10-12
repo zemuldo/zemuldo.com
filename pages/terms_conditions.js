@@ -9,7 +9,7 @@ export default function TermsConditions() {
         <title>Zemuldo - Terms and Conditions</title>
       </Head>
       <div style={{color: 'white'}}>
-        <h1>Terms of Website zemuldo.com</h1>
+        <h1>Terms of this Website</h1>
 
         <p>
           This website is copyrighted to Danstan Otieno Onyango and built for representing and providing information
