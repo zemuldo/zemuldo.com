@@ -7,6 +7,8 @@ import theme from '../components/theme';
 import NProgress from 'nprogress';
 import Router from 'next/router';
 import '../components/app/app.css';
+import { parseCookies } from 'nookies';
+import AcceptTerms from '../components/terms';
 
 Router.onRouteChangeStart = () => {
   NProgress.start();
@@ -21,6 +23,18 @@ Router.onRouteChangeError = () => {
 };
 
 class MyApp extends App {
+
+  static async getInitialProps({ Component, ctx }) {
+
+    const {accepted_terms} = parseCookies(ctx);
+
+    let pageProps = {};
+    if (Component.getInitialProps) {
+      pageProps = await Component.getInitialProps(ctx);
+    }
+    return { pageProps,  accepted_terms};
+  }
+
   componentDidMount() {
     // Remove the server-side injected CSS.
     const jssStyles = document.querySelector('#jss-server-side');
@@ -42,6 +56,7 @@ class MyApp extends App {
           {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
           <CssBaseline />
           <Component {...pageProps} />
+          <AcceptTerms accepted_terms= {this.props.accepted_terms} />
         </ThemeProvider>
       </Container>
     );
