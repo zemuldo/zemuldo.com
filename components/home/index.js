@@ -30,18 +30,15 @@ export default function Home() {
             <div className="container">
               <div className="row">
                 <div className="header-section">
-                  <div style={{paddingLeft: '10px'}} className="header-frame">
+                  <div style={{ paddingLeft: '5px' }} className="header-frame">
                     <h1 className="color-6">Danstan Onyango</h1>
-                    <h2>Software Engineer</h2>
-                    <h3>
-                      <a className='color-6' href= 'https://safeboda.com' target='_blank' rel="noopener noreferrer">SafeBoda</a>
-                    </h3>
+                    <h2 style={{ fontSize: '26px' }}>Software Engineer</h2>
                     <hr />
                     <h3 className="font-c-cn-m">
                       Currently being awesome at SafeBoda and formely at
                       HackerBay Inc.
                     </h3>
-                    <h3 className="color-orange">Nairobi, Kenya</h3>
+                    <h4 className="color-orange">Nairobi, Kenya</h4>
                     <h4 style={{ marginTop: '30px', fontSize: '1.8em' }} className="color-6 font-c-cn-m">
                       <CustomLink href='/journey'>
                         <b>See my journey 🚀🚀</b>
@@ -68,6 +65,7 @@ export default function Home() {
           </div>
         </div>
       </div>
+      
     </React.Fragment>
   );
 }
