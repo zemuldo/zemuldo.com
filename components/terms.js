@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import Container from '@material-ui/core/Container';
-import { Button } from '@material-ui/core';
 import { setCookie } from 'nookies';
 
 export default function AcceptTerms({accepted_terms}) {
@@ -37,7 +36,7 @@ export default function AcceptTerms({accepted_terms}) {
               By using this site, you acknowledge that you have read and understand the
             <a className='color-black' target="_blank" rel="noopener noreferrer" href='/cookie_policy'> Cookie Policy</a>,
             <a target="_blank" rel="noopener noreferrer" href='/privacy_policy'> Privacy Policy</a>, and the
-            <a target="_blank" rel="noopener noreferrer" href='/terms_of_service'> Terms. </a>
+            <a target="_blank" rel="noopener noreferrer" href='/terms_conditions'> Terms. </a>
           </span>
           <a href={null} style={{color: 'white'}} onClick={agreedToTerms} > Close </a>
         </Container>

@@ -7,7 +7,7 @@ import theme from '../components/theme';
 import NProgress from 'nprogress';
 import Router from 'next/router';
 import '../components/app/app.css';
-import { setCookie, parseCookies } from 'nookies';
+import { parseCookies } from 'nookies';
 import AcceptTerms from '../components/terms';
 
 Router.onRouteChangeStart = () => {
