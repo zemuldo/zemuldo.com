@@ -124,7 +124,8 @@ class NewBlog extends React.Component {
       postTitle: '',
       coverPhotoUrl: '',
       description: '',
-      publishDialogueOpen: false
+      publishDialogueOpen: false,
+      _update: {}
     };
   }
 
@@ -164,10 +165,22 @@ class NewBlog extends React.Component {
     }
   }
 
+  sync = (draft) =>{
+    this.setState({
+      coverPhotoUrl: draft.coverPhotoUrl || '',
+      postTitle: draft.title || '',
+      body: draft.body || '',
+      tags: draft.tags,
+      description: draft.description || ''
+    });
+  }
+
   handleSave = async () => {
     window.notification('Updating..');
     const { draft } = this.props;
+    
     if (!draft) return;
+    const last_update = this.state._update.updatedAt || draft.updatedAt;
     const { authorization } = this.props;
     const _res = await fetch(`${api_url}/posts/draft/${draft._id}`, {
       method: 'put',
@@ -178,10 +191,17 @@ class NewBlog extends React.Component {
         tags: this.state.tags || [],
         description: this.state.description,
         coverPhotoUrl: this.state.coverPhotoUrl,
+        last_update
       })
     });
 
-    if (_res.status === 200) window.notification('Updated');
+    if (_res.status === 200){
+      const data = await _res.json();
+      if (data.rejected) this.sync(data);
+      this.setState({ _update: data });
+      return window.notification('Updated');
+    } 
+    window.notification('Failed..', {error: true});
   }
   handleOpenPublishDialogue = () => this.setState({ publishDialogueOpen: true })
   handleClosePublishDialogue = () => this.setState({ publishDialogueOpen: false })
