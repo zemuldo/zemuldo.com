@@ -38,7 +38,7 @@ export default function Home() {
                       Currently being awesome at SafeBoda and formely at
                       HackerBay Inc.
                     </h3>
-                    <h4 className="color-orange">Nairobi, Kenya</h4>
+                    <h4 style={{ fontSize: '26px' }} className="color-orange">Nairobi, Kenya</h4>
                     <h4 style={{ marginTop: '30px', fontSize: '1.8em' }} className="color-6 font-c-cn-m">
                       <CustomLink href='/journey'>
                         <b>See my journey 🚀🚀</b>
