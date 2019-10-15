@@ -1171,7 +1171,7 @@ Array [
                 className="header-frame"
                 style={
                   Object {
-                    "paddingLeft": "10px",
+                    "paddingLeft": "5px",
                   }
                 }
               >
@@ -1180,30 +1180,31 @@ Array [
                 >
                   Danstan Onyango
                 </h1>
-                <h2>
+                <h2
+                  style={
+                    Object {
+                      "fontSize": "26px",
+                    }
+                  }
+                >
                   Software Engineer
                 </h2>
-                <h3>
-                  <a
-                    className="color-6"
-                    href="https://safeboda.com"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    SafeBoda
-                  </a>
-                </h3>
                 <hr />
                 <h3
                   className="font-c-cn-m"
                 >
                   Currently being awesome at SafeBoda and formely at HackerBay Inc.
                 </h3>
-                <h3
+                <h4
                   className="color-orange"
+                  style={
+                    Object {
+                      "fontSize": "26px",
+                    }
+                  }
                 >
                   Nairobi, Kenya
-                </h3>
+                </h4>
                 <h4
                   className="color-6 font-c-cn-m"
                   style={
