@@ -16,6 +16,7 @@ export default function DeveloperStory({authorization}) {
   return (
     <React.Fragment>
       <Head>
+        <title>Zemuldo - My Journey</title>
       </Head>
       <Container maxWidth="md">
         <Grid container justify="center" alignItems="center">

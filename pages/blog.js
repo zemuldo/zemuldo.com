@@ -105,9 +105,9 @@ class Blog extends React.Component {
 
   static async getInitialProps(ctx) {
     const { authorization } = parseCookies(ctx);
-    const res = await fetch(`${api_url}/posts?skip=0&limit=10`);
+    const res = await fetch(`${api_url}/post?skip=0&limit=10`);
     const data = await res.json();
-    const res_featured = await fetch(`${api_url}/posts/latest`);
+    const res_featured = await fetch(`${api_url}/post/latest`);
     const data_featured = await res_featured.json();
     let user;
     if (authorization) {
@@ -126,7 +126,7 @@ class Blog extends React.Component {
     const { lastLength, limit } = this.state;
     if (inView && lastLength !== 0) {
       this.setState({ fetching: true });
-      const res = await fetch(`${api_url}/posts?skip=${this.state.posts.length}&limit=${limit}`);
+      const res = await fetch(`${api_url}/post?skip=${this.state.posts.length}&limit=${limit}`);
       const data = await res.json();
       this.setState({ posts: this.state.posts.concat(data), lastLength: data.length });
       this.setState({ fetching: false });
@@ -141,7 +141,7 @@ class Blog extends React.Component {
     return (
       <React.Fragment>
         <Head>
-          <title>Zemuldo-Blog</title>
+          <title>Zemuldo Blog</title>
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:site" content="@zemuldo" />
           <meta name="twitter:creator" content="@zemuldo" />

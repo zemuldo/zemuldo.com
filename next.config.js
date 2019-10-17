@@ -16,7 +16,7 @@ module.exports = withCSS(withBundleAnalyzer({
     config.plugins = [
       ...config.plugins,
       new Dotenv({
-        path: path.join(__dirname, '.env'),
+        path: path.join(__dirname, `.env.${process.env.NODE_ENV || 'development'}`),
         systemvars: true
       })
     ];

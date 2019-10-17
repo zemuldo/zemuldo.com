@@ -169,7 +169,7 @@ class EditBlog extends React.Component {
     if (authorization) {
       authorized = true;
     }
-    const res = await fetch(`${api_url}/posts/${meta}`);
+    const res = await fetch(`${api_url}/post/${meta}`);
     const data = await res.json();
     return {
       ...loinState,
@@ -206,7 +206,7 @@ class EditBlog extends React.Component {
   handleClosePublishDialogue = () => this.setState({publishDialogueOpen: false})
   handlePublish = async () => {
     const { authorization } = this.props;
-    const res = await fetch(`${api_url}/posts/update/${this.props.post._id}`, {
+    const res = await fetch(`${api_url}/post/update/${this.props.post._id}`, {
       method: 'post',
       headers: {authorization, 'Accept': 'application/json', 'Content-Type': 'application/json'},
       body: JSON.stringify({

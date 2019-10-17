@@ -89,7 +89,7 @@ class Blog extends React.Component {
   static async getInitialProps(ctx) {
     const { authorization } = parseCookies(ctx);
     const { meta } = ctx.query;
-    const res = await fetch(`${api_url}/posts/${meta}`);
+    const res = await fetch(`${api_url}/post/${meta}`);
     const data = await res.json();
     let user;
     if (authorization) {

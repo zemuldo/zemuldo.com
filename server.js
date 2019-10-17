@@ -6,7 +6,7 @@ const cheerio = require('cheerio');
 const fs = require('fs');
 const path = require('path');
 
-require('dotenv').config();
+require('dotenv-flow').config();
 
 const prepSiteStories = (data) => {
   const $ = cheerio.load(data);
