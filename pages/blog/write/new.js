@@ -162,7 +162,7 @@ class NewBlog extends React.Component {
  
   handleSave = async () => {
     const { authorization } = this.props;
-    const res = await fetch(`${api_url}/posts/draft`, {
+    const res = await fetch(`${api_url}/post/draft`, {
       method: 'post',
       headers: {authorization, 'Accept': 'application/json', 'Content-Type': 'application/json'},
       body: JSON.stringify({
@@ -184,7 +184,7 @@ class NewBlog extends React.Component {
   handleClosePublishDialogue = () => this.setState({ publishDialogueOpen: false })
   handlePublish = async () => {
     const authorization = localStorage.getItem('authorization');
-    const res = await fetch(`${api_url}/posts`, {
+    const res = await fetch(`${api_url}/post`, {
       method: 'post',
       headers: { authorization, 'Accept': 'application/json', 'Content-Type': 'application/json' },
       body: JSON.stringify({

@@ -18,6 +18,7 @@ import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
+import Head from 'next/head';
 
 
 const api_url = process.env.API_URL;
@@ -72,12 +73,12 @@ export default function Drafts({ drafts, authorization }) {
 
   async function deleteDraft() {
 
-    await fetch(`${api_url}/posts/draft/${open}`, {
+    await fetch(`${api_url}/post/draft/${open}`, {
       method: 'delete',
       headers: { authorization, 'Accept': 'application/json', 'Content-Type': 'application/json' }
     });
 
-    const draftRes = await fetch(`${api_url}/posts/draft`, {
+    const draftRes = await fetch(`${api_url}/post/draft`, {
       method: 'get',
       headers: { authorization, 'Accept': 'application/json', 'Content-Type': 'application/json' }
     });
@@ -89,6 +90,9 @@ export default function Drafts({ drafts, authorization }) {
 
   return (
     <React.Fragment>
+      <Head>
+        <title>Zemuldo Blog ~ Drafts</title>
+      </Head>
       <Dialog
         BackdropProps={{
           classes: {
@@ -175,7 +179,7 @@ Drafts.propTypes = {
 Drafts.getInitialProps = async (ctx) => {
   const { authorization } = parseCookies(ctx);
 
-  const draftRes = await fetch(`${api_url}/posts/draft`, {
+  const draftRes = await fetch(`${api_url}/post/draft`, {
     method: 'get',
     headers: { authorization, 'Accept': 'application/json', 'Content-Type': 'application/json' }
   });

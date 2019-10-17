@@ -133,7 +133,7 @@ class NewBlog extends React.Component {
     const { draftId } = ctx.query;
     const { authorization } = parseCookies(ctx);
 
-    const draftRes = await fetch(`${api_url}/posts/draft/${draftId}`, {
+    const draftRes = await fetch(`${api_url}/post/draft/${draftId}`, {
       method: 'get',
       headers: { authorization, 'Accept': 'application/json', 'Content-Type': 'application/json' }
     });
@@ -182,7 +182,7 @@ class NewBlog extends React.Component {
     if (!draft) return;
     const last_update = this.state._update.updatedAt || draft.updatedAt;
     const { authorization } = this.props;
-    const _res = await fetch(`${api_url}/posts/draft/${draft._id}`, {
+    const _res = await fetch(`${api_url}/post/draft/${draft._id}`, {
       method: 'put',
       headers: { authorization, 'Accept': 'application/json', 'Content-Type': 'application/json' },
       body: JSON.stringify({
@@ -207,7 +207,7 @@ class NewBlog extends React.Component {
   handleClosePublishDialogue = () => this.setState({ publishDialogueOpen: false })
   handlePublish = async () => {
     const { authorization, draft } = this.props;
-    const res = await fetch(`${api_url}/posts`, {
+    const res = await fetch(`${api_url}/post`, {
       method: 'post',
       headers: { authorization, 'Accept': 'application/json', 'Content-Type': 'application/json' },
       body: JSON.stringify({
