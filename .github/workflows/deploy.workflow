@@ -1,5 +1,4 @@
-action “git.master” {
+action “Publish to GRC” {
+  on = "push"
   uses = zemuldo/grc-docker-build-push@master”
-  needs = [“ruby.rubocop”, “ruby.rspec”]
-  args = “branch master”
 }
