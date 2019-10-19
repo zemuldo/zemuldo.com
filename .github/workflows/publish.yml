@@ -1,7 +1,9 @@
+name: Publish to GRC
+
 on: [push]
 
 jobs:
-  hello_world_job:
+  publish:
     runs-on: ubuntu-latest
     name: Publish to GRC
     steps:
