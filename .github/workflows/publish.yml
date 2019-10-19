@@ -8,6 +8,8 @@ jobs:
     name: Publish to GRC
     steps:
     - name: Publish Image
+      run: |
+          echo ${{ secrets.GCLOUD_AUTH }} | base64 -d > gcloud.json
       uses: actions/gcloud/auth@master
 
     - name: Authenticate Google Cloud
