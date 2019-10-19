@@ -8,4 +8,9 @@ jobs:
     name: Publish to GRC
     steps:
     - name: Publish Image
-      uses: zemuldo/grc-docker-build-push@master
+      uses: actions/gcloud/auth@master
+
+    - name: Authenticate Google Cloud
+      run: |
+        gcloud --version
+
