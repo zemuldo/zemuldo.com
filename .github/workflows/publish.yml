@@ -10,11 +10,10 @@ jobs:
     - name: Setup Service Account Credentials
       run: |
           echo ${{ secrets.GCLOUD_AUTH }} | base64 -d > gcloud.json
-          
+
     - name: Publish Image
-      run: |
-          echo ${{ secrets.GCLOUD_AUTH }} | base64 -d > gcloud.json
       uses: actions/gcloud/auth@master
+      
     - name: Authenticate Google Cloud
       run: |
         gcloud --version
