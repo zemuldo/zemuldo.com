@@ -8,8 +8,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
+
     - name: Build and Push
       uses: zemuldo/grc-docker-build-push@master
+      env:
+        CI: true
+        BASE_URL: ${{ secrets.BASE_URL }}
+        PORT: ${{ secrets.PORT }}
+        BASE_URL_DOMAIN: ${{ secrets.BASE_URL_DOMAIN }}
+        API_URL: ${{ secrets.API_URL }}
+        GA_TRACKING_ID: ${{ secrets.GA_TRACKING_ID }}
       with:
        registry_url: "gcr.io/${{ secrets.GCLOUD_PROJECT_ID }}"
        gcloud_auth: ${{ secrets.GCLOUD_AUTH }},
