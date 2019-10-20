@@ -14,5 +14,4 @@ jobs:
        image_name: "site-ui"
        image_tag: "latest"
 
-
     
