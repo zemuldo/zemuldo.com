@@ -1,2 +1,3 @@
-HOME="./"
-docker login -u _json_key -p "$(cat $HOME/.env.json)" https://gcr.io
+docker tag zemuldocom_ui  gcr.io/zemuldo-com-website-blog/site-ui:latest
+
+docker push  gcr.io/zemuldo-com-website-blog/site-ui
