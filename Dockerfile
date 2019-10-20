@@ -13,6 +13,8 @@ COPY . .
 
 RUN npm run build
 
+RUN npm run build-storybook
+
 EXPOSE 3000
 
 CMD ["npm", "start"]

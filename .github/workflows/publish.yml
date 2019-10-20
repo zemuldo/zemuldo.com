@@ -9,5 +9,6 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
-    - name: Setup Docker
+    - name: Build and Push
       uses: pangzineng/Github-Action-One-Click-Docker@master
+    
