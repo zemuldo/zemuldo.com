@@ -1,0 +1,12 @@
+name: Publish GRC
+
+on: [push]
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    name: Publish to GRC
+    steps:
+    - name: Publish Image
+      uses: pangzineng/Github-Action-One-Click-Docker
+
