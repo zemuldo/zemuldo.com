@@ -1,7 +1,9 @@
 name: Node Test
 
-on: [push]
-
+on:
+  push:
+    branches-ignore:
+      - 'master'  
 jobs:
   build:
 
