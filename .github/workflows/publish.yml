@@ -42,7 +42,8 @@ jobs:
         GA_TRACKING_ID: ${{ secrets.GA_TRACKING_ID }}
         DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
         DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
-        REGISTRY_URL: "zemuldo"
+        DOCKER_NAMESPACE: "zemuldo"
+        REGISTRY_URL: "docker.io"
       with:
        image_name: "site-ui"
        image_tag: "latest"
