@@ -11,7 +11,7 @@ jobs:
     - uses: actions/checkout@v1
     - uses: actions/hello-world-docker-action@v1
       with:
-        who-to-greet: ${{ secrets.DOCKER_REGISTRY_URL }}
+        who-to-greet: "Danstan"
     - name: Build and Push
       uses: zemuldo/grc-docker-build-push@master
       with:
