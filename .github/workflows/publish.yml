@@ -13,4 +13,5 @@ jobs:
        gcloud_auth: ${{ secrets.GCLOUD_AUTH }},
        image_name: "site-ui"
        image_tag: "latest"
+       
     
