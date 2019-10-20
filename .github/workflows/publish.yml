@@ -5,7 +5,7 @@ on:
           - master
           - develop
 jobs:
-  build:
+  build_publish_gcr:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
@@ -25,5 +25,27 @@ jobs:
       with:
        image_name: "site-ui"
        image_tag: "latest"
+
+  build_publish_docker_hub:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+
+    - name: Build and Push
+      uses: zemuldo/docker-build-push@master
+      env:
+        CI: true
+        BASE_URL: ${{ secrets.BASE_URL }}
+        PORT: ${{ secrets.PORT }}
+        BASE_URL_DOMAIN: ${{ secrets.BASE_URL_DOMAIN }}
+        API_URL: ${{ secrets.API_URL }}
+        GA_TRACKING_ID: ${{ secrets.GA_TRACKING_ID }}
+        DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+        DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+        REGISTRY_URL: "zemuldo"
+      with:
+       image_name: "site-ui"
+       image_tag: "latest"
+    
 
     
