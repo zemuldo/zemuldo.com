@@ -13,5 +13,5 @@ jobs:
       uses: zemuldo/grc-docker-build-push@master
       with:
        registry_url: "grc.io"
-       gcloud_auth: ${{ secrets.GCLOUD_AUTH }}"
+       gcloud_auth: ${{ secrets.GCLOUD_AUTH }}
     
