@@ -46,7 +46,7 @@
     "stories-site": "NODE_ENV=production pm2 start  stories_server.js --name Zemuldo.COM-Stories-Site",
     "analyze": "BUNDLE_ANALYZE=true next build",
     "storybook": "start-storybook -p 9001 -s ./ -c .storybook",
-    "build-storybook": "build-storybook -c .storybook -o .stories",
+    "build-storybook": "build-storybook -c .storybook -o .stories --quiet",
     "test": "NODE_ENV=test jest",
     "test:watch": "NODE_ENV=test jest --watch"
   },

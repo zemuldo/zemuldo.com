@@ -1,0 +1,19 @@
+name: Publish GRC
+on: 
+  push:
+      branches:    
+          - master
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: Build and Push
+      uses: zemuldo/grc-docker-build-push@master
+      with:
+       registry_url: "gcr.io/${{ secrets.GCLOUD_PROJECT_ID }}"
+       gcloud_auth: ${{ secrets.GCLOUD_AUTH }},
+       image_name: "site-ui"
+       image_tag: "latest"
+
+    
