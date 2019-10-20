@@ -9,10 +9,10 @@ jobs:
     - name: Build and Push
       uses: zemuldo/grc-docker-build-push@master
       with:
-       registry_url: "grc.io"
+       registry_url: "gcr.io/zemuldo-com-website-blog"
        gcloud_auth: ${{ secrets.GCLOUD_AUTH }},
        image_name: "site-ui"
        image_tag: "latest"
-       
+
 
     
