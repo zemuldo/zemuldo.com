@@ -6,8 +6,6 @@ const cheerio = require('cheerio');
 const fs = require('fs');
 const path = require('path');
 
-logger.info(`ENV: PORT: ${process.env.PORT}, `)
-
 require('dotenv-flow').config();
 
 const prepSiteStories = (data) => {
