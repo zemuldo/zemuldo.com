@@ -13,7 +13,7 @@ jobs:
       run: |
         touch .env.production
         echo BASE_URL=${{ secrets.BASE_URL }} >> .env.production
-        echo PORT=${{ secrets.PORT }} >> .env.production
+        echo PORT=3000 >> .env.production
         echo BASE_URL_DOMAIN=${{ secrets.BASE_URL_DOMAIN }} >> .env.production
         echo API_URL=${{ secrets.API_URL }} >> .env.production
         echo GA_TRACKING_ID=${{ secrets.GA_TRACKING_ID }} >> .env.production
@@ -38,7 +38,7 @@ jobs:
       run: |
         touch .env.production
         echo BASE_URL=${{ secrets.BASE_URL }} >> .env.production
-        echo PORT=${{ secrets.PORT }} >> .env.production
+        echo PORT=3000 >> .env.production
         echo BASE_URL_DOMAIN=${{ secrets.BASE_URL_DOMAIN }} >> .env.production
         echo API_URL=${{ secrets.API_URL }} >> .env.production
         echo GA_TRACKING_ID=${{ secrets.GA_TRACKING_ID }} >> .env.production
