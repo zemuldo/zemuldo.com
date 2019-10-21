@@ -12,12 +12,11 @@ jobs:
     - name: Setup Env Variables
       run: |
         touch .env.production
-        echo BASE_URL="${{ secrets.BASE_URL }}\" > .env.production
-        echo PORT="${{ secrets.PORT }}\" > .env.production
-        echo BASE_URL_DOMAIN="${{ secrets.BASE_URL_DOMAIN }}\" > .env.production
-        echo API_URL="${{ secrets.API_URL }}\" > .env.production
-        echo GA_TRACKING_ID="${{ secrets.GA_TRACKING_ID }}\" > .env.production
-        cat .env.production
+        echo BASE_URL=${{ secrets.BASE_URL }} >> .env.production
+        echo PORT=${{ secrets.PORT }} >> .env.production
+        echo BASE_URL_DOMAIN=${{ secrets.BASE_URL_DOMAIN }} >> .env.production
+        echo API_URL=${{ secrets.API_URL }} >> .env.production
+        echo GA_TRACKING_ID=${{ secrets.GA_TRACKING_ID }} >> .env.production
 
     - name: Build and Push
       uses: zemuldo/docker-build-push@master
@@ -34,6 +33,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
+
+    - name: Setup Env Variables
+      run: |
+        touch .env.production
+        echo BASE_URL=${{ secrets.BASE_URL }} >> .env.production
+        echo PORT=${{ secrets.PORT }} >> .env.production
+        echo BASE_URL_DOMAIN=${{ secrets.BASE_URL_DOMAIN }} >> .env.production
+        echo API_URL=${{ secrets.API_URL }} >> .env.production
+        echo GA_TRACKING_ID=${{ secrets.GA_TRACKING_ID }} >> .env.production
 
     - name: Build and Push
       uses: zemuldo/docker-build-push@master
