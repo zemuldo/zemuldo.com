@@ -40,7 +40,6 @@ jobs:
         BASE_URL_DOMAIN: ${{ secrets.BASE_URL_DOMAIN }}
         API_URL: ${{ secrets.API_URL }}
         GA_TRACKING_ID: ${{ secrets.GA_TRACKING_ID }}
-        
         DOCKER_USERNAME: "zemuldo"
         DOCKER_NAMESPACE: "zemuldo"
         DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
