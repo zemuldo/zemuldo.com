@@ -9,14 +9,19 @@ jobs:
     steps:
     - uses: actions/checkout@v1
 
+    - name: Setup Env Variables
+      run: |
+        touch .env.production
+        echo BASE_URL=${{ secrets.BASE_URL }}\ > .env.production
+        echo PORT=${{ secrets.PORT }}\ > .env.production
+        echo BASE_URL_DOMAIN=${{ secrets.BASE_URL_DOMAIN }}\ > .env.production
+        echo API_URL=${{ secrets.API_URL }}\ > .env.production
+        echo GA_TRACKING_ID=${{ secrets.GA_TRACKING_ID }}\ > .env.production
+        cat .env.production
+
     - name: Build and Push
       uses: zemuldo/docker-build-push@master
       env:
-        CI: true
-        BASE_URL: ${{ secrets.BASE_URL }}
-        PORT: ${{ secrets.PORT }}
-        BASE_URL_DOMAIN: ${{ secrets.BASE_URL_DOMAIN }}
-        API_URL: ${{ secrets.API_URL }}
         GA_TRACKING_ID: ${{ secrets.GA_TRACKING_ID }}
         GCLOUD_PROJECT_ID: ${{ secrets.GCLOUD_PROJECT_ID }}
         GCLOUD_AUTH: ${{ secrets.GCLOUD_AUTH }}
@@ -33,12 +38,6 @@ jobs:
     - name: Build and Push
       uses: zemuldo/docker-build-push@master
       env:
-        CI: true
-        BASE_URL: ${{ secrets.BASE_URL }}
-        PORT: ${{ secrets.PORT }}
-        BASE_URL_DOMAIN: ${{ secrets.BASE_URL_DOMAIN }}
-        API_URL: ${{ secrets.API_URL }}
-        GA_TRACKING_ID: ${{ secrets.GA_TRACKING_ID }}
         DOCKER_USERNAME: "zemuldo"
         DOCKER_NAMESPACE: "zemuldo"
         DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
