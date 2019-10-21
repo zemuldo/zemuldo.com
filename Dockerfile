@@ -13,6 +13,8 @@ COPY . .
 
 RUN npm run build
 
+RUN cat .env.production
+
 RUN npm run build-storybook
 
 EXPOSE 3000
