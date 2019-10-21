@@ -4,7 +4,7 @@ on:
       branches:    
           - master
 jobs:
-  to_gcr.io:
+  to_gcr_io:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
@@ -25,7 +25,7 @@ jobs:
        image_name: "site-ui"
        image_tag: "latest"
 
-  to_docker.io:
+  to_docker_io:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
