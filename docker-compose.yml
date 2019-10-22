@@ -1,9 +1,21 @@
 version: '3.7'
 services:
     ui:
-        build: .
+        restart: always
         volumes:
             - .:/app
         ports:
             - "3000:3000"
         container_name: ui
+        image: zemuldo/site-ui
+        labels:
+        - com.centurylinklabs.watchtower.enable=true
+
+    watchtower:
+        container_name: 'watchtower'
+        image: v2tec/watchtower
+        command: --cleanup --label-enable
+        restart: always
+        volumes:
+        - /var/run/docker.sock:/var/run/docker.sock
+        - ./etc/watchtower/config.json:/config.json:ro
