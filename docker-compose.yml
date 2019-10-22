@@ -12,10 +12,7 @@ services:
         - com.centurylinklabs.watchtower.enable=true
 
     watchtower:
-        container_name: 'watchtower'
         image: v2tec/watchtower
-        command: --cleanup --label-enable
-        restart: always
         volumes:
-        - /var/run/docker.sock:/var/run/docker.sock
-        - ./etc/watchtower/config.json:/config.json:ro
+            - /var/run/docker.sock:/var/run/docker.sock
+        restart: always
