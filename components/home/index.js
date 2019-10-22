@@ -35,7 +35,7 @@ export default function Home() {
                     <h2 style={{ fontSize: '26px' }}>Software Engineer</h2>
                     <hr />
                     <h3 className="font-c-cn-m">
-                      Currently being awesome at SafeBoda and formely at
+                      Currently being awesome at <a href="https://safeboda.com" target="_blank" rel="noopener noreferrer">SafeBoda</a> and formely at
                       HackerBay Inc.
                     </h3>
                     <h4 style={{ fontSize: '26px' }} className="color-orange">Nairobi, Kenya</h4>
