@@ -21,6 +21,10 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - name: Git-Crypt Unlock
       uses: zemuldo/git-crypt-unlock@master
+      env: 
+        GPG_KEY_PASS: ${{ secrets.GPG_PRIVATE_KEY }}
+        GPG_KEY_PASS: ${{ secrets.GPG_KEY_GRIP }}
+        GPG_KEY_PASS: ${{ secrets.GPG_KEY_PASS }}
     - name: npm install, build, and test
       env:
         CI: true
@@ -30,7 +34,6 @@ jobs:
         API_URL: ${{ secrets.API_URL }}
         GA_TRACKING_ID: ${{ secrets.GA_TRACKING_ID }}
       run: |
-        ls
-        cat catme.txt
+        cat .env.development
         npm install
         npm test  -- --u 
