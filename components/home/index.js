@@ -41,7 +41,7 @@ export default function Home() {
                     <h4 style={{ fontSize: '26px' }} className="color-orange">Nairobi, Kenya</h4>
                     <h4 style={{ marginTop: '30px', fontSize: '1.8em' }} className="color-6 font-c-cn-m">
                       <CustomLink href='/journey'>
-                        <b>See my journey 🚀🚀</b>
+                        <b>See my journey 🚀🚀🚀</b>
                       </CustomLink>
                     </h4>
                   </div>
