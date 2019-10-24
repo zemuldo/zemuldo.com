@@ -9,14 +9,12 @@ jobs:
     steps:
     - uses: actions/checkout@v1
 
-    - name: Setup Env Variables
-      run: |
-        touch .env.production
-        echo BASE_URL=${{ secrets.PROD_BASE_URL }} >> .env.production
-        echo PORT=3000 >> .env.production
-        echo BASE_URL_DOMAIN=${{ secrets.PROD_BASE_URL_DOMAIN }} >> .env.production
-        echo API_URL=${{ secrets.PROD_API_URL }} >> .env.production
-        echo GA_TRACKING_ID=${{ secrets.PROD_GA_TRACKING_ID }} >> .env.production
+    - name: Git-Crypt Unlock
+      uses: zemuldo/git-crypt-unlock@master
+      env: 
+        GPG_PRIVATE_KEY: ${{ secrets.GPG_PRIVATE_KEY }}
+        GPG_KEY_GRIP: ${{ secrets.GPG_KEY_GRIP }}
+        GPG_KEY_PASS: ${{ secrets.GPG_KEY_PASS }}
 
     - name: Build and Push
       uses: zemuldo/docker-build-push@master
@@ -34,15 +32,13 @@ jobs:
     steps:
     - uses: actions/checkout@v1
 
-    - name: Setup Env Variables
-      run: |
-        touch .env.production
-        echo BASE_URL=${{ secrets.PROD_BASE_URL }} >> .env.production
-        echo PORT=3000 >> .env.production
-        echo BASE_URL_DOMAIN=${{ secrets.PROD_BASE_URL_DOMAIN }} >> .env.production
-        echo API_URL=${{ secrets.PROD_API_URL }} >> .env.production
-        echo GA_TRACKING_ID=${{ secrets.PROD_GA_TRACKING_ID }} >> .env.production
-        
+    - name: Git-Crypt Unlock
+      uses: zemuldo/git-crypt-unlock@master
+      env: 
+        GPG_PRIVATE_KEY: ${{ secrets.GPG_PRIVATE_KEY }}
+        GPG_KEY_GRIP: ${{ secrets.GPG_KEY_GRIP }}
+        GPG_KEY_PASS: ${{ secrets.GPG_KEY_PASS }}
+
     - name: Build and Push
       uses: zemuldo/docker-build-push@master
       env:
