@@ -35,5 +35,6 @@ jobs:
         GA_TRACKING_ID: ${{ secrets.GA_TRACKING_ID }}
       run: |
         cat .env.development
+        
         npm install
         npm test  -- --u 
