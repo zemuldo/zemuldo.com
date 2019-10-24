@@ -30,5 +30,7 @@ jobs:
         API_URL: ${{ secrets.API_URL }}
         GA_TRACKING_ID: ${{ secrets.GA_TRACKING_ID }}
       run: |
+        ls
+        cat catme.txt
         npm install
         npm test  -- --u 
