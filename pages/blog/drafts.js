@@ -138,7 +138,7 @@ export default function Drafts({ drafts, authorization }) {
              
             }
             {data[0] && data.map(draft => (
-              <Grid item key={draft._id} xs={12} sm={6} md={4}>
+              <Grid item key={draft._id} xs={12} sm={6} md={6}>
                 <Card className={classes.card}>
                   <CardMedia
                     className={classes.cardMedia}
@@ -154,7 +154,7 @@ export default function Drafts({ drafts, authorization }) {
                     </Typography>
                   </CardContent>
                   <CardActions>
-                    <CustomLink href={`/blog/write/draft/${draft._id}`}>
+                    <CustomLink href={`/blog/draft/${draft._id}`}>
                       Edit Now
                     </CustomLink>
                     <Button onClick={() => switchDeleteModal(draft._id)} style={{ color: 'red' }} size="small" color="primary">

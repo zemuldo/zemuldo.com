@@ -9,11 +9,11 @@ const path = require('path');
 require('dotenv-flow').config();
 
 async function log_path(req) {
-  const _path = `Serving:: ${req.originalUrl.split('?')[0]}`.slice(0, 1000);
+  const _path = `Serving: ${req.originalUrl.split('?')[0]}`.slice(0, 1000);
   if (_path.includes('/site-stories/')) return;
   if (_path.includes('/static/')) return;
   if (_path.includes('/_next/')) return;
-  return logger.info(`${_path}FOR::${req.headers['remote_addr'] || req.connection.remoteAddress || 'Unknown-IP'} OR ${req.proxy_add_x_forwarded_for || 'Non-Proxy-Source'}`);
+  return logger.info(`${_path} FOR:${req.headers['remote_addr'] || req.connection.remoteAddress || 'Unknown-IP'} OR ${req.proxy_add_x_forwarded_for || 'Non-Proxy-Source'}`);
 }
 
 const prepSiteStories = (data) => {

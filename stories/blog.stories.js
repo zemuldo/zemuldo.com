@@ -1,9 +1,9 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import NewBlog from '../pages/blog/write/new';
+import NewBlog from '../pages/blog/new';
 import BlogHome from '../pages/blog';
-import Blog from '../pages/blog/post/[meta]';
-import BlogEdit from '../pages/blog/post/[meta]/edit';
+import Blog from '../pages/blog/[meta]';
+import BlogEdit from '../pages/blog/[meta]/edit';
 
 const post = {
   'postTitle': 'How to make sure that you always succeed',
@@ -42,10 +42,10 @@ const props = {
     menu: 'NewBlog-menu-9'
   },
   router: {
-    pathname: '/blog/write/new',
-    route: '/blog/write/new',
+    pathname: '/blog/new',
+    route: '/blog/new',
     query: {},
-    asPath: '/blog/write/new',
+    asPath: '/blog/new',
     events: {}
   }
 };

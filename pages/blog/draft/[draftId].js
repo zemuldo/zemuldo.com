@@ -1,24 +1,24 @@
 import React from 'react';
 import Container from '@material-ui/core/Container';
 import { withStyles } from '@material-ui/core/styles';
-import Footer from '../../../../components/footer';
-import Menu from '../../../../components/blog/menu';
+import Footer from '../../../components/footer';
+import Menu from '../../../components/blog/menu';
 import marked from 'marked';
 import dynamic from 'next/dynamic';
 import Head from 'next/head';
 import TextField from '@material-ui/core/TextField';
 import Grid from '@material-ui/core/Grid';
 import 'easymde/dist/easymde.min.css';
-import Tags from '../../../../components/tags';
+import Tags from '../../../components/tags';
 import Router, { withRouter } from 'next/router';
 import SaveIcon from '@material-ui/icons/Save';
 import Avatar from '@material-ui/core/Avatar';
 import PublishIcon from '@material-ui/icons/Publish';
-import PublishDialogue from '../../../../components/publish_modal';
+import PublishDialogue from '../../../components/publish_modal';
 import fetch from 'isomorphic-unfetch';
 import { parseCookies } from 'nookies';
 import PropTypes from 'prop-types';
-import Notification from '../../../../components/notification';
+import Notification from '../../../components/notification';
 
 
 const SimpleMDE = dynamic(import('react-simplemde-editor'), { ssr: false });
@@ -149,7 +149,6 @@ class NewBlog extends React.Component {
 
   componentDidMount() {
     const { draft } = this.props;
-
     if (draft) {
       this.setState({
         coverPhotoUrl: draft.coverPhotoUrl || '',
@@ -221,8 +220,9 @@ class NewBlog extends React.Component {
     });
     const data = await res.json();
     if (parseInt(res.status, 10) !== 200) return alert(data[0].errorMessage);
-    Router.push(`/blog/post/${data.post._id}`);
+    Router.push(`/blog/${data.post._id}`);
     this.handleClosePublishDialogue();
+    localStorage.removeItem(`state_${draft._id}`);
   }
 
   componentWillUnmount() {

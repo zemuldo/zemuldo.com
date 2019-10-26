@@ -187,7 +187,7 @@ class Blog extends React.Component {
                     <Typography variant="h5" color="inherit" paragraph>
                       {featurePost.post.description}
                     </Typography>
-                    <CustomLink style={{ color: '#08a6f3' }} href={`/blog/post/${featurePost.post._id}`}>
+                    <CustomLink style={{ color: '#08a6f3' }} href={`/blog/${featurePost.post.title.split(' ').join('-')}@${featurePost.post._id}`}>
                       <span>Read Now</span>
                     </CustomLink>
                   </div>

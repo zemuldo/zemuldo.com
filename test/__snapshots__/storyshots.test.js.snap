@@ -46,7 +46,7 @@ Array [
             </div>
           </a>
           <a
-            href="/blog/login?redirectTo=/blog/write/new"
+            href="/blog/login?redirectTo=/blog/new"
             onClick={[Function]}
           >
             <div
@@ -248,7 +248,7 @@ Array [
             </div>
           </a>
           <a
-            href="/blog/login?redirectTo=/blog/write/new"
+            href="/blog/login?redirectTo=/blog/new"
             onClick={[Function]}
           >
             <div
@@ -268,7 +268,7 @@ Array [
             </div>
           </a>
           <a
-            href="/blog/write/new"
+            href="/blog/new"
             onClick={[Function]}
           >
             <div
@@ -762,7 +762,7 @@ Array [
             </div>
           </a>
           <a
-            href="/blog/login?redirectTo=/blog/write/new"
+            href="/blog/login?redirectTo=/blog/new"
             onClick={[Function]}
           >
             <div
@@ -841,7 +841,7 @@ Array [
               The best way to ensure that you succeed is to always love what you are doing and stay positive.
             </p>
             <a
-              href="/blog/post/5d79520a3d510b0fa5ae765a"
+              href="/blog/How-to-make-sure-that-you-always-succeed@5d79520a3d510b0fa5ae765a"
               onClick={[Function]}
             >
               <span>
@@ -864,7 +864,7 @@ Array [
         }
       >
         <a
-          href="/blog/post/5d6754fefe8b7e3fc0707fce"
+          href="/blog/How-to-use-Ecto-as-a-Query-Schema-validation-library@5d6754fefe8b7e3fc0707fce"
           onClick={[Function]}
         >
           <div
@@ -926,7 +926,7 @@ Array [
         }
       >
         <a
-          href="/blog/post/5d7951be3d510b0fa5ae7658"
+          href="/blog/How-to-use-Ecto-as-a-Query-Schema-validation-library@5d7951be3d510b0fa5ae7658"
           onClick={[Function]}
         >
           <div
@@ -988,7 +988,7 @@ Array [
         }
       >
         <a
-          href="/blog/post/5d79520a3d510b0fa5ae765a"
+          href="/blog/How-to-make-sure-that-you-always-succeed@5d79520a3d510b0fa5ae765a"
           onClick={[Function]}
         >
           <div
@@ -1193,7 +1193,24 @@ Array [
                 <h3
                   className="font-c-cn-m"
                 >
-                  Currently being awesome at SafeBoda and formely at HackerBay Inc.
+                  Currently being awesome at 
+                  <a
+                    className="color-6"
+                    href="https://safeboda.com"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    SafeBoda
+                  </a>
+                   and formely at
+                  <a
+                    className="color-6"
+                    href="https://hackerbay.io/"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                     HackerBay Inc. 
+                  </a>
                 </h3>
                 <h4
                   className="color-orange"
@@ -1219,7 +1236,7 @@ Array [
                     onClick={[Function]}
                   >
                     <b>
-                      See my journey 🚀🚀
+                      See my journey 🚀🚀🚀
                     </b>
                   </a>
                 </h4>
@@ -2168,7 +2185,7 @@ Array [
             </div>
           </a>
           <a
-            href="/blog/login?redirectTo=/blog/write/new"
+            href="/blog/login?redirectTo=/blog/new"
             onClick={[Function]}
           >
             <div
@@ -2228,7 +2245,7 @@ Array [
                     Present
                   </span>
                   <span>
-                     ~ 6 months
+                     ~ 7 months
                   </span>
                 </span>
               </header>
