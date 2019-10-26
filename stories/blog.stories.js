@@ -2,8 +2,8 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import NewBlog from '../pages/blog/new';
 import BlogHome from '../pages/blog';
-import Blog from '../pages/blog/post/[meta]';
-import BlogEdit from '../pages/blog/post/[meta]/edit';
+import Blog from '../pages/blog/[meta]';
+import BlogEdit from '../pages/blog/[meta]/edit';
 
 const post = {
   'postTitle': 'How to make sure that you always succeed',

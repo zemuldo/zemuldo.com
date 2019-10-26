@@ -19,7 +19,6 @@ import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import Head from 'next/head';
-import Router from 'next/router';
 
 
 const api_url = process.env.API_URL;
