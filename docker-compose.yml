@@ -1,12 +1,46 @@
-version: '3.7'
+version: "3.7"
 services:
-    site-ui:
-        restart: always
-        volumes:
-            - .:/app
-        ports:
-            - "3000:3000"
-        container_name: ui
-        image: zemuldo/site-ui
-        labels:
-        - com.centurylinklabs.watchtower.enable=true
+  site-ui-dev:
+    build:
+      context: ./
+      dockerfile: ./.docker/dev.Dockerfile
+    command: npm run dev
+    environment:
+      NODE_ENV: development
+      PORT: 3001
+      API_URL: http://site-api-dev:8090
+    env_file:
+      - .env.development
+    restart: always
+    volumes:
+      - .:/usr/src/app
+    ports:
+      - "3001:3001"
+    container_name: ui
+
+    networks:
+      - apizemuldocom_api-net
+
+  site-stories-dev:
+    build:
+      context: ./
+      dockerfile: ./.docker/stories.dev.Dockerfile
+    command: npm run storybook
+    environment:
+      NODE_ENV: development
+      PORT: 9001
+    env_file:
+      - .env.development
+    restart: always
+    volumes:
+      - .:/usr/src/app
+    ports:
+      - "9001:9001"
+    container_name: stories-ui
+
+    networks:
+      - apizemuldocom_api-net
+
+networks:
+  apizemuldocom_api-net:
+    external: true
