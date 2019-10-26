@@ -15,6 +15,7 @@ import EditIcon from '@material-ui/icons/Edit';
 import Grid from '@material-ui/core/Grid';
 import PropTypes from 'prop-types';
 import 'easymde/dist/easymde.min.css';
+import errorHandler from '../../components/errorHandler';
 
 const Highlight = dynamic(import('react-highlight'));
 
@@ -219,4 +220,4 @@ Blog.propTypes = {
   authorization: PropTypes.oneOfType([PropTypes.string, PropTypes.oneOf([null])])
 };
 
-export default withStyles(styles)(Blog);
+export default errorHandler(withStyles(styles)(Blog));

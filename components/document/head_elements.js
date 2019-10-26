@@ -7,7 +7,7 @@ export default function HeaderElements () {
       <meta charSet="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-      <meta name="description" content="Danstan Onyango, Software Engineer in Nairobi, Kenya." />
+      <meta name="description" content="Danstan Otieno Onyango ~ Zemuldo, Software Engineer in Nairobi, Kenya. Just ~Code, Chess,Dance,Yoga,Zumba, Code~ Simplicity is the ultimate sophistication ~ Leonardo di se Piero da Vinci ~ Ask 8.8.8.8 for any other info" />
       <meta name="author" content="Danstan O. Onyango" />
       <meta name="url" content="https://zemuldo.com" />
       <meta name="copyright" content="Zemuldo" />

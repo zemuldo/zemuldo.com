@@ -2,6 +2,75 @@
 
 exports[`Storyshots Blog Blog 1`] = `
 Array [
+  <br />,
+  <br />,
+  <br />,
+  <div
+    style={
+      Object {
+        "alignContent": "center",
+        "backgroundColor": "black",
+        "borderTop": "solid 1px #08a6f3",
+        "bottom": 0,
+        "color": "white",
+        "display": "flex",
+        "margin": "auto",
+        "position": "fixed",
+        "textAlign": "center",
+        "width": "100%",
+        "zIndex": 9999,
+      }
+    }
+  >
+    <div
+      className="MuiContainer-root MuiContainer-maxWidthMd"
+      style={
+        Object {
+          "color": "white",
+          "padding": "12px 5px 12px 5px",
+        }
+      }
+    >
+      <span>
+        By using this site, you acknowledge that you have read and understand the
+        <a
+          className="color-black"
+          href="/cookie_policy"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+           Cookie Policy
+        </a>
+        ,
+        <a
+          href="/privacy_policy"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+           Privacy Policy
+        </a>
+        , and the
+        <a
+          href="/terms_conditions"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+           Terms. 
+        </a>
+      </span>
+      <a
+        href={null}
+        onClick={[Function]}
+        style={
+          Object {
+            "color": "white",
+          }
+        }
+      >
+         Close 
+      </a>
+    </div>
+  </div>,
   <div
     className="MuiContainer-root MuiContainer-maxWidthMd"
     style={
@@ -30,7 +99,7 @@ Array [
             onClick={[Function]}
           >
             <div
-              className="MuiAvatar-root Menu-greenAvatar-353 MuiAvatar-colorDefault"
+              className="MuiAvatar-root Menu-greenAvatar-360 MuiAvatar-colorDefault"
             >
               <svg
                 aria-hidden="true"
@@ -50,7 +119,7 @@ Array [
             onClick={[Function]}
           >
             <div
-              className="MuiAvatar-root Menu-greenAvatar-353 MuiAvatar-colorDefault"
+              className="MuiAvatar-root Menu-greenAvatar-360 MuiAvatar-colorDefault"
             >
               <svg
                 aria-hidden="true"
@@ -66,7 +135,7 @@ Array [
             </div>
           </a>
           <div
-            className="MuiAvatar-root Blog-twitterAvatar-240 Blog-twitterAvatar-3 MuiAvatar-colorDefault"
+            className="MuiAvatar-root Blog-twitterAvatar-254 Blog-twitterAvatar-3 MuiAvatar-colorDefault"
             onClick={[Function]}
           >
             <i
@@ -74,7 +143,7 @@ Array [
             />
           </div>
           <div
-            className="MuiAvatar-root Blog-fbAvatar-241 Blog-fbAvatar-4 MuiAvatar-colorDefault"
+            className="MuiAvatar-root Blog-fbAvatar-255 Blog-fbAvatar-4 MuiAvatar-colorDefault"
             onClick={[Function]}
           >
             <i
@@ -82,7 +151,7 @@ Array [
             />
           </div>
           <div
-            className="MuiAvatar-root Blog-linkedinAvatar-242 Blog-linkedinAvatar-5 MuiAvatar-colorDefault"
+            className="MuiAvatar-root Blog-linkedinAvatar-256 Blog-linkedinAvatar-5 MuiAvatar-colorDefault"
             onClick={[Function]}
           >
             <i
@@ -144,7 +213,7 @@ Array [
     </Dynamic>
   </div>,
   <footer
-    className="makeStyles-footer-376"
+    className="makeStyles-footer-383"
   >
     <div
       className="MuiContainer-root MuiContainer-maxWidthLg"
@@ -190,6 +259,75 @@ Array [
 
 exports[`Storyshots Blog Blog Edit 1`] = `
 Array [
+  <br />,
+  <br />,
+  <br />,
+  <div
+    style={
+      Object {
+        "alignContent": "center",
+        "backgroundColor": "black",
+        "borderTop": "solid 1px #08a6f3",
+        "bottom": 0,
+        "color": "white",
+        "display": "flex",
+        "margin": "auto",
+        "position": "fixed",
+        "textAlign": "center",
+        "width": "100%",
+        "zIndex": 9999,
+      }
+    }
+  >
+    <div
+      className="MuiContainer-root MuiContainer-maxWidthMd"
+      style={
+        Object {
+          "color": "white",
+          "padding": "12px 5px 12px 5px",
+        }
+      }
+    >
+      <span>
+        By using this site, you acknowledge that you have read and understand the
+        <a
+          className="color-black"
+          href="/cookie_policy"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+           Cookie Policy
+        </a>
+        ,
+        <a
+          href="/privacy_policy"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+           Privacy Policy
+        </a>
+        , and the
+        <a
+          href="/terms_conditions"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+           Terms. 
+        </a>
+      </span>
+      <a
+        href={null}
+        onClick={[Function]}
+        style={
+          Object {
+            "color": "white",
+          }
+        }
+      >
+         Close 
+      </a>
+    </div>
+  </div>,
   <div />,
   <div
     className="MuiContainer-root MuiContainer-maxWidthMd"
@@ -219,7 +357,7 @@ Array [
             onClick={[Function]}
           >
             <div
-              className="MuiAvatar-root Menu-greenAvatar-541 MuiAvatar-colorDefault"
+              className="MuiAvatar-root Menu-greenAvatar-548 MuiAvatar-colorDefault"
             >
               <svg
                 aria-hidden="true"
@@ -239,7 +377,7 @@ Array [
             onClick={[Function]}
           >
             <div
-              className="MuiAvatar-root Menu-greenAvatar-541"
+              className="MuiAvatar-root Menu-greenAvatar-548"
             >
               <img
                 className="MuiAvatar-img"
@@ -252,7 +390,7 @@ Array [
             onClick={[Function]}
           >
             <div
-              className="MuiAvatar-root Menu-greenAvatar-541 MuiAvatar-colorDefault"
+              className="MuiAvatar-root Menu-greenAvatar-548 MuiAvatar-colorDefault"
             >
               <svg
                 aria-hidden="true"
@@ -272,7 +410,7 @@ Array [
             onClick={[Function]}
           >
             <div
-              className="MuiAvatar-root Menu-greenAvatar-541 MuiAvatar-colorDefault"
+              className="MuiAvatar-root Menu-greenAvatar-548 MuiAvatar-colorDefault"
             >
               <svg
                 aria-hidden="true"
@@ -288,7 +426,7 @@ Array [
             </div>
           </a>
           <div
-            className="MuiAvatar-root EditBlog-greenAvatar-407 EditBlog-greenAvatar-1 MuiAvatar-colorDefault"
+            className="MuiAvatar-root EditBlog-greenAvatar-421 EditBlog-greenAvatar-1 MuiAvatar-colorDefault"
             onClick={[Function]}
           >
             <svg
@@ -304,7 +442,7 @@ Array [
             </svg>
           </div>
           <div
-            className="MuiAvatar-root EditBlog-greenAvatar-407 EditBlog-greenAvatar-1 MuiAvatar-colorDefault"
+            className="MuiAvatar-root EditBlog-greenAvatar-421 EditBlog-greenAvatar-1 MuiAvatar-colorDefault"
             onClick={[Function]}
           >
             <svg
@@ -323,20 +461,20 @@ Array [
       </div>
     </div>
     <div
-      className="EditBlog-root-408 EditBlog-root-2"
+      className="EditBlog-root-422 EditBlog-root-2"
     >
       <div
         className="MuiFormControl-root MuiTextField-root MuiFormControl-fullWidth"
       >
         <label
-          className="MuiFormLabel-root MuiInputLabel-root EditBlog-floatingLabelFocusStyle-409 EditBlog-floatingLabelFocusStyle-3 MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-filled"
+          className="MuiFormLabel-root MuiInputLabel-root EditBlog-floatingLabelFocusStyle-423 EditBlog-floatingLabelFocusStyle-3 MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-filled"
           data-shrink={true}
           htmlFor="postTitle"
         >
           Post Title
         </label>
         <div
-          className="MuiInputBase-root MuiInput-root MuiInput-underline EditBlog-materialInput-410 EditBlog-materialInput-4 MuiInputBase-fullWidth MuiInput-fullWidth MuiInputBase-formControl MuiInput-formControl"
+          className="MuiInputBase-root MuiInput-root MuiInput-underline EditBlog-materialInput-424 EditBlog-materialInput-4 MuiInputBase-fullWidth MuiInput-fullWidth MuiInputBase-formControl MuiInput-formControl"
           onClick={[Function]}
         >
           <input
@@ -365,14 +503,14 @@ Array [
           className="MuiFormControl-root MuiTextField-root MuiFormControl-fullWidth"
         >
           <label
-            className="MuiFormLabel-root MuiInputLabel-root EditBlog-floatingLabelFocusStyle-409 EditBlog-floatingLabelFocusStyle-3 MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-filled"
+            className="MuiFormLabel-root MuiInputLabel-root EditBlog-floatingLabelFocusStyle-423 EditBlog-floatingLabelFocusStyle-3 MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-filled"
             data-shrink={true}
             htmlFor="coverPhotoUrl"
           >
             Cover Photo Url
           </label>
           <div
-            className="MuiInputBase-root MuiInput-root MuiInput-underline EditBlog-materialInput-410 EditBlog-materialInput-4 MuiInputBase-fullWidth MuiInput-fullWidth MuiInputBase-formControl MuiInput-formControl"
+            className="MuiInputBase-root MuiInput-root MuiInput-underline EditBlog-materialInput-424 EditBlog-materialInput-4 MuiInputBase-fullWidth MuiInput-fullWidth MuiInputBase-formControl MuiInput-formControl"
             onClick={[Function]}
           >
             <input
@@ -590,17 +728,17 @@ Array [
     </div>
     <br />
     <div
-      className="MuiFormControl-root MuiTextField-root EditBlog-materialTextArea-411 EditBlog-materialTextArea-5 MuiFormControl-marginNormal MuiFormControl-fullWidth"
+      className="MuiFormControl-root MuiTextField-root EditBlog-materialTextArea-425 EditBlog-materialTextArea-5 MuiFormControl-marginNormal MuiFormControl-fullWidth"
     >
       <label
-        className="MuiFormLabel-root MuiInputLabel-root EditBlog-floatingLabelFocusStyle-409 EditBlog-floatingLabelFocusStyle-3 MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+        className="MuiFormLabel-root MuiInputLabel-root EditBlog-floatingLabelFocusStyle-423 EditBlog-floatingLabelFocusStyle-3 MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
         data-shrink={true}
         htmlFor="description"
       >
         Post Description
       </label>
       <div
-        className="MuiInputBase-root MuiOutlinedInput-root EditBlog-materialTextArea-411 EditBlog-materialTextArea-5 MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-multiline MuiOutlinedInput-multiline"
+        className="MuiInputBase-root MuiOutlinedInput-root EditBlog-materialTextArea-425 EditBlog-materialTextArea-5 MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-multiline MuiOutlinedInput-multiline"
         onClick={[Function]}
       >
         <textarea
@@ -617,7 +755,7 @@ Array [
         />
         <fieldset
           aria-hidden={true}
-          className="PrivateNotchedOutline-root-633 MuiOutlinedInput-notchedOutline"
+          className="PrivateNotchedOutline-root-640 MuiOutlinedInput-notchedOutline"
           style={
             Object {
               "paddingLeft": 8,
@@ -625,7 +763,7 @@ Array [
           }
         >
           <legend
-            className="PrivateNotchedOutline-legend-634"
+            className="PrivateNotchedOutline-legend-641"
             style={
               Object {
                 "width": 0,
@@ -674,7 +812,7 @@ And – more importantly – never compromise your potential to grow due to self
     />
   </div>,
   <footer
-    className="makeStyles-footer-635"
+    className="makeStyles-footer-642"
   >
     <div
       className="MuiContainer-root MuiContainer-maxWidthLg"
@@ -720,6 +858,75 @@ And – more importantly – never compromise your potential to grow due to self
 
 exports[`Storyshots Blog Blogs 1`] = `
 Array [
+  <br />,
+  <br />,
+  <br />,
+  <div
+    style={
+      Object {
+        "alignContent": "center",
+        "backgroundColor": "black",
+        "borderTop": "solid 1px #08a6f3",
+        "bottom": 0,
+        "color": "white",
+        "display": "flex",
+        "margin": "auto",
+        "position": "fixed",
+        "textAlign": "center",
+        "width": "100%",
+        "zIndex": 9999,
+      }
+    }
+  >
+    <div
+      className="MuiContainer-root MuiContainer-maxWidthMd"
+      style={
+        Object {
+          "color": "white",
+          "padding": "12px 5px 12px 5px",
+        }
+      }
+    >
+      <span>
+        By using this site, you acknowledge that you have read and understand the
+        <a
+          className="color-black"
+          href="/cookie_policy"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+           Cookie Policy
+        </a>
+        ,
+        <a
+          href="/privacy_policy"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+           Privacy Policy
+        </a>
+        , and the
+        <a
+          href="/terms_conditions"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+           Terms. 
+        </a>
+      </span>
+      <a
+        href={null}
+        onClick={[Function]}
+        style={
+          Object {
+            "color": "white",
+          }
+        }
+      >
+         Close 
+      </a>
+    </div>
+  </div>,
   <div
     className="MuiContainer-root MuiContainer-maxWidthMd"
     style={
@@ -794,7 +1001,7 @@ Array [
     }
   >
     <div
-      className="MuiPaper-root MuiPaper-elevation1 Blog-mainFeaturedPost-7 Blog-mainFeaturedPost-7 MuiPaper-rounded"
+      className="MuiPaper-root MuiPaper-elevation1 Blog-mainFeaturedPost-14 Blog-mainFeaturedPost-7 MuiPaper-rounded"
       style={
         Object {
           "backgroundImage": "url(https://miro.medium.com/max/1200/1*vKd5tDJmDFznrOkMh1kQGg.png)",
@@ -802,7 +1009,7 @@ Array [
       }
     >
       <div
-        className="Blog-overlay-8 Blog-overlay-8"
+        className="Blog-overlay-15 Blog-overlay-8"
         style={
           Object {
             "backgroundColor": "black",
@@ -822,7 +1029,7 @@ Array [
           className="MuiGrid-root MuiGrid-item MuiGrid-grid-md-6"
         >
           <div
-            className="Blog-mainFeaturedPostContent-9 Blog-mainFeaturedPostContent-9"
+            className="Blog-mainFeaturedPostContent-16 Blog-mainFeaturedPostContent-9"
           >
             <h1
               className="MuiTypography-root MuiTypography-h3 MuiTypography-colorInherit MuiTypography-gutterBottom"
@@ -1090,20 +1297,91 @@ Array [
 `;
 
 exports[`Storyshots Blog New 1`] = `
-<div
-  style={
-    Object {
-      "color": "white",
+Array [
+  <br />,
+  <br />,
+  <br />,
+  <div
+    style={
+      Object {
+        "alignContent": "center",
+        "backgroundColor": "black",
+        "borderTop": "solid 1px #08a6f3",
+        "bottom": 0,
+        "color": "white",
+        "display": "flex",
+        "margin": "auto",
+        "position": "fixed",
+        "textAlign": "center",
+        "width": "100%",
+        "zIndex": 9999,
+      }
     }
-  }
->
-  Please wait...
-</div>
+  >
+    <div
+      className="MuiContainer-root MuiContainer-maxWidthMd"
+      style={
+        Object {
+          "color": "white",
+          "padding": "12px 5px 12px 5px",
+        }
+      }
+    >
+      <span>
+        By using this site, you acknowledge that you have read and understand the
+        <a
+          className="color-black"
+          href="/cookie_policy"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+           Cookie Policy
+        </a>
+        ,
+        <a
+          href="/privacy_policy"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+           Privacy Policy
+        </a>
+        , and the
+        <a
+          href="/terms_conditions"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+           Terms. 
+        </a>
+      </span>
+      <a
+        href={null}
+        onClick={[Function]}
+        style={
+          Object {
+            "color": "white",
+          }
+        }
+      >
+         Close 
+      </a>
+    </div>
+  </div>,
+  <div
+    style={
+      Object {
+        "color": "white",
+      }
+    }
+  >
+    Please wait...
+  </div>,
+]
 `;
 
 exports[`Storyshots Home Page Footer 1`] = `
 <footer
-  className="makeStyles-footer-704"
+  className="makeStyles-footer-711"
 >
   <div
     className="MuiContainer-root MuiContainer-maxWidthLg"
@@ -1555,7 +1833,7 @@ Array [
     </div>
   </div>,
   <footer
-    className="makeStyles-footer-666"
+    className="makeStyles-footer-673"
   >
     <div
       className="MuiContainer-root MuiContainer-maxWidthLg"
@@ -2148,6 +2426,75 @@ exports[`Storyshots Journey Experience 1`] = `
 
 exports[`Storyshots Journey Journey 1`] = `
 Array [
+  <br />,
+  <br />,
+  <br />,
+  <div
+    style={
+      Object {
+        "alignContent": "center",
+        "backgroundColor": "black",
+        "borderTop": "solid 1px #08a6f3",
+        "bottom": 0,
+        "color": "white",
+        "display": "flex",
+        "margin": "auto",
+        "position": "fixed",
+        "textAlign": "center",
+        "width": "100%",
+        "zIndex": 9999,
+      }
+    }
+  >
+    <div
+      className="MuiContainer-root MuiContainer-maxWidthMd"
+      style={
+        Object {
+          "color": "white",
+          "padding": "12px 5px 12px 5px",
+        }
+      }
+    >
+      <span>
+        By using this site, you acknowledge that you have read and understand the
+        <a
+          className="color-black"
+          href="/cookie_policy"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+           Cookie Policy
+        </a>
+        ,
+        <a
+          href="/privacy_policy"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+           Privacy Policy
+        </a>
+        , and the
+        <a
+          href="/terms_conditions"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+           Terms. 
+        </a>
+      </span>
+      <a
+        href={null}
+        onClick={[Function]}
+        style={
+          Object {
+            "color": "white",
+          }
+        }
+      >
+         Close 
+      </a>
+    </div>
+  </div>,
   <div
     className="MuiContainer-root MuiContainer-maxWidthMd"
   >
@@ -2169,7 +2516,7 @@ Array [
             onClick={[Function]}
           >
             <div
-              className="MuiAvatar-root Menu-greenAvatar-852 MuiAvatar-colorDefault"
+              className="MuiAvatar-root Menu-greenAvatar-859 MuiAvatar-colorDefault"
             >
               <svg
                 aria-hidden="true"
@@ -2189,7 +2536,7 @@ Array [
             onClick={[Function]}
           >
             <div
-              className="MuiAvatar-root Menu-greenAvatar-852 MuiAvatar-colorDefault"
+              className="MuiAvatar-root Menu-greenAvatar-859 MuiAvatar-colorDefault"
             >
               <svg
                 aria-hidden="true"
@@ -3841,7 +4188,7 @@ Array [
     </div>
   </div>,
   <footer
-    className="makeStyles-footer-875"
+    className="makeStyles-footer-882"
   >
     <div
       className="MuiContainer-root MuiContainer-maxWidthLg"

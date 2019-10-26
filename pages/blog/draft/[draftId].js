@@ -19,6 +19,7 @@ import fetch from 'isomorphic-unfetch';
 import { parseCookies } from 'nookies';
 import PropTypes from 'prop-types';
 import Notification from '../../../components/notification';
+import errorHandler from '../../../components/errorHandler';
 
 
 const SimpleMDE = dynamic(import('react-simplemde-editor'), { ssr: false });
@@ -129,14 +130,24 @@ class NewBlog extends React.Component {
     };
   }
 
+  static async requiresAuth(){
+    return true;
+  }
+
   static async getInitialProps(ctx) {
     const { draftId } = ctx.query;
     const { authorization } = parseCookies(ctx);
+
+    if (!authorization) return {statusCode: 401};
 
     const draftRes = await fetch(`${api_url}/post/draft/${draftId}`, {
       method: 'get',
       headers: { authorization, 'Accept': 'application/json', 'Content-Type': 'application/json' }
     });
+
+    if (draftRes.status !== 200) {
+      return {statusCode: 400, authorization};
+    }
     
     let data;
     try {
@@ -390,4 +401,4 @@ NewBlog.propTypes = {
   draft: PropTypes.object.isRequired
 };
 
-export default withRouter(withStyles(useStyles)(NewBlog));
+export default errorHandler(withRouter(withStyles(useStyles)(NewBlog)));

@@ -18,6 +18,7 @@ import PublishDialogue from '../../components/publish_modal';
 import fetch from 'isomorphic-unfetch';
 import { parseCookies } from 'nookies';
 import PropTypes from 'prop-types';
+import errorHandler from '../../components/errorHandler';
 
 
 const SimpleMDE = dynamic(import('react-simplemde-editor'), { ssr: false });
@@ -341,4 +342,4 @@ NewBlog.propTypes = {
   authorization: PropTypes.string
 };
 
-export default withRouter(withStyles(useStyles)(NewBlog));
+export default errorHandler(withRouter(withStyles(useStyles)(NewBlog)));

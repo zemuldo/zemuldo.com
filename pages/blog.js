@@ -13,6 +13,7 @@ import { parseCookies } from 'nookies';
 import Head from 'next/head';
 import PropTypes from 'prop-types';
 import CustomLink from '../components/link';
+import errorHandler from '../components/errorHandler';
 
 const api_url = process.env.API_URL;
 
@@ -213,4 +214,4 @@ Blog.propTypes = {
   featurePost: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(Blog);
+export default errorHandler(withStyles(styles)(Blog));
