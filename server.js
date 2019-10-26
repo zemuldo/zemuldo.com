@@ -8,6 +8,14 @@ const path = require('path');
 
 require('dotenv-flow').config();
 
+async function log_path(req) {
+  const _path = `Serving:: ${req.originalUrl.split('?')[0]}`.slice(0, 1000);
+  if (_path.includes('/site-stories/')) return;
+  if (_path.includes('/static/')) return;
+  if (_path.includes('/_next/')) return;
+  return logger.info(`${_path}FOR::${req.headers['remote_addr'] || req.connection.remoteAddress || 'Unknown-IP'} OR ${req.proxy_add_x_forwarded_for || 'Non-Proxy-Source'}`);
+}
+
 const prepSiteStories = (data) => {
   const $ = cheerio.load(data);
   $('head').prepend('<meta name="twitter:card" content="summary_large_image" />');
@@ -40,7 +48,7 @@ router.get('/site-stories', (req, res) => {
   });
 });
 
-router.get('/', (req, res)=>{
+router.get('/', (req, res) => {
   return handle(req, res);
 });
 
@@ -55,12 +63,12 @@ app.prepare().then(() => {
 
   const server = express();
 
+  server.use('/', router);
+
   server.use('*', (req, _res, next) => {
-    if (process.env.NODE_ENV === 'production') logger.info(`Serving:::: ${req.url}`);
+    if (process.env.NODE_ENV !== 'production') log_path(req);
     next();
   });
-
-  server.use('/', router);
 
   server.get('*', (req, res) => {
     return handle(req, res);
