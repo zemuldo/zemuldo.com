@@ -1,12 +1,17 @@
 version: '3.7'
 services:
-    site-ui:
+    site-ui-dev:
+        build:
+            context: ./
+            dockerfile: ./.docker/Dockerfile.development
+        command: npm run dev
+        environment: 
+            NODE_ENV: development
+        env_file:
+            - .env.development
         restart: always
         volumes:
             - .:/app
         ports:
             - "3000:3000"
         container_name: ui
-        image: zemuldo/site-ui
-        labels:
-        - com.centurylinklabs.watchtower.enable=true
