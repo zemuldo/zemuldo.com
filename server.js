@@ -66,7 +66,7 @@ app.prepare().then(() => {
   server.use('/', router);
 
   server.use('*', (req, _res, next) => {
-    if (process.env.NODE_ENV !== 'production') log_path(req);
+    log_path(req);
     next();
   });
 
