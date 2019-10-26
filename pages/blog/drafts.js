@@ -19,6 +19,7 @@ import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import Head from 'next/head';
+import Router from 'next/router';
 
 
 const api_url = process.env.API_URL;
@@ -138,7 +139,7 @@ export default function Drafts({ drafts, authorization }) {
              
             }
             {data[0] && data.map(draft => (
-              <Grid item key={draft._id} xs={12} sm={6} md={4}>
+              <Grid item key={draft._id} xs={12} sm={6} md={6}>
                 <Card className={classes.card}>
                   <CardMedia
                     className={classes.cardMedia}
