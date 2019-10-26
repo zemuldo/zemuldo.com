@@ -1,6 +1,6 @@
 version: '3.7'
 services:
-    ui:
+    site-ui:
         restart: always
         volumes:
             - .:/app
@@ -10,9 +10,3 @@ services:
         image: zemuldo/site-ui
         labels:
         - com.centurylinklabs.watchtower.enable=true
-
-    watchtower:
-        image: v2tec/watchtower
-        volumes:
-            - /var/run/docker.sock:/var/run/docker.sock
-        restart: always
