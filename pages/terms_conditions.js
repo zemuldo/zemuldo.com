@@ -1,8 +1,9 @@
 import React from 'react';
 import { Container } from '@material-ui/core';
 import Head from 'next/head';
+import errorHandler from '../components/errorHandler';
 
-export default function TermsConditions() {
+function TermsConditions() {
   return (
     <Container maxWidth="sm" >
       <Head>
@@ -30,3 +31,5 @@ export default function TermsConditions() {
 
   );
 }
+
+export default errorHandler(TermsConditions);

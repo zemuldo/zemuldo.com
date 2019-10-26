@@ -9,10 +9,11 @@ import '../components/journey/journey.css';
 import Footer from '../components/footer';
 import { parseCookies } from 'nookies';
 import PropTypes from 'prop-types';
+import errorHandler from '../components/errorHandler';
 
 const api_url = process.env.API_URL;
 
-export default function DeveloperStory({authorization}) {
+function DeveloperStory({authorization}) {
   return (
     <React.Fragment>
       <Head>
@@ -56,3 +57,5 @@ DeveloperStory.getInitialProps = async (ctx) => {
 
   return { authorization };
 };
+
+export default errorHandler(DeveloperStory);

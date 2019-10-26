@@ -1,8 +1,9 @@
 import React from 'react';
 import { Container } from '@material-ui/core';
 import Head from 'next/head';
+import errorHandler from '../components/errorHandler';
 
-export default function CookiePolicy() {
+function CookiePolicy() {
   return (
     <Container maxWidth="sm" >
       <Head>
@@ -110,3 +111,5 @@ export default function CookiePolicy() {
 
   );
 }
+
+export default errorHandler(CookiePolicy);

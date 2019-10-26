@@ -19,6 +19,7 @@ import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import Head from 'next/head';
+import errorHandler from '../../components/errorHandler';
 
 
 const api_url = process.env.API_URL;
@@ -64,7 +65,7 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-export default function Drafts({ drafts, authorization }) {
+function Drafts({ drafts, authorization }) {
   const classes = useStyles();
 
   const [data, setDrafts] = useState(drafts);
@@ -179,6 +180,8 @@ Drafts.propTypes = {
 Drafts.getInitialProps = async (ctx) => {
   const { authorization } = parseCookies(ctx);
 
+  if (!authorization) return {statusCode: 401};
+
   const draftRes = await fetch(`${api_url}/post/draft`, {
     method: 'get',
     headers: { authorization, 'Accept': 'application/json', 'Content-Type': 'application/json' }
@@ -192,3 +195,5 @@ Drafts.getInitialProps = async (ctx) => {
   }
   return { drafts: data, authorization };
 };
+
+export default errorHandler(Drafts);

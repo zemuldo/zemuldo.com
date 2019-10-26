@@ -1,8 +1,9 @@
 import React from 'react';
 import { Container } from '@material-ui/core';
 import Head from 'next/head';
+import errorHandler from '../components/errorHandler';
 
-export default function PrivacyPolicy() {
+function PrivacyPolicy() {
   return (
     <Container maxWidth="sm" >
       <Head>
@@ -23,3 +24,5 @@ export default function PrivacyPolicy() {
 
   );
 }
+
+export default errorHandler(PrivacyPolicy);
