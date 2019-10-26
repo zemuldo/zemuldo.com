@@ -34,7 +34,7 @@ export default function Blogs({ posts, _infiniteScroll }) {
     <Grid container spacing={4}>
       {posts.map(post => (
         <Grid style={{ height: 'auto !important' }} item key={post._id} xs={12} md={6}>
-          <CustomLink href={`/blog/post/${post._id}`}>
+          <CustomLink href={`/blog/${post.title.split(' ').join('-')}@${post._id}`}>
             <CardActionArea component="div" >
               <Card className={classes.card}>
                 <div className={classes.cardDetails}>

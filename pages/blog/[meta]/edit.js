@@ -1,8 +1,8 @@
 import React from 'react';
 import Container from '@material-ui/core/Container';
 import { withStyles } from '@material-ui/core/styles';
-import Footer from '../../../../components/footer';
-import Menu from '../../../../components/blog/menu';
+import Footer from '../../../components/footer';
+import Menu from '../../../components/blog/menu';
 import marked from 'marked';
 import dynamic from 'next/dynamic';
 import Head from 'next/head';
@@ -10,13 +10,13 @@ import Link from 'next/link';
 import TextField from '@material-ui/core/TextField';
 import Grid from '@material-ui/core/Grid';
 import 'easymde/dist/easymde.min.css';
-import Tags from '../../../../components/tags';
+import Tags from '../../../components/tags';
 import { parseCookies } from 'nookies';
 import Router, { withRouter } from 'next/router';
 import SaveIcon from '@material-ui/icons/Save';
 import Avatar from '@material-ui/core/Avatar';
 import PublishIcon from '@material-ui/icons/Publish';
-import PublishDialogue from '../../../../components/publish_modal';
+import PublishDialogue from '../../../components/publish_modal';
 import fetch from 'isomorphic-unfetch';
 import PropTypes from 'prop-types';
 
@@ -41,7 +41,7 @@ const JoinNow = () => (
             <div className="row">
               <div style={{ marginTop: '30%' }} className="header-section">
                 <div className="header-frame">
-                  <Link href={'/blog/login?redirectTo=/blog/write/new'} >
+                  <Link href={'/blog/login?redirectTo=/blog/new'} >
                     <a style={{ fontSize: '24px' }} className="color-6">
                       <u>Click here to login</u>
                     </a>
@@ -162,6 +162,9 @@ class EditBlog extends React.Component {
   static async getInitialProps(ctx) {
     const { authorization } = parseCookies(ctx);
     const { meta } = ctx.query;
+    const _meta = meta.split('@');
+    const metaLength = _meta.length;
+    const __meta = _meta[metaLength-1] || _meta[0];
     const loinState = {
       loggingIn: !!ctx.query.token
     };
@@ -169,7 +172,7 @@ class EditBlog extends React.Component {
     if (authorization) {
       authorized = true;
     }
-    const res = await fetch(`${api_url}/post/${meta}`);
+    const res = await fetch(`${api_url}/post/${__meta}`);
     const data = await res.json();
     return {
       ...loinState,
@@ -225,7 +228,7 @@ class EditBlog extends React.Component {
     if (res.status !== 200) return alert('Action failed');
     const data = await res.json();
     if (parseInt(res.status, 10) === 200) localStorage.removeItem(`state_${this.props.post._id}`);
-    Router.push(`/blog/post/${data.post._id}`);
+    Router.push(`/blog/${data.post._id}`);
     this.handleClosePublishDialogue();
   }
 

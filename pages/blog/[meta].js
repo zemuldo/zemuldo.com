@@ -1,8 +1,8 @@
 import React from 'react';
 import Container from '@material-ui/core/Container';
 import { withStyles } from '@material-ui/core/styles';
-import Footer from '../../../components/footer';
-import Menu from '../../../components/blog/menu';
+import Footer from '../../components/footer';
+import Menu from '../../components/blog/menu';
 import marked, {Renderer} from 'marked';
 import dynamic from 'next/dynamic';
 import Head from 'next/head';
@@ -89,7 +89,10 @@ class Blog extends React.Component {
   static async getInitialProps(ctx) {
     const { authorization } = parseCookies(ctx);
     const { meta } = ctx.query;
-    const res = await fetch(`${api_url}/post/${meta}`);
+    const _meta = meta.split('@');
+    const metaLength = _meta.length;
+    const __meta = _meta[metaLength-1] || _meta[0];
+    const res = await fetch(`${api_url}/post/${__meta}`);
     const data = await res.json();
     let user;
     if (authorization) {
@@ -158,7 +161,7 @@ class Blog extends React.Component {
             <Menu authorization={authorization}>
               {
                 this.props.authorization &&
-              <Link href={`/blog/post/${post._id}/edit`}>
+              <Link href={`/blog/${post._id}/edit`}>
                 <Avatar className={classes.greenAvatar}>
                   <EditIcon />
                 </Avatar>

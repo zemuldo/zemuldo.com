@@ -154,7 +154,7 @@ export default function Drafts({ drafts, authorization }) {
                     </Typography>
                   </CardContent>
                   <CardActions>
-                    <CustomLink href={`/blog/write/draft/${draft._id}`}>
+                    <CustomLink href={`/blog/draft/${draft._id}`}>
                       Edit Now
                     </CustomLink>
                     <Button onClick={() => switchDeleteModal(draft._id)} style={{ color: 'red' }} size="small" color="primary">

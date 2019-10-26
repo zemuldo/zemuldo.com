@@ -46,7 +46,7 @@ Array [
             </div>
           </a>
           <a
-            href="/blog/login?redirectTo=/blog/write/new"
+            href="/blog/login?redirectTo=/blog/new"
             onClick={[Function]}
           >
             <div
@@ -248,7 +248,7 @@ Array [
             </div>
           </a>
           <a
-            href="/blog/login?redirectTo=/blog/write/new"
+            href="/blog/login?redirectTo=/blog/new"
             onClick={[Function]}
           >
             <div
@@ -268,7 +268,7 @@ Array [
             </div>
           </a>
           <a
-            href="/blog/write/new"
+            href="/blog/new"
             onClick={[Function]}
           >
             <div
@@ -762,7 +762,7 @@ Array [
             </div>
           </a>
           <a
-            href="/blog/login?redirectTo=/blog/write/new"
+            href="/blog/login?redirectTo=/blog/new"
             onClick={[Function]}
           >
             <div
@@ -2168,7 +2168,7 @@ Array [
             </div>
           </a>
           <a
-            href="/blog/login?redirectTo=/blog/write/new"
+            href="/blog/login?redirectTo=/blog/new"
             onClick={[Function]}
           >
             <div

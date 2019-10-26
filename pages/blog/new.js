@@ -1,20 +1,20 @@
 import React from 'react';
 import Container from '@material-ui/core/Container';
 import { withStyles } from '@material-ui/core/styles';
-import Footer from '../../../components/footer';
-import Menu from '../../../components/blog/menu';
+import Footer from '../../components/footer';
+import Menu from '../../components/blog/menu';
 import marked from 'marked';
 import dynamic from 'next/dynamic';
 import Head from 'next/head';
 import TextField from '@material-ui/core/TextField';
 import Grid from '@material-ui/core/Grid';
 import 'easymde/dist/easymde.min.css';
-import Tags from '../../../components/tags';
+import Tags from '../../components/tags';
 import Router, { withRouter } from 'next/router';
 import SaveIcon from '@material-ui/icons/Save';
 import Avatar from '@material-ui/core/Avatar';
 import PublishIcon from '@material-ui/icons/Publish';
-import PublishDialogue from '../../../components/publish_modal';
+import PublishDialogue from '../../components/publish_modal';
 import fetch from 'isomorphic-unfetch';
 import { parseCookies } from 'nookies';
 import PropTypes from 'prop-types';
@@ -135,7 +135,7 @@ class NewBlog extends React.Component {
 
   componentDidMount() {
     const {authorization} = this.props;
-    if (!authorization) window.location = '/blog/login?redirectTo=/blog/write/new';
+    if (!authorization) window.location = '/blog/login?redirectTo=/blog/new';
 
     const draft = localStorage.getItem('currentDraft');
     if (draft) {
@@ -175,9 +175,8 @@ class NewBlog extends React.Component {
     });
 
     const data =  await res.json();
-    localStorage.removeItem(`state_${data._id}`);
-
-    Router.push(`/blog/write/draft/${data._id}`);
+    localStorage.removeItem('currentDraft');
+    Router.push(`/blog/draft/${data._id}`);
   }
 
   handleOpenPublishDialogue = () => this.setState({ publishDialogueOpen: true })
@@ -198,7 +197,7 @@ class NewBlog extends React.Component {
     const data = await res.json();
     if (parseInt(res.status, 10) !== 200) return alert(data[0].errorMessage);
     localStorage.removeItem('currentDraft');
-    Router.push(`/blog/post/${data.post._id}`);
+    Router.push(`/blog/${data.post._id}`);
     this.handleClosePublishDialogue();
   }
 
