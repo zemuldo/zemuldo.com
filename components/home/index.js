@@ -35,8 +35,8 @@ export default function Home() {
                     <h2 style={{ fontSize: '26px' }}>Software Engineer</h2>
                     <hr />
                     <h3 className="font-c-cn-m">
-                      Currently being awesome at <a href="https://safeboda.com" target="_blank" rel="noopener noreferrer">SafeBoda</a> and formely at
-                      <a href='https://hackerbay.io/' target="_blank" rel="noopener noreferrer"> HackerBay Inc. </a>
+                      Currently being awesome at <a className="color-6" href="https://safeboda.com" target="_blank" rel="noopener noreferrer">SafeBoda</a> and formely at
+                      <a className="color-6" href='https://hackerbay.io/' target="_blank" rel="noopener noreferrer"> HackerBay Inc. </a>
                     </h3>
                     <h4 style={{ fontSize: '26px' }} className="color-orange">Nairobi, Kenya</h4>
                     <h4 style={{ marginTop: '30px', fontSize: '1.8em' }} className="color-6 font-c-cn-m">
