@@ -207,7 +207,6 @@ class Blog extends React.Component {
 }
 
 Blog.propTypes = {
-  posts: PropTypes.array.isRequired,
   classes: PropTypes.object.isRequired,
   authorization: PropTypes.oneOfType([PropTypes.string, PropTypes.oneOf([null])]),
   user: PropTypes.object,
