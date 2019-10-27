@@ -12,16 +12,16 @@ export default function HeaderElements () {
       <meta name="url" content="https://zemuldo.com" />
       <meta name="copyright" content="Zemuldo" />
       <meta name="robots" content="index,follow" />
-      <link rel="shortcut icon" href="/static/images/favicon/fav.png" />
+      <link rel="shortcut icon" href="/static/images/favicon/rounded-me.png" />
       <link rel="apple-touch-icon" sizes="144x144" type="image/x-icon" href="/static/images/favicon/apple-touch-icon.png" />
       <link rel="stylesheet" type="text/css" href="/static/css/plugin.css" />
       <link rel="stylesheet" type="text/css" href="/static/css/style.css" />
-      <meta name="twitter:card" content="https://zemuldo.com/static/images/favicon/fav.png" />
+      <meta name="twitter:card" content="https://zemuldo.com/static/images/logo/black.jpp" />
       <meta name="twitter:site" content="@zemuldo" />
       <meta name="twitter:title" content="Danstan Onyango - Software Engineering, ML, AI & IOT enthusiast" />
       <meta name="twitter:description" content="The official site for Zemyldo,  Danstan Otieno Onyango, a Self-Taught Software Engineer." />
       <meta name="twitter:creator" content="@zemuldo" />
-      <meta name="twitter:image" content="https://zemuldo.com/static/images/favicon/fav.png" />
+      <meta name="twitter:image" content="https://zemuldo.com/static/images/logo/black.jpp" />
       <meta name="twitter:domain" content="https://zemuldo.com" />
       <meta name="keywords" content="zemuldo, danstan, danstan onyango, danstan otieno onyango, developer, engineer, software developer, software engineer, software developer nairobi, software engineer nairobi, linux, nodejs, software, zemuldo.com, programming, coder, nodejs, elixir, software engineer in nairobi, software developer in nairobi, top software engineers in kenya, elixir software engineer developer, nodejs engineer developer" />
     </React.Fragment>
