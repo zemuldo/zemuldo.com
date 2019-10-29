@@ -8,7 +8,6 @@ import { withStyles } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
 import Link from '../link';
 import NewIcon from '@material-ui/icons/NoteAdd';
-import AddCircleOutlineIcon from '@material-ui/icons/AddCircleOutline';
 
 const api_url = process.env.API_URL;
 
@@ -154,15 +153,6 @@ class Menu extends React.Component{
             <Avatar className={classes.greenAvatar} src='/static/images/draft.png'>
             </Avatar>
           </Link>
-          }
-
-          {
-            path !=='/blog/new' && !user &&
-              <Link href={'/blog/login?redirectTo=/blog/new'}>
-                <Avatar className={classes.greenAvatar}>
-                  <AddCircleOutlineIcon />
-                </Avatar>
-              </Link>
           }
           {
             path !=='/blog/new' && this.props.authorization &&
