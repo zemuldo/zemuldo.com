@@ -19,7 +19,7 @@ import fetch from 'isomorphic-unfetch';
 import { parseCookies } from 'nookies';
 import PropTypes from 'prop-types';
 import Notification from '../../../components/notification';
-import errorHandler from '../../../components/entry';
+import Entry from '../../../components/entry';
 
 
 const SimpleMDE = dynamic(import('react-simplemde-editor'), { ssr: false });
@@ -401,4 +401,4 @@ NewBlog.propTypes = {
   draft: PropTypes.object.isRequired
 };
 
-export default errorHandler(withRouter(withStyles(useStyles)(NewBlog)));
+export default Entry(withRouter(withStyles(useStyles)(NewBlog)));

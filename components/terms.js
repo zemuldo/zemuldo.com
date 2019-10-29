@@ -32,9 +32,9 @@ export default function AcceptTerms({accepted_terms}) {
         <Container style={{ padding: '12px 5px 12px 5px', color: 'white' }} maxWidth="md">
           <span>
               By using this site, you acknowledge that you have read and understand the
-            <a className='color-black' target="_blank" rel="noopener noreferrer" href='/cookie_policy'> Cookie Policy</a>,
-            <a target="_blank" rel="noopener noreferrer" href='/privacy_policy'> Privacy Policy</a>, and the
-            <a target="_blank" rel="noopener noreferrer" href='/terms_conditions'> Terms. </a>
+            <a className='color-black' target="_blank" rel="noopener noreferrer" href='/cookie-policy'> Cookie Policy</a>,
+            <a target="_blank" rel="noopener noreferrer" href='/privacy-policy'> Privacy Policy</a>, and the
+            <a target="_blank" rel="noopener noreferrer" href='/terms-and-conditions'> Terms. </a>
           </span>
           <a href={null} style={{color: 'white'}} onClick={agreedToTerms} > Close </a>
         </Container>

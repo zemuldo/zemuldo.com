@@ -52,8 +52,8 @@ router.get('/', (req, res) => {
   return handle(req, res);
 });
 
-router.use('/robot.txt', async (_req, res) =>{
-  return res.sendFile(`${path.join(__dirname, '/static/robot.txt')}`);
+router.use('/robots.txt', async (_req, res) =>{
+  return res.sendFile(`${path.join(__dirname, '/static/robots.txt')}`);
 });
 router.use('/sitemap.xml', async (req, res) =>{
   return res.sendFile(`${path.join(__dirname, '/static/sitemap.xml')}`);
