@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container } from '@material-ui/core';
 import Head from 'next/head';
-import errorHandler from '../components/errorHandler';
+import errorHandler from '../components/entry';
 
 function TermsConditions() {
   return (

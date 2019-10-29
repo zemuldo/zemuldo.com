@@ -182,7 +182,7 @@ class Menu extends React.Component{
 Menu.propTypes = {
   router: PropTypes.object,
   classes: PropTypes.object,
-  children: PropTypes.array,
+  children: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
   user: PropTypes.object,
   authorization: PropTypes.oneOfType([PropTypes.string, PropTypes.oneOf([null])])
 };

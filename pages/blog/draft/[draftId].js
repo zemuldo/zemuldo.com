@@ -19,7 +19,7 @@ import fetch from 'isomorphic-unfetch';
 import { parseCookies } from 'nookies';
 import PropTypes from 'prop-types';
 import Notification from '../../../components/notification';
-import errorHandler from '../../../components/errorHandler';
+import errorHandler from '../../../components/entry';
 
 
 const SimpleMDE = dynamic(import('react-simplemde-editor'), { ssr: false });

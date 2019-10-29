@@ -1,6 +1,6 @@
 {
   "name": "zemuldo.com",
-  "version": "4.0.0",
+  "version": "4.1.0",
   "private": true,
   "dependencies": {
     "@material-ui/core": "latest",
@@ -47,7 +47,7 @@
     "analyze": "BUNDLE_ANALYZE=true next build",
     "storybook": "start-storybook -p 9001 -s ./ -c .storybook",
     "build-storybook": "build-storybook -c .storybook -o .stories --quiet",
-    "test": "NODE_ENV=test jest",
+    "test": "NODE_ENV=test GITHUB_SHA=94d077c24 VERSION=0.0.1 BRANCH=develop jest",
     "test:watch": "NODE_ENV=test jest --watch"
   },
   "devDependencies": {

@@ -9,7 +9,7 @@ import '../components/journey/journey.css';
 import Footer from '../components/footer';
 import { parseCookies } from 'nookies';
 import PropTypes from 'prop-types';
-import errorHandler from '../components/errorHandler';
+import errorHandler from '../components/entry';
 
 const api_url = process.env.API_URL;
 

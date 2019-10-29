@@ -45,7 +45,7 @@ body {
 }
 
 @media (max-width:600px) {
-    .header-section  {
+    .pages-wrapper  {
         margin-top: 20px;
     }
 }
@@ -333,7 +333,7 @@ hr:after {
         right: 5px;
     }
 
-    .version-details .branch{
+    .version-details{
         display: none;
     }
 }

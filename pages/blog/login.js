@@ -6,7 +6,7 @@ import { withRouter } from 'next/router';
 import PropTypes from 'prop-types';
 import IfLoggedIn from '../../components/IfLoggedIn';
 import PleaseWait from '../../components/please_wait';
-import errorHandler from '../../components/errorHandler';
+import errorHandler from '../../components/entry';
 
 const api_url = process.env.API_URL;
 const base_url = process.env.BASE_URL;
