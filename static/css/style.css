@@ -45,7 +45,7 @@ body {
 }
 
 @media (max-width:600px) {
-    .header-section  {
+    .pages-wrapper  {
         margin-top: 20px;
     }
 }
