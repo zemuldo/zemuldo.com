@@ -16,6 +16,12 @@ jobs:
         GPG_KEY_GRIP: ${{ secrets.GPG_KEY_GRIP }}
         GPG_KEY_PASS: ${{ secrets.GPG_KEY_PASS }}
 
+    - name: Setup Release Details
+      run: |
+          echo "GITHUB_SHA=${GITHUB_SHA}" >> .env.production
+          echo "BRANCH=${GITHUB_REF##*/}" >> .env.production
+          echo VERSION=`jq '.version' package.json` >> .env.production
+
     - name: Build and Push
       uses: zemuldo/docker-build-push@master
       env:
@@ -38,6 +44,12 @@ jobs:
         GPG_PRIVATE_KEY: ${{ secrets.GPG_PRIVATE_KEY }}
         GPG_KEY_GRIP: ${{ secrets.GPG_KEY_GRIP }}
         GPG_KEY_PASS: ${{ secrets.GPG_KEY_PASS }}
+
+    - name: Setup Release Details
+      run: |
+          echo "GITHUB_SHA=${GITHUB_SHA}" >> .env.production
+          echo "BRANCH=${GITHUB_REF##*/}" >> .env.production
+          echo VERSION=`jq '.version' package.json` >> .env.production
 
     - name: Build and Push
       uses: zemuldo/docker-build-push@master
