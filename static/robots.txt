@@ -1,3 +1,4 @@
+Sitemap: https://zemuldo.com/sitemap.xml
 User-agent: * 
 Disallow: /blog/login*
 Disallow: /blog/drafts

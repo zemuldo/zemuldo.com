@@ -19,7 +19,7 @@ import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import Head from 'next/head';
-import errorHandler from '../../components/entry';
+import Entry from '../../components/entry';
 
 
 const api_url = process.env.API_URL;
@@ -196,4 +196,4 @@ Drafts.getInitialProps = async (ctx) => {
   return { drafts: data, authorization };
 };
 
-export default errorHandler(Drafts);
+export default Entry(Drafts);

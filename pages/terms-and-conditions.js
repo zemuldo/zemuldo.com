@@ -1,13 +1,14 @@
 import React from 'react';
 import { Container } from '@material-ui/core';
 import Head from 'next/head';
-import errorHandler from '../components/entry';
+import Entry from '../components/entry';
 
 function TermsConditions() {
   return (
     <Container maxWidth="sm" >
       <Head>
-        <title>Zemuldo - Terms and Conditions</title>
+        <title>Zemuldo - Website Terms and Conditions</title>
+        <meta name="description" content="This page describes the cookie terms that applies to this website. Users of this website expected to read and understand this terms." />
       </Head>
       <div style={{color: 'white'}}>
         <h1>Terms of this Website</h1>
@@ -32,4 +33,4 @@ function TermsConditions() {
   );
 }
 
-export default errorHandler(TermsConditions);
+export default Entry(TermsConditions);

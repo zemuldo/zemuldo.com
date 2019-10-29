@@ -1,5 +1,4 @@
 import React from 'react';
-import Head from 'next/head';
 import SocialSites from './social_sites';
 import Terminal from './terminal_me';
 import CustomLink from '../link';
@@ -7,20 +6,6 @@ import CustomLink from '../link';
 export default function Home() {
   return (
     <React.Fragment>
-      <Head>
-        <title>I&apos;m Danstan ~ Zemuldo</title>
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@zemuldo" />
-        <meta name="twitter:creator" content="@zemuldo" />
-        <meta name="twitter:title" content="Danstan Onyango - Zemuldo Website" />
-        <meta name="twitter:description" content="Danstan Onyango is zemuldo. Software Engineer, Nairobi, Kenya. Passion mixed with enthusiasm and bundled together with Geekiness, served on port Awesomeness." />
-        <meta name="twitter:image" content="https://zemuldo.com/static/images/site/site_twitter_card.png" />
-        <meta property='og:title' content="I'm Danstan Onyango ~ Zemuldo" />
-        <meta property="og:image" content="https://zemuldo.com/static/images/site/site_twitter_card.png" />
-        <meta property='og:description' content='Danstan Onyango is zemuldo. Software Engineer, Nairobi, Kenya. Passion mixed with enthusiasm and bundled together with Geekiness, served on port Awesomeness.' />
-        <meta property='og:url' content='https://zemuldo.com' />
-        <meta name="description" content="Danstan Onyango is zemuldo. Software Engineer, Nairobi, Kenya. Passion mixed with enthusiasm and bundled together with Geekiness, served on port Awesomeness." />
-      </Head>
       <div
         className="home-section-background"
         data-stellar-background-ratio="0.6"

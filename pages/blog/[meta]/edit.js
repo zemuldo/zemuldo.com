@@ -19,7 +19,7 @@ import PublishIcon from '@material-ui/icons/Publish';
 import PublishDialogue from '../../../components/publish_modal';
 import fetch from 'isomorphic-unfetch';
 import PropTypes from 'prop-types';
-import errorHandler from '../../../components/entry';
+import Entry from '../../../components/entry';
 
 
 const SimpleMDE = dynamic(import('react-simplemde-editor'), { ssr: false });
@@ -375,4 +375,4 @@ EditBlog.propTypes = {
   loggingIn: PropTypes.bool
 };
 
-export default errorHandler(withRouter(withStyles(useStyles)(EditBlog)));
+export default Entry(withRouter(withStyles(useStyles)(EditBlog)));

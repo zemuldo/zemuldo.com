@@ -1,13 +1,14 @@
 import React from 'react';
 import { Container } from '@material-ui/core';
 import Head from 'next/head';
-import errorHandler from '../components/entry';
+import Entry from '../components/entry';
 
 function CookiePolicy() {
   return (
     <Container maxWidth="sm" >
       <Head>
-        <title>Zemuldo - Cookie Policy</title>
+        <title>Zemuldo - Website Cookie Policy</title>
+        <meta name="description" content="This page describes the cookie policy that applies to this website. Users of this website expected to read and understand this policy." />
       </Head>
       <div style={{color: 'white'}}>
         <h1>Cookie Policy</h1>
@@ -112,4 +113,4 @@ function CookiePolicy() {
   );
 }
 
-export default errorHandler(CookiePolicy);
+export default Entry(CookiePolicy);
