@@ -6,7 +6,7 @@ Array [
     style={
       Object {
         "alignContent": "center",
-        "backgroundColor": "black",
+        "backgroundColor": "rgb(23, 23, 23)",
         "borderTop": "solid 1px #08a6f3",
         "bottom": 0,
         "color": "white",
@@ -111,66 +111,78 @@ Array [
               </svg>
             </div>
           </a>
-          <a
-            href="/blog/login?redirectTo=/blog/new"
-            onClick={[Function]}
-          >
-            <div
-              className="MuiAvatar-root Menu-greenAvatar-360 MuiAvatar-colorDefault"
-            >
-              <svg
-                aria-hidden="true"
-                className="MuiSvgIcon-root"
-                focusable="false"
-                role="presentation"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M13 7h-2v4H7v2h4v4h2v-4h4v-2h-4V7zm-1-5C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"
-                />
-              </svg>
-            </div>
-          </a>
-          <div
-            className="MuiAvatar-root Blog-twitterAvatar-254 Blog-twitterAvatar-3 MuiAvatar-colorDefault"
-            onClick={[Function]}
-          >
-            <i
-              className="fa fa-twitter"
-            />
-          </div>
-          <div
-            className="MuiAvatar-root Blog-fbAvatar-255 Blog-fbAvatar-4 MuiAvatar-colorDefault"
-            onClick={[Function]}
-          >
-            <i
-              className="fa fa-facebook"
-            />
-          </div>
-          <div
-            className="MuiAvatar-root Blog-linkedinAvatar-256 Blog-linkedinAvatar-5 MuiAvatar-colorDefault"
-            onClick={[Function]}
-          >
-            <i
-              className="fa fa-linkedin"
-            />
-          </div>
         </div>
       </div>
     </div>
     <h1>
       How to make sure that you always succeed
     </h1>
-    <br />
     <p>
+      Posted 
       Wednesday, September 11th, 2019
     </p>
-    <button>
-      Elixir
-    </button>
-    <button>
-      Ecto
-    </button>
+    <div
+      className="blog-tags"
+    >
+      <span
+        className="blog-tags"
+        style={
+          Object {
+            "backgroundColor": "black",
+            "border": "solid 2px transparent",
+            "borderRadius": "3px",
+            "boxShadow": "0 8px 15px 0 rgba(95, 91, 95, .33)",
+            "color": "#a767f5",
+            "cursor": "pointer",
+          }
+        }
+      >
+        Elixir
+      </span>
+      <span
+        className="blog-tags"
+        style={
+          Object {
+            "backgroundColor": "black",
+            "border": "solid 2px transparent",
+            "borderRadius": "3px",
+            "boxShadow": "0 8px 15px 0 rgba(95, 91, 95, .33)",
+            "color": "#40a832",
+            "cursor": "pointer",
+          }
+        }
+      >
+        Ecto
+      </span>
+    </div>
+    <div
+      className="MuiGrid-root blog-share-buttons MuiGrid-container"
+    >
+      <div
+        className="MuiAvatar-root Blog-twitterAvatar-254 Blog-twitterAvatar-3 MuiAvatar-colorDefault"
+        onClick={[Function]}
+      >
+        <i
+          className="fa fa-twitter"
+        />
+      </div>
+      <div
+        className="MuiAvatar-root Blog-fbAvatar-255 Blog-fbAvatar-4 MuiAvatar-colorDefault"
+        onClick={[Function]}
+      >
+        <i
+          className="fa fa-facebook"
+        />
+      </div>
+      <div
+        className="MuiAvatar-root Blog-linkedinAvatar-256 Blog-linkedinAvatar-5 MuiAvatar-colorDefault"
+        onClick={[Function]}
+      >
+        <i
+          className="fa fa-linkedin"
+        />
+      </div>
+    </div>
   </div>,
   <div
     className="MuiContainer-root MuiContainer-maxWidthLg"
@@ -260,7 +272,7 @@ Array [
     style={
       Object {
         "alignContent": "center",
-        "backgroundColor": "black",
+        "backgroundColor": "rgb(23, 23, 23)",
         "borderTop": "solid 1px #08a6f3",
         "bottom": 0,
         "color": "white",
@@ -377,26 +389,6 @@ Array [
                 className="MuiAvatar-img"
                 src="/static/images/draft.png"
               />
-            </div>
-          </a>
-          <a
-            href="/blog/login?redirectTo=/blog/new"
-            onClick={[Function]}
-          >
-            <div
-              className="MuiAvatar-root Menu-greenAvatar-548 MuiAvatar-colorDefault"
-            >
-              <svg
-                aria-hidden="true"
-                className="MuiSvgIcon-root"
-                focusable="false"
-                role="presentation"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M13 7h-2v4H7v2h4v4h2v-4h4v-2h-4V7zm-1-5C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"
-                />
-              </svg>
             </div>
           </a>
           <a
@@ -856,7 +848,7 @@ Array [
     style={
       Object {
         "alignContent": "center",
-        "backgroundColor": "black",
+        "backgroundColor": "rgb(23, 23, 23)",
         "borderTop": "solid 1px #08a6f3",
         "bottom": 0,
         "color": "white",
@@ -959,26 +951,6 @@ Array [
               </svg>
             </div>
           </a>
-          <a
-            href="/blog/login?redirectTo=/blog/new"
-            onClick={[Function]}
-          >
-            <div
-              className="MuiAvatar-root Menu-greenAvatar-127 MuiAvatar-colorDefault"
-            >
-              <svg
-                aria-hidden="true"
-                className="MuiSvgIcon-root"
-                focusable="false"
-                role="presentation"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M13 7h-2v4H7v2h4v4h2v-4h4v-2h-4V7zm-1-5C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"
-                />
-              </svg>
-            </div>
-          </a>
         </div>
       </div>
     </div>
@@ -1043,7 +1015,7 @@ Array [
               onClick={[Function]}
             >
               <span>
-                Read Now 
+                Read Now
               </span>
             </a>
           </div>
@@ -1293,7 +1265,7 @@ Array [
     style={
       Object {
         "alignContent": "center",
-        "backgroundColor": "black",
+        "backgroundColor": "rgb(23, 23, 23)",
         "borderTop": "solid 1px #08a6f3",
         "bottom": 0,
         "color": "white",
@@ -1414,6 +1386,90 @@ exports[`Storyshots Home Page Footer 1`] = `
 
 exports[`Storyshots Home Page Normal 1`] = `
 Array [
+  <div
+    style={
+      Object {
+        "alignContent": "center",
+        "backgroundColor": "rgb(23, 23, 23)",
+        "borderTop": "solid 1px #08a6f3",
+        "bottom": 0,
+        "color": "white",
+        "display": "flex",
+        "margin": "auto",
+        "position": "fixed",
+        "textAlign": "center",
+        "width": "100%",
+        "zIndex": 9999,
+      }
+    }
+  >
+    <div
+      className="MuiContainer-root MuiContainer-maxWidthMd"
+      style={
+        Object {
+          "color": "white",
+          "padding": "12px 5px 12px 5px",
+        }
+      }
+    >
+      <span>
+        By using this site, you acknowledge that you have read and understand the
+        <a
+          className="color-black"
+          href="/cookie_policy"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+           Cookie Policy
+        </a>
+        ,
+        <a
+          href="/privacy_policy"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+           Privacy Policy
+        </a>
+        , and the
+        <a
+          href="/terms_conditions"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+           Terms. 
+        </a>
+      </span>
+      <a
+        href={null}
+        onClick={[Function]}
+        style={
+          Object {
+            "color": "white",
+          }
+        }
+      >
+         Close 
+      </a>
+    </div>
+  </div>,
+  <div
+    className="version-details"
+  >
+    <div>
+      @Version: 
+      0.0.1
+    </div>
+    <div>
+      @Build: 
+      94d077c24
+    </div>
+    <div
+      className="branch"
+    >
+      @Branch: 
+      develop
+    </div>
+  </div>,
   <div
     className="home-section-background"
     data-stellar-background-ratio="0.6"
@@ -1548,7 +1604,7 @@ Array [
                         "MsTransition": "all .5s ease-out",
                         "OTransition": "all .5s ease-out",
                         "WebkitTransition": "all .5s ease-out",
-                        "backgroundColor": "rgba(0, 0, 0, .85)",
+                        "backgroundColor": "rgb(23, 23, 23)",
                         "color": "#f0f0f0",
                         "fontFamily": "Consolas, \\"Courier New\\", Courier",
                         "fontSize": "1.2em",
@@ -1821,7 +1877,7 @@ Array [
     </div>
   </div>,
   <footer
-    className="makeStyles-footer-673"
+    className="makeStyles-footer-680"
   >
     <div
       className="MuiContainer-root MuiContainer-maxWidthLg"
@@ -2145,7 +2201,7 @@ exports[`Storyshots Home Page TerminalMe 1`] = `
           "MsTransition": "all .5s ease-out",
           "OTransition": "all .5s ease-out",
           "WebkitTransition": "all .5s ease-out",
-          "backgroundColor": "rgba(0, 0, 0, .85)",
+          "backgroundColor": "rgb(23, 23, 23)",
           "color": "#f0f0f0",
           "fontFamily": "Consolas, \\"Courier New\\", Courier",
           "fontSize": "1.2em",
@@ -2418,7 +2474,7 @@ Array [
     style={
       Object {
         "alignContent": "center",
-        "backgroundColor": "black",
+        "backgroundColor": "rgb(23, 23, 23)",
         "borderTop": "solid 1px #08a6f3",
         "bottom": 0,
         "color": "white",
@@ -2512,26 +2568,6 @@ Array [
               >
                 <path
                   d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"
-                />
-              </svg>
-            </div>
-          </a>
-          <a
-            href="/blog/login?redirectTo=/blog/new"
-            onClick={[Function]}
-          >
-            <div
-              className="MuiAvatar-root Menu-greenAvatar-859 MuiAvatar-colorDefault"
-            >
-              <svg
-                aria-hidden="true"
-                className="MuiSvgIcon-root"
-                focusable="false"
-                role="presentation"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M13 7h-2v4H7v2h4v4h2v-4h4v-2h-4V7zm-1-5C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"
                 />
               </svg>
             </div>
