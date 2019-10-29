@@ -37,7 +37,7 @@ const handle = app.getRequestHandler();
 
 const router = express();
 
-router.get('/site-stories', (req, res) => {
+router.get('/site-stories', (_req, res) => {
   fs.readFile(path.join(__dirname + '/.stories/index.html'), 'utf8', async function (err, data) {
 
     if (err) res.redirect('/');
@@ -52,6 +52,12 @@ router.get('/', (req, res) => {
   return handle(req, res);
 });
 
+router.use('/robot.txt', async (_req, res) =>{
+  return res.sendFile(`${path.join(__dirname, '/static/robot.txt')}`);
+});
+router.use('/sitemap.xml', async (req, res) =>{
+  return res.sendFile(`${path.join(__dirname, '/static/sitemap.xml')}`);
+});
 router.use('/blog/static', express.static('static'));
 router.use('/site-stories/static', express.static(path.join(__dirname, 'static')));
 router.use('/site-stories/', express.static(path.join(__dirname, '.stories')));
