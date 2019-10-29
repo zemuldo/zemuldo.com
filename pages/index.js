@@ -8,8 +8,8 @@ function Index() {
     <React.Fragment>
       <div className='version-details'>
           <div>@Version: {process.env.VERSION}</div>
-          <div>@Build: {process.env.BUILD.slice(0, 9)}</div>
-          <div className='branch'>@Branch: {process.env.RUNNING_BRANCH}</div>
+          <div>@Build: {process.env.GITHUB_SHA.slice(0, 9)}</div>
+          <div className='branch'>@Branch: {process.env.BRANCH}</div>
         </div>
       <Home/>
       <Footer/>
