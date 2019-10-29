@@ -19,7 +19,7 @@ const classes = {
   },
   text_body: {
     height: 'auto',
-    backgroundColor: 'rgba(0, 0, 0, .85)',
+    backgroundColor: 'rgb(23, 23, 23)',
     padding: '10px',
     color: '#f0f0f0',
     textShadow: '#000 0 1px 0',
