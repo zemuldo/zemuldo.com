@@ -25,17 +25,7 @@ jobs:
         GPG_PRIVATE_KEY: ${{ secrets.GPG_PRIVATE_KEY }}
         GPG_KEY_GRIP: ${{ secrets.GPG_KEY_GRIP }}
         GPG_KEY_PASS: ${{ secrets.GPG_KEY_PASS }}
-    - name: Setup Release Details
-      run: |
-          touch .env.production
-          echo API_URL=${{ secrets.PROD_API_URL }} >> .env.production
-          echo BASE_URL=${{ secrets.PROD_BASE_URL }} >> .env.production
-          echo BASE_URL_DOMAIN=${{ secrets.PROD_BASE_URL_DOMAIN }} >> .env.production
-          echo GA_TRACKING_ID=${{ secrets.PROD_GA_TRACKING_ID }} >> .env.production
-          echo "GITHUB_SHA=${GITHUB_SHA}" >> .env.production
-          echo "BRANCH=${GITHUB_REF##*/}" >> .env.production
-          echo VERSION=`jq '.version' package.json` >> .env.production
-          
+
     - name: npm install, build, and test
       env:
         CI: true
@@ -44,8 +34,6 @@ jobs:
         BASE_URL_DOMAIN: ${{ secrets.BASE_URL_DOMAIN }}
         API_URL: ${{ secrets.API_URL }}
         GA_TRACKING_ID: ${{ secrets.GA_TRACKING_ID }}
-      run: |
-        cat .env.development
-        
+      run: |        
         npm install
         npm test  -- --u 
