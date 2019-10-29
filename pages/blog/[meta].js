@@ -168,7 +168,23 @@ class Blog extends React.Component {
                 </Avatar>
               </Link>
               }
-              <Avatar onClick={this.tweetShare} className={classes.twitterAvatar}>
+            </Menu>
+            
+          </Grid>
+          <h1>{post.title}</h1>
+          
+          <p>Posted {format(new Date(post.createdAt), 'PPPP')}</p>
+          <div className='blog-tags'>
+          
+          {
+            post.tags.map(tag => 
+            <span className='blog-tags' style={{color: tag.color, boxShadow: '0 8px 15px 0 rgba(95, 91, 95, .33)', backgroundColor: 'black',  border: `solid 2px transparent`, borderRadius: '3px', cursor: 'pointer'}} key={tag.value}>
+            {tag.label} 
+            </span>)
+          }
+          </div>
+          <Grid className='blog-share-buttons' container>
+          <Avatar onClick={this.tweetShare} className={classes.twitterAvatar}>
                 <i className="fa fa-twitter" />
               </Avatar>
               <Avatar onClick={this.fbShare} className={classes.fbAvatar}>
@@ -177,15 +193,7 @@ class Blog extends React.Component {
               <Avatar onClick={this.linkedInShare} className={classes.linkedinAvatar}>
                 <i className="fa fa-linkedin" />
               </Avatar>
-            </Menu>
-            
           </Grid>
-          <h1>{post.title}</h1>
-          <br />
-          <p>{format(new Date(post.createdAt), 'PPPP')}</p>
-          {
-            post.tags.map(tag => <button key={tag.value}>{tag.label}</button>)
-          }
         </Container>
         <Container>
           <img

@@ -155,15 +155,6 @@ class Menu extends React.Component{
             </Avatar>
           </Link>
           }
-
-          {
-            path !=='/blog/new' && !user &&
-              <Link href={'/blog/login?redirectTo=/blog/new'}>
-                <Avatar className={classes.greenAvatar}>
-                  <AddCircleOutlineIcon />
-                </Avatar>
-              </Link>
-          }
           {
             path !=='/blog/new' && this.props.authorization &&
               <Link href="/blog/new">

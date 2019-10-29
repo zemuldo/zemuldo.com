@@ -34,3 +34,17 @@ h1, h2, h3, h3 {
     background-color: #d9cfce;
     border-radius: 3px;
 }
+
+.blog-tags {
+   margin-left: -10px;
+}
+.blog-tags span{
+    padding-left: 2px;
+    padding-right: 2px;
+    display:inline-block;
+    margin: 5px 8px 0px 8px;
+}
+
+.blog-share-buttons {
+    margin-left: -10px;
+ }
