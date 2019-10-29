@@ -16,9 +16,9 @@ jobs:
     steps:
       - name: Setup Release Details
         run: |
-            echo "GITHUB_SHA=${GITHUB_SHA}" >> text.txt
-            echo "BRANCH=${GITHUB_REF##*/}" >> text.txt
-            echo VERSION="cat package.json | json select '.version'" >> text.txt
+            echo "GITHUB_SHA=${GITHUB_SHA}" >> test.txt
+            echo "BRANCH=${GITHUB_REF##*/}" >> test.txt
+            echo VERSION="cat package.json | json select '.version'" >> test.txt
             cat test.txt
     # - uses: actions/checkout@v1
     # - name: Use Node.js ${{ matrix.node-version }}
