@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export default function MouseOverPopover({ children, _hoverText, _color }) {
+export default function MouseOverPopover({ children }) {
   const [anchorEl, setAnchorEl] = React.useState(null);
 
   function handlePopoverOpen(event) {
@@ -43,7 +43,5 @@ export default function MouseOverPopover({ children, _hoverText, _color }) {
 }
 
 MouseOverPopover.propTypes = {
-  children: PropTypes.object.isRequired,
-  _hoverText: PropTypes.string.isRequired,
-  _color: PropTypes.string.isRequired
+  children: PropTypes.object.isRequired
 };
