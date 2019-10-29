@@ -333,7 +333,7 @@ hr:after {
         right: 5px;
     }
 
-    .version-details .branch{
+    .version-details{
         display: none;
     }
 }
