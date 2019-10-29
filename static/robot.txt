@@ -1,0 +1,4 @@
+User-agent: * 
+Disallow: /blog/login*
+Disallow: /blog/drafts
+Disallow: /blog/draft*
