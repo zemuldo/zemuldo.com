@@ -210,7 +210,11 @@ ul {
     content: "\f23a"
 }
 
+.fa-instagram:before {
+    content: "\f16d";
+}
+
 .fa-arrow-circle-right:before{
-    content:"\f0a9"
+    content:"\f0a9";
 }
 .fa-share-alt-square:before{content:"\f1e1"}
