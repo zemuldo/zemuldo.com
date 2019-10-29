@@ -37,7 +37,7 @@ const colourStyles = {
     borderTop: '1px solid transparent',
     borderRight: '1px solid transparent'
   }),
-  menu: provided => ({ ...provided, zIndex: 9999 , backgroundColor: 'black', opacity: '0.9'}),
+  menu: provided => ({ ...provided, zIndex: 9999 , backgroundColor: 'rgb(23, 23, 23', }),
   input: styles => ({ ...styles, ...dot() }),
   placeholder: styles => ({ ...styles, ...dot(), color: '#08a6f3', fontWeight: '2em' }),
   singleValue: (styles, { data }) => ({ ...styles, ...dot(data.color) }),
