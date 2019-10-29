@@ -1,8 +1,9 @@
 import React from 'react';
 import Home from '../components/home/index';
 import Footer from '../components/footer';
+import errorHandler from '../components/errorHandler';
 
-export default function Index() {
+function Index() {
   return (
     <React.Fragment>
       <Home/>
@@ -10,3 +11,5 @@ export default function Index() {
     </React.Fragment>
   );
 }
+
+export default errorHandler(Index);
