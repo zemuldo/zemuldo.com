@@ -13,7 +13,7 @@ import { parseCookies } from 'nookies';
 import Head from 'next/head';
 import PropTypes from 'prop-types';
 import CustomLink from '../components/link';
-import errorHandler from '../components/errorHandler';
+import errorHandler from '../components/entry';
 
 const api_url = process.env.API_URL;
 

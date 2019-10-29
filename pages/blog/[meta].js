@@ -15,7 +15,7 @@ import EditIcon from '@material-ui/icons/Edit';
 import Grid from '@material-ui/core/Grid';
 import PropTypes from 'prop-types';
 import 'easymde/dist/easymde.min.css';
-import errorHandler from '../../components/errorHandler';
+import errorHandler from '../../components/entry';
 
 const Highlight = dynamic(import('react-highlight'));
 

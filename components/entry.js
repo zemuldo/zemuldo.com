@@ -20,34 +20,34 @@ export default Component => {
       }
       return <React.Fragment>
         <div className='version-details'>
-        <div>
-          <span className='color-1'>@</span>
-          <span className='color-6'>Version</span>
-          {' : '}
-          <span className='color-orange'> {process.env.VERSION}</span>
-        </div>
-        <div>
-          <span className='color-1'>@</span>
-          <span className='color-6'>Build</span>
-          {' : '}
-          <span className='color-orange'>
-            {process.env.GITHUB_SHA.slice(0, 9)}
-          </span>
-        </div>
-        <div className='branch'>
-          <span className='color-1'>@</span>
-          <span className='color-6'>
+          <div>
+            <span className='color-1'>@</span>
+            <span className='color-6'>Version</span>
+            {' : '}
+            <span className='color-orange'> {process.env.VERSION}</span>
+          </div>
+          <div>
+            <span className='color-1'>@</span>
+            <span className='color-6'>Build</span>
+            {' : '}
+            <span className='color-orange'>
+              {process.env.GITHUB_SHA.slice(0, 9)}
+            </span>
+          </div>
+          <div className='branch'>
+            <span className='color-1'>@</span>
+            <span className='color-6'>
             Branch
-          </span>
-          {' : '}
-          <span className='color-orange'>
-            {process.env.BRANCH}
-          </span>
+            </span>
+            {' : '}
+            <span className='color-orange'>
+              {process.env.BRANCH}
+            </span>
+          </div>
         </div>
-      </div>
         <div className='pages-wrapper'>
-        <AcceptTerms accepted_terms= {this.props.accepted_terms} />
-        <Component {...this.props} />
+          <AcceptTerms accepted_terms= {this.props.accepted_terms} />
+          <Component {...this.props} />
         </div>
       </React.Fragment>
       ;

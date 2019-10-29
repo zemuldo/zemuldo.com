@@ -1,7 +1,7 @@
 import React from 'react';
 import Home from '../components/home/index';
 import Footer from '../components/footer';
-import errorHandler from '../components/errorHandler';
+import errorHandler from '../components/entry';
 
 function Index() {
   return (
