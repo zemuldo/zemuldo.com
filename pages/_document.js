@@ -33,28 +33,6 @@ class MyDocument extends Document {
         <body>
           <Main />
           <NextScript />
-          <script type="application/ld+json">
-            {
-              {
-                '@context': 'http://schema.org',
-                '@type': 'Organization',
-                'name': 'Example',
-                'url': 'https://www.example.com',
-                'sameAs': [
-                  'https://twitter.com/exazemuldomple',
-                  'https://www.facebook.com/zemuldo',
-                  'https://www.instagram.com/zemuldo/?hl=en'
-                ],
-                'address': {
-                  '@type': 'PostalAddress',
-                  'streetAddress': '123 Example Street',
-                  'addressRegion': 'CA',
-                  'postalCode': '94040',
-                  'addressCountry': 'US'
-                }
-              }
-            }
-          </script>
         </body>
       </html>
     );
