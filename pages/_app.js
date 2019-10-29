@@ -36,7 +36,6 @@ class MyApp extends App {
     return (
       <Container>
         <Head>
-          <title>I&apos;m Danstan ~ Zemuldo</title>
           <link rel='stylesheet' type='text/css' href='/static/css/nprogress.css' />
         </Head>
         <ThemeProvider theme={theme}>
