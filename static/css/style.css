@@ -44,6 +44,12 @@ body {
     flex-wrap: wrap
 }
 
+@media (max-width:600px) {
+    .header-section  {
+        margin-top: 20px;
+    }
+}
+
 .header-frame {
     max-width: 350px
 }
@@ -304,4 +310,30 @@ hr:after {
 
 .center-content{
     margin: 10% auto;
+}
+
+.version-details{
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    z-index: 999;
+    color: white;
+    font-size: 12px;
+}
+
+@media only screen and (min-width: 1100px){
+    .version-details{
+        right: 170px;
+    }
+}
+
+@media only screen and (max-width: 800px){
+    .version-details{
+        top: 3px;
+        right: 5px;
+    }
+
+    .version-details .branch{
+        display: none;
+    }
 }

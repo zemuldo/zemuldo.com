@@ -15,32 +15,26 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
-    - name: Setup Release Details
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - name: Git-Crypt Unlock
+      uses: zemuldo/git-crypt-unlock@master
+      env: 
+        GPG_PRIVATE_KEY: ${{ secrets.GPG_PRIVATE_KEY }}
+        GPG_KEY_GRIP: ${{ secrets.GPG_KEY_GRIP }}
+        GPG_KEY_PASS: ${{ secrets.GPG_KEY_PASS }}
+    - name: npm install, build, and test
+      env:
+        CI: true
+        BASE_URL: ${{ secrets.BASE_URL }}
+        PORT: ${{ secrets.PORT }}
+        BASE_URL_DOMAIN: ${{ secrets.BASE_URL_DOMAIN }}
+        API_URL: ${{ secrets.API_URL }}
+        GA_TRACKING_ID: ${{ secrets.GA_TRACKING_ID }}
       run: |
-          echo "GITHUB_SHA=${GITHUB_SHA}" >> test.txt
-          echo "BRANCH=${GITHUB_REF##*/}" >> test.txt
-          echo VERSION=`jq '.version' package.json` >> test.txt
-          cat test.txt
-    # - name: Use Node.js ${{ matrix.node-version }}
-    #   uses: actions/setup-node@v1
-    #   with:
-    #     node-version: ${{ matrix.node-version }}
-    # - name: Git-Crypt Unlock
-    #   uses: zemuldo/git-crypt-unlock@master
-    #   env: 
-    #     GPG_PRIVATE_KEY: ${{ secrets.GPG_PRIVATE_KEY }}
-    #     GPG_KEY_GRIP: ${{ secrets.GPG_KEY_GRIP }}
-    #     GPG_KEY_PASS: ${{ secrets.GPG_KEY_PASS }}
-    # - name: npm install, build, and test
-    #   env:
-    #     CI: true
-    #     BASE_URL: ${{ secrets.BASE_URL }}
-    #     PORT: ${{ secrets.PORT }}
-    #     BASE_URL_DOMAIN: ${{ secrets.BASE_URL_DOMAIN }}
-    #     API_URL: ${{ secrets.API_URL }}
-    #     GA_TRACKING_ID: ${{ secrets.GA_TRACKING_ID }}
-    #   run: |
-    #     cat .env.development
+        cat .env.development
         
-    #     npm install
-    #     npm test  -- --u 
+        npm install
+        npm test  -- --u 
