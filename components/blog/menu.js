@@ -8,7 +8,6 @@ import { withStyles } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
 import Link from '../link';
 import NewIcon from '@material-ui/icons/NoteAdd';
-import AddCircleOutlineIcon from '@material-ui/icons/AddCircleOutline';
 
 const api_url = process.env.API_URL;
 
