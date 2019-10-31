@@ -2,6 +2,7 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.BUNDLE_ANALYZE === 'true'
 });
 const withCSS = require('@zeit/next-css');
+const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin")
 require('dotenv').config();
 const path = require('path');
 const Dotenv = require('dotenv-webpack');
@@ -11,6 +12,13 @@ module.exports = withCSS(withBundleAnalyzer({
     API_URL: process.env.API_URL
   },
   webpack: (config) => {
+    if (config.mode === 'production') {
+      if (Array.isArray(config.optimization.minimizer)) {
+        config.optimization.minimizer.push(
+          new OptimizeCSSAssetsPlugin({})
+        );
+      }
+    }
     config.plugins = config.plugins || [];
 
     config.plugins = [
