@@ -48,7 +48,7 @@ MyDocument.getInitialProps = async ctx => {
       path: '/',
     });
   }
-  
+
   const sheets = new ServerStyleSheets();
   const originalRenderPage = ctx.renderPage;
 

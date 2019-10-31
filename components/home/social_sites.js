@@ -67,11 +67,11 @@ const socials = [
     color: 'blue'
   },
   {
-    href: 'mailto:danstan@zemuldo.com',
-    className: 'facebook',
-    icon_className: 'fa fa-envelope-o color-gmail',
-    hoverText: 'E-Mail',
-    color: '#D44638'
+    href: 'https://instagram.com/zemuldo',
+    className: 'instagram',
+    icon_className: 'fa fa-instagram color-instagram',
+    hoverText: 'Instagram',
+    color: 'blue'
   }
 ];
 
