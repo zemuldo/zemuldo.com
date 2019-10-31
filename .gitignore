@@ -16,3 +16,4 @@ yarn-error.log*
 /.next
 bundles
 /.stories
+.env.production
