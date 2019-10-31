@@ -96,7 +96,7 @@ Array [
           By using this site, you acknowledge that you have read and understand the
           <a
             className="color-black"
-            href="/cookie_policy"
+            href="/cookie-policy"
             rel="noopener noreferrer"
             target="_blank"
           >
@@ -104,7 +104,7 @@ Array [
           </a>
           ,
           <a
-            href="/privacy_policy"
+            href="/privacy-policy"
             rel="noopener noreferrer"
             target="_blank"
           >
@@ -112,7 +112,7 @@ Array [
           </a>
           , and the
           <a
-            href="/terms_conditions"
+            href="/terms-and-conditions"
             rel="noopener noreferrer"
             target="_blank"
           >
@@ -427,7 +427,7 @@ Array [
           By using this site, you acknowledge that you have read and understand the
           <a
             className="color-black"
-            href="/cookie_policy"
+            href="/cookie-policy"
             rel="noopener noreferrer"
             target="_blank"
           >
@@ -435,7 +435,7 @@ Array [
           </a>
           ,
           <a
-            href="/privacy_policy"
+            href="/privacy-policy"
             rel="noopener noreferrer"
             target="_blank"
           >
@@ -443,7 +443,7 @@ Array [
           </a>
           , and the
           <a
-            href="/terms_conditions"
+            href="/terms-and-conditions"
             rel="noopener noreferrer"
             target="_blank"
           >
@@ -1068,7 +1068,7 @@ Array [
           By using this site, you acknowledge that you have read and understand the
           <a
             className="color-black"
-            href="/cookie_policy"
+            href="/cookie-policy"
             rel="noopener noreferrer"
             target="_blank"
           >
@@ -1076,7 +1076,7 @@ Array [
           </a>
           ,
           <a
-            href="/privacy_policy"
+            href="/privacy-policy"
             rel="noopener noreferrer"
             target="_blank"
           >
@@ -1084,7 +1084,7 @@ Array [
           </a>
           , and the
           <a
-            href="/terms_conditions"
+            href="/terms-and-conditions"
             rel="noopener noreferrer"
             target="_blank"
           >
@@ -1550,7 +1550,7 @@ Array [
           By using this site, you acknowledge that you have read and understand the
           <a
             className="color-black"
-            href="/cookie_policy"
+            href="/cookie-policy"
             rel="noopener noreferrer"
             target="_blank"
           >
@@ -1558,7 +1558,7 @@ Array [
           </a>
           ,
           <a
-            href="/privacy_policy"
+            href="/privacy-policy"
             rel="noopener noreferrer"
             target="_blank"
           >
@@ -1566,7 +1566,7 @@ Array [
           </a>
           , and the
           <a
-            href="/terms_conditions"
+            href="/terms-and-conditions"
             rel="noopener noreferrer"
             target="_blank"
           >
@@ -1740,7 +1740,7 @@ Array [
           By using this site, you acknowledge that you have read and understand the
           <a
             className="color-black"
-            href="/cookie_policy"
+            href="/cookie-policy"
             rel="noopener noreferrer"
             target="_blank"
           >
@@ -1748,7 +1748,7 @@ Array [
           </a>
           ,
           <a
-            href="/privacy_policy"
+            href="/privacy-policy"
             rel="noopener noreferrer"
             target="_blank"
           >
@@ -1756,7 +1756,7 @@ Array [
           </a>
           , and the
           <a
-            href="/terms_conditions"
+            href="/terms-and-conditions"
             rel="noopener noreferrer"
             target="_blank"
           >
@@ -2165,13 +2165,13 @@ Array [
                 >
                   <li>
                     <a
-                      className="facebook"
-                      href="mailto:danstan@zemuldo.com"
+                      className="instagram"
+                      href="https://instagram.com/zemuldo"
                       rel="noopener noreferrer"
                       target="_blank"
                     >
                       <i
-                        className="fa fa-envelope-o color-gmail"
+                        className="fa fa-instagram color-instagram"
                       />
                     </a>
                   </li>
@@ -2464,13 +2464,13 @@ exports[`Storyshots Home Page Social Sites 1`] = `
       >
         <li>
           <a
-            className="facebook"
-            href="mailto:danstan@zemuldo.com"
+            className="instagram"
+            href="https://instagram.com/zemuldo"
             rel="noopener noreferrer"
             target="_blank"
           >
             <i
-              className="fa fa-envelope-o color-gmail"
+              className="fa fa-instagram color-instagram"
             />
           </a>
         </li>
@@ -2871,7 +2871,7 @@ Array [
           By using this site, you acknowledge that you have read and understand the
           <a
             className="color-black"
-            href="/cookie_policy"
+            href="/cookie-policy"
             rel="noopener noreferrer"
             target="_blank"
           >
@@ -2879,7 +2879,7 @@ Array [
           </a>
           ,
           <a
-            href="/privacy_policy"
+            href="/privacy-policy"
             rel="noopener noreferrer"
             target="_blank"
           >
@@ -2887,7 +2887,7 @@ Array [
           </a>
           , and the
           <a
-            href="/terms_conditions"
+            href="/terms-and-conditions"
             rel="noopener noreferrer"
             target="_blank"
           >

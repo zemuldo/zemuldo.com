@@ -67,7 +67,7 @@ const socials = [
     color: 'blue'
   },
   {
-    href: 'https://instagram.com/zemuldo',
+    href: 'https://www.instagram.com/zemuldo',
     className: 'instagram',
     icon_className: 'fa fa-instagram color-instagram',
     hoverText: 'Instagram',

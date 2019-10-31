@@ -16,12 +16,24 @@ export default function Home() {
               <div className="row">
                 <div className="header-section">
                   <div style={{ paddingLeft: '5px' }} className="header-frame">
-                    <h1 className="color-6">Danstan Onyango</h1>
+                    <div itemProp="founder" itemScope itemType="http://schema.org/Person">
+                      <h1  itemProp="name" className="color-6">Danstan Onyango</h1>
+                    </div>
                     <h2 style={{ fontSize: '26px' }}>Software Engineer</h2>
                     <hr />
                     <h3 className="font-c-cn-m">
-                      Currently being awesome at <a className="color-6" href="https://safeboda.com" target="_blank" rel="noopener noreferrer">SafeBoda</a> and formely at
-                      <a className="color-6" href='https://hackerbay.io/' target="_blank" rel="noopener noreferrer"> HackerBay Inc. </a>
+                      <span>Currently being awesome at</span>
+                      <span itemScope itemProp="organization" itemType="http://schema.org/Organization"> 
+                        <a itemProp="url" className="color-6" href="https://safeboda.com" target="_blank" rel="noopener noreferrer">
+                          <span itemProp="name"> SafeBoda </span>
+                        </a>
+                      </span>
+                      <span> and formely at </span>
+                      <span itemScope itemProp="organization" itemType="http://schema.org/Organization"> 
+                        <a itemProp="url" className="color-6" href="https://hackerbay.io/" target="_blank" rel="noopener noreferrer">
+                          <span itemProp="name"> HackerBay Inc. </span>
+                        </a>
+                      </span>
                     </h3>
                     <h4 style={{ fontSize: '26px' }} className="color-orange">Nairobi, Kenya</h4>
                     <h4 style={{ marginTop: '30px', fontSize: '1.8em' }} className="color-6 font-c-cn-m">
