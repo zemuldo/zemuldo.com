@@ -2,7 +2,6 @@ import React from 'react';
 import Document, { Head, Main, NextScript } from 'next/document';
 import { ServerStyleSheets } from '@material-ui/styles';
 import { setCookie } from 'nookies';
-import socials from '../components/tools/socials.json';
 
 const GA_TRACKING_ID = process.env.GA_TRACKING_ID;
 
