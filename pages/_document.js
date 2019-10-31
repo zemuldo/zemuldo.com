@@ -34,7 +34,6 @@ class MyDocument extends Document {
         <body>
           <Main />
           <NextScript />
-
           <script type="application/ld+json"> {JSON.stringify(socials)} </script>
         </body>
       </html>
