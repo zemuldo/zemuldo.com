@@ -33,8 +33,6 @@ class MyDocument extends Document {
         <body>
           <Main />
           <NextScript />
-
-          <script type="application/ld+json">{{'@context': 'http://schema.org','@type': 'Organization','name': 'Zemuldo','url': 'http://www.zemuldo.com','address': '24136-00100, Nairobi, Kenya','sameAs': ['https://www.instagram.com/zemuldo','https://web.facebook.com/zemuldo']}}</script>
         </body>
       </html>
     );
