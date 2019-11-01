@@ -37,7 +37,7 @@ export default function AcceptTerms({accepted_terms}) {
             <a style={{marginLeft: '8px', marginRight: '8px'}} target="_blank" rel="noopener noreferrer" href='/privacy-policy'> Privacy Policy</a>, and the
             <a style={{marginLeft: '8px', marginRight: '8px'}} target="_blank" rel="noopener noreferrer" href='/terms-and-conditions'> Terms. </a>
           </span>
-          <a style={{marginLeft: '10px'}} href={null} style={{color: 'white'}} onClick={agreedToTerms} > Close </a>
+          <a style={{marginLeft: '10px', color: 'white'}} href={null} onClick={agreedToTerms} > Close </a>
         </Container>
 
       </div> 
