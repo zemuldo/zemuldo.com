@@ -82,7 +82,7 @@ export default function SocialSites () {
         <h3 className='color-1'>
         Find me on
         </h3>
-        <div style={{marginTop: '20px'}}>
+        <div className='social-icon-wrapper'>
           <MouseOverPopover color='orange' hoverText="Blog">
             <li>
               <CustomLink href="/blog">

@@ -7,7 +7,7 @@ const classes = {
     margin: 'auto',
     display: 'block',
     maxWidth: '700px',
-    minHeight: '244px',
+    minHeight: '200px',
     borderRadius: '10px',
     clear: 'both',
     overflow: 'hidden',
