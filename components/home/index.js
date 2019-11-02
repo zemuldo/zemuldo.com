@@ -20,8 +20,8 @@ export default function Home() {
                       <h1 itemProp="name" className="color-6">Danstan Onyango</h1>
                     </div>
                     <h2 style={{ fontSize: '26px' }}>Software Engineer</h2>
-                    <hr />
-                    <h3 className="font-c-cn-m" style={{lineHeight: '150%', marginTop: '-10px'}}>
+                    <hr style={{marginTop: '-10px'}}/>
+                    <h3 className="font-c-cn-m" style={{lineHeight: '150%', marginTop: '-5px'}}>
                       <span>Currently being awesome at</span>
                       <b itemScope itemProp="organization" itemType="http://schema.org/Organization">
                         <a itemProp="url" className="color-6" href="https://safeboda.com" target="_blank" rel="noopener noreferrer">
