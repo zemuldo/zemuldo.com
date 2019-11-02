@@ -16,15 +16,5 @@ export default function VersionInfo(){
         {process.env.GITHUB_SHA.slice(0, 9)}
       </span>
     </div>
-    <div className='branch'>
-      <span className='color-1'>@</span>
-      <span className='color-6'>
-      Branch
-      </span>
-      {' : '}
-      <span className='color-orange'>
-        {process.env.BRANCH}
-      </span>
-    </div>
   </div>);
 }
