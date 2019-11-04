@@ -24,8 +24,7 @@ export default function AcceptTerms({accepted_terms}) {
         color: 'white',
         display: 'flex',
         width: '100%',
-        backgroundColor: 'transparent',
-        opacity: 0.8,
+        backgroundColor: 'rgb(23, 23, 23)',
         margin: 'auto',
         alignContent: 'center',
         borderTop: 'solid 1px #08a6f3'
