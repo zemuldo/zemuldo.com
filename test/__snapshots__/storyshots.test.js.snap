@@ -42,26 +42,6 @@ Array [
         94d077c24
       </span>
     </div>
-    <div
-      className="branch"
-    >
-      <span
-        className="color-1"
-      >
-        @
-      </span>
-      <span
-        className="color-6"
-      >
-        Branch
-      </span>
-       : 
-      <span
-        className="color-orange"
-      >
-        develop
-      </span>
-    </div>
   </div>,
   <div
     className="pages-wrapper"
@@ -88,6 +68,7 @@ Array [
         style={
           Object {
             "color": "white",
+            "fontSize": "14px",
             "padding": "12px 5px 12px 5px",
           }
         }
@@ -106,6 +87,12 @@ Array [
           <a
             href="/privacy-policy"
             rel="noopener noreferrer"
+            style={
+              Object {
+                "marginLeft": "8px",
+                "marginRight": "8px",
+              }
+            }
             target="_blank"
           >
              Privacy Policy
@@ -114,6 +101,12 @@ Array [
           <a
             href="/terms-and-conditions"
             rel="noopener noreferrer"
+            style={
+              Object {
+                "marginLeft": "8px",
+                "marginRight": "8px",
+              }
+            }
             target="_blank"
           >
              Terms. 
@@ -125,6 +118,7 @@ Array [
           style={
             Object {
               "color": "white",
+              "marginLeft": "10px",
             }
           }
         >
@@ -160,7 +154,7 @@ Array [
               onClick={[Function]}
             >
               <div
-                className="MuiAvatar-root Menu-greenAvatar-360 MuiAvatar-colorDefault"
+                className="MuiAvatar-root Menu-greenAvatar-351 MuiAvatar-colorDefault"
               >
                 <svg
                   aria-hidden="true"
@@ -223,7 +217,7 @@ Array [
         className="MuiGrid-root blog-share-buttons MuiGrid-container"
       >
         <div
-          className="MuiAvatar-root Blog-twitterAvatar-254 Blog-twitterAvatar-3 MuiAvatar-colorDefault"
+          className="MuiAvatar-root Blog-twitterAvatar-245 Blog-twitterAvatar-3 MuiAvatar-colorDefault"
           onClick={[Function]}
         >
           <i
@@ -231,7 +225,7 @@ Array [
           />
         </div>
         <div
-          className="MuiAvatar-root Blog-fbAvatar-255 Blog-fbAvatar-4 MuiAvatar-colorDefault"
+          className="MuiAvatar-root Blog-fbAvatar-246 Blog-fbAvatar-4 MuiAvatar-colorDefault"
           onClick={[Function]}
         >
           <i
@@ -239,7 +233,7 @@ Array [
           />
         </div>
         <div
-          className="MuiAvatar-root Blog-linkedinAvatar-256 Blog-linkedinAvatar-5 MuiAvatar-colorDefault"
+          className="MuiAvatar-root Blog-linkedinAvatar-247 Blog-linkedinAvatar-5 MuiAvatar-colorDefault"
           onClick={[Function]}
         >
           <i
@@ -286,7 +280,7 @@ Array [
       </Dynamic>
     </div>
     <footer
-      className="makeStyles-footer-383"
+      className="makeStyles-footer-374"
     >
       <div
         className="MuiContainer-root MuiContainer-maxWidthLg"
@@ -373,26 +367,6 @@ Array [
         94d077c24
       </span>
     </div>
-    <div
-      className="branch"
-    >
-      <span
-        className="color-1"
-      >
-        @
-      </span>
-      <span
-        className="color-6"
-      >
-        Branch
-      </span>
-       : 
-      <span
-        className="color-orange"
-      >
-        develop
-      </span>
-    </div>
   </div>,
   <div
     className="pages-wrapper"
@@ -419,6 +393,7 @@ Array [
         style={
           Object {
             "color": "white",
+            "fontSize": "14px",
             "padding": "12px 5px 12px 5px",
           }
         }
@@ -437,6 +412,12 @@ Array [
           <a
             href="/privacy-policy"
             rel="noopener noreferrer"
+            style={
+              Object {
+                "marginLeft": "8px",
+                "marginRight": "8px",
+              }
+            }
             target="_blank"
           >
              Privacy Policy
@@ -445,6 +426,12 @@ Array [
           <a
             href="/terms-and-conditions"
             rel="noopener noreferrer"
+            style={
+              Object {
+                "marginLeft": "8px",
+                "marginRight": "8px",
+              }
+            }
             target="_blank"
           >
              Terms. 
@@ -456,6 +443,7 @@ Array [
           style={
             Object {
               "color": "white",
+              "marginLeft": "10px",
             }
           }
         >
@@ -492,7 +480,7 @@ Array [
               onClick={[Function]}
             >
               <div
-                className="MuiAvatar-root Menu-greenAvatar-548 MuiAvatar-colorDefault"
+                className="MuiAvatar-root Menu-greenAvatar-539 MuiAvatar-colorDefault"
               >
                 <svg
                   aria-hidden="true"
@@ -512,7 +500,7 @@ Array [
               onClick={[Function]}
             >
               <div
-                className="MuiAvatar-root Menu-greenAvatar-548"
+                className="MuiAvatar-root Menu-greenAvatar-539"
               >
                 <img
                   className="MuiAvatar-img"
@@ -525,7 +513,7 @@ Array [
               onClick={[Function]}
             >
               <div
-                className="MuiAvatar-root Menu-greenAvatar-548 MuiAvatar-colorDefault"
+                className="MuiAvatar-root Menu-greenAvatar-539 MuiAvatar-colorDefault"
               >
                 <svg
                   aria-hidden="true"
@@ -541,7 +529,7 @@ Array [
               </div>
             </a>
             <div
-              className="MuiAvatar-root EditBlog-greenAvatar-421 EditBlog-greenAvatar-1 MuiAvatar-colorDefault"
+              className="MuiAvatar-root EditBlog-greenAvatar-412 EditBlog-greenAvatar-1 MuiAvatar-colorDefault"
               onClick={[Function]}
             >
               <svg
@@ -557,7 +545,7 @@ Array [
               </svg>
             </div>
             <div
-              className="MuiAvatar-root EditBlog-greenAvatar-421 EditBlog-greenAvatar-1 MuiAvatar-colorDefault"
+              className="MuiAvatar-root EditBlog-greenAvatar-412 EditBlog-greenAvatar-1 MuiAvatar-colorDefault"
               onClick={[Function]}
             >
               <svg
@@ -576,20 +564,21 @@ Array [
         </div>
       </div>
       <div
-        className="EditBlog-root-422 EditBlog-root-2"
+        className="EditBlog-root-413 EditBlog-root-2"
       >
         <div
           className="MuiFormControl-root MuiTextField-root MuiFormControl-fullWidth"
         >
           <label
-            className="MuiFormLabel-root MuiInputLabel-root EditBlog-floatingLabelFocusStyle-423 EditBlog-floatingLabelFocusStyle-3 MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-filled"
-            data-shrink={true}
+            className="MuiFormLabel-root MuiInputLabel-root EditBlog-floatingLabelFocusStyle-414 EditBlog-floatingLabelFocusStyle-3 MuiInputLabel-formControl MuiInputLabel-animated"
+            data-shrink={false}
             htmlFor="postTitle"
+            id="postTitle-label"
           >
             Post Title
           </label>
           <div
-            className="MuiInputBase-root MuiInput-root MuiInput-underline EditBlog-materialInput-424 EditBlog-materialInput-4 MuiInputBase-fullWidth MuiInput-fullWidth MuiInputBase-formControl MuiInput-formControl"
+            className="MuiInputBase-root MuiInput-root MuiInput-underline EditBlog-materialInput-415 EditBlog-materialInput-4 MuiInputBase-fullWidth MuiInput-fullWidth MuiInputBase-formControl MuiInput-formControl"
             onClick={[Function]}
           >
             <input
@@ -597,6 +586,7 @@ Array [
               className="MuiInputBase-input MuiInput-input"
               disabled={false}
               id="postTitle"
+              onAnimationStart={[Function]}
               onBlur={[Function]}
               onChange={[Function]}
               onFocus={[Function]}
@@ -618,14 +608,15 @@ Array [
             className="MuiFormControl-root MuiTextField-root MuiFormControl-fullWidth"
           >
             <label
-              className="MuiFormLabel-root MuiInputLabel-root EditBlog-floatingLabelFocusStyle-423 EditBlog-floatingLabelFocusStyle-3 MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-filled"
-              data-shrink={true}
+              className="MuiFormLabel-root MuiInputLabel-root EditBlog-floatingLabelFocusStyle-414 EditBlog-floatingLabelFocusStyle-3 MuiInputLabel-formControl MuiInputLabel-animated"
+              data-shrink={false}
               htmlFor="coverPhotoUrl"
+              id="coverPhotoUrl-label"
             >
               Cover Photo Url
             </label>
             <div
-              className="MuiInputBase-root MuiInput-root MuiInput-underline EditBlog-materialInput-424 EditBlog-materialInput-4 MuiInputBase-fullWidth MuiInput-fullWidth MuiInputBase-formControl MuiInput-formControl"
+              className="MuiInputBase-root MuiInput-root MuiInput-underline EditBlog-materialInput-415 EditBlog-materialInput-4 MuiInputBase-fullWidth MuiInput-fullWidth MuiInputBase-formControl MuiInput-formControl"
               onClick={[Function]}
             >
               <input
@@ -633,6 +624,7 @@ Array [
                 className="MuiInputBase-input MuiInput-input"
                 disabled={false}
                 id="coverPhotoUrl"
+                onAnimationStart={[Function]}
                 onBlur={[Function]}
                 onChange={[Function]}
                 onFocus={[Function]}
@@ -843,17 +835,18 @@ Array [
       </div>
       <br />
       <div
-        className="MuiFormControl-root MuiTextField-root EditBlog-materialTextArea-425 EditBlog-materialTextArea-5 MuiFormControl-marginNormal MuiFormControl-fullWidth"
+        className="MuiFormControl-root MuiTextField-root EditBlog-materialTextArea-416 EditBlog-materialTextArea-5 MuiFormControl-marginNormal MuiFormControl-fullWidth"
       >
         <label
-          className="MuiFormLabel-root MuiInputLabel-root EditBlog-floatingLabelFocusStyle-423 EditBlog-floatingLabelFocusStyle-3 MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
-          data-shrink={true}
+          className="MuiFormLabel-root MuiInputLabel-root EditBlog-floatingLabelFocusStyle-414 EditBlog-floatingLabelFocusStyle-3 MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
+          data-shrink={false}
           htmlFor="description"
+          id="description-label"
         >
           Post Description
         </label>
         <div
-          className="MuiInputBase-root MuiOutlinedInput-root EditBlog-materialTextArea-425 EditBlog-materialTextArea-5 MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-multiline MuiOutlinedInput-multiline"
+          className="MuiInputBase-root MuiOutlinedInput-root EditBlog-materialTextArea-416 EditBlog-materialTextArea-5 MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-multiline MuiOutlinedInput-multiline"
           onClick={[Function]}
         >
           <textarea
@@ -861,6 +854,7 @@ Array [
             className="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputMultiline MuiOutlinedInput-inputMultiline"
             disabled={false}
             id="description"
+            onAnimationStart={[Function]}
             onBlur={[Function]}
             onChange={[Function]}
             onFocus={[Function]}
@@ -870,7 +864,7 @@ Array [
           />
           <fieldset
             aria-hidden={true}
-            className="PrivateNotchedOutline-root-640 MuiOutlinedInput-notchedOutline"
+            className="PrivateNotchedOutline-root-633 MuiOutlinedInput-notchedOutline"
             style={
               Object {
                 "paddingLeft": 8,
@@ -878,10 +872,10 @@ Array [
             }
           >
             <legend
-              className="PrivateNotchedOutline-legend-641"
+              className="PrivateNotchedOutline-legend-634"
               style={
                 Object {
-                  "width": 0,
+                  "width": 0.01,
                 }
               }
             >
@@ -927,7 +921,7 @@ And – more importantly – never compromise your potential to grow due to self
       />
     </div>
     <footer
-      className="makeStyles-footer-642"
+      className="makeStyles-footer-635"
     >
       <div
         className="MuiContainer-root MuiContainer-maxWidthLg"
@@ -1014,26 +1008,6 @@ Array [
         94d077c24
       </span>
     </div>
-    <div
-      className="branch"
-    >
-      <span
-        className="color-1"
-      >
-        @
-      </span>
-      <span
-        className="color-6"
-      >
-        Branch
-      </span>
-       : 
-      <span
-        className="color-orange"
-      >
-        develop
-      </span>
-    </div>
   </div>,
   <div
     className="pages-wrapper"
@@ -1060,6 +1034,7 @@ Array [
         style={
           Object {
             "color": "white",
+            "fontSize": "14px",
             "padding": "12px 5px 12px 5px",
           }
         }
@@ -1078,6 +1053,12 @@ Array [
           <a
             href="/privacy-policy"
             rel="noopener noreferrer"
+            style={
+              Object {
+                "marginLeft": "8px",
+                "marginRight": "8px",
+              }
+            }
             target="_blank"
           >
              Privacy Policy
@@ -1086,6 +1067,12 @@ Array [
           <a
             href="/terms-and-conditions"
             rel="noopener noreferrer"
+            style={
+              Object {
+                "marginLeft": "8px",
+                "marginRight": "8px",
+              }
+            }
             target="_blank"
           >
              Terms. 
@@ -1097,6 +1084,7 @@ Array [
           style={
             Object {
               "color": "white",
+              "marginLeft": "10px",
             }
           }
         >
@@ -1157,65 +1145,70 @@ Array [
         }
       }
     >
-      <div
-        className="MuiPaper-root MuiPaper-elevation1 Blog-mainFeaturedPost-14 Blog-mainFeaturedPost-7 MuiPaper-rounded"
-        style={
-          Object {
-            "backgroundImage": "url(https://miro.medium.com/max/1200/1*vKd5tDJmDFznrOkMh1kQGg.png)",
-          }
-        }
+      <a
+        href="/blog/how-to-make-sure-that-you-always-succeed-5d79520a3d510b0fa5ae765a"
+        onClick={[Function]}
       >
         <div
-          className="Blog-overlay-15 Blog-overlay-8"
+          className="MuiPaper-root MuiPaper-elevation1 Blog-mainFeaturedPost-14 Blog-mainFeaturedPost-7 MuiPaper-rounded"
           style={
             Object {
-              "backgroundColor": "black",
-              "opacity": 0.7,
-            }
-          }
-        />
-        <div
-          className="MuiGrid-root eph MuiGrid-container"
-          style={
-            Object {
-              "minHeight": "400px",
+              "backgroundImage": "url(https://miro.medium.com/max/1200/1*vKd5tDJmDFznrOkMh1kQGg.png)",
             }
           }
         >
           <div
-            className="MuiGrid-root MuiGrid-item MuiGrid-grid-md-6"
+            className="Blog-overlay-15 Blog-overlay-8"
+            style={
+              Object {
+                "backgroundColor": "rgb(23, 23, 23)",
+                "opacity": 0.7,
+              }
+            }
+          />
+          <div
+            className="MuiGrid-root eph MuiGrid-container"
+            style={
+              Object {
+                "minHeight": "400px",
+              }
+            }
           >
             <div
-              className="Blog-mainFeaturedPostContent-16 Blog-mainFeaturedPostContent-9"
+              className="MuiGrid-root MuiGrid-item MuiGrid-grid-md-6"
             >
-              <h1
-                className="MuiTypography-root MuiTypography-h3 MuiTypography-colorInherit MuiTypography-gutterBottom"
-                style={
-                  Object {
-                    "color": "#08a6f3",
-                    "fontFamily": "'Courier New', Courier, monospace",
+              <div
+                className="Blog-mainFeaturedPostContent-16 Blog-mainFeaturedPostContent-9"
+              >
+                <h1
+                  className="MuiTypography-root MuiTypography-h3 MuiTypography-colorInherit MuiTypography-gutterBottom"
+                  style={
+                    Object {
+                      "color": "#08a6f3",
+                      "fontFamily": "'Courier New', Courier, monospace",
+                    }
                   }
-                }
-              >
-                How to make sure that you always succeed
-              </h1>
-              <p
-                className="MuiTypography-root MuiTypography-h5 MuiTypography-colorInherit MuiTypography-paragraph"
-              >
-                The best way to ensure that you succeed is to always love what you are doing and stay positive.
-              </p>
-              <a
-                href="/blog/How-to-make-sure-that-you-always-succeed@5d79520a3d510b0fa5ae765a"
-                onClick={[Function]}
-              >
+                >
+                  How to make sure that you always succeed
+                </h1>
+                <p
+                  className="MuiTypography-root MuiTypography-h5 MuiTypography-colorInherit MuiTypography-paragraph"
+                  style={
+                    Object {
+                      "color": "white",
+                    }
+                  }
+                >
+                  The best way to ensure that you succeed is to always love what you are doing and stay positive.
+                </p>
                 <span>
                   Read Now
                 </span>
-              </a>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </a>
       <div
         className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4"
       >
@@ -1227,59 +1220,106 @@ Array [
             }
           }
         >
-          <a
-            href="/blog/How-to-use-Ecto-as-a-Query-Schema-validation-library@5d6754fefe8b7e3fc0707fce"
-            onClick={[Function]}
+          <div
+            className="MuiPaper-root MuiPaper-elevation1 makeStyles-paper-210 MuiPaper-rounded"
           >
-            <div
-              className="MuiButtonBase-root MuiCardActionArea-root"
-              onBlur={[Function]}
-              onDragLeave={[Function]}
-              onFocus={[Function]}
-              onKeyDown={[Function]}
-              onKeyUp={[Function]}
-              onMouseDown={[Function]}
-              onMouseLeave={[Function]}
-              onMouseUp={[Function]}
-              onTouchEnd={[Function]}
-              onTouchMove={[Function]}
-              onTouchStart={[Function]}
-              role="button"
-              tabIndex={0}
+            <a
+              href="/blog/how-to-use-ecto-as-a-query-schema-validation-library-5d6754fefe8b7e3fc0707fce"
+              onClick={[Function]}
             >
               <div
-                className="MuiPaper-root MuiPaper-elevation1 MuiCard-root makeStyles-card-207 MuiPaper-rounded"
+                aria-disabled={false}
+                className="MuiButtonBase-root MuiCardActionArea-root"
+                onBlur={[Function]}
+                onDragLeave={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onKeyUp={[Function]}
+                onMouseDown={[Function]}
+                onMouseLeave={[Function]}
+                onMouseUp={[Function]}
+                onTouchEnd={[Function]}
+                onTouchMove={[Function]}
+                onTouchStart={[Function]}
+                role="button"
+                tabIndex={0}
               >
                 <div
-                  className="makeStyles-cardDetails-208"
+                  className="MuiPaper-root MuiPaper-elevation1 MuiCard-root makeStyles-card-207 MuiPaper-rounded"
                 >
                   <div
-                    className="MuiCardContent-root"
+                    className="makeStyles-cardDetails-208"
                   >
-                    <h2
-                      className="MuiTypography-root MuiTypography-h5"
+                    <div
+                      className="MuiCardContent-root"
                     >
-                      How to use Ecto as a Query Schema validation library
-                    </h2>
-                    <h6
-                      className="MuiTypography-root MuiTypography-subtitle1 MuiTypography-colorTextSecondary"
-                    />
-                    <p
-                      className="MuiTypography-root MuiTypography-subtitle1 MuiTypography-paragraph"
+                      <h2
+                        className="MuiTypography-root MuiTypography-h5"
+                      >
+                        How to use Ecto as a Query Schema validation library
+                      </h2>
+                      <br />
+                      <p
+                        className="MuiTypography-root MuiTypography-body1"
+                        style={
+                          Object {
+                            "color": "white",
+                          }
+                        }
+                      >
+                        Ecto is one of the greatest libraries in the Elixir community. It comes with Phoenix together.
+                      </p>
+                    </div>
+                    <div
+                      className="MuiCardContent-root"
                     >
-                      Ecto is one of the greatest libraries in the Elixir community. It comes with Phoenix together.
-                    </p>
+                      Thursday, August 29th, 2019
+                       ~ 
+                      <span>
+                         
+                        <span
+                          className="blog-tags"
+                          style={
+                            Object {
+                              "backgroundColor": "black",
+                              "border": "solid 2px transparent",
+                              "borderRadius": "3px",
+                              "boxShadow": "0 8px 15px 0 rgba(95, 91, 95, .33)",
+                              "color": "#40a832",
+                              "cursor": "pointer",
+                            }
+                          }
+                        >
+                          NodeJS
+                        </span>
+                      </span>
+                      <span>
+                         
+                        <span
+                          className="blog-tags"
+                          style={
+                            Object {
+                              "backgroundColor": "black",
+                              "border": "solid 2px transparent",
+                              "borderRadius": "3px",
+                              "boxShadow": "0 8px 15px 0 rgba(95, 91, 95, .33)",
+                              "color": "#fcba03",
+                              "cursor": "pointer",
+                            }
+                          }
+                        >
+                          JavaCript
+                        </span>
+                      </span>
+                    </div>
                   </div>
                 </div>
+                <span
+                  className="MuiCardActionArea-focusHighlight"
+                />
               </div>
-              <span
-                className="MuiCardActionArea-focusHighlight"
-              />
-              <span
-                className="MuiTouchRipple-root"
-              />
-            </div>
-          </a>
+            </a>
+          </div>
         </div>
         <div
           className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-6"
@@ -1289,59 +1329,88 @@ Array [
             }
           }
         >
-          <a
-            href="/blog/How-to-use-Ecto-as-a-Query-Schema-validation-library@5d7951be3d510b0fa5ae7658"
-            onClick={[Function]}
+          <div
+            className="MuiPaper-root MuiPaper-elevation1 makeStyles-paper-210 MuiPaper-rounded"
           >
-            <div
-              className="MuiButtonBase-root MuiCardActionArea-root"
-              onBlur={[Function]}
-              onDragLeave={[Function]}
-              onFocus={[Function]}
-              onKeyDown={[Function]}
-              onKeyUp={[Function]}
-              onMouseDown={[Function]}
-              onMouseLeave={[Function]}
-              onMouseUp={[Function]}
-              onTouchEnd={[Function]}
-              onTouchMove={[Function]}
-              onTouchStart={[Function]}
-              role="button"
-              tabIndex={0}
+            <a
+              href="/blog/how-to-use-ecto-as-a-query-schema-validation-library-5d7951be3d510b0fa5ae7658"
+              onClick={[Function]}
             >
               <div
-                className="MuiPaper-root MuiPaper-elevation1 MuiCard-root makeStyles-card-207 MuiPaper-rounded"
+                aria-disabled={false}
+                className="MuiButtonBase-root MuiCardActionArea-root"
+                onBlur={[Function]}
+                onDragLeave={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onKeyUp={[Function]}
+                onMouseDown={[Function]}
+                onMouseLeave={[Function]}
+                onMouseUp={[Function]}
+                onTouchEnd={[Function]}
+                onTouchMove={[Function]}
+                onTouchStart={[Function]}
+                role="button"
+                tabIndex={0}
               >
                 <div
-                  className="makeStyles-cardDetails-208"
+                  className="MuiPaper-root MuiPaper-elevation1 MuiCard-root makeStyles-card-207 MuiPaper-rounded"
                 >
                   <div
-                    className="MuiCardContent-root"
+                    className="makeStyles-cardDetails-208"
                   >
-                    <h2
-                      className="MuiTypography-root MuiTypography-h5"
+                    <div
+                      className="MuiCardContent-root"
                     >
-                      How to use Ecto as a Query Schema validation library
-                    </h2>
-                    <h6
-                      className="MuiTypography-root MuiTypography-subtitle1 MuiTypography-colorTextSecondary"
-                    />
-                    <p
-                      className="MuiTypography-root MuiTypography-subtitle1 MuiTypography-paragraph"
+                      <h2
+                        className="MuiTypography-root MuiTypography-h5"
+                      >
+                        How to use Ecto as a Query Schema validation library
+                      </h2>
+                      <br />
+                      <p
+                        className="MuiTypography-root MuiTypography-body1"
+                        style={
+                          Object {
+                            "color": "white",
+                          }
+                        }
+                      >
+                        Ecto is one of the greatest libraries in the Elixir community. It comes with Phoenix together.
+                      </p>
+                    </div>
+                    <div
+                      className="MuiCardContent-root"
                     >
-                      Ecto is one of the greatest libraries in the Elixir community. It comes with Phoenix together.
-                    </p>
+                      Wednesday, September 11th, 2019
+                       ~ 
+                      <span>
+                         
+                        <span
+                          className="blog-tags"
+                          style={
+                            Object {
+                              "backgroundColor": "black",
+                              "border": "solid 2px transparent",
+                              "borderRadius": "3px",
+                              "boxShadow": "0 8px 15px 0 rgba(95, 91, 95, .33)",
+                              "color": "#fcba03",
+                              "cursor": "pointer",
+                            }
+                          }
+                        >
+                          JavaCript
+                        </span>
+                      </span>
+                    </div>
                   </div>
                 </div>
+                <span
+                  className="MuiCardActionArea-focusHighlight"
+                />
               </div>
-              <span
-                className="MuiCardActionArea-focusHighlight"
-              />
-              <span
-                className="MuiTouchRipple-root"
-              />
-            </div>
-          </a>
+            </a>
+          </div>
         </div>
         <div
           className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-6"
@@ -1351,65 +1420,112 @@ Array [
             }
           }
         >
-          <a
-            href="/blog/How-to-make-sure-that-you-always-succeed@5d79520a3d510b0fa5ae765a"
-            onClick={[Function]}
+          <div
+            className="MuiPaper-root MuiPaper-elevation1 makeStyles-paper-210 MuiPaper-rounded"
           >
-            <div
-              className="MuiButtonBase-root MuiCardActionArea-root"
-              onBlur={[Function]}
-              onDragLeave={[Function]}
-              onFocus={[Function]}
-              onKeyDown={[Function]}
-              onKeyUp={[Function]}
-              onMouseDown={[Function]}
-              onMouseLeave={[Function]}
-              onMouseUp={[Function]}
-              onTouchEnd={[Function]}
-              onTouchMove={[Function]}
-              onTouchStart={[Function]}
-              role="button"
-              tabIndex={0}
+            <a
+              href="/blog/how-to-make-sure-that-you-always-succeed-5d79520a3d510b0fa5ae765a"
+              onClick={[Function]}
             >
               <div
-                className="MuiPaper-root MuiPaper-elevation1 MuiCard-root makeStyles-card-207 MuiPaper-rounded"
+                aria-disabled={false}
+                className="MuiButtonBase-root MuiCardActionArea-root"
+                onBlur={[Function]}
+                onDragLeave={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onKeyUp={[Function]}
+                onMouseDown={[Function]}
+                onMouseLeave={[Function]}
+                onMouseUp={[Function]}
+                onTouchEnd={[Function]}
+                onTouchMove={[Function]}
+                onTouchStart={[Function]}
+                role="button"
+                tabIndex={0}
               >
                 <div
-                  className="makeStyles-cardDetails-208"
+                  className="MuiPaper-root MuiPaper-elevation1 MuiCard-root makeStyles-card-207 MuiPaper-rounded"
                 >
                   <div
-                    className="MuiCardContent-root"
+                    className="makeStyles-cardDetails-208"
                   >
-                    <h2
-                      className="MuiTypography-root MuiTypography-h5"
+                    <div
+                      className="MuiCardContent-root"
                     >
-                      How to make sure that you always succeed
-                    </h2>
-                    <h6
-                      className="MuiTypography-root MuiTypography-subtitle1 MuiTypography-colorTextSecondary"
-                    />
-                    <p
-                      className="MuiTypography-root MuiTypography-subtitle1 MuiTypography-paragraph"
+                      <h2
+                        className="MuiTypography-root MuiTypography-h5"
+                      >
+                        How to make sure that you always succeed
+                      </h2>
+                      <br />
+                      <p
+                        className="MuiTypography-root MuiTypography-body1"
+                        style={
+                          Object {
+                            "color": "white",
+                          }
+                        }
+                      >
+                        The best way to ensure that you succeed is to always love what you are doing and stay positive.
+                      </p>
+                    </div>
+                    <div
+                      className="MuiCardContent-root"
                     >
-                      The best way to ensure that you succeed is to always love what you are doing and stay positive.
-                    </p>
+                      Wednesday, September 11th, 2019
+                       ~ 
+                      <span>
+                         
+                        <span
+                          className="blog-tags"
+                          style={
+                            Object {
+                              "backgroundColor": "black",
+                              "border": "solid 2px transparent",
+                              "borderRadius": "3px",
+                              "boxShadow": "0 8px 15px 0 rgba(95, 91, 95, .33)",
+                              "color": "#a767f5",
+                              "cursor": "pointer",
+                            }
+                          }
+                        >
+                          Elixir
+                        </span>
+                      </span>
+                      <span>
+                         
+                        <span
+                          className="blog-tags"
+                          style={
+                            Object {
+                              "backgroundColor": "black",
+                              "border": "solid 2px transparent",
+                              "borderRadius": "3px",
+                              "boxShadow": "0 8px 15px 0 rgba(95, 91, 95, .33)",
+                              "color": "#40a832",
+                              "cursor": "pointer",
+                            }
+                          }
+                        >
+                          Ecto
+                        </span>
+                      </span>
+                    </div>
                   </div>
                 </div>
+                <span
+                  className="MuiCardActionArea-focusHighlight"
+                />
               </div>
-              <span
-                className="MuiCardActionArea-focusHighlight"
-              />
-              <span
-                className="MuiTouchRipple-root"
-              />
-            </div>
-          </a>
+            </a>
+          </div>
         </div>
       </div>
       <br />
     </div>
     <footer
-      className="makeStyles-footer-218"
+      className="makeStyles-footer-219"
     >
       <div
         className="MuiContainer-root MuiContainer-maxWidthLg"
@@ -1496,26 +1612,6 @@ Array [
         94d077c24
       </span>
     </div>
-    <div
-      className="branch"
-    >
-      <span
-        className="color-1"
-      >
-        @
-      </span>
-      <span
-        className="color-6"
-      >
-        Branch
-      </span>
-       : 
-      <span
-        className="color-orange"
-      >
-        develop
-      </span>
-    </div>
   </div>,
   <div
     className="pages-wrapper"
@@ -1542,6 +1638,7 @@ Array [
         style={
           Object {
             "color": "white",
+            "fontSize": "14px",
             "padding": "12px 5px 12px 5px",
           }
         }
@@ -1560,6 +1657,12 @@ Array [
           <a
             href="/privacy-policy"
             rel="noopener noreferrer"
+            style={
+              Object {
+                "marginLeft": "8px",
+                "marginRight": "8px",
+              }
+            }
             target="_blank"
           >
              Privacy Policy
@@ -1568,6 +1671,12 @@ Array [
           <a
             href="/terms-and-conditions"
             rel="noopener noreferrer"
+            style={
+              Object {
+                "marginLeft": "8px",
+                "marginRight": "8px",
+              }
+            }
             target="_blank"
           >
              Terms. 
@@ -1579,6 +1688,7 @@ Array [
           style={
             Object {
               "color": "white",
+              "marginLeft": "10px",
             }
           }
         >
@@ -1601,7 +1711,7 @@ Array [
 
 exports[`Storyshots Home Page Footer 1`] = `
 <footer
-  className="makeStyles-footer-711"
+  className="makeStyles-footer-704"
 >
   <div
     className="MuiContainer-root MuiContainer-maxWidthLg"
@@ -1686,26 +1796,6 @@ Array [
         94d077c24
       </span>
     </div>
-    <div
-      className="branch"
-    >
-      <span
-        className="color-1"
-      >
-        @
-      </span>
-      <span
-        className="color-6"
-      >
-        Branch
-      </span>
-       : 
-      <span
-        className="color-orange"
-      >
-        develop
-      </span>
-    </div>
   </div>,
   <div
     className="pages-wrapper"
@@ -1732,6 +1822,7 @@ Array [
         style={
           Object {
             "color": "white",
+            "fontSize": "14px",
             "padding": "12px 5px 12px 5px",
           }
         }
@@ -1750,6 +1841,12 @@ Array [
           <a
             href="/privacy-policy"
             rel="noopener noreferrer"
+            style={
+              Object {
+                "marginLeft": "8px",
+                "marginRight": "8px",
+              }
+            }
             target="_blank"
           >
              Privacy Policy
@@ -1758,6 +1855,12 @@ Array [
           <a
             href="/terms-and-conditions"
             rel="noopener noreferrer"
+            style={
+              Object {
+                "marginLeft": "8px",
+                "marginRight": "8px",
+              }
+            }
             target="_blank"
           >
              Terms. 
@@ -1769,6 +1872,7 @@ Array [
           style={
             Object {
               "color": "white",
+              "marginLeft": "10px",
             }
           }
         >
@@ -1803,11 +1907,18 @@ Array [
                     }
                   }
                 >
-                  <h1
-                    className="color-6"
+                  <div
+                    itemProp="founder"
+                    itemScope={true}
+                    itemType="http://schema.org/Person"
                   >
-                    Danstan Onyango
-                  </h1>
+                    <h1
+                      className="color-6"
+                      itemProp="name"
+                    >
+                      Danstan Onyango
+                    </h1>
+                  </div>
                   <h2
                     style={
                       Object {
@@ -1817,28 +1928,66 @@ Array [
                   >
                     Software Engineer
                   </h2>
-                  <hr />
+                  <hr
+                    style={
+                      Object {
+                        "marginTop": "-10px",
+                      }
+                    }
+                  />
                   <h3
                     className="font-c-cn-m"
+                    style={
+                      Object {
+                        "lineHeight": "150%",
+                        "marginTop": "-5px",
+                      }
+                    }
                   >
-                    Currently being awesome at 
-                    <a
-                      className="color-6"
-                      href="https://safeboda.com"
-                      rel="noopener noreferrer"
-                      target="_blank"
+                    <span>
+                      Currently being awesome at
+                    </span>
+                    <b
+                      itemProp="organization"
+                      itemScope={true}
+                      itemType="http://schema.org/Organization"
                     >
-                      SafeBoda
-                    </a>
-                     and formely at
-                    <a
-                      className="color-6"
-                      href="https://hackerbay.io/"
-                      rel="noopener noreferrer"
-                      target="_blank"
+                      <a
+                        className="color-6"
+                        href="https://safeboda.com"
+                        itemProp="url"
+                        rel="noopener noreferrer"
+                        target="_blank"
+                      >
+                        <span
+                          itemProp="name"
+                        >
+                           SafeBoda 
+                        </span>
+                      </a>
+                    </b>
+                    <span>
+                       and formely at 
+                    </span>
+                    <b
+                      itemProp="organization"
+                      itemScope={true}
+                      itemType="http://schema.org/Organization"
                     >
-                       HackerBay Inc. 
-                    </a>
+                      <a
+                        className="color-6"
+                        href="https://hackerbay.io/"
+                        itemProp="url"
+                        rel="noopener noreferrer"
+                        target="_blank"
+                      >
+                        <span
+                          itemProp="name"
+                        >
+                           HackerBay Inc. 
+                        </span>
+                      </a>
+                    </b>
                   </h3>
                   <h4
                     className="color-orange"
@@ -1896,7 +2045,7 @@ Array [
                         "display": "block",
                         "margin": "auto",
                         "maxWidth": "700px",
-                        "minHeight": "244px",
+                        "minHeight": "200px",
                         "overflow": "hidden",
                         "transition": "all .5s ease-out",
                       }
@@ -1940,11 +2089,7 @@ Array [
                 Find me on
               </h3>
               <div
-                style={
-                  Object {
-                    "marginTop": "20px",
-                  }
-                }
+                className="social-icon-wrapper"
               >
                 <span
                   aria-haspopup="true"
@@ -2166,7 +2311,7 @@ Array [
                   <li>
                     <a
                       className="instagram"
-                      href="https://instagram.com/zemuldo"
+                      href="https://www.instagram.com/zemuldo"
                       rel="noopener noreferrer"
                       target="_blank"
                     >
@@ -2183,7 +2328,7 @@ Array [
       </div>
     </div>
     <footer
-      className="makeStyles-footer-680"
+      className="makeStyles-footer-673"
     >
       <div
         className="MuiContainer-root MuiContainer-maxWidthLg"
@@ -2239,11 +2384,7 @@ exports[`Storyshots Home Page Social Sites 1`] = `
       Find me on
     </h3>
     <div
-      style={
-        Object {
-          "marginTop": "20px",
-        }
-      }
+      className="social-icon-wrapper"
     >
       <span
         aria-haspopup="true"
@@ -2465,7 +2606,7 @@ exports[`Storyshots Home Page Social Sites 1`] = `
         <li>
           <a
             className="instagram"
-            href="https://instagram.com/zemuldo"
+            href="https://www.instagram.com/zemuldo"
             rel="noopener noreferrer"
             target="_blank"
           >
@@ -2494,7 +2635,7 @@ exports[`Storyshots Home Page TerminalMe 1`] = `
         "display": "block",
         "margin": "auto",
         "maxWidth": "700px",
-        "minHeight": "244px",
+        "minHeight": "200px",
         "overflow": "hidden",
         "transition": "all .5s ease-out",
       }
@@ -2817,26 +2958,6 @@ Array [
         94d077c24
       </span>
     </div>
-    <div
-      className="branch"
-    >
-      <span
-        className="color-1"
-      >
-        @
-      </span>
-      <span
-        className="color-6"
-      >
-        Branch
-      </span>
-       : 
-      <span
-        className="color-orange"
-      >
-        develop
-      </span>
-    </div>
   </div>,
   <div
     className="pages-wrapper"
@@ -2863,6 +2984,7 @@ Array [
         style={
           Object {
             "color": "white",
+            "fontSize": "14px",
             "padding": "12px 5px 12px 5px",
           }
         }
@@ -2881,6 +3003,12 @@ Array [
           <a
             href="/privacy-policy"
             rel="noopener noreferrer"
+            style={
+              Object {
+                "marginLeft": "8px",
+                "marginRight": "8px",
+              }
+            }
             target="_blank"
           >
              Privacy Policy
@@ -2889,6 +3017,12 @@ Array [
           <a
             href="/terms-and-conditions"
             rel="noopener noreferrer"
+            style={
+              Object {
+                "marginLeft": "8px",
+                "marginRight": "8px",
+              }
+            }
             target="_blank"
           >
              Terms. 
@@ -2900,6 +3034,7 @@ Array [
           style={
             Object {
               "color": "white",
+              "marginLeft": "10px",
             }
           }
         >
@@ -2928,7 +3063,7 @@ Array [
               onClick={[Function]}
             >
               <div
-                className="MuiAvatar-root Menu-greenAvatar-859 MuiAvatar-colorDefault"
+                className="MuiAvatar-root Menu-greenAvatar-852 MuiAvatar-colorDefault"
               >
                 <svg
                   aria-hidden="true"
@@ -4580,7 +4715,7 @@ Array [
       </div>
     </div>
     <footer
-      className="makeStyles-footer-882"
+      className="makeStyles-footer-875"
     >
       <div
         className="MuiContainer-root MuiContainer-maxWidthLg"

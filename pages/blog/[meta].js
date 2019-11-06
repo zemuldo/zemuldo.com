@@ -3,7 +3,7 @@ import Container from '@material-ui/core/Container';
 import { withStyles } from '@material-ui/core/styles';
 import Footer from '../../components/footer';
 import Menu from '../../components/blog/menu';
-import marked, {Renderer} from 'marked';
+import marked, { Renderer } from 'marked';
 import dynamic from 'next/dynamic';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -71,11 +71,16 @@ marked.setOptions({
   breaks: true
 });
 
-renderer.link = function( href, title, text ) {
-  return '<a class="b-link" rel="noopener noreferrer" target="_blank" href="'+ href +'" title="' + (title || href) + '">' + text + '</a>';
+renderer.link = function (href, title, text) {
+  return '<a class="b-link" rel="noopener noreferrer" target="_blank" href="' + href + '" title="' + (title || href) + '">' + text + '</a>';
 };
-renderer.image = function( src, alt ) {
+renderer.image = function (src, alt) {
   return `<img class="b-img" src="${src}" alt="${alt}" />`;
+};
+
+const urlMetaIdentifier = (meta) => {
+  if (meta.includes('@')) return '@';
+  return '-';
 };
 
 class Blog extends React.Component {
@@ -90,9 +95,9 @@ class Blog extends React.Component {
   static async getInitialProps(ctx) {
     const { authorization } = parseCookies(ctx);
     const { meta } = ctx.query;
-    const _meta = meta.split('@');
+    const _meta = meta.split(urlMetaIdentifier(meta));
     const metaLength = _meta.length;
-    const __meta = _meta[metaLength-1] || _meta[0];
+    const __meta = _meta[metaLength - 1] || _meta[0];
     const res = await fetch(`${api_url}/post/${__meta}`);
     const data = await res.json();
     let user;
@@ -107,8 +112,8 @@ class Blog extends React.Component {
       body: data.postBody
     };
   }
-  linkedInShare = () =>{
-    const {post} = this.props;
+  linkedInShare = () => {
+    const { post } = this.props;
     const initial = 'https://www.linkedin.com/sharing/share-offsite?mini=true&url=';
     const shareURL = `${initial}https%3A%2F%2Fzemuldo.com/blog/post/${post._id}&title=${post.title.split(' ').join('+')}`;
     window.open(shareURL, 'sharer', 'toolbar=0,status=0,width=548,height=325');
@@ -162,24 +167,24 @@ class Blog extends React.Component {
             <Menu authorization={authorization}>
               {
                 this.props.authorization &&
-              <Link href={`/blog/${post._id}/edit`}>
-                <Avatar className={classes.greenAvatar}>
-                  <EditIcon />
-                </Avatar>
-              </Link>
+                <Link href={`/blog/${post._id}/edit`}>
+                  <Avatar className={classes.greenAvatar}>
+                    <EditIcon />
+                  </Avatar>
+                </Link>
               }
             </Menu>
-            
+
           </Grid>
           <h1>{post.title}</h1>
-          
+
           <p>Posted {format(new Date(post.createdAt), 'PPPP')}</p>
           <div className='blog-tags'>
-          
+
             {
-              post.tags.map(tag => 
-                <span className='blog-tags' style={{color: tag.color, boxShadow: '0 8px 15px 0 rgba(95, 91, 95, .33)', backgroundColor: 'black',  border: 'solid 2px transparent', borderRadius: '3px', cursor: 'pointer'}} key={tag.value}>
-                  {tag.label} 
+              post.tags.map(tag =>
+                <span className='blog-tags' style={{ color: tag.color, boxShadow: '0 8px 15px 0 rgba(95, 91, 95, .33)', backgroundColor: 'black', border: 'solid 2px transparent', borderRadius: '3px', cursor: 'pointer' }} key={tag.value}>
+                  {tag.label}
                 </span>)
             }
           </div>

@@ -146,46 +146,48 @@ class Blog extends React.Component {
           <meta name="description" content="Blog by Danstan Onyango, Software Engineer, Nairobi, Kenya. Tech articles, Tutorials and Reviews. Sharing content that inspires." />
         </Head>
         <Container style={{ color: 'white' }} maxWidth="md">
-          
+
           <Grid container justify="center" alignItems="center">
-            <Menu authorization = {authorization}/>
-           
+            <Menu authorization={authorization} />
+
           </Grid>
         </Container>
         <Container style={{ color: 'white' }} maxWidth="md">
 
-          {
-            featurePost && featurePost.post &&
-            <Paper style={{
-              backgroundImage: `url(${featurePost.post.coverPhotoUrl})`
-            }} className={classes.mainFeaturedPost}>
-              <div style={{ backgroundColor: 'black', opacity: .7 }} className={classes.overlay} />
-              <Grid style={{ minHeight: '400px' }} className="eph" container>
-                <Grid item md={6}>
-                  <div className={classes.mainFeaturedPostContent}>
-                    <Typography
-                      component="h1"
-                      variant="h3"
-                      color="inherit"
-                      gutterBottom
-                      style={{
-                        color: '#08a6f3',
-                        fontFamily: '\'Courier New\', Courier, monospace'
-                      }}
-                    >
-                      {featurePost.post.title}
-                    </Typography>
-                    <Typography variant="h5" color="inherit" paragraph>
-                      {featurePost.post.description}
-                    </Typography>
-                    <CustomLink style={{ color: '#08a6f3' }} href={`/blog/${featurePost.post.title.split(' ').join('-')}@${featurePost.post._id}`}>
+          <CustomLink href={`/blog/${featurePost.post.title.toLowerCase().split(' ').join('-')}-${featurePost.post._id}`}>
+            {
+              featurePost && featurePost.post &&
+              <Paper style={{
+                backgroundImage: `url(${featurePost.post.coverPhotoUrl})`
+              }} className={classes.mainFeaturedPost}>
+                <div style={{ backgroundColor: 'rgb(23, 23, 23)', opacity: .7 }} className={classes.overlay} />
+                <Grid style={{ minHeight: '400px' }} className="eph" container>
+                  <Grid item md={6}>
+
+                    <div className={classes.mainFeaturedPostContent}>
+                      <Typography
+                        component="h1"
+                        variant="h3"
+                        color="inherit"
+                        gutterBottom
+                        style={{
+                          color: '#08a6f3',
+                          fontFamily: '\'Courier New\', Courier, monospace'
+                        }}
+                      >
+                        {featurePost.post.title}
+                      </Typography>
+                      <Typography style={{ color: 'white' }} variant="h5" color="inherit" paragraph>
+                        {featurePost.post.description}
+                      </Typography>
                       <span>Read Now</span>
-                    </CustomLink>
-                  </div>
+                    </div>
+
+                  </Grid>
                 </Grid>
-              </Grid>
-            </Paper>
-          }
+              </Paper>
+            }
+          </CustomLink>
           <Blogs _infiniteScroll={this.infiniteScroll} posts={posts} />
           <br />
           {this.state.fetching && <div style={{ flexGrow: 1, color: 'white' }}><LinearProgress /> </div>}
