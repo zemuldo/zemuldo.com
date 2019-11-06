@@ -37,7 +37,7 @@ const useStyles = makeStyles(() => ({
 const formatDescription = (description) => {
   if (description.length > 156) return <span>{`${description.slice(0, 156)}...`}</span>;
   else return description;
-}
+};
 
 export default function Blogs({ posts, _infiniteScroll }) {
   const classes = useStyles();

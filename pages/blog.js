@@ -154,7 +154,7 @@ class Blog extends React.Component {
         </Container>
         <Container style={{ color: 'white' }} maxWidth="md">
 
-          <a href={`/blog/${featurePost.post.title.toLowerCase().split(' ').join('-')}-${featurePost.post._id}`}>
+          <CustomLink href={`/blog/${featurePost.post.title.toLowerCase().split(' ').join('-')}-${featurePost.post._id}`}>
             {
               featurePost && featurePost.post &&
               <Paper style={{
@@ -180,14 +180,14 @@ class Blog extends React.Component {
                       <Typography style={{ color: 'white' }} variant="h5" color="inherit" paragraph>
                         {featurePost.post.description}
                       </Typography>
-                        <span>Read Now</span>
+                      <span>Read Now</span>
                     </div>
 
                   </Grid>
                 </Grid>
               </Paper>
             }
-          </a>
+          </CustomLink>
           <Blogs _infiniteScroll={this.infiniteScroll} posts={posts} />
           <br />
           {this.state.fetching && <div style={{ flexGrow: 1, color: 'white' }}><LinearProgress /> </div>}
