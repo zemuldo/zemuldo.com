@@ -99,7 +99,7 @@ function CookiePolicy() {
           Hopefully that has clarified things for you and as was previously 
           mentioned if there is something that you are not sure whether you 
           need or not it is usually safer to leave cookies enabled in case it does 
-          interact with one of the features you use on our site. 
+          interact with one of the features you use on this site. 
           This Cookies Policy was created with the help of the 
         </p>
 
