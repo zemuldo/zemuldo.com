@@ -7,7 +7,10 @@ export default function AcceptTerms({accepted_terms}) {
   const [accepted_terms_now, acceptTerms] = useState(null);
   const agreedToTerms = ()=>{
     acceptTerms('1');
-   document.cookie = `accepted_terms=1;${10 * 365 * 424 *};path=/`;
+    setCookie({}, 'accepted_terms', '1', {
+      maxAge: 10 * 365 * 24 * 60 * 60,
+      path: '/',
+    });
   };
   if (accepted_terms === '1' || accepted_terms_now === '1') return null;
   return (
@@ -21,7 +24,8 @@ export default function AcceptTerms({accepted_terms}) {
         color: 'white',
         display: 'flex',
         width: '100%',
-        backgroundColor: 'rgb(23, 23, 23)',
+        backgroundColor: 'transparent',
+        opacity: 0.8,
         margin: 'auto',
         alignContent: 'center',
         borderTop: 'solid 1px #08a6f3'
