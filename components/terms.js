@@ -7,10 +7,7 @@ export default function AcceptTerms({accepted_terms}) {
   const [accepted_terms_now, acceptTerms] = useState(null);
   const agreedToTerms = ()=>{
     acceptTerms('1');
-    setCookie({}, 'accepted_terms', '1', {
-      maxAge: 10 * 365 * 24 * 60 * 60,
-      path: '/',
-    });
+   document.cookie = `accepted_terms=1;${10 * 365 * 424 *};path=/`;
   };
   if (accepted_terms === '1' || accepted_terms_now === '1') return null;
   return (
