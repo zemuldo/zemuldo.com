@@ -3,6 +3,7 @@
   "env": {
     "test": {
       "plugins": [
+        "transform-class-properties",
         "require-context-hook",
         "dynamic-import-node"
       ]
