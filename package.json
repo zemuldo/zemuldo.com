@@ -63,6 +63,7 @@
     "babel-loader": "^8.0.6",
     "babel-plugin-dynamic-import-node": "^2.3.0",
     "babel-plugin-require-context-hook": "^1.0.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
     "dotenv": "^8.1.0",
     "eslint": "^6.3.0",
     "eslint-plugin-import": "^2.18.2",
