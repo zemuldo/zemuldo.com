@@ -34,16 +34,16 @@ class MyApp extends App {
     const { Component, pageProps } = this.props;
 
     return (
-      <Container>
+      <>
         <Head>
-          <link rel='stylesheet' type='text/css' href='/static/css/nprogress.css' />
+          <link rel='stylesheet' type='text/css' href='/css/nprogress.css' />
         </Head>
         <ThemeProvider theme={theme}>
           {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
           <CssBaseline />
           <Component {...pageProps} />
         </ThemeProvider>
-      </Container>
+      </>
     );
   }
 }

@@ -261,7 +261,7 @@ class EditBlog extends React.Component {
       <React.Fragment>
         <PublishDialogue message="Are you sure to update?" handlePublish={this.handlePublish} handleClose={this.handleClosePublishDialogue} open={publishDialogueOpen}/>
         <Head>
-          <link href="/static/css/blog.css" rel="stylesheet" />
+          <link href="/css/blog.css" rel="stylesheet" />
           <link
             href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
             rel="stylesheet"

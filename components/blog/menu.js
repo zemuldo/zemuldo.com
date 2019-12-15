@@ -144,13 +144,13 @@ class Menu extends React.Component{
           {
             router && router.pathname !== '/blog' &&
           <Link href='/blog'>
-            <Avatar className={classes.greenAvatar} src='/static/images/blog.png'>
+            <Avatar className={classes.greenAvatar} src='/images/blog.png'>
             </Avatar>
           </Link>
           }
           
           {path !=='/blog/drafts' && authorization && <Link href='/blog/drafts'>
-            <Avatar className={classes.greenAvatar} src='/static/images/draft.png'>
+            <Avatar className={classes.greenAvatar} src='/images/draft.png'>
             </Avatar>
           </Link>
           }

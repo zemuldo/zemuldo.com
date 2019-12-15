@@ -14,20 +14,20 @@ export default function HeaderElements() {
       <meta name="copyright" content="Zemuldo" />
 
       <meta name="robots" content="index,follow" />
-      <link rel="shortcut icon" href="/static/images/favicon/rounded-me.png" />
-      <link rel="apple-touch-icon" sizes="144x144" type="image/x-icon" href="/static/images/favicon/apple-touch-icon.png" />
-      <link rel="stylesheet" type="text/css" href="/static/css/plugin.css" />
-      <link rel="stylesheet" type="text/css" href="/static/css/style.css" />
+      <link rel="shortcut icon" href="/images/favicon/rounded-me.png" />
+      <link rel="apple-touch-icon" sizes="144x144" type="image/x-icon" href="/images/favicon/apple-touch-icon.png" />
+      <link rel="stylesheet" type="text/css" href="/css/plugin.css" />
+      <link rel="stylesheet" type="text/css" href="/css/style.css" />
 
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:site" content="@zemuldo" />
       <meta name="twitter:creator" content="@zemuldo" />
       <meta name="twitter:title" content="I'm Zemuldo ~ Danstan Onyango, Software Engineer" />
       <meta name="twitter:description" content="Danstan Onyango ~ zemuldo. Software Engineer, Nairobi, Kenya. Passion mixed with enthusiasm and bundled together with Geekiness, served on port Awesomeness." />
-      <meta name="twitter:image" content="https://zemuldo.com/static/images/site/site_twitter_card.png" />
+      <meta name="twitter:image" content="https://zemuldo.com/images/site/site_twitter_card.png" />
 
       <meta property='og:title' content="I'm Zemuldo ~ Danstan Otieno Onyango, Software Engineer" />
-      <meta property="og:image" content="https://zemuldo.com/static/images/site/site_twitter_card.png" />
+      <meta property="og:image" content="https://zemuldo.com/images/site/site_twitter_card.png" />
       <meta property='og:description' content='Danstan Onyango is zemuldo. Software Engineer, Nairobi, Kenya. Passion mixed with enthusiasm and bundled together with Geekiness, served on port Awesomeness.' />
       <meta property='og:url' content='https://zemuldo.com' />
       <meta property='og:type' content='Danstan Onyango ~ Zemuldo, Software Engineer - Nairobi, Kenya, Self Taught. Elixir, Node, React, PostgreSQL. Writer @Medium, @Dev.  🚀🚀Geek🚀🚀' />

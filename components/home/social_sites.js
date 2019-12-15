@@ -86,14 +86,14 @@ export default function SocialSites () {
           <MouseOverPopover color='orange' hoverText="Blog">
             <li>
               <CustomLink href="/blog">
-                <img style={{ marginBottom: '-12%', width: '55%', height: '55%', borderRadius: '50%' }} alt="Zemuldo Blog" src="/static/images/blog.png" />
+                <img style={{ marginBottom: '-12%', width: '55%', height: '55%', borderRadius: '50%' }} alt="Zemuldo Blog" src="/images/blog.png" />
               </CustomLink>
             </li>
           </MouseOverPopover>
           <MouseOverPopover color='white' hoverText="Dev.TO">
             <li>
               <a href="https://dev.to/zemuldo" target="_blank" rel="noopener noreferrer">
-                <img style={{ marginBottom: '-15%', width: '65%', height: '65%' }} alt="Danstan Onyango on DEV" src="/static/images/dev.to.png" />
+                <img style={{ marginBottom: '-15%', width: '65%', height: '65%' }} alt="Danstan Onyango on DEV" src="/images/dev.to.png" />
               </a>
             </li>
           </MouseOverPopover>

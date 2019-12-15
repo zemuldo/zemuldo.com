@@ -11,7 +11,7 @@ require('dotenv-flow').config();
 async function log_path(req) {
   const _path = `Serving: ${req.originalUrl.split('?')[0]}`.slice(0, 1000);
   if (_path.includes('/site-stories/')) return;
-  if (_path.includes('/static/')) return;
+  if (_path.includes('/')) return;
   if (_path.includes('/_next/')) return;
   return logger.info(`${_path} FOR:${req.headers['remote_addr'] || req.connection.remoteAddress || 'Unknown-IP'} OR ${req.proxy_add_x_forwarded_for || 'Non-Proxy-Source'}`);
 }
@@ -23,9 +23,9 @@ const prepSiteStories = (data) => {
   $('head').prepend('<meta name="twitter:creator" content="@zemuldo" />');
   $('head').prepend('<meta name="twitter:title" content="Zemuldo Site Stories" />');
   $('head').prepend('<meta name="twitter:description" content="These are StorybookJS stories of the components that make up the website for user @zemuldo" />');
-  $('head').prepend('<meta name="twitter:image" content="https://zemuldo.com/static/images/site/site_stories_large.png" />');
+  $('head').prepend('<meta name="twitter:image" content="https://zemuldo.com/images/site/site_stories_large.png" />');
   $('head').prepend('<meta property="og:title" content="Zemuldo Site Stories" />');
-  $('head').prepend('<meta property="og:image" content="https://zemuldo.com/static/images/site/site_stories_large.png" />');
+  $('head').prepend('<meta property="og:image" content="https://zemuldo.com/images/site/site_stories_large.png" />');
   $('head').prepend('<meta property="og:description" content="These are StorybookJS stories of the components that make up the website for user @zemuldo" />');
   $('head').prepend('<meta property="og:url" content="https://zemuldo.com/site-stories" />');
   return $;
@@ -53,13 +53,13 @@ router.get('/', (req, res) => {
 });
 
 router.use('/robots.txt', async (_req, res) =>{
-  return res.sendFile(`${path.join(__dirname, '/static/robots.txt')}`);
+  return res.sendFile(`${path.join(__dirname, '/robots.txt')}`);
 });
 router.use('/sitemap.xml', async (req, res) =>{
-  return res.sendFile(`${path.join(__dirname, '/static/sitemap.xml')}`);
+  return res.sendFile(`${path.join(__dirname, '/sitemap.xml')}`);
 });
-router.use('/blog/static', express.static('static'));
-router.use('/site-stories/static', express.static(path.join(__dirname, 'static')));
+router.use('/blog', express.static('static'));
+router.use('/site-stories', express.static(path.join(__dirname, 'public')));
 router.use('/site-stories/', express.static(path.join(__dirname, '.stories')));
 router.use('/', express.static(path.join(__dirname, '..next')));
 router.use('/', express.static(path.join(__dirname, '.stories')));

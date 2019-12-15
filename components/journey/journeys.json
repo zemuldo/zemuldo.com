@@ -6,7 +6,7 @@
     "startDate": "2019-04-08T00:00:00.000Z",
     "companyName": "SafeBoda",
     "companyDescription": "Backend Engineer. SafeBoda is a Tech Company based in Uganda with a distributed tech team and using modern tech stacks. My role is exclusively backend engineering using Phoenix Framework and Elixir",
-    "companyLogo": "/static/images/companies/safeboda.png",
+    "companyLogo": "/images/companies/safeboda.png",
     "stacks": [
       { "value": "elixir", "label": "Elixir", "color": "#a767f5" },
       { "value": "docker", "label": "Docker", "color": "#a767f5" },
@@ -25,7 +25,7 @@
     "endDate": "2019-04-08T00:00:00.000Z",
     "companyName": "HackerBay",
     "companyDescription": "At HackerBay, I was a fully remote FullStack Software Engineer working with a distributed team on products like Fyipe and CloudBoost. ",
-    "companyLogo": "/static/images/companies/hb.svg",
+    "companyLogo": "/images/companies/hb.svg",
     "stacks": [
       { "value": "nodejs", "label": "NodeJS", "color": "#a767f5" },
       { "value": "reactjs", "label": "ReactJS", "color": "white" },
@@ -45,7 +45,7 @@
     "endDate": "2019-04-08T00:00:00.000Z",
     "companyName": "HackerBay",
     "companyDescription": "Mentoring students to become Professional Software Engineers using the latest technology.",
-    "companyLogo": "/static/images/companies/hbu.svg",
+    "companyLogo": "/images/companies/hbu.svg",
     "stacks": [
       { "value": "nodejs", "label": "NodeJS", "color": "#a767f5" },
       { "value": "reactjs", "label": "ReactJS", "color": "white" },
@@ -62,7 +62,7 @@
     "endDate": "2019-04-08T00:00:00.000Z",
     "companyName": "Data Integrated Limited",
     "companyDescription": "As a lead software engineer, I was responsible for leading the tech team and performing CTO roles related to all products.",
-    "companyLogo": "/static/images/companies/dil.png",
+    "companyLogo": "/images/companies/dil.png",
     "stacks": [
       { "value": "nodejs", "label": "NodeJS", "color": "#a767f5" },
       { "value": "reactjs", "label": "ReactJS", "color": "white" },
@@ -82,7 +82,7 @@
     "endDate": "2018-01-08T00:00:00.000Z",
     "companyName": "Data Integrated Limited",
     "companyDescription": "Roles included GCP Administration and Architecture, Backend Engineering in Nodejs, Frontend Development in ReactJS. The products were real-time dashboards and apis for SaS solutions to businesses.",
-    "companyLogo": "/static/images/companies/dil.png",
+    "companyLogo": "/images/companies/dil.png",
     "stacks": [
       { "value": "nodejs", "label": "NodeJS", "color": "#a767f5" },
       { "value": "reactjs", "label": "ReactJS", "color": "white" },
@@ -101,7 +101,7 @@
     "endDate": "2017-07-08T00:00:00.000Z",
     "companyName": "Data Integrated Limited",
     "companyDescription": "I joined Data Integrated as a Junior Developer with no experience in web development. I started out with taking over a REST api backend written in JavaScript.",
-    "companyLogo": "/static/images/companies/dil.png",
+    "companyLogo": "/images/companies/dil.png",
     "stacks": [
       { "value": "nodejs", "label": "NodeJS", "color": "#a767f5" },
       { "value": "reactjs", "label": "ReactJS", "color": "white" },
@@ -118,7 +118,7 @@
     "endDate": "2017-05-02T00:00:00.000Z",
     "companyName": "ImpalaPay",
     "companyDescription": "My tasks as a junior included web services integrations in Java and POS application development in C. I also did cloud and local network administration. There was a lot to learn in this episode.",
-    "companyLogo": "/static/images/companies/impala.PNG",
+    "companyLogo": "/images/companies/impala.PNG",
     "stacks": [
       { "value": "c", "label": "C", "color": "#a767f5" },
       { "value": "ipsec", "label": "IPSec VPNs", "color": "white" },
@@ -135,7 +135,7 @@
     "endDate": "2016-09-01T00:00:00.000Z",
     "companyName": "ImpalaPay",
     "companyDescription": "This was my first internship. I did common tasks like wireframes, network troubleshooting. I also tested new POS devices.",
-    "companyLogo": "/static/images/companies/impala.PNG",
+    "companyLogo": "/images/companies/impala.PNG",
     "stacks": [
       { "value": "network", "label": "LAN, WAN", "color": "#a767f5" },
       { "value": "c", "label": "C", "color": "#a767f5" },
