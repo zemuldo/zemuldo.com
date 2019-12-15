@@ -13,7 +13,7 @@ COPY . .
 
 RUN npm run build
 
-# RUN npm run build-storybook
+RUN npm run build-storybook
 
 EXPOSE 3000
 
