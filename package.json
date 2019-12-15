@@ -52,6 +52,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.6.0",
+    "@babel/plugin-proposal-class-properties": "^7.7.4",
     "@next/bundle-analyzer": "^9.0.5",
     "@storybook/addon-actions": "5.2.1",
     "@storybook/addon-links": "5.2.1",
