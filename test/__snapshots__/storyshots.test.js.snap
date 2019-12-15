@@ -504,7 +504,7 @@ Array [
               >
                 <img
                   className="MuiAvatar-img"
-                  src="/static/images/draft.png"
+                  src="/images/draft.png"
                 />
               </div>
             </a>
@@ -2025,7 +2025,7 @@ Array [
                   <img
                     alt="Danstan Otieno Onyango, Zemuldo"
                     id="me-pic"
-                    src="/static/images/logo/black.jpg"
+                    src="/images/logo/black.jpg"
                   />
                 </div>
               </div>
@@ -2103,7 +2103,7 @@ Array [
                     >
                       <img
                         alt="Zemuldo Blog"
-                        src="/static/images/blog.png"
+                        src="/images/blog.png"
                         style={
                           Object {
                             "borderRadius": "50%",
@@ -2129,7 +2129,7 @@ Array [
                     >
                       <img
                         alt="Danstan Onyango on DEV"
-                        src="/static/images/dev.to.png"
+                        src="/images/dev.to.png"
                         style={
                           Object {
                             "height": "65%",
@@ -2398,7 +2398,7 @@ exports[`Storyshots Home Page Social Sites 1`] = `
           >
             <img
               alt="Zemuldo Blog"
-              src="/static/images/blog.png"
+              src="/images/blog.png"
               style={
                 Object {
                   "borderRadius": "50%",
@@ -2424,7 +2424,7 @@ exports[`Storyshots Home Page Social Sites 1`] = `
           >
             <img
               alt="Danstan Onyango on DEV"
-              src="/static/images/dev.to.png"
+              src="/images/dev.to.png"
               style={
                 Object {
                   "height": "65%",
@@ -2713,7 +2713,7 @@ exports[`Storyshots Journey Experience 1`] = `
             alt="SafeBoda"
             className="js-list-img"
             data-list-id={60269}
-            src="/static/images/companies/dil.png"
+            src="/images/companies/dil.png"
           />
         </a>
       </div>
@@ -3138,7 +3138,7 @@ Array [
                         alt="SafeBoda"
                         className="js-list-img"
                         data-list-id={60269}
-                        src="/static/images/companies/safeboda.png"
+                        src="/images/companies/safeboda.png"
                       />
                     </a>
                   </div>
@@ -3357,7 +3357,7 @@ Array [
                         alt="SafeBoda"
                         className="js-list-img"
                         data-list-id={60269}
-                        src="/static/images/companies/hb.svg"
+                        src="/images/companies/hb.svg"
                       />
                     </a>
                   </div>
@@ -3594,7 +3594,7 @@ Array [
                         alt="SafeBoda"
                         className="js-list-img"
                         data-list-id={60269}
-                        src="/static/images/companies/hbu.svg"
+                        src="/images/companies/hbu.svg"
                       />
                     </a>
                   </div>
@@ -3777,7 +3777,7 @@ Array [
                         alt="SafeBoda"
                         className="js-list-img"
                         data-list-id={60269}
-                        src="/static/images/companies/dil.png"
+                        src="/images/companies/dil.png"
                       />
                     </a>
                   </div>
@@ -4014,7 +4014,7 @@ Array [
                         alt="SafeBoda"
                         className="js-list-img"
                         data-list-id={60269}
-                        src="/static/images/companies/dil.png"
+                        src="/images/companies/dil.png"
                       />
                     </a>
                   </div>
@@ -4233,7 +4233,7 @@ Array [
                         alt="SafeBoda"
                         className="js-list-img"
                         data-list-id={60269}
-                        src="/static/images/companies/dil.png"
+                        src="/images/companies/dil.png"
                       />
                     </a>
                   </div>
@@ -4416,7 +4416,7 @@ Array [
                         alt="SafeBoda"
                         className="js-list-img"
                         data-list-id={60269}
-                        src="/static/images/companies/impala.PNG"
+                        src="/images/companies/impala.PNG"
                       />
                     </a>
                   </div>
@@ -4599,7 +4599,7 @@ Array [
                         alt="SafeBoda"
                         className="js-list-img"
                         data-list-id={60269}
-                        src="/static/images/companies/impala.PNG"
+                        src="/images/companies/impala.PNG"
                       />
                     </a>
                   </div>

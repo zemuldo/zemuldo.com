@@ -143,7 +143,7 @@ function Drafts({ drafts, authorization }) {
                 <Card className={classes.card}>
                   <CardMedia
                     className={classes.cardMedia}
-                    image={draft.coverPhotoUrl || '/static/images/miscellaneous/rocket_large.png'}
+                    image={draft.coverPhotoUrl || '/images/miscellaneous/rocket_large.png'}
                     title="Zemuldo Blog Draft Cover Image"
                   />
                   <CardContent className={classes.cardContent}>

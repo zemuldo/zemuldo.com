@@ -11,7 +11,7 @@ const experience =  {
   'endDate': '2019-04-08T00:00:00.000Z',
   'companyName': 'Data Integrated Limited',
   'companyDescription': 'As a lead software engineer, I was responsible for leading the tech team and performing CTO roles related to all products.',
-  'companyLogo': '/static/images/companies/dil.png',
+  'companyLogo': '/images/companies/dil.png',
   'stacks': [
     { 'value': 'nodejs', 'label': 'NodeJS', 'color': '#a767f5' },
     { 'value': 'reactjs', 'label': 'ReactJS', 'color': 'white' },
