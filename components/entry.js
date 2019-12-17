@@ -7,35 +7,34 @@ import VersionInfo from './versionInfo';
 import HeaderElements from './document/head_elements';
 
 export default Component => {
-  class Enry extends React.Component {
-    static async getInitialProps(ctx) {
-      const { authorization, accepted_terms } = parseCookies(ctx);
-      let props = {};
-      if (Component.getInitialProps) {
-        props = await Component.getInitialProps(ctx);
-      }
-      return { ...props, authorization, accepted_terms };
+  const Entry = (props) => {
+    if (props.statusCode) {
+      return <ErrorPage errorCode={props.statusCode} />;
     }
-    render() {
-      if (this.props.statusCode) {
-        return <ErrorPage errorCode={this.props.statusCode} />;
-      }
-      return <React.Fragment>
-        <HeaderElements />
-        <VersionInfo />
-        <div className='pages-wrapper'>
-          <AcceptTerms accepted_terms={this.props.accepted_terms} />
-          <Component {...this.props} />
-        </div>
-      </React.Fragment>
-      ;
-    }
-  }
+    return <>
+      <HeaderElements />
+      <VersionInfo />
+      <div className='pages-wrapper'>
+        <AcceptTerms accepted_terms={props.accepted_terms} />
+        <Component {...props} />
+      </div>
+    </>;
 
-  Enry.propTypes = {
+  };
+
+  Entry.getInitialProps = async (ctx) => {
+    const { authorization, accepted_terms } = parseCookies(ctx);
+    let props = {};
+    if (Component.getInitialProps) {
+      props = await Component.getInitialProps(ctx);
+    }
+    return { ...props, authorization, accepted_terms };
+  };
+
+  Entry.propTypes = {
     statusCode: PropTypes.number,
     accepted_terms: PropTypes.string
   };
 
-  return Enry;
+  return Entry;
 };
