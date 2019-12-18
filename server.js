@@ -52,12 +52,6 @@ router.get('/', (req, res) => {
   return handle(req, res);
 });
 
-router.use('/robots.txt', async (_req, res) =>{
-  return res.sendFile(`${path.join(__dirname, '/robots.txt')}`);
-});
-router.use('/sitemap.xml', async (req, res) =>{
-  return res.sendFile(`${path.join(__dirname, '/sitemap.xml')}`);
-});
 router.use('/blog', express.static('static'));
 router.use('/site-stories', express.static(path.join(__dirname, 'public')));
 router.use('/site-stories/', express.static(path.join(__dirname, '.stories')));
