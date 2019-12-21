@@ -15,9 +15,9 @@ import PropTypes from 'prop-types';
 import 'easymde/dist/easymde.min.css';
 import Entry from '../../components/entry';
 import ReactMarkdown from 'react-markdown';
-import CodeBlock from '../../components/code/codeBlock';
-import Image from '../../components/code/image';
-import MarkdownLink from '../../components/code/link';
+import CodeBlock from '../../components/md/codeBlock';
+import Image from '../../components/md/image';
+import MarkdownLink from '../../components/md/link';
 
 const api_url = process.env.API_URL;
 const base_url = process.env.BASE_URL;
