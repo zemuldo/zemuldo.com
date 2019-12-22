@@ -6,8 +6,12 @@ const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 require('dotenv').config();
 const path = require('path');
 const Dotenv = require('dotenv-webpack');
+const withTM = require('next-transpile-modules');
 
-module.exports = withCSS(withBundleAnalyzer({
+module.exports = withTM(withCSS(withBundleAnalyzer({
+  transpileModules: [
+    'react-syntax-highlighter',
+  ],
   publicRuntimeConfig: {
     API_URL: process.env.API_URL
   },
@@ -49,4 +53,4 @@ module.exports = withCSS(withBundleAnalyzer({
       reportFilename: '../bundles/client.html'
     }
   }
-}));
+})));

@@ -3,8 +3,6 @@ import Container from '@material-ui/core/Container';
 import { withStyles } from '@material-ui/core/styles';
 import Footer from '../../components/footer';
 import Menu from '../../components/blog/menu';
-import marked, { Renderer } from 'marked';
-import dynamic from 'next/dynamic';
 import Head from 'next/head';
 import Link from 'next/link';
 import { format } from 'date-fns';
@@ -16,10 +14,10 @@ import Grid from '@material-ui/core/Grid';
 import PropTypes from 'prop-types';
 import 'easymde/dist/easymde.min.css';
 import Entry from '../../components/entry';
-
-const Highlight = dynamic(import('react-highlight'));
-
-const renderer = new Renderer();
+import ReactMarkdown from 'react-markdown';
+import CodeBlock from '../../components/md/codeBlock';
+import Image from '../../components/md/image';
+import MarkdownLink from '../../components/md/link';
 
 const api_url = process.env.API_URL;
 const base_url = process.env.BASE_URL;
@@ -65,18 +63,6 @@ const styles = () => ({
   }
 });
 
-marked.setOptions({
-  gfm: true,
-  tables: true,
-  breaks: true
-});
-
-renderer.link = function (href, title, text) {
-  return '<a class="b-link" rel="noopener noreferrer" target="_blank" href="' + href + '" title="' + (title || href) + '">' + text + '</a>';
-};
-renderer.image = function (src, alt) {
-  return `<img class="b-img" src="${src}" alt="${alt}" />`;
-};
 
 const urlMetaIdentifier = (meta) => {
   if (meta.includes('@')) return '@';
@@ -218,7 +204,10 @@ class Blog extends React.Component {
           }}
         >
           <br />
-          <Highlight innerHTML>{marked(body.body, { renderer: renderer })}</Highlight>
+          <ReactMarkdown
+            source={body.body}
+            renderers={{ code: CodeBlock, image: Image, link: MarkdownLink }}
+          />
         </Container>
         <Footer />
       </React.Fragment>
