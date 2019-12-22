@@ -82,7 +82,10 @@
     ],
     "moduleNameMapper": {
       "\\.(css|less|scss|sss|styl)$": "<rootDir>/node_modules/jest-css-modules"
-    }
+    },
+    "transformIgnorePatterns": [
+      "/node_modules/(?!react-syntax-highlighter).+\\.js$"
+    ]
   },
   "resolutions": {
     "styled-jsx": "3.0.0"

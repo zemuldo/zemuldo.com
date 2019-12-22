@@ -154,7 +154,7 @@ Array [
               onClick={[Function]}
             >
               <div
-                className="MuiAvatar-root Menu-greenAvatar-351 MuiAvatar-colorDefault"
+                className="MuiAvatar-root MuiAvatar-circle Menu-greenAvatar-358 MuiAvatar-colorDefault"
               >
                 <svg
                   aria-hidden="true"
@@ -217,7 +217,7 @@ Array [
         className="MuiGrid-root blog-share-buttons MuiGrid-container"
       >
         <div
-          className="MuiAvatar-root Blog-twitterAvatar-245 Blog-twitterAvatar-3 MuiAvatar-colorDefault"
+          className="MuiAvatar-root MuiAvatar-circle Blog-twitterAvatar-252 Blog-twitterAvatar-3 MuiAvatar-colorDefault"
           onClick={[Function]}
         >
           <i
@@ -225,7 +225,7 @@ Array [
           />
         </div>
         <div
-          className="MuiAvatar-root Blog-fbAvatar-246 Blog-fbAvatar-4 MuiAvatar-colorDefault"
+          className="MuiAvatar-root MuiAvatar-circle Blog-fbAvatar-253 Blog-fbAvatar-4 MuiAvatar-colorDefault"
           onClick={[Function]}
         >
           <i
@@ -233,7 +233,7 @@ Array [
           />
         </div>
         <div
-          className="MuiAvatar-root Blog-linkedinAvatar-247 Blog-linkedinAvatar-5 MuiAvatar-colorDefault"
+          className="MuiAvatar-root MuiAvatar-circle Blog-linkedinAvatar-254 Blog-linkedinAvatar-5 MuiAvatar-colorDefault"
           onClick={[Function]}
         >
           <i
@@ -266,21 +266,30 @@ Array [
       }
     >
       <br />
-      <Dynamic
-        innerHTML={true}
-      >
-        &lt;p&gt;Most people start off with little or low self-confidence, but as a result of their own efforts, they become bold and brave and outgoing. And we’ve discovered that if you do the same things that other self-confident men and women do, you, too, will experience the same feelings and get the same results.&lt;/p&gt;
-&lt;p&gt;The key is to be true to yourself, to be true to the very best that is in you, and to live your life consistent with your highest values and aspirations. This is the only way to truly learn how to believe in yourself.&lt;/p&gt;
-&lt;p&gt;Take some time to think about who you are and what you believe in and what is important to you.&lt;/p&gt;
-&lt;p&gt;If you want to change your life by becoming an author, believe that you can do it. The hardest step in that journey is finding the confidence to learn how to write a book. Once you get a hold of a proven system to plan, produce, and publish your work, the larger goal becomes easier to attain.&lt;/p&gt;
-&lt;p&gt;By believing in yourself, you will find the courage to take immediate action on your goals. And this, as you may know, is the key to success!&lt;/p&gt;
-&lt;p&gt;I encourage you to never compromise your integrity by trying to be or say or feel something that is not true for you.&lt;/p&gt;
-&lt;p&gt;And – more importantly – never compromise your potential to grow due to self-limiting doubts. Instead, embrace your confidence and believe in yourself because you really can do anything you put your mind to.&lt;/p&gt;
-
-      </Dynamic>
+      <p>
+        Most people start off with little or low self-confidence, but as a result of their own efforts, they become bold and brave and outgoing. And we’ve discovered that if you do the same things that other self-confident men and women do, you, too, will experience the same feelings and get the same results.
+      </p>
+      <p>
+        The key is to be true to yourself, to be true to the very best that is in you, and to live your life consistent with your highest values and aspirations. This is the only way to truly learn how to believe in yourself.
+      </p>
+      <p>
+        Take some time to think about who you are and what you believe in and what is important to you.
+      </p>
+      <p>
+        If you want to change your life by becoming an author, believe that you can do it. The hardest step in that journey is finding the confidence to learn how to write a book. Once you get a hold of a proven system to plan, produce, and publish your work, the larger goal becomes easier to attain.
+      </p>
+      <p>
+        By believing in yourself, you will find the courage to take immediate action on your goals. And this, as you may know, is the key to success!
+      </p>
+      <p>
+        I encourage you to never compromise your integrity by trying to be or say or feel something that is not true for you.
+      </p>
+      <p>
+        And – more importantly – never compromise your potential to grow due to self-limiting doubts. Instead, embrace your confidence and believe in yourself because you really can do anything you put your mind to.
+      </p>
     </div>
     <footer
-      className="makeStyles-footer-374"
+      className="makeStyles-footer-385"
     >
       <div
         className="MuiContainer-root MuiContainer-maxWidthLg"
@@ -480,7 +489,7 @@ Array [
               onClick={[Function]}
             >
               <div
-                className="MuiAvatar-root Menu-greenAvatar-539 MuiAvatar-colorDefault"
+                className="MuiAvatar-root MuiAvatar-circle Menu-greenAvatar-551 MuiAvatar-colorDefault"
               >
                 <svg
                   aria-hidden="true"
@@ -500,7 +509,7 @@ Array [
               onClick={[Function]}
             >
               <div
-                className="MuiAvatar-root Menu-greenAvatar-539"
+                className="MuiAvatar-root MuiAvatar-circle Menu-greenAvatar-551"
               >
                 <img
                   className="MuiAvatar-img"
@@ -513,7 +522,7 @@ Array [
               onClick={[Function]}
             >
               <div
-                className="MuiAvatar-root Menu-greenAvatar-539 MuiAvatar-colorDefault"
+                className="MuiAvatar-root MuiAvatar-circle Menu-greenAvatar-551 MuiAvatar-colorDefault"
               >
                 <svg
                   aria-hidden="true"
@@ -529,7 +538,7 @@ Array [
               </div>
             </a>
             <div
-              className="MuiAvatar-root EditBlog-greenAvatar-412 EditBlog-greenAvatar-1 MuiAvatar-colorDefault"
+              className="MuiAvatar-root MuiAvatar-circle EditBlog-greenAvatar-424 EditBlog-greenAvatar-1 MuiAvatar-colorDefault"
               onClick={[Function]}
             >
               <svg
@@ -545,7 +554,7 @@ Array [
               </svg>
             </div>
             <div
-              className="MuiAvatar-root EditBlog-greenAvatar-412 EditBlog-greenAvatar-1 MuiAvatar-colorDefault"
+              className="MuiAvatar-root MuiAvatar-circle EditBlog-greenAvatar-424 EditBlog-greenAvatar-1 MuiAvatar-colorDefault"
               onClick={[Function]}
             >
               <svg
@@ -564,13 +573,13 @@ Array [
         </div>
       </div>
       <div
-        className="EditBlog-root-413 EditBlog-root-2"
+        className="EditBlog-root-425 EditBlog-root-2"
       >
         <div
           className="MuiFormControl-root MuiTextField-root MuiFormControl-fullWidth"
         >
           <label
-            className="MuiFormLabel-root MuiInputLabel-root EditBlog-floatingLabelFocusStyle-414 EditBlog-floatingLabelFocusStyle-3 MuiInputLabel-formControl MuiInputLabel-animated"
+            className="MuiFormLabel-root MuiInputLabel-root EditBlog-floatingLabelFocusStyle-426 EditBlog-floatingLabelFocusStyle-3 MuiInputLabel-formControl MuiInputLabel-animated"
             data-shrink={false}
             htmlFor="postTitle"
             id="postTitle-label"
@@ -578,11 +587,12 @@ Array [
             Post Title
           </label>
           <div
-            className="MuiInputBase-root MuiInput-root MuiInput-underline EditBlog-materialInput-415 EditBlog-materialInput-4 MuiInputBase-fullWidth MuiInput-fullWidth MuiInputBase-formControl MuiInput-formControl"
+            className="MuiInputBase-root MuiInput-root MuiInput-underline EditBlog-materialInput-427 EditBlog-materialInput-4 MuiInputBase-fullWidth MuiInput-fullWidth MuiInputBase-formControl MuiInput-formControl"
             onClick={[Function]}
           >
             <input
               aria-invalid={false}
+              autoFocus={false}
               className="MuiInputBase-input MuiInput-input"
               disabled={false}
               id="postTitle"
@@ -608,7 +618,7 @@ Array [
             className="MuiFormControl-root MuiTextField-root MuiFormControl-fullWidth"
           >
             <label
-              className="MuiFormLabel-root MuiInputLabel-root EditBlog-floatingLabelFocusStyle-414 EditBlog-floatingLabelFocusStyle-3 MuiInputLabel-formControl MuiInputLabel-animated"
+              className="MuiFormLabel-root MuiInputLabel-root EditBlog-floatingLabelFocusStyle-426 EditBlog-floatingLabelFocusStyle-3 MuiInputLabel-formControl MuiInputLabel-animated"
               data-shrink={false}
               htmlFor="coverPhotoUrl"
               id="coverPhotoUrl-label"
@@ -616,11 +626,12 @@ Array [
               Cover Photo Url
             </label>
             <div
-              className="MuiInputBase-root MuiInput-root MuiInput-underline EditBlog-materialInput-415 EditBlog-materialInput-4 MuiInputBase-fullWidth MuiInput-fullWidth MuiInputBase-formControl MuiInput-formControl"
+              className="MuiInputBase-root MuiInput-root MuiInput-underline EditBlog-materialInput-427 EditBlog-materialInput-4 MuiInputBase-fullWidth MuiInput-fullWidth MuiInputBase-formControl MuiInput-formControl"
               onClick={[Function]}
             >
               <input
                 aria-invalid={false}
+                autoFocus={false}
                 className="MuiInputBase-input MuiInput-input"
                 disabled={false}
                 id="coverPhotoUrl"
@@ -835,10 +846,10 @@ Array [
       </div>
       <br />
       <div
-        className="MuiFormControl-root MuiTextField-root EditBlog-materialTextArea-416 EditBlog-materialTextArea-5 MuiFormControl-marginNormal MuiFormControl-fullWidth"
+        className="MuiFormControl-root MuiTextField-root EditBlog-materialTextArea-428 EditBlog-materialTextArea-5 MuiFormControl-marginNormal MuiFormControl-fullWidth"
       >
         <label
-          className="MuiFormLabel-root MuiInputLabel-root EditBlog-floatingLabelFocusStyle-414 EditBlog-floatingLabelFocusStyle-3 MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
+          className="MuiFormLabel-root MuiInputLabel-root EditBlog-floatingLabelFocusStyle-426 EditBlog-floatingLabelFocusStyle-3 MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
           data-shrink={false}
           htmlFor="description"
           id="description-label"
@@ -846,11 +857,12 @@ Array [
           Post Description
         </label>
         <div
-          className="MuiInputBase-root MuiOutlinedInput-root EditBlog-materialTextArea-416 EditBlog-materialTextArea-5 MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-multiline MuiOutlinedInput-multiline"
+          className="MuiInputBase-root MuiOutlinedInput-root EditBlog-materialTextArea-428 EditBlog-materialTextArea-5 MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-multiline MuiOutlinedInput-multiline"
           onClick={[Function]}
         >
           <textarea
             aria-invalid={false}
+            autoFocus={false}
             className="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputMultiline MuiOutlinedInput-inputMultiline"
             disabled={false}
             id="description"
@@ -864,7 +876,7 @@ Array [
           />
           <fieldset
             aria-hidden={true}
-            className="PrivateNotchedOutline-root-633 MuiOutlinedInput-notchedOutline"
+            className="PrivateNotchedOutline-root-652 MuiOutlinedInput-notchedOutline"
             style={
               Object {
                 "paddingLeft": 8,
@@ -872,7 +884,7 @@ Array [
             }
           >
             <legend
-              className="PrivateNotchedOutline-legend-634"
+              className="PrivateNotchedOutline-legend-653"
               style={
                 Object {
                   "width": 0.01,
@@ -921,7 +933,7 @@ And – more importantly – never compromise your potential to grow due to self
       />
     </div>
     <footer
-      className="makeStyles-footer-635"
+      className="makeStyles-footer-654"
     >
       <div
         className="MuiContainer-root MuiContainer-maxWidthLg"
@@ -1118,7 +1130,7 @@ Array [
               onClick={[Function]}
             >
               <div
-                className="MuiAvatar-root Menu-greenAvatar-127 MuiAvatar-colorDefault"
+                className="MuiAvatar-root MuiAvatar-circle Menu-greenAvatar-128 MuiAvatar-colorDefault"
               >
                 <svg
                   aria-hidden="true"
@@ -1150,7 +1162,7 @@ Array [
         onClick={[Function]}
       >
         <div
-          className="MuiPaper-root MuiPaper-elevation1 Blog-mainFeaturedPost-14 Blog-mainFeaturedPost-7 MuiPaper-rounded"
+          className="MuiPaper-root MuiPaper-elevation1 Blog-mainFeaturedPost-15 Blog-mainFeaturedPost-7 MuiPaper-rounded"
           style={
             Object {
               "backgroundImage": "url(https://miro.medium.com/max/1200/1*vKd5tDJmDFznrOkMh1kQGg.png)",
@@ -1158,7 +1170,7 @@ Array [
           }
         >
           <div
-            className="Blog-overlay-15 Blog-overlay-8"
+            className="Blog-overlay-16 Blog-overlay-8"
             style={
               Object {
                 "backgroundColor": "rgb(23, 23, 23)",
@@ -1178,7 +1190,7 @@ Array [
               className="MuiGrid-root MuiGrid-item MuiGrid-grid-md-6"
             >
               <div
-                className="Blog-mainFeaturedPostContent-16 Blog-mainFeaturedPostContent-9"
+                className="Blog-mainFeaturedPostContent-17 Blog-mainFeaturedPostContent-9"
               >
                 <h1
                   className="MuiTypography-root MuiTypography-h3 MuiTypography-colorInherit MuiTypography-gutterBottom"
@@ -1221,7 +1233,7 @@ Array [
           }
         >
           <div
-            className="MuiPaper-root MuiPaper-elevation1 makeStyles-paper-210 MuiPaper-rounded"
+            className="MuiPaper-root MuiPaper-elevation1 makeStyles-paper-215 MuiPaper-rounded"
           >
             <a
               href="/blog/how-to-use-ecto-as-a-query-schema-validation-library-5d6754fefe8b7e3fc0707fce"
@@ -1245,10 +1257,10 @@ Array [
                 tabIndex={0}
               >
                 <div
-                  className="MuiPaper-root MuiPaper-elevation1 MuiCard-root makeStyles-card-207 MuiPaper-rounded"
+                  className="MuiPaper-root MuiPaper-elevation1 MuiCard-root makeStyles-card-212 MuiPaper-rounded"
                 >
                   <div
-                    className="makeStyles-cardDetails-208"
+                    className="makeStyles-cardDetails-213"
                   >
                     <div
                       className="MuiCardContent-root"
@@ -1330,7 +1342,7 @@ Array [
           }
         >
           <div
-            className="MuiPaper-root MuiPaper-elevation1 makeStyles-paper-210 MuiPaper-rounded"
+            className="MuiPaper-root MuiPaper-elevation1 makeStyles-paper-215 MuiPaper-rounded"
           >
             <a
               href="/blog/how-to-use-ecto-as-a-query-schema-validation-library-5d7951be3d510b0fa5ae7658"
@@ -1354,10 +1366,10 @@ Array [
                 tabIndex={0}
               >
                 <div
-                  className="MuiPaper-root MuiPaper-elevation1 MuiCard-root makeStyles-card-207 MuiPaper-rounded"
+                  className="MuiPaper-root MuiPaper-elevation1 MuiCard-root makeStyles-card-212 MuiPaper-rounded"
                 >
                   <div
-                    className="makeStyles-cardDetails-208"
+                    className="makeStyles-cardDetails-213"
                   >
                     <div
                       className="MuiCardContent-root"
@@ -1421,7 +1433,7 @@ Array [
           }
         >
           <div
-            className="MuiPaper-root MuiPaper-elevation1 makeStyles-paper-210 MuiPaper-rounded"
+            className="MuiPaper-root MuiPaper-elevation1 makeStyles-paper-215 MuiPaper-rounded"
           >
             <a
               href="/blog/how-to-make-sure-that-you-always-succeed-5d79520a3d510b0fa5ae765a"
@@ -1445,10 +1457,10 @@ Array [
                 tabIndex={0}
               >
                 <div
-                  className="MuiPaper-root MuiPaper-elevation1 MuiCard-root makeStyles-card-207 MuiPaper-rounded"
+                  className="MuiPaper-root MuiPaper-elevation1 MuiCard-root makeStyles-card-212 MuiPaper-rounded"
                 >
                   <div
-                    className="makeStyles-cardDetails-208"
+                    className="makeStyles-cardDetails-213"
                   >
                     <div
                       className="MuiCardContent-root"
@@ -1525,7 +1537,7 @@ Array [
       <br />
     </div>
     <footer
-      className="makeStyles-footer-219"
+      className="makeStyles-footer-224"
     >
       <div
         className="MuiContainer-root MuiContainer-maxWidthLg"
@@ -1711,7 +1723,7 @@ Array [
 
 exports[`Storyshots Home Page Footer 1`] = `
 <footer
-  className="makeStyles-footer-704"
+  className="makeStyles-footer-724"
 >
   <div
     className="MuiContainer-root MuiContainer-maxWidthLg"
@@ -2328,7 +2340,7 @@ Array [
       </div>
     </div>
     <footer
-      className="makeStyles-footer-673"
+      className="makeStyles-footer-693"
     >
       <div
         className="MuiContainer-root MuiContainer-maxWidthLg"
@@ -3063,7 +3075,7 @@ Array [
               onClick={[Function]}
             >
               <div
-                className="MuiAvatar-root Menu-greenAvatar-852 MuiAvatar-colorDefault"
+                className="MuiAvatar-root MuiAvatar-circle Menu-greenAvatar-874 MuiAvatar-colorDefault"
               >
                 <svg
                   aria-hidden="true"
@@ -3119,7 +3131,7 @@ Array [
                       Present
                     </span>
                     <span>
-                       ~ 7 months
+                       ~ 9 months
                     </span>
                   </span>
                 </header>
@@ -4715,7 +4727,7 @@ Array [
       </div>
     </div>
     <footer
-      className="makeStyles-footer-875"
+      className="makeStyles-footer-901"
     >
       <div
         className="MuiContainer-root MuiContainer-maxWidthLg"
