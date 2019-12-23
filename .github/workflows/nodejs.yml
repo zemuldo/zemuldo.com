@@ -29,9 +29,9 @@ jobs:
     - name: npm install, build, and test
       env:
         CI: true
-        BASE_URL: ${{ secrets.BASE_URL }}
+        UI_URL: ${{ secrets.UI_URL }}
         PORT: ${{ secrets.PORT }}
-        BASE_URL_DOMAIN: ${{ secrets.BASE_URL_DOMAIN }}
+        UI_URL_DOMAIN: ${{ secrets.UI_URL_DOMAIN }}
         API_URL: ${{ secrets.API_URL }}
         GA_TRACKING_ID: ${{ secrets.GA_TRACKING_ID }}
       run: |        

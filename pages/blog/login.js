@@ -9,7 +9,7 @@ import PleaseWait from '../../components/please_wait';
 import Entry from '../../components/entry';
 
 const api_url = process.env.API_URL;
-const base_url = process.env.BASE_URL;
+const base_url = process.env.UI_URL;
 
 class Login extends React.Component {
 

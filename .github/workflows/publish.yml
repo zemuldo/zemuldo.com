@@ -20,8 +20,8 @@ jobs:
   #     run: |
   #         touch .env.production
   #         echo API_URL=${{ secrets.PROD_API_URL }} >> .env.production
-  #         echo BASE_URL=${{ secrets.PROD_BASE_URL }} >> .env.production
-  #         echo BASE_URL_DOMAIN=${{ secrets.PROD_BASE_URL_DOMAIN }} >> .env.production
+  #         echo UI_URL=${{ secrets.PROD_UI_URL }} >> .env.production
+  #         echo UI_URL_DOMAIN=${{ secrets.PROD_UI_URL_DOMAIN }} >> .env.production
   #         echo GA_TRACKING_ID=${{ secrets.PROD_GA_TRACKING_ID }} >> .env.production
   #         echo "GITHUB_SHA=${GITHUB_SHA}" >> .env.production
   #         echo "BRANCH=${GITHUB_REF##*/}" >> .env.production
@@ -54,8 +54,8 @@ jobs:
       run: |
           touch .env.production
           echo API_URL=${{ secrets.PROD_API_URL }} >> .env.production
-          echo BASE_URL=${{ secrets.PROD_BASE_URL }} >> .env.production
-          echo BASE_URL_DOMAIN=${{ secrets.PROD_BASE_URL_DOMAIN }} >> .env.production
+          echo UI_URL=${{ secrets.PROD_UI_URL }} >> .env.production
+          echo UI_URL_DOMAIN=${{ secrets.PROD_UI_URL_DOMAIN }} >> .env.production
           echo GA_TRACKING_ID=${{ secrets.PROD_GA_TRACKING_ID }} >> .env.production
           echo "GITHUB_SHA=${GITHUB_SHA}" >> .env.production
           echo "BRANCH=${GITHUB_REF##*/}" >> .env.production
