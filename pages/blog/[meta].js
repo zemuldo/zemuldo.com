@@ -20,8 +20,8 @@ import Image from '../../components/md/image';
 import MarkdownLink from '../../components/md/link';
 
 const api_url = process.env.API_URL;
-const base_url = process.env.BASE_URL;
-const base_url_domain = process.env.BASE_URL_DOMAIN;
+const base_url = process.env.UI_URL;
+const base_url_domain = process.env.UI_URL_DOMAIN;
 
 
 const styles = () => ({
