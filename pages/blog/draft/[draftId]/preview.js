@@ -1,8 +1,8 @@
 import React from 'react';
 import Container from '@material-ui/core/Container';
 import { withStyles } from '@material-ui/core/styles';
-import Footer from '../../components/footer';
-import Menu from '../../components/blog/menu';
+import Footer from '../../../../components/footer';
+import Menu from '../../../../components/blog/menu';
 import Head from 'next/head';
 import Link from 'next/link';
 import { format } from 'date-fns';
@@ -12,11 +12,11 @@ import Avatar from '@material-ui/core/Avatar';
 import EditIcon from '@material-ui/icons/Edit';
 import Grid from '@material-ui/core/Grid';
 import PropTypes from 'prop-types';
-import Entry from '../../components/entry';
+import Entry from '../../../../components/entry';
 import ReactMarkdown from 'react-markdown';
-import CodeBlock from '../../components/md/codeBlock';
-import Image from '../../components/md/image';
-import MarkdownLink from '../../components/md/link';
+import CodeBlock from '../../../../components/md/codeBlock';
+import Image from '../../../../components/md/image';
+import MarkdownLink from '../../../../components/md/link';
 
 const api_url = process.env.API_URL;
 const base_url = process.env.UI_URL;
@@ -63,11 +63,6 @@ const styles = () => ({
 });
 
 
-const urlMetaIdentifier = (meta) => {
-  if (meta.includes('@')) return '@';
-  return '-';
-};
-
 class Blog extends React.Component {
   constructor(props) {
     super(props);
@@ -79,11 +74,9 @@ class Blog extends React.Component {
 
   static async getInitialProps(ctx) {
     const { authorization } = parseCookies(ctx);
-    const { meta } = ctx.query;
-    const _meta = meta.split(urlMetaIdentifier(meta));
-    const metaLength = _meta.length;
-    const __meta = _meta[metaLength - 1] || _meta[0];
-    const res = await fetch(`${api_url}/post/${__meta}`);
+    const { draftId } = ctx.query;
+    
+    const res = await fetch(`${api_url}/post/draft/${draftId}`, { headers: { authorization } });
     const data = await res.json();
     let user;
     if (authorization) {
@@ -93,14 +86,15 @@ class Blog extends React.Component {
     return {
       user,
       authorization,
-      post: data.post,
-      body: data.postBody
+      draft: data,
+      post: data,
+      body: data
     };
   }
   linkedInShare = () => {
-    const { post } = this.props;
+    const { draft } = this.props;
     const initial = 'https://www.linkedin.com/sharing/share-offsite?mini=true&url=';
-    const shareURL = `${initial}https%3A%2F%2Fzemuldo.com/blog/post/${post._id}&title=${post.title.split(' ').join('+')}`;
+    const shareURL = `${initial}https%3A%2F%2Fzemuldo.com/blog/post/${draft._id}&title=${draft.title.split(' ').join('+')}`;
     window.open(shareURL, 'sharer', 'toolbar=0,status=0,width=548,height=325');
   }
   fbShare = () => {
@@ -110,20 +104,20 @@ class Blog extends React.Component {
     window.open(shareURL, 'sharer', 'toolbar=0,status=0,width=548,height=325');
   }
   tweetShare = () => {
-    const { post } = this.props;
-    let hashTgs = '&hashtags=' + post.tags.map(p => p.label).join(',');
+    const { draft } = this.props;
+    let hashTgs = '&hashtags=' + draft.tags.map(p => p.label).join(',');
     let via = '&via=zemuldo';
     let url = `&url=https%3A%2F%2F${base_url_domain}${window.location.pathname}`;
     let fullURL = `${url}${via}${hashTgs}`;
-    let shareURL = `https://twitter.com/intent/tweet?text=${post.title}` + fullURL;
+    let shareURL = `https://twitter.com/intent/tweet?text=${draft.title}` + fullURL;
     window.open(shareURL, 'sharer', 'toolbar=0,status=0,width=548,height=325');
   }
   render() {
-    const { post, body, classes, authorization } = this.props;
+    const { draft, classes, authorization } = this.props;
     return (
       <React.Fragment>
         <Head>
-          <title>Zemuldo Blog - {post.title}</title>
+          <title>Zemuldo Blog - {draft.title}</title>
           <link href="/css/blog.css" rel="stylesheet" />
           <link
             href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -132,13 +126,13 @@ class Blog extends React.Component {
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:site" content="@zemuldo" />
           <meta name="twitter:creator" content="@zemuldo" />
-          <meta name="twitter:title" content={post.title} />
-          <meta name="twitter:description" content={post.description} />
-          <meta name="twitter:image" content={post.coverPhotoUrl} />
-          <meta property="og:title" content={post.title} />
-          <meta property="og:description" content={post.description} />
-          <meta property="og:image" content={post.coverPhotoUrl} />
-          <meta property="og:url" content={`${base_url}/blog/post/${post._id}`} />
+          <meta name="twitter:title" content={draft.title} />
+          <meta name="twitter:description" content={draft.description} />
+          <meta name="twitter:image" content={draft.coverPhotoUrl} />
+          <meta property="og:title" content={draft.title} />
+          <meta property="og:description" content={draft.description} />
+          <meta property="og:image" content={draft.coverPhotoUrl} />
+          <meta property="og:url" content={`${base_url}/blog/post/${draft._id}`} />
         </Head>
         <Container
           maxWidth="md"
@@ -152,7 +146,7 @@ class Blog extends React.Component {
             <Menu authorization={authorization}>
               {
                 this.props.authorization &&
-                <Link href={`/blog/${post._id}/edit`}>
+                <Link href={`/blog/${draft._id}/edit`}>
                   <Avatar className={classes.greenAvatar}>
                     <EditIcon />
                   </Avatar>
@@ -161,13 +155,13 @@ class Blog extends React.Component {
             </Menu>
 
           </Grid>
-          <h1>{post.title}</h1>
+          <h1>{draft.title}</h1>
 
-          <p>Posted {format(new Date(post.createdAt), 'PPPP')}</p>
+          <p>Posted {format(new Date(draft.createdAt), 'PPPP')}</p>
           <div className='blog-tags'>
 
             {
-              post.tags.map(tag =>
+              draft.tags.map(tag =>
                 <span className='blog-tags' style={{ color: tag.color, boxShadow: '0 8px 15px 0 rgba(95, 91, 95, .33)', backgroundColor: 'black', border: 'solid 2px transparent', borderRadius: '3px', cursor: 'pointer' }} key={tag.value}>
                   {tag.label}
                 </span>)
@@ -188,8 +182,8 @@ class Blog extends React.Component {
         <Container>
           <img
             style={{ maxHeight: '600px' }}
-            src={post.coverPhotoUrl}
-            alt={post.title}
+            src={draft.coverPhotoUrl}
+            alt={draft.title}
           />
         </Container>
 
@@ -204,7 +198,7 @@ class Blog extends React.Component {
         >
           <br />
           <ReactMarkdown
-            source={body.body}
+            source={draft.body}
             renderers={{ code: CodeBlock, image: Image, link: MarkdownLink }}
           />
         </Container>
@@ -215,7 +209,7 @@ class Blog extends React.Component {
 }
 
 Blog.propTypes = {
-  post: PropTypes.object.isRequired,
+  draft: PropTypes.object.isRequired,
   body: PropTypes.object.isRequired,
   classes: PropTypes.object.isRequired,
   authorization: PropTypes.oneOfType([PropTypes.string, PropTypes.oneOf([null])])
