@@ -259,7 +259,7 @@ class EditBlog extends React.Component {
 
     return (
       <React.Fragment>
-        <PublishDialogue message="Are you sure to update?" handlePublish={this.handlePublish} handleClose={this.handleClosePublishDialogue} open={publishDialogueOpen}/>
+        <PublishDialogue submitText={'Update'} message="Are you sure to update?" handlePublish={this.handlePublish} handleClose={this.handleClosePublishDialogue} open={publishDialogueOpen}/>
         <Head>
           <link href="/css/blog.css" rel="stylesheet" />
           <link
