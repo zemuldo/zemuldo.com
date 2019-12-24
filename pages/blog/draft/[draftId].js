@@ -350,6 +350,8 @@ class NewBlog extends React.Component {
                 </Grid>
               </Grid>
               <br />
+              <a rel='noopener noreferrer' target='_blank' href={`/blog/draft/${draft._id}/preview`} >Preview</a>
+              <br />
               <TextField
                 id="description"
                 label="Post Description"

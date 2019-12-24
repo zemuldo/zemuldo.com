@@ -7,7 +7,7 @@ import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import PropTypes from 'prop-types';
 
-export default function PublishDialogue({open, handleClose, handlePublish, message}) {
+export default function PublishDialogue({open, handleClose, handlePublish, message, submitText}) {
 
   return (
     <div>
@@ -27,8 +27,8 @@ export default function PublishDialogue({open, handleClose, handlePublish, messa
           <Button onClick={handleClose} color="primary">
             Not yet!
           </Button>
-          <Button onClick={handlePublish} color="primary" autoFocus>
-            Publish
+          <Button onClick={handlePublish} color="primary" >
+            {submitText || 'Publish'}
           </Button>
         </DialogActions>
       </Dialog>
@@ -40,5 +40,6 @@ PublishDialogue.propTypes = {
   open: PropTypes.bool,
   message: PropTypes.string.isRequired,
   handleClose: PropTypes.func.isRequired,
-  handlePublish: PropTypes.func.isRequired
+  handlePublish: PropTypes.func.isRequired,
+  submitText: PropTypes.string,
 };
