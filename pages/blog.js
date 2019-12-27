@@ -140,7 +140,7 @@ class Blog extends React.Component {
     const { classes, featurePost, authorization } = this.props;
     const { posts } = this.state;
     return (
-      <React.Fragment>
+      <>
         <Head>
           <title>Zemuldo Blog - I write and Share my Experience.</title>
           <meta name="description" content="Blog by Danstan Onyango, Software Engineer, Nairobi, Kenya. Tech articles, Tutorials and Reviews. Sharing content that inspires." />
@@ -193,7 +193,7 @@ class Blog extends React.Component {
           {this.state.fetching && <div style={{ flexGrow: 1, color: 'white' }}><LinearProgress /> </div>}
         </Container>
         <Footer />
-      </React.Fragment>
+      </>
     );
   }
 }

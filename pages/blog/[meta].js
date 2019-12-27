@@ -121,7 +121,7 @@ class Blog extends React.Component {
   render() {
     const { post, body, classes, authorization } = this.props;
     return (
-      <React.Fragment>
+      <>
         <Head>
           <title>Zemuldo Blog - {post.title}</title>
           <link href="/css/blog.css" rel="stylesheet" />
@@ -209,7 +209,7 @@ class Blog extends React.Component {
           />
         </Container>
         <Footer />
-      </React.Fragment>
+      </>
     );
   }
 }

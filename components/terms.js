@@ -14,7 +14,7 @@ export default function AcceptTerms({accepted_terms}) {
   };
   if (accepted_terms === '1' || accepted_terms_now === '1') return null;
   return (
-    <React.Fragment>
+    <>
       
       <div style={{
         textAlign: 'center',
@@ -40,7 +40,7 @@ export default function AcceptTerms({accepted_terms}) {
         </Container>
 
       </div> 
-    </React.Fragment>
+    </>
   );
 }
 

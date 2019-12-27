@@ -5,7 +5,7 @@ import Container from '@material-ui/core/Container';
 export default function PleaseWait() {
     
   return (
-    <React.Fragment>
+    <>
       <Container style={{ color: 'white' }} maxWidth="md">
 
         <Grid container justify="center" alignItems="center">
@@ -16,6 +16,6 @@ export default function PleaseWait() {
           </Grid>
         </Grid>
       </Container>
-    </React.Fragment>
+    </>
   );
 }

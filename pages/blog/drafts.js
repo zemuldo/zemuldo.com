@@ -90,7 +90,7 @@ function Drafts({ drafts, authorization }) {
   }
 
   return (
-    <React.Fragment>
+    <>
       <Head>
         <title>Zemuldo Blog ~ Drafts</title>
       </Head>
@@ -168,7 +168,7 @@ function Drafts({ drafts, authorization }) {
           </Grid>
         </Grid>
       </Container>
-    </React.Fragment>
+    </>
   );
 }
 

@@ -5,7 +5,7 @@ import CustomLink from '../link';
 
 export default function Home() {
   return (
-    <React.Fragment>
+    <>
       <div
         className="home-section-background"
         data-stellar-background-ratio="0.6"
@@ -63,6 +63,6 @@ export default function Home() {
         </div>
       </div>
 
-    </React.Fragment>
+    </>
   );
 }

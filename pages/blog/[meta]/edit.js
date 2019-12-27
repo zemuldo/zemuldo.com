@@ -28,7 +28,7 @@ const api_url = process.env.API_URL;
 const base_url = process.env.UI_URL;
 
 const JoinNow = () => (
-  <React.Fragment>
+  <>
     <Head>
       <title>Join</title>
     </Head>
@@ -54,7 +54,7 @@ const JoinNow = () => (
         </div>
       </div>
     </div>
-  </React.Fragment>
+  </>
 );
 
 marked.setOptions({
@@ -258,7 +258,7 @@ class EditBlog extends React.Component {
     }
 
     return (
-      <React.Fragment>
+      <>
         <PublishDialogue submitText={'Update'} message="Are you sure to update?" handlePublish={this.handlePublish} handleClose={this.handleClosePublishDialogue} open={publishDialogueOpen}/>
         <Head>
           <link href="/css/blog.css" rel="stylesheet" />
@@ -361,7 +361,7 @@ class EditBlog extends React.Component {
           />
         </Container>
         <Footer />
-      </React.Fragment>
+      </>
     );
   }
 }

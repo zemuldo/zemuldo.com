@@ -6,14 +6,14 @@ import Head from 'next/head';
 
 function Index() {
   return (
-    <React.Fragment>
+    <>
       <Head>
         <title>I&apos;m Zemuldo ~ Danstan Onyango, Software Engineer</title>
         <meta name="description" content="Danstan Onyango ~ Zemuldo, Software Engineer - Nairobi, Kenya, Self Taught. Elixir, Node, React, PostgreSQL. Writer @Medium, @Dev.  🚀🚀Geek🚀🚀 " />
       </Head>
       <Home />
       <Footer />
-    </React.Fragment>
+    </>
   );
 }
 

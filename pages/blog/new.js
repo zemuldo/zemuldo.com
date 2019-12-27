@@ -223,7 +223,7 @@ class NewBlog extends React.Component {
     const { publishDialogueOpen } = this.state;
     if (!authorization) return <div style={{ color: 'white' }}>Please wait...</div>;
     return (
-      <React.Fragment>
+      <>
         <PublishDialogue
           message="Are you sure this is ready for publishing? Clicking publish will publish this post. If you still have editing to do, just click Not yet!"
           handlePublish={this.handlePublish}
@@ -331,7 +331,7 @@ class NewBlog extends React.Component {
           />
         </Container>
         <Footer />
-      </React.Fragment>
+      </>
     );
   }
 }
