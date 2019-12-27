@@ -21,7 +21,7 @@ class Login extends React.Component {
     const { query, loggingIn } = this.props;
     if (loggingIn || query.token) return <PleaseWait/>;
     return (
-      <React.Fragment>
+      <>
 
         <Head>
           <title>I&apos;m Danstan ~ Zemuldo</title>
@@ -58,7 +58,7 @@ class Login extends React.Component {
             </div>
           </div>
         </div>
-      </React.Fragment>
+      </>
     );
   }
 }

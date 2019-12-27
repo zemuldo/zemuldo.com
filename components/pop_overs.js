@@ -15,7 +15,7 @@ export default function MouseOverPopover({ children }) {
   const open = Boolean(anchorEl);
 
   return (
-    <React.Fragment>
+    <>
       <span
         aria-owns={open ? 'mouse-over-popover' : undefined}
         aria-haspopup="true"
@@ -37,7 +37,7 @@ export default function MouseOverPopover({ children }) {
         }}>{hoverText}
         </span>
       } */}
-    </React.Fragment>
+    </>
 
   );
 }

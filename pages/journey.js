@@ -15,7 +15,7 @@ const api_url = process.env.API_URL;
 
 function DeveloperStory({authorization}) {
   return (
-    <React.Fragment>
+    <>
       <Head>
         <title>Zemuldo - My Software Engineering Journey</title>
         <meta name="description" content="Danstan Onyango ~ Zemuldo, Software Engineer - Nairobi, Kenya, Self Taught. Here is my journey as a Software Engineer all the way to where I am right now." />
@@ -45,7 +45,7 @@ function DeveloperStory({authorization}) {
 
       <Footer/>
       
-    </React.Fragment>
+    </>
   );
 }
 

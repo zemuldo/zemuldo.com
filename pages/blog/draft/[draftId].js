@@ -256,7 +256,7 @@ class NewBlog extends React.Component {
     const { classes, authorization, draft } = this.props;
     const { publishDialogueOpen } = this.state;
     return (
-      <React.Fragment>
+      <>
         <PublishDialogue
           message="Are you sure this is ready for publishing? Clicking publish will publish this post. If you still have editing to do, just click Not yet!"
           handlePublish={this.handlePublish}
@@ -301,7 +301,7 @@ class NewBlog extends React.Component {
           </Grid>
         </Grid>
         {
-          draft && <React.Fragment>
+          draft && <>
             <Container
               maxWidth="md"
               style={{
@@ -386,12 +386,12 @@ class NewBlog extends React.Component {
                 value={this.state.body}
               />
             </Container>
-          </React.Fragment>
+          </>
        
         }
         <Footer />
         <Notification/>
-      </React.Fragment>
+      </>
     );
   }
 }

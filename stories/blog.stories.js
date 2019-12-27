@@ -69,7 +69,7 @@ const blogs_props = {
     sidebarAboutBox: 'Blog-sidebarAboutBox-15',
     sidebarSection: 'Blog-sidebarSection-16'
   },
-  featurePost: {
+  featuredPost: {
     post: {
       deleted: false,
       tags: [

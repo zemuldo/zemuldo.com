@@ -20,7 +20,7 @@ Image.displayName = 'Image';
 
 Image.propTypes = {
   src: PropTypes.string.isRequired,
-  alt: PropTypes.string.isRequired,
+  alt: PropTypes.string,
 };
 
 export default Image;

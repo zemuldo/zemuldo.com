@@ -1130,7 +1130,7 @@ Array [
               onClick={[Function]}
             >
               <div
-                className="MuiAvatar-root MuiAvatar-circle Menu-greenAvatar-128 MuiAvatar-colorDefault"
+                className="MuiAvatar-root MuiAvatar-circle Menu-greenAvatar-112 MuiAvatar-colorDefault"
               >
                 <svg
                   aria-hidden="true"
@@ -1162,15 +1162,10 @@ Array [
         onClick={[Function]}
       >
         <div
-          className="MuiPaper-root MuiPaper-elevation1 Blog-mainFeaturedPost-15 Blog-mainFeaturedPost-7 MuiPaper-rounded"
-          style={
-            Object {
-              "backgroundImage": "url(https://miro.medium.com/max/1200/1*vKd5tDJmDFznrOkMh1kQGg.png)",
-            }
-          }
+          className="MuiPaper-root MuiPaper-elevation1 FeaturedPost-mainFeaturedPost-145 MuiPaper-rounded"
         >
           <div
-            className="Blog-overlay-16 Blog-overlay-8"
+            className="FeaturedPost-overlay-146"
             style={
               Object {
                 "backgroundColor": "rgb(23, 23, 23)",
@@ -1190,7 +1185,7 @@ Array [
               className="MuiGrid-root MuiGrid-item MuiGrid-grid-md-6"
             >
               <div
-                className="Blog-mainFeaturedPostContent-17 Blog-mainFeaturedPostContent-9"
+                className="FeaturedPost-mainFeaturedPostContent-147"
               >
                 <h1
                   className="MuiTypography-root MuiTypography-h3 MuiTypography-colorInherit MuiTypography-gutterBottom"
@@ -1198,6 +1193,7 @@ Array [
                     Object {
                       "color": "#08a6f3",
                       "fontFamily": "'Courier New', Courier, monospace",
+                      "fontSize": "3em",
                     }
                   }
                 >
@@ -1218,6 +1214,14 @@ Array [
                 </span>
               </div>
             </div>
+            <div
+              className="MuiGrid-root MuiGrid-item MuiGrid-grid-md-6"
+              style={
+                Object {
+                  "backgroundImage": "url(https://miro.medium.com/max/1200/1*vKd5tDJmDFznrOkMh1kQGg.png)",
+                }
+              }
+            />
           </div>
         </div>
       </a>
