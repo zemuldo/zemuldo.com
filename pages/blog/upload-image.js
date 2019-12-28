@@ -76,7 +76,7 @@ function DropZone({ authorization }) {
       data.append(file.name, file, file.name);
     }
 
-    const res = await fetch('/image', {
+    const res = await fetch(`${api_url}/image`, {
       method: 'POST',
       headers: { authorization },
       body: data
