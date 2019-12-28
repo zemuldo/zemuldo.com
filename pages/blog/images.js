@@ -7,20 +7,16 @@ import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import fetch from 'isomorphic-unfetch';
+import Menu from '../../components/blog/menu';
+import Head from 'next/head';
+import Footer from '../../components/footer';
+import PropTypes from 'prop-types';
+import entry from '../../components/entry';
+import { parseCookies } from 'nookies';
 
 const api_url = process.env.API_URL;
 
 const useStyles = makeStyles(theme => ({
-  icon: {
-    marginRight: theme.spacing(2),
-  },
-  heroContent: {
-    backgroundColor: theme.palette.background.paper,
-    padding: theme.spacing(8, 0, 6),
-  },
-  heroButtons: {
-    marginTop: theme.spacing(4),
-  },
   cardGrid: {
     paddingTop: theme.spacing(8),
     paddingBottom: theme.spacing(8),
@@ -35,20 +31,24 @@ const useStyles = makeStyles(theme => ({
   },
   cardContent: {
     flexGrow: 1,
-  },
-  footer: {
-    backgroundColor: theme.palette.background.paper,
-    padding: theme.spacing(6),
-  },
+  }
 }));
 
-export default function Album({images}) {
+function Album({images, authorization, user}) {
   const classes = useStyles();
-
   return (
     <React.Fragment>
-      <main> <Container className={classes.cardGrid} maxWidth="md">
-        {/* End hero unit */}
+      <Head>
+        <title>Zemuldo Blog - I write and Share my Experience.</title>
+        <meta name="description" content="Blog by Danstan Onyango, Software Engineer, Nairobi, Kenya. Tech articles, Tutorials and Reviews. Sharing content that inspires." />
+      </Head>
+      <Container style={{ color: 'white' }} maxWidth="md">
+
+        <Grid container justify="center" alignItems="center">
+          <Menu authorization={authorization} />
+        </Grid>
+      </Container>
+      <Container style={{ color: 'white', backgroundColor: 'rgb(23, 23, 23)' }} maxWidth="md">
         <Grid container spacing={4}>
           {images.map(image => (
             <Grid item key={image.name} xs={12} sm={6} md={4}>
@@ -56,32 +56,49 @@ export default function Album({images}) {
                 <CardMedia
                   className={classes.cardMedia}
                   image={`${process.env.Z_SITE_IMAGES_URL}/${image.name}`}
-                  title="Image title"
+                  title={image.name.split('-').join(' ').split('.')[0]}
                 />
                  
                 <CardActions>
                   <Button size="small" color="primary">
                       View
                   </Button>
-                  <Button size="small" color="primary">
+                  {
+                    authorization && parseInt(user.oAuthId, 16) === parseInt(image.ownerId, 16) &&
+                    <Button size="small" color="primary">
                       Edit
-                  </Button>
+                    </Button>
+                  }
                 </CardActions>
               </Card>
             </Grid>
           ))}
         </Grid>
       </Container>
-      </main>
+      <Footer />
     </React.Fragment>
   );
 }
 
-Album.getInitialProps = async () =>{
+Album.getInitialProps = async (ctx) =>{
+  const { authorization } = parseCookies(ctx);
   const res = await fetch(`${api_url}/image?skip=0&limit=10`);
   const data = await res.json();
+  let user;
+  if (authorization) {
+    const res = await fetch(`${api_url}/user`, { headers: { authorization } });
+    user = await res.json();
+  }
 
   return {
-    images: data
+    images: data,
+    user
   };
 };
+
+Album.propTypes = {
+  authorization: PropTypes.string,
+  images: PropTypes.array.isRequired
+};
+
+export default entry(Album);
