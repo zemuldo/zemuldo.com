@@ -8,6 +8,8 @@ import { withStyles } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
 import Link from '../link';
 import NewIcon from '@material-ui/icons/NoteAdd';
+import ImageIcon from '@material-ui/icons/Image';
+import PhotoLibraryIcon from '@material-ui/icons/PhotoLibrary';
 
 const api_url = process.env.API_URL;
 
@@ -163,6 +165,15 @@ class Menu extends React.Component{
               </Link>
           }
 
+          {
+            path !=='/blog/upload-image' && this.props.authorization &&
+              <Link href="/blog/upload-image">
+                <Avatar className={classes.greenAvatar}>
+                  <ImageIcon />
+                </Avatar>
+              </Link>
+          }
+
           {children}
 
           {path.includes('/blog') && !authorization && <Link href={`/blog/login?redirectTo=${path}`}>
@@ -170,6 +181,15 @@ class Menu extends React.Component{
               <VpnKeyIcon/>
             </Avatar>
           </Link>
+          }
+
+          {
+            path !=='/blog/images' && this.props.authorization &&
+              <Link href="/blog/images">
+                <Avatar className={classes.greenAvatar}>
+                  <PhotoLibraryIcon />
+                </Avatar>
+              </Link>
           }
 
           {user && <Avatar alt="User profile" className={classes.avatar} src={user.profilePhotoUrl} />}

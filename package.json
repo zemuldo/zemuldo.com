@@ -16,6 +16,7 @@
     "date-fns": "^2.0.0",
     "dotenv-flow": "^3.1.0",
     "dotenv-webpack": "^1.7.0",
+    "express-fileupload": "^1.1.6",
     "isomorphic-unfetch": "^3.0.0",
     "markdown-it": "^9.1.0",
     "markdown-to-jsx": "^6.10.3",

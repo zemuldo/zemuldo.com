@@ -37,6 +37,8 @@ const handle = app.getRequestHandler();
 
 const router = express();
 
+router.use('/image', require('./api/image.js'));
+
 router.get('/site-stories', (_req, res) => {
   fs.readFile(path.join(__dirname + '/.stories/index.html'), 'utf8', async function (err, data) {
 
