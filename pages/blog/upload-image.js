@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from 'react';
+import React, { useCallback, useState, useEffect } from 'react';
 import { useDropzone } from 'react-dropzone';
 import { makeStyles } from '@material-ui/core/styles';
 import Footer from '../../components/footer';
@@ -44,7 +44,7 @@ const useStyles = makeStyles((theme) => ({
   },
   root: {
     textAlign: 'center',
-    maxWidth: '600px', 
+    maxWidth: '600px',
     margin: 'auto',
     '& > *': {
       margin: theme.spacing(1),
@@ -55,7 +55,11 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-function DropZone({authorization}) {
+function DropZone({ authorization }) {
+  useEffect(() => {
+    if (!authorization) window.location = '/blog/login?redirectTo=/blog/upload-image';
+  });
+
   const classes = useStyles();
 
   const [files, setFiles] = useState([]);
@@ -65,16 +69,16 @@ function DropZone({authorization}) {
 
   }, []);
 
-  const handleUpload = async () =>{
+  const handleUpload = async () => {
 
     const data = new FormData();
     for (const file of files) {
-      data.append(file.name , file, file.name);
+      data.append(file.name, file, file.name);
     }
 
-    const res = await fetch(`${api_url}/upload`, {
+    const res = await fetch(`${api_url}/image`, {
       method: 'POST',
-      headers: {authorization},
+      headers: { authorization },
       body: data
     });
 
@@ -95,21 +99,21 @@ function DropZone({authorization}) {
         </Grid>
       </Container>
       <Container style={{ color: 'white' }} maxWidth="md">
-        <div style={{maxWidth: '600px', margin: 'auto'}} {...getRootProps()}>
+        <div style={{ maxWidth: '600px', margin: 'auto' }} {...getRootProps()}>
           <input {...getInputProps()} />
           <Paper className={classes.paper}>
             <CardActionArea component="div" >
               <Card className={classes.card}>
-                <div style={{fontSize: '12px'}} className={classes.cardDetails}>
+                <div style={{ fontSize: '12px' }} className={classes.cardDetails}>
                   <CardContent>
                     <Typography component="h3" variant="h3">
                       {
-                        files[0]?
+                        files[0] ?
                           <div>
                             {
-                              files.map(f=><p style={{fontSize: '12px'}} key = {f.name}>{f.name}</p>)
+                              files.map(f => <p style={{ fontSize: '12px' }} key={f.name}>{f.name}</p>)
                             }
-                          </div>:
+                          </div> :
                           isDragActive ?
                             <p>Drop the files here ...</p> :
                             <p>Drag and drop some files here, or click to select files</p>
@@ -121,10 +125,10 @@ function DropZone({authorization}) {
             </CardActionArea>
           </Paper>
         </div>
-        <br/>
+        <br />
         <div className={classes.root}>
-          <Fab disabled={!files[0]} onClick={()=> setFiles([])} variant="extended">
-            <DeleteSweepIcon className={classes.extendedIcon}  />
+          <Fab disabled={!files[0]} onClick={() => setFiles([])} variant="extended">
+            <DeleteSweepIcon className={classes.extendedIcon} />
             Clear
           </Fab>
           <Fab disabled={!files[0]} onClick={handleUpload} variant="extended">
@@ -132,7 +136,7 @@ function DropZone({authorization}) {
             Upload
           </Fab>
         </div>
-        
+
       </Container>
       <Footer />
     </React.Fragment>
