@@ -12,3 +12,8 @@ Uses :
 - HeighlightJs
 - Storybookjs
 
+# Images
+
+Images are stored under mounts for K8s and Docker
+- UI - public/z-site-images
+- API - express/public/z-site-images

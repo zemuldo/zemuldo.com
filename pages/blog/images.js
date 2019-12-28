@@ -98,7 +98,8 @@ Album.getInitialProps = async (ctx) =>{
 
 Album.propTypes = {
   authorization: PropTypes.string,
-  images: PropTypes.array.isRequired
+  images: PropTypes.array.isRequired,
+  user: PropTypes.object
 };
 
 export default entry(Album);
