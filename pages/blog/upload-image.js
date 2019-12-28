@@ -18,6 +18,8 @@ import DeleteSweepIcon from '@material-ui/icons/DeleteSweep';
 import NavigationIcon from '@material-ui/icons/Navigation';
 import fetch from 'isomorphic-unfetch';
 
+const api_url = process.env.API_URL;
+
 const useStyles = makeStyles((theme) => ({
   card: {
     color: 'white',
@@ -70,7 +72,7 @@ function DropZone({authorization}) {
       data.append(file.name , file, file.name);
     }
 
-    const res = await fetch('http://localhost:8090/upload', {
+    const res = await fetch(`${api_url}/upload`, {
       method: 'POST',
       headers: {authorization},
       body: data
@@ -121,11 +123,11 @@ function DropZone({authorization}) {
         </div>
         <br/>
         <div className={classes.root}>
-          <Fab onClick={()=> setFiles([])} variant="extended">
+          <Fab disabled={!files[0]} onClick={()=> setFiles([])} variant="extended">
             <DeleteSweepIcon className={classes.extendedIcon}  />
             Clear
           </Fab>
-          <Fab onClick={handleUpload} variant="extended">
+          <Fab disabled={!files[0]} onClick={handleUpload} variant="extended">
             <NavigationIcon className={classes.extendedIcon} />
             Upload
           </Fab>
