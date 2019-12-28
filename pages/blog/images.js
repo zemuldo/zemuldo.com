@@ -55,7 +55,7 @@ function Album({images, authorization, user}) {
               <Card className={classes.card}>
                 <CardMedia
                   className={classes.cardMedia}
-                  image={`/z-site-images/${image.name}`}
+                  image={`${api_url}/z-site-images/${image.name}`}
                   title={image.name.split('-').join(' ').split('.')[0]}
                 />
                  
