@@ -1,10 +1,12 @@
-const express = require('express');
 const compression = require('compression');
-const next = require('next');
 const logger = require('./tools/logger');
+const express = require('express');
 const cheerio = require('cheerio');
-const fs = require('fs');
+const next = require('next');
 const path = require('path');
+const fs = require('fs');
+
+const imageServer = express();
 
 require('dotenv-flow').config();
 
@@ -36,6 +38,8 @@ const app = next({ dev });
 const handle = app.getRequestHandler();
 
 const router = express();
+
+router.use('/image', require('./routes/image'));
 
 router.get('/site-stories', (_req, res) => {
   fs.readFile(path.join(__dirname + '/.stories/index.html'), 'utf8', async function (err, data) {
@@ -74,9 +78,16 @@ app.prepare().then(() => {
     return handle(req, res);
   });
 
-  server.listen(process.env.PORT, err => {
+  server.listen(process.env.UI_PORT, err => {
     if (err) throw err;
-    logger.info(`> Ready on http://localhost:${process.env.PORT}`);
+    logger.info(`> Ready on http://localhost:${process.env.UI_PORT}`);
   });
 
+});
+
+imageServer.use(express.static(path.join(__dirname, 'public')));
+
+imageServer.listen(process.env.IMAGE_SERVER_PORT, err =>{
+  if (err) throw err;
+  else logger.info(`> Ready http://localhost:${process.env.IMAGE_SERVER_PORT}`);
 });
