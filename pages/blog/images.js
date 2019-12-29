@@ -28,7 +28,7 @@ const useStyles = makeStyles(theme => ({
     flexDirection: 'column',
   },
   cardMedia: {
-    paddingTop: '56.25%', // 16:9
+    paddingTop: '56.25%',
   },
   cardContent: {
     flexGrow: 1,
@@ -98,16 +98,17 @@ function Album({images, authorization, user}) {
               <Card className={classes.card}>
                 <CardMedia
                   className={classes.cardMedia}
-                  image={`/z-site-images/${image.name}`}
+                  image={`https://zemuldo.com/z-site-images/${image.name}`}
                   title={image.name.split('-').join(' ').split('.')[0]}
                 />
                  
                 <CardActions>
                   <Button 
                     onClick={() => {
-                      navigator.clipboard.writeText(`${process.env.SITE_IMAGES_URL}/${image.name}`);
+                      navigator.clipboard.writeText(`${ui_url}/${image.name}`);
                     }} 
-                    size="small" color="primary"
+                    size="small" 
+                    color="primary"
                   >
                       Copy Link
                   </Button>
