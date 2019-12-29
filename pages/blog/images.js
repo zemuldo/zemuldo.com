@@ -60,8 +60,13 @@ function Album({images, authorization, user}) {
                 />
                  
                 <CardActions>
-                  <Button size="small" color="primary">
-                      View
+                  <Button 
+                    onClick={() => {
+                      navigator.clipboard.writeText(`${process.env.SITE_IMAGES_URL}/${image.name}`);
+                    }} 
+                    size="small" color="primary"
+                  >
+                      Copy Link
                   </Button>
                   {
                     authorization && parseInt(user.oAuthId, 16) === parseInt(image.ownerId, 16) &&
