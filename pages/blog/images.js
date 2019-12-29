@@ -16,6 +16,7 @@ import entry from '../../components/entry';
 import { parseCookies } from 'nookies';
 
 const api_url = process.env.API_URL;
+const images_url = process.env.SITE_IMAGES_URL;
 
 const useStyles = makeStyles(theme => ({
   cardGrid: {
@@ -28,7 +29,7 @@ const useStyles = makeStyles(theme => ({
     flexDirection: 'column',
   },
   cardMedia: {
-    paddingTop: '56.25%',
+    paddingTop: '56.25%', // 16:9
   },
   cardContent: {
     flexGrow: 1,
@@ -98,17 +99,16 @@ function Album({images, authorization, user}) {
               <Card className={classes.card}>
                 <CardMedia
                   className={classes.cardMedia}
-                  image={`https://zemuldo.com/z-site-images/${image.name}`}
+                  image={`${images_url}/${image.name}`}
                   title={image.name.split('-').join(' ').split('.')[0]}
                 />
                  
                 <CardActions>
                   <Button 
                     onClick={() => {
-                      navigator.clipboard.writeText(`${ui_url}/${image.name}`);
+                      navigator.clipboard.writeText(`${images_url}/${image.name}`);
                     }} 
-                    size="small" 
-                    color="primary"
+                    size="small" color="primary"
                   >
                       Copy Link
                   </Button>
