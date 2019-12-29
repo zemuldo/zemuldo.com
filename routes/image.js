@@ -9,13 +9,6 @@ const router = express();
 
 router.use(fileupload());
 
-router.use((_, res, next) => {
-  res.header('Access-Control-Allow-Origin', '*');
-  res.header('Access-Control-Allow-Headers', '*');
-  res.header('Access-Control-Allow-Methods', 'PUT, POST, GET, DELETE, OPTIONS');
-  next();
-});
-
 router.post('/', async (req, res) => {
   try {
     for (const file in req.files) {

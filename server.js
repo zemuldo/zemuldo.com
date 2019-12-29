@@ -39,6 +39,8 @@ const handle = app.getRequestHandler();
 
 const router = express();
 
+router.use('/image', require('./routes/image'));
+
 router.get('/site-stories', (_req, res) => {
   fs.readFile(path.join(__dirname + '/.stories/index.html'), 'utf8', async function (err, data) {
 
@@ -82,8 +84,6 @@ app.prepare().then(() => {
   });
 
 });
-
-imageServer.use('/image', require('./routes/image'));
 
 imageServer.use(express.static(path.join(__dirname, 'public')));
 
