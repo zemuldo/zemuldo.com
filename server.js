@@ -78,9 +78,9 @@ app.prepare().then(() => {
     return handle(req, res);
   });
 
-  server.listen(process.env.PORT, err => {
+  server.listen(process.env.UI_PORT, err => {
     if (err) throw err;
-    logger.info(`> Ready on http://localhost:${process.env.PORT}`);
+    logger.info(`> Ready on http://localhost:${process.env.UI_PORT}`);
   });
 
 });

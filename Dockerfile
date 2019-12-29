@@ -15,6 +15,6 @@ RUN npm run build
 
 RUN npm run build-storybook
 
-EXPOSE 3000
+EXPOSE 3001 3002
 
 CMD ["npm", "start"]
