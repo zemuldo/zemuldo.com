@@ -16,6 +16,7 @@ import entry from '../../components/entry';
 import { parseCookies } from 'nookies';
 
 const api_url = process.env.API_URL;
+const images_url = process.env.SITE_IMAGES_URL;
 
 const useStyles = makeStyles(theme => ({
   cardGrid: {
@@ -98,7 +99,7 @@ function Album({images, authorization, user}) {
               <Card className={classes.card}>
                 <CardMedia
                   className={classes.cardMedia}
-                  image={`${process.env.SITE_IMAGES_URL}/${image.name}`}
+                  image={`${images_url}/${image.name}`}
                   title={image.name.split('-').join(' ').split('.')[0]}
                 />
                  
