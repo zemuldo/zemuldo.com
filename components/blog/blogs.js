@@ -31,6 +31,9 @@ const useStyles = makeStyles(() => ({
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center',
+    '&:hover': {
+      backgroundColor: 'black'
+    }
   }
 }));
 

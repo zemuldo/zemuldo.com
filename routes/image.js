@@ -12,7 +12,7 @@ router.use(fileupload());
 router.post('/', async (req, res) => {
   try {
     for (const file in req.files) {
-      const fileName = file.split(' ').join('-');
+      const fileName = file.split(' ').join('-').toLowerCase();
 
       const res = await fetch(`${api_url}/image/${fileName}`, {
         method: 'POST',
