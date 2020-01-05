@@ -155,6 +155,9 @@ class EditBlog extends React.Component {
       postTitle: post.title,
       body: body.body,
       tags: post.tags,
+      metaTags: (post.metaTags || []).map(t=>  {
+        return {value: t, label: t};
+      }),
       description: post.description,
       coverPhotoUrl: post.coverPhotoUrl,
       publishDialogueOpen: false
@@ -334,7 +337,7 @@ class EditBlog extends React.Component {
             </Grid>
             <Grid item xs={12} sm={6}>
               <div style={{ marginTop: '26px' }}>
-                <MetaTags options={options} onChange={this.handleMetaTagsChange} />
+                <MetaTags options={options} defaultValue = {this.state.metaTags} onChange={this.handleMetaTagsChange} />
               </div>
             </Grid>
           </Grid>
