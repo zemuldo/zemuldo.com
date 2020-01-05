@@ -22,7 +22,6 @@ const api_url = process.env.API_URL;
 const base_url = process.env.UI_URL;
 const base_url_domain = process.env.UI_URL_DOMAIN;
 
-
 const styles = () => ({
   devTo: {
     border: '3px solid #08a6f3',
@@ -135,10 +134,19 @@ class Blog extends React.Component {
           <meta name="twitter:title" content={post.title} />
           <meta name="twitter:description" content={post.description} />
           <meta name="twitter:image" content={post.coverPhotoUrl} />
+
           <meta property="og:title" content={post.title} />
+          <meta property="og:site_name" content='Zemuldo Blog' />
+          <meta property="article:published_time" content={post.createdAt} />
+          <meta property="article:modified_time" content={post.updatedAt} />
+          <meta property="article:author" content={'Danstan Onyango'} />
+          <meta property="article:section" content={'Technology'} />
+          <meta property="article:tag" content={'Technology'} />
           <meta property="og:description" content={post.description} />
           <meta property="og:image" content={post.coverPhotoUrl} />
           <meta property="og:url" content={`${base_url}/blog/post/${post._id}`} />
+
+          <meta name="keywords" content={(post.metaTags || []).join(',')}/>
         </Head>
         <Container
           maxWidth="md"
