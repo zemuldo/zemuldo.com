@@ -4,7 +4,6 @@ import ErrorPage from '../pages/_error';
 import { parseCookies } from 'nookies';
 import AcceptTerms from './terms';
 import VersionInfo from './versionInfo';
-import HeaderElements from './document/head_elements';
 
 export default Component => {
   const Entry = (props) => {
@@ -12,7 +11,6 @@ export default Component => {
       return <ErrorPage errorCode={props.statusCode} />;
     }
     return <>
-      <HeaderElements />
       <VersionInfo />
       <div className='pages-wrapper'>
         <AcceptTerms accepted_terms={props.accepted_terms} />

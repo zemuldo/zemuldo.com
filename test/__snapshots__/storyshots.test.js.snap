@@ -326,7 +326,7 @@ Array [
             Zemuldo
           </a>
            
-          2019
+          2020
         </p>
       </div>
     </footer>
@@ -883,6 +883,127 @@ Array [
             </div>
           </div>
         </div>
+        <div
+          className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6"
+        >
+          <div
+            style={
+              Object {
+                "marginTop": "26px",
+              }
+            }
+          >
+            <div
+              className="basic-multi-select css-2b097c-container"
+              onKeyDown={[Function]}
+            >
+              <div
+                className="select__control css-1b8hiff-control"
+                onMouseDown={[Function]}
+                onTouchEnd={[Function]}
+              >
+                <div
+                  className="select__value-container select__value-container--is-multi css-1hwfws3"
+                >
+                  <div
+                    className="select__placeholder css-7y8ne7-placeholder"
+                  >
+                    Select...
+                  </div>
+                  <div
+                    className="css-i2lz7n-Input"
+                  >
+                    <div
+                      className="select__input"
+                      style={
+                        Object {
+                          "display": "inline-block",
+                        }
+                      }
+                    >
+                      <input
+                        aria-autocomplete="list"
+                        autoCapitalize="none"
+                        autoComplete="off"
+                        autoCorrect="off"
+                        disabled={false}
+                        id="react-select-select-meta-tags-input"
+                        onBlur={[Function]}
+                        onChange={[Function]}
+                        onFocus={[Function]}
+                        spellCheck="false"
+                        style={
+                          Object {
+                            "background": 0,
+                            "border": 0,
+                            "boxSizing": "content-box",
+                            "color": "inherit",
+                            "fontSize": "inherit",
+                            "label": "input",
+                            "opacity": 1,
+                            "outline": 0,
+                            "padding": 0,
+                            "width": "1px",
+                          }
+                        }
+                        tabIndex="0"
+                        type="text"
+                        value=""
+                      />
+                      <div
+                        style={
+                          Object {
+                            "height": 0,
+                            "left": 0,
+                            "overflow": "scroll",
+                            "position": "absolute",
+                            "top": 0,
+                            "visibility": "hidden",
+                            "whiteSpace": "pre",
+                          }
+                        }
+                      >
+                        
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  className="select__indicators css-1g48xl4-IndicatorsContainer"
+                >
+                  <span
+                    className="select__indicator-separator css-1okebmr-indicatorSeparator"
+                  />
+                  <div
+                    aria-hidden="true"
+                    className="select__indicator select__dropdown-indicator css-tlfecz-indicatorContainer"
+                    onMouseDown={[Function]}
+                    onTouchEnd={[Function]}
+                  >
+                    <svg
+                      aria-hidden="true"
+                      className="css-tj5bde-Svg"
+                      focusable="false"
+                      height={20}
+                      viewBox="0 0 20 20"
+                      width={20}
+                    >
+                      <path
+                        d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <input
+                  name="colors"
+                  type="hidden"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <br />
       <div
@@ -1010,7 +1131,7 @@ And – more importantly – never compromise your potential to grow due to self
             Zemuldo
           </a>
            
-          2019
+          2020
         </p>
       </div>
     </footer>
@@ -1618,7 +1739,7 @@ Array [
             Zemuldo
           </a>
            
-          2019
+          2020
         </p>
       </div>
     </footer>
@@ -1804,7 +1925,7 @@ exports[`Storyshots Home Page Footer 1`] = `
         Zemuldo
       </a>
        
-      2019
+      2020
     </p>
   </div>
 </footer>
@@ -2421,7 +2542,7 @@ Array [
             Zemuldo
           </a>
            
-          2019
+          2020
         </p>
       </div>
     </footer>
@@ -4808,7 +4929,7 @@ Array [
             Zemuldo
           </a>
            
-          2019
+          2020
         </p>
       </div>
     </footer>

@@ -33,6 +33,20 @@ class MyDocument extends Document {
     return (
       <html lang="en">
         <Head>
+          <meta charSet="utf-8" />
+          <meta charSet="UTF-8" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+          <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+
+          <meta name="author" content="Danstan O. Onyango" />
+          <meta name="url" content="https://zemuldo.com" />
+          <meta name="copyright" content="Zemuldo" />
+
+          <meta name="robots" content="index,follow" />
+          <link rel="shortcut icon" href="/images/favicon/rounded-me.png" />
+          <link rel="apple-touch-icon" sizes="144x144" type="image/x-icon" href="/images/favicon/apple-touch-icon.png" />
+          <link rel="stylesheet" type="text/css" href="/css/plugin.css" />
+          <link rel="stylesheet" type="text/css" href="/css/style.css" />
           <script
             async
             src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}

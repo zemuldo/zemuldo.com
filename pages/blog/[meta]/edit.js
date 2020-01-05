@@ -11,6 +11,7 @@ import TextField from '@material-ui/core/TextField';
 import Grid from '@material-ui/core/Grid';
 import 'easymde/dist/easymde.min.css';
 import Tags from '../../../components/tags';
+import MetaTags from '../../../components/metaTags';
 import { parseCookies } from 'nookies';
 import Router, { withRouter } from 'next/router';
 import SaveIcon from '@material-ui/icons/Save';
@@ -173,6 +174,9 @@ class EditBlog extends React.Component {
     if (authorization) {
       authorized = true;
     }
+    const tagsRes = await fetch(`${api_url}/tag`);
+
+    const options = await tagsRes.json();
     const res = await fetch(`${api_url}/post/${__meta}`);
     const data = await res.json();
     return {
@@ -181,6 +185,7 @@ class EditBlog extends React.Component {
       post: data.post,
       body: data.postBody,
       authorized,
+      options,
     };
   }
   
@@ -210,8 +215,8 @@ class EditBlog extends React.Component {
   handleClosePublishDialogue = () => this.setState({publishDialogueOpen: false})
   handlePublish = async () => {
     const { authorization } = this.props;
-    const res = await fetch(`${api_url}/post/update/${this.props.post._id}`, {
-      method: 'post',
+    const res = await fetch(`${api_url}/post/${this.props.post._id}`, {
+      method: 'put',
       headers: {authorization, 'Accept': 'application/json', 'Content-Type': 'application/json'},
       body: JSON.stringify({
         _id: this.props.post._id,
@@ -220,6 +225,7 @@ class EditBlog extends React.Component {
           title: this.state.postTitle,
           body: this.state.body,
           tags: this.state.tags || [],
+          metaTags: this.state.metaTags.map(t=>t.value) || [],
           description: this.state.description,
           coverPhotoUrl: this.state.coverPhotoUrl
         }
@@ -239,7 +245,9 @@ class EditBlog extends React.Component {
   handleTagsChange = (tags) => {
     this.setState({ tags });
   }
-
+  handleMetaTagsChange = (metaTags) => {
+    this.setState({ metaTags });
+  }
   handleTextChange = e => {
     const { id, value } = e.target;
     this.setState({ [id]: value });
@@ -250,7 +258,7 @@ class EditBlog extends React.Component {
   }
 
   render() {
-    const { classes, authorized, loggingIn } = this.props;
+    const { classes, authorized, loggingIn, options } = this.props;
     const {publishDialogueOpen} = this.state;
     if (loggingIn) return <div style={{ color: 'white' }}>Please wait...</div>;
     if (!authorized) {
@@ -324,6 +332,11 @@ class EditBlog extends React.Component {
                 <Tags defaultValue = {this.state.tags} onChange={this.handleTagsChange} />
               </div>
             </Grid>
+            <Grid item xs={12} sm={6}>
+              <div style={{ marginTop: '26px' }}>
+                <MetaTags options={options} onChange={this.handleMetaTagsChange} />
+              </div>
+            </Grid>
           </Grid>
           <br />
           <TextField
@@ -372,7 +385,8 @@ EditBlog.propTypes = {
   classes: PropTypes.object.isRequired,
   authorization: PropTypes.string,
   authorized: PropTypes.bool,
-  loggingIn: PropTypes.bool
+  loggingIn: PropTypes.bool,
+  options: PropTypes.array.isRequired
 };
 
 export default Entry(withRouter(withStyles(useStyles)(EditBlog)));
