@@ -1,4 +1,4 @@
-# Website and Blog
+# Website and Blog for fun time.
 
 This is my website : https://zemuldo.com
 
