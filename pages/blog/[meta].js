@@ -112,7 +112,7 @@ class Blog extends React.Component {
     const { post } = this.props;
     let hashTgs = '&hashtags=' + post.tags.map(p => p.label).join(',');
     let via = '&via=zemuldo';
-    let url = `&url=https%3A%2F%2F${base_url_domain}${window.location.pathname}`;
+    let url = `&url=https%3A%2F%2Fzemuldo.com${window.location.pathname}`;
     let fullURL = `${url}${via}${hashTgs}`;
     let shareURL = `https://twitter.com/intent/tweet?text=${post.title}` + fullURL;
     window.open(shareURL, 'sharer', 'toolbar=0,status=0,width=548,height=325');
