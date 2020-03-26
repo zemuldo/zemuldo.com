@@ -23,11 +23,17 @@ router.post('/', async (req, res) => {
       });
 
       if (res.status !== 200) throw Error('Could not save image');
+      
+      const fsFileName = `public/z-site-images/${fileName}`;
 
-      await fs.writeFile(`public/z-site-images/${fileName}`, req.files[file].data, async function (err) {
+      await fs.writeFile(fsFileName, req.files[file].data, async function (err) {
         if (err) {
           throw err;
         } 
+      });
+
+      await fs.chmod(fsFileName, 0o644, (e) => {
+        if (e) throw e;
       });
     }
     res.send('Files saved');

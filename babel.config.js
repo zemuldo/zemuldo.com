@@ -1,8 +1,8 @@
 module.exports = {
   'presets': ['@babel/preset-env', 'next/babel'],
-  "plugins": [
-    ["@babel/transform-runtime"]
-],
+  'plugins': [
+    ['@babel/transform-runtime']
+  ],
   'env': {
     'test': {
       'plugins': [
