@@ -67,6 +67,8 @@ app.prepare().then(() => {
 
   const server = express();
 
+  server.get('/blog/post/:meta', (req, _res) => app.render(req, _res, `/blog/${req.params.meta}`));
+
   server.use('/', router);
 
   server.use('*', (req, _res, next) => {
