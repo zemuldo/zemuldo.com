@@ -144,7 +144,7 @@ class Blog extends React.Component {
           <meta property="article:tag" content={'Technology'} />
           <meta property="og:description" content={post.description} />
           <meta property="og:image" content={post.coverPhotoUrl} />
-          <meta property="og:url" content={`${base_url}/blog/post/${post._id}`} />
+          <meta property="og:url" content={`${base_url}/blog/${post._id}`} />
 
           <meta name="keywords" content={(post.metaTags || []).join(',')}/>
         </Head>
