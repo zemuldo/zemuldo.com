@@ -48,8 +48,8 @@ export default function Home() {
                   >
                     <img
                       id="me-pic"
-                      src="/images/logo/black.jpg"
-                      alt="Danstan Otieno Onyango, Zemuldo"
+                      src="/images/logo/at-work.jpeg"
+                      alt="Danstan Onyango, Zemuldo - Working at home"
                     />
                   </div>
                 </div>
