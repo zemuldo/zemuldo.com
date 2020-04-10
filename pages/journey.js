@@ -5,7 +5,6 @@ import Menu from '../components/blog/menu';
 import { Container } from '@material-ui/core';
 import Grid from '@material-ui/core/Grid';
 import journeys from '../components/journey/journeys.json';
-import '../components/journey/journey.css';
 import Footer from '../components/footer';
 import { parseCookies } from 'nookies';
 import PropTypes from 'prop-types';
@@ -18,6 +17,7 @@ function DeveloperStory({authorization}) {
     <>
       <Head>
         <title>Zemuldo - My Software Engineering Journey</title>
+        <link href="/css/journey.css" rel="stylesheet" />
         <meta name="description" content="Danstan Onyango ~ Zemuldo, Software Engineer - Nairobi, Kenya, Self Taught. Here is my journey as a Software Engineer all the way to where I am right now." />
       </Head>
       <Container maxWidth="md">

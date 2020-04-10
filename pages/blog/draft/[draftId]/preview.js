@@ -181,7 +181,7 @@ class Blog extends React.Component {
         </Container>
         <Container>
           <img
-            style={{ maxHeight: '600px' }}
+            style={{ maxHeight: '720px', marginTop: '10px'}}
             src={draft.coverPhotoUrl}
             alt={draft.title}
           />

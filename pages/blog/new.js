@@ -8,7 +8,6 @@ import dynamic from 'next/dynamic';
 import Head from 'next/head';
 import TextField from '@material-ui/core/TextField';
 import Grid from '@material-ui/core/Grid';
-import 'easymde/dist/easymde.min.css';
 import Tags from '../../components/tags';
 import Router, { withRouter } from 'next/router';
 import SaveIcon from '@material-ui/icons/Save';
@@ -232,6 +231,7 @@ class NewBlog extends React.Component {
         />
         <Head>
           <link href="/css/blog.css" rel="stylesheet" />
+          <link href="/css/easymde.min.css" rel="stylesheet" />
           <link
             href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
             rel="stylesheet"
