@@ -34,6 +34,7 @@ jobs:
         UI_URL_DOMAIN: ${{ secrets.UI_URL_DOMAIN }}
         API_URL: ${{ secrets.API_URL }}
         GA_TRACKING_ID: ${{ secrets.GA_TRACKING_ID }}
-      run: |        
+      run: |
+        cat .env.development        
         npm install
         npm test  -- --u 
