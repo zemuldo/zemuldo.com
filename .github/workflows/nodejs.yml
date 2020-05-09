@@ -20,7 +20,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - name: zemuldo/git-crypt-unlock
-      uses: zemuldo/git-crypt-unlock@master
+      uses: zemuldo/git-crypt-unlock@no-docker
       env: 
         GPG_PRIVATE_KEY: ${{ secrets.GPG_PRIVATE_KEY }}
         GPG_KEY_GRIP: ${{ secrets.GPG_KEY_GRIP }}
