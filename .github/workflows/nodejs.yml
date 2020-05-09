@@ -19,8 +19,8 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - name: Git-Crypt Unlock
-      uses: zemuldo/git-crypt-unlock@master
+    - name: zemuldo/git-crypt-unlock
+      uses: zemuldo/git-crypt-unlock@v2.0
       env: 
         GPG_PRIVATE_KEY: ${{ secrets.GPG_PRIVATE_KEY }}
         GPG_KEY_GRIP: ${{ secrets.GPG_KEY_GRIP }}
@@ -34,6 +34,6 @@ jobs:
         UI_URL_DOMAIN: ${{ secrets.UI_URL_DOMAIN }}
         API_URL: ${{ secrets.API_URL }}
         GA_TRACKING_ID: ${{ secrets.GA_TRACKING_ID }}
-      run: |        
+      run: |
         npm install
-        npm test  -- --u 
+        npm test  -- --u
