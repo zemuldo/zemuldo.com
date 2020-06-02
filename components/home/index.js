@@ -44,11 +44,11 @@ export default function Home() {
                   </div>
                   <div
                     id="me-pic-wrapper"
-                    className="img-frame border-color-green"
+                    className="img-frame"
                   >
                     <img
                       id="me-pic"
-                      src="/images/logo/at-work.jpeg"
+                      src="/images/logo/code-ninja.png"
                       alt="Danstan Onyango, Zemuldo - Working at home"
                     />
                   </div>
