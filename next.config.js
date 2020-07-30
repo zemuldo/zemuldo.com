@@ -9,7 +9,7 @@ module.exports = withTM((withBundleAnalyzer({
     UI_PORT: process.env.UI_PORT,
     UI_URL: process.env.UI_URL,
     UI_URL_DOMAIN: process.env.UI_URL_DOMAIN,
-    IMAGE_SERVER_PORT: process.env.IMAGE_SERVER_PORT,
+    SITE_IMAGES_URL: process.env.SITE_IMAGES_URL,
     API_URL: process.env.API_URL,
     GA_TRACKING_ID: process.env.GA_TRACKING_ID,
     GITHUB_SHA: process.env.GITHUB_SHA,
