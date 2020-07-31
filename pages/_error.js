@@ -87,17 +87,6 @@ class ErrorPage extends React.Component {
         );
         break;
       case 500:
-        response = (
-          <div>
-            <Head>
-              <style dangerouslySetInnerHTML={{ __html: Styles }} />
-            </Head>
-            <Container className="pt-5 text-center">
-              {errorWrapper(500, 'An internal server error occurred.')}
-            </Container>
-          </div>
-        );
-        break;
       default:
         response = (
           <div>
@@ -105,7 +94,7 @@ class ErrorPage extends React.Component {
               <style dangerouslySetInnerHTML={{ __html: Styles }} />
             </Head>
             <Container className="pt-5 text-center">
-              {errorWrapper(404, 'I cant find what you are looking for.')}
+              {errorWrapper(500, 'An internal server error occurred.')}
             </Container>
           </div>
         );
