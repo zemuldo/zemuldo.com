@@ -180,12 +180,15 @@ class NewBlog extends React.Component {
       postTitle: draft.title || '',
       body: draft.body || '',
       tags: draft.tags,
-      description: draft.description || ''
+      description: draft.description || '',
+      changed: false
     });
   }
 
   handleSave = async () => {
-    window.notification('Updating..');
+    if (!this.state.changed) return;
+    this.setState({changed: false});
+    window.notification('Saving...');
     const { draft } = this.props;
     
     if (!draft) return;
@@ -207,10 +210,10 @@ class NewBlog extends React.Component {
     if (_res.status === 200){
       const data = await _res.json();
       if (data.rejected) this.sync(data);
-      this.setState({ _update: data });
-      return window.notification('Updated');
+      this.setState({ _update: data, });
+      return window.notification('Saved');
     } 
-    window.notification('Failed..', {error: true});
+    window.notification('Error while saving..', {error: true});
   }
   handleOpenPublishDialogue = () => this.setState({ publishDialogueOpen: true })
   handleClosePublishDialogue = () => this.setState({ publishDialogueOpen: false })
@@ -239,16 +242,16 @@ class NewBlog extends React.Component {
     clearInterval(this.autoSave);
   }
   handleTagsChange = (tags) => {
-    this.setState({ tags });
+    this.setState({ tags, changed: true });
   }
 
   handleTextChange = e => {
     const { id, value } = e.target;
-    this.setState({ [id]: value });
+    this.setState({ [id]: value, changed: true });
   };
 
   handleEditorChange = (value) => {
-    this.setState({ body: value });
+    this.setState({ body: value, changed: true });
   }
 
   render() {
