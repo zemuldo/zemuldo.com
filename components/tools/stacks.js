@@ -17,6 +17,8 @@ export  const options = [
   { value: 'data', label: 'Data', color: '#05daff' },
   
   { value: 'python', label: 'Python', color: '#fff305' },
+  { value: 'rust', label: 'Rust-lang', color: 'rgb(240, 99, 9)' },
+  { value: 'go', label: 'Go-lang', color: 'rgb(47, 155, 206)' },
  
   { value: 'kubernetes', label: 'Kubernetes', color: 'blue' },
   { value: 'docker', label: 'Docker', color: '#08a6f3' },
