@@ -211,7 +211,8 @@ class Blog extends React.Component {
 Blog.propTypes = {
   draft: PropTypes.object.isRequired,
   body: PropTypes.object.isRequired,
-  classes: PropTypes.object.isRequired
+  classes: PropTypes.object.isRequired,
+  authorization: PropTypes.oneOfType([PropTypes.string, PropTypes.oneOf([null])])
 };
 
-export default withStyles(styles)(Blog);
+export default Entry(withStyles(styles)(Blog));
