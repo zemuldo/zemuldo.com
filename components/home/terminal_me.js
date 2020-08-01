@@ -6,7 +6,7 @@ const classes = {
   text_editor_wrap: {
     margin: 'auto',
     display: 'block',
-    maxWidth: '700px',
+    maxWidth: '890px',
     minHeight: '200px',
     borderRadius: '10px',
     clear: 'both',
@@ -42,7 +42,6 @@ export default function TerminalMe () {
   return (
     <div>
       <div style={classes.text_editor_wrap}>
-        <hr />
         <div style={classes.text_body}>
           {process.env.NODE_ENV !== 'test' &&
           <Typed

@@ -34,11 +34,6 @@ export default function Home() {
                       </p>
                     </h3>
                     <h4 style={{ fontSize: '26px' }} className="color-orange">Nairobi, Kenya</h4>
-                    <h4 style={{ marginTop: '30px', fontSize: '1.8em' }} className="color-6 font-c-cn-m">
-                      <CustomLink href='/journey'>
-                        <b>See my journey 🚀🚀🚀</b>
-                      </CustomLink>
-                    </h4>
                   </div>
                   <div
                     id="me-pic-wrapper"
@@ -50,6 +45,20 @@ export default function Home() {
                       alt="Danstan Onyango, Zemuldo - Working at home"
                     />
                   </div>
+                </div>
+                <div style={{ paddingLeft: '5px' }}>
+                  <h4 style={{ marginTop: '30px', fontSize: '1.8em' }} className="color-6 font-c-cn-m">
+                    <CustomLink href='/journey'>
+                      <b>See my journey 🚀🚀 </b>
+                    </CustomLink>
+                    <span style={{ color: 'white' }}> Or </span>
+                    <CustomLink href='/blog'>
+                      <b>My Tech Blog 📚📚</b>
+                    </CustomLink>
+                  </h4>
+                </div>
+                <div style={{ paddingLeft: '5px' }}>
+                  <hr />
                 </div>
                 <div className="col-md-12 text-center">
                   <Terminal />

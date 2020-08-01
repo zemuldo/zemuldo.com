@@ -29,7 +29,7 @@ body {
 .container {
     margin: 10px auto;
     padding: 5px;
-    max-width: 650px
+    max-width: 900px
 }
 
 @media (max-width:600px) {
@@ -41,7 +41,6 @@ body {
 .header-section {
     display: flex;
     align-items: center;
-    justify-content: center;
     flex-wrap: wrap
 }
 
@@ -52,7 +51,7 @@ body {
 }
 
 .header-frame {
-    max-width: 350px
+    max-width: 450px
 }
 
 .font-c-cn-m {

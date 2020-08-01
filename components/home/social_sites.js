@@ -4,11 +4,25 @@ import CustomLink from '../link';
 
 const socials = [
   {
+    href: 'https://www.linkedin.com/in/zemuldo',
+    className: 'linkedin',
+    icon_className: 'fa fa-linkedin color-6',
+    hoverText: 'LinkedIn',
+    color: '#08a6f3'
+  },
+  {
     href: 'https://github.com/zemuldo',
     className: 'github',
     icon_className: 'fa fa-github',
     hoverText: 'Github',
     color: 'white'
+  },
+  {
+    href: 'https://twitter.com/zemuldo',
+    className: 'twitter',
+    icon_className: 'fa fa-twitter color-6',
+    hoverText: 'Twitter',
+    color: '#08a6f3'
   },
   {
     href: 'https://gitlab.com/zemuldo',
@@ -37,20 +51,6 @@ const socials = [
     icon_className: 'fa fa-share-alt-square color-blue',
     hoverText: 'StackShare',
     color: 'blue'
-  },
-  {
-    href: 'https://twitter.com/zemuldo',
-    className: 'twitter',
-    icon_className: 'fa fa-twitter color-6',
-    hoverText: 'Twitter',
-    color: '#08a6f3'
-  },
-  {
-    href: 'https://www.linkedin.com/in/zemuldo',
-    className: 'linkedin',
-    icon_className: 'fa fa-linkedin color-6',
-    hoverText: 'LinkedIn',
-    color: '#08a6f3'
   },
   {
     href: 'https://app.pluralsight.com/profile/zemuldo',
@@ -83,20 +83,7 @@ export default function SocialSites () {
         Find me on
         </h3>
         <div className='social-icon-wrapper'>
-          <MouseOverPopover color='orange' hoverText="Blog">
-            <li>
-              <CustomLink href="/blog">
-                <img style={{ marginBottom: '-12%', width: '55%', height: '55%', borderRadius: '50%' }} alt="Zemuldo Blog" src="/images/blog.png" />
-              </CustomLink>
-            </li>
-          </MouseOverPopover>
-          <MouseOverPopover color='white' hoverText="Dev.TO">
-            <li>
-              <a href="https://dev.to/zemuldo" target="_blank" rel="noopener noreferrer">
-                <img style={{ marginBottom: '-15%', width: '65%', height: '65%' }} alt="Danstan Onyango on DEV" src="/images/dev.to.png" />
-              </a>
-            </li>
-          </MouseOverPopover>
+          
           {socials.map(s => {
             return (
               <MouseOverPopover color={s.color} key={s.href} hoverText={s.hoverText}>
@@ -108,6 +95,22 @@ export default function SocialSites () {
               </MouseOverPopover>
             );
           })}
+          <MouseOverPopover color='white' hoverText="Dev.TO">
+            <li>
+              <a href="https://dev.to/zemuldo" target="_blank" rel="noopener noreferrer">
+                <img style={{ marginBottom: '-15%', width: '65%', height: '65%' }} alt="Danstan Onyango on DEV" src="/images/dev.to.png" />
+              </a>
+            </li>
+          </MouseOverPopover>
+
+
+          <MouseOverPopover color='orange' hoverText="Blog">
+            <li>
+              <CustomLink href="/blog">
+                <img style={{ marginBottom: '-12%', width: '55%', height: '55%', borderRadius: '50%' }} alt="Zemuldo Blog" src="/images/blog.png" />
+              </CustomLink>
+            </li>
+          </MouseOverPopover>
         </div>
       </ul>
     </div>

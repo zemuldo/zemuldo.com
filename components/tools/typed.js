@@ -21,7 +21,7 @@ export function type_message() {
   const learning = waitAndBreak +
   start +
   whiteText('Learning?') +
-  waitAndBreak +  greenText(['Currently Learning Rust and Golang, Interested in Haskell 😎😎']);
+  waitAndBreak +  greenText(['Currently Learning Rust and Golang ', 'Also Interested in Haskell 😎😎']).join(',^200 ');
   const experience = getYearsBetween(new Date('February 1 2016 00:00'));
   const yearsOfExperience =
       waitAndBreak +
