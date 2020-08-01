@@ -12,13 +12,16 @@ export function type_message() {
         'Elixir',
         'Nodejs',
         'ReactJS',
-        'Python for Data',
+        'React Native',
         'Docker',
         'Kubernetes',
         'GCP',
-        'AWS',
-        'Learning Azure and IBM Clouds.'
+        'AWS'
       ]).join(',^200 ');
+  const learning = waitAndBreak +
+  start +
+  whiteText('Learning?') +
+  waitAndBreak +  greenText(['Currently Learning Rust, Golang and Haskell in that order. Azure Cloud too 😎😎']);
   const experience = getYearsBetween(new Date('February 1 2016 00:00'));
   const yearsOfExperience =
       waitAndBreak +
@@ -28,5 +31,5 @@ export function type_message() {
       greenText([experience]);
   const funGames = greenText(['Chess', 'Music', 'Yoga', 'Zumba' , 'Oh! and Cooking 🤪🤪🤪']).join(',^200 ');
   const fullFunTime = waitAndBreak + start + whiteText('My Fun time?') + waitAndBreak + funGames;
-  return [myStack + yearsOfExperience + fullFunTime];
+  return [myStack + yearsOfExperience + learning + fullFunTime];
 }
