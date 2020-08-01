@@ -21,20 +21,18 @@ export default function Home() {
                     </div>
                     <h2 style={{ fontSize: '26px' }}>Software Engineer</h2>
                     <hr style={{ marginTop: '-10px' }} />
-                    <div style={{ paddingLeft: '15px' }}>
-                      <h3 className="font-c-cn-m" style={{ lineHeight: '150%', marginTop: '-5px' }}>
-                        <p>Loves functional programming and Currently open to a new exciting adventure.</p>
-                        <p>
-                          <span>Formerly at </span>
-                          <b itemScope itemProp="organization" itemType="http://schema.org/Organization">
-                            <a itemProp="url" className="color-orange" href="https://safeboda.com" target="_blank" rel="noopener noreferrer">
-                              <span itemProp="name"> SafeBoda</span>
-                            </a>
-                          </b>
-                          <span>.</span>
-                        </p>
-                      </h3>
-                    </div>
+                    <h3 className="font-c-cn-m" style={{ lineHeight: '150%', marginTop: '-5px' }}>
+                      <p>Loves functional programming and Currently open to a new exciting adventure.</p>
+                      <p>
+                        <span>Formerly at </span>
+                        <b itemScope itemProp="organization" itemType="http://schema.org/Organization">
+                          <a itemProp="url" className="color-orange" href="https://safeboda.com" target="_blank" rel="noopener noreferrer">
+                            <span itemProp="name"> SafeBoda</span>
+                          </a>
+                        </b>
+                        <span>.</span>
+                      </p>
+                    </h3>
                   </div>
                   <div
                     id="me-pic-wrapper"
