@@ -4,9 +4,8 @@ import { type_message } from '../tools/typed';
 
 const classes = {
   text_editor_wrap: {
-    margin: 'auto',
     display: 'block',
-    maxWidth: '890px',
+    maxWidth: '900px',
     minHeight: '200px',
     borderRadius: '10px',
     clear: 'both',
