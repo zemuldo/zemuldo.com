@@ -1,13 +1,13 @@
 export  const options = [
-  { value: 'javascript', label: 'JavaCript', color: '#fcba03' },
+  { value: 'javascript', label: 'JavaScript', color: '#fcba03' },
   { value: 'nodejs', label: 'NodeJS', color: '#40a832' },
   { value: 'reactjs', label: 'ReactJS', color: '#08a6f3' },
   { value: 'nextjs', label: 'NextJS', color: 'white' },
 
   { value: 'elixir', label: 'Elixir', color: '#a767f5' },
   { value: 'erlang', label: 'Er-Lang', color: 'rgb(151, 0, 39)' },
-  { value: 'gen-stage', label: 'GenStage', color: '#a767f5' },
-  { value: 'gen-server', label: 'GenServer', color: '#a767f5' },
+  { value: 'genstage', label: 'GenStage', color: '#a767f5' },
+  { value: 'genserver', label: 'GenServer', color: '#a767f5' },
   { value: 'ecto', label: 'Ecto', color: '#40a832' },
   { value: 'phoenix', label: 'Phoenix', color: 'orange' },
   { value: 'beam', label: 'OTP and BEAM', color: 'rgb(151, 0, 39)' },
@@ -22,7 +22,7 @@ export  const options = [
  
   { value: 'kubernetes', label: 'Kubernetes', color: 'blue' },
   { value: 'docker', label: 'Docker', color: '#08a6f3' },
-  { value: 'google-cloud', label: 'Google Cloud', color: '#08a6f3' },
+  { value: 'googlecloud', label: 'Google Cloud', color: '#08a6f3' },
   { value: 'aws', label: 'AWS', color: '#08a6f3' },
   
   { value: 'git', label: 'Git', color: 'rgb(220, 71, 54)' },
