@@ -19,6 +19,7 @@ import { parseCookies } from 'nookies';
 import PropTypes from 'prop-types';
 import Notification from '../../../components/notification';
 import Entry from '../../../components/entry';
+import { TextareaAutosize } from '@material-ui/core';
 
 
 const SimpleMDE = dynamic(import('react-simplemde-editor'), { ssr: false });
@@ -254,6 +255,11 @@ class NewBlog extends React.Component {
     this.setState({ body: value, changed: true });
   }
 
+  handleGrammarCorrect = (e) => {
+    const { value } = e.target;
+    this.setState({ body: value, changed: true });
+  }
+
   render() {
     const { classes, authorization, draft } = this.props;
     const { publishDialogueOpen } = this.state;
@@ -388,6 +394,26 @@ class NewBlog extends React.Component {
                 onChange={this.handleEditorChange}
                 value={this.state.body}
               />
+
+              <TextField
+                id="grammar-check"
+                label="Post Grammar Checker"
+                multiline
+                rows="40"
+                value={this.state.body}
+                className={classes.materialTextArea}
+                margin="normal"
+                variant="outlined"
+                fullWidth
+                InputProps={{
+                  className: classes.materialTextArea
+                }}
+                InputLabelProps={{
+                  className: classes.floatingLabelFocusStyle,
+                }}
+                onChange={this.handleGrammarCorrect}
+              />
+
             </Container>
           </>
        

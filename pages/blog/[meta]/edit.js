@@ -259,6 +259,11 @@ class EditBlog extends React.Component {
     this.setState({ body: value });
   }
 
+  handleGrammarCorrect = (e) => {
+    const { value } = e.target;
+    this.setState({ body: value, changed: true });
+  }
+
   render() {
     const { classes, authorized, loggingIn, options } = this.props;
     const {publishDialogueOpen} = this.state;
@@ -375,6 +380,24 @@ class EditBlog extends React.Component {
             onChange={this.handleEditorChange}
             value={this.state.body}
           />
+          <TextField
+                id="grammar-check"
+                label="Post Grammar Checker"
+                multiline
+                rows="40"
+                value={this.state.body}
+                className={classes.materialTextArea}
+                margin="normal"
+                variant="outlined"
+                fullWidth
+                InputProps={{
+                  className: classes.materialTextArea
+                }}
+                InputLabelProps={{
+                  className: classes.floatingLabelFocusStyle,
+                }}
+                onChange={this.handleGrammarCorrect}
+              />
         </Container>
         <Footer />
       </>
