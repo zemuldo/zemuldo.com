@@ -11,6 +11,7 @@ import Head from 'next/head';
 import PropTypes from 'prop-types';
 import Entry from '../components/entry';
 import FeaturedPost from '../components/blog/featured';
+import ShouldRender from '../components/tools/shouldRender';
 
 const api_url = process.env.API_URL;
 
@@ -37,7 +38,7 @@ class Blog extends React.Component {
       user = await res.json();
     }
     return {
-      featuredPost: data_featured,
+      featuredPost: res_featured.status === 200? data_featured: null,
       user,
       authorization,
       posts: data
@@ -86,7 +87,9 @@ class Blog extends React.Component {
           </Grid>
         </Container>
         <Container style={{ color: 'white' }} maxWidth="md">
-          <FeaturedPost featuredPost={featuredPost}/>
+          <ShouldRender if={!!featuredPost}>
+            <FeaturedPost featuredPost={featuredPost}/>
+          </ShouldRender>
           <Blogs _infiniteScroll={this.infiniteScroll} posts={posts} />
           <br />
           {this.state.fetching && <div style={{ flexGrow: 1, color: 'white' }}><LinearProgress /> </div>}
@@ -101,7 +104,7 @@ Blog.propTypes = {
   posts: PropTypes.array.isRequired,
   authorization: PropTypes.oneOfType([PropTypes.string, PropTypes.oneOf([null])]),
   user: PropTypes.object,
-  featuredPost: PropTypes.object.isRequired,
+  featuredPost: PropTypes.object,
 };
 
 export default Entry(Blog);

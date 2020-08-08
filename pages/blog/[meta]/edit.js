@@ -381,23 +381,23 @@ class EditBlog extends React.Component {
             value={this.state.body}
           />
           <TextField
-                id="grammar-check"
-                label="Post Grammar Checker"
-                multiline
-                rows="40"
-                value={this.state.body}
-                className={classes.materialTextArea}
-                margin="normal"
-                variant="outlined"
-                fullWidth
-                InputProps={{
-                  className: classes.materialTextArea
-                }}
-                InputLabelProps={{
-                  className: classes.floatingLabelFocusStyle,
-                }}
-                onChange={this.handleGrammarCorrect}
-              />
+            id="grammar-check"
+            label="Post Grammar Checker"
+            multiline
+            rows="40"
+            value={this.state.body}
+            className={classes.materialTextArea}
+            margin="normal"
+            variant="outlined"
+            fullWidth
+            InputProps={{
+              className: classes.materialTextArea
+            }}
+            InputLabelProps={{
+              className: classes.floatingLabelFocusStyle,
+            }}
+            onChange={this.handleGrammarCorrect}
+          />
         </Container>
         <Footer />
       </>

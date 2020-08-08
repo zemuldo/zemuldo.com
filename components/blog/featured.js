@@ -84,38 +84,35 @@ const styles = theme => ({
 function FeaturedPost({featuredPost, classes}) {
   return (
     <CustomLink href={`/blog/${featuredPost.post.title.toLowerCase().split(' ').join('-')}-${featuredPost.post._id}`}>
-      {
-        featuredPost && featuredPost.post &&
-              <Paper className={classes.mainFeaturedPost}>
-                <div style={{ backgroundColor: 'rgb(23, 23, 23)', opacity: .7 }} className={classes.overlay} />
-                <Grid style={{ minHeight: '400px' }} className="eph" container>
-                  <Grid item md={6}>
+      <Paper className={classes.mainFeaturedPost}>
+        <div style={{ backgroundColor: 'rgb(23, 23, 23)', opacity: .7 }} className={classes.overlay} />
+        <Grid style={{ minHeight: '400px' }} className="eph" container>
+          <Grid item md={6}>
 
-                    <div className={classes.mainFeaturedPostContent}>
-                      <Typography
-                        component="h1"
-                        variant="h3"
-                        color="inherit"
-                        gutterBottom
-                        style={{
-                          color: '#08a6f3',
-                          fontFamily: '\'Courier New\', Courier, monospace',
-                          fontSize: '3em'
-                        }}
-                      >
-                        {featuredPost.post.title}
-                      </Typography>
-                      <Typography style={{ color: 'white' }} variant="h5" color="inherit" paragraph>
-                        {featuredPost.post.description}
-                      </Typography>
-                      <span>Read Now</span>
-                    </div>
+            <div className={classes.mainFeaturedPostContent}>
+              <Typography
+                component="h1"
+                variant="h3"
+                color="inherit"
+                gutterBottom
+                style={{
+                  color: '#08a6f3',
+                  fontFamily: '\'Courier New\', Courier, monospace',
+                  fontSize: '3em'
+                }}
+              >
+                {featuredPost.post.title}
+              </Typography>
+              <Typography style={{ color: 'white' }} variant="h5" color="inherit" paragraph>
+                {featuredPost.post.description}
+              </Typography>
+              <span>Read Now</span>
+            </div>
 
-                  </Grid>
-                  <Grid style={{backgroundImage: `url(${featuredPost.post.coverPhotoUrl})`}} item md={6}/>
-                </Grid>
-              </Paper>
-      }
+          </Grid>
+          <Grid style={{backgroundImage: `url(${featuredPost.post.coverPhotoUrl})`}} item md={6}/>
+        </Grid>
+      </Paper>
     </CustomLink>
   );
 }
