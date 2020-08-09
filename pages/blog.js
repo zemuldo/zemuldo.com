@@ -1,5 +1,4 @@
 import React from 'react';
-import Grid from '@material-ui/core/Grid';
 import Container from '@material-ui/core/Container';
 import fetch from 'isomorphic-unfetch';
 import Footer from '../components/footer';
@@ -13,8 +12,10 @@ import Entry from '../components/entry';
 import FeaturedPost from '../components/blog/featured';
 import ShouldRender from '../components/tools/shouldRender';
 import NoContent from '../components/NoContent';
+import TopTags from '../components/blog/TopTags';
 
 const api_url = process.env.API_URL;
+const ex_api_url = process.env.EX_API_URL;
 
 class Blog extends React.Component {
 
@@ -28,6 +29,8 @@ class Blog extends React.Component {
   }
 
   static async getInitialProps(ctx) {
+    const topTagsRes = await fetch(`${ex_api_url}/api/top_tags`);
+    const topTags = topTagsRes.status === 200 ? await topTagsRes.json() : [];
     const { authorization } = parseCookies(ctx);
     const res = await fetch(`${api_url}/post?skip=0&limit=10`);
     const data = await res.json();
@@ -42,7 +45,8 @@ class Blog extends React.Component {
       featuredPost: res_featured.status === 200? data_featured: null,
       user,
       authorization,
-      posts: data
+      posts: data,
+      topTags,
     };
   }
 
@@ -58,10 +62,25 @@ class Blog extends React.Component {
 
   }
 
+  fetchPosts = async () =>{
+    const res = await fetch(`${api_url}/post`);
+    const posts = await res.json();
+    this.setState({posts, currentTag: null});
+  }
+
+  filterByTag = async (tag) =>{
+    
+    if (!tag) return this.fetchPosts();
+    const res = await fetch(`${api_url}/post?&tag=${tag}`);
+    const posts = await res.json();
+    this.setState({currentTag: tag, posts: posts});
+  }
+
 
   render() {
-    const { featuredPost, authorization } = this.props;
+    const { featuredPost, authorization, topTags } = this.props;
     const { posts } = this.state;
+
     return (
       <React.Fragment>
         <Head>
@@ -86,13 +105,18 @@ class Blog extends React.Component {
           <Menu authorization={authorization} />
         </Container>
         <Container style={{ color: 'white' }} maxWidth="md">
-          <ShouldRender if={!!featuredPost}>
+          <TopTags tags={topTags} onSelect={this.filterByTag} />
+        </Container>
+        <Container style={{ color: 'white' }} maxWidth="md">
+          <ShouldRender if={!!featuredPost && !this.state.currentTag}>
             <FeaturedPost featuredPost={featuredPost}/>
           </ShouldRender>
           <Blogs _infiniteScroll={this.infiniteScroll} posts={posts} />
           <br />
           {this.state.fetching && <div style={{ flexGrow: 1, color: 'white' }}><LinearProgress /> </div>}
-          <NoContent/>
+          <ShouldRender if={!posts || !posts[0]}>
+            <NoContent/>
+          </ShouldRender>
         </Container>
         <Footer />
       </React.Fragment>
@@ -105,6 +129,7 @@ Blog.propTypes = {
   authorization: PropTypes.oneOfType([PropTypes.string, PropTypes.oneOf([null])]),
   user: PropTypes.object,
   featuredPost: PropTypes.object,
+  topTags: PropTypes.array.isRequired,
 };
 
 export default Entry(Blog);

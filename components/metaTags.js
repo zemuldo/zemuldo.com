@@ -39,7 +39,7 @@ const colourStyles = {
   }),
   menu: provided => ({ ...provided, zIndex: 9999 , backgroundColor: 'rgb(23, 23, 23', }),
   input: styles => ({ ...styles, ...dot() }),
-  placeholder: styles => ({ ...styles, ...dot(), color: '#08a6f3', fontWeight: '2em' }),
+  placeholder: styles => ({ ...styles, ...dot(), color: 'z`', fontWeight: '2em' }),
   singleValue: (styles, { data }) => ({ ...styles, ...dot(data.color) }),
   option: (styles, { data, isDisabled, isFocused, isSelected }) => {
     const color = chroma('black');
