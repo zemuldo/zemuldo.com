@@ -27,7 +27,7 @@ const PageLayout = (props) => {
 };
 
 PageLayout.propTypes = {
-  children: PropTypes.object.isRequired,
+  children: PropTypes.oneOfType([PropTypes.array, PropTypes.object]).isRequired,
   style: PropTypes.object
 };
 

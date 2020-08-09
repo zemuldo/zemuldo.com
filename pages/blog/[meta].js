@@ -124,7 +124,7 @@ class Blog extends React.Component {
     const { post, body, classes, authorization } = this.props;
     return (
       <>
-        <ShouldRender if={false}>
+        <ShouldRender if={!!post}>
           <Head>
             <title>Zemuldo Blog - {post.title}</title>
             <link href="/css/blog.css" rel="stylesheet" />
