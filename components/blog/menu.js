@@ -142,7 +142,7 @@ class Menu extends React.Component {
 
     return (
       <div style={{ margin: '10px 0px 10px 0px', }}>
-        <Grid container >
+        <Grid justify="center" alignItems="center" container >
           <Link href='/'>
             <Avatar className={classes.greenAvatar}>
               <HomeIcon />
@@ -202,14 +202,21 @@ class Menu extends React.Component {
               <LogOut />
             </Avatar>}
 
-          {path.includes('/blog') && !authorization && activateLogin > 4 && <Link href={`/blog/login?redirectTo=${path}`}>
+          {path.includes('/blog') && !authorization && activateLogin >= 4 && 
+          <Link href={`/blog/login?redirectTo=${path}`}>
             <Avatar className={classes.greenAvatarGreen}>
               <VpnKeyIcon />
             </Avatar>
           </Link>
           }
 
-          {!user && <div onClick = {() => this.setState({activateLogin: activateLogin + 1})} style={{width: '100px', height: '50px'}}></div>}
+          {path.includes('/blog') && !authorization && activateLogin < 4 && 
+            <Avatar 
+              onClick = {() => this.setState({activateLogin: activateLogin + 1})} 
+              className={classes.greenAvatarGreen}>
+              <VpnKeyIcon />
+            </Avatar>
+          }
         </Grid>
       </div>
     );

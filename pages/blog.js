@@ -12,6 +12,7 @@ import PropTypes from 'prop-types';
 import Entry from '../components/entry';
 import FeaturedPost from '../components/blog/featured';
 import ShouldRender from '../components/tools/shouldRender';
+import NoContent from '../components/NoContent';
 
 const api_url = process.env.API_URL;
 
@@ -82,9 +83,7 @@ class Blog extends React.Component {
         </Head>
         <Container style={{ color: 'white' }} maxWidth="md">
 
-          <Grid container justify="center" alignItems="center">
-            <Menu authorization={authorization} />
-          </Grid>
+          <Menu authorization={authorization} />
         </Container>
         <Container style={{ color: 'white' }} maxWidth="md">
           <ShouldRender if={!!featuredPost}>
@@ -93,6 +92,7 @@ class Blog extends React.Component {
           <Blogs _infiniteScroll={this.infiniteScroll} posts={posts} />
           <br />
           {this.state.fetching && <div style={{ flexGrow: 1, color: 'white' }}><LinearProgress /> </div>}
+          <NoContent/>
         </Container>
         <Footer />
       </React.Fragment>

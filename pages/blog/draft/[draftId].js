@@ -19,8 +19,6 @@ import { parseCookies } from 'nookies';
 import PropTypes from 'prop-types';
 import Notification from '../../../components/notification';
 import Entry from '../../../components/entry';
-import { TextareaAutosize } from '@material-ui/core';
-
 
 const SimpleMDE = dynamic(import('react-simplemde-editor'), { ssr: false });
 
