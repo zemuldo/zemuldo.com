@@ -8,6 +8,8 @@ const fs = require('fs');
 
 const imageServer = express();
 
+require('dotenv-flow').config();
+
 async function log_path(req) {
   const _path = `Serving: ${req.originalUrl.split('?')[0]}`.slice(0, 1000);
   if (_path.includes('/site-stories/')) return;
