@@ -77,7 +77,7 @@ const socials = [
 
 export default function SocialSites () {
   return (
-    <div>
+    <div style={{marginTop: '-20px'}}>
       <ul className="social-icon">
         <h3 className='color-1'>
         Find me on
