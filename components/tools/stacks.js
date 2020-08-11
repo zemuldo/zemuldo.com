@@ -31,5 +31,8 @@ export  const options = [
   { value: 'github-action', label: 'GitHub Actions', color: 'rgb(220, 71, 54)' },
 
   { value: 'shell', label: 'Shell', color: 'green' },
-  { value: 'linux', label: 'Linux', color: 'white' }
+  { value: 'linux', label: 'Linux', color: 'white' },
+
+  { value: 'functional', label: 'Function Programming', color: 'white' },
+  { value: 'object-oriented', label: 'Object Oriented Programming', color: 'white' },
 ];
