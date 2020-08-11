@@ -25,7 +25,8 @@ export default function Home() {
                 <div className="header-section" style={{marginTop: '-25px'}}>
                   <div style={{ paddingLeft: '5px',  }} className="header-frame">
                     <h3 className="font-c-cn-m" style={{ lineHeight: '150%', marginTop: '-5px' }}>
-                      <p>Loves functional programming and Currently open to a new exciting adventure.</p>
+                      <p>Loves functional programming and still finds time for JavaScript.</p>
+                      <p>Fully Self Taught.</p>
                       <p>
                         <span>Formerly at </span>
                         <b itemScope itemProp="organization" itemType="http://schema.org/Organization">
