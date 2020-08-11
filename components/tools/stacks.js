@@ -2,14 +2,16 @@ export  const options = [
   { value: 'javascript', label: 'JavaScript', color: '#fcba03' },
   { value: 'nodejs', label: 'NodeJS', color: '#40a832' },
   { value: 'reactjs', label: 'ReactJS', color: '#08a6f3' },
+  { value: 'react-native', label: 'React Native', color: '#08a6f3' },
   { value: 'nextjs', label: 'NextJS', color: 'white' },
 
   { value: 'elixir', label: 'Elixir', color: '#a767f5' },
-  { value: 'erlang', label: 'Er-Lang', color: 'rgb(151, 0, 39)' },
+  { value: 'erlang', label: 'ErLang', color: 'rgb(151, 0, 39)' },
   { value: 'genstage', label: 'GenStage', color: '#a767f5' },
   { value: 'genserver', label: 'GenServer', color: '#a767f5' },
+  { value: 'flow', label: 'Flow', color: '#a767f5' },
   { value: 'ecto', label: 'Ecto', color: '#40a832' },
-  { value: 'phoenix', label: 'Phoenix', color: 'orange' },
+  { value: 'phoenix', label: 'Phoenix Framework', color: 'orange' },
   { value: 'beam', label: 'OTP and BEAM', color: 'rgb(151, 0, 39)' },
 
   { value: 'postgresql', label: 'PostgreSQL', color: 'white' },
