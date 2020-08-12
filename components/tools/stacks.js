@@ -14,6 +14,9 @@ export  const options = [
   { value: 'phoenix', label: 'Phoenix Framework', color: 'orange' },
   { value: 'beam', label: 'OTP and BEAM', color: 'rgb(151, 0, 39)' },
 
+  { value: 'lisp', label: 'Lisp', color: 'rgb(63, 102, 176)' },
+  { value: 'haskell', label: 'Haskell', color: 'rgb(71, 40, 103)' },
+
   { value: 'postgresql', label: 'PostgreSQL', color: 'white' },
   { value: 'sql', label: 'SQL', color: '#05daff' },
   { value: 'data', label: 'Data', color: '#05daff' },
