@@ -18,3 +18,5 @@ bundles
 /.stories
 .env.production
 public/z-site-images
+
+/dev

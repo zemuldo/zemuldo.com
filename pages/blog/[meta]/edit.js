@@ -208,7 +208,7 @@ class EditBlog extends React.Component {
     this.autoSave = setInterval(() => {
       this.setState({ saving: true });
       localStorage.setItem(`state_${this.props.post._id}`, JSON.stringify(this.state));
-    }, 10000);
+    }, 20000);
     
   }
 

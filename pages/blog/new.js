@@ -156,7 +156,7 @@ class NewBlog extends React.Component {
       this.setState({ saving: true });
       const { postTitle, coverPhotoUrl, tags, description } = this.state;
       if (postTitle || coverPhotoUrl || tags || description) localStorage.setItem('currentDraft', JSON.stringify(this.state));
-    }, 5000);
+    }, 20000);
   }
 
  
