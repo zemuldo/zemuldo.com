@@ -4,6 +4,7 @@ import ErrorPage from '../pages/_error';
 import { parseCookies } from 'nookies';
 import AcceptTerms from './terms';
 import VersionInfo from './versionInfo';
+import { withRouter } from 'next/router';
 
 export default Component => {
   const Entry = (props) => {
@@ -34,5 +35,5 @@ export default Component => {
     accepted_terms: PropTypes.string
   };
 
-  return Entry;
+  return withRouter(Entry);
 };

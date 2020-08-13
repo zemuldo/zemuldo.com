@@ -24,15 +24,22 @@ class Blog extends React.Component {
     this.state = {
       posts: this.props.posts,
       lastLength: 10,
-      limit: 10
+      limit: 10,
+      currentTag: this.props.currentTag,
     };
   }
 
+  static initialPosts(tag) {
+    if (!tag) return fetch(`${api_url}/post?skip=0&limit=10`);
+    else return fetch(`${api_url}/post?&tag=${tag}`);
+  }
+
   static async getInitialProps(ctx) {
+    const {tag} = ctx.query;
     const topTagsRes = await fetch(`${ex_api_url}/api/top_tags`);
     const topTags = topTagsRes.status === 200 ? await topTagsRes.json() : [];
     const { authorization } = parseCookies(ctx);
-    const res = await fetch(`${api_url}/post?skip=0&limit=10`);
+    const res = await this.initialPosts(tag);
     const data = await res.json();
     const res_featured = await fetch(`${api_url}/post/latest`);
     const data_featured = await res_featured.json();
@@ -47,6 +54,7 @@ class Blog extends React.Component {
       authorization,
       posts: data,
       topTags,
+      currentTag: tag
     };
   }
 
@@ -63,14 +71,15 @@ class Blog extends React.Component {
   }
 
   fetchPosts = async () =>{
+    this.props.router.push('/blog', '/blog', { shallow: true })
     const res = await fetch(`${api_url}/post`);
     const posts = await res.json();
     this.setState({posts, currentTag: null});
   }
 
   filterByTag = async (tag) =>{
-    
     if (!tag) return this.fetchPosts();
+    this.props.router.push('/blog', `/blog?tag=${tag}`,  { shallow: true })
     const res = await fetch(`${api_url}/post?&tag=${tag}`);
     const posts = await res.json();
     this.setState({currentTag: tag, posts: posts});
@@ -125,11 +134,13 @@ class Blog extends React.Component {
 }
 
 Blog.propTypes = {
+  router: PropTypes.object.isRequired,
   posts: PropTypes.array.isRequired,
   authorization: PropTypes.oneOfType([PropTypes.string, PropTypes.oneOf([null])]),
   user: PropTypes.object,
   featuredPost: PropTypes.object,
   topTags: PropTypes.array.isRequired,
+  currentTag: PropTypes.string,
 };
 
 export default Entry(Blog);
