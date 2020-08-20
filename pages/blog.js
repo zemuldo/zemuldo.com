@@ -71,7 +71,7 @@ class Blog extends React.Component {
   }
 
   fetchPosts = async () =>{
-    this.props.router.push('/blog', '/blog', { shallow: true })
+    this.props.router.push('/blog', '/blog', { shallow: true });
     const res = await fetch(`${api_url}/post`);
     const posts = await res.json();
     this.setState({posts, currentTag: null});
@@ -79,7 +79,7 @@ class Blog extends React.Component {
 
   filterByTag = async (tag) =>{
     if (!tag) return this.fetchPosts();
-    this.props.router.push('/blog', `/blog?tag=${tag}`,  { shallow: true })
+    this.props.router.push('/blog', `/blog?tag=${tag}`,  { shallow: true });
     const res = await fetch(`${api_url}/post?&tag=${tag}`);
     const posts = await res.json();
     this.setState({currentTag: tag, posts: posts});
