@@ -2,6 +2,7 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import  theme from 'react-syntax-highlighter/dist/esm/styles/prism/darcula';
+import CopyCode from './CopyCode';
 
 class CodeBlock extends PureComponent {
   static propTypes = {
@@ -16,9 +17,12 @@ class CodeBlock extends PureComponent {
   render() {
     const { language, value } = this.props;
     return (
-      <SyntaxHighlighter language={language} style={theme}>
-        {value}
-      </SyntaxHighlighter>
+      <div>
+        <CopyCode code={value}/>
+        <SyntaxHighlighter language={language} style={theme}>
+          {value}
+        </SyntaxHighlighter>
+      </div>
     );
   }
 }

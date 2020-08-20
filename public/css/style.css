@@ -355,3 +355,6 @@ hr:after {
 .social-sites {
     margin-top: -30px
 }
+pre{
+    border-radius: 5px;
+}
