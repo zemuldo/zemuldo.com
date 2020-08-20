@@ -14,10 +14,10 @@ import Grid from '@material-ui/core/Grid';
 import PropTypes from 'prop-types';
 import Entry from '../../../../components/entry';
 import ReactMarkdown from 'react-markdown';
-import CodeBlock from '../../../../components/md/CodeBlock';
-import Image from '../../../../components/md/Image';
-import MarkdownLink from '../../../../components/md/Link';
-import Heading from '../../../../components/md/Heading';
+import CodeBlock from '../../../../components/md/code_block';
+import Image from '../../../../components/md/image';
+import MarkdownLink from '../../../../components/md/link';
+import Heading from '../../../../components/md/heading';
 
 const api_url = process.env.API_URL;
 const base_url = process.env.UI_URL;
