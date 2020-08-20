@@ -4,7 +4,6 @@ import { withStyles } from '@material-ui/core/styles';
 import Footer from '../footer';
 import Menu from '../blog/menu';
 import Head from 'next/head';
-import Link from 'next/link';
 import { format } from 'date-fns';
 import Avatar from '@material-ui/core/Avatar';
 import EditIcon from '@material-ui/icons/Edit';
@@ -17,6 +16,7 @@ import MarkdownLink from '../md/link';
 import Heading from '../md/heading';
 import ShouldRender from '../tools/shouldRender';
 import NoContent from '../NoContent';
+import { withRouter } from 'next/router';
 
 const api_url = process.env.API_URL;
 const base_url = process.env.UI_URL;
@@ -134,11 +134,9 @@ class ViewBlog extends React.Component {
               <Menu authorization={authorization}>
                 {
                   this.props.authorization &&
-                <Link href={`/blog/${post._id}/edit`}>
-                  <Avatar className={classes.greenAvatar}>
+                  <Avatar onClick={() => this.props.router.push(`/blog/${post._id}/edit`)} className={classes.greenAvatar}>
                     <EditIcon />
                   </Avatar>
-                </Link>
                 }
               </Menu>
 
@@ -213,4 +211,4 @@ ViewBlog.propTypes = {
   authorization: PropTypes.oneOfType([PropTypes.string, PropTypes.oneOf([null])])
 };
 
-export default withStyles(styles)(ViewBlog);
+export default withRouter(withStyles(styles)(ViewBlog));
