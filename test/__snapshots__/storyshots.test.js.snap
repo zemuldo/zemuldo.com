@@ -21,7 +21,6 @@ Array [
         className="color-orange"
       >
          
-        0.0.1
       </span>
     </div>
     <div>
@@ -39,7 +38,7 @@ Array [
       <span
         className="color-orange"
       >
-        94d077c24
+        78e0a4366
       </span>
     </div>
   </div>,
@@ -147,24 +146,42 @@ Array [
           }
         >
           <div
-            className="MuiGrid-root MuiGrid-container"
+            className="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-center MuiGrid-justify-xs-center"
           >
             <a
               href="/"
               onClick={[Function]}
             >
               <div
-                className="MuiAvatar-root MuiAvatar-circle Menu-greenAvatar-358 MuiAvatar-colorDefault"
+                className="MuiAvatar-root MuiAvatar-circle Menu-greenAvatar-49 MuiAvatar-colorDefault"
               >
                 <svg
                   aria-hidden="true"
                   className="MuiSvgIcon-root"
                   focusable="false"
-                  role="presentation"
                   viewBox="0 0 24 24"
                 >
                   <path
                     d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"
+                  />
+                </svg>
+              </div>
+            </a>
+            <a
+              href="/blog/images"
+              onClick={[Function]}
+            >
+              <div
+                className="MuiAvatar-root MuiAvatar-circle Menu-greenAvatar-49 MuiAvatar-colorDefault"
+              >
+                <svg
+                  aria-hidden="true"
+                  className="MuiSvgIcon-root"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M22 16V4c0-1.1-.9-2-2-2H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2zm-11-4l2.03 2.71L16 11l4 5H8l3-4zM2 6v14c0 1.1.9 2 2 2h14v-2H4V6H2z"
                   />
                 </svg>
               </div>
@@ -217,7 +234,7 @@ Array [
         className="MuiGrid-root blog-share-buttons MuiGrid-container"
       >
         <div
-          className="MuiAvatar-root MuiAvatar-circle Blog-twitterAvatar-252 Blog-twitterAvatar-3 MuiAvatar-colorDefault"
+          className="MuiAvatar-root MuiAvatar-circle ViewBlog-twitterAvatar-46 Blog-twitterAvatar-3 MuiAvatar-colorDefault"
           onClick={[Function]}
         >
           <i
@@ -225,7 +242,7 @@ Array [
           />
         </div>
         <div
-          className="MuiAvatar-root MuiAvatar-circle Blog-fbAvatar-253 Blog-fbAvatar-4 MuiAvatar-colorDefault"
+          className="MuiAvatar-root MuiAvatar-circle ViewBlog-fbAvatar-47 Blog-fbAvatar-4 MuiAvatar-colorDefault"
           onClick={[Function]}
         >
           <i
@@ -233,7 +250,7 @@ Array [
           />
         </div>
         <div
-          className="MuiAvatar-root MuiAvatar-circle Blog-linkedinAvatar-254 Blog-linkedinAvatar-5 MuiAvatar-colorDefault"
+          className="MuiAvatar-root MuiAvatar-circle ViewBlog-linkedinAvatar-48 Blog-linkedinAvatar-5 MuiAvatar-colorDefault"
           onClick={[Function]}
         >
           <i
@@ -250,7 +267,8 @@ Array [
         src="https://miro.medium.com/max/1200/1*vKd5tDJmDFznrOkMh1kQGg.png"
         style={
           Object {
-            "maxHeight": "600px",
+            "marginTop": "10px",
+            "maxHeight": "720px",
           }
         }
       />
@@ -289,7 +307,7 @@ Array [
       </p>
     </div>
     <footer
-      className="makeStyles-footer-385"
+      className="makeStyles-footer-60"
     >
       <div
         className="MuiContainer-root MuiContainer-maxWidthLg"
@@ -355,7 +373,6 @@ Array [
         className="color-orange"
       >
          
-        0.0.1
       </span>
     </div>
     <div>
@@ -373,7 +390,7 @@ Array [
       <span
         className="color-orange"
       >
-        94d077c24
+        78e0a4366
       </span>
     </div>
   </div>,
@@ -482,20 +499,19 @@ Array [
           }
         >
           <div
-            className="MuiGrid-root MuiGrid-container"
+            className="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-center MuiGrid-justify-xs-center"
           >
             <a
               href="/"
               onClick={[Function]}
             >
               <div
-                className="MuiAvatar-root MuiAvatar-circle Menu-greenAvatar-551 MuiAvatar-colorDefault"
+                className="MuiAvatar-root MuiAvatar-circle Menu-greenAvatar-70 MuiAvatar-colorDefault"
               >
                 <svg
                   aria-hidden="true"
                   className="MuiSvgIcon-root"
                   focusable="false"
-                  role="presentation"
                   viewBox="0 0 24 24"
                 >
                   <path
@@ -509,7 +525,7 @@ Array [
               onClick={[Function]}
             >
               <div
-                className="MuiAvatar-root MuiAvatar-circle Menu-greenAvatar-551"
+                className="MuiAvatar-root MuiAvatar-circle Menu-greenAvatar-70"
               >
                 <img
                   className="MuiAvatar-img"
@@ -522,13 +538,12 @@ Array [
               onClick={[Function]}
             >
               <div
-                className="MuiAvatar-root MuiAvatar-circle Menu-greenAvatar-551 MuiAvatar-colorDefault"
+                className="MuiAvatar-root MuiAvatar-circle Menu-greenAvatar-70 MuiAvatar-colorDefault"
               >
                 <svg
                   aria-hidden="true"
                   className="MuiSvgIcon-root"
                   focusable="false"
-                  role="presentation"
                   viewBox="0 0 24 24"
                 >
                   <path
@@ -542,13 +557,12 @@ Array [
               onClick={[Function]}
             >
               <div
-                className="MuiAvatar-root MuiAvatar-circle Menu-greenAvatar-551 MuiAvatar-colorDefault"
+                className="MuiAvatar-root MuiAvatar-circle Menu-greenAvatar-70 MuiAvatar-colorDefault"
               >
                 <svg
                   aria-hidden="true"
                   className="MuiSvgIcon-root"
                   focusable="false"
-                  role="presentation"
                   viewBox="0 0 24 24"
                 >
                   <path
@@ -558,14 +572,13 @@ Array [
               </div>
             </a>
             <div
-              className="MuiAvatar-root MuiAvatar-circle EditBlog-greenAvatar-424 EditBlog-greenAvatar-1 MuiAvatar-colorDefault"
+              className="MuiAvatar-root MuiAvatar-circle EditBlog-greenAvatar-61 EditBlog-greenAvatar-1 MuiAvatar-colorDefault"
               onClick={[Function]}
             >
               <svg
                 aria-hidden="true"
                 className="MuiSvgIcon-root"
                 focusable="false"
-                role="presentation"
                 viewBox="0 0 24 24"
               >
                 <path
@@ -574,14 +587,13 @@ Array [
               </svg>
             </div>
             <div
-              className="MuiAvatar-root MuiAvatar-circle EditBlog-greenAvatar-424 EditBlog-greenAvatar-1 MuiAvatar-colorDefault"
+              className="MuiAvatar-root MuiAvatar-circle EditBlog-greenAvatar-61 EditBlog-greenAvatar-1 MuiAvatar-colorDefault"
               onClick={[Function]}
             >
               <svg
                 aria-hidden="true"
                 className="MuiSvgIcon-root"
                 focusable="false"
-                role="presentation"
                 viewBox="0 0 24 24"
               >
                 <path
@@ -594,13 +606,12 @@ Array [
               onClick={[Function]}
             >
               <div
-                className="MuiAvatar-root MuiAvatar-circle Menu-greenAvatar-551 MuiAvatar-colorDefault"
+                className="MuiAvatar-root MuiAvatar-circle Menu-greenAvatar-70 MuiAvatar-colorDefault"
               >
                 <svg
                   aria-hidden="true"
                   className="MuiSvgIcon-root"
                   focusable="false"
-                  role="presentation"
                   viewBox="0 0 24 24"
                 >
                   <path
@@ -613,13 +624,13 @@ Array [
         </div>
       </div>
       <div
-        className="EditBlog-root-425 EditBlog-root-2"
+        className="EditBlog-root-62 EditBlog-root-2"
       >
         <div
           className="MuiFormControl-root MuiTextField-root MuiFormControl-fullWidth"
         >
           <label
-            className="MuiFormLabel-root MuiInputLabel-root EditBlog-floatingLabelFocusStyle-426 EditBlog-floatingLabelFocusStyle-3 MuiInputLabel-formControl MuiInputLabel-animated"
+            className="MuiFormLabel-root MuiInputLabel-root EditBlog-floatingLabelFocusStyle-63 EditBlog-floatingLabelFocusStyle-3 MuiInputLabel-formControl MuiInputLabel-animated"
             data-shrink={false}
             htmlFor="postTitle"
             id="postTitle-label"
@@ -627,7 +638,7 @@ Array [
             Post Title
           </label>
           <div
-            className="MuiInputBase-root MuiInput-root MuiInput-underline EditBlog-materialInput-427 EditBlog-materialInput-4 MuiInputBase-fullWidth MuiInput-fullWidth MuiInputBase-formControl MuiInput-formControl"
+            className="MuiInputBase-root MuiInput-root MuiInput-underline EditBlog-materialInput-64 EditBlog-materialInput-4 MuiInputBase-fullWidth MuiInput-fullWidth MuiInputBase-formControl MuiInput-formControl"
             onClick={[Function]}
           >
             <input
@@ -658,7 +669,7 @@ Array [
             className="MuiFormControl-root MuiTextField-root MuiFormControl-fullWidth"
           >
             <label
-              className="MuiFormLabel-root MuiInputLabel-root EditBlog-floatingLabelFocusStyle-426 EditBlog-floatingLabelFocusStyle-3 MuiInputLabel-formControl MuiInputLabel-animated"
+              className="MuiFormLabel-root MuiInputLabel-root EditBlog-floatingLabelFocusStyle-63 EditBlog-floatingLabelFocusStyle-3 MuiInputLabel-formControl MuiInputLabel-animated"
               data-shrink={false}
               htmlFor="coverPhotoUrl"
               id="coverPhotoUrl-label"
@@ -666,7 +677,7 @@ Array [
               Cover Photo Url
             </label>
             <div
-              className="MuiInputBase-root MuiInput-root MuiInput-underline EditBlog-materialInput-427 EditBlog-materialInput-4 MuiInputBase-fullWidth MuiInput-fullWidth MuiInputBase-formControl MuiInput-formControl"
+              className="MuiInputBase-root MuiInput-root MuiInput-underline EditBlog-materialInput-64 EditBlog-materialInput-4 MuiInputBase-fullWidth MuiInput-fullWidth MuiInputBase-formControl MuiInput-formControl"
               onClick={[Function]}
             >
               <input
@@ -706,7 +717,7 @@ Array [
                 onTouchEnd={[Function]}
               >
                 <div
-                  className="select__value-container select__value-container--is-multi select__value-container--has-value css-1hwfws3"
+                  className="select__value-container select__value-container--is-multi select__value-container--has-value css-17rus17-ValueContainer"
                 >
                   <div
                     className="css-1qjbge0-multiValue select__multi-value"
@@ -903,10 +914,10 @@ Array [
                 onTouchEnd={[Function]}
               >
                 <div
-                  className="select__value-container select__value-container--is-multi css-1hwfws3"
+                  className="select__value-container select__value-container--is-multi css-17rus17-ValueContainer"
                 >
                   <div
-                    className="select__placeholder css-7y8ne7-placeholder"
+                    className="select__placeholder css-1vpj0yq-placeholder"
                   >
                     Select...
                   </div>
@@ -1007,10 +1018,10 @@ Array [
       </div>
       <br />
       <div
-        className="MuiFormControl-root MuiTextField-root EditBlog-materialTextArea-428 EditBlog-materialTextArea-5 MuiFormControl-marginNormal MuiFormControl-fullWidth"
+        className="MuiFormControl-root MuiTextField-root EditBlog-materialTextArea-65 EditBlog-materialTextArea-5 MuiFormControl-marginNormal MuiFormControl-fullWidth"
       >
         <label
-          className="MuiFormLabel-root MuiInputLabel-root EditBlog-floatingLabelFocusStyle-426 EditBlog-floatingLabelFocusStyle-3 MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
+          className="MuiFormLabel-root MuiInputLabel-root EditBlog-floatingLabelFocusStyle-63 EditBlog-floatingLabelFocusStyle-3 MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
           data-shrink={false}
           htmlFor="description"
           id="description-label"
@@ -1018,7 +1029,7 @@ Array [
           Post Description
         </label>
         <div
-          className="MuiInputBase-root MuiOutlinedInput-root EditBlog-materialTextArea-428 EditBlog-materialTextArea-5 MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-multiline MuiOutlinedInput-multiline"
+          className="MuiInputBase-root MuiOutlinedInput-root EditBlog-materialTextArea-65 EditBlog-materialTextArea-5 MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-multiline MuiOutlinedInput-multiline"
           onClick={[Function]}
         >
           <textarea
@@ -1037,28 +1048,14 @@ Array [
           />
           <fieldset
             aria-hidden={true}
-            className="PrivateNotchedOutline-root-652 MuiOutlinedInput-notchedOutline"
-            style={
-              Object {
-                "paddingLeft": 8,
-              }
-            }
+            className="PrivateNotchedOutline-root-81 MuiOutlinedInput-notchedOutline"
           >
             <legend
-              className="PrivateNotchedOutline-legend-653"
-              style={
-                Object {
-                  "width": 0.01,
-                }
-              }
+              className="PrivateNotchedOutline-legendLabelled-83"
             >
-              <span
-                dangerouslySetInnerHTML={
-                  Object {
-                    "__html": "&#8203;",
-                  }
-                }
-              />
+              <span>
+                Post Description
+              </span>
             </legend>
           </fieldset>
         </div>
@@ -1092,9 +1089,64 @@ I encourage you to never compromise your integrity by trying to be or say or fee
 
 And – more importantly – never compromise your potential to grow due to self-limiting doubts. Instead, embrace your confidence and believe in yourself because you really can do anything you put your mind to."
       />
+      <div
+        className="MuiFormControl-root MuiTextField-root EditBlog-materialTextArea-65 EditBlog-materialTextArea-5 MuiFormControl-marginNormal MuiFormControl-fullWidth"
+      >
+        <label
+          className="MuiFormLabel-root MuiInputLabel-root EditBlog-floatingLabelFocusStyle-63 EditBlog-floatingLabelFocusStyle-3 MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
+          data-shrink={false}
+          htmlFor="grammar-check"
+          id="grammar-check-label"
+        >
+          Post Grammar Checker
+        </label>
+        <div
+          className="MuiInputBase-root MuiOutlinedInput-root EditBlog-materialTextArea-65 EditBlog-materialTextArea-5 MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-multiline MuiOutlinedInput-multiline"
+          onClick={[Function]}
+        >
+          <textarea
+            aria-invalid={false}
+            autoFocus={false}
+            className="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputMultiline MuiOutlinedInput-inputMultiline"
+            disabled={false}
+            id="grammar-check"
+            onAnimationStart={[Function]}
+            onBlur={[Function]}
+            onChange={[Function]}
+            onFocus={[Function]}
+            required={false}
+            rows="40"
+            value="Most people start off with little or low self-confidence, but as a result of their own efforts, they become bold and brave and outgoing. And we’ve discovered that if you do the same things that other self-confident men and women do, you, too, will experience the same feelings and get the same results.
+
+The key is to be true to yourself, to be true to the very best that is in you, and to live your life consistent with your highest values and aspirations. This is the only way to truly learn how to believe in yourself.
+
+Take some time to think about who you are and what you believe in and what is important to you.
+
+If you want to change your life by becoming an author, believe that you can do it. The hardest step in that journey is finding the confidence to learn how to write a book. Once you get a hold of a proven system to plan, produce, and publish your work, the larger goal becomes easier to attain.
+
+By believing in yourself, you will find the courage to take immediate action on your goals. And this, as you may know, is the key to success!
+
+I encourage you to never compromise your integrity by trying to be or say or feel something that is not true for you.
+
+And – more importantly – never compromise your potential to grow due to self-limiting doubts. Instead, embrace your confidence and believe in yourself because you really can do anything you put your mind to."
+          />
+          <fieldset
+            aria-hidden={true}
+            className="PrivateNotchedOutline-root-81 MuiOutlinedInput-notchedOutline"
+          >
+            <legend
+              className="PrivateNotchedOutline-legendLabelled-83"
+            >
+              <span>
+                Post Grammar Checker
+              </span>
+            </legend>
+          </fieldset>
+        </div>
+      </div>
     </div>
     <footer
-      className="makeStyles-footer-654"
+      className="makeStyles-footer-85"
     >
       <div
         className="MuiContainer-root MuiContainer-maxWidthLg"
@@ -1160,7 +1212,6 @@ Array [
         className="color-orange"
       >
          
-        0.0.1
       </span>
     </div>
     <div>
@@ -1178,7 +1229,7 @@ Array [
       <span
         className="color-orange"
       >
-        94d077c24
+        78e0a4366
       </span>
     </div>
   </div>,
@@ -1274,39 +1325,113 @@ Array [
       }
     >
       <div
-        className="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-center MuiGrid-justify-xs-center"
+        style={
+          Object {
+            "margin": "10px 0px 10px 0px",
+          }
+        }
       >
         <div
-          style={
-            Object {
-              "margin": "10px 0px 10px 0px",
-            }
-          }
+          className="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-center MuiGrid-justify-xs-center"
         >
-          <div
-            className="MuiGrid-root MuiGrid-container"
+          <a
+            href="/"
+            onClick={[Function]}
           >
-            <a
-              href="/"
-              onClick={[Function]}
+            <div
+              className="MuiAvatar-root MuiAvatar-circle Menu-greenAvatar-1 MuiAvatar-colorDefault"
             >
-              <div
-                className="MuiAvatar-root MuiAvatar-circle Menu-greenAvatar-112 MuiAvatar-colorDefault"
+              <svg
+                aria-hidden="true"
+                className="MuiSvgIcon-root"
+                focusable="false"
+                viewBox="0 0 24 24"
               >
-                <svg
-                  aria-hidden="true"
-                  className="MuiSvgIcon-root"
-                  focusable="false"
-                  role="presentation"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"
-                  />
-                </svg>
-              </div>
-            </a>
-          </div>
+                <path
+                  d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"
+                />
+              </svg>
+            </div>
+          </a>
+          <a
+            href="/blog/images"
+            onClick={[Function]}
+          >
+            <div
+              className="MuiAvatar-root MuiAvatar-circle Menu-greenAvatar-1 MuiAvatar-colorDefault"
+            >
+              <svg
+                aria-hidden="true"
+                className="MuiSvgIcon-root"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M22 16V4c0-1.1-.9-2-2-2H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2zm-11-4l2.03 2.71L16 11l4 5H8l3-4zM2 6v14c0 1.1.9 2 2 2h14v-2H4V6H2z"
+                />
+              </svg>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div
+      className="MuiContainer-root MuiContainer-maxWidthMd"
+      style={
+        Object {
+          "color": "white",
+        }
+      }
+    >
+      <div
+        style={
+          Object {
+            "margin": "20px 0px 20px 0px",
+          }
+        }
+      >
+        <div
+          className="MuiGrid-root makeStyles-root-12 MuiGrid-container MuiGrid-align-items-xs-center MuiGrid-justify-xs-center"
+        >
+          <span
+            style={
+              Object {
+                "fontSize": "28px",
+              }
+            }
+          >
+            Top Tags:
+          </span>
+          <button
+            className="MuiButtonBase-root MuiButton-root WithStyles(ForwardRef(Button))-root-13 MuiButton-contained MuiButton-containedPrimary"
+            disabled={false}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onDragLeave={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            style={
+              Object {
+                "backgroundColor": "#08a6f3",
+                "color": "white",
+              }
+            }
+            tabIndex={0}
+            type="button"
+          >
+            <span
+              className="MuiButton-label"
+            >
+              All
+            </span>
+          </button>
         </div>
       </div>
     </div>
@@ -1323,10 +1448,10 @@ Array [
         onClick={[Function]}
       >
         <div
-          className="MuiPaper-root MuiPaper-elevation1 FeaturedPost-mainFeaturedPost-145 MuiPaper-rounded"
+          className="MuiPaper-root FeaturedPost-mainFeaturedPost-20 MuiPaper-elevation1 MuiPaper-rounded"
         >
           <div
-            className="FeaturedPost-overlay-146"
+            className="FeaturedPost-overlay-21"
             style={
               Object {
                 "backgroundColor": "rgb(23, 23, 23)",
@@ -1346,7 +1471,7 @@ Array [
               className="MuiGrid-root MuiGrid-item MuiGrid-grid-md-6"
             >
               <div
-                className="FeaturedPost-mainFeaturedPostContent-147"
+                className="FeaturedPost-mainFeaturedPostContent-22"
               >
                 <h1
                   className="MuiTypography-root MuiTypography-h3 MuiTypography-colorInherit MuiTypography-gutterBottom"
@@ -1398,7 +1523,7 @@ Array [
           }
         >
           <div
-            className="MuiPaper-root MuiPaper-elevation1 makeStyles-paper-215 MuiPaper-rounded"
+            className="MuiPaper-root makeStyles-paper-33 MuiPaper-elevation1 MuiPaper-rounded"
           >
             <a
               href="/blog/how-to-use-ecto-as-a-query-schema-validation-library-5d6754fefe8b7e3fc0707fce"
@@ -1422,10 +1547,10 @@ Array [
                 tabIndex={0}
               >
                 <div
-                  className="MuiPaper-root MuiPaper-elevation1 MuiCard-root makeStyles-card-212 MuiPaper-rounded"
+                  className="MuiPaper-root MuiCard-root makeStyles-card-30 MuiPaper-elevation1 MuiPaper-rounded"
                 >
                   <div
-                    className="makeStyles-cardDetails-213"
+                    className="makeStyles-cardDetails-31"
                   >
                     <div
                       className="MuiCardContent-root"
@@ -1507,7 +1632,7 @@ Array [
           }
         >
           <div
-            className="MuiPaper-root MuiPaper-elevation1 makeStyles-paper-215 MuiPaper-rounded"
+            className="MuiPaper-root makeStyles-paper-33 MuiPaper-elevation1 MuiPaper-rounded"
           >
             <a
               href="/blog/how-to-use-ecto-as-a-query-schema-validation-library-5d7951be3d510b0fa5ae7658"
@@ -1531,10 +1656,10 @@ Array [
                 tabIndex={0}
               >
                 <div
-                  className="MuiPaper-root MuiPaper-elevation1 MuiCard-root makeStyles-card-212 MuiPaper-rounded"
+                  className="MuiPaper-root MuiCard-root makeStyles-card-30 MuiPaper-elevation1 MuiPaper-rounded"
                 >
                   <div
-                    className="makeStyles-cardDetails-213"
+                    className="makeStyles-cardDetails-31"
                   >
                     <div
                       className="MuiCardContent-root"
@@ -1598,7 +1723,7 @@ Array [
           }
         >
           <div
-            className="MuiPaper-root MuiPaper-elevation1 makeStyles-paper-215 MuiPaper-rounded"
+            className="MuiPaper-root makeStyles-paper-33 MuiPaper-elevation1 MuiPaper-rounded"
           >
             <a
               href="/blog/how-to-make-sure-that-you-always-succeed-5d79520a3d510b0fa5ae765a"
@@ -1622,10 +1747,10 @@ Array [
                 tabIndex={0}
               >
                 <div
-                  className="MuiPaper-root MuiPaper-elevation1 MuiCard-root makeStyles-card-212 MuiPaper-rounded"
+                  className="MuiPaper-root MuiCard-root makeStyles-card-30 MuiPaper-elevation1 MuiPaper-rounded"
                 >
                   <div
-                    className="makeStyles-cardDetails-213"
+                    className="makeStyles-cardDetails-31"
                   >
                     <div
                       className="MuiCardContent-root"
@@ -1702,7 +1827,7 @@ Array [
       <br />
     </div>
     <footer
-      className="makeStyles-footer-224"
+      className="makeStyles-footer-34"
     >
       <div
         className="MuiContainer-root MuiContainer-maxWidthLg"
@@ -1768,7 +1893,6 @@ Array [
         className="color-orange"
       >
          
-        0.0.1
       </span>
     </div>
     <div>
@@ -1786,7 +1910,7 @@ Array [
       <span
         className="color-orange"
       >
-        94d077c24
+        78e0a4366
       </span>
     </div>
   </div>,
@@ -1888,7 +2012,7 @@ Array [
 
 exports[`Storyshots Home Page Footer 1`] = `
 <footer
-  className="makeStyles-footer-724"
+  className="makeStyles-footer-87"
 >
   <div
     className="MuiContainer-root MuiContainer-maxWidthLg"
@@ -1952,7 +2076,6 @@ Array [
         className="color-orange"
       >
          
-        0.0.1
       </span>
     </div>
     <div>
@@ -1970,7 +2093,7 @@ Array [
       <span
         className="color-orange"
       >
-        94d077c24
+        78e0a4366
       </span>
     </div>
   </div>,
@@ -2074,7 +2197,49 @@ Array [
               className="row"
             >
               <div
+                style={
+                  Object {
+                    "marginTop": "-10px",
+                    "paddingLeft": "5px",
+                  }
+                }
+              >
+                <div
+                  itemProp="founder"
+                  itemScope={true}
+                  itemType="http://schema.org/Person"
+                >
+                  <h1
+                    className="color-6"
+                    itemProp="name"
+                  >
+                    Danstan Onyango
+                  </h1>
+                </div>
+                <h2
+                  style={
+                    Object {
+                      "fontSize": "26px",
+                    }
+                  }
+                >
+                  Software Engineer
+                </h2>
+                <hr
+                  style={
+                    Object {
+                      "marginTop": "-10px",
+                    }
+                  }
+                />
+              </div>
+              <div
                 className="header-section"
+                style={
+                  Object {
+                    "marginTop": "-25px",
+                  }
+                }
               >
                 <div
                   className="header-frame"
@@ -2084,34 +2249,6 @@ Array [
                     }
                   }
                 >
-                  <div
-                    itemProp="founder"
-                    itemScope={true}
-                    itemType="http://schema.org/Person"
-                  >
-                    <h1
-                      className="color-6"
-                      itemProp="name"
-                    >
-                      Danstan Onyango
-                    </h1>
-                  </div>
-                  <h2
-                    style={
-                      Object {
-                        "fontSize": "26px",
-                      }
-                    }
-                  >
-                    Software Engineer
-                  </h2>
-                  <hr
-                    style={
-                      Object {
-                        "marginTop": "-10px",
-                      }
-                    }
-                  />
                   <h3
                     className="font-c-cn-m"
                     style={
@@ -2121,90 +2258,99 @@ Array [
                       }
                     }
                   >
-                    <span>
-                      Currently being awesome at
-                    </span>
-                    <b
-                      itemProp="organization"
-                      itemScope={true}
-                      itemType="http://schema.org/Organization"
-                    >
-                      <a
-                        className="color-6"
-                        href="https://safeboda.com"
-                        itemProp="url"
-                        rel="noopener noreferrer"
-                        target="_blank"
+                    <p>
+                      Loves Functional Programming and Developing Distributed Systems. Curious, Peculiar.
+                    </p>
+                    <p>
+                      Fully Self Taught.
+                    </p>
+                    <p>
+                      <span>
+                        Formerly at 
+                      </span>
+                      <b
+                        itemProp="organization"
+                        itemScope={true}
+                        itemType="http://schema.org/Organization"
                       >
-                        <span
-                          itemProp="name"
+                        <a
+                          className="color-orange"
+                          href="https://safeboda.com"
+                          itemProp="url"
+                          rel="noopener noreferrer"
+                          target="_blank"
                         >
-                           SafeBoda 
-                        </span>
-                      </a>
-                    </b>
-                    <span>
-                       and formely at 
-                    </span>
-                    <b
-                      itemProp="organization"
-                      itemScope={true}
-                      itemType="http://schema.org/Organization"
-                    >
-                      <a
-                        className="color-6"
-                        href="https://hackerbay.io/"
-                        itemProp="url"
-                        rel="noopener noreferrer"
-                        target="_blank"
-                      >
-                        <span
-                          itemProp="name"
-                        >
-                           HackerBay Inc. 
-                        </span>
-                      </a>
-                    </b>
+                          <span
+                            itemProp="name"
+                          >
+                             SafeBoda
+                          </span>
+                        </a>
+                      </b>
+                      <span>
+                        .
+                      </span>
+                    </p>
                   </h3>
-                  <h4
-                    className="color-orange"
-                    style={
-                      Object {
-                        "fontSize": "26px",
-                      }
-                    }
-                  >
-                    Nairobi, Kenya
-                  </h4>
                   <h4
                     className="color-6 font-c-cn-m"
                     style={
                       Object {
                         "fontSize": "1.8em",
-                        "marginTop": "30px",
                       }
                     }
                   >
-                    <a
-                      href="/journey"
-                      onClick={[Function]}
+                    <div
+                      className="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-center MuiGrid-justify-xs-space-between"
                     >
-                      <b>
-                        See my journey 🚀🚀🚀
-                      </b>
-                    </a>
+                      <a
+                        href="/journey"
+                        onClick={[Function]}
+                      >
+                        <b>
+                          Journey
+                        </b>
+                      </a>
+                      <span
+                        style={
+                          Object {
+                            "color": "white",
+                          }
+                        }
+                      >
+                         | 
+                      </span>
+                      <a
+                        href="/blog"
+                        onClick={[Function]}
+                      >
+                        <b>
+                          Blog
+                        </b>
+                      </a>
+                    </div>
                   </h4>
                 </div>
                 <div
-                  className="img-frame border-color-green"
+                  className="img-frame"
                   id="me-pic-wrapper"
                 >
                   <img
-                    alt="Danstan Otieno Onyango, Zemuldo"
+                    alt="Danstan Onyango, Zemuldo - Working at home"
                     id="me-pic"
-                    src="/images/logo/black.jpg"
+                    src="/images/logo/code-ninja.png"
                   />
                 </div>
+              </div>
+              <div
+                style={
+                  Object {
+                    "marginTop": "-20px",
+                    "paddingLeft": "5px",
+                  }
+                }
+              >
+                <hr />
               </div>
               <div
                 className="col-md-12 text-center"
@@ -2220,15 +2366,13 @@ Array [
                         "borderRadius": "10px",
                         "clear": "both",
                         "display": "block",
-                        "margin": "auto",
-                        "maxWidth": "700px",
+                        "maxWidth": "900px",
                         "minHeight": "200px",
                         "overflow": "hidden",
                         "transition": "all .5s ease-out",
                       }
                     }
                   >
-                    <hr />
                     <div
                       style={
                         Object {
@@ -2244,7 +2388,7 @@ Array [
                           "height": "auto",
                           "lineHeight": "1.4em",
                           "overflow": "hidden",
-                          "padding": "10px",
+                          "padding": "4px",
                           "textAlign": "left",
                           "textShadow": "#000 0 1px 0",
                           "transition": "all .5s ease-out",
@@ -2256,7 +2400,13 @@ Array [
               </div>
             </div>
           </div>
-          <div>
+          <div
+            style={
+              Object {
+                "marginTop": "-20px",
+              }
+            }
+          >
             <ul
               className="social-icon"
             >
@@ -2275,45 +2425,13 @@ Array [
                 >
                   <li>
                     <a
-                      href="/blog"
-                      onClick={[Function]}
-                    >
-                      <img
-                        alt="Zemuldo Blog"
-                        src="/images/blog.png"
-                        style={
-                          Object {
-                            "borderRadius": "50%",
-                            "height": "55%",
-                            "marginBottom": "-12%",
-                            "width": "55%",
-                          }
-                        }
-                      />
-                    </a>
-                  </li>
-                </span>
-                <span
-                  aria-haspopup="true"
-                  onMouseEnter={[Function]}
-                  onMouseLeave={[Function]}
-                >
-                  <li>
-                    <a
-                      href="https://dev.to/zemuldo"
+                      className="linkedin"
+                      href="https://www.linkedin.com/in/zemuldo"
                       rel="noopener noreferrer"
                       target="_blank"
                     >
-                      <img
-                        alt="Danstan Onyango on DEV"
-                        src="/images/dev.to.png"
-                        style={
-                          Object {
-                            "height": "65%",
-                            "marginBottom": "-15%",
-                            "width": "65%",
-                          }
-                        }
+                      <i
+                        className="fa fa-linkedin color-6"
                       />
                     </a>
                   </li>
@@ -2332,6 +2450,24 @@ Array [
                     >
                       <i
                         className="fa fa-github"
+                      />
+                    </a>
+                  </li>
+                </span>
+                <span
+                  aria-haspopup="true"
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                >
+                  <li>
+                    <a
+                      className="twitter"
+                      href="https://twitter.com/zemuldo"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                    >
+                      <i
+                        className="fa fa-twitter color-6"
                       />
                     </a>
                   </li>
@@ -2415,42 +2551,6 @@ Array [
                 >
                   <li>
                     <a
-                      className="twitter"
-                      href="https://twitter.com/zemuldo"
-                      rel="noopener noreferrer"
-                      target="_blank"
-                    >
-                      <i
-                        className="fa fa-twitter color-6"
-                      />
-                    </a>
-                  </li>
-                </span>
-                <span
-                  aria-haspopup="true"
-                  onMouseEnter={[Function]}
-                  onMouseLeave={[Function]}
-                >
-                  <li>
-                    <a
-                      className="linkedin"
-                      href="https://www.linkedin.com/in/zemuldo"
-                      rel="noopener noreferrer"
-                      target="_blank"
-                    >
-                      <i
-                        className="fa fa-linkedin color-6"
-                      />
-                    </a>
-                  </li>
-                </span>
-                <span
-                  aria-haspopup="true"
-                  onMouseEnter={[Function]}
-                  onMouseLeave={[Function]}
-                >
-                  <li>
-                    <a
                       className="facebook"
                       href="https://app.pluralsight.com/profile/zemuldo"
                       rel="noopener noreferrer"
@@ -2498,6 +2598,56 @@ Array [
                     </a>
                   </li>
                 </span>
+                <span
+                  aria-haspopup="true"
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                >
+                  <li>
+                    <a
+                      href="https://dev.to/zemuldo"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                    >
+                      <img
+                        alt="Danstan Onyango on DEV"
+                        src="/images/dev.to.png"
+                        style={
+                          Object {
+                            "height": "65%",
+                            "marginBottom": "-15%",
+                            "width": "65%",
+                          }
+                        }
+                      />
+                    </a>
+                  </li>
+                </span>
+                <span
+                  aria-haspopup="true"
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                >
+                  <li>
+                    <a
+                      href="/blog"
+                      onClick={[Function]}
+                    >
+                      <img
+                        alt="Zemuldo Blog"
+                        src="/images/blog.png"
+                        style={
+                          Object {
+                            "borderRadius": "50%",
+                            "height": "55%",
+                            "marginBottom": "-12%",
+                            "width": "55%",
+                          }
+                        }
+                      />
+                    </a>
+                  </li>
+                </span>
               </div>
             </ul>
           </div>
@@ -2505,7 +2655,7 @@ Array [
       </div>
     </div>
     <footer
-      className="makeStyles-footer-693"
+      className="makeStyles-footer-86"
     >
       <div
         className="MuiContainer-root MuiContainer-maxWidthLg"
@@ -2551,7 +2701,13 @@ Array [
 `;
 
 exports[`Storyshots Home Page Social Sites 1`] = `
-<div>
+<div
+  style={
+    Object {
+      "marginTop": "-20px",
+    }
+  }
+>
   <ul
     className="social-icon"
   >
@@ -2570,45 +2726,13 @@ exports[`Storyshots Home Page Social Sites 1`] = `
       >
         <li>
           <a
-            href="/blog"
-            onClick={[Function]}
-          >
-            <img
-              alt="Zemuldo Blog"
-              src="/images/blog.png"
-              style={
-                Object {
-                  "borderRadius": "50%",
-                  "height": "55%",
-                  "marginBottom": "-12%",
-                  "width": "55%",
-                }
-              }
-            />
-          </a>
-        </li>
-      </span>
-      <span
-        aria-haspopup="true"
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-      >
-        <li>
-          <a
-            href="https://dev.to/zemuldo"
+            className="linkedin"
+            href="https://www.linkedin.com/in/zemuldo"
             rel="noopener noreferrer"
             target="_blank"
           >
-            <img
-              alt="Danstan Onyango on DEV"
-              src="/images/dev.to.png"
-              style={
-                Object {
-                  "height": "65%",
-                  "marginBottom": "-15%",
-                  "width": "65%",
-                }
-              }
+            <i
+              className="fa fa-linkedin color-6"
             />
           </a>
         </li>
@@ -2627,6 +2751,24 @@ exports[`Storyshots Home Page Social Sites 1`] = `
           >
             <i
               className="fa fa-github"
+            />
+          </a>
+        </li>
+      </span>
+      <span
+        aria-haspopup="true"
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+      >
+        <li>
+          <a
+            className="twitter"
+            href="https://twitter.com/zemuldo"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <i
+              className="fa fa-twitter color-6"
             />
           </a>
         </li>
@@ -2710,42 +2852,6 @@ exports[`Storyshots Home Page Social Sites 1`] = `
       >
         <li>
           <a
-            className="twitter"
-            href="https://twitter.com/zemuldo"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            <i
-              className="fa fa-twitter color-6"
-            />
-          </a>
-        </li>
-      </span>
-      <span
-        aria-haspopup="true"
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-      >
-        <li>
-          <a
-            className="linkedin"
-            href="https://www.linkedin.com/in/zemuldo"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            <i
-              className="fa fa-linkedin color-6"
-            />
-          </a>
-        </li>
-      </span>
-      <span
-        aria-haspopup="true"
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-      >
-        <li>
-          <a
             className="facebook"
             href="https://app.pluralsight.com/profile/zemuldo"
             rel="noopener noreferrer"
@@ -2793,6 +2899,56 @@ exports[`Storyshots Home Page Social Sites 1`] = `
           </a>
         </li>
       </span>
+      <span
+        aria-haspopup="true"
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+      >
+        <li>
+          <a
+            href="https://dev.to/zemuldo"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <img
+              alt="Danstan Onyango on DEV"
+              src="/images/dev.to.png"
+              style={
+                Object {
+                  "height": "65%",
+                  "marginBottom": "-15%",
+                  "width": "65%",
+                }
+              }
+            />
+          </a>
+        </li>
+      </span>
+      <span
+        aria-haspopup="true"
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+      >
+        <li>
+          <a
+            href="/blog"
+            onClick={[Function]}
+          >
+            <img
+              alt="Zemuldo Blog"
+              src="/images/blog.png"
+              style={
+                Object {
+                  "borderRadius": "50%",
+                  "height": "55%",
+                  "marginBottom": "-12%",
+                  "width": "55%",
+                }
+              }
+            />
+          </a>
+        </li>
+      </span>
     </div>
   </ul>
 </div>
@@ -2810,15 +2966,13 @@ exports[`Storyshots Home Page TerminalMe 1`] = `
         "borderRadius": "10px",
         "clear": "both",
         "display": "block",
-        "margin": "auto",
-        "maxWidth": "700px",
+        "maxWidth": "900px",
         "minHeight": "200px",
         "overflow": "hidden",
         "transition": "all .5s ease-out",
       }
     }
   >
-    <hr />
     <div
       style={
         Object {
@@ -2834,7 +2988,7 @@ exports[`Storyshots Home Page TerminalMe 1`] = `
           "height": "auto",
           "lineHeight": "1.4em",
           "overflow": "hidden",
-          "padding": "10px",
+          "padding": "4px",
           "textAlign": "left",
           "textShadow": "#000 0 1px 0",
           "transition": "all .5s ease-out",
@@ -3114,7 +3268,6 @@ Array [
         className="color-orange"
       >
          
-        0.0.1
       </span>
     </div>
     <div>
@@ -3132,7 +3285,7 @@ Array [
       <span
         className="color-orange"
       >
-        94d077c24
+        78e0a4366
       </span>
     </div>
   </div>,
@@ -3233,24 +3386,42 @@ Array [
           }
         >
           <div
-            className="MuiGrid-root MuiGrid-container"
+            className="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-center MuiGrid-justify-xs-center"
           >
             <a
               href="/"
               onClick={[Function]}
             >
               <div
-                className="MuiAvatar-root MuiAvatar-circle Menu-greenAvatar-874 MuiAvatar-colorDefault"
+                className="MuiAvatar-root MuiAvatar-circle Menu-greenAvatar-88 MuiAvatar-colorDefault"
               >
                 <svg
                   aria-hidden="true"
                   className="MuiSvgIcon-root"
                   focusable="false"
-                  role="presentation"
                   viewBox="0 0 24 24"
                 >
                   <path
                     d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"
+                  />
+                </svg>
+              </div>
+            </a>
+            <a
+              href="/blog/images"
+              onClick={[Function]}
+            >
+              <div
+                className="MuiAvatar-root MuiAvatar-circle Menu-greenAvatar-88 MuiAvatar-colorDefault"
+              >
+                <svg
+                  aria-hidden="true"
+                  className="MuiSvgIcon-root"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M22 16V4c0-1.1-.9-2-2-2H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2zm-11-4l2.03 2.71L16 11l4 5H8l3-4zM2 6v14c0 1.1.9 2 2 2h14v-2H4V6H2z"
                   />
                 </svg>
               </div>
@@ -3296,7 +3467,7 @@ Array [
                       Present
                     </span>
                     <span>
-                       ~ 9 months
+                       ~ 1 year
                     </span>
                   </span>
                 </header>
@@ -4892,7 +5063,7 @@ Array [
       </div>
     </div>
     <footer
-      className="makeStyles-footer-901"
+      className="makeStyles-footer-99"
     >
       <div
         className="MuiContainer-root MuiContainer-maxWidthLg"
@@ -4983,17 +5154,22 @@ exports[`Storyshots Login Not Logged 1`] = `
         >
           <div
             className="header-section"
-            style={
-              Object {
-                "marginTop": "30%",
-              }
-            }
           >
             <div
               className="header-frame"
+              style={
+                Object {
+                  "marginTop": "30%",
+                }
+              }
             >
               <div
                 className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 MuiGrid-justify-xs-space-between"
+                style={
+                  Object {
+                    "marginTop": "30%",
+                  }
+                }
               >
                 <div
                   className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6"

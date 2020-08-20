@@ -51,6 +51,8 @@ const props = {
 };
 
 const blogs_props = {
+  ...props,
+  topTags: [],
   classes: {
     greenAvatar: 'Blog-greenAvatar-1',
     avatar: 'Blog-avatar-2',
@@ -210,7 +212,7 @@ const blog_props = {
     createdAt: '2019-09-11T19:59:06.904Z',
     updatedAt: '2019-09-11T19:59:06.904Z',
     __v: 0
-  }
+  },
 };
 
 const props_edit_blog = {
@@ -268,7 +270,8 @@ const props_edit_blog = {
     updatedAt: '2019-09-11T19:59:06.904Z',
     __v: 0
   },
-  authorized: true
+  authorized: true,
+  options: []
 };
 
 storiesOf('Blog', module)
