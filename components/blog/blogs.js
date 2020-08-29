@@ -38,7 +38,7 @@ const useStyles = makeStyles(() => ({
 }));
 
 const formatDescription = (description) => {
-  if (description.length > 156) return <span>{`${description.slice(0, 156)}`}<span style={{color: '#08a6f3'}}> more</span></span>;
+  if (description.length > 156) return <span>{`${description.slice(0, 156)}`}<span style={{color: '#08a6f3'}}>...</span></span>;
   else return description;
 };
 
