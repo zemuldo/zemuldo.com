@@ -207,6 +207,7 @@ class ViewBlog extends React.Component {
 ViewBlog.propTypes = {
   post: PropTypes.object.isRequired,
   body: PropTypes.object.isRequired,
+  router: PropTypes.object,
   classes: PropTypes.object.isRequired,
   authorization: PropTypes.oneOfType([PropTypes.string, PropTypes.oneOf([null])])
 };
