@@ -1557,23 +1557,26 @@ Array [
                     >
                       <h2
                         className="MuiTypography-root MuiTypography-h5"
-                      >
-                        How to use Ecto as a Query Schema validation library
-                      </h2>
-                      <br />
-                      <p
-                        className="MuiTypography-root MuiTypography-body1"
                         style={
                           Object {
-                            "color": "white",
+                            "color": "#08a6f3",
                           }
                         }
                       >
-                        Ecto is one of the greatest libraries in the Elixir community. It comes with Phoenix together.
-                      </p>
+                        How to use Ecto as a Query Schema validation library
+                      </h2>
+                      <hr
+                        className="hr-white"
+                      />
                     </div>
                     <div
                       className="MuiCardContent-root"
+                      style={
+                        Object {
+                          "fontSize": "12px",
+                          "marginTop": "-35px",
+                        }
+                      }
                     >
                       Thursday, August 29th, 2019
                        ~ 
@@ -1613,6 +1616,20 @@ Array [
                           JavaCript
                         </span>
                       </span>
+                    </div>
+                    <div
+                      className="MuiCardContent-root"
+                    >
+                      <p
+                        className="MuiTypography-root MuiTypography-body1"
+                        style={
+                          Object {
+                            "color": "white",
+                          }
+                        }
+                      >
+                        Ecto is one of the greatest libraries in the Elixir community. It comes with Phoenix together.
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -1666,23 +1683,26 @@ Array [
                     >
                       <h2
                         className="MuiTypography-root MuiTypography-h5"
-                      >
-                        How to use Ecto as a Query Schema validation library
-                      </h2>
-                      <br />
-                      <p
-                        className="MuiTypography-root MuiTypography-body1"
                         style={
                           Object {
-                            "color": "white",
+                            "color": "#08a6f3",
                           }
                         }
                       >
-                        Ecto is one of the greatest libraries in the Elixir community. It comes with Phoenix together.
-                      </p>
+                        How to use Ecto as a Query Schema validation library
+                      </h2>
+                      <hr
+                        className="hr-white"
+                      />
                     </div>
                     <div
                       className="MuiCardContent-root"
+                      style={
+                        Object {
+                          "fontSize": "12px",
+                          "marginTop": "-35px",
+                        }
+                      }
                     >
                       Wednesday, September 11th, 2019
                        ~ 
@@ -1704,6 +1724,20 @@ Array [
                           JavaCript
                         </span>
                       </span>
+                    </div>
+                    <div
+                      className="MuiCardContent-root"
+                    >
+                      <p
+                        className="MuiTypography-root MuiTypography-body1"
+                        style={
+                          Object {
+                            "color": "white",
+                          }
+                        }
+                      >
+                        Ecto is one of the greatest libraries in the Elixir community. It comes with Phoenix together.
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -1757,23 +1791,26 @@ Array [
                     >
                       <h2
                         className="MuiTypography-root MuiTypography-h5"
-                      >
-                        How to make sure that you always succeed
-                      </h2>
-                      <br />
-                      <p
-                        className="MuiTypography-root MuiTypography-body1"
                         style={
                           Object {
-                            "color": "white",
+                            "color": "#08a6f3",
                           }
                         }
                       >
-                        The best way to ensure that you succeed is to always love what you are doing and stay positive.
-                      </p>
+                        How to make sure that you always succeed
+                      </h2>
+                      <hr
+                        className="hr-white"
+                      />
                     </div>
                     <div
                       className="MuiCardContent-root"
+                      style={
+                        Object {
+                          "fontSize": "12px",
+                          "marginTop": "-35px",
+                        }
+                      }
                     >
                       Wednesday, September 11th, 2019
                        ~ 
@@ -1813,6 +1850,20 @@ Array [
                           Ecto
                         </span>
                       </span>
+                    </div>
+                    <div
+                      className="MuiCardContent-root"
+                    >
+                      <p
+                        className="MuiTypography-root MuiTypography-body1"
+                        style={
+                          Object {
+                            "color": "white",
+                          }
+                        }
+                      >
+                        The best way to ensure that you succeed is to always love what you are doing and stay positive.
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -2226,6 +2277,7 @@ Array [
                   Software Engineer
                 </h2>
                 <hr
+                  className="hr-red-gradient"
                   style={
                     Object {
                       "marginTop": "-10px",
@@ -2350,7 +2402,9 @@ Array [
                   }
                 }
               >
-                <hr />
+                <hr
+                  className="hr-red-gradient"
+                />
               </div>
               <div
                 className="col-md-12 text-center"
@@ -5186,7 +5240,7 @@ exports[`Storyshots Login Not Logged 1`] = `
                     </h1>
                   </a>
                   <hr
-                    className="hr-opposite"
+                    className="hr-red-gradient-opposite"
                   />
                 </div>
                 <div
@@ -5204,7 +5258,9 @@ exports[`Storyshots Login Not Logged 1`] = `
                       Github
                     </h1>
                   </a>
-                  <hr />
+                  <hr
+                    className="hr-red-gradient"
+                  />
                 </div>
               </div>
             </div>

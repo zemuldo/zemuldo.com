@@ -33,13 +33,13 @@ class Login extends React.Component {
               <Link>
                 <h1 className="color-6">Twitter</h1>
               </Link>
-              <hr className="hr-opposite" />
+              <hr className="hr-red-gradient-opposite" />
             </Grid>
             <Grid item xs={12} sm={6}>
               <Link href={`${api_url}/user/auth/github?redirectTo=${query.redirectTo || base_url}`}>
                 <h1 className="color-6">Github</h1>
               </Link>
-              <hr />
+              <hr className='hr-red-gradient'/>
             </Grid>
           </Grid>
         </PageLayout>

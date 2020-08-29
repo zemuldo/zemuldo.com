@@ -20,7 +20,7 @@ export default function Home() {
                     <h1 itemProp="name" className="color-6">Danstan Onyango</h1>
                   </div>
                   <h2 style={{ fontSize: '26px' }}>Software Engineer</h2>
-                  <hr style={{ marginTop: '-10px' }} />
+                  <hr className='hr-red-gradient' style={{ marginTop: '-10px' }} />
                 </div>
                 <div className="header-section" style={{marginTop: '-25px'}}>
                   <div style={{ paddingLeft: '5px',  }} className="header-frame">
@@ -61,7 +61,7 @@ export default function Home() {
                   </div>
                 </div>
                 <div style={{ paddingLeft: '5px', marginTop: '-20px' }}>
-                  <hr />
+                  <hr className='hr-red-gradient'/>
                 </div>
                 <div className="col-md-12 text-center">
                   <Terminal />

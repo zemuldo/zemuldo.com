@@ -38,7 +38,7 @@ const useStyles = makeStyles(() => ({
 }));
 
 const formatDescription = (description) => {
-  if (description.length > 156) return <span>{`${description.slice(0, 156)}...`}</span>;
+  if (description.length > 156) return <span>{`${description.slice(0, 156)}`}<span style={{color: '#08a6f3'}}> more</span></span>;
   else return description;
 };
 
@@ -55,15 +55,12 @@ export default function Blogs({ posts, _infiniteScroll }) {
                 <Card className={classes.card}>
                   <div className={classes.cardDetails}>
                     <CardContent>
-                      <Typography style={{color: '#08a6f3'}} component="h2" variant="h5">
+                      <Typography style={{ color: '#08a6f3' }} component="h2" variant="h5">
                         {post.title}
                       </Typography>
-                      <br />
-                      <Typography style={{ color: 'white' }}>
-                        {formatDescription(post.description)}
-                      </Typography>
+                      <hr className="hr-white" />
                     </CardContent>
-                    <CardContent>
+                    <CardContent style={{marginTop: '-35px', fontSize: '12px'}}>
                       {format(new Date(post.createdAt), 'PPPP')}
                       {' ~ '}
                       {
@@ -77,6 +74,13 @@ export default function Blogs({ posts, _infiniteScroll }) {
                         )
                       }
                     </CardContent>
+                    
+                    <CardContent>
+                      <Typography style={{ color: 'white' }}>
+                        {formatDescription(post.description)}
+                      </Typography>
+                    </CardContent>
+
                   </div>
                 </Card>
               </CardActionArea>
