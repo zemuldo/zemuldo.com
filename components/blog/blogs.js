@@ -55,7 +55,7 @@ export default function Blogs({ posts, _infiniteScroll }) {
                 <Card className={classes.card}>
                   <div className={classes.cardDetails}>
                     <CardContent>
-                      <Typography component="h2" variant="h5">
+                      <Typography style={{color: '#08a6f3'}} component="h2" variant="h5">
                         {post.title}
                       </Typography>
                       <br />
