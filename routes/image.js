@@ -32,9 +32,11 @@ router.post('/', async (req, res) => {
         } 
       });
 
-      await fs.chmod(fsFileName, 0o644, (e) => {
-        if (e) throw e;
-      });
+      if(process.env.NODE_ENV !== 'development') {
+        await fs.chmod(fsFileName, 0o644, (e) => {
+          if (e) throw e;
+        });
+      }
     }
     res.send('Files saved');
   } catch (error) {
