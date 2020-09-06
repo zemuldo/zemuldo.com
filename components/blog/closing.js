@@ -4,6 +4,7 @@ import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
 import { Avatar } from '@material-ui/core';
 import InfoIcon from '@material-ui/icons/Info';
+import CustomLink from '../link';
 
 const CustomButton = withStyles({
   root: {
@@ -86,10 +87,10 @@ export default function Closing() {
           <Grid item xs={5}>
             <hr className="hr-z-color-gradient-opposite hr-z-color" />
           </Grid>
-          <Grid container justify="center" xs={1}>
-            <InfoIcon style={{fill: '#08a6f3'}} />
+          <Grid container item justify="center" xs={1}>
+            <InfoIcon style={{ fill: '#08a6f3' }} />
           </Grid>
-          <Grid justify="center" item xs={5}>
+          <Grid item xs={5}>
             <hr className="hr-z-color-gradient hr-z-color" />
           </Grid>
         </Grid>
@@ -100,45 +101,64 @@ export default function Closing() {
         for knowledge sharing, my own mastery and reference.
       </p>
       <p>
-        If you want to contribute, you can do any or all of the following :smile
+        If you want to contribute, you can do any or all of the following 😉.
+        It will go along way! Thanks again and Cheers!
       </p>
 
       <div className={classes.hrRoot}>
         <Grid justify="space-between" container spacing={1}>
           <Grid item xs={12} sm={3}>
-            <CustomButton
-              variant="contained"
-              color="primary"
-              className={classes.button}
-              startIcon={<i className="fa fa-twitter color-white" />}
+            <CustomLink
+              rel="noopener noreferrer"
+              target="_blank"
+              href="https://twitter.com/intent/user?screen_name=Zemuldo"
             >
-              Follow me on Twitter
-            </CustomButton>
+              <CustomButton
+                variant="contained"
+                color="primary"
+                className={classes.button}
+                startIcon={<i className="fa fa-twitter color-white" />}
+              >
+                Follow me on Twitter
+              </CustomButton>
+            </CustomLink>
           </Grid>
           <Grid item xs={12} sm={3}>
-            <CustomButton
-              variant="contained"
-              color="primary"
-              className={classes.button}
-              startIcon={<i className="fa fa-github" />}
+            <CustomLink
+              rel="noopener noreferrer"
+              target="_blank"
+              href="https://github.com/zemuldo"
             >
-              Follow me on GitHub
-            </CustomButton>
+              <CustomButton
+                variant="contained"
+                color="primary"
+                className={classes.button}
+                startIcon={<i className="fa fa-github" />}
+              >
+                Follow me on GitHub
+              </CustomButton>
+            </CustomLink>
           </Grid>
           <Grid item xs={12} sm={3}>
-            <CustomButton
-              variant="contained"
-              color="primary"
-              className={classes.button}
-              startIcon={
-                <Avatar
-                  className={classes.kofiLogo}
-                  src="/images/social/ko-fi.png"
-                />
-              }
+            <CustomLink
+              rel="noopener noreferrer"
+              target="_blank"
+              href="https://ko-fi.com/zemuldo"
             >
-              Support me on Ko-Fi
-            </CustomButton>
+              <CustomButton
+                variant="contained"
+                color="primary"
+                className={classes.button}
+                startIcon={
+                  <Avatar
+                    className={classes.kofiLogo}
+                    src="/images/social/ko-fi.png"
+                  />
+                }
+              >
+                Support me on Ko-Fi
+              </CustomButton>
+            </CustomLink>
           </Grid>
         </Grid>
       </div>
