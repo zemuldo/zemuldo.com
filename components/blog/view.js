@@ -17,6 +17,7 @@ import Heading from '../md/heading';
 import ShouldRender from '../tools/shouldRender';
 import NoContent from '../NoContent';
 import { withRouter } from 'next/router';
+import Closing from './closing';
 
 const api_url = process.env.API_URL;
 const base_url = process.env.UI_URL;
@@ -32,33 +33,33 @@ const styles = () => ({
     color: '#fff',
     backgroundColor: 'green',
     '&:hover': {
-      cursor: 'pointer'
-    }
+      cursor: 'pointer',
+    },
   },
   twitterAvatar: {
     margin: 10,
     color: '#fff',
     backgroundColor: '#08a6f3',
     '&:hover': {
-      cursor: 'pointer'
-    }
+      cursor: 'pointer',
+    },
   },
   fbAvatar: {
     margin: 10,
     color: '#fff',
     backgroundColor: '#00f',
     '&:hover': {
-      cursor: 'pointer'
-    }
+      cursor: 'pointer',
+    },
   },
   linkedinAvatar: {
     margin: 10,
     color: '#fff',
     backgroundColor: '#08a6f3',
     '&:hover': {
-      cursor: 'pointer'
-    }
-  }
+      cursor: 'pointer',
+    },
+  },
 });
 
 class ViewBlog extends React.Component {
@@ -66,30 +67,34 @@ class ViewBlog extends React.Component {
     super(props);
 
     this.state = {
-      textValue: ''
+      textValue: '',
     };
   }
   linkedInShare = () => {
     const { post } = this.props;
-    const initial = 'https://www.linkedin.com/sharing/share-offsite?mini=true&url=';
-    const shareURL = `${initial}https%3A%2F%2Fzemuldo.com/blog/post/${post._id}&title=${post.title.split(' ').join('+')}`;
+    const initial =
+      'https://www.linkedin.com/sharing/share-offsite?mini=true&url=';
+    const shareURL = `${initial}https%3A%2F%2Fzemuldo.com/blog/post/${
+      post._id
+    }&title=${post.title.split(' ').join('+')}`;
     window.open(shareURL, 'sharer', 'toolbar=0,status=0,width=548,height=325');
-  }
+  };
   fbShare = () => {
     const postUrl = `https%3A%2F%2Fzemuldo.com${window.location.pathname}`;
     let fbShareURL = `https://www.facebook.com/sharer/sharer.php?u=${postUrl}`;
     let shareURL = fbShareURL + '&amp;src=sdkpreparse\'';
     window.open(shareURL, 'sharer', 'toolbar=0,status=0,width=548,height=325');
-  }
+  };
   tweetShare = () => {
     const { post } = this.props;
-    let hashTgs = '&hashtags=' + post.tags.map(p => p.value).join(',');
+    let hashTgs = '&hashtags=' + post.tags.map((p) => p.value).join(',');
     let via = '&via=zemuldo';
     let url = `&url=https%3A%2F%2Fzemuldo.com${window.location.pathname}`;
     let fullURL = `${url}${via}${hashTgs}`;
-    let shareURL = `https://twitter.com/intent/tweet?text=${post.title}` + fullURL;
+    let shareURL =
+      `https://twitter.com/intent/tweet?text=${post.title}` + fullURL;
     window.open(shareURL, 'sharer', 'toolbar=0,status=0,width=548,height=325');
-  }
+  };
   render() {
     const { post, body, classes, authorization } = this.props;
     return (
@@ -110,7 +115,7 @@ class ViewBlog extends React.Component {
             <meta name="twitter:image" content={post.coverPhotoUrl} />
 
             <meta property="og:title" content={post.title} />
-            <meta property="og:site_name" content='Zemuldo Blog' />
+            <meta property="og:site_name" content="Zemuldo Blog" />
             <meta property="article:published_time" content={post.createdAt} />
             <meta property="article:modified_time" content={post.updatedAt} />
             <meta property="article:author" content={'Danstan Onyango'} />
@@ -120,83 +125,102 @@ class ViewBlog extends React.Component {
             <meta property="og:image" content={post.coverPhotoUrl} />
             <meta property="og:url" content={`${base_url}/blog/${post._id}`} />
 
-            <meta name="keywords" content={(post.metaTags || []).join(',')}/>
+            <meta name="keywords" content={(post.metaTags || []).join(',')} />
           </Head>
           <Container
             maxWidth="md"
             style={{
               color: 'white',
               fontFamily: '\'Courier New\', Courier, monospace',
-              fontSize: '18px'
+              fontSize: '18px',
             }}
           >
             <Grid container justify="center" alignItems="center">
               <Menu authorization={authorization}>
-                {
-                  this.props.authorization &&
-                  <Avatar onClick={() => this.props.router.push(`/blog/${post._id}/edit`)} className={classes.greenAvatar}>
+                {this.props.authorization && (
+                  <Avatar
+                    onClick={() =>
+                      this.props.router.push(`/blog/${post._id}/edit`)
+                    }
+                    className={classes.greenAvatar}
+                  >
                     <EditIcon />
                   </Avatar>
-                }
+                )}
               </Menu>
-
             </Grid>
             <h1>{post.title}</h1>
 
             <p>Posted {format(new Date(post.createdAt), 'PPPP')}</p>
-            <div className='blog-tags'>
-
-              {
-                post.tags.map(tag =>
-                  <span className='blog-tags' style={{ color: tag.color, boxShadow: '0 8px 15px 0 rgba(95, 91, 95, .33)', backgroundColor: 'black', border: 'solid 2px transparent', borderRadius: '3px', cursor: 'pointer' }} key={tag.value}>
-                    {tag.label}
-                  </span>)
-              }
+            <div className="blog-tags">
+              {post.tags.map((tag) => (
+                <span
+                  className="blog-tags"
+                  style={{
+                    color: tag.color,
+                    boxShadow: '0 8px 15px 0 rgba(95, 91, 95, .33)',
+                    backgroundColor: 'black',
+                    border: 'solid 2px transparent',
+                    borderRadius: '3px',
+                    cursor: 'pointer',
+                  }}
+                  key={tag.value}
+                >
+                  {tag.label}
+                </span>
+              ))}
             </div>
-            <Grid className='blog-share-buttons' container>
-              <Avatar onClick={this.tweetShare} className={classes.twitterAvatar}>
+            <Grid className="blog-share-buttons" container>
+              <Avatar
+                onClick={this.tweetShare}
+                className={classes.twitterAvatar}
+              >
                 <i className="fa fa-twitter" />
               </Avatar>
               <Avatar onClick={this.fbShare} className={classes.fbAvatar}>
                 <i className="fa fa-facebook" />
               </Avatar>
-              <Avatar onClick={this.linkedInShare} className={classes.linkedinAvatar}>
+              <Avatar
+                onClick={this.linkedInShare}
+                className={classes.linkedinAvatar}
+              >
                 <i className="fa fa-linkedin" />
               </Avatar>
             </Grid>
           </Container>
           <Container>
             <img
-              style={{ maxHeight: '720px', marginTop: '10px'}}
+              style={{ maxHeight: '720px', marginTop: '10px' }}
               src={post.coverPhotoUrl}
               alt={post.title}
             />
           </Container>
 
           <Container
-            className='blog-body'
+            className="blog-body"
             maxWidth="md"
             style={{
               color: 'white',
               fontFamily: '\'Courier New\', Courier, monospace',
-              fontSize: '18px'
+              fontSize: '18px',
             }}
           >
             <br />
             <ReactMarkdown
               source={body.body}
-              renderers={{ 
-                code: CodeBlock, 
-                image: Image, 
+              renderers={{
+                code: CodeBlock,
+                image: Image,
                 link: MarkdownLink,
-                heading: Heading
+                heading: Heading,
               }}
             />
+
+            <Closing/>
           </Container>
-        
         </ShouldRender>
         <ShouldRender if={!post}>
-          <NoContent/>
+          <NoContent />
         </ShouldRender>
         <Footer />
       </>
@@ -209,7 +233,10 @@ ViewBlog.propTypes = {
   body: PropTypes.object.isRequired,
   router: PropTypes.object,
   classes: PropTypes.object.isRequired,
-  authorization: PropTypes.oneOfType([PropTypes.string, PropTypes.oneOf([null])])
+  authorization: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.oneOf([null]),
+  ]),
 };
 
 export default withRouter(withStyles(styles)(ViewBlog));
