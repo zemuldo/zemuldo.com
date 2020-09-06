@@ -32,7 +32,7 @@ router.post('/', async (req, res) => {
         } 
       });
 
-      if(process.env.NODE_ENV !== 'development') {
+      if (process.env.NODE_ENV !== 'development') {
         await fs.chmod(fsFileName, 0o644, (e) => {
           if (e) throw e;
         });
