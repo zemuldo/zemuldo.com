@@ -215,8 +215,16 @@ class ViewBlog extends React.Component {
                 heading: Heading,
               }}
             />
-
-            <Closing/>
+          </Container>
+          <Container
+            maxWidth="md"
+            style={{
+              color: 'white',
+              fontFamily: '\'Courier New\', Courier, monospace',
+              fontSize: '18px',
+            }}
+          >
+            <Closing />
           </Container>
         </ShouldRender>
         <ShouldRender if={!post}>
