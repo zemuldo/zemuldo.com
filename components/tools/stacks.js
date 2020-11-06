@@ -38,4 +38,6 @@ export  const options = [
 
   { value: 'functional', label: 'Function Programming', color: 'white' },
   { value: 'object-oriented', label: 'Object Oriented Programming', color: 'white' },
+
+  { value: 'apache-spark', label: 'Apache Spark', color: '#DB571B' },
 ];
