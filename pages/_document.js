@@ -4,6 +4,7 @@ import { ServerStyleSheets } from '@material-ui/styles';
 import { setCookie } from 'nookies';
 
 const GA_TRACKING_ID = process.env.GA_TRACKING_ID;
+const NODE_ENV = process.env.NODE_ENV;
 const addJSONLD = () => {
   return {
     __html: `{
@@ -84,6 +85,8 @@ MyDocument.getInitialProps = async ctx => {
     setCookie(ctx, 'authorization', ctx.query.token, {
       maxAge: 30 * 24 * 60 * 60,
       path: '/',
+      httpOnly: true,
+      secure: NODE_ENV == 'production'
     });
   }
 
