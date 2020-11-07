@@ -15,6 +15,7 @@ import { destroyCookie } from 'nookies';
 
 
 const api_url = process.env.API_URL;
+const NODE_ENV = process.env.NODE_ENV;
 
 const currentPath = () => {
   if (typeof window === 'object') {
@@ -193,11 +194,7 @@ class Menu extends React.Component {
           {user && <Avatar alt="User profile" className={classes.avatar} src={user.profilePhotoUrl} />}
           {user &&
             <Avatar onClick={() => {
-              destroyCookie(null, 'authorization', {
-                path: '/',
-              });
-              Router.reload(window.location.pathname);
-              window.reload;
+              window.location.href = '/logout'
             }} className={classes.greenAvatar}>
               <LogOut />
             </Avatar>}
