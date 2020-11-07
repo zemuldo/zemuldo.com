@@ -81,7 +81,7 @@ class MyDocument extends Document {
 }
 
 MyDocument.getInitialProps = async ctx => {
-  if(ctx.pathname == '/logout'){
+  if(ctx.pathname === '/logout'){
     setCookie(ctx, 'authorization', 'false', {
       maxAge: 0,
       path: '/',
