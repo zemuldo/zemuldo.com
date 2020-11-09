@@ -15,7 +15,6 @@ import Avatar from '@material-ui/core/Avatar';
 import PublishIcon from '@material-ui/icons/Publish';
 import PublishDialogue from '../../components/publish_modal';
 import fetch from 'isomorphic-unfetch';
-import { parseCookies } from 'nookies';
 import PropTypes from 'prop-types';
 import Entry from '../../components/entry';
 
@@ -155,10 +154,10 @@ class NewBlog extends React.Component {
 
  
   handleSave = async () => {
-    const { authorization } = this.props;
     const res = await fetch(`${api_url}/post/draft`, {
       method: 'post',
-      headers: {authorization, 'Accept': 'application/json', 'Content-Type': 'application/json'},
+      headers: {'Accept': 'application/json', 'Content-Type': 'application/json'},
+      credentials: 'include',
       body: JSON.stringify({
         title: this.state.postTitle,
         body: this.state.body,
@@ -176,17 +175,17 @@ class NewBlog extends React.Component {
   handleOpenPublishDialogue = () => this.setState({ publishDialogueOpen: true })
   handleClosePublishDialogue = () => this.setState({ publishDialogueOpen: false })
   handlePublish = async () => {
-    const {authorization} = this.props;
     const res = await fetch(`${api_url}/post`, {
       method: 'post',
-      headers: { authorization, 'Accept': 'application/json', 'Content-Type': 'application/json' },
+      headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
+      credentials: 'include',
       body: JSON.stringify({
         title: this.state.postTitle,
         body: this.state.body,
         tags: this.state.tags || [],
         description: this.state.description,
         coverPhotoUrl: this.state.coverPhotoUrl
-      })
+      }),
     });
     const data = await res.json();
     if (parseInt(res.status, 10) !== 200) return alert(data[0].errorMessage);
@@ -332,7 +331,7 @@ class NewBlog extends React.Component {
 NewBlog.propTypes = {
   classes: PropTypes.object.isRequired,
   loggingIn: PropTypes.bool,
-  authorization: PropTypes.string
+  authorized: PropTypes.bool,
 };
 
 export default Entry(withRouter(withStyles(useStyles)(NewBlog)));

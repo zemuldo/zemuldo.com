@@ -50,7 +50,7 @@ function DeveloperStory({authorized}) {
 }
 
 DeveloperStory.propTypes = {
-  authorized: PropTypes.boolean
+  authorized: PropTypes.bool
 };
 
 DeveloperStory.getInitialProps = async (ctx) => {

@@ -13,7 +13,6 @@ import Head from 'next/head';
 import Footer from '../../components/footer';
 import PropTypes from 'prop-types';
 import entry from '../../components/entry';
-import { parseCookies } from 'nookies';
 
 const api_url = process.env.API_URL;
 const images_url = process.env.SITE_IMAGES_URL;
@@ -51,7 +50,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 function Album({images, authorized, user}) {
-  const [search, setSearch] = useState(null);
+  const [search, setSearch] = useState('');
   const [stateImages, setStateImages] = useState(images);
   const classes = useStyles();
 
@@ -77,9 +76,9 @@ function Album({images, authorized, user}) {
       </Container>
       <Container style={{ color: 'white', backgroundColor: 'rgb(23, 23, 23)' }} maxWidth="md">
         <TextField
+          value={search}
           id="coverPhotoUrl"
           label="Search"
-          value={search}
           fullWidth={true}
           InputProps={{
             className: classes.materialInput
@@ -113,7 +112,7 @@ function Album({images, authorized, user}) {
                       Copy Link
                   </Button>
                   {
-                    authorization && parseInt(user.oAuthId, 16) === parseInt(image.ownerId, 16) &&
+                    authorized && parseInt(user.oAuthId, 16) === parseInt(image.ownerId, 16) &&
                     <Button size="small" color="primary">
                       Edit
                     </Button>
@@ -129,24 +128,16 @@ function Album({images, authorized, user}) {
   );
 }
 
-Album.getInitialProps = async (ctx) =>{
-  const { authorization } = parseCookies(ctx);
+Album.getInitialProps = async (_) =>{
   const res = await fetch(`${api_url}/image?skip=0&limit=10`);
   const data = await res.json();
-  let user;
-  if (authorization) {
-    const res = await fetch(`${api_url}/user`, { headers: { authorization } });
-    user = await res.json();
-  }
-
   return {
     images: data,
-    user
   };
 };
 
 Album.propTypes = {
-  authorization: PropTypes.string,
+  authorized: PropTypes.bool,
   images: PropTypes.array.isRequired,
   user: PropTypes.object
 };

@@ -43,14 +43,8 @@ class Blog extends React.Component {
     const data = await res.json();
     const res_featured = await fetch(`${api_url}/post/latest`);
     const data_featured = await res_featured.json();
-    let user;
-    if (authorized) {
-      const res = await fetch(`${api_url}/user`, { headers: { authorization }});
-      user = await res.json();
-    }
     return {
       featuredPost: res_featured.status === 200? data_featured: null,
-      user,
       authorization,
       authorized: authorized === '1',
       posts: data,
@@ -137,7 +131,7 @@ class Blog extends React.Component {
 Blog.propTypes = {
   router: PropTypes.object.isRequired,
   posts: PropTypes.array.isRequired,
-  authorization: PropTypes.oneOfType([PropTypes.string, PropTypes.oneOf([null])]),
+  authorized: PropTypes.bool,
   user: PropTypes.object,
   featuredPost: PropTypes.object,
   topTags: PropTypes.array.isRequired,

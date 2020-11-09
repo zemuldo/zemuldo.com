@@ -192,10 +192,10 @@ class NewBlog extends React.Component {
     
     if (!draft) return;
     const last_update = this.state._update.updatedAt || draft.updatedAt;
-    const { authorization } = this.props;
     const _res = await fetch(`${api_url}/post/draft/${draft._id}`, {
       method: 'put',
-      headers: { authorization, 'Accept': 'application/json', 'Content-Type': 'application/json' },
+      headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
+      credentials: 'include',
       body: JSON.stringify({
         title: this.state.postTitle,
         body: this.state.body,
@@ -217,10 +217,11 @@ class NewBlog extends React.Component {
   handleOpenPublishDialogue = () => this.setState({ publishDialogueOpen: true })
   handleClosePublishDialogue = () => this.setState({ publishDialogueOpen: false })
   handlePublish = async () => {
-    const { authorization, draft } = this.props;
+    const { draft } = this.props;
     const res = await fetch(`${api_url}/post`, {
       method: 'post',
-      headers: { authorization, 'Accept': 'application/json', 'Content-Type': 'application/json' },
+      headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
+      credentials: 'include',
       body: JSON.stringify({
         title: this.state.postTitle,
         body: this.state.body,
@@ -259,7 +260,7 @@ class NewBlog extends React.Component {
   }
 
   render() {
-    const { classes, authorization, draft } = this.props;
+    const { classes, draft } = this.props;
     const { publishDialogueOpen } = this.state;
     return (
       <>

@@ -28,7 +28,7 @@ export default function (ComposedComponent) {
 
   IfLoggedIn.propTypes = {
     query: PropTypes.object.isRequired,
-    authorization: PropTypes.string,
+    authorized: PropTypes.bool,
     loggedIn: PropTypes.bool,
   };
 

@@ -65,7 +65,7 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-function Drafts({ drafts, authorization, authorized }) {
+function Drafts({ drafts, authorized }) {
   const classes = useStyles();
 
   const [data, setDrafts] = useState(drafts);
@@ -76,12 +76,14 @@ function Drafts({ drafts, authorization, authorized }) {
 
     await fetch(`${api_url}/post/draft/${open}`, {
       method: 'delete',
-      headers: { authorization, 'Accept': 'application/json', 'Content-Type': 'application/json' }
+      headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
+      credentials: 'include'
     });
 
     const draftRes = await fetch(`${api_url}/post/draft`, {
       method: 'get',
-      headers: { authorization, 'Accept': 'application/json', 'Content-Type': 'application/json' }
+      headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
+      credentials: 'include'
     });
 
     const data = await draftRes.json();
@@ -174,7 +176,7 @@ function Drafts({ drafts, authorization, authorized }) {
 
 Drafts.propTypes = {
   drafts: PropTypes.array.isRequired,
-  authorization: PropTypes.oneOfType([PropTypes.string, PropTypes.oneOf([null])])
+  authorized: PropTypes.bool,
 };
 
 Drafts.getInitialProps = async (ctx) => {
@@ -194,7 +196,7 @@ Drafts.getInitialProps = async (ctx) => {
   } catch (_e) {
     data = []; 
   }
-  return { drafts: data, authorization };
+  return { drafts: data };
 };
 
 export default Entry(Drafts);

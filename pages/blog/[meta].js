@@ -29,13 +29,7 @@ class Blog extends React.Component {
     const __meta = _meta[metaLength - 1] || _meta[0];
     const res = await fetch(`${api_url}/post/${__meta}`);
     const data = res.status === 200 ? await res.json() : {};
-    let user;
-    if (authorization) {
-      const res = await fetch(`${api_url}/user`, { headers: { authorization } });
-      user = await res.json();
-    }
     return {
-      user,
       authorization,
       post: data.post,
       body: data.postBody,

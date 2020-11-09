@@ -1,5 +1,5 @@
 import React from 'react';
-import Router, { withRouter } from 'next/router';
+import { withRouter } from 'next/router';
 import HomeIcon from '@material-ui/icons/Home';
 import VpnKeyIcon from '@material-ui/icons/VpnKey';
 import Avatar from '@material-ui/core/Avatar';
@@ -11,7 +11,6 @@ import NewIcon from '@material-ui/icons/NoteAdd';
 import ImageIcon from '@material-ui/icons/Image';
 import PhotoLibraryIcon from '@material-ui/icons/PhotoLibrary';
 import LogOut from '@material-ui/icons/Lock';
-import { destroyCookie } from 'nookies';
 import ShouldRender from '../tools/ShoulRender';
 import TrendingUpIcon from '@material-ui/icons/TrendingUp';
 
@@ -138,7 +137,7 @@ class Menu extends React.Component {
     }
   }
   render() {
-    const { authorized, classes, children, router } = this.props;
+    const { authorized, classes, children } = this.props;
     const { user, activateLogin } = this.state;
     const path = currentPath();
     return (
@@ -158,9 +157,9 @@ class Menu extends React.Component {
           </Link>
 
           <Link href='/blog'>
-              <Avatar className={classes.greenAvatar} src='/images/blog.png'>
-              </Avatar>
-            </Link>
+            <Avatar className={classes.greenAvatar} src='/images/blog.png'>
+            </Avatar>
+          </Link>
 
           <ShouldRender condition={this.props.authorized}>
             <Link href='/blog/drafts'>
@@ -209,7 +208,7 @@ class Menu extends React.Component {
               <LogOut />
             </Avatar>}
         </Grid>
-        <Grid justify="left" alignItems="left" container>
+        <Grid container>
           {children}
         </Grid>
       </div>
@@ -222,7 +221,7 @@ Menu.propTypes = {
   classes: PropTypes.object,
   children: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
   user: PropTypes.object,
-  authorized: PropTypes.oneOfType([PropTypes.string, PropTypes.oneOf([null])])
+  authorized: PropTypes.bool,
 };
 
 export default withRouter(withStyles(styles)(Menu));

@@ -24,13 +24,7 @@ class Blog extends React.Component {
     
     const res = await fetch(`${api_url}/post/draft/${draftId}`, { headers: { authorization } });
     const data = await res.json();
-    let user;
-    if (authorization) {
-      const res = await fetch(`${api_url}/user`, { headers: { authorization } });
-      user = await res.json();
-    }
     return {
-      user,
       authorization,
       post: data,
       body: data

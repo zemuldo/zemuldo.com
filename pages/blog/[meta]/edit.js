@@ -216,10 +216,10 @@ class EditBlog extends React.Component {
   handleOpenPublishDialogue = () => this.setState({publishDialogueOpen: true})
   handleClosePublishDialogue = () => this.setState({publishDialogueOpen: false})
   handlePublish = async () => {
-    const { authorization } = this.props;
     const res = await fetch(`${api_url}/post/${this.props.post._id}`, {
       method: 'put',
-      headers: {authorization, 'Accept': 'application/json', 'Content-Type': 'application/json'},
+      headers: {'Accept': 'application/json', 'Content-Type': 'application/json'},
+      credentials: 'include',
       body: JSON.stringify({
         _id: this.props.post._id,
         authorId: this.props.post.authorId,
@@ -292,7 +292,7 @@ class EditBlog extends React.Component {
           }}
         >
           <Grid container justify="center" alignItems="center">
-            <Menu authorization={this.props.authorization}>
+            <Menu authorized={authorized}>
               <Avatar onClick={this.handleSave} className={classes.greenAvatar}>
                 <SaveIcon />
               </Avatar>
@@ -409,7 +409,6 @@ EditBlog.propTypes = {
   post: PropTypes.object.isRequired,
   body: PropTypes.object.isRequired,
   classes: PropTypes.object.isRequired,
-  authorization: PropTypes.string,
   authorized: PropTypes.bool,
   loggingIn: PropTypes.bool,
   options: PropTypes.array.isRequired

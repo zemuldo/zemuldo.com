@@ -173,7 +173,7 @@ class ViewBlog extends React.Component {
               >
                 <i className="fa fa-linkedin" />
               </Avatar>
-              {this.props.authorization && (
+              {authorized && (
                 <Avatar
                   onClick={() =>
                     this.props.router.push(`/blog/${post._id}/edit`)
@@ -238,10 +238,7 @@ ViewBlog.propTypes = {
   body: PropTypes.object.isRequired,
   router: PropTypes.object,
   classes: PropTypes.object.isRequired,
-  authorization: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.oneOf([null]),
-  ]),
+  authorized: PropTypes.bool,
 };
 
 export default withRouter(withStyles(styles)(ViewBlog));

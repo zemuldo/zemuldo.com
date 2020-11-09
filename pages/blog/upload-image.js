@@ -143,7 +143,7 @@ function DropZone(props) {
 }
 
 DropZone.propTypes = {
-  authorization: PropTypes.string.isRequired
+  authorized: PropTypes.bool,
 };
 
 export default entry(DropZone);
