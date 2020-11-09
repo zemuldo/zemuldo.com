@@ -54,9 +54,6 @@ function Album({images, authorized, user}) {
   const [stateImages, setStateImages] = useState(images);
   const classes = useStyles();
 
-  console.log(user)
-  console.log(images)
-
   const  fetchImages = async (e) => {
     if (e.key === 'Enter') {
       const res = await fetch(`${api_url}/image?skip=0&limit=50&search=${search}`);
