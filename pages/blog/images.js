@@ -50,7 +50,7 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-function Album({images, authorization, user}) {
+function Album({images, authorized, user}) {
   const [search, setSearch] = useState(null);
   const [stateImages, setStateImages] = useState(images);
   const classes = useStyles();
@@ -72,7 +72,7 @@ function Album({images, authorization, user}) {
       <Container style={{ color: 'white' }} maxWidth="md">
 
         <Grid container justify="center" alignItems="center">
-          <Menu authorization={authorization} />
+          <Menu authorized={authorized} />
         </Grid>
       </Container>
       <Container style={{ color: 'white', backgroundColor: 'rgb(23, 23, 23)' }} maxWidth="md">

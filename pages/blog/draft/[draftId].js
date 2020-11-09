@@ -134,17 +134,17 @@ class NewBlog extends React.Component {
 
   static async getInitialProps(ctx) {
     const { draftId } = ctx.query;
-    const { authorization } = parseCookies(ctx);
+    const { authorized } = parseCookies(ctx);
 
-    if (!authorization) return {statusCode: 401};
+    if (!authorized) return {statusCode: 401};
 
     const draftRes = await fetch(`${api_url}/post/draft/${draftId}`, {
       method: 'get',
-      headers: { authorization, 'Accept': 'application/json', 'Content-Type': 'application/json' }
+      credentials: 'include'
     });
 
     if (draftRes.status !== 200) {
-      return {statusCode: 400, authorization};
+      return {statusCode: 400};
     }
     
     let data;
@@ -153,7 +153,7 @@ class NewBlog extends React.Component {
     } catch (_e){
       data = null;
     }
-    return { draft: data, authorization };
+    return { draft: data };
   }
 
   componentDidMount() {
@@ -286,7 +286,7 @@ class NewBlog extends React.Component {
           }}
         >
           <Grid container justify="center" alignItems="center">
-            <Menu authorization = {authorization}>
+            <Menu {...this.props}>
               <Avatar onClick={this.handleSave} className={classes.greenAvatar}>
                 <SaveIcon />
               </Avatar>

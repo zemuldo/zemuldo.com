@@ -8,11 +8,11 @@ import Entry from '../components/entry';
 class Login extends React.Component {
 
   componentDidMount(){
-    window.location.href = '/'
+    window.location.href = '/';
   }
 
   render() {
-    return <PleaseWait/>
+    return <PleaseWait/>;
   }
 }
 

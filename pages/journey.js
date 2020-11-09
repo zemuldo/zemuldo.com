@@ -12,7 +12,7 @@ import Entry from '../components/entry';
 
 const api_url = process.env.API_URL;
 
-function DeveloperStory({authorization}) {
+function DeveloperStory({authorized}) {
   return (
     <>
       <Head>
@@ -22,7 +22,7 @@ function DeveloperStory({authorization}) {
       </Head>
       <Container maxWidth="md">
         <Grid container justify="center" alignItems="center">
-          <Menu authorization={authorization}/>
+          <Menu authorized={authorized}/>
         </Grid>
       </Container>
       <Container maxWidth="md">
@@ -50,7 +50,7 @@ function DeveloperStory({authorization}) {
 }
 
 DeveloperStory.propTypes = {
-  authorization: PropTypes.string
+  authorized: PropTypes.boolean
 };
 
 DeveloperStory.getInitialProps = async (ctx) => {

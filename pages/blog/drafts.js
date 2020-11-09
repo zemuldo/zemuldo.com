@@ -65,7 +65,7 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-function Drafts({ drafts, authorization }) {
+function Drafts({ drafts, authorization, authorized }) {
   const classes = useStyles();
 
   const [data, setDrafts] = useState(drafts);
@@ -129,7 +129,7 @@ function Drafts({ drafts, authorization }) {
       <Container style={{ color: 'white' }} maxWidth="md">
 
         <Grid container justify="center" alignItems="center">
-          <Menu authorization={authorization} />
+          <Menu authorized={authorized} />
           <Grid container spacing={4}>
             {
               !data[0] && 
@@ -178,13 +178,14 @@ Drafts.propTypes = {
 };
 
 Drafts.getInitialProps = async (ctx) => {
-  const { authorization } = parseCookies(ctx);
-
-  if (!authorization) return {statusCode: 401};
+  const { authorized, authorization } = parseCookies(ctx);
+  
+  if (!authorized) return {statusCode: 401};
 
   const draftRes = await fetch(`${api_url}/post/draft`, {
     method: 'get',
-    headers: { authorization, 'Accept': 'application/json', 'Content-Type': 'application/json' }
+    headers: { authorization: authorization || '' , 'Accept': 'application/json', 'Content-Type': 'application/json' },
+    credentials: 'include'
   });
 
   let data;

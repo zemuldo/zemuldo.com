@@ -53,9 +53,10 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-function DropZone({ authorization }) {
+function DropZone(props) {
+  const { authorized } = props;
   useEffect(() => {
-    if (!authorization) window.location = '/blog/login?redirectTo=/blog/upload-image';
+    if (!authorized) window.location = '/blog/login?redirectTo=/blog/upload-image';
   });
 
   const classes = useStyles();
@@ -76,7 +77,7 @@ function DropZone({ authorization }) {
 
     const res = await fetch('/image', {
       method: 'POST',
-      headers: { authorization },
+      credentials: 'include',
       body: data
     });
 
@@ -93,7 +94,7 @@ function DropZone({ authorization }) {
       <Container style={{ color: 'white' }} maxWidth="md">
 
         <Grid container justify="center" alignItems="center">
-          <Menu authorization={authorization} />
+          <Menu {...props} />
         </Grid>
       </Container>
       <Container style={{ color: 'white' }} maxWidth="md">

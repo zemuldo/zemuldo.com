@@ -12,10 +12,11 @@ import ImageIcon from '@material-ui/icons/Image';
 import PhotoLibraryIcon from '@material-ui/icons/PhotoLibrary';
 import LogOut from '@material-ui/icons/Lock';
 import { destroyCookie } from 'nookies';
+import ShouldRender from '../tools/ShoulRender';
+import TrendingUpIcon from '@material-ui/icons/TrendingUp';
 
 
 const api_url = process.env.API_URL;
-const NODE_ENV = process.env.NODE_ENV;
 
 const currentPath = () => {
   if (typeof window === 'object') {
@@ -129,91 +130,87 @@ class Menu extends React.Component {
   }
 
   async componentDidMount() {
-    const { authorization } = this.props;
-    if (authorization) {
-      const res = await fetch(`${api_url}/user`, { headers: { authorization } });
+    const { authorized } = this.props;
+    if (authorized) {
+      const res = await fetch(`${api_url}/user`, {credentials: 'include'});
       const user = await res.json();
       this.setState({ user });
     }
   }
   render() {
-    const { authorization, classes, children, router } = this.props;
+    const { authorized, classes, children, router } = this.props;
     const { user, activateLogin } = this.state;
     const path = currentPath();
-
     return (
       <div style={{ margin: '10px 0px 10px 0px', }}>
         <Grid justify="center" alignItems="center" container >
+          
           <Link href='/'>
-            <Avatar className={classes.greenAvatar}>
+            <Avatar component='span' className={classes.greenAvatar}>
               <HomeIcon />
             </Avatar>
           </Link>
-          {
-            router && router.pathname !== '/blog' &&
-            <Link href='/blog'>
+          
+          <Link href='/journey'>
+            <Avatar className={classes.greenAvatar}>
+              <TrendingUpIcon />
+            </Avatar>
+          </Link>
+
+          <Link href='/blog'>
               <Avatar className={classes.greenAvatar} src='/images/blog.png'>
               </Avatar>
             </Link>
-          }
 
-          {path !== '/blog/drafts' && authorization && <Link href='/blog/drafts'>
-            <Avatar className={classes.greenAvatar} src='/images/draft.png'>
-            </Avatar>
-          </Link>
-          }
-          {
-            path !== '/blog/new' && this.props.authorization &&
+          <ShouldRender condition={this.props.authorized}>
+            <Link href='/blog/drafts'>
+              <Avatar className={classes.greenAvatar} src='/images/draft.png'>
+              </Avatar>
+            </Link>
             <Link href="/blog/new">
               <Avatar className={classes.greenAvatar}>
                 <NewIcon />
               </Avatar>
             </Link>
-          }
-
-          {
-            path !== '/blog/upload-image' && this.props.authorization &&
             <Link href="/blog/upload-image">
               <Avatar className={classes.greenAvatar}>
                 <ImageIcon />
               </Avatar>
             </Link>
-          }
-
-          {children}
-
-          {
-            path !== '/blog/images' &&
             <Link href="/blog/images">
               <Avatar className={classes.greenAvatar}>
                 <PhotoLibraryIcon />
               </Avatar>
             </Link>
-          }
+          </ShouldRender>
 
-          {user && <Avatar alt="User profile" className={classes.avatar} src={user.profilePhotoUrl} />}
-          {user &&
-            <Avatar onClick={() => {
-              window.location.href = '/logout'
-            }} className={classes.greenAvatar}>
-              <LogOut />
-            </Avatar>}
-
-          {path.includes('/blog') && !authorization && activateLogin >= 4 && 
-          <Link href={`/blog/login?redirectTo=${path}`}>
-            <Avatar className={classes.greenAvatarGreen}>
-              <VpnKeyIcon />
-            </Avatar>
-          </Link>
-          }
-
-          {path.includes('/blog') && !authorization && activateLogin < 4 && 
+          {path.includes('/blog') && !authorized && activateLogin < 4 && 
             <Avatar 
               onClick = {() => this.setState({activateLogin: activateLogin + 1})} 
               className={classes.greenAvatarGreen}>
               <VpnKeyIcon />
             </Avatar>
           }
+
+          {user && <Avatar alt="User profile" className={classes.avatar} src={user.profilePhotoUrl} />}
+
+          {path.includes('/blog') && !authorized && activateLogin >= 4 && 
+          <Link href={`/blog/login?redirectTo=${path}`}>
+            <Avatar className={classes.greenAvatarGreen}>
+              <VpnKeyIcon />
+            </Avatar>
+          </Link>
+          }
+          
+          {user &&
+            <Avatar onClick={() => {
+              window.location.href = '/logout';
+            }} className={classes.greenAvatar}>
+              <LogOut />
+            </Avatar>}
+        </Grid>
+        <Grid justify="left" alignItems="left" container>
+          {children}
         </Grid>
       </div>
     );
@@ -225,7 +222,7 @@ Menu.propTypes = {
   classes: PropTypes.object,
   children: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
   user: PropTypes.object,
-  authorization: PropTypes.oneOfType([PropTypes.string, PropTypes.oneOf([null])])
+  authorized: PropTypes.oneOfType([PropTypes.string, PropTypes.oneOf([null])])
 };
 
 export default withRouter(withStyles(styles)(Menu));

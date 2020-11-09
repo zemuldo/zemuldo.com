@@ -96,7 +96,7 @@ class ViewBlog extends React.Component {
     window.open(shareURL, 'sharer', 'toolbar=0,status=0,width=548,height=325');
   };
   render() {
-    const { post, body, classes, authorization } = this.props;
+    const { post, body, classes, authorized } = this.props;
     return (
       <>
         <ShouldRender if={!!post}>
@@ -135,20 +135,7 @@ class ViewBlog extends React.Component {
               fontSize: '18px',
             }}
           >
-            <Grid container justify="center" alignItems="center">
-              <Menu authorization={authorization}>
-                {this.props.authorization && (
-                  <Avatar
-                    onClick={() =>
-                      this.props.router.push(`/blog/${post._id}/edit`)
-                    }
-                    className={classes.greenAvatar}
-                  >
-                    <EditIcon />
-                  </Avatar>
-                )}
-              </Menu>
-            </Grid>
+            <Menu authorized={authorized}/>
             <h1>{post.title}</h1>
 
             <p>Posted {format(new Date(post.createdAt), 'PPPP')}</p>
@@ -186,6 +173,16 @@ class ViewBlog extends React.Component {
               >
                 <i className="fa fa-linkedin" />
               </Avatar>
+              {this.props.authorization && (
+                <Avatar
+                  onClick={() =>
+                    this.props.router.push(`/blog/${post._id}/edit`)
+                  }
+                  className={classes.greenAvatar}
+                >
+                  <EditIcon />
+                </Avatar>
+              )}
             </Grid>
           </Container>
           <Container>

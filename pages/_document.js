@@ -81,12 +81,18 @@ class MyDocument extends Document {
 }
 
 MyDocument.getInitialProps = async ctx => {
-  if(ctx.pathname === '/logout'){
+  if (ctx.pathname === '/logout'){
     setCookie(ctx, 'authorization', 'false', {
       maxAge: 0,
       path: '/',
       httpOnly: true,
+      domain: NODE_ENV == 'production'? 'zemuldo.com' : 'localhost',
       secure: NODE_ENV == 'production'
+    });
+    setCookie(ctx, 'authorized', 'false', {
+      maxAge: 0,
+      path: '/',
+      domain: NODE_ENV == 'production'? 'zemuldo.com' : 'localhost'
     });
   }
   if (ctx.query.token) {
@@ -94,7 +100,14 @@ MyDocument.getInitialProps = async ctx => {
       maxAge: 30 * 24 * 60 * 60,
       path: '/',
       httpOnly: true,
+      domain: NODE_ENV == 'production'? 'zemuldo.com' : 'localhost',
       secure: NODE_ENV == 'production'
+    });
+
+    setCookie(ctx, 'authorized', '1', {
+      maxAge: 30 * 24 * 60 * 60,
+      path: '/',
+      domain: NODE_ENV == 'production'? 'zemuldo.com' : 'localhost'
     });
   }
 

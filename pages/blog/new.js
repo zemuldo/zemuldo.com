@@ -127,15 +127,9 @@ class NewBlog extends React.Component {
     };
   }
 
-  static async getInitialProps(ctx) {
-    const { authorization } = parseCookies(ctx);
-
-    return { authorization };
-  }
-
   componentDidMount() {
-    const {authorization} = this.props;
-    if (!authorization) window.location = '/blog/login?redirectTo=/blog/new';
+    const {authorized} = this.props;
+    if (!authorized) window.location = '/blog/login?redirectTo=/blog/new';
 
     const draft = localStorage.getItem('currentDraft');
     if (draft) {
@@ -218,9 +212,8 @@ class NewBlog extends React.Component {
   }
 
   render() {
-    const { classes, authorization } = this.props;
+    const { classes, authorized } = this.props;
     const { publishDialogueOpen } = this.state;
-    if (!authorization) return <div style={{ color: 'white' }}>Please wait...</div>;
     return (
       <>
         <PublishDialogue
@@ -246,7 +239,7 @@ class NewBlog extends React.Component {
           }}
         >
           <Grid container justify="center" alignItems="center">
-            <Menu authorization = {authorization} >
+            <Menu authorized = {authorized} >
               <Avatar onClick={this.handleSave} className={classes.greenAvatar}>
                 <SaveIcon />
               </Avatar>

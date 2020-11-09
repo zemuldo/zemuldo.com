@@ -38,20 +38,21 @@ class Blog extends React.Component {
     const {tag} = ctx.query;
     const topTagsRes = await fetch(`${ex_api_url}/api/top_tags`);
     const topTags = topTagsRes.status === 200 ? await topTagsRes.json() : [];
-    const { authorization } = parseCookies(ctx);
+    const { authorization, authorized } = parseCookies(ctx);
     const res = await this.initialPosts(tag);
     const data = await res.json();
     const res_featured = await fetch(`${api_url}/post/latest`);
     const data_featured = await res_featured.json();
     let user;
-    if (authorization) {
-      const res = await fetch(`${api_url}/user`, { headers: { authorization } });
+    if (authorized) {
+      const res = await fetch(`${api_url}/user`, { headers: { authorization }});
       user = await res.json();
     }
     return {
       featuredPost: res_featured.status === 200? data_featured: null,
       user,
       authorization,
+      authorized: authorized === '1',
       posts: data,
       topTags,
       currentTag: tag
@@ -87,7 +88,7 @@ class Blog extends React.Component {
 
 
   render() {
-    const { featuredPost, authorization, topTags } = this.props;
+    const { featuredPost, authorized, topTags } = this.props;
     const { posts } = this.state;
 
     return (
@@ -111,7 +112,7 @@ class Blog extends React.Component {
         </Head>
         <Container style={{ color: 'white' }} maxWidth="md">
 
-          <Menu authorization={authorization} />
+          <Menu authorized = {authorized}/>
         </Container>
         <Container style={{ color: 'white' }} maxWidth="md">
           <TopTags tags={topTags} onSelect={this.filterByTag} />
