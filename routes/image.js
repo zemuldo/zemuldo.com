@@ -16,7 +16,7 @@ router.post('/', async (req, res) => {
 
       const res = await fetch(`${api_url}/image/${fileName}`, {
         method: 'POST',
-        headers: { authorization: req.headers.authorization },
+        headers: { authorization: req.headers.authorization || req.cookies.authorization },
         body: {
           name: fileName
         }

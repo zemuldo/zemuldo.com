@@ -27,12 +27,17 @@ export default Component => {
   };
 
   Entry.getInitialProps = async (ctx) => {
-    const { authorized, accepted_terms } = parseCookies(ctx);
+    const { authorized, authorization, accepted_terms } = parseCookies(ctx);
+    let user
+    if(authorized){
+      const res = await fetch(`${api_url}/user`, {credentials: 'include', headers: {authorization: authorization || ''}});
+      user = await res.json();
+    }
     let props = {};
     if (Component.getInitialProps) {
       props = await Component.getInitialProps(ctx);
     }
-    return { ...props, authorized: !!authorized, accepted_terms };
+    return { ...props, authorized: !!authorized, accepted_terms, user };
   };
 
   Entry.propTypes = {

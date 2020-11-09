@@ -54,6 +54,9 @@ function Album({images, authorized, user}) {
   const [stateImages, setStateImages] = useState(images);
   const classes = useStyles();
 
+  console.log(user)
+  console.log(images)
+
   const  fetchImages = async (e) => {
     if (e.key === 'Enter') {
       const res = await fetch(`${api_url}/image?skip=0&limit=50&search=${search}`);
@@ -112,7 +115,7 @@ function Album({images, authorized, user}) {
                       Copy Link
                   </Button>
                   {
-                    authorized && parseInt(user.oAuthId, 16) === parseInt(image.ownerId, 16) &&
+                    authorized && user.id === image.ownerId &&
                     <Button size="small" color="primary">
                       Edit
                     </Button>

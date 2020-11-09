@@ -5,6 +5,7 @@ const cheerio = require('cheerio');
 const next = require('next');
 const path = require('path');
 const fs = require('fs');
+const cookieParser = require('cookie-parser');
 
 const imageServer = express();
 
@@ -38,6 +39,8 @@ const app = next({ dev });
 const handle = app.getRequestHandler();
 
 const router = express();
+
+router.use(cookieParser());
 
 router.use('/image', require('./routes/image'));
 
