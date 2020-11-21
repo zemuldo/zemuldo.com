@@ -15,7 +15,7 @@ export default function Home() {
           <div className="display-table-cell">
             <div className="container">
               <div className="row">
-                <div style={{ paddingLeft: '5px', marginTop: '-10px' }}>
+                <div>
                   <div itemProp="founder" itemScope itemType="http://schema.org/Person">
                     <h1 itemProp="name" className="color-6">Danstan Onyango</h1>
                   </div>
@@ -26,7 +26,7 @@ export default function Home() {
                   <div style={{ paddingLeft: '5px',  }} className="header-frame">
                     <h3 className="font-c-cn-m" style={{ lineHeight: '150%', marginTop: '-5px' }}>
                       <p>Loves Functional Programming and Developing Distributed Systems. Curious, Peculiar.</p>
-                      <p>Fully Self Taught.</p>
+                      <p>Fully Self Taught. Enjoys creating technical content and mentoring.</p>
                       <p>
                         <span>Formerly at </span>
                         <b itemScope itemProp="organization" itemType="http://schema.org/Organization">
