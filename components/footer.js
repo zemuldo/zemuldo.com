@@ -28,6 +28,13 @@ export default function Footer() {
         >
           Want to talk? Check my <a href='https://calendly.com/zemuldo/general-chat' target='_blank' rel='noopener noreferrer'  >Calendly</a>
         </Typography>
+
+        <Typography variant="body2" align="center">
+          <CustomLink color="inherit" href="/resume">
+            Resume  
+          </CustomLink>{' '}
+        </Typography>
+        
         <Typography variant="body2" align="center">
           {'Copyright © '}
           <CustomLink color="inherit" href="https://zemuldo.com/">

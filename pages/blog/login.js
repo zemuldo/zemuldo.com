@@ -1,14 +1,13 @@
 import React from 'react';
 import Head from 'next/head';
 import Grid from '@material-ui/core/Grid';
-import { Link } from '@material-ui/core';
 import { withRouter } from 'next/router';
 import PropTypes from 'prop-types';
 import IfLoggedIn from '../../components/IfLoggedIn';
 import PleaseWait from '../../components/please_wait';
 import Entry from '../../components/entry';
 import PageLayout from '../../components/PageLayout';
-
+import Link from '../../components/link';
 const api_url = process.env.API_URL;
 const base_url = process.env.UI_URL;
 
@@ -26,20 +25,19 @@ class Login extends React.Component {
 
         <Head>
           <title>I&apos;m Danstan ~ Zemuldo</title>
+          <link
+              href="/css/login.css"
+              rel="stylesheet"
+            />
         </Head>
-        <PageLayout style={{ marginTop: '30%' }}>
+        <PageLayout style={{ marginTop: '50%' }}>
           <Grid style={{ marginTop: '30%' }} justify="space-between" container spacing={2}>
             <Grid item xs={12} sm={6}>
-              <Link>
-                <h1 className="color-6">Twitter</h1>
-              </Link>
-              <hr className="hr-red-gradient-opposite" />
             </Grid>
-            <Grid item xs={12} sm={6}>
+            <Grid item xs={12} sm={12}>
               <Link href={`${api_url}/user/auth/github?redirectTo=${query.redirectTo || base_url}`}>
-                <h1 className="color-6">Github</h1>
+                <h1 className="color-6 login-button">Use Github</h1>
               </Link>
-              <hr className='hr-red-gradient'/>
             </Grid>
           </Grid>
         </PageLayout>

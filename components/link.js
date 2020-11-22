@@ -9,16 +9,24 @@ export default function CustomLink({ children, href, target, rel }) {
     e.preventDefault();
     router.push(href);
   };
-
-  if (target)
+  
+  if (href && href.includes('http'))
     return (
       <a target={target} rel={rel} href={href}>
         {children}
       </a>
     );
 
+    if(target){
+      return (
+        <a target={target} rel={rel} href={href} onClick={handleClick}>
+          {children}
+        </a>
+      );
+    }
+
   return (
-    <a target={target} rel={rel} href={href} onClick={handleClick}>
+    <a rel={rel} href={href} onClick={handleClick}>
       {children}
     </a>
   );

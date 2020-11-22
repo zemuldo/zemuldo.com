@@ -28,8 +28,8 @@ export default Component => {
 
   Entry.getInitialProps = async (ctx) => {
     const { authorized, authorization, accepted_terms } = parseCookies(ctx);
-    let user
-    if(authorized){
+    let user;
+    if (authorized){
       const res = await fetch(`${api_url}/user`, {credentials: 'include', headers: {authorization: authorization || ''}});
       user = await res.json();
     }
