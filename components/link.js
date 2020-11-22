@@ -17,13 +17,13 @@ export default function CustomLink({ children, href, target, rel }) {
       </a>
     );
 
-    if(target){
-      return (
-        <a target={target} rel={rel} href={href} onClick={handleClick}>
-          {children}
-        </a>
-      );
-    }
+  if (target){
+    return (
+      <a target={target} rel={rel} href={href} onClick={handleClick}>
+        {children}
+      </a>
+    );
+  }
 
   return (
     <a rel={rel} href={href} onClick={handleClick}>
