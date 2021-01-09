@@ -2,21 +2,9 @@ import React from 'react';
 import SocialSites from './social_sites';
 import Terminal from './terminal_me';
 import CustomLink from '../link';
-import { Grid, Avatar } from '@material-ui/core';
-import { makeStyles } from '@material-ui/core/styles';
-import { deepOrange, green } from '@material-ui/core/colors';
 import CurrentCompany from './current_company';
 
-const useStyles = makeStyles((theme) => ({
-  
-  small: {
-    width: theme.spacing(3),
-    height: theme.spacing(3),
-  },
-}));
-
 export default function Home() {
-  const classes = useStyles();
   return (
     <>
       <div
@@ -47,8 +35,8 @@ export default function Home() {
                       <CurrentCompany/>
                       See my {' '}
                       <CustomLink href='/journey'>
-                          <b>Journey</b>
-                        </CustomLink>
+                          Journey
+                      </CustomLink>
                     </h3>
                   </div>
                   <div

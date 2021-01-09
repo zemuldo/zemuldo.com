@@ -1,5 +1,5 @@
 import React from 'react';
-import versionInfo from '../release.json'
+import versionInfo from '../release.json';
 
 export default function VersionInfo(){
   return (<div className='version-details'>
