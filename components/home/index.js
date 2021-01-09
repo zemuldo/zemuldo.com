@@ -2,9 +2,21 @@ import React from 'react';
 import SocialSites from './social_sites';
 import Terminal from './terminal_me';
 import CustomLink from '../link';
-import { Grid } from '@material-ui/core';
+import { Grid, Avatar } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core/styles';
+import { deepOrange, green } from '@material-ui/core/colors';
+import CurrentCompany from './current_company';
+
+const useStyles = makeStyles((theme) => ({
+  
+  small: {
+    width: theme.spacing(3),
+    height: theme.spacing(3),
+  },
+}));
 
 export default function Home() {
+  const classes = useStyles();
   return (
     <>
       <div
@@ -27,15 +39,7 @@ export default function Home() {
                     <h3 className="font-c-cn-m" style={{ lineHeight: '150%', marginTop: '-5px' }}>
                       <p>Loves Functional Programming and Developing Distributed Systems. Curious, Peculiar.</p>
                       <p>Fully Self Taught. Enjoys creating technical content and mentoring.</p>
-                      <p>
-                        <span>Formerly at </span>
-                        <b itemScope itemProp="organization" itemType="http://schema.org/Organization">
-                          <a itemProp="url" className="color-orange" href="https://safeboda.com" target="_blank" rel="noopener noreferrer">
-                            <span itemProp="name"> SafeBoda</span>
-                          </a>
-                        </b>
-                        <span>.</span>
-                      </p>
+                      <CurrentCompany/>
                     </h3>
                     <h4 style={{ fontSize: '1.8em' }} className="color-6 font-c-cn-m">
                       <Grid justify="space-between" alignItems="center" container>
