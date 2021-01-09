@@ -20,36 +20,29 @@ const useStyles = makeStyles((theme) => ({
 export default function CurrentCompany() {
   const classes = useStyles();
   return (
-    <p className={classes.root}>
-      <span >Program Manager >> </span>
+    <p >
+      <span >Program Manager at {' '} </span>
       
-      <b
+      <span
         itemScope
         itemProp="organization"
         itemType="http://schema.org/Organization"
       >
         <a
-        className={classes.root}
+        style={{backgroundColor: 'transparent', opacity: .9}}
           itemProp="url"
           href="https://microsoft.com"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <span itemProp="name">
-            <Avatar
-              src="/images/microsoft.png"
-              variant="square"
-              className={classes.small}
-            />
-          </span>
-          <span style={{backgroundColor: 'transparent', opacity: .7}} itemProp="name">
+          <span  itemProp="name">
            <span style={{color: '#F26522'}}>Micr</span>
            <span style={{color: '#FFC20E'}}>o</span>
            <span style={{color: '#8DC63F'}}>Sof</span>
            <span style={{color: '#00AEEF'}}>t</span>
           </span>
         </a>
-      </b>
+      </span>
     </p>
   );
 }
