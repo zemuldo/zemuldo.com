@@ -38,20 +38,18 @@ export default function Home() {
                   <div style={{ paddingLeft: '5px',  }} className="header-frame">
                     <h3 className="font-c-cn-m" style={{ lineHeight: '150%', marginTop: '-5px' }}>
                       <p>Loves Functional Programming and Developing Distributed Systems. Curious, Peculiar. Chess.</p>
-                      <p>Fully Self Taught. Enjoys creating technical content and mentoring.</p>
+                      <p>
+                        Fully Self Taught. Enjoys creating technical content and mentoring. See my {' '}
+                        <CustomLink href='/blog'>
+                           Blog
+                        </CustomLink>
+                      </p>
                       <CurrentCompany/>
-                    </h3>
-                    <h4 style={{ fontSize: '1.8em' }} className="color-6 font-c-cn-m">
-                      <Grid justify="space-between" alignItems="center" container>
-                        <CustomLink href='/journey'>
+                      See my {' '}
+                      <CustomLink href='/journey'>
                           <b>Journey</b>
                         </CustomLink>
-                        <span style={{ color: 'white' }}> | </span>
-                        <CustomLink href='/blog'>
-                          <b>Blog</b>
-                        </CustomLink>
-                      </Grid>
-                    </h4>
+                    </h3>
                   </div>
                   <div
                     id="me-pic-wrapper"

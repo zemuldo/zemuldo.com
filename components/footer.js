@@ -39,8 +39,14 @@ export default function Footer() {
           {'Copyright © '}
           <CustomLink color="inherit" href="https://zemuldo.com/">
             Zemuldo
-          </CustomLink>{' '}
+          </CustomLink>{', '}
           {new Date().getFullYear()}
+          <span>
+            ,
+            <a> Privacy</a>
+            ,
+            <a> Terms</a>
+          </span>
         </Typography>
       </Container>
     </footer>
