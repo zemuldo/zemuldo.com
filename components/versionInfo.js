@@ -1,4 +1,5 @@
 import React from 'react';
+import versionInfo from '../release.json'
 
 export default function VersionInfo(){
   return (<div className='version-details'>
@@ -6,14 +7,14 @@ export default function VersionInfo(){
       <span className='color-1'>@</span>
       <span className='color-6'>Version</span>
       {' : '}
-      <span className='color-orange'> {process.env.VERSION}</span>
+      <span className='color-orange'> {versionInfo.VERSION}</span>
     </div>
     <div>
       <span className='color-1'>@</span>
       <span className='color-6'>Build</span>
       {' : '}
       <span className='color-orange'>
-        {process.env.GITHUB_SHA.slice(0, 9)}
+        {versionInfo.GITHUB_SHA.slice(0, 9)}
       </span>
     </div>
   </div>);

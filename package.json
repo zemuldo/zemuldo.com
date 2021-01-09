@@ -1,6 +1,6 @@
 {
   "name": "zemuldo.com",
-  "version": "4.5.0",
+  "version": "0.4.6",
   "private": true,
   "dependencies": {
     "@babel/runtime": "^7.9.2",
@@ -47,7 +47,7 @@
     "pretest": "eslint . --fix",
     "lint": "eslint . --fix",
     "dev": "NODE_ENV=development node server.js",
-    "build": "NODE_ENV=production next build",
+    "build": "./setup/version_info.sh && NODE_ENV=production next build",
     "start": "NODE_ENV=production node server.js",
     "prod": "NODE_ENV=production pm2 start  server.js --name Zemuldo.COM",
     "stories-site": "NODE_ENV=production pm2 start  stories_server.js --name Zemuldo.COM-Stories-Site",
