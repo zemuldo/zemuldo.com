@@ -28,6 +28,8 @@ jobs:
 
       - run: npm install
 
+      - run: ./setup/version_info.sh
+
       - save_cache:
           paths:
             - node_modules

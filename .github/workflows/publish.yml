@@ -26,6 +26,7 @@ jobs:
   #         echo "GITHUB_SHA=${GITHUB_SHA}" >> .env.production
   #         echo "BRANCH=${GITHUB_REF##*/}" >> .env.production
   #         echo VERSION=`jq '.version' package.json` >> .env.production
+  #         ./setup/version_info.sh
 
   #   - name: Build and Push
   #     uses: zemuldo/docker-build-push@master
@@ -61,6 +62,7 @@ jobs:
           echo "GITHUB_SHA=${GITHUB_SHA}" >> .env.production
           echo "BRANCH=${GITHUB_REF##*/}" >> .env.production
           echo VERSION=`jq '.version' package.json` >> .env.production
+          ./setup/version_info.sh
 
     - name: Build and Push
       uses: zemuldo/docker-build-push@master

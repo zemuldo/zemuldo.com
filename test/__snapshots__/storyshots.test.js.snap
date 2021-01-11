@@ -21,7 +21,7 @@ Array [
         className="color-orange"
       >
          
-        0.0.1
+        0.4.6
       </span>
     </div>
     <div>
@@ -39,7 +39,7 @@ Array [
       <span
         className="color-orange"
       >
-        78e0a4366
+        faf509ea6
       </span>
     </div>
   </div>,
@@ -137,58 +137,70 @@ Array [
       }
     >
       <div
-        className="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-center MuiGrid-justify-xs-center"
+        style={
+          Object {
+            "margin": "10px 0px 10px 0px",
+          }
+        }
       >
         <div
-          style={
-            Object {
-              "margin": "10px 0px 10px 0px",
-            }
-          }
+          className="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-center MuiGrid-justify-xs-center"
         >
-          <div
-            className="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-center MuiGrid-justify-xs-center"
+          <a
+            href="/"
+            onClick={[Function]}
           >
-            <a
-              href="/"
-              onClick={[Function]}
+            <span
+              className="MuiAvatar-root MuiAvatar-circle Menu-greenAvatar-65 MuiAvatar-colorDefault"
             >
-              <div
-                className="MuiAvatar-root MuiAvatar-circle Menu-greenAvatar-49 MuiAvatar-colorDefault"
+              <svg
+                aria-hidden="true"
+                className="MuiSvgIcon-root"
+                focusable="false"
+                viewBox="0 0 24 24"
               >
-                <svg
-                  aria-hidden="true"
-                  className="MuiSvgIcon-root"
-                  focusable="false"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"
-                  />
-                </svg>
-              </div>
-            </a>
-            <a
-              href="/blog/images"
-              onClick={[Function]}
+                <path
+                  d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"
+                />
+              </svg>
+            </span>
+          </a>
+          <a
+            href="/journey"
+            onClick={[Function]}
+          >
+            <div
+              className="MuiAvatar-root MuiAvatar-circle Menu-greenAvatar-65 MuiAvatar-colorDefault"
             >
-              <div
-                className="MuiAvatar-root MuiAvatar-circle Menu-greenAvatar-49 MuiAvatar-colorDefault"
+              <svg
+                aria-hidden="true"
+                className="MuiSvgIcon-root"
+                focusable="false"
+                viewBox="0 0 24 24"
               >
-                <svg
-                  aria-hidden="true"
-                  className="MuiSvgIcon-root"
-                  focusable="false"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M22 16V4c0-1.1-.9-2-2-2H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2zm-11-4l2.03 2.71L16 11l4 5H8l3-4zM2 6v14c0 1.1.9 2 2 2h14v-2H4V6H2z"
-                  />
-                </svg>
-              </div>
-            </a>
-          </div>
+                <path
+                  d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6z"
+                />
+              </svg>
+            </div>
+          </a>
+          <a
+            href="/blog"
+            onClick={[Function]}
+          >
+            <div
+              className="MuiAvatar-root MuiAvatar-circle Menu-greenAvatar-65"
+            >
+              <img
+                className="MuiAvatar-img"
+                src="/images/blog.png"
+              />
+            </div>
+          </a>
         </div>
+        <div
+          className="MuiGrid-root MuiGrid-container"
+        />
       </div>
       <h1>
         How to make sure that you always succeed
@@ -235,7 +247,7 @@ Array [
         className="MuiGrid-root blog-share-buttons MuiGrid-container"
       >
         <div
-          className="MuiAvatar-root MuiAvatar-circle ViewBlog-twitterAvatar-46 Blog-twitterAvatar-3 MuiAvatar-colorDefault"
+          className="MuiAvatar-root MuiAvatar-circle ViewBlog-twitterAvatar-62 Blog-twitterAvatar-3 MuiAvatar-colorDefault"
           onClick={[Function]}
         >
           <i
@@ -243,7 +255,7 @@ Array [
           />
         </div>
         <div
-          className="MuiAvatar-root MuiAvatar-circle ViewBlog-fbAvatar-47 Blog-fbAvatar-4 MuiAvatar-colorDefault"
+          className="MuiAvatar-root MuiAvatar-circle ViewBlog-fbAvatar-63 Blog-fbAvatar-4 MuiAvatar-colorDefault"
           onClick={[Function]}
         >
           <i
@@ -251,7 +263,7 @@ Array [
           />
         </div>
         <div
-          className="MuiAvatar-root MuiAvatar-circle ViewBlog-linkedinAvatar-48 Blog-linkedinAvatar-5 MuiAvatar-colorDefault"
+          className="MuiAvatar-root MuiAvatar-circle ViewBlog-linkedinAvatar-64 Blog-linkedinAvatar-5 MuiAvatar-colorDefault"
           onClick={[Function]}
         >
           <i
@@ -307,8 +319,201 @@ Array [
         And – more importantly – never compromise your potential to grow due to self-limiting doubts. Instead, embrace your confidence and believe in yourself because you really can do anything you put your mind to.
       </p>
     </div>
+    <div
+      className="MuiContainer-root MuiContainer-maxWidthMd"
+      style={
+        Object {
+          "color": "white",
+          "fontFamily": "'Courier New', Courier, monospace",
+          "fontSize": "18px",
+        }
+      }
+    >
+      <div>
+        <div
+          className="makeStyles-hrRoot-76"
+        >
+          <div
+            className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 MuiGrid-item MuiGrid-align-items-xs-center MuiGrid-justify-xs-center MuiGrid-grid-xs-12"
+          >
+            <div
+              className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5"
+            >
+              <hr
+                className="hr-z-color-gradient-opposite hr-z-color"
+              />
+            </div>
+            <div
+              className="MuiGrid-root MuiGrid-container MuiGrid-item MuiGrid-justify-xs-center MuiGrid-grid-xs-1"
+            >
+              <svg
+                aria-hidden="true"
+                className="MuiSvgIcon-root"
+                focusable="false"
+                style={
+                  Object {
+                    "fill": "#08a6f3",
+                  }
+                }
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"
+                />
+              </svg>
+            </div>
+            <div
+              className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5"
+            >
+              <hr
+                className="hr-z-color-gradient hr-z-color"
+              />
+            </div>
+          </div>
+        </div>
+        <p>
+          Thank you for finding time to read my post. I hope you found this helpful and it was insightful to you. I enjoy creating content like this for knowledge sharing, my own mastery and reference.
+        </p>
+        <p>
+          If you want to contribute, you can do any or all of the following 😉. It will go along way! Thanks again and Cheers!
+        </p>
+        <div
+          className="makeStyles-hrRoot-76"
+        >
+          <div
+            className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-justify-xs-space-between"
+          >
+            <div
+              className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-3"
+            >
+              <a
+                href="https://twitter.com/intent/user?screen_name=Zemuldo"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <button
+                  className="MuiButtonBase-root MuiButton-root WithStyles(ForwardRef(Button))-root-79 MuiButton-contained MuiButton-containedPrimary"
+                  disabled={false}
+                  onBlur={[Function]}
+                  onDragLeave={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyUp={[Function]}
+                  onMouseDown={[Function]}
+                  onMouseLeave={[Function]}
+                  onMouseUp={[Function]}
+                  onTouchEnd={[Function]}
+                  onTouchMove={[Function]}
+                  onTouchStart={[Function]}
+                  tabIndex={0}
+                  type="button"
+                >
+                  <span
+                    className="MuiButton-label"
+                  >
+                    <span
+                      className="MuiButton-startIcon MuiButton-iconSizeMedium"
+                    >
+                      <i
+                        className="fa fa-twitter color-white"
+                      />
+                    </span>
+                    Follow me on Twitter
+                  </span>
+                </button>
+              </a>
+            </div>
+            <div
+              className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-3"
+            >
+              <a
+                href="https://github.com/zemuldo"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <button
+                  className="MuiButtonBase-root MuiButton-root WithStyles(ForwardRef(Button))-root-79 MuiButton-contained MuiButton-containedPrimary"
+                  disabled={false}
+                  onBlur={[Function]}
+                  onDragLeave={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyUp={[Function]}
+                  onMouseDown={[Function]}
+                  onMouseLeave={[Function]}
+                  onMouseUp={[Function]}
+                  onTouchEnd={[Function]}
+                  onTouchMove={[Function]}
+                  onTouchStart={[Function]}
+                  tabIndex={0}
+                  type="button"
+                >
+                  <span
+                    className="MuiButton-label"
+                  >
+                    <span
+                      className="MuiButton-startIcon MuiButton-iconSizeMedium"
+                    >
+                      <i
+                        className="fa fa-github"
+                      />
+                    </span>
+                    Follow me on GitHub
+                  </span>
+                </button>
+              </a>
+            </div>
+            <div
+              className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-3"
+            >
+              <a
+                href="https://ko-fi.com/zemuldo"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <button
+                  className="MuiButtonBase-root MuiButton-root WithStyles(ForwardRef(Button))-root-79 MuiButton-contained MuiButton-containedPrimary"
+                  disabled={false}
+                  onBlur={[Function]}
+                  onDragLeave={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyUp={[Function]}
+                  onMouseDown={[Function]}
+                  onMouseLeave={[Function]}
+                  onMouseUp={[Function]}
+                  onTouchEnd={[Function]}
+                  onTouchMove={[Function]}
+                  onTouchStart={[Function]}
+                  tabIndex={0}
+                  type="button"
+                >
+                  <span
+                    className="MuiButton-label"
+                  >
+                    <span
+                      className="MuiButton-startIcon MuiButton-iconSizeMedium"
+                    >
+                      <div
+                        className="MuiAvatar-root MuiAvatar-circle makeStyles-kofiLogo-78"
+                      >
+                        <img
+                          className="MuiAvatar-img"
+                          src="/images/social/ko-fi.png"
+                        />
+                      </div>
+                    </span>
+                    Support me on Ko-Fi
+                  </span>
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <footer
-      className="makeStyles-footer-60"
+      className="makeStyles-footer-80"
     >
       <div
         className="MuiContainer-root MuiContainer-maxWidthLg"
@@ -337,15 +542,43 @@ Array [
         <p
           className="MuiTypography-root MuiTypography-body2 MuiTypography-alignCenter"
         >
+          <a
+            href="/resume"
+            onClick={[Function]}
+          >
+            Resume
+          </a>
+           
+        </p>
+        <p
+          className="MuiTypography-root MuiTypography-body2 MuiTypography-alignCenter"
+        >
           Copyright © 
           <a
             href="https://zemuldo.com/"
-            onClick={[Function]}
           >
             Zemuldo
           </a>
-           
-          2020
+          , 
+          2021
+          <span>
+            ,
+            <a
+              href="/privacy-policy"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+               Privacy
+            </a>
+            ,
+            <a
+              href="/terms-and-conditions"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+               Terms
+            </a>
+          </span>
         </p>
       </div>
     </footer>
@@ -374,7 +607,7 @@ Array [
         className="color-orange"
       >
          
-        0.0.1
+        0.4.6
       </span>
     </div>
     <div>
@@ -392,7 +625,7 @@ Array [
       <span
         className="color-orange"
       >
-        78e0a4366
+        faf509ea6
       </span>
     </div>
   </div>,
@@ -507,8 +740,8 @@ Array [
               href="/"
               onClick={[Function]}
             >
-              <div
-                className="MuiAvatar-root MuiAvatar-circle Menu-greenAvatar-70 MuiAvatar-colorDefault"
+              <span
+                className="MuiAvatar-root MuiAvatar-circle Menu-greenAvatar-90 MuiAvatar-colorDefault"
               >
                 <svg
                   aria-hidden="true"
@@ -520,6 +753,38 @@ Array [
                     d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"
                   />
                 </svg>
+              </span>
+            </a>
+            <a
+              href="/journey"
+              onClick={[Function]}
+            >
+              <div
+                className="MuiAvatar-root MuiAvatar-circle Menu-greenAvatar-90 MuiAvatar-colorDefault"
+              >
+                <svg
+                  aria-hidden="true"
+                  className="MuiSvgIcon-root"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6z"
+                  />
+                </svg>
+              </div>
+            </a>
+            <a
+              href="/blog"
+              onClick={[Function]}
+            >
+              <div
+                className="MuiAvatar-root MuiAvatar-circle Menu-greenAvatar-90"
+              >
+                <img
+                  className="MuiAvatar-img"
+                  src="/images/blog.png"
+                />
               </div>
             </a>
             <a
@@ -527,7 +792,7 @@ Array [
               onClick={[Function]}
             >
               <div
-                className="MuiAvatar-root MuiAvatar-circle Menu-greenAvatar-70"
+                className="MuiAvatar-root MuiAvatar-circle Menu-greenAvatar-90"
               >
                 <img
                   className="MuiAvatar-img"
@@ -540,7 +805,7 @@ Array [
               onClick={[Function]}
             >
               <div
-                className="MuiAvatar-root MuiAvatar-circle Menu-greenAvatar-70 MuiAvatar-colorDefault"
+                className="MuiAvatar-root MuiAvatar-circle Menu-greenAvatar-90 MuiAvatar-colorDefault"
               >
                 <svg
                   aria-hidden="true"
@@ -559,7 +824,7 @@ Array [
               onClick={[Function]}
             >
               <div
-                className="MuiAvatar-root MuiAvatar-circle Menu-greenAvatar-70 MuiAvatar-colorDefault"
+                className="MuiAvatar-root MuiAvatar-circle Menu-greenAvatar-90 MuiAvatar-colorDefault"
               >
                 <svg
                   aria-hidden="true"
@@ -573,42 +838,12 @@ Array [
                 </svg>
               </div>
             </a>
-            <div
-              className="MuiAvatar-root MuiAvatar-circle EditBlog-greenAvatar-61 EditBlog-greenAvatar-1 MuiAvatar-colorDefault"
-              onClick={[Function]}
-            >
-              <svg
-                aria-hidden="true"
-                className="MuiSvgIcon-root"
-                focusable="false"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M17 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V7l-4-4zm-5 16c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3zm3-10H5V5h10v4z"
-                />
-              </svg>
-            </div>
-            <div
-              className="MuiAvatar-root MuiAvatar-circle EditBlog-greenAvatar-61 EditBlog-greenAvatar-1 MuiAvatar-colorDefault"
-              onClick={[Function]}
-            >
-              <svg
-                aria-hidden="true"
-                className="MuiSvgIcon-root"
-                focusable="false"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M5 4v2h14V4H5zm0 10h4v6h6v-6h4l-7-7-7 7z"
-                />
-              </svg>
-            </div>
             <a
               href="/blog/images"
               onClick={[Function]}
             >
               <div
-                className="MuiAvatar-root MuiAvatar-circle Menu-greenAvatar-70 MuiAvatar-colorDefault"
+                className="MuiAvatar-root MuiAvatar-circle Menu-greenAvatar-90 MuiAvatar-colorDefault"
               >
                 <svg
                   aria-hidden="true"
@@ -623,16 +858,50 @@ Array [
               </div>
             </a>
           </div>
+          <div
+            className="MuiGrid-root MuiGrid-container"
+          >
+            <div
+              className="MuiAvatar-root MuiAvatar-circle EditBlog-greenAvatar-81 EditBlog-greenAvatar-1 MuiAvatar-colorDefault"
+              onClick={[Function]}
+            >
+              <svg
+                aria-hidden="true"
+                className="MuiSvgIcon-root"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M17 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V7l-4-4zm-5 16c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3zm3-10H5V5h10v4z"
+                />
+              </svg>
+            </div>
+            <div
+              className="MuiAvatar-root MuiAvatar-circle EditBlog-greenAvatar-81 EditBlog-greenAvatar-1 MuiAvatar-colorDefault"
+              onClick={[Function]}
+            >
+              <svg
+                aria-hidden="true"
+                className="MuiSvgIcon-root"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M5 4v2h14V4H5zm0 10h4v6h6v-6h4l-7-7-7 7z"
+                />
+              </svg>
+            </div>
+          </div>
         </div>
       </div>
       <div
-        className="EditBlog-root-62 EditBlog-root-2"
+        className="EditBlog-root-82 EditBlog-root-2"
       >
         <div
           className="MuiFormControl-root MuiTextField-root MuiFormControl-fullWidth"
         >
           <label
-            className="MuiFormLabel-root MuiInputLabel-root EditBlog-floatingLabelFocusStyle-63 EditBlog-floatingLabelFocusStyle-3 MuiInputLabel-formControl MuiInputLabel-animated"
+            className="MuiFormLabel-root MuiInputLabel-root EditBlog-floatingLabelFocusStyle-83 EditBlog-floatingLabelFocusStyle-3 MuiInputLabel-formControl MuiInputLabel-animated"
             data-shrink={false}
             htmlFor="postTitle"
             id="postTitle-label"
@@ -640,7 +909,7 @@ Array [
             Post Title
           </label>
           <div
-            className="MuiInputBase-root MuiInput-root MuiInput-underline EditBlog-materialInput-64 EditBlog-materialInput-4 MuiInputBase-fullWidth MuiInput-fullWidth MuiInputBase-formControl MuiInput-formControl"
+            className="MuiInputBase-root MuiInput-root MuiInput-underline EditBlog-materialInput-84 EditBlog-materialInput-4 MuiInputBase-fullWidth MuiInput-fullWidth MuiInputBase-formControl MuiInput-formControl"
             onClick={[Function]}
           >
             <input
@@ -671,7 +940,7 @@ Array [
             className="MuiFormControl-root MuiTextField-root MuiFormControl-fullWidth"
           >
             <label
-              className="MuiFormLabel-root MuiInputLabel-root EditBlog-floatingLabelFocusStyle-63 EditBlog-floatingLabelFocusStyle-3 MuiInputLabel-formControl MuiInputLabel-animated"
+              className="MuiFormLabel-root MuiInputLabel-root EditBlog-floatingLabelFocusStyle-83 EditBlog-floatingLabelFocusStyle-3 MuiInputLabel-formControl MuiInputLabel-animated"
               data-shrink={false}
               htmlFor="coverPhotoUrl"
               id="coverPhotoUrl-label"
@@ -679,7 +948,7 @@ Array [
               Cover Photo Url
             </label>
             <div
-              className="MuiInputBase-root MuiInput-root MuiInput-underline EditBlog-materialInput-64 EditBlog-materialInput-4 MuiInputBase-fullWidth MuiInput-fullWidth MuiInputBase-formControl MuiInput-formControl"
+              className="MuiInputBase-root MuiInput-root MuiInput-underline EditBlog-materialInput-84 EditBlog-materialInput-4 MuiInputBase-fullWidth MuiInput-fullWidth MuiInputBase-formControl MuiInput-formControl"
               onClick={[Function]}
             >
               <input
@@ -1020,10 +1289,10 @@ Array [
       </div>
       <br />
       <div
-        className="MuiFormControl-root MuiTextField-root EditBlog-materialTextArea-65 EditBlog-materialTextArea-5 MuiFormControl-marginNormal MuiFormControl-fullWidth"
+        className="MuiFormControl-root MuiTextField-root EditBlog-materialTextArea-85 EditBlog-materialTextArea-5 MuiFormControl-marginNormal MuiFormControl-fullWidth"
       >
         <label
-          className="MuiFormLabel-root MuiInputLabel-root EditBlog-floatingLabelFocusStyle-63 EditBlog-floatingLabelFocusStyle-3 MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
+          className="MuiFormLabel-root MuiInputLabel-root EditBlog-floatingLabelFocusStyle-83 EditBlog-floatingLabelFocusStyle-3 MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
           data-shrink={false}
           htmlFor="description"
           id="description-label"
@@ -1031,7 +1300,7 @@ Array [
           Post Description
         </label>
         <div
-          className="MuiInputBase-root MuiOutlinedInput-root EditBlog-materialTextArea-65 EditBlog-materialTextArea-5 MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-multiline MuiOutlinedInput-multiline"
+          className="MuiInputBase-root MuiOutlinedInput-root EditBlog-materialTextArea-85 EditBlog-materialTextArea-5 MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-multiline MuiOutlinedInput-multiline"
           onClick={[Function]}
         >
           <textarea
@@ -1050,10 +1319,10 @@ Array [
           />
           <fieldset
             aria-hidden={true}
-            className="PrivateNotchedOutline-root-81 MuiOutlinedInput-notchedOutline"
+            className="PrivateNotchedOutline-root-101 MuiOutlinedInput-notchedOutline"
           >
             <legend
-              className="PrivateNotchedOutline-legendLabelled-83"
+              className="PrivateNotchedOutline-legendLabelled-103"
             >
               <span>
                 Post Description
@@ -1092,10 +1361,10 @@ I encourage you to never compromise your integrity by trying to be or say or fee
 And – more importantly – never compromise your potential to grow due to self-limiting doubts. Instead, embrace your confidence and believe in yourself because you really can do anything you put your mind to."
       />
       <div
-        className="MuiFormControl-root MuiTextField-root EditBlog-materialTextArea-65 EditBlog-materialTextArea-5 MuiFormControl-marginNormal MuiFormControl-fullWidth"
+        className="MuiFormControl-root MuiTextField-root EditBlog-materialTextArea-85 EditBlog-materialTextArea-5 MuiFormControl-marginNormal MuiFormControl-fullWidth"
       >
         <label
-          className="MuiFormLabel-root MuiInputLabel-root EditBlog-floatingLabelFocusStyle-63 EditBlog-floatingLabelFocusStyle-3 MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
+          className="MuiFormLabel-root MuiInputLabel-root EditBlog-floatingLabelFocusStyle-83 EditBlog-floatingLabelFocusStyle-3 MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
           data-shrink={false}
           htmlFor="grammar-check"
           id="grammar-check-label"
@@ -1103,7 +1372,7 @@ And – more importantly – never compromise your potential to grow due to self
           Post Grammar Checker
         </label>
         <div
-          className="MuiInputBase-root MuiOutlinedInput-root EditBlog-materialTextArea-65 EditBlog-materialTextArea-5 MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-multiline MuiOutlinedInput-multiline"
+          className="MuiInputBase-root MuiOutlinedInput-root EditBlog-materialTextArea-85 EditBlog-materialTextArea-5 MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-multiline MuiOutlinedInput-multiline"
           onClick={[Function]}
         >
           <textarea
@@ -1134,10 +1403,10 @@ And – more importantly – never compromise your potential to grow due to self
           />
           <fieldset
             aria-hidden={true}
-            className="PrivateNotchedOutline-root-81 MuiOutlinedInput-notchedOutline"
+            className="PrivateNotchedOutline-root-101 MuiOutlinedInput-notchedOutline"
           >
             <legend
-              className="PrivateNotchedOutline-legendLabelled-83"
+              className="PrivateNotchedOutline-legendLabelled-103"
             >
               <span>
                 Post Grammar Checker
@@ -1148,7 +1417,7 @@ And – more importantly – never compromise your potential to grow due to self
       </div>
     </div>
     <footer
-      className="makeStyles-footer-85"
+      className="makeStyles-footer-105"
     >
       <div
         className="MuiContainer-root MuiContainer-maxWidthLg"
@@ -1177,15 +1446,43 @@ And – more importantly – never compromise your potential to grow due to self
         <p
           className="MuiTypography-root MuiTypography-body2 MuiTypography-alignCenter"
         >
+          <a
+            href="/resume"
+            onClick={[Function]}
+          >
+            Resume
+          </a>
+           
+        </p>
+        <p
+          className="MuiTypography-root MuiTypography-body2 MuiTypography-alignCenter"
+        >
           Copyright © 
           <a
             href="https://zemuldo.com/"
-            onClick={[Function]}
           >
             Zemuldo
           </a>
-           
-          2020
+          , 
+          2021
+          <span>
+            ,
+            <a
+              href="/privacy-policy"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+               Privacy
+            </a>
+            ,
+            <a
+              href="/terms-and-conditions"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+               Terms
+            </a>
+          </span>
         </p>
       </div>
     </footer>
@@ -1214,7 +1511,7 @@ Array [
         className="color-orange"
       >
          
-        0.0.1
+        0.4.6
       </span>
     </div>
     <div>
@@ -1232,7 +1529,7 @@ Array [
       <span
         className="color-orange"
       >
-        78e0a4366
+        faf509ea6
       </span>
     </div>
   </div>,
@@ -1341,7 +1638,7 @@ Array [
             href="/"
             onClick={[Function]}
           >
-            <div
+            <span
               className="MuiAvatar-root MuiAvatar-circle Menu-greenAvatar-1 MuiAvatar-colorDefault"
             >
               <svg
@@ -1354,10 +1651,10 @@ Array [
                   d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"
                 />
               </svg>
-            </div>
+            </span>
           </a>
           <a
-            href="/blog/images"
+            href="/journey"
             onClick={[Function]}
           >
             <div
@@ -1370,12 +1667,28 @@ Array [
                 viewBox="0 0 24 24"
               >
                 <path
-                  d="M22 16V4c0-1.1-.9-2-2-2H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2zm-11-4l2.03 2.71L16 11l4 5H8l3-4zM2 6v14c0 1.1.9 2 2 2h14v-2H4V6H2z"
+                  d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6z"
                 />
               </svg>
             </div>
           </a>
+          <a
+            href="/blog"
+            onClick={[Function]}
+          >
+            <div
+              className="MuiAvatar-root MuiAvatar-circle Menu-greenAvatar-1"
+            >
+              <img
+                className="MuiAvatar-img"
+                src="/images/blog.png"
+              />
+            </div>
+          </a>
         </div>
+        <div
+          className="MuiGrid-root MuiGrid-container"
+        />
       </div>
     </div>
     <div
@@ -1910,15 +2223,43 @@ Array [
         <p
           className="MuiTypography-root MuiTypography-body2 MuiTypography-alignCenter"
         >
+          <a
+            href="/resume"
+            onClick={[Function]}
+          >
+            Resume
+          </a>
+           
+        </p>
+        <p
+          className="MuiTypography-root MuiTypography-body2 MuiTypography-alignCenter"
+        >
           Copyright © 
           <a
             href="https://zemuldo.com/"
-            onClick={[Function]}
           >
             Zemuldo
           </a>
-           
-          2020
+          , 
+          2021
+          <span>
+            ,
+            <a
+              href="/privacy-policy"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+               Privacy
+            </a>
+            ,
+            <a
+              href="/terms-and-conditions"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+               Terms
+            </a>
+          </span>
         </p>
       </div>
     </footer>
@@ -1947,7 +2288,7 @@ Array [
         className="color-orange"
       >
          
-        0.0.1
+        0.4.6
       </span>
     </div>
     <div>
@@ -1965,7 +2306,7 @@ Array [
       <span
         className="color-orange"
       >
-        78e0a4366
+        faf509ea6
       </span>
     </div>
   </div>,
@@ -2052,22 +2393,453 @@ Array [
         </a>
       </div>
     </div>
+    <div />
     <div
+      className="MuiContainer-root MuiContainer-maxWidthMd"
       style={
         Object {
           "color": "white",
+          "fontFamily": "'Courier New', Courier, monospace",
+          "fontSize": "18px",
         }
       }
     >
-      Please wait...
+      <div
+        className="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-center MuiGrid-justify-xs-center"
+      >
+        <div
+          style={
+            Object {
+              "margin": "10px 0px 10px 0px",
+            }
+          }
+        >
+          <div
+            className="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-center MuiGrid-justify-xs-center"
+          >
+            <a
+              href="/"
+              onClick={[Function]}
+            >
+              <span
+                className="MuiAvatar-root MuiAvatar-circle Menu-greenAvatar-44 MuiAvatar-colorDefault"
+              >
+                <svg
+                  aria-hidden="true"
+                  className="MuiSvgIcon-root"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"
+                  />
+                </svg>
+              </span>
+            </a>
+            <a
+              href="/journey"
+              onClick={[Function]}
+            >
+              <div
+                className="MuiAvatar-root MuiAvatar-circle Menu-greenAvatar-44 MuiAvatar-colorDefault"
+              >
+                <svg
+                  aria-hidden="true"
+                  className="MuiSvgIcon-root"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6z"
+                  />
+                </svg>
+              </div>
+            </a>
+            <a
+              href="/blog"
+              onClick={[Function]}
+            >
+              <div
+                className="MuiAvatar-root MuiAvatar-circle Menu-greenAvatar-44"
+              >
+                <img
+                  className="MuiAvatar-img"
+                  src="/images/blog.png"
+                />
+              </div>
+            </a>
+          </div>
+          <div
+            className="MuiGrid-root MuiGrid-container"
+          >
+            <div
+              className="MuiAvatar-root MuiAvatar-circle NewBlog-greenAvatar-35 NewBlog-greenAvatar-1 MuiAvatar-colorDefault"
+              onClick={[Function]}
+            >
+              <svg
+                aria-hidden="true"
+                className="MuiSvgIcon-root"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M17 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V7l-4-4zm-5 16c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3zm3-10H5V5h10v4z"
+                />
+              </svg>
+            </div>
+            <div
+              className="MuiAvatar-root MuiAvatar-circle NewBlog-greenAvatar-35 NewBlog-greenAvatar-1 MuiAvatar-colorDefault"
+              onClick={[Function]}
+            >
+              <svg
+                aria-hidden="true"
+                className="MuiSvgIcon-root"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M5 4v2h14V4H5zm0 10h4v6h6v-6h4l-7-7-7 7z"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="NewBlog-root-36 NewBlog-root-2"
+      >
+        <div
+          className="MuiFormControl-root MuiTextField-root MuiFormControl-fullWidth"
+        >
+          <label
+            className="MuiFormLabel-root MuiInputLabel-root NewBlog-floatingLabelFocusStyle-37 NewBlog-floatingLabelFocusStyle-3 MuiInputLabel-formControl MuiInputLabel-animated"
+            data-shrink={false}
+            htmlFor="postTitle"
+            id="postTitle-label"
+          >
+            Post Title
+          </label>
+          <div
+            className="MuiInputBase-root MuiInput-root MuiInput-underline NewBlog-materialInput-38 NewBlog-materialInput-4 MuiInputBase-fullWidth MuiInput-fullWidth MuiInputBase-formControl MuiInput-formControl"
+            onClick={[Function]}
+          >
+            <input
+              aria-invalid={false}
+              autoFocus={false}
+              className="MuiInputBase-input MuiInput-input"
+              disabled={false}
+              id="postTitle"
+              onAnimationStart={[Function]}
+              onBlur={[Function]}
+              onChange={[Function]}
+              onFocus={[Function]}
+              required={false}
+              type="text"
+              value=""
+            />
+          </div>
+        </div>
+      </div>
+      <br />
+      <div
+        className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2"
+      >
+        <div
+          className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6"
+        >
+          <div
+            className="MuiFormControl-root MuiTextField-root MuiFormControl-fullWidth"
+          >
+            <label
+              className="MuiFormLabel-root MuiInputLabel-root NewBlog-floatingLabelFocusStyle-37 NewBlog-floatingLabelFocusStyle-3 MuiInputLabel-formControl MuiInputLabel-animated"
+              data-shrink={false}
+              htmlFor="coverPhotoUrl"
+              id="coverPhotoUrl-label"
+            >
+              Cover Photo Url
+            </label>
+            <div
+              className="MuiInputBase-root MuiInput-root MuiInput-underline NewBlog-materialInput-38 NewBlog-materialInput-4 MuiInputBase-fullWidth MuiInput-fullWidth MuiInputBase-formControl MuiInput-formControl"
+              onClick={[Function]}
+            >
+              <input
+                aria-invalid={false}
+                autoFocus={false}
+                className="MuiInputBase-input MuiInput-input"
+                disabled={false}
+                id="coverPhotoUrl"
+                onAnimationStart={[Function]}
+                onBlur={[Function]}
+                onChange={[Function]}
+                onFocus={[Function]}
+                required={false}
+                type="text"
+                value=""
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6"
+        >
+          <div
+            style={
+              Object {
+                "marginTop": "26px",
+              }
+            }
+          >
+            <div
+              className="basic-multi-select css-2b097c-container"
+              onKeyDown={[Function]}
+            >
+              <div
+                className="select__control css-1b8hiff-control"
+                onMouseDown={[Function]}
+                onTouchEnd={[Function]}
+              >
+                <div
+                  className="select__value-container select__value-container--is-multi css-17rus17-ValueContainer"
+                >
+                  <div
+                    className="select__placeholder css-7y8ne7-placeholder"
+                  >
+                    Select...
+                  </div>
+                  <div
+                    className="css-i2lz7n-Input"
+                  >
+                    <div
+                      className="select__input"
+                      style={
+                        Object {
+                          "display": "inline-block",
+                        }
+                      }
+                    >
+                      <input
+                        aria-autocomplete="list"
+                        autoCapitalize="none"
+                        autoComplete="off"
+                        autoCorrect="off"
+                        disabled={false}
+                        id="react-select-select-tags-input"
+                        onBlur={[Function]}
+                        onChange={[Function]}
+                        onFocus={[Function]}
+                        spellCheck="false"
+                        style={
+                          Object {
+                            "background": 0,
+                            "border": 0,
+                            "boxSizing": "content-box",
+                            "color": "inherit",
+                            "fontSize": "inherit",
+                            "label": "input",
+                            "opacity": 1,
+                            "outline": 0,
+                            "padding": 0,
+                            "width": "1px",
+                          }
+                        }
+                        tabIndex="0"
+                        type="text"
+                        value=""
+                      />
+                      <div
+                        style={
+                          Object {
+                            "height": 0,
+                            "left": 0,
+                            "overflow": "scroll",
+                            "position": "absolute",
+                            "top": 0,
+                            "visibility": "hidden",
+                            "whiteSpace": "pre",
+                          }
+                        }
+                      >
+                        
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  className="select__indicators css-1g48xl4-IndicatorsContainer"
+                >
+                  <span
+                    className="select__indicator-separator css-1okebmr-indicatorSeparator"
+                  />
+                  <div
+                    aria-hidden="true"
+                    className="select__indicator select__dropdown-indicator css-tlfecz-indicatorContainer"
+                    onMouseDown={[Function]}
+                    onTouchEnd={[Function]}
+                  >
+                    <svg
+                      aria-hidden="true"
+                      className="css-tj5bde-Svg"
+                      focusable="false"
+                      height={20}
+                      viewBox="0 0 20 20"
+                      width={20}
+                    >
+                      <path
+                        d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <input
+                  name="colors"
+                  type="hidden"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br />
+      <div
+        className="MuiFormControl-root MuiTextField-root NewBlog-materialTextArea-39 NewBlog-materialTextArea-5 MuiFormControl-marginNormal MuiFormControl-fullWidth"
+      >
+        <label
+          className="MuiFormLabel-root MuiInputLabel-root NewBlog-floatingLabelFocusStyle-37 NewBlog-floatingLabelFocusStyle-3 MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
+          data-shrink={false}
+          htmlFor="description"
+          id="description-label"
+        >
+          Post Description
+        </label>
+        <div
+          className="MuiInputBase-root MuiOutlinedInput-root NewBlog-materialTextArea-39 NewBlog-materialTextArea-5 MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-multiline MuiOutlinedInput-multiline"
+          onClick={[Function]}
+        >
+          <textarea
+            aria-invalid={false}
+            autoFocus={false}
+            className="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputMultiline MuiOutlinedInput-inputMultiline"
+            disabled={false}
+            id="description"
+            onAnimationStart={[Function]}
+            onBlur={[Function]}
+            onChange={[Function]}
+            onFocus={[Function]}
+            required={false}
+            rows="4"
+            value=""
+          />
+          <fieldset
+            aria-hidden={true}
+            className="PrivateNotchedOutline-root-55 MuiOutlinedInput-notchedOutline"
+          >
+            <legend
+              className="PrivateNotchedOutline-legendLabelled-57"
+            >
+              <span>
+                Post Description
+              </span>
+            </legend>
+          </fieldset>
+        </div>
+      </div>
     </div>
+    <div
+      className="MuiContainer-root blog-md MuiContainer-maxWidthMd"
+      style={
+        Object {
+          "color": "white",
+          "fontFamily": "'monospaced courier-new', Poppins, sans-serif !important",
+        }
+      }
+    >
+      <h3>
+        Post Body Markdown
+      </h3>
+      <Dynamic
+        onChange={[Function]}
+        value=""
+      />
+    </div>
+    <footer
+      className="makeStyles-footer-59"
+    >
+      <div
+        className="MuiContainer-root MuiContainer-maxWidthLg"
+      >
+        <p
+          className="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom MuiTypography-alignCenter"
+        >
+          <span
+            className="color-1"
+          >
+            Danstan Onyango ~ Zemuldo
+          </span>
+        </p>
+        <p
+          className="MuiTypography-root MuiTypography-subtitle1 MuiTypography-alignCenter"
+        >
+          Want to talk? Check my 
+          <a
+            href="https://calendly.com/zemuldo/general-chat"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Calendly
+          </a>
+        </p>
+        <p
+          className="MuiTypography-root MuiTypography-body2 MuiTypography-alignCenter"
+        >
+          <a
+            href="/resume"
+            onClick={[Function]}
+          >
+            Resume
+          </a>
+           
+        </p>
+        <p
+          className="MuiTypography-root MuiTypography-body2 MuiTypography-alignCenter"
+        >
+          Copyright © 
+          <a
+            href="https://zemuldo.com/"
+          >
+            Zemuldo
+          </a>
+          , 
+          2021
+          <span>
+            ,
+            <a
+              href="/privacy-policy"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+               Privacy
+            </a>
+            ,
+            <a
+              href="/terms-and-conditions"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+               Terms
+            </a>
+          </span>
+        </p>
+      </div>
+    </footer>
   </div>,
 ]
 `;
 
 exports[`Storyshots Home Page Footer 1`] = `
 <footer
-  className="makeStyles-footer-87"
+  className="makeStyles-footer-107"
 >
   <div
     className="MuiContainer-root MuiContainer-maxWidthLg"
@@ -2096,15 +2868,43 @@ exports[`Storyshots Home Page Footer 1`] = `
     <p
       className="MuiTypography-root MuiTypography-body2 MuiTypography-alignCenter"
     >
+      <a
+        href="/resume"
+        onClick={[Function]}
+      >
+        Resume
+      </a>
+       
+    </p>
+    <p
+      className="MuiTypography-root MuiTypography-body2 MuiTypography-alignCenter"
+    >
       Copyright © 
       <a
         href="https://zemuldo.com/"
-        onClick={[Function]}
       >
         Zemuldo
       </a>
-       
-      2020
+      , 
+      2021
+      <span>
+        ,
+        <a
+          href="/privacy-policy"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+           Privacy
+        </a>
+        ,
+        <a
+          href="/terms-and-conditions"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+           Terms
+        </a>
+      </span>
     </p>
   </div>
 </footer>
@@ -2131,7 +2931,7 @@ Array [
         className="color-orange"
       >
          
-        0.0.1
+        0.4.6
       </span>
     </div>
     <div>
@@ -2149,7 +2949,7 @@ Array [
       <span
         className="color-orange"
       >
-        78e0a4366
+        faf509ea6
       </span>
     </div>
   </div>,
@@ -2252,14 +3052,7 @@ Array [
             <div
               className="row"
             >
-              <div
-                style={
-                  Object {
-                    "marginTop": "-10px",
-                    "paddingLeft": "5px",
-                  }
-                }
-              >
+              <div>
                 <div
                   itemProp="founder"
                   itemScope={true}
@@ -2316,77 +3109,93 @@ Array [
                     }
                   >
                     <p>
-                      Loves Functional Programming and Developing Distributed Systems. Curious, Peculiar.
+                      Loves Functional Programming and Developing Distributed Systems. Curious, Peculiar. Chess.
                     </p>
                     <p>
-                      Fully Self Taught.
+                      Fully Self Taught. Enjoys creating technical content and mentoring. See my 
+                       
+                      <a
+                        href="/blog"
+                        onClick={[Function]}
+                      >
+                        Blog
+                      </a>
                     </p>
                     <p>
                       <span>
-                        Formerly at 
+                        Program Manager at 
+                         
+                         
                       </span>
-                      <b
+                      <span
                         itemProp="organization"
                         itemScope={true}
                         itemType="http://schema.org/Organization"
                       >
                         <a
-                          className="color-orange"
-                          href="https://safeboda.com"
+                          href="https://microsoft.com"
                           itemProp="url"
                           rel="noopener noreferrer"
+                          style={
+                            Object {
+                              "backgroundColor": "transparent",
+                              "opacity": 0.9,
+                            }
+                          }
                           target="_blank"
                         >
                           <span
                             itemProp="name"
                           >
-                             SafeBoda
+                            <span
+                              style={
+                                Object {
+                                  "color": "#F26522",
+                                }
+                              }
+                            >
+                              Micr
+                            </span>
+                            <span
+                              style={
+                                Object {
+                                  "color": "#FFC20E",
+                                }
+                              }
+                            >
+                              o
+                            </span>
+                            <span
+                              style={
+                                Object {
+                                  "color": "#8DC63F",
+                                }
+                              }
+                            >
+                              Sof
+                            </span>
+                            <span
+                              style={
+                                Object {
+                                  "color": "#00AEEF",
+                                }
+                              }
+                            >
+                              t
+                            </span>
                           </span>
                         </a>
-                      </b>
-                      <span>
-                        .
                       </span>
                     </p>
-                  </h3>
-                  <h4
-                    className="color-6 font-c-cn-m"
-                    style={
-                      Object {
-                        "fontSize": "1.8em",
-                      }
-                    }
-                  >
-                    <div
-                      className="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-center MuiGrid-justify-xs-space-between"
+                    See my 
+                     
+                    <a
+                      href="/journey"
+                      onClick={[Function]}
                     >
-                      <a
-                        href="/journey"
-                        onClick={[Function]}
-                      >
-                        <b>
-                          Journey
-                        </b>
-                      </a>
-                      <span
-                        style={
-                          Object {
-                            "color": "white",
-                          }
-                        }
-                      >
-                         | 
-                      </span>
-                      <a
-                        href="/blog"
-                        onClick={[Function]}
-                      >
-                        <b>
-                          Blog
-                        </b>
-                      </a>
-                    </div>
-                  </h4>
+                      Journey
+                    </a>
+                  </h3>
                 </div>
                 <div
                   className="img-frame"
@@ -2714,7 +3523,7 @@ Array [
       </div>
     </div>
     <footer
-      className="makeStyles-footer-86"
+      className="makeStyles-footer-106"
     >
       <div
         className="MuiContainer-root MuiContainer-maxWidthLg"
@@ -2743,15 +3552,43 @@ Array [
         <p
           className="MuiTypography-root MuiTypography-body2 MuiTypography-alignCenter"
         >
+          <a
+            href="/resume"
+            onClick={[Function]}
+          >
+            Resume
+          </a>
+           
+        </p>
+        <p
+          className="MuiTypography-root MuiTypography-body2 MuiTypography-alignCenter"
+        >
           Copyright © 
           <a
             href="https://zemuldo.com/"
-            onClick={[Function]}
           >
             Zemuldo
           </a>
-           
-          2020
+          , 
+          2021
+          <span>
+            ,
+            <a
+              href="/privacy-policy"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+               Privacy
+            </a>
+            ,
+            <a
+              href="/terms-and-conditions"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+               Terms
+            </a>
+          </span>
         </p>
       </div>
     </footer>
@@ -3327,7 +4164,7 @@ Array [
         className="color-orange"
       >
          
-        0.0.1
+        0.4.6
       </span>
     </div>
     <div>
@@ -3345,7 +4182,7 @@ Array [
       <span
         className="color-orange"
       >
-        78e0a4366
+        faf509ea6
       </span>
     </div>
   </div>,
@@ -3452,8 +4289,8 @@ Array [
               href="/"
               onClick={[Function]}
             >
-              <div
-                className="MuiAvatar-root MuiAvatar-circle Menu-greenAvatar-88 MuiAvatar-colorDefault"
+              <span
+                className="MuiAvatar-root MuiAvatar-circle Menu-greenAvatar-108 MuiAvatar-colorDefault"
               >
                 <svg
                   aria-hidden="true"
@@ -3465,14 +4302,14 @@ Array [
                     d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"
                   />
                 </svg>
-              </div>
+              </span>
             </a>
             <a
-              href="/blog/images"
+              href="/journey"
               onClick={[Function]}
             >
               <div
-                className="MuiAvatar-root MuiAvatar-circle Menu-greenAvatar-88 MuiAvatar-colorDefault"
+                className="MuiAvatar-root MuiAvatar-circle Menu-greenAvatar-108 MuiAvatar-colorDefault"
               >
                 <svg
                   aria-hidden="true"
@@ -3481,12 +4318,28 @@ Array [
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M22 16V4c0-1.1-.9-2-2-2H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2zm-11-4l2.03 2.71L16 11l4 5H8l3-4zM2 6v14c0 1.1.9 2 2 2h14v-2H4V6H2z"
+                    d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6z"
                   />
                 </svg>
               </div>
             </a>
+            <a
+              href="/blog"
+              onClick={[Function]}
+            >
+              <div
+                className="MuiAvatar-root MuiAvatar-circle Menu-greenAvatar-108"
+              >
+                <img
+                  className="MuiAvatar-img"
+                  src="/images/blog.png"
+                />
+              </div>
+            </a>
           </div>
+          <div
+            className="MuiGrid-root MuiGrid-container"
+          />
         </div>
       </div>
     </div>
@@ -3524,7 +4377,7 @@ Array [
                     <span>
                        April, 2019
                        → 
-                      Present
+                      August, 2020
                     </span>
                     <span>
                        ~ 1 year
@@ -5123,7 +5976,7 @@ Array [
       </div>
     </div>
     <footer
-      className="makeStyles-footer-99"
+      className="makeStyles-footer-119"
     >
       <div
         className="MuiContainer-root MuiContainer-maxWidthLg"
@@ -5152,15 +6005,43 @@ Array [
         <p
           className="MuiTypography-root MuiTypography-body2 MuiTypography-alignCenter"
         >
+          <a
+            href="/resume"
+            onClick={[Function]}
+          >
+            Resume
+          </a>
+           
+        </p>
+        <p
+          className="MuiTypography-root MuiTypography-body2 MuiTypography-alignCenter"
+        >
           Copyright © 
           <a
             href="https://zemuldo.com/"
-            onClick={[Function]}
           >
             Zemuldo
           </a>
-           
-          2020
+          , 
+          2021
+          <span>
+            ,
+            <a
+              href="/privacy-policy"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+               Privacy
+            </a>
+            ,
+            <a
+              href="/terms-and-conditions"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+               Terms
+            </a>
+          </span>
         </p>
       </div>
     </footer>
@@ -5219,7 +6100,7 @@ exports[`Storyshots Login Not Logged 1`] = `
               className="header-frame"
               style={
                 Object {
-                  "marginTop": "30%",
+                  "marginTop": "50%",
                 }
               }
             >
@@ -5233,40 +6114,20 @@ exports[`Storyshots Login Not Logged 1`] = `
               >
                 <div
                   className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6"
-                >
-                  <a
-                    className="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
-                    onBlur={[Function]}
-                    onFocus={[Function]}
-                  >
-                    <h1
-                      className="color-6"
-                    >
-                      Twitter
-                    </h1>
-                  </a>
-                  <hr
-                    className="hr-red-gradient-opposite"
-                  />
-                </div>
+                />
                 <div
-                  className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6"
+                  className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-12"
                 >
                   <a
-                    className="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
                     href="undefined/user/auth/github?redirectTo=undefined"
-                    onBlur={[Function]}
-                    onFocus={[Function]}
+                    onClick={[Function]}
                   >
                     <h1
-                      className="color-6"
+                      className="color-6 login-button"
                     >
-                      Github
+                      Use Github
                     </h1>
                   </a>
-                  <hr
-                    className="hr-red-gradient"
-                  />
                 </div>
               </div>
             </div>
