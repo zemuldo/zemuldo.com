@@ -43,9 +43,9 @@ export default function Footer() {
           {new Date().getFullYear()}
           <span>
             ,
-            <a> Privacy</a>
+            <a target="_blank" rel="noopener noreferrer" href='/privacy-policy'> Privacy</a>
             ,
-            <a> Terms</a>
+            <a target="_blank" rel="noopener noreferrer" href='/terms-and-conditions'> Terms</a>
           </span>
         </Typography>
       </Container>
