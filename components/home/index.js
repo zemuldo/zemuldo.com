@@ -12,7 +12,7 @@ export default function Home() {
         data-stellar-background-ratio="0.6"
       >
         <div className="display-table">
-          <div className="display-table-cell">
+          <div  className="display-table-cell">
             <div className="container">
               <div className="row">
                 <div>
