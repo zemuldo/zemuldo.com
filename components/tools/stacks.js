@@ -1,5 +1,11 @@
 export  const options = [
-  { value: 'javascript', label: 'JavaScript', color: '#fcba03' },
+  { value: 'authentication', label: 'Authentication', color: 'rgb(63, 102, 176)' },
+  { value: 'authorization', label: 'Authorization', color: '#fcba03' },
+  { value: 'openid', label: 'OpenID', color: '#fcba03' },
+  { value: 'openid-connect', label: 'OpenId Connect', color: '#05daff' },
+  { value: 'oauth', label: 'OAuth', color: '#fcba03' },
+  { value: 'oauth2', label: 'OAuth2', color: '#05daff' },
+
   { value: 'nodejs', label: 'NodeJS', color: '#40a832' },
   { value: 'reactjs', label: 'ReactJS', color: '#08a6f3' },
   { value: 'react-native', label: 'React Native', color: '#08a6f3' },
