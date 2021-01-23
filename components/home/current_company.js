@@ -25,6 +25,7 @@ export default function CurrentCompany() {
           </span>
         </a>
       </span>
+      <span>.</span>
     </p>
   );
 }

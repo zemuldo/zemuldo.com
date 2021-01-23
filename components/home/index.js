@@ -30,13 +30,14 @@ export default function Home() {
                         Fully Self Taught. Enjoys creating technical content and mentoring. See my {' '}
                         <CustomLink href='/blog'>
                            Blog
-                        </CustomLink>
+                        </CustomLink>.
                       </p>
                       <CurrentCompany/>
                       See my {' '}
                       <CustomLink href='/journey'>
                           Journey
                       </CustomLink>
+                      <span>.</span>
                     </h3>
                   </div>
                   <div
@@ -45,7 +46,8 @@ export default function Home() {
                   >
                     <img
                       id="me-pic"
-                      src="/images/logo/code-ninja.png"
+                      style={{borderRadius: '50%'}}
+                      src="/images/logo/me.jpg"
                       alt="Danstan Onyango, Zemuldo - Working at home"
                     />
                   </div>

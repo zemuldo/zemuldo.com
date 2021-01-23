@@ -3120,6 +3120,7 @@ Array [
                       >
                         Blog
                       </a>
+                      .
                     </p>
                     <p>
                       <span>
@@ -3186,6 +3187,9 @@ Array [
                           </span>
                         </a>
                       </span>
+                      <span>
+                        .
+                      </span>
                     </p>
                     See my 
                      
@@ -3195,6 +3199,9 @@ Array [
                     >
                       Journey
                     </a>
+                    <span>
+                      .
+                    </span>
                   </h3>
                 </div>
                 <div
@@ -3204,7 +3211,12 @@ Array [
                   <img
                     alt="Danstan Onyango, Zemuldo - Working at home"
                     id="me-pic"
-                    src="/images/logo/code-ninja.png"
+                    src="/images/logo/me.jpg"
+                    style={
+                      Object {
+                        "borderRadius": "50%",
+                      }
+                    }
                   />
                 </div>
               </div>
