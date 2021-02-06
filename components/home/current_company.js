@@ -20,7 +20,7 @@ export default function CurrentCompany() {
           <span  itemProp="name">
             <span style={{color: '#F26522'}}>Micr</span>
             <span style={{color: '#FFC20E'}}>o</span>
-            <span style={{color: '#8DC63F'}}>Sof</span>
+            <span style={{color: '#8DC63F'}}>sof</span>
             <span style={{color: '#00AEEF'}}>t</span>
           </span>
         </a>
