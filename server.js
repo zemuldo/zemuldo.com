@@ -85,7 +85,7 @@ app.prepare().then(() => {
 
   server.listen(process.env.UI_PORT, err => {
     if (err) throw err;
-    logger.info(`> Ready on http://localhost:${process.env.UI_PORT}`);
+    logger.info(`> App Server Ready on http://localhost:${process.env.UI_PORT}`);
   });
 
 });
@@ -94,5 +94,5 @@ imageServer.use(express.static(path.join(__dirname, 'public')));
 
 imageServer.listen(process.env.IMAGE_SERVER_PORT, err =>{
   if (err) throw err;
-  else logger.info(`> Ready http://localhost:${process.env.IMAGE_SERVER_PORT}`);
+  else logger.info(`> Image Server Ready on http://localhost:${process.env.IMAGE_SERVER_PORT}`);
 });
