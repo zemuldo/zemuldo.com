@@ -9,7 +9,7 @@
     "companyLogo": "/images/companies/ms.png",
     "stacks": [
       { "value": "Azure", "label": "Azure Cloud", "color": "#a767f5" },
-      { "value": "Microsoft 365", "label": "Graph", "color": "#a767f5" },
+      { "value": "Microsoft 365", "label": "Microsoft 365", "color": "#a767f5" },
       { "value": "Dynamic 365", "label": "Dynamic 365", "color": "#a767f5" },
       { "value": "Graph", "label": "Graph", "color": "#a767f5" },
       { "value": "Azure AD", "label": "Azure AD", "color": "#a767f5" },
