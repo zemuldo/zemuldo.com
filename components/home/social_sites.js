@@ -1,6 +1,25 @@
 import React from 'react';
+import Tooltip from '@material-ui/core/Tooltip';
 import MouseOverPopover from '../pop_overs';
 import CustomLink from '../link';
+import { withStyles, makeStyles } from '@material-ui/core/styles';
+
+const useStylesBootstrap = makeStyles((theme) => ({
+  arrow: {
+    color: theme.palette.common.black,
+  },
+  tooltip: {
+    fontSize: '12px',
+    backgroundColor: theme.palette.common.black,
+  },
+}));
+
+
+function BootstrapTooltip(props) {
+  const classes = useStylesBootstrap();
+
+  return <Tooltip placement="bottom-start" arrow classes={classes} {...props} />;
+}
 
 const socials = [
   {
@@ -75,42 +94,40 @@ const socials = [
   }
 ];
 
-export default function SocialSites () {
+export default function SocialSites() {
   return (
-    <div style={{marginTop: '-20px'}}>
+    <div style={{ marginTop: '-20px' }}>
       <ul className="social-icon">
         <h3 className='color-1'>
-        Find me on
+          Find me on
         </h3>
         <div className='social-icon-wrapper'>
-          
-          {socials.map(s => {
-            return (
-              <MouseOverPopover color={s.color} key={s.href} hoverText={s.hoverText}>
-                <li>
-                  <a href={s.href} target="_blank"  rel="noopener noreferrer"className={s.className}>
-                    <i className={s.icon_className} />
-                  </a>
-                </li>
-              </MouseOverPopover>
-            );
-          })}
-          <MouseOverPopover color='white' hoverText="Dev.TO">
-            <li>
-              <a href="https://dev.to/zemuldo" target="_blank" rel="noopener noreferrer">
-                <img style={{ marginBottom: '-15%', width: '65%', height: '65%' }} alt="Danstan Onyango on DEV" src="/images/dev.to.png" />
-              </a>
-            </li>
-          </MouseOverPopover>
-
-
-          <MouseOverPopover color='orange' hoverText="Blog">
+          <BootstrapTooltip title="My Blog">
             <li>
               <CustomLink href="/blog">
                 <img style={{ marginBottom: '-12%', width: '55%', height: '55%', borderRadius: '50%' }} alt="Zemuldo Blog" src="/images/blog.png" />
               </CustomLink>
             </li>
-          </MouseOverPopover>
+          </BootstrapTooltip>
+          {socials.map(s => {
+            return (
+              <BootstrapTooltip key={s.href} title={s.hoverText}>
+                <li>
+                  <a href={s.href} target="_blank" rel="noopener noreferrer" className={s.className}>
+                    <i className={s.icon_className} />
+                  </a>
+                </li>
+              </BootstrapTooltip>
+
+            );
+          })}
+          <BootstrapTooltip title="Dev.To">
+            <li>
+              <a href="https://dev.to/zemuldo" target="_blank" rel="noopener noreferrer">
+                <img style={{ marginBottom: '-15%', width: '65%', height: '65%' }} alt="Danstan Onyango on DEV" src="/images/dev.to.png" />
+              </a>
+            </li>
+          </BootstrapTooltip>
         </div>
       </ul>
     </div>
