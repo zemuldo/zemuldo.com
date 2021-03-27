@@ -1,6 +1,27 @@
 [
   {
     "template": "experience",
+    "link": "https://microsoft.com",
+    "title": "Priogram Manager",
+    "startDate": "2021-01-04T00:00:00.000Z",
+    "companyName": "Microsoft",
+    "companyDescription": "Part of Identity Customer Experience (CxP) making developer jopurney as painless as should be. Ask me about MS Graph.",
+    "companyLogo": "/images/companies/ms.png",
+    "stacks": [
+      { "value": "Azure", "label": "Azure Cloud", "color": "#a767f5" },
+      { "value": "Microsoft 365", "label": "Graph", "color": "#a767f5" },
+      { "value": "Dynamic 365", "label": "Dynamic 365", "color": "#a767f5" },
+      { "value": "Graph", "label": "Graph", "color": "#a767f5" },
+      { "value": "Azure AD", "label": "Azure AD", "color": "#a767f5" },
+      { "value": "OAuth", "label": "OAuth", "color": "#a767f5" },
+      { "value": "OpenID", "label": "OpenID", "color": "#a767f5" },
+      { "value": "REST", "label": "REST", "color": "#a767f5" },
+      { "value": ".NET", "label": ".NET", "color": "white" },
+      { "value": "Javascript", "label": "JavaScript", "color": "white" }
+    ]
+  },
+  {
+    "template": "experience",
     "link": "https://safeboda.com",
     "title": "Software Engineer",
     "startDate": "2019-04-08T00:00:00.000Z",
