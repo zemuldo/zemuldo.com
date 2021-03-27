@@ -27,6 +27,8 @@ const currentPath = () => {
 
 const styles = theme => ({
   greenAvatar: {
+    width: theme.spacing(3),
+    height: theme.spacing(3),
     margin: 10,
     color: '#fff',
     backgroundColor: '#08a6f3',
@@ -35,6 +37,8 @@ const styles = theme => ({
     }
   },
   greenAvatarGreen: {
+    width: theme.spacing(3),
+    height: theme.spacing(3),
     margin: 10,
     color: '#fff',
     backgroundColor: 'green',
@@ -117,6 +121,16 @@ const styles = theme => ({
   menu: {
     width: 200,
   },
+  menuItem: {
+    display: 'flex',
+    alignItems: 'center',
+    flexWrap: 'wrap',
+    fontSize: '22px'
+  },
+  menuIcon: {
+    fontSize: '18px'
+  }
+
 });
 
 class Menu extends React.Component {
@@ -131,7 +145,7 @@ class Menu extends React.Component {
   async componentDidMount() {
     const { authorized } = this.props;
     if (authorized) {
-      const res = await fetch(`${api_url}/user`, {credentials: 'include'});
+      const res = await fetch(`${api_url}/user`, { credentials: 'include' });
       const user = await res.json();
       this.setState({ user });
     }
@@ -143,70 +157,99 @@ class Menu extends React.Component {
     return (
       <div style={{ margin: '10px 0px 10px 0px', }}>
         <Grid justify="center" alignItems="center" container >
-          
+
           <Link href='/'>
-            <Avatar component='span' className={classes.greenAvatar}>
-              <HomeIcon />
-            </Avatar>
+            <span className={classes.menuItem} >
+              <Avatar component='span' className={classes.greenAvatar}>
+                <HomeIcon />
+              </Avatar>
+              <span>Home</span>
+            </span>
           </Link>
-          
+
           <Link href='/journey'>
-            <Avatar className={classes.greenAvatar}>
-              <TrendingUpIcon />
-            </Avatar>
+
+            <span className={classes.menuItem}>
+              <Avatar className={classes.greenAvatar}>
+                <TrendingUpIcon className={classes.menuIcon} />
+              </Avatar>
+              <span>Journey</span>
+            </span>
           </Link>
 
           <Link href='/blog'>
-            <Avatar className={classes.greenAvatar} src='/images/blog.png'>
-            </Avatar>
+
+            <span className={classes.menuItem}>
+              <Avatar className={classes.greenAvatar} src='/images/blog.png'>
+              </Avatar>
+              <span>Blog</span>
+            </span>
           </Link>
 
           <ShouldRender condition={this.props.authorized}>
             <Link href='/blog/drafts'>
-              <Avatar className={classes.greenAvatar} src='/images/draft.png'>
-              </Avatar>
+
+              <span className={classes.menuItem}>
+                <Avatar className={classes.greenAvatar} src='/images/draft.png'>
+                </Avatar>
+                <span>Drafts</span>
+              </span>
             </Link>
             <Link href="/blog/new">
-              <Avatar className={classes.greenAvatar}>
-                <NewIcon />
-              </Avatar>
+
+              <span className={classes.menuItem}>
+                <Avatar className={classes.greenAvatar}>
+                  <NewIcon className={classes.menuIcon} />
+                </Avatar>
+                <span>New Post</span>
+              </span>
             </Link>
             <Link href="/blog/upload-image">
-              <Avatar className={classes.greenAvatar}>
-                <ImageIcon />
-              </Avatar>
+
+              <span className={classes.menuItem}>
+                <Avatar className={classes.greenAvatar}>
+                  <ImageIcon className={classes.menuIcon}/>
+                </Avatar>
+                <span>Uplod Image</span>
+              </span>
             </Link>
             <Link href="/blog/images">
-              <Avatar className={classes.greenAvatar}>
-                <PhotoLibraryIcon />
-              </Avatar>
+
+              <span className={classes.menuItem}>
+                <Avatar className={classes.greenAvatar}>
+                  <PhotoLibraryIcon className={classes.menuIcon}/>
+                </Avatar>
+                <span>Images</span>
+              </span>
             </Link>
           </ShouldRender>
 
-          {path.includes('/blog') && !authorized && activateLogin < 4 && 
-            <Avatar 
-              onClick = {() => this.setState({activateLogin: activateLogin + 1})} 
+          {path.includes('/blog') && !authorized && activateLogin < 4 &&
+            <Avatar
+              onClick={() => this.setState({ activateLogin: activateLogin + 1 })}
               className={classes.greenAvatarGreen}>
-              <VpnKeyIcon />
+            <VpnKeyIcon className={classes.menuIcon}/>
             </Avatar>
           }
 
           {user && <Avatar alt="User profile" className={classes.avatar} src={user.profilePhotoUrl} />}
 
-          {path.includes('/blog') && !authorized && activateLogin >= 4 && 
-          <Link href={`/blog/login?redirectTo=${path}`}>
-            <Avatar className={classes.greenAvatarGreen}>
-              <VpnKeyIcon />
-            </Avatar>
-          </Link>
+          {path.includes('/blog') && !authorized && activateLogin >= 4 &&
+            <Link href={`/blog/login?redirectTo=${path}`}>
+              <Avatar className={classes.greenAvatarGreen}>
+              <VpnKeyIcon className={classes.menuIcon} />
+              </Avatar>
+
+            </Link>
           }
-          
+
           {user &&
             <Avatar onClick={() => {
               window.location.href = '/logout';
             }} className={classes.greenAvatar}>
-              <LogOut />
-            </Avatar>}
+            <LogOut className={classes.menuIcon} />
+            </Avatar>
+          }
         </Grid>
         <Grid container>
           {children}
