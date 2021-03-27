@@ -125,10 +125,13 @@ const styles = theme => ({
     display: 'flex',
     alignItems: 'center',
     flexWrap: 'wrap',
-    fontSize: '22px'
+    fontSize: '24px',
+    '& span': {
+      marginLeft: '-6px'
+    }
   },
   menuIcon: {
-    fontSize: '18px'
+    fontSize: '16px'
   }
 
 });
@@ -161,7 +164,7 @@ class Menu extends React.Component {
           <Link href='/'>
             <span className={classes.menuItem} >
               <Avatar component='span' className={classes.greenAvatar}>
-                <HomeIcon />
+                <HomeIcon className={classes.menuIcon} />
               </Avatar>
               <span>Home</span>
             </span>
@@ -178,7 +181,6 @@ class Menu extends React.Component {
           </Link>
 
           <Link href='/blog'>
-
             <span className={classes.menuItem}>
               <Avatar className={classes.greenAvatar} src='/images/blog.png'>
               </Avatar>
@@ -188,7 +190,6 @@ class Menu extends React.Component {
 
           <ShouldRender condition={this.props.authorized}>
             <Link href='/blog/drafts'>
-
               <span className={classes.menuItem}>
                 <Avatar className={classes.greenAvatar} src='/images/draft.png'>
                 </Avatar>
@@ -196,7 +197,6 @@ class Menu extends React.Component {
               </span>
             </Link>
             <Link href="/blog/new">
-
               <span className={classes.menuItem}>
                 <Avatar className={classes.greenAvatar}>
                   <NewIcon className={classes.menuIcon} />
@@ -205,10 +205,9 @@ class Menu extends React.Component {
               </span>
             </Link>
             <Link href="/blog/upload-image">
-
               <span className={classes.menuItem}>
                 <Avatar className={classes.greenAvatar}>
-                  <ImageIcon className={classes.menuIcon}/>
+                  <ImageIcon className={classes.menuIcon} />
                 </Avatar>
                 <span>Uplod Image</span>
               </span>
@@ -217,7 +216,7 @@ class Menu extends React.Component {
 
               <span className={classes.menuItem}>
                 <Avatar className={classes.greenAvatar}>
-                  <PhotoLibraryIcon className={classes.menuIcon}/>
+                  <PhotoLibraryIcon className={classes.menuIcon} />
                 </Avatar>
                 <span>Images</span>
               </span>
@@ -228,7 +227,7 @@ class Menu extends React.Component {
             <Avatar
               onClick={() => this.setState({ activateLogin: activateLogin + 1 })}
               className={classes.greenAvatarGreen}>
-            <VpnKeyIcon className={classes.menuIcon}/>
+              <VpnKeyIcon className={classes.menuIcon} />
             </Avatar>
           }
 
@@ -237,7 +236,7 @@ class Menu extends React.Component {
           {path.includes('/blog') && !authorized && activateLogin >= 4 &&
             <Link href={`/blog/login?redirectTo=${path}`}>
               <Avatar className={classes.greenAvatarGreen}>
-              <VpnKeyIcon className={classes.menuIcon} />
+                <VpnKeyIcon className={classes.menuIcon} />
               </Avatar>
 
             </Link>
@@ -247,7 +246,7 @@ class Menu extends React.Component {
             <Avatar onClick={() => {
               window.location.href = '/logout';
             }} className={classes.greenAvatar}>
-            <LogOut className={classes.menuIcon} />
+              <LogOut className={classes.menuIcon} />
             </Avatar>
           }
         </Grid>

@@ -137,7 +137,7 @@
     };
     let s = (d.extensionConfig || {}).ApplicationInsightsAnalytics || {};
     if (!0 !== d[C] && !0 !== s[C]) {
-      let method = 'onerror', t(['_' + method]);
+      let method = 'onerror';
       let c = T[method];
       T[method] = function (e, t, n, a, i) {
         let r = c && c(e, t, n, a, i);
@@ -152,7 +152,7 @@
     }
     return m;
   }(y.cfg);
-    (T[t] = n).queue && 0 === n.queue.length && n.trackPageView({ urlReferrer: document.referrer});
+  (T[t] = n).queue && 0 === n.queue.length && n.trackPageView({ urlReferrer: document.referrer });
 }(window, document, {
   src: 'https://az416426.vo.msecnd.net/scripts/b/ai.2.min.js', // The SDK URL Source
   //name: "appInsights", // Global SDK Instance name defaults to "appInsights" when not supplied
@@ -160,7 +160,7 @@
   //useXhr: 1, // Use XHR instead of fetch to report failures (if available),
   //crossOrigin: "anonymous", // When supplied this will add the provided value as the cross origin attribute on the script tag 
   cfg: { // Application Insights Configuration
-    instrumentationKey: 'fdbffeea-6df6-47a2-b867-c56e62447ace'
+    instrumentationKey: '194b14a9-2b53-4464-8c6c-d17b171582e5'
     /* ...Other Configuration Options... */
   }
 });

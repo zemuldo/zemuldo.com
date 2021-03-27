@@ -6,8 +6,11 @@ import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
 import { makeStyles, withStyles } from '@material-ui/core/styles';
 import ShouldRender from '../components/tools/ShoulRender';
+
+import ReCAPTCHA from "react-google-recaptcha";
+
+
 const ex_api_url = process.env.EX_API_URL;
-const base_url = process.env.UI_URL;
 
 function validateEmail(mail) {
   if (/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(mail)) {
@@ -38,7 +41,8 @@ const useStyles = makeStyles((theme) => ({
     color: '#08a6f3',
   },
   materialTextArea: {
-    width: '300px',
+    width: '305px',
+    height: '80px',
     border: '1px solid transparent',
     '&:after': {
       border: '1px solid transparent',
@@ -69,13 +73,14 @@ const BootstrapButton = withStyles({
   root: {
     boxShadow: 'none',
     textTransform: 'none',
-    width: '300px',
-    fontSize: 16,
+    width: '305px',
+    height: '60px',
+    fontSize: 28,
     padding: '6px 12px',
     border: '1px solid',
     lineHeight: 1.5,
-    backgroundColor: '#0063cc',
-    borderColor: '#0063cc',
+    backgroundColor: '#08a6f3',
+    borderColor: '#08a6f3',
     fontFamily: [
       '-apple-system',
       'BlinkMacSystemFont',
@@ -89,14 +94,14 @@ const BootstrapButton = withStyles({
       '"Segoe UI Symbol"',
     ].join(','),
     '&:hover': {
-      backgroundColor: '#0069d9',
+      backgroundColor: '#0063cc',
       borderColor: '#0062cc',
       boxShadow: 'none',
     },
     '&:active': {
       boxShadow: 'none',
-      backgroundColor: '#0062cc',
-      borderColor: '#005cbf',
+      backgroundColor: '#08a6f3',
+      borderColor: '#08a6f3',
     },
     '&:disabled': {
       boxShadow: 'none',
@@ -104,7 +109,7 @@ const BootstrapButton = withStyles({
       borderColor: '#393939',
     },
     '&:focus': {
-      boxShadow: '0 0 0 0.2rem rgba(0,123,255,.5)',
+      backgroundColor: '#0063cc',
     },
   },
 })(Button);
@@ -113,6 +118,7 @@ const ResumePage = () => {
   const classes = useStyles();
 
   const [email, setEmail] = useState('');
+  const [recaptchaChallengeValue, setRecaptchaChallengeValue] = useState(null);
   const [emailValid, setEmailValid] = useState(false);
   const [resumeSent, setResumeSent] = useState(false);
   const [operationError, setOperationError] = useState(null);
@@ -128,6 +134,7 @@ const ResumePage = () => {
       headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
       body: JSON.stringify({
         email: email,
+        recaptchaChallengeValue
       }),
     });
 
@@ -149,7 +156,7 @@ const ResumePage = () => {
           spacing={2}
         >
           <Grid item xs={12} sm={6}></Grid>
-          <Grid style={{ textAlign: 'center' }} item xs={12} sm={12}>
+          <Grid item xs={12} sm={12}>
             <ShouldRender condition={!resumeSent} >
               <h2 style={{ color: '#08a6f3' }}>
               I am currently engaged and not actively looking for a new role..{' '}
@@ -172,8 +179,17 @@ const ResumePage = () => {
                   }}
                   onChange={handleEmailChange}
                 />
+                <br />
+                <br />
+                <ReCAPTCHA
+                  size={3}
+                  style={{ width: '100%' }}
+                  sitekey="6LclNpEaAAAAAOT0OhneHJiBdl5yvTG5jBzrUeO2"
+                  onChange={(value) => setRecaptchaChallengeValue(value)}
+                />
+                <br/> 
 
-                <BootstrapButton onClick={sendEmail} disabled={!emailValid}>Send</BootstrapButton>
+                <BootstrapButton onClick={sendEmail} disabled={!emailValid || !recaptchaChallengeValue}>Send Resume</BootstrapButton>
               </div>
             </ShouldRender>
             <ShouldRender condition={resumeSent && !operationError}>
