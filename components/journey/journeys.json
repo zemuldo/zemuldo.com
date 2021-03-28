@@ -5,7 +5,7 @@
     "title": "Priogram Manager",
     "startDate": "2021-01-04T00:00:00.000Z",
     "companyName": "Microsoft",
-    "companyDescription": "Part of Identity Customer Experience (CxP) making developer jopurney as painless as should be. Ask me about MS Graph.",
+    "companyDescription": "Part of Identity Customer Experience (CxP) making developer journey as painless as should be. Ask me about Microsoft Graph and Azure Cloud",
     "companyLogo": "/images/companies/ms.png",
     "stacks": [
       { "value": "Azure", "label": "Azure Cloud", "color": "#a767f5" },
