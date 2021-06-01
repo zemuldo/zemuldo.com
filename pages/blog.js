@@ -39,6 +39,7 @@ class Blog extends React.Component {
     const topTagsRes = await fetch(`${ex_api_url}/api/top_tags`);
     const topTags = topTagsRes.status === 200 ? await topTagsRes.json() : [];
     const { authorization, authorized } = parseCookies(ctx);
+    
     const res = await this.initialPosts(tag);
     const data = await res.json();
     const res_featured = await fetch(`${api_url}/post/latest`);

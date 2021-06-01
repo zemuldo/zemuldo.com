@@ -18,7 +18,6 @@ const classes = {
   },
   text_body: {
     height: 'auto',
-    backgroundColor: 'rgb(23, 23, 23)',
     padding: '4px',
     color: '#f0f0f0',
     textShadow: '#000 0 1px 0',

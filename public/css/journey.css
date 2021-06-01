@@ -741,7 +741,6 @@
 
 .journey-item.assessment:not(.edit) .journey-item-tags {
 	border: 1px solid #d6d9dc;
-	background-color: #fff;
 	margin: 0 -25px -1px;
 	min-width: calc(100% + 50px);
 	padding: 8px 12px

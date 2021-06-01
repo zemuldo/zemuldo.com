@@ -7,7 +7,7 @@ import TextField from '@material-ui/core/TextField';
 import { makeStyles, withStyles } from '@material-ui/core/styles';
 import ShouldRender from '../components/tools/ShoulRender';
 
-import ReCAPTCHA from "react-google-recaptcha";
+import ReCAPTCHA from 'react-google-recaptcha';
 
 
 const ex_api_url = process.env.EX_API_URL;

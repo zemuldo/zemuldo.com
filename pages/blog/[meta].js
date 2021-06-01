@@ -9,6 +9,7 @@ import entry from '../../components/entry';
 const api_url = process.env.API_URL;
 const base_url = process.env.UI_URL;
 const base_url_domain = process.env.UI_URL_DOMAIN;
+const ex_api_url = process.env.EX_API_URL;
 
 
 const urlMetaIdentifier = (meta) => {
@@ -19,6 +20,17 @@ const urlMetaIdentifier = (meta) => {
 class Blog extends React.Component {
   constructor(props) {
     super(props);
+  }
+
+  componentDidMount() {
+    const { _id } = this?.props?.post;
+    const trackedView = sessionStorage.getItem(`view_record_${_id}`);
+    if (trackedView !== '1') {
+      fetch(`${ex_api_url}/api/posts/${_id}/view_record`, { method: 'post', })
+        .then(res => {
+          if (res.status === 200) sessionStorage.setItem(`view_record_${_id}`, '1');
+        });
+    }
   }
 
   static async getInitialProps(ctx) {

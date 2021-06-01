@@ -3,6 +3,8 @@ import Tooltip from '@material-ui/core/Tooltip';
 import MouseOverPopover from '../pop_overs';
 import CustomLink from '../link';
 import { withStyles, makeStyles } from '@material-ui/core/styles';
+import SocialSite from './SocialSite';
+import { useTheme } from '@material-ui/styles';
 
 const useStylesBootstrap = makeStyles((theme) => ({
   arrow: {
@@ -34,7 +36,8 @@ const socials = [
     className: 'github',
     icon_className: 'fa fa-github',
     hoverText: 'Github',
-    color: 'white'
+    light: 'black',
+    dark: 'white'
   },
   {
     href: 'https://twitter.com/zemuldo',
@@ -55,7 +58,7 @@ const socials = [
     className: 'stackoverflow',
     icon_className: 'fa fa-stack-overflow',
     hoverText: 'StackOverflow',
-    color: 'orange'
+    color: '#F76C00'
   },
   {
     href: 'https://medium.com/@zemuldo',
@@ -90,44 +93,32 @@ const socials = [
     className: 'instagram',
     icon_className: 'fa fa-instagram color-instagram',
     hoverText: 'Instagram',
-    color: 'blue'
+    color: 'C235A6'
   }
 ];
 
 export default function SocialSites() {
+  const theme = useTheme()
   return (
     <div style={{ marginTop: '-20px' }}>
       <ul className="social-icon">
+         
         <h3 className='color-1'>
           Find me on
         </h3>
-        <div className='social-icon-wrapper'>
-          <BootstrapTooltip title="My Blog">
-            <li>
-              <CustomLink href="/blog">
-                <img style={{ marginBottom: '-12%', width: '55%', height: '55%', borderRadius: '50%' }} alt="Zemuldo Blog" src="/images/blog.png" />
-              </CustomLink>
-            </li>
-          </BootstrapTooltip>
-          {socials.map(s => {
-            return (
-              <BootstrapTooltip key={s.href} title={s.hoverText}>
-                <li>
-                  <a href={s.href} target="_blank" rel="noopener noreferrer" className={s.className}>
-                    <i className={s.icon_className} />
-                  </a>
-                </li>
-              </BootstrapTooltip>
 
-            );
-          })}
-          <BootstrapTooltip title="Dev.To">
-            <li>
-              <a href="https://dev.to/zemuldo" target="_blank" rel="noopener noreferrer">
-                <img style={{ marginBottom: '-15%', width: '65%', height: '65%' }} alt="Danstan Onyango on DEV" src="/images/dev.to.png" />
-              </a>
-            </li>
-          </BootstrapTooltip>
+        <div className='social-icon-wrapper'>
+
+          <SocialSite themeType={theme.palette.type} s={{ href: "/blog", hoverText: 'My Blog' }}>
+            <img style={{ marginBottom: '-12%', width: '55%', height: '55%', borderRadius: '50%' }} alt="Zemuldo Blog" src="/images/blog.png" />
+          </SocialSite>
+
+          {socials.map(s => <SocialSite themeType={theme.palette.type} s={s} key={s.href} />)}
+
+          <SocialSite themeType={theme.palette.type} s={{ href: 'https://dev.to/zemuldo', hoverText: 'Dev.To' }}>
+            <img style={{ marginBottom: '-15%', width: '65%', height: '65%' }} alt="Danstan Onyango on DEV" src="/images/dev.to.png" />
+          </SocialSite>
+
         </div>
       </ul>
     </div>

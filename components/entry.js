@@ -17,8 +17,7 @@ export default Component => {
       return <ErrorPage errorCode={props.statusCode} />;
     }
     return <>
-      <VersionInfo />
-      <div className='pages-wrapper'>
+      <div>
         <AcceptTerms accepted_terms={props.accepted_terms} />
         <Component {...props} />
       </div>
@@ -29,10 +28,15 @@ export default Component => {
   Entry.getInitialProps = async (ctx) => {
     const { authorized, authorization, accepted_terms } = parseCookies(ctx);
     let user;
-    if (authorized){
-      const res = await fetch(`${api_url}/user`, {credentials: 'include', headers: {authorization: authorization || ''}});
-      user = await res.json();
+    try {
+      if (authorized) {
+        const res = await fetch(`${api_url}/user`, { credentials: 'include', headers: { authorization: authorization || '' } });
+        user = await res.json();
+      }
+    } catch (_e) {
+      user = null;
     }
+    
     let props = {};
     if (Component.getInitialProps) {
       props = await Component.getInitialProps(ctx);

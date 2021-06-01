@@ -1,10 +1,12 @@
 import React from 'react';
-import SocialSites from './social_sites';
+import SocialSites from './SocialSites';
 import Terminal from './terminal_me';
 import CustomLink from '../link';
 import CurrentCompany from './current_company';
+import { useTheme } from '@material-ui/styles';
 
 export default function Home() {
+  const theme = useTheme();
   return (
     <>
       <div
@@ -17,14 +19,14 @@ export default function Home() {
               <div className="row">
                 <div>
                   <div itemProp="founder" itemScope itemType="http://schema.org/Person">
-                    <h1 itemProp="name" className="color-6">Danstan Onyango</h1>
+                    <h1 itemProp="name" style={{ color: theme.palette.primary.heading}}>Danstan Onyango</h1>
                   </div>
-                  <h2 style={{ fontSize: '26px' }}>Software Engineer</h2>
+                  <h2 style={{ fontSize: '26px', color: theme.palette.secondary.heading }}>Software Engineer</h2>
                   <hr className='hr-red-gradient' style={{ marginTop: '-10px' }} />
                 </div>
                 <div className="header-section" style={{marginTop: '-25px'}}>
-                  <div style={{ paddingLeft: '5px',  }} className="header-frame">
-                    <h3 className="font-c-cn-m" style={{ lineHeight: '150%', marginTop: '-5px' }}>
+                  <div style={{ paddingLeft: '5px', color: theme.palette.text  }} className="header-frame">
+                    <h3 className="font-c-cn-m" style={{ lineHeight: '150%', marginTop: '-5px', color: theme.palette.text.primary }}>
                       <p>Loves Functional Programming and Developing Distributed Systems. Curious, Peculiar. Chess.</p>
                       <p>
                         Fully Self Taught. Enjoys creating technical content and mentoring. See my {' '}
