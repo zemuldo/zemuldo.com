@@ -1,10 +1,9 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { withRouter } from 'next/router';
 import HomeIcon from '@material-ui/icons/Home';
 import VpnKeyIcon from '@material-ui/icons/VpnKey';
 import Avatar from '@material-ui/core/Avatar';
 import Grid from '@material-ui/core/Grid';
-import { withStyles } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
 import Link from '../link';
 import NewIcon from '@material-ui/icons/NoteAdd';
@@ -13,23 +12,17 @@ import PhotoLibraryIcon from '@material-ui/icons/PhotoLibrary';
 import LogOut from '@material-ui/icons/Lock';
 import ShouldRender from '../tools/ShoulRender';
 import TrendingUpIcon from '@material-ui/icons/TrendingUp';
-
+import { Container, makeStyles, useTheme } from '@material-ui/core';
+import BubbleChartRoundedIcon from '@material-ui/icons/BubbleChartRounded';
+import CustomMenuItem from './MenuItem';
 
 const api_url = process.env.API_URL;
 
-const currentPath = () => {
-  if (typeof window === 'object') {
-    return window.location.pathname;
-  } else {
-    return '/blog';
-  }
-};
-
-const styles = theme => ({
+const useStyles = makeStyles(theme => ({
   greenAvatar: {
     width: theme.spacing(3),
     height: theme.spacing(3),
-    margin: 10,
+    marginRight: 10,
     color: '#fff',
     backgroundColor: '#08a6f3',
     '&:hover': {
@@ -134,129 +127,178 @@ const styles = theme => ({
     fontSize: '16px'
   }
 
-});
+}));
 
-class Menu extends React.Component {
+const Menu = (props) => {
+  const { authorized, children, router } = props;
+  const classes = useStyles();
+  const [activateLogin, setActivateLogin] = useState(0);
+  const [user, setUser] = useState(null);
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      activateLogin: 0
-    };
-  }
-
-  async componentDidMount() {
-    const { authorized } = this.props;
+  const theme = useTheme();
+    
+  
+  const fetchUser = async () => {
     if (authorized) {
       const res = await fetch(`${api_url}/user`, { credentials: 'include' });
       const user = await res.json();
-      this.setState({ user });
+      setUser(user);
     }
-  }
-  render() {
-    const { authorized, classes, children } = this.props;
-    const { user, activateLogin } = this.state;
-    const path = currentPath();
-    return (
-      <div style={{ margin: '10px 0px 10px 0px', }}>
-        <Grid justify="center" alignItems="center" container >
+  };
 
-          <Link href='/'>
-            <span className={classes.menuItem} >
-              <Avatar component='span' className={classes.greenAvatar}>
-                <HomeIcon className={classes.menuIcon} />
-              </Avatar>
-              <span>Home</span>
-            </span>
-          </Link>
+  useEffect(() => {
+    fetchUser();
+  }, []);
+  return (
+    <>
+      <Container maxWidth="sm">
 
-          <Link href='/journey'>
+        <div style={{ margin: '10px 0px 10px 0px', }}>
+          <Grid justify="space-around" alignItems="center" container >
+            <CustomMenuItem themeColor={theme.palette.text.primary} isActive={router.pathname === '/'} classes={classes} >
+              <Link href='/'>
+                <span className={classes.menuItem} >
+                  <Avatar component='span' className={classes.greenAvatar}>
+                    <HomeIcon className={classes.menuIcon} />
+                  </Avatar>
+                  <span>About Me</span>
+                </span>
+              </Link>
+            </CustomMenuItem>
+            <CustomMenuItem themeColor={theme.palette.text.primary} isActive={router.pathname === '/journey'} classes={classes} >
+              <Link href='/journey'>
 
-            <span className={classes.menuItem}>
-              <Avatar className={classes.greenAvatar}>
-                <TrendingUpIcon className={classes.menuIcon} />
-              </Avatar>
-              <span>Journey</span>
-            </span>
-          </Link>
+                <span className={classes.menuItem}>
+                  <Avatar className={classes.greenAvatar}>
+                    <TrendingUpIcon className={classes.menuIcon} />
+                  </Avatar>
+                  <span>My Journey</span>
+                </span>
+              </Link>
+            </CustomMenuItem>
+            
+            <CustomMenuItem themeColor={theme.palette.text.primary} isActive={router.pathname === '/blog'} classes={classes} >
+              <Link href='/blog'>
+                <span className={classes.menuItem}>
+                  <Avatar className={classes.greenAvatar} src='/images/blog.png'>
+                  </Avatar>
+                  <span>My Blog</span>
+                </span>
+              </Link>
+            </CustomMenuItem>
 
-          <Link href='/blog'>
-            <span className={classes.menuItem}>
-              <Avatar className={classes.greenAvatar} src='/images/blog.png'>
-              </Avatar>
-              <span>Blog</span>
-            </span>
-          </Link>
+            <ShouldRender condition={authorized}>
+             
 
-          <ShouldRender condition={this.props.authorized}>
-            <Link href='/blog/drafts'>
-              <span className={classes.menuItem}>
-                <Avatar className={classes.greenAvatar} src='/images/draft.png'>
-                </Avatar>
-                <span>Drafts</span>
-              </span>
-            </Link>
-            <Link href="/blog/new">
-              <span className={classes.menuItem}>
-                <Avatar className={classes.greenAvatar}>
-                  <NewIcon className={classes.menuIcon} />
-                </Avatar>
-                <span>New Post</span>
-              </span>
-            </Link>
-            <Link href="/blog/upload-image">
-              <span className={classes.menuItem}>
-                <Avatar className={classes.greenAvatar}>
-                  <ImageIcon className={classes.menuIcon} />
-                </Avatar>
-                <span>Uplod Image</span>
-              </span>
-            </Link>
-            <Link href="/blog/images">
+              <CustomMenuItem themeColor={theme.palette.text.primary} isActive={router.pathname === '/blog/drafts'} classes={classes} >
+                <Link href='/blog/drafts'>
+                  <span className={classes.menuItem}>
+                    <Avatar className={classes.greenAvatar} src='/images/draft.png'>
+                    </Avatar>
+                    <span>Drafts</span>
+                  </span>
+                </Link>
+              </CustomMenuItem>
 
-              <span className={classes.menuItem}>
-                <Avatar className={classes.greenAvatar}>
-                  <PhotoLibraryIcon className={classes.menuIcon} />
-                </Avatar>
-                <span>Images</span>
-              </span>
-            </Link>
-          </ShouldRender>
+            
 
-          {path.includes('/blog') && !authorized && activateLogin < 4 &&
-            <Avatar
-              onClick={() => this.setState({ activateLogin: activateLogin + 1 })}
-              className={classes.greenAvatarGreen}>
-              <VpnKeyIcon className={classes.menuIcon} />
-            </Avatar>
-          }
+              <CustomMenuItem themeColor={theme.palette.text.primary} isActive={router.pathname === '/blog/new'} classes={classes} >
+                <Link href="/blog/new">
+                  <span className={classes.menuItem}>
+                    <Avatar className={classes.greenAvatar}>
+                      <NewIcon className={classes.menuIcon} />
+                    </Avatar>
+                    <span>New Post</span>
+                  </span>
+                </Link>
+              </CustomMenuItem>
 
-          {user && <Avatar alt="User profile" className={classes.avatar} src={user.profilePhotoUrl} />}
+              
 
-          {path.includes('/blog') && !authorized && activateLogin >= 4 &&
-            <Link href={`/blog/login?redirectTo=${path}`}>
-              <Avatar className={classes.greenAvatarGreen}>
+              <CustomMenuItem themeColor={theme.palette.text.primary} isActive={router.pathname === '/blog/upload-image'} classes={classes} >
+                <Link href="/blog/upload-image">
+                  <span className={classes.menuItem}>
+                    <Avatar className={classes.greenAvatar}>
+                      <ImageIcon className={classes.menuIcon} />
+                    </Avatar>
+                    <span>Uplod Image</span>
+                  </span>
+                </Link>
+              </CustomMenuItem>
+
+
+             
+
+              <CustomMenuItem themeColor={theme.palette.text.primary} isActive={router.pathname === '/blog/images'} classes={classes} >
+                <Link href="/blog/images">
+
+                  <span className={classes.menuItem}>
+                    <Avatar className={classes.greenAvatar}>
+                      <PhotoLibraryIcon className={classes.menuIcon} />
+                    </Avatar>
+                    <span>Images</span>
+                  </span>
+                </Link>
+              </CustomMenuItem>
+            </ShouldRender>
+
+            {router.pathname.includes('/blog') && !authorized && activateLogin < 4 &&
+              <Avatar
+                onClick={() => setActivateLogin(activateLogin + 1)}
+                className={classes.greenAvatarGreen}>
                 <VpnKeyIcon className={classes.menuIcon} />
               </Avatar>
+            }
 
-            </Link>
-          }
+            {user && <Avatar alt="User profile" className={classes.avatar} src={user.profilePhotoUrl} />}
 
-          {user &&
-            <Avatar onClick={() => {
-              window.location.href = '/logout';
-            }} className={classes.greenAvatar}>
-              <LogOut className={classes.menuIcon} />
-            </Avatar>
-          }
-        </Grid>
-        <Grid container>
-          {children}
-        </Grid>
-      </div>
-    );
-  }
-}
+            {router.pathname.includes('/blog') && !authorized && activateLogin >= 4 &&
+              <Link href={`/blog/login?redirectTo=${router.pathname }`}>
+                <Avatar className={classes.greenAvatarGreen}>
+                  <VpnKeyIcon className={classes.menuIcon} />
+                </Avatar>
+
+              </Link>
+            }
+
+            {user &&
+              <Avatar onClick={() => {
+                window.location.href = '/logout';
+              }} className={classes.greenAvatar}>
+                <LogOut className={classes.menuIcon} />
+              </Avatar>
+            }
+          </Grid>
+          <Grid container>
+            {children}
+          </Grid>
+        </div>
+      </Container>
+      <Container maxWidth="md">
+        <div className={classes.hrRoot}>
+          <Grid
+            justify="center"
+            alignItems="center"
+            container
+            item
+            xs={12}
+            spacing={2}
+          >
+            <Grid item xs={5}>
+              <hr style={{ background: 'linear-gradient(to left, #08a6f3, rgba(255, 0, 0, 0))' }} />
+            </Grid>
+            <Grid container item justify="center" xs={1}>
+              <BubbleChartRoundedIcon style={{ fill: '#08a6f3' }} />
+            </Grid>
+            <Grid item xs={5}>
+              <hr style={{ background: 'linear-gradient(to right, #08a6f3, rgba(255, 0, 0, 0))' }} />
+            </Grid>
+          </Grid>
+        </div>
+      </Container>
+    </>
+  );
+};
 
 Menu.propTypes = {
   router: PropTypes.object,
@@ -266,4 +308,4 @@ Menu.propTypes = {
   authorized: PropTypes.bool,
 };
 
-export default withRouter(withStyles(styles)(Menu));
+export default withRouter(Menu);

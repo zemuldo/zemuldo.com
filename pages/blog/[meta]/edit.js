@@ -2,7 +2,7 @@ import React from 'react';
 import Container from '@material-ui/core/Container';
 import { withStyles } from '@material-ui/core/styles';
 import Footer from '../../../components/footer';
-import Menu from '../../../components/blog/menu';
+import Menu from '../../../components/blog/Menu';
 import marked from 'marked';
 import dynamic from 'next/dynamic';
 import Head from 'next/head';
@@ -283,6 +283,14 @@ class EditBlog extends React.Component {
             rel="stylesheet"
           />
         </Head>
+        <Menu authorized={authorized}>
+          <Avatar onClick={this.handleSave} className={classes.greenAvatar}>
+            <SaveIcon />
+          </Avatar>
+          <Avatar onClick={this.handleOpenPublishDialogue} className={classes.greenAvatar}>
+            <PublishIcon />
+          </Avatar>
+        </Menu>
         <Container
           maxWidth="md"
           style={{
@@ -291,18 +299,6 @@ class EditBlog extends React.Component {
             fontSize: '18px'
           }}
         >
-          <Grid container justify="center" alignItems="center">
-            <Menu authorized={authorized}>
-              <Avatar onClick={this.handleSave} className={classes.greenAvatar}>
-                <SaveIcon />
-              </Avatar>
-              <Avatar onClick={this.handleOpenPublishDialogue} className={classes.greenAvatar}>
-                <PublishIcon />
-              </Avatar>
-            </Menu>
-           
-          </Grid>
-
           <div className={classes.root}>
             <TextField
               id="postTitle"

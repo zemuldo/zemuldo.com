@@ -6,7 +6,7 @@ export default function PleaseWait() {
     
   return (
     <>
-      <Container style={{ color: 'white' }} maxWidth="md">
+      <Container maxWidth="md">
 
         <Grid container justify="center" alignItems="center">
           <Grid container spacing={4}>

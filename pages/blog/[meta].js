@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import fetch from 'isomorphic-unfetch';
 import { parseCookies } from 'nookies';
-import ViewBlog from '../../components/blog/view';
+import ViewBlog from '../../components/blog/ViewBlog';
 import entry from '../../components/entry';
 
 

@@ -1,9 +1,8 @@
 import React from 'react';
 import Head from 'next/head';
 import Item from '../components/journey/item';
-import Menu from '../components/blog/menu';
+import Menu from '../components/blog/Menu';
 import { Container } from '@material-ui/core';
-import Grid from '@material-ui/core/Grid';
 import journeys from '../components/journey/journeys.json';
 import Footer from '../components/footer';
 import { parseCookies } from 'nookies';
@@ -20,11 +19,7 @@ function DeveloperStory({authorized}) {
         <link href="/css/journey.css" rel="stylesheet" />
         <meta name="description" content="Danstan Onyango ~ Zemuldo, Software Engineer - Nairobi, Kenya, Self Taught. Here is my journey as a Software Engineer all the way to where I am right now." />
       </Head>
-      <Container maxWidth="md">
-        <Grid container justify="center" alignItems="center">
-          <Menu authorized={authorized}/>
-        </Grid>
-      </Container>
+      <Menu authorized={authorized} />
       <Container maxWidth="md">
         <div id="content" className="snippet-hidden">
           <div className="journey-wrapper">

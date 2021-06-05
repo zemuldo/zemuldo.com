@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import fetch from 'isomorphic-unfetch';
 import { parseCookies } from 'nookies';
 import entry from '../../../../components/entry';
-import ViewBlog from '../../../../components/blog/view';
+import ViewBlog from '../../../../components/blog/ViewBlog';
 
 const api_url = process.env.API_URL;
 const base_url = process.env.UI_URL;

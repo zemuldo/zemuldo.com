@@ -189,7 +189,11 @@ const ResumePage = () => {
                 />
                 <br/> 
 
-                <BootstrapButton onClick={sendEmail} disabled={!emailValid || !recaptchaChallengeValue}>Send Resume</BootstrapButton>
+                <BootstrapButton
+                  onClick={sendEmail}
+                  disabled={!emailValid || !recaptchaChallengeValue}>
+                  Send Resume
+                </BootstrapButton>
               </div>
             </ShouldRender>
             <ShouldRender condition={resumeSent && !operationError}>

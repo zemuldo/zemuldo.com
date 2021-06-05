@@ -26,7 +26,7 @@ export default function Home() {
                 </div>
                 <div className="header-section" style={{marginTop: '-25px'}}>
                   <div style={{ paddingLeft: '5px', color: theme.palette.text  }} className="header-frame">
-                    <h3 className="font-c-cn-m" style={{ lineHeight: '150%', marginTop: '-5px', color: theme.palette.text.primary }}>
+                    <h3 className="font-c-cn-m" style={{ lineHeight: '150%', marginTop: '-5px' }}>
                       <p>Loves Functional Programming and Developing Distributed Systems. Curious, Peculiar. Chess.</p>
                       <p>
                         Fully Self Taught. Enjoys creating technical content and mentoring. See my {' '}

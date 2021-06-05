@@ -6,15 +6,15 @@ export const lightTheme = createMuiTheme({
   palette: {
     type: 'light',
     text: {
-      disabled: "rgba(255, 255, 255, 0.5)",
-      hint: "rgba(255, 255, 255, 0.5)",
-      icon: "rgba(255, 255, 255, 0.5)",
-      primary: "#000",
-      secondary: "rgba(255, 255, 255, 0.7)",
+      disabled: 'rgba(255, 255, 255, 0.5)',
+      hint: 'rgba(255, 255, 255, 0.5)',
+      icon: 'rgba(255, 255, 255, 0.5)',
+      primary: '#000',
+      secondary: 'rgba(255, 255, 255, 0.7)',
     },
     primary: {
-      main: '#0C0C0C',
-      heading: '#0C0C0C',
+      main: '#08a6f3',
+      heading: '#08a6f3',
     },
     secondary: {
       main: '#19857b',
@@ -24,7 +24,8 @@ export const lightTheme = createMuiTheme({
       main: red.A400
     },
     background: {
-      default: '#F5F5F5'
+      default: '#DDE4E7',
+      card: '#fff'
     }
   }
 });
@@ -34,11 +35,11 @@ export const darkTheme = createMuiTheme({
   palette: {
     type: 'dark',
     text: {
-      disabled: "rgba(255, 255, 255, 0.5)",
-      hint: "rgba(255, 255, 255, 0.5)",
-      icon: "rgba(255, 255, 255, 0.5)",
-      primary: "#fff",
-      secondary: "rgba(255, 255, 255, 0.7)",
+      disabled: 'rgba(255, 255, 255, 0.5)',
+      hint: 'rgba(255, 255, 255, 0.5)',
+      icon: 'rgba(255, 255, 255, 0.5)',
+      primary: '#fff',
+      secondary: 'rgba(255, 255, 255, 0.7)',
     },
     primary: {
       main: '#08a6f3',
@@ -52,7 +53,8 @@ export const darkTheme = createMuiTheme({
       main: red.A400
     },
     background: {
-      default: '#171717'
+      default: '#171717',
+      card: 'rgb(23, 23, 23)'
     }
   }
 });

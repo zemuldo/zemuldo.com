@@ -3,11 +3,9 @@ import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import CustomLink from './link';
 import Container from '@material-ui/core/Container';
-import { useTheme } from '@material-ui/styles';
 
 const useStyles =  makeStyles(theme => ({
   footer: {
-    color: 'white',
     marginTop: theme.spacing(8),
     padding: theme.spacing(2, 0),
     marginBottom: '30px'
@@ -16,9 +14,8 @@ const useStyles =  makeStyles(theme => ({
 
 export default function Footer() {
   const classes = useStyles();
-  const theme = useTheme()
   return (
-    <footer className={classes.footer} style={{ color: theme.palette.text.primary}}>
+    <footer className={classes.footer}>
       <Container maxWidth="lg">
         <Typography  variant="body1" align="center" gutterBottom>
           <span className='color-1' >Danstan Onyango ~ Zemuldo</span>

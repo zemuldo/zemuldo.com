@@ -31,7 +31,7 @@ const styles = theme => ({
   },
   mainFeaturedPost: {
     position: 'relative',
-    color: theme.palette.common.white,
+    color: theme.palette.text.primary,
     marginBottom: theme.spacing(4),
     backgroundColor: 'transparent',
     backgroundSize: 'cover',
@@ -46,7 +46,8 @@ const styles = theme => ({
     bottom: 0,
     right: 0,
     left: 0,
-    backgroundColor: 'rgba(0,0,0,.3)'
+    backgroundColor: theme.palette.background.card,
+    opacity: .7
   },
   mainFeaturedPostContent: {
     position: 'relative',
@@ -81,11 +82,11 @@ const styles = theme => ({
   }
 });
 
-function FeaturedPost({featuredPost, classes}) {
+function FeaturedPost({ featuredPost, classes }) {
   return (
     <CustomLink href={`/blog/${featuredPost.post.title.toLowerCase().split(' ').join('-')}-${featuredPost.post._id}`}>
       <Paper className={classes.mainFeaturedPost}>
-        <div style={{ backgroundColor: 'rgb(23, 23, 23)', opacity: .7 }} className={classes.overlay} />
+        <div className={classes.overlay} />
         <Grid style={{ minHeight: '400px' }} className="eph" container>
           <Grid item md={6}>
 
@@ -103,10 +104,10 @@ function FeaturedPost({featuredPost, classes}) {
               >
                 {featuredPost.post.title}
               </Typography>
-              <Typography style={{ color: 'white' }} variant="h5" color="inherit" paragraph>
+              <Typography variant="h5" color="inherit" paragraph>
                 {featuredPost.post.description}
               </Typography>
-              <span>Read Now</span>
+              <span >Read Now</span>
             </div>
 
           </Grid>

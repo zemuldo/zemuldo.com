@@ -1,34 +1,35 @@
-import React, { PureComponent } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import theme from 'react-syntax-highlighter/dist/esm/styles/prism/darcula';
+import darkTheme from 'react-syntax-highlighter/dist/esm/styles/prism/darcula';
+import lightTheme from 'react-syntax-highlighter/dist/esm/styles/prism/ghcolors';
 import CopyCode from './copy_code';
+import { useTheme } from '@material-ui/core';
 
-class CodeBlock extends PureComponent {
-  static propTypes = {
-    value: PropTypes.string.isRequired,
-    language: PropTypes.string
-  };
-
-  static defaultProps = {
-    language: null
-  };
-
-  render() {
-    const { language, value } = this.props;
-    return (
-      <div >
-        <div style={{ zIndex: 2, position: 'relative' }}>
-          <CopyCode code={value} />
-        </div>
-        <div style={{ zIndex: 1, position: 'relative' }}>
-          <SyntaxHighlighter customStyle={{paddingTop: '30px'}} language={language} style={theme}>
-            {value}
-          </SyntaxHighlighter>
-        </div>
+const CodeBlock = (props) => {
+  const theme = useTheme();
+  const { language, value } = props;
+  return (
+    <div >
+      <div style={{ zIndex: 2, position: 'relative' }}>
+        <CopyCode code={value} />
       </div>
-    );
-  }
-}
+      <div  style={{ zIndex: 1, position: 'relative' }}>
+        <SyntaxHighlighter
+          key={theme.palette.type}
+          customStyle={{ paddingTop: '30px', fontWeight: '10px' }}
+          language={language}
+          style={theme.palette.type === 'dark' ? darkTheme : lightTheme}>
+          {value}
+        </SyntaxHighlighter>
+      </div>
+    </div>
+  );
+};
+
+CodeBlock.propTypes = {
+  value: PropTypes.string.isRequired,
+  language: PropTypes.string
+};
 
 export default CodeBlock;

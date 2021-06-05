@@ -3,7 +3,7 @@ import Container from '@material-ui/core/Container';
 import fetch from 'isomorphic-unfetch';
 import Footer from '../components/footer';
 import Blogs from '../components/blog/blogs';
-import Menu from '../components/blog/menu';
+import Menu from '../components/blog/Menu';
 import LinearProgress from '@material-ui/core/LinearProgress';
 import { parseCookies } from 'nookies';
 import Head from 'next/head';
@@ -105,20 +105,17 @@ class Blog extends React.Component {
         
           <meta name="description" content="Blog by Danstan Onyango, Software Engineer, Nairobi, Kenya. Tech articles, Tutorials and Reviews. Sharing content that inspires." />
         </Head>
-        <Container style={{ color: 'white' }} maxWidth="md">
-
-          <Menu authorized = {authorized}/>
-        </Container>
-        <Container style={{ color: 'white' }} maxWidth="md">
+        <Menu authorized={authorized} />
+        <Container  maxWidth="md">
           <TopTags tags={topTags} onSelect={this.filterByTag} />
         </Container>
-        <Container style={{ color: 'white' }} maxWidth="md">
+        <Container  maxWidth="md">
           <ShouldRender if={!!featuredPost && !this.state.currentTag}>
             <FeaturedPost featuredPost={featuredPost}/>
           </ShouldRender>
           <Blogs _infiniteScroll={this.infiniteScroll} posts={posts} />
           <br />
-          {this.state.fetching && <div style={{ flexGrow: 1, color: 'white' }}><LinearProgress /> </div>}
+          {this.state.fetching && <div style={{ flexGrow: 1 }}><LinearProgress /> </div>}
           <ShouldRender if={!posts || !posts[0]}>
             <NoContent/>
           </ShouldRender>

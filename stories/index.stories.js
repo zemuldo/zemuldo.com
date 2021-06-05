@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import Index from '../pages/index';
-import SocialSites from '../components/home/social_sites';
+import SocialSites from '../components/home/SocialSites';
 import Footer from '../components/footer';
 import TerminalMe from '../components/home/terminal_me';
 

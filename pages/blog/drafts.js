@@ -12,7 +12,7 @@ import fetch from 'isomorphic-unfetch';
 import { parseCookies } from 'nookies';
 import PropTypes from 'prop-types';
 import CustomLink from '../../components/link';
-import Menu from '../../components/blog/menu';
+import Menu from '../../components/blog/Menu';
 import Dialog from '@material-ui/core/Dialog';
 import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
@@ -128,10 +128,11 @@ function Drafts({ drafts, authorized }) {
           </Button>
         </DialogActions>
       </Dialog>
+      <Menu authorized={authorized} />
       <Container style={{ color: 'white' }} maxWidth="md">
 
         <Grid container justify="center" alignItems="center">
-          <Menu authorized={authorized} />
+          
           <Grid container spacing={4}>
             {
               !data[0] && 

@@ -10,11 +10,10 @@ import CustomLink from '../link';
 import { Paper } from '@material-ui/core';
 import { format } from 'date-fns';
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles((theme) => ({
   card: {
-    color: 'white',
     boxShadow: '0 8px 15px 0 rgba(90, 91, 95, .33)',
-    backgroundColor: 'rgb(23, 23, 23)',
+    backgroundColor: theme.palette.background.card,
     opacity: .8,
     display: 'flex'
   },
@@ -27,7 +26,7 @@ const useStyles = makeStyles(() => ({
   },
   paper: {
     position: 'relative',
-    backgroundColor: 'rgb(23, 23, 23)',
+    backgroundColor: theme.palette.background.card,
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center',
@@ -44,7 +43,6 @@ const formatDescription = (description) => {
 
 export default function Blogs({ posts, _infiniteScroll }) {
   const classes = useStyles();
-
   return (
     <Grid container spacing={4}>
       {posts.map(post => (
@@ -76,7 +74,7 @@ export default function Blogs({ posts, _infiniteScroll }) {
                     </CardContent>
                     
                     <CardContent>
-                      <Typography style={{ color: 'white' }}>
+                      <Typography>
                         {formatDescription(post.description)}
                       </Typography>
                     </CardContent>

@@ -8,7 +8,7 @@ import TextField from '@material-ui/core/TextField';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import fetch from 'isomorphic-unfetch';
-import Menu from '../../components/blog/menu';
+import Menu from '../../components/blog/Menu';
 import Head from 'next/head';
 import Footer from '../../components/footer';
 import PropTypes from 'prop-types';
@@ -68,12 +68,7 @@ function Album({images, authorized, user}) {
         <title>Zemuldo Blog - I write and Share my Experience.</title>
         <meta name="description" content="Blog by Danstan Onyango, Software Engineer, Nairobi, Kenya. Tech articles, Tutorials and Reviews. Sharing content that inspires." />
       </Head>
-      <Container style={{ color: 'white' }} maxWidth="md">
-
-        <Grid container justify="center" alignItems="center">
-          <Menu authorized={authorized} />
-        </Grid>
-      </Container>
+      <Menu authorized={authorized} />
       <Container style={{ color: 'white', backgroundColor: 'rgb(23, 23, 23)' }} maxWidth="md">
         <TextField
           value={search}

@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import ErrorPage from '../pages/_error';
 import { parseCookies } from 'nookies';
 import AcceptTerms from './terms';
-import VersionInfo from './versionInfo';
 import { withRouter } from 'next/router';
 
 

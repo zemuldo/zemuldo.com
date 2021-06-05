@@ -50,10 +50,6 @@ class MyDocument extends Document {
           <link rel="stylesheet" type="text/css" href="/css/style.css" />
           <script
             async
-            src={'/js/aai.js'}
-          />
-          <script
-            async
             src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
           />
           <script

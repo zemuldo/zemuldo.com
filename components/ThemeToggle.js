@@ -1,13 +1,21 @@
 import React from 'react';
 import WbSunnyIcon from '@material-ui/icons/WbSunny';
 import Brightness3Icon from '@material-ui/icons/Brightness3';
+import PropTypes from 'prop-types';
 
-export default function ThemeToggle({ currentTheme, onChange}) {
+function ThemeToggle({ currentTheme, onChange}) {
 
-    return (
-        <div onClick={onChange} className='theme-toggle'>
-            {currentTheme === 'dark' && <WbSunnyIcon fontSize='large' color='primary' />}
-            {currentTheme === 'light' && <Brightness3Icon fontSize='large' color='primary' />}
-        </div>
-    );
+  return (
+    <div onClick={onChange} className='theme-toggle'>
+      {currentTheme === 'dark' && <WbSunnyIcon fontSize='large' color='primary' />}
+      {currentTheme === 'light' && <Brightness3Icon fontSize='large' color='primary' />}
+    </div>
+  );
 }
+
+ThemeToggle.propTypes = {
+  currentTheme: PropTypes.string,
+  onChange: PropTypes.func
+};
+
+export default ThemeToggle;

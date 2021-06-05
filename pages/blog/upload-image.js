@@ -3,13 +3,12 @@ import { useDropzone } from 'react-dropzone';
 import { makeStyles } from '@material-ui/core/styles';
 import Footer from '../../components/footer';
 import Card from '@material-ui/core/Card';
-import Grid from '@material-ui/core/Grid';
 import Container from '@material-ui/core/Container';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 import entry from '../../components/entry';
 import Head from 'next/head';
-import Menu from '../../components/blog/menu';
+import Menu from '../../components/blog/Menu';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import PropTypes from 'prop-types';
 import { Paper } from '@material-ui/core';
@@ -91,12 +90,7 @@ function DropZone(props) {
         <title>Zemuldo Blog - Upload Image</title>
         <meta name="description" content="Blog by Danstan Onyango, Software Engineer, Nairobi, Kenya. Tech articles, Tutorials and Reviews. Sharing content that inspires." />
       </Head>
-      <Container style={{ color: 'white' }} maxWidth="md">
-
-        <Grid container justify="center" alignItems="center">
-          <Menu {...props} />
-        </Grid>
-      </Container>
+      <Menu {...props} />
       <Container style={{ color: 'white' }} maxWidth="md">
         <div style={{ maxWidth: '600px', margin: 'auto' }} {...getRootProps()}>
           <input {...getInputProps()} />

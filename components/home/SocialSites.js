@@ -1,27 +1,7 @@
 import React from 'react';
-import Tooltip from '@material-ui/core/Tooltip';
-import MouseOverPopover from '../pop_overs';
-import CustomLink from '../link';
-import { withStyles, makeStyles } from '@material-ui/core/styles';
 import SocialSite from './SocialSite';
 import { useTheme } from '@material-ui/styles';
 
-const useStylesBootstrap = makeStyles((theme) => ({
-  arrow: {
-    color: theme.palette.common.black,
-  },
-  tooltip: {
-    fontSize: '12px',
-    backgroundColor: theme.palette.common.black,
-  },
-}));
-
-
-function BootstrapTooltip(props) {
-  const classes = useStylesBootstrap();
-
-  return <Tooltip placement="bottom-start" arrow classes={classes} {...props} />;
-}
 
 const socials = [
   {
@@ -97,8 +77,8 @@ const socials = [
   }
 ];
 
-export default function SocialSites() {
-  const theme = useTheme()
+function SocialSites() {
+  const theme = useTheme();
   return (
     <div style={{ marginTop: '-20px' }}>
       <ul className="social-icon">
@@ -109,7 +89,7 @@ export default function SocialSites() {
 
         <div className='social-icon-wrapper'>
 
-          <SocialSite themeType={theme.palette.type} s={{ href: "/blog", hoverText: 'My Blog' }}>
+          <SocialSite themeType={theme.palette.type} s={{ href: '/blog', hoverText: 'My Blog' }}>
             <img style={{ marginBottom: '-12%', width: '55%', height: '55%', borderRadius: '50%' }} alt="Zemuldo Blog" src="/images/blog.png" />
           </SocialSite>
 
@@ -124,3 +104,5 @@ export default function SocialSites() {
     </div>
   );
 }
+
+export default SocialSites;

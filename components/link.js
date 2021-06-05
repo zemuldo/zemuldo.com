@@ -3,7 +3,6 @@ import { useRouter } from 'next/router';
 import PropTypes from 'prop-types';
 
 export default function CustomLink({ children, href, target, rel, style }) {
-  console.log(style)
   const router = useRouter();
 
   const handleClick = (e) => {
@@ -37,6 +36,6 @@ CustomLink.propTypes = {
   href: PropTypes.string.isRequired,
   rel: PropTypes.string,
   target: PropTypes.string,
-  children: PropTypes.oneOfType([PropTypes.string, PropTypes.object])
-    .isRequired,
+  children: PropTypes.any,
+  style: PropTypes.object
 };
