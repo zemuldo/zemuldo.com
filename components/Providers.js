@@ -6,7 +6,7 @@ import useDarkMode from 'use-dark-mode';
 import ThemeToggle from './ThemeToggle';
 
 const Providers =  ({ children }) => {
-  const darkMode = useDarkMode(false, { storageKey: null, onChange: null });
+  const darkMode = useDarkMode(false, { storageKey: 'darkMode', onChange: null });
 
   const theme = darkMode.value ? darkTheme : lightTheme;
 

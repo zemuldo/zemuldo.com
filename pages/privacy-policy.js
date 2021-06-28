@@ -10,7 +10,7 @@ function PrivacyPolicy() {
         <title>Zemuldo - Website Privacy Policy</title>
         <meta name="description" content="This page describes the privacy policy that applies to this website. Users of this website expected to read and understand this privacy policy." />
       </Head>
-      <div style={{color: 'white'}}>
+      <div >
         <h1>Privacy Policy</h1>
 
         <br/>

@@ -10,7 +10,7 @@ function CookiePolicy() {
         <title>Zemuldo - Website Cookie Policy</title>
         <meta name="description" content="This page describes the cookie policy that applies to this website. Users of this website expected to read and understand this policy." />
       </Head>
-      <div style={{color: 'white'}}>
+      <div >
         <h1>Cookie Policy</h1>
 
         <p>

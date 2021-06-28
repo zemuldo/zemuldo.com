@@ -71,7 +71,7 @@ class MyApp extends App {
     if (jssStyles) {
       jssStyles.parentNode.removeChild(jssStyles);
     }
-    this.setState({ mounted: true});
+    this.setState({ mounted: true });
   }
 
   render() {

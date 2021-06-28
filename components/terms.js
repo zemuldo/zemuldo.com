@@ -2,8 +2,10 @@ import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import Container from '@material-ui/core/Container';
 import { setCookie } from 'nookies';
+import { useTheme } from '@material-ui/core';
 
-export default function AcceptTerms({accepted_terms}) {
+export default function AcceptTerms({ accepted_terms }) {
+  const theme = useTheme()
   const [accepted_terms_now, acceptTerms] = useState(null);
   const agreedToTerms = ()=>{
     acceptTerms('1');
@@ -20,12 +22,15 @@ export default function AcceptTerms({accepted_terms}) {
         textAlign: 'center',
         position: 'fixed',
         bottom: 0,
+        left: 0,
+        right: 0,
         zIndex: 9999,
         display: 'flex',
         width: '100%',
         margin: 'auto',
         alignContent: 'center',
-        borderTop: 'solid 1px #08a6f3'
+        borderTop: 'solid 1px #08a6f3',
+        background: theme.palette.background.default
       }}>
         <Container style={{ padding: '12px 5px 12px 5px', fontSize: '14px' }} maxWidth="md">
           <span>

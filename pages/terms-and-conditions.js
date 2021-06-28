@@ -10,7 +10,7 @@ function TermsConditions() {
         <title>Zemuldo - Website Terms and Conditions</title>
         <meta name="description" content="This page describes the cookie terms that applies to this website. Users of this website expected to read and understand this terms." />
       </Head>
-      <div style={{color: 'white'}}>
+      <div>
         <h1>Terms of this Website</h1>
 
         <p>
