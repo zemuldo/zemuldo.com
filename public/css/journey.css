@@ -394,7 +394,6 @@
 	border: 1px solid #08a6f3;
 	font-size: 13px;
 	line-height: 1.26666667;
-	color: #242729
   }
 }
 
@@ -406,7 +405,6 @@
         padding: 10px;
         border: 1px solid #08a6f3;
         line-height: 1.26666667;
-        color: #242729
     }
     .journey-item-title{
         font-size: 12px;
@@ -439,7 +437,7 @@
 }
 
 .journey-item .journey-item-paragraph {
-	color: #535a60;
+
 	font-size: 1.2em
 }
 
@@ -449,7 +447,6 @@
 
 .journey-item .journey-item-text {
 	flex: 1 auto;
-	color: #535a60
 }
 
 .journey-item .journey-item-title {
@@ -773,7 +770,6 @@
 }
 
 .stacks div {
-	color: white;
 	padding: 4px;
 	font-size: 14px;
 	border-radius: 3px

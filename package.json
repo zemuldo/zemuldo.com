@@ -43,6 +43,9 @@
     "react-syntax-highlighter": "^12.2.1",
     "react-typed": "^1.2.0",
     "react-visibility-sensor": "^5.1.1",
+    "style-components": "^0.1.0",
+    "styled-components": "^5.3.0",
+    "use-dark-mode": "^2.3.1",
     "winston": "^3.2.1"
   },
   "scripts": {

@@ -1,7 +1,7 @@
 import React from 'react';
 import Document, { Head, Main, NextScript } from 'next/document';
 import { ServerStyleSheets } from '@material-ui/styles';
-import { setCookie } from 'nookies';
+import { setCookie, parseCookies } from 'nookies';
 
 const GA_TRACKING_ID = process.env.GA_TRACKING_ID;
 const NODE_ENV = process.env.NODE_ENV;
@@ -72,7 +72,7 @@ class MyDocument extends Document {
           <NextScript />
           <script
             type="application/ld+json"
-            dangerouslySetInnerHTML={ addJSONLD() }
+            dangerouslySetInnerHTML={addJSONLD()}
           />
         </body>
       </html>
@@ -81,18 +81,20 @@ class MyDocument extends Document {
 }
 
 MyDocument.getInitialProps = async ctx => {
-  if (ctx.pathname === '/logout'){
+  const cookies = parseCookies(ctx, {});
+  const theme = cookies.theme || 'dark';
+  if (ctx.pathname === '/logout') {
     setCookie(ctx, 'authorization', 'false', {
       maxAge: 0,
       path: '/',
       httpOnly: true,
-      domain: NODE_ENV === 'production'? 'zemuldo.com' : 'localhost',
+      domain: NODE_ENV === 'production' ? 'zemuldo.com' : 'localhost',
       secure: NODE_ENV === 'production'
     });
     setCookie(ctx, 'authorized', 'false', {
       maxAge: 0,
       path: '/',
-      domain: NODE_ENV === 'production'? 'zemuldo.com' : 'localhost'
+      domain: NODE_ENV === 'production' ? 'zemuldo.com' : 'localhost'
     });
   }
   if (ctx.query.token) {
@@ -100,14 +102,14 @@ MyDocument.getInitialProps = async ctx => {
       maxAge: 30 * 24 * 60 * 60,
       path: '/',
       httpOnly: true,
-      domain: NODE_ENV === 'production'? 'zemuldo.com' : 'localhost',
+      domain: NODE_ENV === 'production' ? 'zemuldo.com' : 'localhost',
       secure: NODE_ENV === 'production'
     });
 
     setCookie(ctx, 'authorized', '1', {
       maxAge: 30 * 24 * 60 * 60,
       path: '/',
-      domain: NODE_ENV === 'production'? 'zemuldo.com' : 'localhost'
+      domain: NODE_ENV === 'production' ? 'zemuldo.com' : 'localhost'
     });
   }
 
@@ -116,7 +118,7 @@ MyDocument.getInitialProps = async ctx => {
 
   ctx.renderPage = () =>
     originalRenderPage({
-      enhanceApp: App => props => sheets.collect(<App {...props} />)
+      enhanceApp: App => props => sheets.collect(<App {...props} theme= {theme} />)
     });
 
   const initialProps = await Document.getInitialProps(ctx);
@@ -124,6 +126,7 @@ MyDocument.getInitialProps = async ctx => {
   return {
     ...initialProps,
     query: ctx.query,
+    theme,
     styles: [
       < React.Fragment key="styles">
         {initialProps.styles}

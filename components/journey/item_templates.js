@@ -74,7 +74,7 @@ export function Experience({ details }) {
               {
                 details.stacks.map((entry) => {
                   return <div style={{ float: 'left' }} key={entry.value} >
-                    <span className='color-6'>{` ${entry.label} `}</span>
+                    <span className='color-6'>{` ${entry.label}`}</span>
                     <span className='separator'>,</span>
                   </div>;
                 })

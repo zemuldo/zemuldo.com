@@ -2839,7 +2839,7 @@ Array [
 
 exports[`Storyshots Home Page Footer 1`] = `
 <footer
-  className="makeStyles-footer-107"
+  className="makeStyles-footer-36"
 >
   <div
     className="MuiContainer-root MuiContainer-maxWidthLg"
@@ -3888,7 +3888,6 @@ exports[`Storyshots Home Page TerminalMe 1`] = `
           "MsTransition": "all .5s ease-out",
           "OTransition": "all .5s ease-out",
           "WebkitTransition": "all .5s ease-out",
-          "backgroundColor": "rgb(23, 23, 23)",
           "color": "#f0f0f0",
           "fontFamily": "Consolas, \\"Courier New\\", Courier",
           "fontSize": "1.2em",
@@ -6064,11 +6063,6 @@ Array [
 exports[`Storyshots Login Loging in 1`] = `
 <div
   className="MuiContainer-root MuiContainer-maxWidthMd"
-  style={
-    Object {
-      "color": "white",
-    }
-  }
 >
   <div
     className="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-center MuiGrid-justify-xs-center"

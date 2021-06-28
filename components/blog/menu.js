@@ -213,8 +213,6 @@ const Menu = (props) => {
                 </Link>
               </CustomMenuItem>
 
-              
-
               <CustomMenuItem themeColor={theme.palette.text.primary} isActive={router.pathname === '/blog/upload-image'} classes={classes} >
                 <Link href="/blog/upload-image">
                   <span className={classes.menuItem}>
@@ -225,9 +223,6 @@ const Menu = (props) => {
                   </span>
                 </Link>
               </CustomMenuItem>
-
-
-             
 
               <CustomMenuItem themeColor={theme.palette.text.primary} isActive={router.pathname === '/blog/images'} classes={classes} >
                 <Link href="/blog/images">
@@ -253,7 +248,7 @@ const Menu = (props) => {
             {user && <Avatar alt="User profile" className={classes.avatar} src={user.profilePhotoUrl} />}
 
             {router.pathname.includes('/blog') && !authorized && activateLogin >= 4 &&
-              <Link href={`/blog/login?redirectTo=${router.pathname }`}>
+              <Link href={`/blog/login?redirectTo=${window.location.href }`}>
                 <Avatar className={classes.greenAvatarGreen}>
                   <VpnKeyIcon className={classes.menuIcon} />
                 </Avatar>

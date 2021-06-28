@@ -9,7 +9,7 @@ export const lightTheme = createMuiTheme({
       disabled: 'rgba(255, 255, 255, 0.5)',
       hint: 'rgba(255, 255, 255, 0.5)',
       icon: 'rgba(255, 255, 255, 0.5)',
-      primary: '#000',
+      primary: '#393E43',
       secondary: 'rgba(255, 255, 255, 0.7)',
     },
     primary: {
@@ -38,7 +38,7 @@ export const darkTheme = createMuiTheme({
       disabled: 'rgba(255, 255, 255, 0.5)',
       hint: 'rgba(255, 255, 255, 0.5)',
       icon: 'rgba(255, 255, 255, 0.5)',
-      primary: '#fff',
+      primary: '#AEBCCB',
       secondary: 'rgba(255, 255, 255, 0.7)',
     },
     primary: {
@@ -53,7 +53,7 @@ export const darkTheme = createMuiTheme({
       main: red.A400
     },
     background: {
-      default: '#171717',
+      default: '#22272E',
       card: 'rgb(23, 23, 23)'
     }
   }

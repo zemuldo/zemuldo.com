@@ -21,22 +21,20 @@ export default function AcceptTerms({accepted_terms}) {
         position: 'fixed',
         bottom: 0,
         zIndex: 9999,
-        color: 'white',
         display: 'flex',
         width: '100%',
-        backgroundColor: 'rgb(23, 23, 23)',
         margin: 'auto',
         alignContent: 'center',
         borderTop: 'solid 1px #08a6f3'
       }}>
-        <Container style={{ padding: '12px 5px 12px 5px', color: 'white', fontSize: '14px' }} maxWidth="md">
+        <Container style={{ padding: '12px 5px 12px 5px', fontSize: '14px' }} maxWidth="md">
           <span>
               By using this site, you acknowledge that you have read and understand the
             <a className='color-black' target="_blank" rel="noopener noreferrer" href='/cookie-policy'> Cookie Policy</a>,
             <a style={{marginLeft: '8px', marginRight: '8px'}} target="_blank" rel="noopener noreferrer" href='/privacy-policy'> Privacy Policy</a>, and the
             <a style={{marginLeft: '8px', marginRight: '8px'}} target="_blank" rel="noopener noreferrer" href='/terms-and-conditions'> Terms. </a>
           </span>
-          <a style={{marginLeft: '10px', color: 'white'}} href={null} onClick={agreedToTerms} > Close </a>
+          <a style={{marginLeft: '10px'}} href={null} onClick={agreedToTerms} > Close </a>
         </Container>
 
       </div> 

@@ -1,12 +1,13 @@
 body,
 html {
-	padding: 0 5px 0 5px;
+	padding: 10px 0px 0px 5px;
 	opacity: 1;
 	font-size: 16px;
 	font-weight: 1000;
 	line-height: 24px;
 	letter-spacing: 1px;
-	/* font-family: "monospaced courier-new", Poppins, sans-serif!important; */
+	font-family: "monospaced courier-new", Poppins, sans-serif!important;
+	letter-spacing: 4px;
 }
 
 
@@ -81,7 +82,8 @@ h4 {
 }
 
 a {
-	text-decoration: none
+	text-decoration: none;
+	font-weight: bold;
 }
 
 img {
