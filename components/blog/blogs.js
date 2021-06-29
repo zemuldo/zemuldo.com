@@ -9,6 +9,7 @@ import PropTypes from 'prop-types';
 import CustomLink from '../link';
 import { Paper } from '@material-ui/core';
 import { format } from 'date-fns';
+import { useTheme } from '@material-ui/styles';
 
 const useStyles = makeStyles((theme) => ({
   card: {
@@ -43,6 +44,7 @@ const formatDescription = (description) => {
 
 export default function Blogs({ posts, _infiniteScroll }) {
   const classes = useStyles();
+  const theme = useTheme();
   return (
     <Grid container spacing={4}>
       {posts.map(post => (
@@ -56,7 +58,9 @@ export default function Blogs({ posts, _infiniteScroll }) {
                       <Typography style={{ color: '#08a6f3' }} component="h2" variant="h5">
                         {post.title}
                       </Typography>
-                      <hr className="hr-white" />
+                      <div style={{padding: '15px 0px 15px'}}>
+                        <hr style={{ background: theme.palette.text.primary }} />
+                      </div>
                     </CardContent>
                     <CardContent style={{marginTop: '-35px', fontSize: '12px'}}>
                       {format(new Date(post.createdAt), 'PPPP')}

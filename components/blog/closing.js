@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import { makeStyles, withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
-import { Avatar } from '@material-ui/core';
 import InfoIcon from '@material-ui/icons/Info';
 import CustomLink from '../link';
 
@@ -85,13 +84,13 @@ export default function Closing() {
           spacing={2}
         >
           <Grid item xs={5}>
-            <hr className="hr-z-color-gradient-opposite hr-z-color" />
+            <hr style={{ background: 'linear-gradient(to left, #08a6f3, rgba(255, 0, 0, 0))' }} />
           </Grid>
           <Grid container item justify="center" xs={1}>
             <InfoIcon style={{ fill: '#08a6f3' }} />
           </Grid>
           <Grid item xs={5}>
-            <hr className="hr-z-color-gradient hr-z-color" />
+            <hr style={{ background: 'linear-gradient(to right, #08a6f3, rgba(255, 0, 0, 0))' }} />
           </Grid>
         </Grid>
       </div>
@@ -139,7 +138,7 @@ export default function Closing() {
               </CustomButton>
             </CustomLink>
           </Grid>
-          <Grid item xs={12} sm={3}>
+          {/* <Grid item xs={12} sm={3}>
             <CustomLink
               rel="noopener noreferrer"
               target="_blank"
@@ -159,7 +158,7 @@ export default function Closing() {
                 Support me on Ko-Fi
               </CustomButton>
             </CustomLink>
-          </Grid>
+          </Grid> */}
         </Grid>
       </div>
     </div>

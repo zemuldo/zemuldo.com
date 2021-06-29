@@ -1,5 +1,5 @@
-export function whiteText(string) {
-  return '<span style="color: white !important;">' + string + '</span>';
+export function colorText(string, color) {
+  return `<span style="color: ${color};">${string}</span>`;
 }
 
 export function greenText(strings) {

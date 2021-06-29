@@ -263,7 +263,7 @@ hr {
 		background: linear-gradient(to left, #08a6f3, rgba(255, 0, 0, 0))
 	}
 	.hr-white:before {
-		background: rgba(255, 255, 255)
+		background: red;
 	}
 }
 
@@ -289,7 +289,7 @@ hr {
 		background: linear-gradient(to left, #08a6f3, rgba(255, 0, 0, 0))
 	}
 	.hr-white:before {
-		background: rgba(255, 255, 255);
+		background: red;
 		opacity: .4
 	}
 }

@@ -22,9 +22,12 @@ export default function Home() {
                     <h1 itemProp="name" style={{ color: theme.palette.primary.heading}}>Danstan Onyango</h1>
                   </div>
                   <h2 style={{ fontSize: '26px', color: theme.palette.secondary.heading }}>Software Engineer</h2>
-                  <hr className='hr-red-gradient' style={{ marginTop: '-10px' }} />
+                  <div style={{ paddingLeft: '5px', marginTop: '-5px' }}>
+                    <hr style={{ background: 'linear-gradient(to right, #f306a0, rgba(255, 0, 0, 0))' }} />
+                  </div>
+                 
                 </div>
-                <div className="header-section" style={{marginTop: '-25px'}}>
+                <div className="header-section" >
                   <div style={{ paddingLeft: '5px', color: theme.palette.text  }} className="header-frame">
                     <h3 className="font-c-cn-m" style={{ lineHeight: '150%', marginTop: '-5px' }}>
                       <p>Loves Functional Programming and Developing Distributed Systems. Curious, Peculiar. Chess.</p>
@@ -54,8 +57,8 @@ export default function Home() {
                     />
                   </div>
                 </div>
-                <div style={{ paddingLeft: '5px', marginTop: '-20px' }}>
-                  <hr className='hr-red-gradient'/>
+                <div style={{ paddingLeft: '5px' }}>
+                  <hr style={{ background: 'linear-gradient(to right, #f306a0, rgba(255, 0, 0, 0))' }} />
                 </div>
                 <div className="col-md-12 text-center">
                   <Terminal />

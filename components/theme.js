@@ -24,7 +24,7 @@ export const lightTheme = createMuiTheme({
       main: red.A400
     },
     background: {
-      default: '#DDE4E7',
+      default: '#EFEFEF',
       card: '#fff'
     }
   }

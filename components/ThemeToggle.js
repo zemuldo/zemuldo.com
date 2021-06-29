@@ -8,18 +8,18 @@ function ThemeToggle({ darkMode }) {
   useEffect(() => {
     const listener = window.addEventListener('storage', (event) => {
       if (event.storageArea !== localStorage) return;
-      const dm = localStorage.getItem('darkMode')
-      dm === 'true' ? darkMode.enable() : darkMode.disable()
+      const dm = localStorage.getItem('darkMode');
+      dm === 'true' ? darkMode.enable() : darkMode.disable();
     });
 
-    return () => window.removeEventListener(Animation, listener)
-  }, [])
+    return () => window.removeEventListener(Animation, listener);
+  }, []);
 
   
 
   const toggle = () => {
-    darkMode.toggle()
-  }
+    darkMode.toggle();
+  };
 
   if (darkMode.value === true) return (
     <div onClick={toggle} className='theme-toggle'>

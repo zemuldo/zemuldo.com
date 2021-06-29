@@ -3,14 +3,12 @@ import App from 'next/app';
 import Head from 'next/head';
 
 import CssBaseline from '@material-ui/core/CssBaseline';
-import themes, {darkTheme, lightTheme} from '../components/theme';
+import themes from '../components/theme';
 import NProgress from 'nprogress';
 import Router from 'next/router';
 import '../components/app/app.css';
 import VersionInfo from '../components/versionInfo';
-import ThemeToggle from '../components/ThemeToggle';
 import Providers from '../components/Providers';
-import styled from 'styled-components';
 
 Router.onRouteChangeStart = () => {
   NProgress.start();

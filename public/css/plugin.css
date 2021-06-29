@@ -221,3 +221,12 @@ ul {
 .fa-chess-knight:before {
 	content: "\f441"
 }
+.fa-windows:before {
+	content: "\f17a"
+}
+.fa-folder-open:before {
+	content: "\f07c"
+}
+.fa-apple:before {
+	content: "\f179"
+}

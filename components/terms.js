@@ -5,7 +5,7 @@ import { setCookie } from 'nookies';
 import { useTheme } from '@material-ui/core';
 
 export default function AcceptTerms({ accepted_terms }) {
-  const theme = useTheme()
+  const theme = useTheme();
   const [accepted_terms_now, acceptTerms] = useState(null);
   const agreedToTerms = ()=>{
     acceptTerms('1');

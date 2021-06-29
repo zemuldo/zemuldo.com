@@ -28,6 +28,6 @@ const Providers =  ({ children }) => {
   }
 
   return body;
- };
+};
 
 export default Providers;
