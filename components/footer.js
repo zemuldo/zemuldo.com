@@ -45,6 +45,8 @@ export default function Footer() {
             <a target="_blank" rel="noopener noreferrer" href='/privacy-policy'> Privacy</a>
             ,
             <a target="_blank" rel="noopener noreferrer" href='/terms-and-conditions'> Terms</a>
+            ,
+            <a target="_blank" rel="noopener noreferrer" href='/attributions'> Attributions</a>
           </span>
         </Typography>
       </Container>
