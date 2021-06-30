@@ -47,7 +47,7 @@ const styles = theme => ({
     right: 0,
     left: 0,
     backgroundColor: theme.palette.background.card,
-    opacity: .7
+    opacity: .2
   },
   mainFeaturedPostContent: {
     position: 'relative',

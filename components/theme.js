@@ -25,7 +25,7 @@ export const lightTheme = createMuiTheme({
     },
     background: {
       default: '#EFEFEF',
-      card: '#fff'
+      card: '#EFEFEF'
     }
   }
 });
@@ -54,7 +54,7 @@ export const darkTheme = createMuiTheme({
     },
     background: {
       default: '#22272E',
-      card: 'rgb(23, 23, 23)'
+      card: '#22272E'
     }
   }
 });
