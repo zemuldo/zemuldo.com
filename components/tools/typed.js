@@ -1,12 +1,13 @@
 import { colorText, greenText, getYearsBetween, platformLogo } from '../../helpers/utils';
 
 export function type_message(theme) {
-  const platform = platformLogo()
+  const platform = platformLogo();
 
   let logo = '<i style="font-size: 12px; margin-bottom: 5px" class="fa fa-apple fa-lg" aria-hidden="true"></i>';
 
   if (platform === 'ms') logo = '<i style="font-size: 12px; margin-bottom: 5px" class="fa fa-windows fa-lg" aria-hidden="true"></i>';
   if (platform === 'linux') logo = '<i style="font-size: 12px; margin-bottom: 5px" class="fa fa-linux fa-lg" aria-hidden="true"></i>';
+  if (platform === 'android') logo = '<i style="font-size: 12px; margin-bottom: 5px" class="fa fa-android fa-lg" aria-hidden="true"></i>';
 
   const waitAndBreak = '^300 <br/>';
   const start = (path) => `<span 

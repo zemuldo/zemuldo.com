@@ -230,3 +230,9 @@ ul {
 .fa-apple:before {
 	content: "\f179"
 }
+.fa-linux:before {
+	content: "\f17c"
+}
+.fa-android:before {
+	content: "\f17b"
+}
