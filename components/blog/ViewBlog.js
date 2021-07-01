@@ -124,7 +124,6 @@ const ViewBlog = (props) => {
         <Container
           maxWidth="md"
           style={{
-            fontFamily: '\'Courier New\', Courier, monospace',
             fontSize: '18px',
           }}
         >
@@ -189,10 +188,7 @@ const ViewBlog = (props) => {
         <Container
           className="blog-body"
           maxWidth="md"
-          style={{
-            fontFamily: '\'Courier New\', Courier, monospace',
-            fontSize: '18px'
-          }}
+         
         >
           <br />
           <ReactMarkdown
@@ -208,7 +204,7 @@ const ViewBlog = (props) => {
         <Container
           maxWidth="md"
           style={{
-            fontFamily: '\'Courier New\', Courier, monospace',
+            fontFamily: '\'Roboto\', Courier, monospace',
             fontSize: '18px',
           }}
         >

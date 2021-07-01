@@ -2,12 +2,10 @@ body,
 html {
 	padding: 10px 0px 0px 5px;
 	opacity: 1;
-	font-size: 16px;
+	font-size: 20px;
 	font-weight: 1000;
 	line-height: 24px;
-	letter-spacing: 1px;
-	font-family: "monospaced courier-new", Poppins, sans-serif!important;
-	letter-spacing: 4px;
+	font-family: 'Roboto', sans-serif;
 }
 
 
@@ -37,10 +35,6 @@ html {
 
 .header-frame {
 	max-width: 490px
-}
-
-.font-c-cn-m {
-	font-family: "Courier New", Courier, monospace
 }
 
 h1 {
@@ -339,7 +333,7 @@ hr:after {
 
 .theme-toggle {
 	position: fixed;
-	top: 11px;
+	top: 15px;
 	right: 10px;
 	z-index: 999;
 	cursor: pointer;
@@ -365,33 +359,34 @@ pre {
 }
 
 body::-webkit-scrollbar {
-	width: 11px
+	width: 6px
 }
 
 body::-webkit-scrollbar-track {
-	background: #171717
+	background-color: transparent;
 }
 
 body::-webkit-scrollbar-thumb {
 	background-color: #08a6f3;
 	border-radius: 20px;
-	border: 3px solid #171717
+	border: 3px solid transparent
 }
 
 pre::-webkit-scrollbar {
 	margin-bottom: -2px;
-	width: 11px
+	width: 6px;
+	height: 6px;
+	background-color: transparent;
 }
 
 pre::-webkit-scrollbar-track {
-	background: #2b2b2b;
 	border-radius: 20px
 }
 
 pre::-webkit-scrollbar-thumb {
-	background-color: #08a6f3;
+	background-color: transparent;
 	border-radius: 20px;
-	border: 5px solid #2b2b2b
+	border: 12px solid
 }
 
 /* Page Wrapper*/

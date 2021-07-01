@@ -295,7 +295,6 @@ class EditBlog extends React.Component {
           maxWidth="md"
           style={{
             color: 'white',
-            fontFamily: '\'Courier New\', Courier, monospace',
             fontSize: '18px'
           }}
         >

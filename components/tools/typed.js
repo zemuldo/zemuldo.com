@@ -35,7 +35,7 @@ export function type_message(theme) {
     start('Experience?') +
       waitAndBreak +
       greenText([experience]);
-  const funGames = greenText(['Chess', 'Music', 'Yoga', 'Zumba' , 'Oh! and Cooking 🤪']).join(',^200 ');
+  const funGames = greenText(['Chess', 'Music', 'Yoga', 'Zumba', 'Oh! and Cooking 😋']).join(',^200 ');
   const fullFunTime = waitAndBreak + start('Funtime?') + waitAndBreak + funGames;
   return [myStack + yearsOfExperience + learning + fullFunTime];
 }

@@ -11,10 +11,10 @@ const CopyCode = (props) =>{
     setTimeout(()=> setCopied(false), 1500);
   };
   return (
-    <div style={{display: 'flex', justifyContent: 'flex-end', width: '100%', padding: '1px', marginBottom: '-40px'}} >
-      <span onClick= {handleClick} style={{cursor: 'pointer'}}>
-        {!copied && <FileCopyIcon fontSize="small" color= 'primary' style={{fill: '#08a6f3'}}/>}
-        {copied && <CheckCircleIcon fontSize="small" color= 'primary' style={{fill: '#08a6f3'}}/>}
+    <div style={{ display: 'flex', justifyContent: 'flex-end', width: '100%', padding: '1px', marginBottom: '-40px' }} >
+      <span onClick= {handleClick} style={{cursor: 'pointer',}}>
+        {!copied && <FileCopyIcon fontSize="small" />}
+        {copied && <CheckCircleIcon fontSize="small" />}
       </span>
     </div>
   );

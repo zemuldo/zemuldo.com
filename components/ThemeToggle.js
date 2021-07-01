@@ -23,12 +23,12 @@ function ThemeToggle({ darkMode }) {
 
   if (darkMode.value === true) return (
     <div onClick={toggle} className='theme-toggle'>
-      <WbSunnyIcon fontSize='large' color='primary' />
+      <WbSunnyIcon fontSize='small' color='primary' />
     </div>
   );
   else return (
     <div onClick={toggle} className='theme-toggle'>
-      <Brightness3Icon fontSize='large' color='primary' />
+      <Brightness3Icon fontSize='small' color='primary' />
     </div>
   );
  

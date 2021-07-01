@@ -98,7 +98,6 @@ function FeaturedPost({ featuredPost, classes }) {
                 gutterBottom
                 style={{
                   color: '#08a6f3',
-                  fontFamily: '\'Courier New\', Courier, monospace',
                   fontSize: '3em'
                 }}
               >

@@ -302,8 +302,6 @@ class NewBlog extends React.Component {
             <Container
               maxWidth="md"
               style={{
-                color: 'white',
-                fontFamily: '\'Courier New\', Courier, monospace',
                 fontSize: '18px'
               }}
             >
