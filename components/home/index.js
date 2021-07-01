@@ -52,7 +52,7 @@ export default function Home() {
                     <img
                       id="me-pic"
                       style={{borderRadius: '50%'}}
-                      src="/images/logo/me.jpg"
+                      src="/images/logo/ps.png"
                       alt="Danstan Onyango, Zemuldo - Working at home"
                     />
                   </div>
