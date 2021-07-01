@@ -17,7 +17,7 @@ export function type_message(theme) {
           <span style="font-size: 22px; margin-left: -5px; margin-right: -5px; color: ${theme.palette.text.primary};" >&#124;</span>
           <i style="font-size: 10px; margin-bottom: 5px" class="fa fa-folder-open" aria-hidden="true"></i>
           <span>
-            /home/${path}: ${colorText('.', theme.palette.text.primary)}
+            /${path}: ${colorText('.', theme.palette.text.primary)}
           </span>
          </span>`;
   const myStack =
