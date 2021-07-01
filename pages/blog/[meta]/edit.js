@@ -66,7 +66,6 @@ marked.setOptions({
 const useStyles = theme => ({
   greenAvatar: {
     margin: 10,
-    color: '#fff',
     backgroundColor: '#08a6f3',
     '&:hover': {
       cursor: 'pointer'
@@ -111,7 +110,6 @@ const useStyles = theme => ({
       border: '1px solid transparent',
     },
     fontSize: '16px',
-    color: 'white',
     '& label.Mui-focused': {
       color: '#08a6f3',
     },
@@ -294,7 +292,6 @@ class EditBlog extends React.Component {
         <Container
           maxWidth="md"
           style={{
-            color: 'white',
             fontSize: '18px'
           }}
         >
@@ -365,7 +362,6 @@ class EditBlog extends React.Component {
           className="blog-md"
           maxWidth="md"
           style={{
-            color: 'white',
             fontFamily:
               '\'monospaced courier-new\', Poppins, sans-serif !important'
           }}
