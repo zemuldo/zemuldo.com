@@ -1,11 +1,18 @@
-import { colorText, greenText, getYearsBetween } from '../../helpers/utils';
+import { colorText, greenText, getYearsBetween, platformLogo } from '../../helpers/utils';
 
 export function type_message(theme) {
+  const platform = platformLogo()
+
+  let logo = '<i style="font-size: 12px; margin-bottom: 5px" class="fa fa-apple fa-lg" aria-hidden="true"></i>';
+
+  if (platform === 'ms') logo = '<i style="font-size: 12px; margin-bottom: 5px" class="fa fa-windows fa-lg" aria-hidden="true"></i>';
+  if (platform === 'linux') logo = '<i style="font-size: 12px; margin-bottom: 5px" class="fa fa-linux fa-lg" aria-hidden="true"></i>';
+
   const waitAndBreak = '^300 <br/>';
   const start = (path) => `<span 
        style="color: #08a6f3;font-size: 1.1em;"
        class="margin-left--10 font-size-14 !important">
-          <i style="font-size: 10px; margin-bottom: 5px" class="fa fa-apple fa-lg" aria-hidden="true"></i>
+          ${logo}
           <span style="font-size: 22px; margin-left: -5px; margin-right: -5px; color: ${theme.palette.text.primary};" >&#124;</span>
           <i style="font-size: 10px; margin-bottom: 5px" class="fa fa-folder-open" aria-hidden="true"></i>
           <span>
