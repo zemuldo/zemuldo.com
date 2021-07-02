@@ -19,7 +19,8 @@ const useStyles = makeStyles((theme) => ({
   },
   cardDetails: {
     padding: '5px',
-    minHeight: '280px'
+    height: '360px',
+    overflow: 'hidden'
   },
   cardMedia: {
     width: '70vh'
