@@ -4,6 +4,7 @@ const fileupload = require('express-fileupload');
 const fs = require('fs');
 
 const api_url = process.env.API_URL;
+const staticContentPath = process.env.STATIC_CONTENT_PATH;
 
 const router = express();
 
@@ -24,7 +25,7 @@ router.post('/', async (req, res) => {
 
       if (res.status !== 200) throw Error('Could not save image');
       
-      const fsFileName = `public/z-site-images/${fileName}`;
+      const fsFileName = `${staticContentPath}/z-site-images/${fileName}`;
 
       await fs.writeFile(fsFileName, req.files[file].data, async function (err) {
         if (err) {

@@ -10,7 +10,7 @@ export default function CustomLink({ children, href, target, rel, style }) {
     router.push(href);
   };
   
-  if (href && href.includes('http'))
+  if ((href && href.includes('http')) || target)
     return (
       <a style={style} target={target} rel={rel} href={href}>
         {children}

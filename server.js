@@ -34,6 +34,7 @@ const prepSiteStories = (data) => {
   return $;
 };
 
+const staticContentPath = process.env.STATIC_CONTENT_PATH;
 const dev = process.env.NODE_ENV !== 'production';
 const app = next({ dev });
 const handle = app.getRequestHandler();
@@ -61,6 +62,7 @@ router.get('/', (req, res) => {
 
 router.use('/blog', express.static('static'));
 router.use('/site-stories', express.static(path.join(__dirname, 'public')));
+router.use('/z-site-images', express.static(`${staticContentPath}/z-site-images`));
 router.use('/site-stories/', express.static(path.join(__dirname, '.stories')));
 router.use('/', express.static(path.join(__dirname, '..next')));
 router.use('/', express.static(path.join(__dirname, '.stories')));
