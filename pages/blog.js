@@ -42,7 +42,7 @@ class Blog extends React.Component {
     
     const res = await this.initialPosts(tag);
     const data = await res.json();
-    const res_featured = await fetch(`${api_url}/post/latest`);
+    const res_featured = await fetch(`${ex_api_url}/api/posts/featured`);
     const data_featured = await res_featured.json();
     return {
       featuredPost: res_featured.status === 200? data_featured: null,

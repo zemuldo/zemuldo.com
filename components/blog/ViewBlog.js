@@ -7,6 +7,7 @@ import Head from 'next/head';
 import { format } from 'date-fns';
 import Avatar from '@material-ui/core/Avatar';
 import EditIcon from '@material-ui/icons/Edit';
+import HighlightIcon from '@material-ui/icons/Highlight';
 import Grid from '@material-ui/core/Grid';
 import PropTypes from 'prop-types';
 import ReactMarkdown from 'react-markdown';
@@ -22,6 +23,7 @@ import Closing from './closing';
 const api_url = process.env.API_URL;
 const base_url = process.env.UI_URL;
 const base_url_domain = process.env.UI_URL_DOMAIN;
+const ex_api_url = process.env.EX_API_URL;
 
 const useStyles = makeStyles(() => ({
   devTo: {
@@ -65,6 +67,14 @@ const useStyles = makeStyles(() => ({
 const ViewBlog = (props) => {
   const classes = useStyles();
   const { post, body, authorized } = props;
+
+  const setAsFeatured = async () => {
+    const { authorization, post} = props
+    await fetch(`${ex_api_url}/api/posts/${post._id}/set_as_featured`, {
+      method: 'POST',
+      headers: { authorization}
+    });
+  }
 
   const linkedInShare = () => {
     const { post } = props;
@@ -166,14 +176,25 @@ const ViewBlog = (props) => {
               <i className="fa fa-linkedin" />
             </Avatar>
             {authorized && (
-              <Avatar
-                onClick={() =>
-                  props.router.push(`/blog/${post._id}/edit`)
-                }
-                className={classes.greenAvatar}
-              >
-                <EditIcon />
-              </Avatar>
+              <>
+                <Avatar
+                  onClick={() =>
+                    props.router.push(`/blog/${post._id}/edit`)
+                  }
+                  className={classes.greenAvatar}
+                >
+                  <EditIcon />
+                </Avatar>
+
+                <Avatar
+                  onClick={() =>
+                    setAsFeatured()
+                  }
+                  className={classes.greenAvatar}
+                >
+                  <HighlightIcon />
+                </Avatar>
+              </>
             )}
           </Grid>
         </Container>
@@ -224,6 +245,7 @@ ViewBlog.propTypes = {
   body: PropTypes.object.isRequired,
   router: PropTypes.object,
   authorized: PropTypes.bool,
+  authorization: PropTypes.string,
 };
 
 export default withRouter((ViewBlog));

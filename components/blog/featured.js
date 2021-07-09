@@ -84,7 +84,7 @@ const styles = theme => ({
 
 function FeaturedPost({ featuredPost, classes }) {
   return (
-    <CustomLink href={`/blog/${featuredPost.post.title.toLowerCase().split(' ').join('-')}-${featuredPost.post._id}`}>
+    <CustomLink href={`/blog/${featuredPost.title.toLowerCase().split(' ').join('-')}-${featuredPost._id}`}>
       <Paper className={classes.mainFeaturedPost}>
         <div className={classes.overlay} />
         <Grid style={{ minHeight: '400px' }} className="eph" container>
@@ -101,16 +101,16 @@ function FeaturedPost({ featuredPost, classes }) {
                   fontSize: '3em'
                 }}
               >
-                {featuredPost.post.title}
+                {featuredPost.title}
               </Typography>
               <Typography variant="h5" color="inherit" paragraph>
-                {featuredPost.post.description}
+                {featuredPost.description}
               </Typography>
               <span >Read Now</span>
             </div>
 
           </Grid>
-          <Grid style={{ backgroundImage: `url(${featuredPost.post.coverPhotoUrl})` }} item md={6} />
+          <Grid style={{ backgroundImage: `url(${featuredPost.coverPhotoUrl})` }} item md={6} />
         </Grid>
       </Paper>
     </CustomLink>

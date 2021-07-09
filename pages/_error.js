@@ -85,6 +85,18 @@ class ErrorPage extends React.Component {
           </div>
         );
         break;
+      case 403:
+        response = (
+          <div>
+            <Head>
+              <style dangerouslySetInnerHTML={{ __html: Styles }} />
+            </Head>
+            <Container className="pt-5 text-center">
+              {errorWrapper(403, 'It seems you are trying to do something only I am allowed to do. Sorry!')}
+            </Container>
+          </div>
+        );
+        break;
       case 500:
       default:
         response = (
