@@ -6,7 +6,6 @@ const Styles = {};
 const errorWrapper = (code, message) => {
   return (<div 
     style={{ 
-      color: '#000', 
       fontFamily: '-apple-system, BlinkMacSystemFont, Roboto, "Segoe UI", "Fira Sans", Avenir, "Helvetica Neue", "Lucida Grande", sans-serif', 
       height: '100vh', 
       textAlign: 'center', 
@@ -19,7 +18,7 @@ const errorWrapper = (code, message) => {
       <h1 
         style={{
           display: 'inline-block', 
-          borderRight: '1px solid rgba(0, 0, 0,.3)', 
+          borderRight: '1px solid', 
           margin: 0, marginRight: '10px', 
           padding: '10px 23px 10px 0', 
           fontSize: '24px', 
@@ -27,7 +26,7 @@ const errorWrapper = (code, message) => {
           verticalAlign: 'top' }}
       >
         {code}
-        <span style={{color: '#fff', marginLeft: '20px'}}>|</span>
+        <span style={{marginLeft: '20px'}}>|</span>
       </h1>
       <div style={{ display: 'inline-block', textAlign: 'left', lineHeight: '49px', height: '49px', verticalAlign: 'middle' }}>
         <h2 style={{ fontSize: '14px', fontWeight: 'normal', lineHeight: 'inherit', margin: 0, padding: 0 }}>{message}{/* */}

@@ -40,9 +40,9 @@ const useStyles = makeStyles(theme => ({
     },
   },
   materialInput: {
-    borderBottom: '1px solid green',
+    borderBottom: `1px solid ${theme.palette.text.primary}`,
     '&:after': {
-      borderBottom: '1px solid green',
+      borderBottom: `1px solid ${theme.palette.text.primary}`,
     },
     fontSize: '28px',
     color: '#08a6f3'
@@ -69,7 +69,7 @@ function Album({images, authorized, user}) {
         <meta name="description" content="Blog by Danstan Onyango, Software Engineer, Nairobi, Kenya. Tech articles, Tutorials and Reviews. Sharing content that inspires." />
       </Head>
       <Menu authorized={authorized} />
-      <Container style={{ color: 'white', backgroundColor: 'rgb(23, 23, 23)' }} maxWidth="md">
+      <Container  maxWidth="md">
         <TextField
           value={search}
           id="coverPhotoUrl"
@@ -86,7 +86,7 @@ function Album({images, authorized, user}) {
         />
       </Container>
       <br/>
-      <Container style={{ color: 'white', backgroundColor: 'rgb(23, 23, 23)' }} maxWidth="md">
+      <Container maxWidth="md">
         <Grid container spacing={4}>
           {stateImages.map(image => (
             <Grid item key={image.name} xs={12} sm={6} md={4}>
