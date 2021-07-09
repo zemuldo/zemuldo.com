@@ -109,10 +109,12 @@ class Blog extends React.Component {
         <Container  maxWidth="md">
           <TopTags tags={topTags} onSelect={this.filterByTag} />
         </Container>
-        <Container  maxWidth="md">
+        <Container>
           <ShouldRender if={!!featuredPost && !this.state.currentTag}>
-            <FeaturedPost featuredPost={featuredPost}/>
+            <FeaturedPost featuredPost={featuredPost} />
           </ShouldRender>
+        </Container>
+        <Container  maxWidth="md">
           <Blogs _infiniteScroll={this.infiniteScroll} posts={posts} />
           <br />
           {this.state.fetching && <div style={{ flexGrow: 1 }}><LinearProgress /> </div>}

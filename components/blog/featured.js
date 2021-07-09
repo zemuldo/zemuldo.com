@@ -110,7 +110,7 @@ function FeaturedPost({ featuredPost, classes }) {
             </div>
 
           </Grid>
-          <Grid style={{backgroundImage: `url(${featuredPost.post.coverPhotoUrl})`}} item md={6}/>
+          <Grid style={{ backgroundImage: `url(${featuredPost.post.coverPhotoUrl})` }} item md={6} />
         </Grid>
       </Paper>
     </CustomLink>
