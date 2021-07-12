@@ -69,12 +69,12 @@ const ViewBlog = (props) => {
   const { post, body, authorized } = props;
 
   const setAsFeatured = async () => {
-    const { authorization, post} = props
+    const { authorization, post} = props;
     await fetch(`${ex_api_url}/api/posts/${post._id}/set_as_featured`, {
       method: 'POST',
       headers: { authorization}
     });
-  }
+  };
 
   const linkedInShare = () => {
     const { post } = props;

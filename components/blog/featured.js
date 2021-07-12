@@ -5,6 +5,7 @@ import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import PropTypes from 'prop-types';
 import CustomLink from '../link';
+import { format } from 'date-fns';
 
 const styles = theme => ({
   greenAvatar: {
@@ -103,12 +104,30 @@ function FeaturedPost({ featuredPost, classes }) {
               >
                 {featuredPost.title}
               </Typography>
-              <Typography variant="h5" color="inherit" paragraph>
+              <Typography style={{fontSize: '24px'}} variant="p" color="inherit" paragraph>
                 {featuredPost.description}
               </Typography>
-              <span >Read Now</span>
+              <p style={{ marginTop: '50px' }} >Published: {format(new Date(featuredPost.createdAt), 'PPPP')}</p>
+              <div className="blog-tags">
+                {featuredPost.tags.map((tag) => (
+                  <span
+                    className="blog-tags"
+                    style={{
+                      color: tag.color,
+                      boxShadow: '0 8px 15px 0 rgba(95, 91, 95, .33)',
+                      backgroundColor: 'black',
+                      border: 'solid 2px transparent',
+                      borderRadius: '3px',
+                      cursor: 'pointer',
+                      marginRight: '10px'
+                    }}
+                    key={tag.value}
+                  >
+                    {tag.label}
+                  </span>
+                ))}
+              </div>
             </div>
-
           </Grid>
           <Grid style={{ backgroundImage: `url(${featuredPost.coverPhotoUrl})` }} item md={6} />
         </Grid>
