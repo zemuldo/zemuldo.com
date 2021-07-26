@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Container from '@material-ui/core/Container';
 import { makeStyles } from '@material-ui/core/styles';
 import Footer from '../footer';
@@ -65,6 +65,13 @@ const useStyles = makeStyles(() => ({
 }));
 
 const ViewBlog = (props) => {
+  useEffect(() => {
+    const anchored = window.location.href.split('#')?.[1];
+    if (anchored) {
+      const elm = document.getElementById(anchored);
+      elm.scrollIntoView();
+    }
+  },  []);
   const classes = useStyles();
   const { post, body, authorized } = props;
 
