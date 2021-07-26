@@ -11,12 +11,16 @@ function H1(props) {
   const children = React.Children.toArray(props.children);
   const text = children.reduce(flatten, '');
   const slug = text.toLowerCase().replace(/\W/g, '-');
-  return React.createElement('h' + props.level, { id: slug }, props.children);
+  const h = React.createElement('h' + props.level, { id: slug }, props.children);
+  return <a className='dead-a' onClick={(e) => {
+    e.preventDefault();
+  }} href={`${props.href}#${slug}` }>{ h}</a>
 }
 
 H1.propTypes = {
   children: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
   level: PropTypes.number.isRequired,
+  href: PropTypes.string,
 };
 
 export default H1;

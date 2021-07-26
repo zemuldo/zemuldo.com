@@ -19,6 +19,7 @@ import ShouldRender from '../tools/shouldRender';
 import NoContent from '../NoContent';
 import { withRouter } from 'next/router';
 import Closing from './closing';
+import { postUrl } from '../tools';
 
 const api_url = process.env.API_URL;
 const base_url = process.env.UI_URL;
@@ -107,6 +108,8 @@ const ViewBlog = (props) => {
       `https://twitter.com/intent/tweet?text=${post.title}` + fullURL;
     window.open(shareURL, 'sharer', 'toolbar=0,status=0,width=548,height=325');
   };
+
+  const url = postUrl(post)
   return (
     <>
       <ShouldRender if={!!post}>
@@ -225,7 +228,7 @@ const ViewBlog = (props) => {
               code: CodeBlock,
               image: Image,
               link: MarkdownLink,
-              heading: Heading,
+              heading: (props) => <Heading href={url} {...props}  />,
             }}
           />
         </Container>

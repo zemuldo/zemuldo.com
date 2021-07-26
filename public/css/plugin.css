@@ -34,6 +34,12 @@ a:active,
 a:hover {
 	outline: 0
 }
+.dead-a{
+color: inherit;
+}
+.dead-a:hover{
+	text-decoration: underline;
+}
 
 h1 {
 	margin: .67em 0;
