@@ -169,7 +169,7 @@ class NewBlog extends React.Component {
       this.autoSave = setInterval(() => {
         this.setState({ saving: true });
         this.handleSave();
-      }, 20000);
+      }, 5000);
     }
   }
 
@@ -186,13 +186,12 @@ class NewBlog extends React.Component {
 
   handleSave = async () => {
     if (!this.state.changed) return;
-    this.setState({changed: false});
     window.notification('Saving...');
     const { draft } = this.props;
     
     if (!draft) return;
     const last_update = this.state._update.updatedAt || draft.updatedAt;
-    const _res = await fetch(`${api_url}/post/draft/${draft._id}`, {
+    const res = await fetch(`${api_url}/post/draft/${draft._id}`, {
       method: 'put',
       headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
       credentials: 'include',
@@ -206,12 +205,17 @@ class NewBlog extends React.Component {
       })
     });
 
-    if (_res.status === 200){
-      const data = await _res.json();
+    if (res.status === 200) {
+      this.setState({ changed: false });
+      const data = await res.json();
       if (data.rejected) this.sync(data);
       this.setState({ _update: data, });
       return window.notification('Saved');
-    } 
+    }
+    
+    if (res.status === 401) {
+      window.open(`${api_url}/user/auth/github?exit=true`, 'Signing in', 'width=700,height=700,top=70,left=500,resizable=0,menubar=yes');
+    }
     window.notification('Error while saving..', {error: true});
   }
   handleOpenPublishDialogue = () => this.setState({ publishDialogueOpen: true })

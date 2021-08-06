@@ -109,7 +109,7 @@ const ViewBlog = (props) => {
     window.open(shareURL, 'sharer', 'toolbar=0,status=0,width=548,height=325');
   };
 
-  const url = postUrl(post)
+  const url = postUrl(post);
   return (
     <>
       <ShouldRender if={!!post}>
@@ -228,6 +228,7 @@ const ViewBlog = (props) => {
               code: CodeBlock,
               image: Image,
               link: MarkdownLink,
+              /* eslint-disable */
               heading: (props) => <Heading href={url} {...props}  />,
             }}
           />

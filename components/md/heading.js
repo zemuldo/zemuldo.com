@@ -14,7 +14,7 @@ function H1(props) {
   const h = React.createElement('h' + props.level, { id: slug }, props.children);
   return <a className='dead-a' onClick={(e) => {
     e.preventDefault();
-  }} href={`${props.href}#${slug}` }>{ h}</a>
+  }} href={`${props.href}#${slug}` }>{ h}</a>;
 }
 
 H1.propTypes = {

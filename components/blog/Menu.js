@@ -17,6 +17,7 @@ import BubbleChartRoundedIcon from '@material-ui/icons/BubbleChartRounded';
 import CustomMenuItem from './MenuItem';
 
 const api_url = process.env.API_URL;
+const base_url = process.env.UI_URL;
 
 const useStyles = makeStyles(theme => ({
   greenAvatar: {
@@ -141,6 +142,9 @@ const Menu = (props) => {
   const fetchUser = async () => {
     if (authorized) {
       const res = await fetch(`${api_url}/user`, { credentials: 'include' });
+      if (res.status === 401) {
+        window.open(`${api_url}/user/auth/github?redirectTo=${window.location.href || base_url}&exit=true`, 'Signing in', 'width=700,height=700,top=70,left=500,resizable=0,menubar=yes');
+      }
       const user = await res.json();
       setUser(user);
     }
@@ -248,7 +252,7 @@ const Menu = (props) => {
             {user && <Avatar alt="User profile" className={classes.avatar} src={user.profilePhotoUrl} />}
 
             {router.pathname.includes('/blog') && !authorized && activateLogin >= 4 &&
-              <Link href={`/blog/login?redirectTo=${window.location.href }`}>
+              <Link href={`${api_url}/user/auth/github?redirectTo=${window.location.href || base_url}`}>
                 <Avatar className={classes.greenAvatarGreen}>
                   <VpnKeyIcon className={classes.menuIcon} />
                 </Avatar>
