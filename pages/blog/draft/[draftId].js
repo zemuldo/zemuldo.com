@@ -169,7 +169,7 @@ class NewBlog extends React.Component {
       this.autoSave = setInterval(() => {
         this.setState({ saving: true });
         this.handleSave();
-      }, 5000);
+      }, 20000);
     }
   }
 
