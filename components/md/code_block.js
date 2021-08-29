@@ -11,6 +11,7 @@ const CodeBlock = (props) => {
   const theme = useTheme();
   const { language, value } = props;
   const [showCopy, setShowCopy] = useState(false);
+
   return (
     <div
       onMouseEnter={() => setShowCopy(true)}
@@ -18,7 +19,7 @@ const CodeBlock = (props) => {
     >
       <div style={{ zIndex: 2, position: 'relative' }}>
         <ShouldRender condition={showCopy}>
-          <CopyCode code={value} />
+          <CopyCode post_id={props.post_id} code={value} />
         </ShouldRender>
       </div>
       <div  style={{ zIndex: 1, position: 'relative' }}>
@@ -36,6 +37,7 @@ const CodeBlock = (props) => {
 
 CodeBlock.propTypes = {
   value: PropTypes.string.isRequired,
+  post_id: PropTypes.string.isRequired,
   language: PropTypes.string
 };
 

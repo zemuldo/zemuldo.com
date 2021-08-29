@@ -225,7 +225,8 @@ const ViewBlog = (props) => {
           <ReactMarkdown
             source={body.body}
             renderers={{
-              code: CodeBlock,
+              /* eslint-disable */
+              code: (props) => <CodeBlock post_id={post._id} {...props} />,
               image: Image,
               link: MarkdownLink,
               /* eslint-disable */
