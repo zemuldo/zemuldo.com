@@ -18,7 +18,6 @@ const CopyCode = (props) => {
         display: 'flex',
         justifyContent: 'flex-end',
         width: '100%',
-        paddingTop: '8px',
         paddingRight: '15px',
         color: '#08a6f3'
         
