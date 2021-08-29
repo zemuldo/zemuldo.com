@@ -7,11 +7,14 @@ export  const options = [
   { value: 'oauth2', label: 'OAuth2', color: '#05daff' },
 
   { value: 'nodejs', label: 'NodeJS', color: '#40a832' },
+  { value: 'javascript', label: 'JavaScript', color: '#EFD43A' },
   { value: 'reactjs', label: 'ReactJS', color: '#08a6f3' },
   { value: 'react-native', label: 'React Native', color: '#08a6f3' },
   { value: 'nextjs', label: 'NextJS', color: 'white' },
 
   { value: 'elixir', label: 'Elixir', color: '#a767f5' },
+  { value: 'mix', label: 'Elixir Mix', color: '#a767f5' },
+  { value: 'mix-releases', label: 'Elixir Mix Releases', color: '#a767f5' },
   { value: 'erlang', label: 'ErLang', color: 'rgb(151, 0, 39)' },
   { value: 'genstage', label: 'GenStage', color: '#a767f5' },
   { value: 'genserver', label: 'GenServer', color: '#a767f5' },
