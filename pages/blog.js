@@ -13,6 +13,7 @@ import FeaturedPost from '../components/blog/featured';
 import ShouldRender from '../components/tools/shouldRender';
 import NoContent from '../components/NoContent';
 import TopTags from '../components/blog/TopTags';
+import { responseToJson } from '../tools';
 
 const api_url = process.env.API_URL;
 const ex_api_url = process.env.EX_API_URL;
@@ -41,9 +42,9 @@ class Blog extends React.Component {
     const { authorization, authorized } = parseCookies(ctx);
     
     const res = await this.initialPosts(tag);
-    const data = await res.json();
+    const data = await responseToJson(res);
     const res_featured = await fetch(`${ex_api_url}/api/posts/featured`);
-    const data_featured = await res_featured.json();
+    const data_featured = await responseToJson(res_featured);
     return {
       featuredPost: res_featured.status === 200? data_featured: null,
       authorization,
