@@ -20,6 +20,13 @@ function PrivacyPolicy() {
           you will be asked to accept. For cookie information store when you visit this site
           please read the <a target="_blank" rel="noopener noreferrer" href='/cookie_policy' >cookie policy</a>.
         </p>
+
+        <h2> Other Content Tracking</h2>
+        
+        <p>
+          This website tracks usage that can not be traced back to you like post views  and code
+          block copies without user idfentifying information.
+        </p>
       </div>
     </Container>
 
