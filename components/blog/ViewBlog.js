@@ -109,7 +109,7 @@ const ViewBlog = (props) => {
     window.open(shareURL, 'sharer', 'toolbar=0,status=0,width=548,height=325');
   };
 
-  const url = postUrl(post);
+  const url = postUrl(post._id, post.title);
   return (
     <>
       <ShouldRender if={!!post}>

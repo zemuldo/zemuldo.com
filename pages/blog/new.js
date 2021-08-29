@@ -17,6 +17,7 @@ import PublishDialogue from '../../components/publish_modal';
 import fetch from 'isomorphic-unfetch';
 import PropTypes from 'prop-types';
 import Entry from '../../components/entry';
+import { postUrl } from '../../components/tools';
 
 
 const SimpleMDE = dynamic(import('react-simplemde-editor'), { ssr: false });
@@ -169,7 +170,7 @@ class NewBlog extends React.Component {
 
     const data =  await res.json();
     localStorage.removeItem('currentDraft');
-    Router.push(`/blog/draft/${data._id}`);
+    Router.push(postUrl(data._id, data.title));
   }
 
   handleOpenPublishDialogue = () => this.setState({ publishDialogueOpen: true })
@@ -190,7 +191,7 @@ class NewBlog extends React.Component {
     const data = await res.json();
     if (parseInt(res.status, 10) !== 200) return alert(data[0].errorMessage);
     localStorage.removeItem('currentDraft');
-    Router.push(`/blog/${data.post._id}`);
+    Router.push(postUrl(data.post._id, data.post.title));
     this.handleClosePublishDialogue();
   }
 

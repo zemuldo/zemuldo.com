@@ -19,6 +19,7 @@ import { parseCookies } from 'nookies';
 import PropTypes from 'prop-types';
 import Notification from '../../../components/notification';
 import Entry from '../../../components/entry';
+import { postUrl } from '../../../components/tools';
 
 const SimpleMDE = dynamic(import('react-simplemde-editor'), { ssr: false });
 
@@ -237,7 +238,7 @@ class NewBlog extends React.Component {
     });
     const data = await res.json();
     if (parseInt(res.status, 10) !== 200) return alert(data[0].errorMessage);
-    Router.push(`/blog/${data.post._id}`);
+    Router.push(postUrl(data.post._id, data.post.title));
     this.handleClosePublishDialogue();
     localStorage.removeItem(`state_${draft._id}`);
   }
