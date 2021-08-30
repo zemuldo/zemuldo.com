@@ -8,7 +8,7 @@ const CopyCode = (props) => {
   const handleClick = () => {
     navigator.clipboard.writeText(props.code);
     setCopied(true);
-    trackCodeCopy(props.post_id)
+    trackCodeCopy(props.post_id);
     setTimeout(() => setCopied(false), 1500);
   };
   return (

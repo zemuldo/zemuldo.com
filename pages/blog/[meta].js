@@ -5,7 +5,6 @@ import { parseCookies } from 'nookies';
 import ViewBlog from '../../components/blog/ViewBlog';
 import entry from '../../components/entry';
 
-
 const api_url = process.env.API_URL;
 const base_url = process.env.UI_URL;
 const base_url_domain = process.env.UI_URL_DOMAIN;
@@ -22,17 +21,6 @@ class Blog extends React.Component {
     super(props);
   }
 
-  componentDidMount() {
-    const { _id } = this?.props?.post;
-    const trackedView = sessionStorage.getItem(`view_record_${_id}`);
-    if (trackedView !== '1') {
-      fetch(`${ex_api_url}/api/posts/${_id}/view_record`, { method: 'post', })
-        .then(res => {
-          if (res.status === 200) sessionStorage.setItem(`view_record_${_id}`, '1');
-        });
-    }
-  }
-
   static async getInitialProps(ctx) {
     const { authorization } = parseCookies(ctx);
     const { meta } = ctx.query;
@@ -45,11 +33,33 @@ class Blog extends React.Component {
       authorization,
       post: data.post,
       body: data.postBody,
-      statusCode: res.status === 200? null : res.status
+      statusCode: res.status === 200 ? null : res.status
     };
   }
+
+
   render() {
-    return <ViewBlog {...this.props}/>;
+    const post_id = this?.props?.post._id;
+    return <>
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `
+            window.onload = function() {
+              const trackedView = sessionStorage.getItem('view_record_${ post_id}');
+              if (trackedView !== '1') {
+                  sessionStorage.setItem('view_record_${post_id}', '1');
+                  var url = '${ex_api_url}/api/posts/${post_id}/view_record'
+                  fetch(url, { method: 'POST', })
+                      .then(res => {
+                          if (res.status === 200) sessionStorage.setItem('view_record_${post_id }', '1');
+                      });
+              }
+            }
+          `
+        }}
+      />
+      <ViewBlog {...this.props} />
+    </>;
   }
 }
 
@@ -58,5 +68,5 @@ Blog.propTypes = {
   body: PropTypes.object.isRequired,
   authorization: PropTypes.oneOfType([PropTypes.string, PropTypes.oneOf([null])])
 };
-  
+
 export default entry(Blog);
