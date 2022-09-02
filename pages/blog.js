@@ -16,7 +16,6 @@ import TopTags from '../components/blog/TopTags';
 import { responseToJson } from '../tools';
 
 const api_url = process.env.API_URL;
-const ex_api_url = process.env.EX_API_URL;
 
 class Blog extends React.Component {
 
@@ -37,13 +36,13 @@ class Blog extends React.Component {
 
   static async getInitialProps(ctx) {
     const {tag} = ctx.query;
-    const topTagsRes = await fetch(`${ex_api_url}/api/top_tags`);
+    const topTagsRes = await fetch(`${api_url}/post/top_tags`);
     const topTags = topTagsRes.status === 200 ? await topTagsRes.json() : [];
     const { authorization, authorized } = parseCookies(ctx);
     
     const res = await this.initialPosts(tag);
     const data = await responseToJson(res);
-    const res_featured = await fetch(`${ex_api_url}/api/posts/featured`);
+    const res_featured = await fetch(`${api_url}/post/featured`);
     const data_featured = await responseToJson(res_featured);
     return {
       featuredPost: res_featured.status === 200? data_featured: null,

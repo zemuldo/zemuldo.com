@@ -9,7 +9,7 @@ const cookieParser = require('cookie-parser');
 
 const imageServer = express();
 
-require('dotenv-flow').config();
+require('dotenv').config();
 
 async function log_path(req) {
   const _path = `Serving: ${req.originalUrl.split('?')[0]}`.slice(0, 1000);
@@ -85,16 +85,9 @@ app.prepare().then(() => {
     return handle(req, res);
   });
 
-  server.listen(process.env.UI_PORT, err => {
+  server.listen(process.env.PORT, err => {
     if (err) throw err;
-    logger.info(`> App Server Ready on http://localhost:${process.env.UI_PORT}`);
+    logger.info(`> App Server Ready on http://localhost:${process.env.PORT}`);
   });
 
-});
-
-imageServer.use(express.static(path.join(__dirname, 'public')));
-
-imageServer.listen(process.env.IMAGE_SERVER_PORT, err =>{
-  if (err) throw err;
-  else logger.info(`> Image Server Ready on http://localhost:${process.env.IMAGE_SERVER_PORT}`);
 });

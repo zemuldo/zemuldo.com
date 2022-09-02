@@ -6,6 +6,7 @@ import Grid from '@material-ui/core/Grid';
 import PropTypes from 'prop-types';
 import CustomLink from '../link';
 import { format } from 'date-fns';
+const {STATIC_CONTENT_URL} = process.env
 
 const styles = theme => ({
   greenAvatar: {
@@ -129,7 +130,7 @@ function FeaturedPost({ featuredPost, classes }) {
               </div>
             </div>
           </Grid>
-          <Grid style={{ backgroundImage: `url(${featuredPost.coverPhotoUrl})` }} item md={6} />
+          <Grid style={{ backgroundImage: `url(${STATIC_CONTENT_URL}/${featuredPost.coverPhotoUrl})` }} item md={6} />
         </Grid>
       </Paper>
     </CustomLink>

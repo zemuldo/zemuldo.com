@@ -78,7 +78,7 @@ const ViewBlog = (props) => {
 
   const setAsFeatured = async () => {
     const { authorization, post} = props;
-    await fetch(`${ex_api_url}/api/posts/${post._id}/set_as_featured`, {
+    await fetch(`${api_url}/post/${post._id}/set_as_featured`, {
       method: 'POST',
       headers: { authorization}
     });
@@ -211,7 +211,7 @@ const ViewBlog = (props) => {
         <Container>
           <img
             style={{ maxHeight: '720px', marginTop: '10px' }}
-            src={post.coverPhotoUrl}
+            src={post.coverPhotoUrl.replace('https://zemuldo.com/z-site-images', 'https://zemuldositecontent.blob.core.windows.net/images')}
             alt={post.title}
           />
         </Container>

@@ -1,5 +1,5 @@
 import React from 'react';
-import versionInfo from '../release.json';
+import meta from '../package.json'
 
 export default function VersionInfo() {
 
@@ -9,14 +9,14 @@ export default function VersionInfo() {
         <span className='color-1'>@</span>
         <span className='color-6'>Version</span>
         {' : '}
-        <span className='color-orange'> {versionInfo.VERSION}</span>
+        <span className='color-orange'>{meta.version}</span>
       </div>
       <div>
         <span className='color-1'>@</span>
         <span className='color-6'>Build</span>
         {' : '}
         <span className='color-orange'>
-          {versionInfo.GITHUB_SHA.slice(0, 9)}
+          abcd
         </span>
       </div>
     </div>

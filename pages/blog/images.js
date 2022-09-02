@@ -15,7 +15,7 @@ import PropTypes from 'prop-types';
 import entry from '../../components/entry';
 
 const api_url = process.env.API_URL;
-const images_url = process.env.SITE_IMAGES_URL;
+const images_url = process.env.STATIC_CONTENT_URL;
 
 const useStyles = makeStyles(theme => ({
   cardGrid: {
