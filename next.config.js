@@ -4,6 +4,8 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 
 const withTM = require('next-transpile-modules');
 
+require('dotenv').config();
+
 module.exports = withTM((withBundleAnalyzer({
   env: {
     API_URL: process.env.API_URL,
