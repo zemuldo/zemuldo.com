@@ -21,6 +21,8 @@ import { withRouter } from 'next/router';
 import Closing from './closing';
 import { postUrl } from '../tools';
 
+const { STATIC_IMAGES_URL } = process.env
+
 const api_url = process.env.API_URL;
 const base_url = process.env.UI_URL;
 const base_url_domain = process.env.UI_URL_DOMAIN;
@@ -211,7 +213,7 @@ const ViewBlog = (props) => {
         <Container>
           <img
             style={{ maxHeight: '720px', marginTop: '10px' }}
-            src={post.coverPhotoUrl.replace('https://zemuldo.com/z-site-images', 'https://zemuldositecontent.blob.core.windows.net/images')}
+            src={post.coverPhotoUrl.replace('https://zemuldo.com/z-site-images', STATIC_IMAGES_URL)}
             alt={post.title}
           />
         </Container>

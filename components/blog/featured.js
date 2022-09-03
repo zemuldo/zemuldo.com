@@ -130,7 +130,9 @@ function FeaturedPost({ featuredPost, classes }) {
               </div>
             </div>
           </Grid>
-          <Grid style={{ backgroundImage: `url(${STATIC_IMAGES_URL}/${featuredPost.coverPhotoUrl})` }} item md={6} />
+          <Grid
+            style={{ backgroundImage: `url(${featuredPost.coverPhotoUrl.replace('https://zemuldo.com/z-site-images', STATIC_IMAGES_URL) })` }}
+            item md={6} />
         </Grid>
       </Paper>
     </CustomLink>
