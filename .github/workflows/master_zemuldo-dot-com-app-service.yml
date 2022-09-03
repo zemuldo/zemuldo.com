@@ -19,18 +19,19 @@ jobs:
       - name: Set up Node.js version
         uses: actions/setup-node@v1
         with:
-          node-version: '14.x'
+          node-version: '16.x'
 
       - name: npm install, build, and test
         run: |
           npm install
           npm run build --if-present
 
-      - name: Upload artifact for deployment job
-        uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v3
         with:
-          name: node-app
-          path: .
+          name: my-artifact
+          path: |
+            .
+            !./node_modules
 
   deploy:
     runs-on: ubuntu-latest
