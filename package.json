@@ -9,7 +9,7 @@
     "@material-ui/styles": "latest",
     "@microsoft/applicationinsights-web": "^2.6.2",
     "@zeit/next-css": "^1.0.1",
-    "axios": "^0.21.1",
+    "axios": "^0.21.2",
     "cheerio": "^1.0.0-rc.3",
     "chroma-js": "^2.0.4",
     "clsx": "^1.0.4",
