@@ -6,8 +6,8 @@ import ViewBlog from '../../components/blog/ViewBlog';
 import entry from '../../components/entry';
 
 const api_url = process.env.API_URL;
-const base_url = process.env.UI_URL;
-const base_url_domain = process.env.UI_URL_DOMAIN;
+const base_url = process.env.BASE_URL;
+const base_url_domain = process.env.BASE_URL_DOMAIN;
 const ex_api_url = process.env.EX_API_URL;
 
 

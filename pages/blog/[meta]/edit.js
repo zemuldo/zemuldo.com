@@ -26,7 +26,7 @@ import { postUrl } from '../../../components/tools';
 const SimpleMDE = dynamic(import('react-simplemde-editor'), { ssr: false });
 
 const api_url = process.env.API_URL;
-const base_url = process.env.UI_URL;
+const base_url = process.env.BASE_URL;
 
 const JoinNow = () => (
   <>

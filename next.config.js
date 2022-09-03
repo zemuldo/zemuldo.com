@@ -2,15 +2,14 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.BUNDLE_ANALYZE === 'true'
 });
 
-require('dotenv-flow').config();
 const withTM = require('next-transpile-modules');
 
 module.exports = withTM((withBundleAnalyzer({
   env: {
     UI_PORT: process.env.UI_PORT,
     STATIC_IMAGES_URL: process.env.STATIC_IMAGES_URL,
-    UI_URL: process.env.UI_URL,
-    UI_URL_DOMAIN: process.env.UI_URL_DOMAIN,
+    BASE_URL: process.env.BASE_URL,
+    BASE_URL_DOMAIN: process.env.BASE_URL_DOMAIN,
     API_URL: process.env.API_URL,
     EX_API_URL: process.env.EX_API_URL,
     GA_TRACKING_ID: process.env.GA_TRACKING_ID,
