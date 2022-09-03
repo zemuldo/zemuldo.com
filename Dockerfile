@@ -1,7 +1,9 @@
-FROM node:11
+FROM node:14
 
 WORKDIR /usr/src/app
 
+ENV PORT=80
+ENV API_URL=https://zemuldo.azurewebsites.net/api
 
 COPY package*.json ./
 
@@ -13,8 +15,6 @@ COPY . .
 
 RUN npm run build
 
-RUN npm run build-storybook
-
-EXPOSE 3001 3002
+EXPOSE 80
 
 CMD ["npm", "start"]

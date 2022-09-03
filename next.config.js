@@ -6,12 +6,10 @@ const withTM = require('next-transpile-modules');
 
 module.exports = withTM((withBundleAnalyzer({
   env: {
-    UI_PORT: process.env.UI_PORT,
+    API_URL: process.env.API_URL,
     STATIC_IMAGES_URL: process.env.STATIC_IMAGES_URL,
     BASE_URL: process.env.BASE_URL,
     BASE_URL_DOMAIN: process.env.BASE_URL_DOMAIN,
-    API_URL: process.env.API_URL,
-    EX_API_URL: process.env.EX_API_URL,
     GA_TRACKING_ID: process.env.GA_TRACKING_ID,
     GITHUB_SHA: process.env.GITHUB_SHA,
     VERSION: process.env.VERSION,
