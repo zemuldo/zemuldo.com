@@ -34,7 +34,7 @@
     "dotenv-webpack": "^1.7.0",
     "helmet": "^6.0.0",
     "isomorphic-unfetch": "^3.0.0",
-    "marked": "^0.7.0",
+    "marked": "^4.0.10",
     "next": "^9.3.4",
     "next-cookies": "^1.1.2",
     "next-nprogress": "^1.4.0",
