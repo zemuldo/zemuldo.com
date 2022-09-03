@@ -5,11 +5,13 @@ const cheerio = require('cheerio');
 const next = require('next');
 const path = require('path');
 const fs = require('fs');
+const https = require('https'); // or 'https' for https:// URLs
+
 const cookieParser = require('cookie-parser');
 
-const imageServer = express();
-
 require('dotenv').config();
+
+const { STATIC_IMAGES_URL } = process.env
 
 async function log_path(req) {
   const _path = `Serving: ${req.originalUrl.split('?')[0]}`.slice(0, 1000);
@@ -34,7 +36,6 @@ const prepSiteStories = (data) => {
   return $;
 };
 
-const staticContentPath = process.env.STATIC_CONTENT_PATH;
 const dev = process.env.NODE_ENV !== 'production';
 const app = next({ dev });
 const handle = app.getRequestHandler();
@@ -62,7 +63,21 @@ router.get('/', (req, res) => {
 
 router.use('/blog', express.static('static'));
 router.use('/site-stories', express.static(path.join(__dirname, 'public')));
-router.use('/z-site-images', express.static(`${staticContentPath}/z-site-images`));
+// Backward compatibility for old images url.
+router.use('/z-site-images', (req, res) => {
+  const filePath = `/tmp/${req.url.replace('/', '')}`
+  const file = fs.createWriteStream(filePath);
+  https.get(`${STATIC_IMAGES_URL}${req.url}`, function (response) {
+    response.pipe(file);
+
+    file.on("finish", () => {
+      file.close();
+      return res.sendFile(filePath)
+    });
+  });
+  
+  // return res.redirect(`${STATIC_IMAGES_URL}/nextjs-oauth.png`);
+} );
 router.use('/site-stories/', express.static(path.join(__dirname, '.stories')));
 router.use('/', express.static(path.join(__dirname, '..next')));
 router.use('/', express.static(path.join(__dirname, '.stories')));

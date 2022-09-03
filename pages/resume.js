@@ -8,9 +8,9 @@ import { makeStyles, withStyles } from '@material-ui/core/styles';
 import ShouldRender from '../components/tools/ShoulRender';
 
 import ReCAPTCHA from 'react-google-recaptcha';
+import { CircularProgress } from '@material-ui/core';
 
-
-const ex_api_url = process.env.EX_API_URL;
+const { API_URL } = process.env;
 
 function validateEmail(mail) {
   if (/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(mail)) {
@@ -48,7 +48,6 @@ const useStyles = makeStyles((theme) => ({
       border: '1px solid transparent',
     },
     fontSize: '14px',
-    color: 'white',
     '& label.Mui-focused': {
       color: '#08a6f3',
     },
@@ -121,6 +120,7 @@ const ResumePage = () => {
   const [recaptchaChallengeValue, setRecaptchaChallengeValue] = useState(null);
   const [emailValid, setEmailValid] = useState(false);
   const [resumeSent, setResumeSent] = useState(false);
+  const [sending, setSending] = useState(false);
   const [operationError, setOperationError] = useState(null);
 
   const handleEmailChange = (e) =>{
@@ -128,19 +128,30 @@ const ResumePage = () => {
     setEmailValid(validateEmail(e.target.value));
   };
 
-  const sendEmail = async () =>{
-    const res = await fetch(`${ex_api_url}/api/resume/share`, {
-      method: 'post',
-      headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        email: email,
-        recaptchaChallengeValue
-      }),
-    });
+  const sendEmail = async () => {
+    setSending(true)
+    try {
+      const res = await fetch(`${API_URL}/resume/share`, {
+        method: 'post',
+        headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          email: email,
+          recaptchaChallengeValue
+        }),
+      });
 
-    if (res.status === 200){
-      setResumeSent(true);
-    } else setResumeSent(setOperationError('Something went wrong. Please try again.'));
+      if (res.status === 200) {
+        
+        setResumeSent(true);
+        setSending(false)
+      } else {
+        setResumeSent(setOperationError('Something went wrong. Please try again.'))
+        setSending(false)
+      }
+    } catch (_) {
+      setResumeSent(setOperationError('Something went wrong. Please try again.'));
+      setSending(false)
+    }
   };
 
   return (
@@ -190,9 +201,12 @@ const ResumePage = () => {
                 <br/> 
 
                 <BootstrapButton
+                  style={{ backgroundColor: '#08a6f3', color: '#fff' }}
                   onClick={sendEmail}
-                  disabled={!emailValid || !recaptchaChallengeValue}>
-                  Send Resume
+                  disabled={!emailValid || !recaptchaChallengeValue || sending}
+                >
+                  {!sending && 'Send Resume'}
+                  {sending  && <CircularProgress color='#fff'/>}
                 </BootstrapButton>
               </div>
             </ShouldRender>

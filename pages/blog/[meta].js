@@ -48,7 +48,7 @@ class Blog extends React.Component {
               const trackedView = sessionStorage.getItem('view_record_${ post_id}');
               if (trackedView !== '1') {
                   sessionStorage.setItem('view_record_${post_id}', '1');
-                  var url = '${ex_api_url}/api/posts/${post_id}/view_record'
+                  var url = '${api_url}/post/${post_id}/track_views'
                   fetch(url, { method: 'POST', })
                       .then(res => {
                           if (res.status === 200) sessionStorage.setItem('view_record_${post_id }', '1');

@@ -1,7 +1,7 @@
-const ex_api_url = process.env.EX_API_URL;
+const api_url = process.env.API_URL;
 
 export const trackCodeCopy = (post_id) => {
-  fetch(`${ex_api_url}/api/posts/${post_id}/copied_code`, { method: 'post', })
+  fetch(`${api_url}/post/${post_id}/track_code_copy`, { method: 'post', })
     .then(res => res)
     .catch(e => e);
 };

@@ -17,6 +17,8 @@ import DeleteSweepIcon from '@material-ui/icons/DeleteSweep';
 import NavigationIcon from '@material-ui/icons/Navigation';
 import fetch from 'isomorphic-unfetch';
 
+const { API_URL } = process.env;
+
 const useStyles = makeStyles((theme) => ({
   card: {
     color: 'white',
@@ -74,7 +76,7 @@ function DropZone(props) {
       data.append(file.name, file, file.name);
     }
 
-    const res = await fetch('/image', {
+    const res = await fetch(`${API_URL}/image`, {
       method: 'POST',
       credentials: 'include',
       body: data

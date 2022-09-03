@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-const { STATIC_CONTENT_URL } = process.env
+const { STATIC_IMAGES_URL } = process.env
 
 function Image({ src, alt }) {
   const _style = { minWidth: '100%', position: 'absolute', left: '0', right: '0', zIndex: 24 }; 
@@ -12,7 +12,7 @@ function Image({ src, alt }) {
   };
   return (
     <>
-      <img onClick={handleZoom} style={{ ...zoom, cursor: !zoom ? 'zoom-in' : 'zoom-out' }} src={src.replace('https://zemuldo.com/z-site-images', STATIC_CONTENT_URL)} alt={alt} />
+      <img onClick={handleZoom} style={{ ...zoom, cursor: !zoom ? 'zoom-in' : 'zoom-out' }} src={src.replace('https://zemuldo.com/z-site-images', STATIC_IMAGES_URL)} alt={alt} />
     </>
   );
 }

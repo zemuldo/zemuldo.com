@@ -8,7 +8,7 @@ const withTM = require('next-transpile-modules');
 module.exports = withTM((withBundleAnalyzer({
   env: {
     UI_PORT: process.env.UI_PORT,
-    STATIC_CONTENT_URL: process.env.STATIC_CONTENT_URL,
+    STATIC_IMAGES_URL: process.env.STATIC_IMAGES_URL,
     UI_URL: process.env.UI_URL,
     UI_URL_DOMAIN: process.env.UI_URL_DOMAIN,
     API_URL: process.env.API_URL,

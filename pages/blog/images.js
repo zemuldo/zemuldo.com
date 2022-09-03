@@ -15,7 +15,7 @@ import PropTypes from 'prop-types';
 import entry from '../../components/entry';
 
 const api_url = process.env.API_URL;
-const images_url = process.env.STATIC_CONTENT_URL;
+const { STATIC_IMAGES_URL } = process.env;
 
 const useStyles = makeStyles(theme => ({
   cardGrid: {
@@ -93,14 +93,14 @@ function Album({images, authorized, user}) {
               <Card className={classes.card}>
                 <CardMedia
                   className={classes.cardMedia}
-                  image={`${images_url}/${image.name}`}
+                  image={`${STATIC_IMAGES_URL}/${image.name}`}
                   title={image.name.split('-').join(' ').split('.')[0]}
                 />
                  
                 <CardActions>
                   <Button 
                     onClick={() => {
-                      navigator.clipboard.writeText(`${images_url}/${image.name}`);
+                      navigator.clipboard.writeText(`${STATIC_IMAGES_URL}/${image.name}`);
                     }} 
                     size="small" color="primary"
                   >
