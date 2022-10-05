@@ -45,7 +45,7 @@ class Blog extends React.Component {
     const res_featured = await fetch(`${api_url}/post/featured`);
     const data_featured = await responseToJson(res_featured);
     return {
-      featuredPost: res_featured.status === 200? data_featured: null,
+      featuredPost: null,
       authorization,
       authorized: authorized === '1',
       posts: data,
