@@ -87,6 +87,7 @@ router.get('/latest', async (req, res) => {
 router.get('/featured', async (req, res) => {
   try {
     const post = await posts.getFeatured();
+    if (!post) return res.status(404).send(post);
     res.send(post);
   } catch (error) {
     res.status(400).send([{ errorType: 'BAD_REQUEST', errorMessage: error.toString() }]);
