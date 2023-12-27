@@ -35,8 +35,10 @@ COPY --from=builder /app/helpers ./helpers
 
 USER nextjs
 
-EXPOSE 80
+EXPOSE 8080
 
-ENV PORT 80
+ENV PORT 8080
+ENV GITHUB_CLIENT_ID e6831840d043f12bfa06
+ENV NODE_ENV production
 
 CMD ["npm", "start"]
