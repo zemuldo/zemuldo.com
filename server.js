@@ -11,7 +11,7 @@ const cookieParser = require('cookie-parser');
 
 require('dotenv').config();
 
-const { STATIC_IMAGES_URL } = process.env
+const { STATIC_IMAGES_URL } = process.env;
 
 async function log_path(req) {
   const _path = `Serving: ${req.originalUrl.split('?')[0]}`.slice(0, 1000);
@@ -65,14 +65,14 @@ router.use('/blog', express.static('static'));
 router.use('/site-stories', express.static(path.join(__dirname, 'public')));
 // Backward compatibility for old images url.
 router.use('/z-site-images', (req, res) => {
-  const filePath = `/tmp/${req.url.replace('/', '')}`
+  const filePath = `/tmp/${req.url.replace('/', '')}`;
   const file = fs.createWriteStream(filePath);
   https.get(`${STATIC_IMAGES_URL}${req.url}`, function (response) {
     response.pipe(file);
 
-    file.on("finish", () => {
+    file.on('finish', () => {
       file.close();
-      return res.sendFile(filePath)
+      return res.sendFile(filePath);
     });
   });
   

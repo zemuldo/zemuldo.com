@@ -47,11 +47,11 @@ router.get('/auth/github', (req, res, next) => {
 
 router.get(
   '/auth/github/callback',
-  passport.authenticate('github', { failureRedirect: `/blog/login` }),
+  passport.authenticate('github', { failureRedirect: '/blog/login' }),
   (req, res, next) => {
     const token = jwt.sign(req.user.id);
     if (req.user.username !== 'zemuldo' && req.user.username !== 'rovahrowa') {
-      return res.redirect(`/403`);
+      return res.redirect('/403');
     } 
     req.logIn(req.user, function(err) {
       if (err) {

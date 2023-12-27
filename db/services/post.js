@@ -10,7 +10,7 @@ const logger = require('../../tools/logger');
 module.exports = {
   get: async (params) => {
     let q = {};
-    if (params.tag) q = {'tags.value': params.tag};
+    if (params.tag) q = { 'tags.value': params.tag };
     return Post.find(q, [], {
       skip: parseInt(params.skip, 10),
       limit: parseInt(params.limit, 10),
@@ -20,7 +20,7 @@ module.exports = {
     });
   },
   getDrafts: async (authorId) => {
-    return Draft.find({authorId});
+    return Draft.find({ authorId });
   },
 
   getDraftById: async (id) => {
@@ -151,9 +151,11 @@ module.exports = {
           return acc;
         }, {});
 
-        const final = Object.keys(flat).map(k => ({ name: k, value: flat[k] })).sort((a, b) => (a.value < b.value) ? 1 : -1).slice(0, 8);
+        const final = Object.keys(flat).map(k => ({ name: k, value: flat[k] }))
+          .sort((a, b) => (a.value < b.value) ? 1 : -1)
+          .slice(0, 8);
         global.topTags = final;
-      } )
+      })
       .catch(_ => {
         logger.error('Failed to fetch posts in build top tags');
       });

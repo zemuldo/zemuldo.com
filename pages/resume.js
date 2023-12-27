@@ -129,7 +129,7 @@ const ResumePage = () => {
   };
 
   const sendEmail = async () => {
-    setSending(true)
+    setSending(true);
     try {
       const res = await fetch(`${API_URL}/resume/share`, {
         method: 'post',
@@ -143,14 +143,14 @@ const ResumePage = () => {
       if (res.status === 200) {
         
         setResumeSent(true);
-        setSending(false)
+        setSending(false);
       } else {
-        setResumeSent(setOperationError('Something went wrong. Please try again.'))
-        setSending(false)
+        setResumeSent(setOperationError('Something went wrong. Please try again.'));
+        setSending(false);
       }
     } catch (_) {
       setResumeSent(setOperationError('Something went wrong. Please try again.'));
-      setSending(false)
+      setSending(false);
     }
   };
 

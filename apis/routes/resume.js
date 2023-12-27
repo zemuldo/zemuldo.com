@@ -36,13 +36,12 @@ router.post('/share', async (req, res) => {
     const filePath = `/tmp/${resume.name}`;
 
     await blobClient.downloadToFile(filePath);
-      await sendResume(req.body.email, filePath);
-      await resumeService.requested(req.body.email, resume)
+    await sendResume(req.body.email, filePath);
+    await resumeService.requested(req.body.email, resume);
     res.send('Success');
 
 
   } catch (error) {
-      console.log(error)
     res.status(400).send([{ errorType: 'BAD_REQUEST', errorMessage: error.toString() }]);
   }
 

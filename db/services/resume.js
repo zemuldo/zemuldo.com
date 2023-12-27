@@ -12,7 +12,7 @@ module.exports = {
   requested: async  (email, resume) => {
     const resumeRequest = new ResumeRequestSchema({ email, resume, timestamp: new Date() });
 
-    await resumeRequest.save()
+    await resumeRequest.save();
 
     return true;
   },

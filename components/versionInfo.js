@@ -1,5 +1,5 @@
 import React from 'react';
-import meta from '../package.json'
+import meta from '../package.json';
 
 export default function VersionInfo() {
 

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-const { STATIC_IMAGES_URL } = process.env
+const { STATIC_IMAGES_URL } = process.env;
 
 function Image({ src, alt }) {
   const _style = { minWidth: '100%', position: 'absolute', left: '0', right: '0', zIndex: 24 }; 

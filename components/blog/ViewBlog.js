@@ -21,7 +21,7 @@ import { withRouter } from 'next/router';
 import Closing from './closing';
 import { postUrl } from '../tools';
 
-const { STATIC_IMAGES_URL } = process.env
+const { STATIC_IMAGES_URL } = process.env;
 
 const api_url = process.env.API_URL;
 const base_url = process.env.BASE_URL;

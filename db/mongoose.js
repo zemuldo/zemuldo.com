@@ -34,7 +34,7 @@ db.once('open', async function() {
       .catch(_e=>false);
 
   });
-  await posService.buildTopTags()
+  await posService.buildTopTags();
 });
 
 module.exports = mongoose;

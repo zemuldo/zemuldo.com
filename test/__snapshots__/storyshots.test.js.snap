@@ -2886,7 +2886,7 @@ exports[`Storyshots Home Page Footer 1`] = `
         Zemuldo
       </a>
       , 
-      2021
+      2023
       <span>
         ,
         <a
@@ -2903,6 +2903,14 @@ exports[`Storyshots Home Page Footer 1`] = `
           target="_blank"
         >
            Terms
+        </a>
+        ,
+        <a
+          href="/attributions"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+           Attributions
         </a>
       </span>
     </p>
@@ -3871,12 +3879,14 @@ exports[`Storyshots Home Page TerminalMe 1`] = `
         "MsTransition": "all .5s ease-out",
         "OTransition": "all .5s ease-out",
         "WebkitTransition": "all .5s ease-out",
-        "borderRadius": "10px",
+        "borderRadius": "7px",
         "clear": "both",
         "display": "block",
+        "marginTop": "20px",
         "maxWidth": "900px",
         "minHeight": "200px",
         "overflow": "hidden",
+        "padding": "10px",
         "transition": "all .5s ease-out",
       }
     }
@@ -3888,16 +3898,14 @@ exports[`Storyshots Home Page TerminalMe 1`] = `
           "MsTransition": "all .5s ease-out",
           "OTransition": "all .5s ease-out",
           "WebkitTransition": "all .5s ease-out",
-          "color": "#f0f0f0",
           "fontFamily": "Consolas, \\"Courier New\\", Courier",
-          "fontSize": "1.2em",
-          "fontWeight": "500",
+          "fontSize": "1.0em",
+          "fontWeight": "600",
           "height": "auto",
           "lineHeight": "1.4em",
           "overflow": "hidden",
           "padding": "4px",
           "textAlign": "left",
-          "textShadow": "#000 0 1px 0",
           "transition": "all .5s ease-out",
         }
       }
@@ -3994,7 +4002,7 @@ exports[`Storyshots Journey Experience 1`] = `
               <span
                 className="color-6"
               >
-                 NodeJS 
+                 NodeJS
               </span>
               <span
                 className="separator"
@@ -4012,7 +4020,7 @@ exports[`Storyshots Journey Experience 1`] = `
               <span
                 className="color-6"
               >
-                 ReactJS 
+                 ReactJS
               </span>
               <span
                 className="separator"
@@ -4030,7 +4038,7 @@ exports[`Storyshots Journey Experience 1`] = `
               <span
                 className="color-6"
               >
-                 Docker 
+                 Docker
               </span>
               <span
                 className="separator"
@@ -4048,7 +4056,7 @@ exports[`Storyshots Journey Experience 1`] = `
               <span
                 className="color-6"
               >
-                 MongoDB 
+                 MongoDB
               </span>
               <span
                 className="separator"
@@ -4066,7 +4074,7 @@ exports[`Storyshots Journey Experience 1`] = `
               <span
                 className="color-6"
               >
-                 RethinkDB 
+                 RethinkDB
               </span>
               <span
                 className="separator"
@@ -4084,7 +4092,7 @@ exports[`Storyshots Journey Experience 1`] = `
               <span
                 className="color-6"
               >
-                 Kubernetes 
+                 Kubernetes
               </span>
               <span
                 className="separator"
@@ -4102,7 +4110,7 @@ exports[`Storyshots Journey Experience 1`] = `
               <span
                 className="color-6"
               >
-                 Google Cloud 
+                 Google Cloud
               </span>
               <span
                 className="separator"
@@ -4120,7 +4128,7 @@ exports[`Storyshots Journey Experience 1`] = `
               <span
                 className="color-6"
               >
-                 AWS Cloud 
+                 AWS Cloud
               </span>
               <span
                 className="separator"

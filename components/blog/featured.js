@@ -6,7 +6,7 @@ import Grid from '@material-ui/core/Grid';
 import PropTypes from 'prop-types';
 import CustomLink from '../link';
 import { format } from 'date-fns';
-const { STATIC_IMAGES_URL } = process.env
+const { STATIC_IMAGES_URL } = process.env;
 
 const styles = theme => ({
   greenAvatar: {
