@@ -9,7 +9,7 @@ import { parseCookies } from 'nookies';
 import PropTypes from 'prop-types';
 import Entry from '../components/entry';
 
-const api_url = process.env.API_URL;
+const api_url = process.env.NEXT_PUBLIC_API_URL;
 
 function DeveloperStory({authorized}) {
   return (

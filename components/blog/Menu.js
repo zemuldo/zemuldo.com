@@ -16,8 +16,8 @@ import { Container, makeStyles, useTheme } from '@material-ui/core';
 import BubbleChartRoundedIcon from '@material-ui/icons/BubbleChartRounded';
 import CustomMenuItem from './MenuItem';
 
-const api_url = process.env.API_URL;
-const base_url = process.env.BASE_URL;
+const api_url = process.env.NEXT_PUBLIC_API_URL;
+const base_url = process.env.NEXT_PUBLIC_BASE_URL;
 
 const useStyles = makeStyles(theme => ({
   greenAvatar: {

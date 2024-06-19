@@ -14,8 +14,8 @@ import Footer from '../../components/footer';
 import PropTypes from 'prop-types';
 import entry from '../../components/entry';
 
-const api_url = process.env.API_URL;
-const { STATIC_IMAGES_URL } = process.env;
+const api_url = process.env.NEXT_PUBLIC_API_URL;
+const {NEXT_PUBLIC_STATIC_IMAGES_URL } = process.env;
 
 const useStyles = makeStyles(theme => ({
   cardGrid: {

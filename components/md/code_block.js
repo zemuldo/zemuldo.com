@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import darkTheme from 'react-syntax-highlighter/dist/esm/styles/prism/darcula';
-import lightTheme from 'react-syntax-highlighter/dist/esm/styles/prism/ghcolors';
+import darkTheme from 'react-syntax-highlighter/dist/cjs/styles/prism/darcula';
+import lightTheme from 'react-syntax-highlighter/dist/cjs/styles/prism/ghcolors';
 import CopyCode from './copy_code';
 import { useTheme } from '@material-ui/core';
 import ShouldRender from '../tools/ShoulRender';

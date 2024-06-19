@@ -3,7 +3,7 @@ import Select from 'react-select';
 import chroma from 'chroma-js';
 import PropTypes from 'prop-types';
 
-const api_url = process.env.API_URL;
+const api_url = process.env.NEXT_PUBLIC_API_URL;
 const dot = (color = '#ccc') => ({
   alignItems: 'center',
   display: 'flex',

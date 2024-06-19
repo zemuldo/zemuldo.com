@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import ShouldRender from '../tools/ShoulRender';
-import { trackCodeCopy } from '../../api';
+import trackCodeCopy from '../../tools/trackCopy';
 
 const CopyCode = (props) => {
   const [copied, setCopied] = useState(false);

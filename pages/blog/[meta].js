@@ -5,9 +5,9 @@ import { parseCookies } from 'nookies';
 import ViewBlog from '../../components/blog/ViewBlog';
 import entry from '../../components/entry';
 
-const api_url = process.env.API_URL;
-const base_url = process.env.BASE_URL;
-const base_url_domain = process.env.BASE_URL_DOMAIN;
+const api_url = process.env.NEXT_PUBLIC_API_URL;
+const base_url = process.env.NEXT_PUBLIC_BASE_URL;
+const base_url_domain = process.env.NEXT_PUBLIC_BASE_URL_DOMAIN;
 const ex_api_url = process.env.EX_API_URL;
 
 

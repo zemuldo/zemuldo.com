@@ -22,7 +22,7 @@ import Head from 'next/head';
 import Entry from '../../components/entry';
 
 
-const api_url = process.env.API_URL;
+const api_url = process.env.NEXT_PUBLIC_API_URL;
 
 const useStyles = makeStyles(theme => ({
   paper: {

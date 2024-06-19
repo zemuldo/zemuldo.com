@@ -2,14 +2,12 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.BUNDLE_ANALYZE === 'true'
 });
 
-const withTM = require('next-transpile-modules');
-
 require('dotenv').config();
 
-module.exports = withTM((withBundleAnalyzer({
+module.exports = (withBundleAnalyzer({
   env: {
     API_URL: process.env.API_URL,
-    STATIC_IMAGES_URL: process.env.STATIC_IMAGES_URL,
+   NEXT_PUBLIC_STATIC_IMAGES_URL: process.env.NEXT_PUBLIC_STATIC_IMAGES_URL,
     BASE_URL: process.env.BASE_URL,
     BASE_URL_DOMAIN: process.env.BASE_URL_DOMAIN,
     GA_TRACKING_ID: process.env.GA_TRACKING_ID,
@@ -35,4 +33,4 @@ module.exports = withTM((withBundleAnalyzer({
       reportFilename: '../bundles/client.html'
     }
   }
-})));
+}));

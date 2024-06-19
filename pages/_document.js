@@ -1,5 +1,5 @@
 import React from 'react';
-import Document, { Head, Main, NextScript } from 'next/document';
+import Document, { Html, Head, Main, NextScript } from 'next/document';
 import { ServerStyleSheets } from '@material-ui/styles';
 import { setCookie, parseCookies } from 'nookies';
 
@@ -32,7 +32,7 @@ class MyDocument extends Document {
 
   render() {
     return (
-      <html lang="en">
+      <Html lang="en">
         <Head>
           <meta charSet="utf-8" />
           <meta charSet="UTF-8" />
@@ -78,7 +78,7 @@ class MyDocument extends Document {
             dangerouslySetInnerHTML={addJSONLD()}
           />
         </body>
-      </html>
+      </Html>
     );
   }
 }

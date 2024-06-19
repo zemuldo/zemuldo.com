@@ -21,11 +21,11 @@ import { withRouter } from 'next/router';
 import Closing from './closing';
 import { postUrl } from '../tools';
 
-const { STATIC_IMAGES_URL } = process.env;
+const staticImageURL = process.env.NEXT_PUBLIC_STATIC_IMAGES_URL;
 
-const api_url = process.env.API_URL;
-const base_url = process.env.BASE_URL;
-const base_url_domain = process.env.BASE_URL_DOMAIN;
+const api_url = process.env.NEXT_PUBLIC_API_URL;
+const base_url = process.env.NEXT_PUBLIC_BASE_URL;
+const base_url_domain = process.env.NEXT_PUBLIC_BASE_URL_DOMAIN;
 const ex_api_url = process.env.EX_API_URL;
 
 const useStyles = makeStyles(() => ({
@@ -213,7 +213,7 @@ const ViewBlog = (props) => {
         <Container>
           <img
             style={{ maxHeight: '720px', marginTop: '10px' }}
-            src={post.coverPhotoUrl.replace('https://zemuldo.com/z-site-images', STATIC_IMAGES_URL)}
+            src={post.coverPhotoUrl.replace('https://zemuldo.com/z-site-images', staticImageURL)}
             alt={post.title}
           />
         </Container>

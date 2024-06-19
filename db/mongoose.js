@@ -10,7 +10,7 @@ function connectionString (){
   else return `mongodb://${process.env.MONGODB_HOST}/${process.env.MONGODB_DATABASE}`;
 }
 
-mongoose.connect(connectionString(), {useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect(connectionString(), {});
 
 const db = mongoose.connection;
 

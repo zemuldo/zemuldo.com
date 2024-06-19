@@ -8,8 +8,8 @@ import PleaseWait from '../../components/please_wait';
 import Entry from '../../components/entry';
 import PageLayout from '../../components/PageLayout';
 import Link from '../../components/link';
-const api_url = process.env.API_URL;
-const base_url = process.env.BASE_URL;
+const api_url = process.env.NEXT_PUBLIC_API_URL;
+const base_url = process.env.NEXT_PUBLIC_BASE_URL;
 
 class Login extends React.Component {
 

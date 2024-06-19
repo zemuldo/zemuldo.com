@@ -7,8 +7,8 @@ import PleaseWait from '../../../components/please_wait';
 import PageLayout from '../../../components/PageLayout';
 import Entry from '../../../components/entry';
 import IfLoggedIn from '../../../components/IfLoggedIn';
-const api_url = process.env.API_URL;
-const base_url = process.env.BASE_URL;
+const api_url = process.env.NEXT_PUBLIC_API_URL;
+const base_url = process.env.NEXT_PUBLIC_BASE_URL;
 
 class Login extends React.Component {
 
