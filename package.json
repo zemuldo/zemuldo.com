@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "nodemon server.js",
-    "build": "next build",
+    "build": "NEXT_PUBLIC_BASE_URL=https://zemuldo.com NEXT_PUBLIC_STATIC_IMAGES_URL=https://static.zemuldo.com/images NEXT_PUBLIC_API_URL=https://zemuldo.com/api next build",
     "start": "NODE_ENV=production node server.js",
     "lint": "next lint"
   },
