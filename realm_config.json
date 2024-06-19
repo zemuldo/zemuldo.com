@@ -1,7 +1,8 @@
 {
-    "app_id": "zemuldo-website-odiksmv",
+    "app_id": "website-ahmcctv",
     "config_version": 20210101,
-    "name": "zemuldo-website",
-    "provider_region": "aws-ap-south-1",
-    "deployment_model": "LOCAL"
+    "name": "website",
+    "provider_region": "azure-eastus2",
+    "deployment_model": "LOCAL",
+    "environment": "production"
 }
