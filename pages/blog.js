@@ -39,9 +39,11 @@ class Blog extends React.Component {
     const topTagsRes = await fetch(`${api_url}/post/top_tags`);
     let topTags = []
     // topTagsRes.status === 200 ? await topTagsRes.json() : [];
-    if (topTagsRes.status === 200) {
-      topTags = await topTagsRes.json();
-    }
+    try {
+      if (topTagsRes.status === 200) {
+        topTags = await topTagsRes.json();
+      }
+    } catch (error) { }
     const { authorization, authorized } = parseCookies(ctx);
     
     const res = await this.initialPosts(tag);
@@ -50,7 +52,7 @@ class Blog extends React.Component {
     const data_featured = await responseToJson(res_featured);
     console.log(data)
     return {
-      featuredPost: null,
+      featuredPost: data_featured,
       authorization,
       authorized: authorized === '1',
       posts: data,
