@@ -118,7 +118,7 @@ class Blog extends React.Component {
         </Container>
         <Container>
           <ShouldRender if={!!featuredPost && !this.state.currentTag}>
-            <FeaturedPost featuredPost={featuredPost} />
+            {/* <FeaturedPost featuredPost={featuredPost} /> */}
           </ShouldRender>
         </Container>
         <Container  maxWidth="md">
