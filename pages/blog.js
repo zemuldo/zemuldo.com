@@ -50,7 +50,6 @@ class Blog extends React.Component {
     const data = await responseToJson(res);
     const res_featured = await fetch(`${api_url}/post/featured`);
     const data_featured = await responseToJson(res_featured);
-    console.log(data)
     return {
       featuredPost: data_featured,
       authorization,
@@ -118,7 +117,7 @@ class Blog extends React.Component {
         </Container>
         <Container>
           <ShouldRender if={!!featuredPost && !this.state.currentTag}>
-            {/* <FeaturedPost featuredPost={featuredPost} /> */}
+            <FeaturedPost featuredPost={featuredPost} />
           </ShouldRender>
         </Container>
         <Container  maxWidth="md">

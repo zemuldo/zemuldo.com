@@ -60,4 +60,6 @@ export const darkTheme = createMuiTheme({
 });
 
 
-export default { darkTheme, lightTheme };
+export const theme = { darkTheme, lightTheme };
+
+export default theme;

@@ -115,7 +115,9 @@ module.exports = {
 
       return post;
     }
-    return null;
+
+    const post = await Post.findOne({}).sort([['createdAt', -1]]);
+    return post;
   },
   setFeatured: async (id) => {
     const d = new Date();
